@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item android:state_selected="true"><shape>
+            <solid android:color="@color/pyw_common_transparent" />
+            <!-- 描边 -->
+            <stroke android:width="5px" android:color="@color/pyw_common_pay_type_sel" />
+            <!-- 角度 -->
+            <corners android:radius="4dp" />
+        </shape></item>
+    <item android:state_selected="false"><shape>
+
+            <!-- 描边 -->
+            <stroke android:width="2px" android:color="@color/pyw_common_pay_type_nor" />
+            <!-- 填充 -->
+            <solid android:color="@color/pyw_common_transparent"/>
+            <!-- 角度 -->
+            <corners android:radius="4dp" />
+        </shape></item>
+
+</selector>

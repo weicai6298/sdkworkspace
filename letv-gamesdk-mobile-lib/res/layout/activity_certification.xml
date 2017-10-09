@@ -1,0 +1,201 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:id="@+id/activity_certification"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/transparent_80">
+
+    <com.le.legamesdk.widget.LeMainViewParent
+        android:id="@+id/le_mian_view_parent"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_centerInParent="true"
+        android:layout_margin="10dp"
+        >
+
+        <RelativeLayout
+            android:id="@+id/sdk_certification_rl"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/alter_corner">
+
+            <ImageView
+                android:id="@+id/sdk_certification_close"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_margin="10dp"
+                android:background="@drawable/sdk_button_close_bg"/>
+
+            <LinearLayout
+                android:id="@+id/sdk_certification_titlely"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="30dp"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:src="@drawable/letv_bg"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginLeft="5dp"
+                    android:text="@string/le_sdk_certification_activity_title"
+                    android:textColor="@color/c333333"
+                    android:textSize="16sp"/>
+            </LinearLayout>
+
+            <ScrollView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/sdk_certification_titlely"
+                android:fillViewport="true"
+                android:scrollbars="none">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <TextView
+                        android:id="@+id/sdk_certification_hint_info"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginLeft="25dp"
+                        android:layout_marginRight="25dp"
+                        android:layout_marginTop="20dp"
+                        android:lineSpacingExtra="3dp"
+                        android:lineSpacingMultiplier="1.5"
+                        android:text="@string/le_sdk_certification_hint_info"
+                        android:textColor="@color/sdk_gray"
+                        android:textSize="14sp"/>
+
+                    <LinearLayout
+                        android:id="@+id/sdk_certification_edittext_ly"
+                        android:layout_width="match_parent"
+                        android:layout_height="86dp"
+                        android:layout_below="@id/sdk_certification_hint_info"
+                        android:layout_marginLeft="25dp"
+                        android:layout_marginRight="25dp"
+                        android:layout_marginTop="17dp"
+                        android:background="@drawable/alter_certification_border_line_bg"
+                        android:orientation="vertical">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="0dp"
+                            android:layout_weight="1"
+                            android:orientation="horizontal">
+
+                            <EditText
+                                android:id="@+id/sdk_certification_hint_identity_name_ed"
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:layout_marginLeft="10dp"
+                                android:layout_weight="1"
+                                android:background="@null"
+                                android:hint="@string/le_sdk_certification_hint_name"
+                                android:inputType="text"
+                                android:textColor="@color/c333333"
+                                android:textColorHint="#b2b2b2"
+                                android:textSize="@dimen/lepay_common_dialog_desc_14.0sp"/>
+
+                            <ImageView
+                                android:id="@+id/sdk_certification_hint_identity_name_del"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:layout_marginRight="10dp"
+                                android:background="@drawable/delete_icon_selector"
+                                android:visibility="gone"/>
+                        </LinearLayout>
+
+                        <ImageView
+                            android:layout_width="match_parent"
+                            android:layout_height="1px"
+                            android:background="#b3b3b3"/>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="0dp"
+                            android:layout_weight="1"
+                            android:orientation="horizontal">
+
+                            <EditText
+                                android:id="@+id/sdk_certification_hint_identity_num_ed"
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:layout_marginLeft="10dp"
+                                android:layout_weight="1"
+                                android:background="@null"
+                                android:hint="@string/le_sdk_certification_hint_identity_num"
+                                android:textColor="@color/c333333"
+                                android:textColorHint="#b2b2b2"
+                                android:textSize="@dimen/lepay_common_dialog_desc_14.0sp"/>
+
+                            <ImageView
+                                android:id="@+id/sdk_certification_hint_identity_num_del"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:layout_marginRight="10dp"
+                                android:background="@drawable/delete_icon_selector"
+                                android:visibility="gone"/>
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/sdk_certification_hint_submint_rightinfo_ly"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/sdk_certification_edittext_ly"
+                        android:layout_marginLeft="25dp"
+                        android:layout_marginRight="25dp"
+                        android:layout_marginTop="10dp"
+                        android:gravity="center|left"
+                        android:orientation="horizontal"
+                        android:visibility="gone">
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:background="@drawable/icon_warning"/>
+
+                        <TextView
+                            android:id="@+id/sdk_certification_hint_submint_rightinfo_tv"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="5dp"
+                            android:text="@string/le_sdk_certification_hint_submit_rightinfo"
+                            android:textColor="@color/sdk_orange"
+                            android:textSize="12sp"/>
+                    </LinearLayout>
+
+                    <Button
+                        android:id="@+id/sdk_certification_submit_bt"
+                        android:layout_width="match_parent"
+                        android:layout_height="40dp"
+                        android:layout_below="@id/sdk_certification_edittext_ly"
+                        android:layout_marginBottom="20dp"
+                        android:layout_marginLeft="25dp"
+                        android:layout_marginRight="25dp"
+                        android:layout_marginTop="40dp"
+                        android:background="@drawable/btn_giftbag_seletor"
+                        android:text="@string/le_sdk_certification_submit"
+                        android:textColor="@color/lepay_white"
+                        android:textSize="@dimen/lepay_common_dialog_desc_14.0sp"/>
+                </RelativeLayout>
+            </ScrollView>
+        </RelativeLayout>
+    </com.le.legamesdk.widget.LeMainViewParent>
+
+</RelativeLayout>

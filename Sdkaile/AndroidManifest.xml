@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.syhl.jzsg.alyx"
+    android:versionCode="1"
+    android:versionName="1.0" >
+
+    <uses-sdk
+        android:minSdkVersion="11"
+        android:targetSdkVersion="21" />
+
+  <uses-permission android:name="android.permission.INTERNET"/>  
+  <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>  
+  <uses-permission android:name="android.permission.CHANGE_NETWORK_STATE"/>  
+  <uses-permission android:name="android.permission.READ_PHONE_STATE"/>  
+  <uses-permission android:name="org.simalliance.openmobileapi.SMARTCARD"/>  
+  <uses-permission android:name="android.permission.NFC"/>  
+  <uses-feature android:name="android.hardware.nfc.hce"/>  
+  <uses-permission android:name="android.permission.SEND_SMS"/>  
+  <uses-permission android:name="android.permission.VIBRATE"/>  
+  <uses-permission android:name="android.webkit.permission.PLUGIN"/>  
+  <uses-permission android:name="android.permission.WRITE_SETTINGS"/>  
+  <uses-permission android:name="android.permission.CHANGE_WIFI_STATE"/>  
+  <uses-permission android:name="android.permission.WAKE_LOCK"/>  
+  <uses-permission android:name="android.permission.CALL_PHONE"/>  
+  <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW"/>  
+  <uses-permission android:name="android.permission.GET_TASKS"/>  
+  <!-- 在SDCard中创建与删除文件权限 -->  
+  <uses-permission android:name="android.permission.MOUNT_UNMOUNT_FILESYSTEMS"/>  
+  <uses-permission android:name="android.permission.ACCESS_WIFI_STATE"/>  
+  <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION"/>  
+  <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION"/>  
+  <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>  
+  <!-- 照相的权限 -->  
+  <uses-feature android:name="android.hardware.camera"/>  
+  <uses-permission android:name="android.permission.CAMERA"/>  
+  <uses-permission android:name="android.hardware.camera.autofocus"/>  
+  <!-- 读取短信验证码	可选 -->  
+  <uses-permission android:name="android.permission.RECEIVE_SMS"/>  
+  <uses-permission android:name="android.permission.READ_SMS"/>  
+  <!-- 录像需要的权限 -->  
+  <uses-permission android:name="android.permission.RECORD_VIDEO"/>  
+  <uses-permission android:name="android.permission.INTERACT_ACROSS_USERS_FULL"/>  
+  <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>  
+  <uses-permission android:name="com.android.launcher.permission.INSTALL_SHORTCUT"/>
+
+    <application
+        android:name="com.yayawan.impl.YYApplication"
+        android:allowBackup="true"
+        android:theme="@android:style/Theme.NoTitleBar.Fullscreen" >
+        <activity
+            android:name="com.yayawan.sdktemplate.MainActivity"
+            android:label="app_name" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <!-- 手游互联配置 -->
+        <meta-data
+            android:name="app_id"
+            android:value="kk1074872004" />
+        <meta-data
+            android:name="isLandscape"
+            android:value="true" />
+
+        <activity
+            android:name="com.game.sdk.ui.WebPayActivity"
+            android:configChanges="screenSize|orientation|keyboardHidden|navigation"
+            android:launchMode="singleTask"
+            android:screenOrientation="landscape"
+            android:theme="@android:style/Theme.NoTitleBar.Fullscreen"
+            android:windowSoftInputMode="adjustResize|stateHidden"
+            tools:replace="android:screenOrientation" />
+        <activity
+            android:name="com.game.sdk.ui.FloatWebActivity"
+            android:configChanges="orientation|keyboardHidden"
+            android:screenOrientation="landscape"
+            android:theme="@android:style/Theme.NoTitleBar.Fullscreen"
+            android:windowSoftInputMode="adjustResize|stateHidden"
+            tools:replace="android:screenOrientation" />
+        <activity
+            android:name="com.game.sdk.ui.HuoLoginActivity"
+            android:configChanges="screenSize|orientation|keyboardHidden|navigation"
+            android:launchMode="singleTask"
+            android:screenOrientation="landscape"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar.Fullscreen"
+            android:windowSoftInputMode="adjustResize|stateHidden"
+            tools:replace="android:screenOrientation" />
+        <activity
+            android:name="com.game.sdk.ui.WebViewActivity"
+            android:configChanges="screenSize|orientation|keyboardHidden|navigation"
+            android:screenOrientation="landscape"
+            android:windowSoftInputMode="adjustResize|stateHidden"
+            tools:replace="android:screenOrientation" />
+
+        <service android:name="com.game.sdk.HuosdkService" />
+
+        <activity
+            android:name="com.alipay.sdk.app.H5PayActivity"
+            android:configChanges="orientation|keyboardHidden|navigation"
+            android:exported="false"
+            android:screenOrientation="landscape"
+            android:theme="@android:style/Theme.NoTitleBar.Fullscreen"
+            android:windowSoftInputMode="adjustResize|stateHidden"
+            tools:replace="android:screenOrientation" />
+        <activity
+            android:name="com.switfpass.pay.activity.QQWapPayWebView"
+            android:configChanges="screenSize|orientation|keyboardHidden|navigation"
+            android:screenOrientation="landscape"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar.Fullscreen"
+            tools:replace="android:screenOrientation" />
+        <activity
+            android:name="com.payeco.android.plugin.PayecoPluginLoadingActivity"
+            android:configChanges="screenSize|keyboardHidden|orientation"
+            android:launchMode="singleTask"
+            android:screenOrientation="landscape"
+            android:theme="@android:style/Theme.NoTitleBar.Fullscreen"
+            android:windowSoftInputMode="adjustResize|stateHidden"
+            tools:replace="android:screenOrientation" />
+        <activity
+            android:name="com.payeco.android.plugin.PayecoCameraActivity"
+            android:configChanges="orientation|keyboardHidden|navigation"
+            android:screenOrientation="landscape"
+            android:theme="@android:style/Theme.NoTitleBar.Fullscreen"
+            tools:replace="android:screenOrientation" />
+        <activity
+            android:name="com.payeco.android.plugin.PayecoVedioActivity"
+            android:configChanges="orientation|keyboardHidden|navigation"
+            android:process="com.payeco.android.plugin.vedio"
+            android:screenOrientation="landscape"
+            android:theme="@android:style/Theme.NoTitleBar.Fullscreen"
+            tools:replace="android:screenOrientation" />
+
+        <service
+            android:name="com.baidu.location.f"
+            android:enabled="true"
+            android:process=":remote" >
+            <intent-filter>
+                <action android:name="com.baidu.location.service_v2.2" />
+            </intent-filter>
+        </service>
+
+        <meta-data
+            android:name="com.baidu.lbsapi.API_KEY"
+            android:value="1634725cc42c748484d9c642a67e1255" />
+        <meta-data
+            android:name="HS_APPID"
+            android:value="363072" />
+        <meta-data
+            android:name="HS_CLIENTID"
+            android:value="736" />
+        <meta-data
+            android:name="HS_CLIENTKEY"
+            android:value="da3b2f87887c2b8f7aa583c77cc7032f" />
+        
+         <meta-data
+            android:name="gamemoneyname"
+            android:value="钻石" />
+    </application>
+
+</manifest>

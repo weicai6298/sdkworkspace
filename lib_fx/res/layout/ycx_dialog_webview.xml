@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" 
+    android:layout_width="fill_parent" 
+    android:layout_height="fill_parent"
+    android:background="@color/ycx_color_graywhite">
+    
+   <FrameLayout 
+    android:layout_width="match_parent"
+    android:gravity="center_vertical"
+    android:visibility="gone"
+    android:id="@+id/ycx_fl_root"
+    android:layout_height="wrap_content">
+    
+  	<LinearLayout
+	    android:id="@+id/ycx_ll_title"
+	    android:layout_width="match_parent"
+	    android:layout_height="44dip"
+	    android:background="@color/ycx_color_white"
+	    android:gravity="center"
+	    android:orientation="horizontal" >
+	
+	    <TextView
+	        android:id="@+id/ycx_tv_title"
+	        android:padding="5dp"
+	        android:textSize="20dip"
+	        android:textColor="@color/ycx_color_gray"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content" />
+
+	</LinearLayout> 
+	 <LinearLayout 
+	    android:layout_width="40dip"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:layout_gravity="center_vertical"
+        android:id="@+id/ycx_ll_black">
+	     <ImageView 
+	            android:src="@drawable/ycx_img_dialog_back"
+	            android:scaleType="fitXY" 
+	         	android:layout_width="wrap_content"
+        		android:layout_height="wrap_content"/>
+	 </LinearLayout>
+
+</FrameLayout>
+    
+<!--     <ScrollView -->
+<!--         android:layout_width="match_parent" -->
+<!--         android:layout_height="match_parent" > -->
+	    <FrameLayout
+	        android:layout_width="fill_parent"
+	        android:layout_height="match_parent"
+	        android:id="@+id/fl_ycx"
+	        android:background="@color/ycx_color_white"
+	        android:layout_gravity="center">
+		    <WebView
+		        android:id="@+id/ycx_webView"
+		        android:background="@color/ycx_color_gray"
+		        android:layout_width="match_parent"
+		        android:layout_height="match_parent" />
+		    <ProgressBar 
+		        android:id="@+id/ycx_pb"
+		        android:layout_width="wrap_content"
+		        android:layout_height="wrap_content"
+		        android:layout_gravity="center"
+		        />
+		</FrameLayout>
+<!-- 		</ScrollView> -->
+</LinearLayout>

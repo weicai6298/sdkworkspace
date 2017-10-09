@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <include
+        android:id="@+id/pyw_layout_common_title"
+        layout="@layout/pyw_common_title_bar"
+        android:visibility="gone" />
+
+    <TextView
+        android:id="@+id/pyw_btn_back"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_alignParentBottom="true"
+        android:background="@color/pyw_common_orange"
+        android:gravity="center"
+        android:text="返回"
+        android:textColor="@color/pyw_common_white"
+        android:textSize="18sp" >
+    </TextView>
+
+    <WebView
+        android:id="@+id/pyw_webview"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@id/pyw_btn_back" />
+
+</RelativeLayout>

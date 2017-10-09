@@ -1,0 +1,51 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/lesdk_transparent_80">
+
+    <RelativeLayout
+        android:id="@+id/le_main_view_parent"
+        android:layout_width="302dp"
+        android:layout_height="300dp"
+        android:layout_centerInParent="true"
+        android:background="@drawable/le_oauth_fast_login_main_bg">
+
+
+        <ImageView
+            android:id="@+id/le_oauth_account_manager_le_logo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="16dp"
+            android:contentDescription="@string/le_oauth_account_manager_le_logo_description"
+            android:src="@drawable/le_oauth_logo_small" />
+
+        <LinearLayout
+            android:id="@+id/account_manager_main_user_parent"
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:layout_centerInParent="true"
+            android:layout_marginEnd="20dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginStart="20dp"
+            android:orientation="horizontal" />
+
+
+        <TextView
+            android:id="@+id/le_oauth_account_manager_other_login_txt"
+            style="@style/LeOauthAccountManagerOtherLogin"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_marginBottom="20dp"
+            android:layout_marginEnd="20dp"
+            android:layout_marginRight="20dp"
+            android:text="@string/le_oauth_account_manager_other_login"
+            android:textSize="14dp" />
+    </RelativeLayout>
+
+</RelativeLayout>

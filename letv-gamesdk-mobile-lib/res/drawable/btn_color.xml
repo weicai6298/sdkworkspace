@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+    <selector xmlns:android="http://schemas.android.com/apk/res/android" >
+        <!-- 设置点击时字体颜色 -->
+        <item android:state_pressed="true" android:color="#FFFFFF"/>
+        <item android:state_selected="true" android:color="#FFFFFF"/>
+        <item android:state_enabled="false" android:color="#cccccc"/>
+        <!-- 默认颜色 -->
+        <item android:color="#FFFFFF"/>
+    </selector>

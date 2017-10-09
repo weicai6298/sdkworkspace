@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="horizontal"
+    android:paddingTop="10dp" >
+
+    <TextView
+        android:id="@+id/ticket_name_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+      android:textColor="@android:color/black" />
+
+    <TextView
+       android:layout_toRightOf="@id/ticket_name_tv"
+        android:id="@+id/ticket_lasttime_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+      
+        android:textColor="@android:color/black" />
+
+    
+    
+    
+    <TextView
+          android:layout_toRightOf="@id/ticket_lasttime_tv"
+        android:visibility="invisible"
+        android:layout_marginLeft="5dp"
+        android:id="@+id/recommend_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+      android:layout_marginRight="20dp"
+        android:text="@string/ticket_dialog_recommend"
+        android:textColor="@color/cmmn_red" />
+
+    <ImageView
+    
+  android:layout_alignParentRight="true"
+        android:id="@+id/select_point_iv"
+        android:layout_width="25dp"
+        android:layout_height="25dp"
+       
+        android:src="@drawable/jolo_checkbox_off" />
+
+</RelativeLayout>

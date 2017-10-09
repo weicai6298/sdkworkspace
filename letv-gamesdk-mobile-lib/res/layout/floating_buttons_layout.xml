@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+    <ImageView
+        android:id="@+id/personal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:background="@drawable/sdk_btn_user"
+        android:visibility="visible"
+        />
+
+    <ImageView
+        android:id="@+id/personal_left_red_dot"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/personal"
+        android:layout_alignParentTop="true"
+        android:background="@drawable/sdk_red_spots"
+        android:visibility="gone"
+        />
+
+    <ImageView
+        android:id="@+id/personal_right_red_dot"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_alignRight="@+id/personal"
+        android:background="@drawable/sdk_red_spots"
+        android:visibility="gone"
+        />
+
+    <ImageView
+        android:id="@+id/gift"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="10dp"
+        android:layout_toRightOf="@+id/personal"
+        android:background="@drawable/sdk_btn_gift"
+        android:visibility="visible"
+        />
+
+    <ImageView
+        android:id="@+id/gift_left_red_dot"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/gift"
+        android:layout_alignParentTop="true"
+        android:background="@drawable/sdk_red_spots"
+        android:visibility="gone"
+        />
+
+    <ImageView
+        android:id="@+id/gift_right_red_dot"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_alignRight="@+id/gift"
+        android:background="@drawable/sdk_red_spots"
+        android:visibility="gone"
+        />
+
+    <ImageView
+        android:id="@+id/message"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="10dp"
+        android:layout_toRightOf="@+id/gift"
+        android:background="@drawable/sdk_btn_news"
+        android:visibility="visible"
+        />
+
+    <ImageView
+        android:id="@+id/message_left_red_dot"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/message"
+        android:layout_alignParentTop="true"
+        android:background="@drawable/sdk_red_spots"
+        android:visibility="gone"
+        />
+
+    <ImageView
+        android:id="@+id/message_right_red_dot"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_alignRight="@+id/message"
+        android:background="@drawable/sdk_red_spots"
+        android:visibility="gone"
+        />
+
+    <ImageView
+        android:id="@+id/service"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="10dp"
+        android:layout_toRightOf="@+id/message"
+        android:background="@drawable/sdk_btn_service"
+        android:visibility="visible"
+        />
+</RelativeLayout>

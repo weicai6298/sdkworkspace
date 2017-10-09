@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:background="@drawable/shape_login_activity"
+    android:orientation="vertical" >
+
+    <TextView
+         android:textSize="16dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/btn_gray_special_shape_rect"
+        android:gravity="center"
+        android:padding="10dp"
+        android:text="@string/ticket_pay_dialog_title"
+        android:textColor="@color/cmmn_black"
+        android:textStyle="bold" />
+
+    <ListView
+        android:id="@+id/ticket_pay_dialog_listview"
+        android:layout_width="fill_parent"
+        android:layout_height="150dp"
+        android:cacheColorHint="@color/transparent"
+        android:divider="#00000000"
+        android:dividerHeight="0dip"
+        android:listSelector="@android:color/transparent"
+        android:padding="5dp" >
+    </ListView>
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="10dp" >
+
+        <TextView
+             android:textSize="16dp"
+            android:id="@+id/list_cancel_tv"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="5dp"
+            android:layout_weight="1"
+            android:background="@drawable/btn_gray2_shape_rect"
+            android:gravity="center"
+            android:padding="5dp"
+            android:text="@string/volume_dialog_cancle"
+            android:textColor="@android:color/white" />
+
+        <TextView
+             android:textSize="16dp"
+            android:id="@+id/list_ok_tv"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:layout_weight="1"
+            android:background="@drawable/btn_blue_shape_rect"
+            android:gravity="center"
+            android:padding="5dp"
+            android:text="@string/volume_dialog_ok"
+            android:textColor="@android:color/white" />
+    </LinearLayout>
+
+</LinearLayout>

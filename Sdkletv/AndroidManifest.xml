@@ -1,0 +1,307 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.yayawan.sdktemplate"
+    android:versionCode="1"
+    android:versionName="1.0" >
+
+    <uses-sdk
+        android:minSdkVersion="8"
+        android:targetSdkVersion="19" />
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW" />
+    <uses-permission android:name="android.permission.GET_TASKS" />
+    
+     <!-- targetSdkVersion若为23及以上，请自行处理在6.0系统上的权限申请逻辑 -->
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_UPDATES" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_LOCATION_EXTRA_COMMANDS" />
+    <uses-permission android:name="android.permission.CALL_PHONE" />
+    <uses-permission android:name="android.permission.CHANGE_CONFIGURATION" />
+    <uses-permission android:name="android.permission.CHANGE_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE" />
+     <uses-permission android:name="android.permission.MOUNT_UNMOUNT_FILESYSTEMS" />
+    <uses-permission android:name="android.permission.READ_LOGS" />
+      <uses-permission android:name="android.permission.READ_SMS" />
+    <uses-permission android:name="android.permission.READ_SETTINGS" />
+      <uses-permission android:name="android.permission.WRITE_SETTINGS" />
+    <uses-permission android:name="android.permission.WRITE_SMS" />
+     <uses-permission android:name="com.letv.android.accountinfo.permission.pay" />
+    <uses-permission android:name="lepay.permission.ACCESS_SERVICE" />
+    <uses-permission android:name="android.permission.SEND_SMS" />
+
+    <application
+        android:name="com.yayawan.impl.YYApplication"
+        android:allowBackup="true"
+        android:theme="@android:style/Theme.NoTitleBar.Fullscreen" >
+        <activity
+            android:name="com.yayawan.sdktemplate.MainActivity"
+            android:label="app_name" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+      
+        
+      <!-- 手游互联配置 -->
+     	 <meta-data
+            android:name="app_id"
+            android:value="kk4762049" />
+        <meta-data
+            android:name="isLandscape"
+            android:value="true" />
+    
+        
+        <meta-data
+            android:name="lepay_appid"
+            android:value="318068" />
+        <meta-data
+            android:name="lepaysdk_version"
+            android:value="3.0" />
+        
+          <meta-data
+            android:name="lepay_appkey"
+            android:value="923c4a24f6fc48efaba095e738e36c77" />
+
+        <meta-data
+            android:name="callback"
+            android:value="https://api.sdk.75757.com/pay/notify/4762049/" />
+        
+        <!-- 乐视SDK所需Activity声明-START -->
+        <!-- 支付SDK相关声明-START -->
+        <!-- 支付SDK的横竖屏设置不得更改，必须保持原样 -->
+        <activity
+            android:name="com.alipay.sdk.app.H5PayActivity"
+            android:configChanges="orientation|keyboardHidden|navigation|screenSize"
+            android:exported="false"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustResize|stateHidden" >
+        </activity>
+        <activity
+            android:name="com.alipay.sdk.app.H5AuthActivity"
+            android:configChanges="orientation|keyboardHidden|navigation"
+            android:exported="false"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustResize|stateHidden" >
+        </activity>
+        <activity
+            android:name="com.letv.lepaysdk.activity.GameCouponActivity"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.NoTitleBar" />
+        <activity
+            android:name="com.letv.lepaysdk.activity.CashierAcitivity"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.NoTitleBar" />
+        <activity
+            android:name="com.letv.lepaysdk.activity.PayPasswordActivity"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.NoTitleBar" />
+        <!-- 支付SDK的横竖屏设置不得更改，必须保持原样 -->
+        <!-- 支付SDK相关声明-END -->
+
+
+        <!-- 账号SDK相关声明-START -->
+        <activity
+            android:name="com.le.accountoauth.activity.AccountManagerActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:label="@string/le_oauth_title_activity_account_manager"
+            android:screenOrientation="behind"
+            android:theme="@style/LeFloatActivityTranslucent_80" />
+        <activity
+            android:name="com.le.accountoauth.activity.LeLoadingActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:label="@string/le_oauth_title_activity_loading"
+            android:screenOrientation="behind"
+            android:theme="@style/LeOauthLoadingAnimation" />
+        <activity
+            android:name="com.le.accountoauth.activity.AccountControlActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:label="@string/le_oauth_title_activity_control"
+            android:screenOrientation="behind"
+            android:theme="@android:style/Theme.NoTitleBar.Fullscreen" />
+        <activity
+            android:name="com.le.accountoauth.activity.FastLoginActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:label="@string/le_oauth_title_activity_fast_login"
+            android:screenOrientation="behind"
+            android:theme="@style/LeFloatActivityTranslucent_80" />
+        <activity
+            android:name="com.le.accountoauth.activity.LeWebViewActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:label="@string/le_oauth_title_activity_webView"
+            android:screenOrientation="behind"
+            android:theme="@style/LeOauthNoTitleBarTheme"
+            android:windowSoftInputMode="adjustResize" />
+        <!-- 账号SDK相关声明-END -->
+
+
+        <!-- 其他所需声明-START -->
+        <activity
+            android:name="com.le.legamesdk.activity.notice.ActionDetailWebActivity"
+            android:configChanges="orientation|screenSize|keyboardHidden"
+            android:launchMode="singleTop"
+            android:screenOrientation="behind"
+            android:theme="@style/LeOauthNoTitleBarTheme"
+            android:windowSoftInputMode="adjustResize" />
+        <activity
+            android:name="com.le.legamesdk.activity.notice.AutoUpdateActivity"
+            android:configChanges="orientation|screenSize|keyboardHidden"
+            android:launchMode="singleTask"
+            android:screenOrientation="behind"
+            android:theme="@style/LeFloatActivityTranslucent_80" />
+        <activity
+            android:name="com.le.legamesdk.activity.homepage.LeSDKMainActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:launchMode="singleTop"
+            android:screenOrientation="behind"
+            android:theme="@style/LeFloatActivityTranslucent_80" />
+        <activity
+            android:name="com.le.legamesdk.activity.aboutus.AboutUsActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:launchMode="singleTop"
+            android:screenOrientation="behind"
+            android:theme="@style/LeFloatActivityTranslucent" />
+        <activity
+            android:name="com.le.legamesdk.activity.coupon.CouponActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:launchMode="singleTop"
+            android:screenOrientation="behind"
+            android:theme="@style/LeFloatActivityTranslucent" />
+        <activity
+            android:name="com.le.legamesdk.activity.inbox.MessageActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:launchMode="singleTop"
+            android:screenOrientation="behind"
+            android:theme="@style/LeFloatActivityTranslucent" />
+        <activity
+            android:name="com.le.legamesdk.activity.inbox.MessageDetailActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:launchMode="singleTop"
+            android:screenOrientation="behind"
+            android:theme="@style/LeFloatActivityTranslucent" />
+        <activity
+            android:name="com.le.legamesdk.activity.notice.NoticeDialogActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:launchMode="singleTask"
+            android:screenOrientation="behind"
+            android:theme="@style/LeFloatActivityTranslucent" />
+        <activity
+            android:name="com.le.legamesdk.activity.notice.ExitDialogActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:launchMode="singleTop"
+            android:screenOrientation="behind"
+            android:theme="@style/SdkDialogStyle" />
+        <activity
+            android:name="com.le.legamesdk.activity.giftbag.GiftBagActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:label="@string/lesdk_giftbag_title"
+            android:launchMode="singleTop"
+            android:screenOrientation="behind"
+            android:theme="@style/LeFloatActivityTranslucent" />
+        <activity
+            android:name="com.le.legamesdk.activity.giftbag.GameGiftBagDetailActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:label="@string/sdk_giftbag_detail"
+            android:launchMode="singleTop"
+            android:screenOrientation="behind"
+            android:theme="@style/LeFloatActivityTranslucent" />
+        <activity
+            android:name="com.le.legamesdk.activity.security.LePaySafeActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:label="@string/title_activity_le_pay_safe"
+            android:launchMode="singleTop"
+            android:screenOrientation="behind"
+            android:theme="@style/LeFloatActivityTranslucent" />
+        <activity
+            android:name="com.le.legamesdk.activity.security.BindingPhoneActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:label="@string/title_activity_binding_phone"
+            android:launchMode="singleTop"
+            android:screenOrientation="behind"
+            android:theme="@style/LeFloatActivityTranslucent" />
+        <activity
+            android:name="com.le.legamesdk.activity.security.SetPasswordActivity"
+            android:label="@string/title_activity_set_password"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait"
+            android:theme="@style/LeFloatActivityTranslucent" />
+        <activity
+            android:name="com.le.legamesdk.activity.security.VerifyPasswordActivity"
+            android:label="@string/title_activity_verify_password"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait"
+            android:theme="@style/LeFloatActivityTranslucent" />
+        <activity
+            android:name="com.le.legamesdk.activity.security.VerifyBoundPhoneActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:label="@string/title_activity_verify_unbind_phone"
+            android:launchMode="singleTop"
+            android:screenOrientation="behind"
+            android:theme="@style/LeFloatActivityTranslucent" />
+        <activity
+            android:name="com.le.legamesdk.activity.topup.LePaySelectActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:label="@string/title_activity_le_pay_select"
+            android:launchMode="singleTop"
+            android:screenOrientation="behind"
+            android:theme="@style/LeFloatActivityTranslucent" />
+        <activity
+            android:name="com.le.legamesdk.activity.bankcard.BankCardActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:label="@string/title_activity_bank_card"
+            android:launchMode="singleTop"
+            android:screenOrientation="behind"
+            android:theme="@style/LeFloatActivityTranslucent" />
+        <activity
+            android:name="com.le.legamesdk.activity.history.TransactionHistoryActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:label="@string/title_activity_bank_card"
+            android:launchMode="singleTop"
+            android:screenOrientation="behind"
+            android:theme="@style/LeFloatActivityTranslucent" />
+        <activity
+            android:name="com.le.legamesdk.activity.certification.CertificationActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:label="@string/le_sdk_certification_activity_title"
+            android:launchMode="singleTop"
+            android:screenOrientation="behind"
+            android:theme="@style/LeFloatActivityTranslucent" />
+        <activity
+            android:name="com.le.legamesdk.activity.certification.CertificationErrorActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:label="@string/le_sdk_certification_error_activity"
+            android:launchMode="singleTop"
+            android:screenOrientation="behind"
+            android:theme="@style/LeFloatActivityTranslucent" />
+        <activity
+            android:name="com.le.legamesdk.activity.Closure.ClosureLoginActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:label="@string/le_sdk_closure_login_activity"
+            android:launchMode="singleTop"
+            android:screenOrientation="behind"
+            android:theme="@style/LeFloatActivityTranslucent" />
+        <activity
+            android:name="com.le.legamesdk.activity.Closure.ClosurePayActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:label="@string/le_sdk_closure_pay_activity"
+            android:launchMode="singleTop"
+            android:screenOrientation="behind"
+            android:theme="@style/LeFloatActivityTranslucent" />
+        <!-- 其他所需声明-END -->
+
+        <!-- 乐视SDK所需Activity声明-END -->
+        
+    </application>
+
+</manifest>
+

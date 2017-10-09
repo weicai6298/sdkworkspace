@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.lenovo.paysdk.example9"
+    android:versionCode="1"
+    android:versionName="1.0" >
+
+    <uses-sdk
+        android:minSdkVersion="8"
+        android:targetSdkVersion="19" />
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW" />
+    <uses-permission android:name="android.permission.GET_TASKS" />
+    <uses-permission android:name="android.permission.RECEIVE_SMS" />
+    <uses-permission android:name="android.permission.SEND_SMS" />
+    <uses-permission android:name="android.permission.READ_SMS" />
+    <uses-permission android:name="android.permission.WRITE_SMS" />
+    <uses-permission android:name="android.permission.MOUNT_UNMOUNT_FILESYSTEMS" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <!-- wo+ -->
+    <uses-permission android:name="android.permission.GET_TASKS" />
+
+    <application
+        android:name="com.yayawan.impl.YYApplication"
+        android:allowBackup="true"
+        android:theme="@android:style/Theme.NoTitleBar.Fullscreen" >
+        <activity
+            android:name="com.yayawan.sdktemplate.MainActivity"
+            android:label="app_name" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <!-- 手游互联配置 -->
+        <meta-data
+            android:name="app_id"
+            android:value="kk78087134" />
+        <meta-data
+            android:name="isLandscape"
+            android:value="true" />
+
+        <!-- 支付配置开始 -->
+        <!-- 配置 OpenAppID -->
+        <meta-data
+            android:name="lenovo.open.appid"
+            android:value="1506180698970.app.ln" />
+
+        <activity
+            android:name="com.ehoo.tasks.other.PayResultActivity"
+            android:configChanges="orientation|keyboardHidden"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait" />
+
+        <receiver android:name="com.ehoo.sms.receiver.BootReceiver" >
+            <intent-filter>
+
+                <!-- WIFI开关改变 -->
+                <action android:name="android.net.wifi.WIFI_STATE_CHANGED" />
+                <!-- WIFI连接改变 -->
+                <action android:name="android.net.wifi.STATE_CHANGE" />
+                <!-- SIM卡状态改变 -->
+                <action android:name="android.intent.action.SIM_STATE_CHANGED" />
+                <!-- 网络状态改变 -->
+                <action android:name="android.net.conn.CONNECTIVITY_CHANGE" />
+                <!-- 本地连接改变 -->
+                <action android:name="android.intent.action.ANY_DATA_STATE" />
+                <!-- 电源连接状态 -->
+                <action android:name="android.intent.action.ACTION_POWER_CONNECTED" />
+                <!-- 电源断开状态 -->
+                <action android:name="android.intent.action.ACTION_POWER_DISCONNECTED" />
+                <!-- 用户解锁状态 -->
+                <action android:name="android.intent.action.USER_PRESENT" />
+                <!-- 手机状态改变 -->
+                <action android:name="android.intent.action.PHONE_STATE" />
+                <!-- 日期改变广播 -->
+                <action android:name="android.intent.action.DATE_CHANGED" />
+                <!-- 时区改变广播 -->
+                <action android:name="android.intent.action.TIMEZONE_CHANGED" />
+                <action android:name="android.intent.action.MAIN" />
+                <action android:name="com.ehoo.action.SEND" />
+            </intent-filter>
+        </receiver>
+
+        <service android:name="com.ehoo.sms.receiver.SMSReceiveService" >
+        </service>
+
+        <!-- 支付配置结束 -->
+    </application>
+
+</manifest>

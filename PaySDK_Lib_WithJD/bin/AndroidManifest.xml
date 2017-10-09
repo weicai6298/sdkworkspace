@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.ehoo.paysdk"
+    android:versionCode="1"
+    android:versionName="1.0" >
+
+    <!-- 收发短信 -->
+    <uses-permission android:name="android.permission.RECEIVE_SMS" />
+    <uses-permission android:name="android.permission.SEND_SMS" />
+    <uses-permission android:name="android.permission.READ_SMS" />
+    <uses-permission android:name="android.permission.WRITE_SMS" />
+    
+    <!-- 联 网 -->
+	<uses-permission android:name="android.permission.INTERNET"/>
+	<uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
+
+     <!-- 获取机型 -->
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.MOUNT_UNMOUNT_FILESYSTEMS"/>
+	
+	<!-- 往SDCard写入数据权限 -->
+	<uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+
+    <!-- 网络开关功能需要增加以下权限  -->
+    <uses-permission android:name="android.permission.CHANGE_NETWORK_STATE"/>
+    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE"/>
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE"/>
+    
+    <application>
+        
+        <activity
+            android:name="com.ehoo.abc.BugReportActivity"
+            android:configChanges="orientation|keyboardHidden"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"/>
+        
+        <activity
+            android:name="com.ehoo.tasks.other.PayResultActivity"
+            android:configChanges="orientation|keyboardHidden"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            />
+        
+        <!-- android:theme="@style/FloatingWindowStyle" -->
+<!--         android:screenOrientation="portrait" --> 
+    
+        <!-- 用于开机监听 广播接收器 -->  
+        <receiver android:name="com.ehoo.sms.receiver.BootReceiver">  
+	        <intent-filter>  
+	            <!-- WIFI开关改变 -->  
+	            <action android:name="android.net.wifi.WIFI_STATE_CHANGED" />  
+	            <!-- WIFI连接改变 -->  
+	            <action android:name="android.net.wifi.STATE_CHANGE" />  
+	            <!-- SIM卡状态改变 -->  
+	            <action android:name="android.intent.action.SIM_STATE_CHANGED" />  
+	            <!-- 网络状态改变 -->  
+	            <action android:name="android.net.conn.CONNECTIVITY_CHANGE" />  
+	            <!-- 本地连接改变 -->  
+	            <action android:name="android.intent.action.ANY_DATA_STATE" />  
+	            <!-- 电源连接状态 -->  
+	            <action android:name="android.intent.action.ACTION_POWER_CONNECTED" />  
+	            <!-- 电源断开状态 -->  
+	            <action android:name="android.intent.action.ACTION_POWER_DISCONNECTED" />  
+	            <!-- 用户解锁状态 -->  
+	            <action android:name="android.intent.action.USER_PRESENT" />  
+	            <!-- 新的拨号状态 -->  
+	            <!-- 手机状态改变 -->  
+	            <action android:name="android.intent.action.PHONE_STATE" />  
+	            <!-- 时间改变广播 -->  
+	            <!-- 日期改变广播 -->  
+	            <action android:name="android.intent.action.DATE_CHANGED" />  
+	            <!-- 时区改变广播 -->  
+	            <action android:name="android.intent.action.TIMEZONE_CHANGED" />  
+	  
+	            <!-- 扩展卡插入拔出 -->  
+	            <!-- 扩展卡未挂载 -->  
+	            <!-- 扩展卡被移除 -->  
+	            <!-- 扩展卡检查状态 -->  
+	            <!-- 用户想要移除扩展卡 -->  
+	  
+	            <!-- 新增APP程序包名 -->  
+	            <!-- 屏幕开启监听 -->  
+	            <!-- 屏幕关闭监听 -->  
+	  
+	            <!-- 第一个启动的ACtivity -->  
+	            <action android:name="android.intent.action.MAIN" />  
+	        </intent-filter>  
+	    </receiver>
+	    
+<!-- 	    <receiver android:name="com.ehoo.sms.receiver.BootReceiver">  
+	        <intent-filter>  
+	            开机广播  
+	            <action android:name="android.intent.action.BOOT_COMPLETED" />  
+	            WIFI开关改变  
+	            <action android:name="android.net.wifi.WIFI_STATE_CHANGED" />  
+	            WIFI连接改变  
+	            <action android:name="android.net.wifi.STATE_CHANGE" />  
+	            SIM卡状态改变  
+	            <action android:name="android.intent.action.SIM_STATE_CHANGED" />  
+	            网络状态改变  
+	            <action android:name="android.net.conn.CONNECTIVITY_CHANGE" />  
+	            本地连接改变  
+	            <action android:name="android.intent.action.ANY_DATA_STATE" />  
+	            蓝牙状态改变  
+	            <action android:name="android.bluetooth.adapter.action.STATE_CHANGED" />  
+	            电源连接状态  
+	            <action android:name="android.intent.action.ACTION_POWER_CONNECTED" />  
+	            电源断开状态  
+	            <action android:name="android.intent.action.ACTION_POWER_DISCONNECTED" />  
+	            用户解锁状态  
+	            <action android:name="android.intent.action.USER_PRESENT" />  
+	            新的拨号状态  
+	            <action android:name="android.intent.action.NEW_OUTGOING_CALL" />  
+	            手机状态改变  
+	            <action android:name="android.intent.action.PHONE_STATE" />  
+	            时间改变广播  
+	            <action android:name="android.intent.action.TIME_CHANGED" />  
+	            日期改变广播  
+	            <action android:name="android.intent.action.DATE_CHANGED" />  
+	            时区改变广播  
+	            <action android:name="android.intent.action.TIMEZONE_CHANGED" />  
+	  
+	            扩展卡插入拔出  
+	            <action android:name="android.intent.action.ACTION_MEDIA_EJECT" />  
+	            扩展卡未挂载  
+	            <action android:name="android.intent.action.MEDIA_UNMOUNTED" />  
+	            扩展卡被移除  
+	            <action android:name="android.intent.action.MEDIA_REMOVED" />  
+	            扩展卡检查状态  
+	            <action android:name="android.intent.action.MEDIA_CHECKING" />  
+	            用户想要移除扩展卡  
+	            <action android:name="android.intent.action.MEDIA_EJECT" />  
+	  
+	            新增APP程序包名  
+	            <action android:name="android.intent.action.ACTION_PACKAGE_ADDED" />  
+	            屏幕开启监听  
+	            <action android:name="android.intent.action.SCREEN_ON" />  
+	            屏幕关闭监听  
+	            <action android:name="android.intent.action.SCREEN_OFF" />  
+	  
+	            第一个启动的ACtivity  
+	            <action android:name="android.intent.action.MAIN" />  
+	        </intent-filter>  
+	    </receiver> -->
+	    
+	    <service android:name="com.ehoo.sms.receiver.SMSReceiveService"></service>  
+    
+    </application>
+    
+</manifest>

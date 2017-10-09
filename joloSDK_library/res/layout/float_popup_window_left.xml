@@ -1,0 +1,166 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/float_popup_window_left"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_gravity="center_vertical" >
+
+    <!-- 左边菜单 -->
+
+    <LinearLayout
+        android:id="@+id/ll_menu_right"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="45dp"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:visibility="gone" >
+
+        <LinearLayout
+            android:id="@+id/ll_float_personalcenter_right"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="8dp"
+            android:gravity="center"
+            android:orientation="vertical" >
+
+            <ImageView
+                android:id="@+id/iv_float_personalcenter_right"
+                android:layout_width="46dp"
+                android:layout_height="46dp"
+                android:src="@drawable/float_menu_personcenter" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/ll_float_gift_right"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="8dp"
+            android:gravity="center"
+            android:orientation="vertical" >
+
+            <ImageView
+                android:id="@+id/iv_float_gift_right"
+                android:layout_width="46dp"
+                android:layout_height="46dp"
+                android:src="@drawable/float_menu_gift" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/ll_float_strategies_right"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="8dp"
+            android:gravity="center"
+            android:orientation="vertical" >
+
+            <ImageView
+                android:layout_width="46dp"
+                android:layout_height="46dp"
+                android:src="@drawable/float_menu_strategies" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/ll_float_help_right"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="8dp"
+            android:gravity="center"
+            android:orientation="vertical" >
+
+            <ImageView
+                android:id="@+id/iv_float_help_right"
+                android:layout_width="46dp"
+                android:layout_height="46dp"
+                android:src="@drawable/float_menu_helps" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <!-- 右边菜单 -->
+
+    <LinearLayout
+        android:id="@+id/ll_menu_left"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:visibility="gone" >
+
+        <LinearLayout
+            android:id="@+id/ll_float_help"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginRight="8dp"
+            android:gravity="center"
+            android:orientation="vertical" >
+
+            <ImageView
+                android:layout_width="46dp"
+                android:layout_height="46dp"
+                android:src="@drawable/float_menu_helps" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/ll_float_strategies"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginRight="8dp"
+            android:gravity="center"
+            android:orientation="vertical" >
+
+            <ImageView
+                android:id="@+id/iv_float_strategies"
+                android:layout_width="46dp"
+                android:layout_height="46dp"
+                android:src="@drawable/float_menu_strategies" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/ll_float_gift"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginRight="8dp"
+            android:gravity="center"
+            android:orientation="vertical" >
+
+            <ImageView
+                android:id="@+id/iv_float_gift"
+                android:layout_width="46dp"
+                android:layout_height="46dp"
+                android:src="@drawable/float_menu_gift" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/ll_float_personalcenter"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginRight="12dp"
+            android:gravity="center"
+            android:orientation="vertical" >
+
+            <ImageView
+                android:id="@+id/iv_float_personalcenter"
+                android:layout_width="46dp"
+                android:layout_height="46dp"
+                android:src="@drawable/float_menu_personcenter" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <!-- icon 点击的icon -->
+
+    <RelativeLayout
+        android:id="@+id/rl"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@+id/ll_menu_left" >
+
+        <ImageView
+            android:id="@+id/icon_iv"
+            android:layout_width="46dp"
+            android:layout_height="46dp"
+           />
+
+      
+    </RelativeLayout>
+
+</RelativeLayout>

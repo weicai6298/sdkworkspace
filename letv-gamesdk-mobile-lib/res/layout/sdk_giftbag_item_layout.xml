@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:id="@+id/giftbag_listitem_ly"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingLeft="12dp"
+        android:paddingRight="12dp"
+        android:background="#FFFFFF"
+        android:orientation="horizontal">
+
+        <com.le.legamesdk.widget.RoundRectImageView
+            android:id="@+id/sdk_giftbag_item_gifticon_ic"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_gravity="center"
+            android:background="@drawable/altericon_corner"
+             />
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:gravity="center|left"
+            android:layout_marginTop="8dp"
+            android:layout_marginLeft="8dp"
+            android:layout_marginBottom="8dp"
+            android:orientation="vertical"
+            >
+                <TextView
+                    android:id="@+id/sdk_giftbag_item_title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/sdk_tv_giftbag_font_hinttitle_color"
+                    android:textSize="@dimen/lepay_common_dialog_13.0sp"
+                    android:singleLine="true"
+                     />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="6dp"
+                android:orientation="horizontal">
+                <TextView
+                    android:id="@+id/sdk_giftbag_item_left"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="11sp"
+                    android:textColor="@color/sdk_tv_giftbag_font_hinttext_color"
+                    android:text="剩余"
+                    />
+                <TextView
+                    android:id="@+id/sdk_giftbag_item_beleft"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="11sp"
+                    android:singleLine="true"
+                    android:textColor="@color/sdk_tv_giftbag_font_hintnum_color"
+                    android:text="999"
+                     />
+                <TextView
+                    android:id="@+id/sdk_giftbag_item_ge"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="11sp"
+                    android:textColor="@color/sdk_tv_giftbag_font_hinttext_color"
+                    android:text="个"
+                    />
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/sdk_giftbag_item_giftcontent"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="6dp"
+                android:textSize="11sp"
+                android:textColor="@color/sdk_tv_giftbag_font_hinttext_color"
+                android:singleLine="true"
+                 />
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/sdk_giftbag_item_get_bt"
+            android:layout_width="80dp"
+            android:layout_height="34dp"
+            android:textSize="10sp"
+            android:textColor="@drawable/btn_color"
+            android:background="@drawable/btn_giftbag_seletor"
+            android:gravity="center"
+            android:layout_gravity="center"
+             />
+
+    </LinearLayout>
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="#e6e6e6"
+        android:layout_marginLeft="12dp"
+        android:layout_marginRight="12dp"
+        />
+
+</LinearLayout>

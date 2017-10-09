@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F0F0F0"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:id="@+id/ll_bar"
+        android:layout_width="fill_parent"
+        android:layout_height="1dp"
+        android:background="@color/jolo_theme_blue"
+        android:orientation="vertical"
+        android:visibility="gone" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@color/jolo_theme_blue"
+        android:orientation="horizontal"
+        android:padding="4dp" >
+
+        <RelativeLayout
+            android:layout_width="50dp"
+            android:layout_height="match_parent"
+            android:onClick="onBackGame" >
+
+            <ImageView
+                android:id="@+id/back_game_ib"
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                android:layout_centerVertical="true"
+                android:src="@drawable/jolopay_back" />
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/title_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="6dp"
+            android:text="@string/my_message"
+            android:textColor="#FFF"
+            android:textSize="18sp" />
+
+        <FrameLayout
+            android:layout_width="wrap_content"
+            android:layout_height="24dp"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="10dp" >
+
+            <TextView
+                android:id="@+id/select_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="24dp"
+                android:clickable="true"
+                android:text="@string/jolo_select"
+                android:textColor="#FFF" />
+
+            <TextView
+                android:id="@+id/all_select_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="24dp"
+                android:clickable="true"
+                android:text="@string/jolo_all_select"
+                android:textColor="#FFF"
+                android:visibility="gone" />
+        </FrameLayout>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1" >
+
+        <ListView
+            android:id="@+id/message_xlv"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:cacheColorHint="@android:color/transparent"
+            android:divider="#F0F0F0"
+            android:dividerHeight="3dp"
+            android:listSelector="@drawable/selector_list_bkg"
+            android:visibility="gone" />
+
+        <ProgressBar
+            android:id="@+id/loading_view_pb"
+            style="@style/mProgress_circle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true" />
+
+        <TextView
+            android:id="@+id/no_more_gift_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="@string/have_no_message"
+            android:textColor="@color/jolo_gray_font_color"
+            android:textSize="18sp"
+            android:visibility="gone" />
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/btn_delete_tv"
+        android:layout_width="match_parent"
+        android:layout_height="36dp"
+        android:layout_alignParentBottom="true"
+        android:layout_margin="2dp"
+        android:background="@drawable/shape_delete_btn"
+        android:gravity="center"
+        android:text="@string/jolo_delete"
+        android:textColor="#FFF"
+        android:textSize="16sp"
+        android:visibility="gone" />
+
+</LinearLayout>

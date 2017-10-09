@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F0F0F0"
+    android:orientation="vertical" >
+
+    <com.jolosdk.home.ui.widget.xlistview.XListView
+        android:id="@+id/my_gift_lv"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#FFF"
+        android:divider="#F0F0F0"
+        android:dividerHeight="3dp"
+        android:listSelector="@drawable/selector_list_bkg"
+        android:visibility="gone" >
+    </com.jolosdk.home.ui.widget.xlistview.XListView>
+
+    <ProgressBar
+        android:id="@+id/loading_view_pb"
+        style="@style/mProgress_circle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true" />
+
+    <TextView
+        android:id="@+id/no_more_gift_tv"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_centerInParent="true"
+        android:text="@string/you_have_no_gift"
+        android:gravity="center"
+        android:textColor="@color/jolo_gray_font_color"
+        android:textSize="18sp"
+        android:visibility="gone" />
+
+    <include layout="@layout/net_error_layout"/>
+
+</RelativeLayout>

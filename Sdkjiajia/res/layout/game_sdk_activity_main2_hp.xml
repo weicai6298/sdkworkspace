@@ -1,0 +1,326 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity" >
+
+    <RelativeLayout
+        android:id="@+id/game_sdk_relativeLayout1"
+        android:layout_width="match_parent"
+        android:layout_height="42dp"
+        android:background="#00b4ff" >
+
+        <Button
+            android:id="@+id/game_sdk_btn_back"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_alignParentTop="true"
+            android:layout_marginBottom="5dp"
+            android:layout_marginLeft="5dp"
+            android:layout_marginTop="5dp"
+            android:background="@drawable/game_sdk_bg_back"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            android:text="返回"
+            android:textColor="@color/game_sdk_wt" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:text="充值"
+            android:textColor="@color/game_sdk_wt" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true" />
+
+        <ImageView
+            android:id="@+id/game_sdk_imageView1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentTop="true" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/game_sdk_rlimg"
+        android:layout_width="wrap_content"
+        android:layout_height="fill_parent"
+        android:layout_below="@+id/game_sdk_relativeLayout1"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="100dp"
+        android:background="#ffffff" >
+
+        <TextView
+            android:id="@+id/game_sdk_tv_spm"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="5dp"
+            android:gravity="center_horizontal"
+            android:paddingLeft="9dp"
+            android:paddingRight="9dp"
+            android:textColor="#00b4ff"
+            android:textSize="20sp" />
+
+        <TextView
+            android:id="@+id/game_sdk_tv_hx"
+            android:layout_width="fill_parent"
+            android:layout_height="1px"
+            android:layout_below="@+id/game_sdk_tv_spm"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="5dp"
+            android:background="#00b4ff"
+            android:paddingLeft="9dp"
+            android:paddingRight="9dp" />
+
+        <LinearLayout
+            android:id="@+id/game_sdk_tv_goodsNames"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/game_sdk_tv_hx"
+            android:layout_marginLeft="15dp"
+            android:layout_marginTop="2dp" >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:gravity="center_horizontal"
+                android:paddingLeft="9dp"
+                android:text="."
+                android:textColor="#00b4ff"
+                android:textSize="20sp" />
+
+            <TextView
+                android:id="@+id/game_sdk_tv_goodsName1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="7dp"
+                android:gravity="center_horizontal"
+                android:paddingLeft="5dp"
+                android:paddingRight="9dp"
+                android:text="商品名称："
+                android:textColor="#00b4ff"
+                android:textSize="13sp" />
+
+            <TextView
+                android:id="@+id/game_sdk_tv_goodsName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="7dp"
+                android:gravity="center_horizontal"
+                android:paddingLeft="5dp"
+                android:paddingRight="9dp"
+                android:textColor="#000000"
+                android:textSize="13sp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/game_sdk_tv_rmbs"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/game_sdk_tv_goodsNames"
+            android:layout_marginLeft="15dp"
+            android:layout_marginTop="2dp" >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:gravity="center_horizontal"
+                android:paddingLeft="9dp"
+                android:text="."
+                android:textColor="#00b4ff"
+                android:textSize="20sp" />
+
+            <TextView
+                android:id="@+id/game_sdk_tv_rmb1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="7dp"
+                android:gravity="center_horizontal"
+                android:paddingLeft="5dp"
+                android:paddingRight="9dp"
+                android:text="商品价格："
+                android:textColor="#00b4ff"
+                android:textSize="13sp" />
+
+            <TextView
+                android:id="@+id/game_sdk_tv_rmb"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="7dp"
+                android:gravity="center_horizontal"
+                android:paddingLeft="5dp"
+                android:paddingRight="9dp"
+                android:textColor="#000000"
+                android:textSize="13sp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/game_sdk_tv_users"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/game_sdk_tv_rmbs"
+            android:layout_marginLeft="15dp"
+            android:layout_marginTop="2dp" >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:gravity="center_horizontal"
+                android:paddingLeft="9dp"
+                android:text="."
+                android:textColor="#00b4ff"
+                android:textSize="20sp" />
+
+            <TextView
+                android:id="@+id/game_sdk_tv_user1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="7dp"
+                android:gravity="center_horizontal"
+                android:paddingLeft="5dp"
+                android:paddingRight="9dp"
+                android:text="当前账号："
+                android:textColor="#00b4ff"
+                android:textSize="13sp" />
+
+            <TextView
+                android:id="@+id/game_sdk_tv_user"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="7dp"
+                android:gravity="center_horizontal"
+                android:paddingLeft="5dp"
+                android:paddingRight="9dp"
+                android:textColor="#000000"
+                android:textSize="13sp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/game_sdk_tv_yues"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/game_sdk_tv_users"
+            android:layout_marginLeft="15dp"
+            android:layout_marginTop="2dp" >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:gravity="center_horizontal"
+                android:paddingLeft="9dp"
+                android:text="."
+                android:textColor="#00b4ff"
+                android:textSize="20sp" />
+
+            <TextView
+                android:id="@+id/game_sdk_tv_yue1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="7dp"
+                android:gravity="center_horizontal"
+                android:paddingLeft="5dp"
+                android:paddingRight="9dp"
+                android:text="账号余额："
+                android:textColor="#00b4ff"
+                android:textSize="13sp" />
+
+            <TextView
+                android:id="@+id/game_sdk_tv_yue"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="7dp"
+                android:gravity="center_horizontal"
+                android:paddingLeft="5dp"
+                android:paddingRight="9dp"
+                android:textColor="#000000"
+                android:textSize="13sp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/game_sdk_tv_paymoneys"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/game_sdk_tv_yues"
+            android:layout_marginLeft="15dp"
+            android:layout_marginTop="2dp" >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:gravity="center_horizontal"
+                android:paddingLeft="9dp"
+                android:text="."
+                android:textColor="#00b4ff"
+                android:textSize="20sp" />
+
+            <TextView
+                android:id="@+id/game_sdk_tv_paymoney1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="7dp"
+                android:gravity="center_horizontal"
+                android:paddingLeft="5dp"
+                android:paddingRight="9dp"
+                android:text="还需支付："
+                android:textColor="#00b4ff"
+                android:textSize="13sp" />
+
+            <TextView
+                android:id="@+id/game_sdk_tv_paymoney"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="7dp"
+                android:gravity="center_horizontal"
+                android:paddingLeft="5dp"
+                android:paddingRight="9dp"
+                android:textColor="#000000"
+                android:textSize="13sp" />
+        </LinearLayout>
+
+        <CheckBox
+            android:id="@+id/game_sdk_tv_useyue"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/game_sdk_tv_paymoneys"
+            android:layout_marginLeft="15dp"
+            android:layout_marginTop="9dp"
+            android:button="@drawable/game_sdk_checkbox_pay"
+            android:checked="true"
+            android:gravity="center_horizontal"
+            android:paddingLeft="9dp"
+            android:paddingTop="0dp"
+            android:text="使用余额支付"
+            android:textColor="#00b4ff"
+            android:textSize="15sp"
+            android:textStyle="bold" />
+    </RelativeLayout>
+
+    <Button
+        android:id="@+id/game_sdk_btn_pay"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginBottom="0dp"
+        android:background="@color/game_sdk_bg_pay_img"
+        android:clickable="false"
+        android:gravity="center_horizontal"
+        android:paddingBottom="8dp"
+        android:paddingTop="8dp"
+        android:text="去付款"
+        android:textColor="@color/game_sdk_wt"
+        android:textSize="18sp" />
+
+</RelativeLayout>

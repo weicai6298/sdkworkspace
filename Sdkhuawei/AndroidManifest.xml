@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.szyp.goldfish6s.byfb.huawei"
+    android:versionCode="1"
+    android:versionName="1.0" >
+
+    <uses-sdk
+        android:minSdkVersion="8"
+        android:targetSdkVersion="19" />
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW" />
+    <uses-permission android:name="android.permission.GET_TASKS" />
+    
+    <uses-permission android:name="android.permission.CHANGE_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.MOUNT_UNMOUNT_FILESYSTEMS" />
+    <uses-permission android:name="android.permission.SYSTEM_OVERLAY_WINDOW" />
+    <uses-permission android:name="android.permission.ACCESS_DOWNLOAD_MANAGER" />
+<uses-permission android:name="com.huawei.appmarket.provider.readPermission"/>
+    
+
+    <application
+        android:name="com.yayawan.impl.YYApplication"
+        android:allowBackup="true"
+        android:theme="@android:style/Theme.NoTitleBar.Fullscreen" >
+        <activity
+            android:name="com.yayawan.sdktemplate.MainActivity"
+            android:label="app_name" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+      
+        
+      <!-- 手游互联配置 -->
+     	 <meta-data
+            android:name="app_id"
+            android:value="kk1088053906" />
+        <meta-data
+            android:name="isLandscape"
+            android:value="true" />
+        
+        <meta-data
+            android:name="companyname"
+            android:value="宿州手游互联信息技术有限公司" />
+        
+         <meta-data
+            android:name="APP_ID"
+            android:value="string100044987" />
+          <meta-data
+            android:name="PAY_ID"
+            android:value="string890086000102062327" />
+          
+          <!-- 浮标密钥 -->
+          <meta-data
+            android:name="BUOY_SECRET"  
+            android:value="MIIEvAIBADANBgkqhkiG9w0BAQEFAASCBKYwggSiAgEAAoIBAQDCQb71S5RDeLAq61dFVB1zpzVhW2ZMJ/5fxWQcgO+gyNHaYsnypyO1g4fF+R9RejeOeErUtZ+s+XfnrlJcNvDAzMkJLb3f4B+gyoCi0K8moNxY0EqIFqwKiqHLR7QkbTXONqlD9UxvYHcDqAPSLvyDApVjrrMRMEuTW90juWjfTY4x6mw8w1pkd9iS0kIfr3RkYcEwIwvR++xKiZNai2Cj3bVycpiWjgQx/cnLXPQjG+cOVnwGO5RrckGygpRTwOOeGvNKWj1a9ROFLwvN2UpIcXD9wWJzbJoq4e6Eovh9HnyCvSxDxg/M8DsWLRFWmKFmcWxNV/Y4PSSCTN+hQ8GpAgMBAAECggEAIAejKuL5YV6m/YysaRwDdyxc2t6tMWVuxe/QH/sKh+JU58NeNQpmEunLG1OGXHLgcjdXb1c7KtQ/dw4BOn88ly2tADxwkFduH58EMtRh7OadLm+5ulKyr1JIdzIte8weERBmPHRX1A190jaD2sYwkJF+fF8z22OxMmz1O4y4xAjGCSixBSMQmDV1r4sUTHzwdHNJnAHJZslSzY8DGP0xilyewrNO+mng+6ewCzlUqUMhHa+RZMN8P9h3aMDB35+ll0/AD1OCidzxu64KoU6LU1zxF++cpF4wtllh4htiNyZKilBp7sNOKD64MEuUz2WRCPAlN8rslkAMfNSuBbNG4QKBgQDph2p2MO+OFa1AGRKIqKZjYSwfB+FudbuZpi92rBL+BqmCri7bQ33jek2GG9K3Xb/FgvOCTXR1o1c+4xcX3yLgruyLjdncHCXbmc+qbmrgT0KkAsngexrDZyq46ivmc2koPQZN7A3VqdKj2bc3p60VWcJ0cdmHTHAe6zGBhj4rVQKBgQDU8u2k4u95mP0nWmlyf5UCAddwO/ssS6aUt7w5A/BXcVNA8x90CFKeJXRhwEfDsr58NmqH55HK4rd7IRnVbZ2+63QqQe/SyQhGWxo+d+ZF6ybUch0RNBhK7h6W44tLZ15kajj4nHzWOJsXzez80R7NnO5QITxHwan9X1vthONFBQKBgD34OFEa1UcAC5R50sg+8MBoddvaLIEybtDsH6Y/LV8Jh4vtCvQWad6mgtH2qikMkKoqANJwGVpqOOmwO12TUd8LrCuwPcLCGW232DqiyGuzvLxnHQkbwdNemiCty26A68PIxdaBsH4lbYcbbBoxvaVvx0E9QPs9Vndt9Bop9G9tAoGAYgFT4fkXoe0JRZ1Uvn99Qqk6T8srNB21Eujk1ZC8gmIDoPbD2REjhOlUANEPtj+Db4NT0CyBatChBSgczZ9fZEjU88XY7DfdeRPgpjNkZXVuL4Q9YHeLXqDsryEWMKPoS2qfwbuzsJvotTHvCgPsm1DIVVSWe6fj5lqG4m+wcUkCgYAd4LA0SgfZ9muJfCnqPpfVL9cPugb6ifm8uDSyEGFECsBnEB+BQVxI55NKuTc5qTIoB48eDWjRXW6NLQvv+QAD9Id+8+v7gr7MSe82rqVsejwNDmxHxhFnX+FwzvuGY+RppaRDxiMME5OMFnm3DwiBrfp9BG+HqmnRz4A2kFUDvw==" />
+        
+          <meta-data
+            android:name="PAY_RSA_PUBLIC"
+            android:value="MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAhtT9lGf71zyeFnnkUh3vKMk9ntNf1Vk6sd9kXDQ5acQAqdKCpyR4qe+TR6x5Jo6LH6ybdbXp/pC/lHiwnyBg/iT4C0rMp3BtbtLIbJoO598gFGXqhtLNmhXvfXa0LktYXWptWC6Ekn7vfVXo6iGvQq3hnyvzL6EexLtK17YyyQHhlgNa6XDHD3I7YJcp1yR2OLTseMVR5zxfvtyn6oEZ1wDIrMO5qcjMwgFEAogXfXSRNs0+wov663wGOgsk/qm17AwJhyQ5Sh8tjAcrwUtJhEuGfXLRWtC9FrDkhJ+cUhHuoOuS5mkbHpnpxPjCkqPtioGyaAlzbD3zXbRmK8a5YwIDAQAB" />
+          
+          
+          <meta-data
+            android:name="LOGIN_RSA_PUBLIC"
+            android:value="MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAmKLBMs2vXosqSR2rojMzioTRVt8oc1ox2uKjyZt6bHUK0u+OpantyFYwF3w1d0U3mCF6rGUnEADzXiX/2/RgLQDEXRD22er31ep3yevtL/r0qcO8GMDzy3RJexdLB6z20voNM551yhKhB18qyFesiPhcPKBQM5dnAOdZLSaLYHzQkQKANy9fYFJlLDo11I3AxefCBuoG+g7ilti5qgpbkm6rK2lLGWOeJMrF+Hu+cxd9H2y3cXWXxkwWM1OZZTgTq3Frlsv1fgkrByJotDpRe8SwkiVuRycR0AHsFfIsuZCFwZML16EGnHqm2jLJXMKIBgkZTzL8Z+201RmOheV4AQIDAQAB" />
+          
+        <!-- 浮标依赖的Activity声明，建议将此Activity的屏幕方向与应用的屏幕方向设置为一样的 -->
+        <activity
+            android:name="com.huawei.gameservice.sdk.view.dialog.NoticeActivity"
+            android:configChanges="orientation|screenSize" 
+            android:exported="false"
+            android:theme="@style/buoy_baseDialog"/>
+        <activity
+            android:name="com.huawei.gameservice.sdk.view.dialog.UpdateActivity"
+            android:configChanges="orientation|screenSize" 
+            android:exported="false"
+            android:theme="@style/buoy_baseDialog"/>
+
+        <activity
+            android:name="com.huawei.gameservice.sdk.view.dialog.BaseDialogActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:exported="false"
+            android:theme="@style/buoy_loading_activity_style" >
+            <meta-data
+                android:name="hwc-theme"
+                android:value="androidhwext:style/Theme.Emui.Translucent" />
+        </activity>
+        
+        <activity
+            android:name="com.huawei.gameservice.sdk.control.DownloadProgressDialogActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:exported="false"
+            android:theme="@style/buoy_loading_activity_style" >
+            <meta-data
+                android:name="hwc-theme"
+                android:value="androidhwext:style/Theme.Emui.Translucent" />
+            
+        </activity>
+        
+        <activity
+            android:name="com.huawei.gameservice.sdk.control.SplashImageActivity"
+            android:exported="false">
+        </activity>
+        
+        <activity
+            android:name="com.huawei.gameservice.sdk.control.DummyActivity"
+            android:exported="false"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:theme="@style/buoy_loading_activity_style" >
+            <meta-data
+                android:name="hwc-theme"
+                android:value="androidhwext:style/Theme.Emui.Translucent" />
+        </activity>
+   
+        <!-- 注意：这个在targetSDK=N时，在游戏中必须申明，否则影响N版本下使用SDK安装华为游戏中心。 -->
+        <!-- 其中android:authorities里“游戏包名”必须要替换为游戏自己包名，否则会导致冲突，游戏无法安装！ -->
+        <!-- 详细说明请参考SDK接口文档 -->
+    
+    </application>
+
+</manifest>
+

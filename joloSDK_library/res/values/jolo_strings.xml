@@ -1,0 +1,306 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!-- 通用 -->
+  <string name="jolo_cp_name">聚乐游戏</string>
+    <string name="jolo_select">选择</string>
+    <string name="jolo_delete">删       除</string>
+    <string name="jolo_all_select">全选</string>
+    <string name="cancel_all_select">取消</string>
+    <string name="jolo_ok">确定</string>
+    <string name="jolo_cancel">取消</string>
+    <string name="jolo_alert_content_6">请先登录您的账号</string>
+    <string name="jolo_toast_unknow_error">未知错误，请重试</string>
+
+    <!-- Toast  Start -->
+    <string name="no_net_connect">无网络连接.</string>
+    <string name="net_error_connect">网络不给力，请检查网络连接</string>
+    <string name="jolo_toast_net_error">网络连接失败，请检查设置</string>
+    <string name="jolo_toast_session_out_date">登录失效!\n请重新登录后继续使用!</string>
+    <string name="jolo_toast_floatball_not_login">请登录后,再试!</string>
+    <string name="jolo_get_auth_code_suc">获取验证码成功，请注意查收短信</string>
+    <string name="jolo_get_auth_code_failed">对不起，获取验证码失败，请重试</string>
+    <string name="jolo_please_login_success_first">请先登录成功！</string>
+    <string name="jolo_reload">重新加载</string>
+    <!-- Login Activity Start -->
+    <string name="jolo_enter_game">进入游戏</string>
+    <string name="jolo_auto_login_account">自动登录账号：</string>
+    <string name="jolo_change_user_account">切换账号</string>
+    <string name="easy_recharge">快速充值</string>
+    <string name="jolo_bind_phone">绑定手机</string>
+    <string name="jolo_login_tips_tv">账号登录</string>
+    <string name="jolo_login_username_tv">&#160;&#160;账号&#160;&#160;:</string>
+    <string name="jolo_login_username_hint">请输入账号</string>
+    <string name="jolo_login_pwd_tv">&#160;&#160;密码&#160;&#160;:</string>
+    <string name="jolo_login_pwd_hint">请输入密码</string>
+    <string name="jolo_login_login_btn">登录</string>
+    <string name="jolo_login_register_btn">注册</string>
+    <string name="jolo_register_phone">手机注册(推荐)</string>
+    <string name="jolo_register_normal">普通注册</string>
+    <string name="jolo_login_toast_success">登录成功</string>
+    <string name="jolo_login_toast_failed">登录失败</string>
+    <string name="jolo_login_title">账号登录</string>
+    <string name="jolo_login_toast_uname_input_error">账号有误，请输入正确的账号</string>
+    <string name="jolo_login_toast_pwd_input_error">密码输入有误，请重新输入</string>
+    <string name="jolo_login_toast_uname_error">账号不存在</string>
+    <string name="jolo_login_toast_pwd_error">密码错误</string>
+    <string name="jolo_login_dlg_waiting">登录中,请稍后</string>
+    <string name="jolo_login_findpwd_tv"><u>忘记密码&#160;?</u></string>
+    <string name="jolo_login_findpwd">忘记密码</string>
+    <string name="jolo_download_game_center">下载游戏中心</string>
+    <!-- Login Activity End -->
+
+
+    <!-- Register Activity Start -->
+    <string name="jolo_register_tip_pwd">请输入密码</string>
+    <string name="jolo_register_title">注册</string>
+    <string name="jolo_register_normal_title">账号注册</string>
+    <string name="jolo_register_pwd_tv">&#160;&#160;密码&#160;&#160;:</string>
+    <string name="jolo_register_name_tv">&#160;&#160;账号&#160;&#160;:</string>
+    <string name="jolo_register_name_hint"><![CDATA[账号(6-20个字符,不能纯数字)]]></string>
+    <string name="jolo_register_pwd_hint"><![CDATA[密码(6-20个字符,区分大小写)]]></string>
+    <string name="jolo_register_digits"><![CDATA[0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ`~!@#^$%^&*-=_+\|<>,./?(){}[]:";']]></string>
+    <string name="jolo_register_agree">同意</string>
+    <string name="jolo_register_user_rule">请勾选同意游戏使用条款</string>
+    <string name="jolo_register_toast_uname_error">账号输入有误，请输入&#160;6–20&#160;位数字或英文</string>
+    <string name="jolo_register_toast_pwd_error">密码输入有误，请输入&#160;6–20&#160;位密码</string>
+    <string name="jolo_register_toast_phone_exist">手机号已经被注册了</string>
+    <string name="jolo_register_toast_uname_exist">账号已经被注册了</string>
+    <string name="jolo_register_toast_sucess">账号注册成功</string>
+    <string name="jolo_register_rule"><u>使用条款</u></string>
+    <string name="jolo_reg_toast_is_digits">注册账号不能纯数字~</string>
+    <string name="jolo_register_register_btn">注册</string>
+    <string name="jolo_send_authcode">发送验证码</string>
+    <string name="jolo_fetchcode">获取验证码</string>
+    <string name="jolo_fetching">请稍后</string>
+    <string name="jolo_input_phone">请输入正确的手机号码</string>
+    <string name="jolo_input_code">请输入验证码</string>
+    <string name="jolo_reg_phone">手机注册</string>
+    <string name="jolo_reset_pwd">重置密码</string>
+    <string name="jolo_diff_pwd">两次输入的密码不一致，请重新输入</string>
+    <string name="jolo_tip_reset_pwd">如果您没有绑定手机，请联系客服重置密码</string>
+    <string name="jolo_auth_code_none">请输入验证码</string>
+    <string name="jolo_pls_wait">发短信不能太频繁哦，请稍后</string>
+    <!-- Register Activity End -->
+    <!-- 用户注册协议 Start -->
+    <string name="jolo_protocol_title">使用条款</string>
+    <!-- 用户注册协议 End -->
+    <!-- 绑定手机 start -->
+    <string name="jolo_bind_username">绑定手机的账号：</string>
+    <string name="jolo_bind_phone_tip">为了您的账号安全，建议您绑定手机号码。</string>
+    <!-- 实名认证提示 -->
+    <string name="jolo_realname_register_tip">注册成功!根据国家政策,网游帐号需要实名认证为不影响您后续使用,请尽快进行实名认证</string>
+    <string name="jolo_realname_login_tip">登录成功!根据国家政策,网游帐号需要实名认证为不影响您后续使用,请尽快进行实名认证</string>
+    <string name="jolo_realname_tip"> 请尽快修改密码!根据国家政策,网游帐号需要实名认证为不影响您后续使用,请尽快进行实名认证</string>
+
+    <string name="jolo_bind_next">以后再说</string>
+    <string name="jolo_bind_now">现在绑定</string>
+    <string name="jolo_realname_now">现在认证</string>
+    <string name="jolo_waiting_sms">获取验证中，请稍等</string>
+    <string name="jolo_bind_failed">对不起，绑定失败，请重试</string>
+    <string name="jolo_my_account_center">我的账号中心</string>
+    <string name="jolo_register_account">注册账号</string>
+    <string name="jolo_customer_tele">客服电话:%1$s</string>
+    <string name="jolo_customer_qq">客服QQ:%1$s</string>
+    <string name="jolo_working_time">工作时间:9:30-18:30</string>
+    <string name="cur_bind_phone_num">绑定手机:</string>
+    <string name="cur_phone_has_bind">当前帐号已绑定手机</string>
+    <string name="please_bind_phone">请绑定手机</string>
+    <!-- 绑定手机 end -->
+    <!-- ModifyPwd Activity Start -->
+    <string name="jolo_modifypwd_title">修改密码</string>
+    <string name="jolo_modifypwd_oldpwd_tv">原密码:</string>
+    <string name="jolo_modifypwd_newpwd_tv">新密码:</string>
+    <string name="jolo_modifypwd_confirm_tv">确认新密码:</string>
+    <string name="jolo_modifypwd_toast_oldpwd_error">原密码输入有误，请输入&#160;6–20&#160;位密码</string>
+    <string name="jolo_modifypwd_toast_newpwd_error">新密码输入有误，请输入&#160;6–20&#160;位密码</string>
+    <string name="jolo_modifypwd_toast_confirm_error">确认密码输入有误，请输入&#160;6–20&#160;位密码</string>
+    <string name="jolo_modifypwd_toast_same_with_old">新密码和原密码相同,请重新输入</string>
+    <string name="jolo_modifypwd_toast_not_same">新密码和确认密码不相同,请重新输入</string>
+    <string name="jolo_modifypwd_success">密码修改成功</string>
+    <string name="jolo_modifypwd_failed">密码修改失败,如有问题请联系客服!</string>
+    <string name="jolo_modifypwd_old_pwd_error">原密码填写错误,请重试</string>
+    <string name="jolo_modifypwd_hint_old_pwd">请输入旧密码</string>
+    <string name="jolo_modifypwd_hint_new_pwd">请输入6&#8211;20位密码</string>
+    <string name="jolo_modifypwd_hint_new_pwd_again">请重复输入密码</string>
+    <string name="jolo_resetpwd_suc">重置密码成功，请重新登录</string>
+    <string name="jolo_resetpwd_failed">重置密码失败，请重试</string>
+    <string name="jolo_has_bind_phone">该账号已绑定手机</string>
+    <!-- ModifyPwd Activity End -->
+    <string name="jolo_forget_pwd"><u>忘记密码？</u></string>
+    <string name="jolo_game_mainpage">游戏首页</string>
+    <string name="jolo_load_gamezone">下载平台</string>
+    <string name="jolo_login_info">登录成后的信息</string>
+    <string name="jolo_switch_user">切换账户</string>
+    <string name="jolo_more_games">更多游戏</string>
+    <string name="jolo_save_pwd">记住密码</string>
+    <string name="jolo_fast_register">一键注册</string>
+    <string name="jolo_modify_pwd_tip">为了保障您账号安全,请尽快修改密码，密码和账号相同</string>
+    <string name="jolo_fast_reg_too_more">您快速注册太频繁了，请稍后再重试。</string>
+    <string name="jolo_suc_fast_reg">注册成功!您的账号和密码均为:</string>
+    <string name="jolo_modify_tip">请您尽快修改密码！</string>
+    <string name="jolo_tel_qq">2977023793</string>
+    <string name="jolo_tel_phone">4006962896</string>
+    <string name="jolo_qq">活动Q群：</string>
+    <string name="jolo_htc_account">HTC账号（推荐）</string>
+    <string name="jolo_account">游戏平台账号</string>
+
+    <!-- 下拉加载的列表 -->
+    <string name="xlistview_header_hint_normal">下拉刷新</string>
+    <string name="xlistview_header_hint_ready">释放刷新</string>
+    <string name="xlistview_header_hint_loading">正在加载…</string>
+    <string name="xlistview_header_last_time">最后更新时间：</string>
+    <string name="xlistview_footer_hint_normal">查看更多</string>
+    <string name="xlistview_footer_hint_ready">松开载入更多</string>
+    <string name="xlistview_footer_hint_nomore">没有更多了</string>
+    <string name="skip_second">跳过 </string>
+    <string name="second">秒</string>
+
+    <!-- 帮助 -->
+    <string name="ask_question">提问题</string>
+    <string name="my_question">我的问题</string>
+    <string name="ask_questino_str">请写下您的问题或者建议，以便我们为您带来更好的产品体验……</string>
+    <string name="uploading_pic">上传图片</string>
+    <string name="tele_or_qq">手机号/QQ</string>
+    <string name="confirm_upload">确认提交</string>
+    <string name="look_for_normal_question">点击查看常见问题</string>
+    <string name="commit_with_inputed">请写下您的问题或者建议后，再提交。</string>
+    <string name="g_bao_recharge">G宝充值</string>
+    <string name="myvolume">我的代金券</string>
+    <string name="person_center_usablevolume">可用代金券:&#160;</string>
+    <string name="trade_query">交易查询</string>
+    <string name="my_message">我的消息</string>
+    <string name="G_Bao_introduce">G宝说明</string>
+    <string name="myvolume_introduce">代金券说明</string>
+    <string name="back_game">返回游戏</string>
+    <string name="normal_question">常见问题</string>
+    <string name="message_detail">消息明细</string>
+    <string name="submit_success">已提交成功，感谢您宝贵的建议！</string>
+    <string name="submit_failed">提交失败</string>
+    <string name="default_answer">亲！您的问题已经提交给客服人员，很快就给您答复，请耐心等待。</string>
+    <string name="question_str">问题：</string>
+    <string name="answer_str">回答：</string>
+    <string name="time_tv">时间：</string>
+    <string name="has_selected">已选择</string>
+    <string name="pices_of_picture">张图</string>
+    <string name="max_upload_4_pic">最多上传4张，</string>
+    <string name="has_select_pices">已选择</string>
+	<string name="select_pic">选择图片</string>
+    <!-- 悬浮球 -->
+    <string name="float_personalcenter">个人中心</string>
+    <string name="float_gift">礼包</string>
+    <string name="float_strategies">攻略</string>
+    <string name="float_help">帮助</string>
+
+    <!-- 代金劵 -->
+
+    <string name="ticket_store_title">代金劵商店</string>
+    <string name="ticket_usable_title">可用代金劵</string>
+    <string name="ticket_unusable_title">失效代金劵</string>
+    <string name="myticket_title">我的代金劵</string>
+    <string name="gain_myvolume">获取代金劵</string>
+    <string name="reminder_usable_no_voucher">亲，您没有可用的代金劵</string>
+    <string name="reminder_lose_voucher">亲，您没有失效的代金劵</string>
+    <string name="reminder_store_not_ticket">亲，当前没有代金劵可以购买</string>
+    <string name="ticket_outofdate_desc">已过期</string>
+    <!-- 对话框 -->
+    <string name="ticket_dialog_title">适用游戏：&#160;</string>
+    <string name="volume_dialog_current_account">当前账号：&#160;&#160;</string>
+    <string name="volume_dialog_money">面额：&#160;</string>
+    <string name="volume_dialog_pay_money">支付金额：&#160;</string>
+    <string name="ticket_pay_dialog_title">代金劵</string>
+    <string name="volume_dialog_lasttime">有效期：&#160;</string>
+    <string name="volume_dialog_desc">请确认代金劵对应的游戏，虚拟物品交易，不退不换。</string>
+    <string name="volume_dialog_cancle">取&#160;&#160;&#160;&#160;消</string>
+    <string name="volume_dialog_ok">确&#160;&#160;&#160;&#160;定</string>
+    <string name="back_person_center">个人中心</string>
+    <string name="back">返回</string>
+    <string name="complete">完成</string>
+    <string name="all_imgs">所有图片</string>
+    <string name="zero_pice_of_pic">0张</string>
+    <!-- 代金劵充值页 -->
+    <string name="volume_recharge_title">购买代金劵</string>
+    <string name="ticket_recharge_price_title">价格：&#160;</string>
+    <string name="volume_recharge_unit">%1$s元</string>
+    <string name="business_detail">交易成功明细</string>
+    <string name="game_name">游戏名称</string>
+    <string name="kil_Gbao">1000G宝</string>
+    <string name="business_data">时间:</string>
+    <string name="order_number">订单号:</string>
+    <string name="copy_right">复制完成</string>
+	<string name="copy">点击复制</string>
+	
+
+	<string name="activate_code">激活码：</string>
+	<!-- 礼包 -->
+	<string name="gift_detail">礼包详情</string>
+	<string name="gift_list">礼包列表</string>
+	<string name="my_gift">我的礼包</string>
+	<string name="click_get">点击领取</string>
+	<string name="get_success">成功领取</string>
+	<string name="no_more_gift">亲！！！当前游戏还没有礼包哦~</string>
+	<string name="you_have_no_gift">亲！！！您在当前游戏还没有礼包哦~</string>
+	<string name="have_no_message">亲！！！您当前还没有消息哦~</string>
+	<string name="have_no_trade_record">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;亲，您还没有消费记录，充值有惊喜~游戏更好玩~</string>
+	<string name="have_no_question">亲！请提出您的疑问吧~</string>
+	<string name="gift_take_out">礼包已抢完</string>
+	<string name="has_get_gitf">已领取</string>
+	<string name="last_end_time">截止时间:</string>
+	<!-- 代金劵购买 -->
+	 <string name="ticket_without">已抢光</string>
+	 <string name="ticket_atonce_buy">立刻购买</string>
+	 <string name="ticket_free_get">免费领取</string>
+	 <string name="ticket_remain">剩余%1$s</string>
+	 <string name="ticket_getatable">可领取</string>
+	 <string name="ticket_gottern">已领取</string>
+ 
+
+    <string name="ticket_real_money">抵%1$s元</string>
+    <string name="ticket_last_time">至%1$s</string>
+    <string name="ticket_consume">已使用</string>
+    <string name="ticket_overdue">已过期</string>
+    <string name="ticket_none">已抢光</string>
+    <string name="ticket_unit">￥%1$s</string>
+    <string name="ticket_unit2">%1$s元</string>
+    <string name="ticket_unit3">元</string>
+    <string name="detail_title">【商品简介】</string>
+    <string name="detail_title_content">%1$s代金劵</string>
+    <string name="detail_applygame_title">【适用游戏】</string>
+    <string name="detail_applygame_title2">适用游戏：&#160;%1$s</string>
+    <string name="detail_applygame_title_content">适用于所有游戏</string>
+    <string name="detail_ticket_buy_content">任意数量</string>
+    <string name="detail_ticket_buy_content2">%1$s张</string>
+    <string name="detail_lasttime_title">【代金劵有效期】</string>
+    <string name="detail_lasttime_title_content">至%1$s</string>
+    <string name="detail_buynumber_title">【可购买数量】</string>
+    <string name="detail_buynumber_title_content">%1$s张</string>
+    <string name="detail_usemethod_title">【使用方法】</string>
+    <string name="detail_use_method_content">在游戏中充值页面选择代金券支付的时候,可使用当前可用代金券来抵扣支付金额,您也可以点击"更换代金券"选择另外的代金券进行支付。</string>
+    <!-- 代金劵支付 -->
+    <string name="ticket_dialog_recommend">推荐使用</string>
+    <string name="ticket_pay_no_ticket">你没有可用代金劵</string>
+    <string name="ticket_dialog_overdue">(至%1$s失效)</string>
+    <string name="ticket_dialog_listview_item_desc">%1$s元代金劵</string>
+    <string name="ticket_number">张代金劵</string>
+
+    <string name="ticket_warn_dialog_desc">&#160;&#160;&#160;&#160;您选择使用的代金劵面额大于您当前要支付的金额，确认选择支付吗？</string>
+    <string name="ticket_no_ticket_dialog_content">您当前没有可用代金劵，去代金劵商店看看吧！</string>
+   
+   
+    <string name="error">亲~~~出错啦！！！</string>
+	<string name="pices_of_message">条新消息</string>
+	<string name="pices_of_business">交易成功记录</string>
+	<string name="pices_of_ticket">张代金券</string>
+	<string name="g_remain">G宝余额：</string>
+	<string name="zero_g_remain">0G宝</string>
+	<string name="thicke_chance_toast">请稍后重试</string>
+	<string name="is_bind">已绑定手机</string>
+	<string name="no_bind">未绑定手机</string>
+	<string name="no_select_pics">未选择图片</string>
+	<string name="not_compatible_emoji">不支持Emoji表情.</string>
+	<string name="G_bao">G宝</string>
+	<string name="G_bao_recharge">G宝充值</string>
+	<string name="G_bao_resume">G宝消费</string>
+	<string name="records_yuan">元</string>
+	<string name="ticket_yuan">元代金券</string>
+</resources>

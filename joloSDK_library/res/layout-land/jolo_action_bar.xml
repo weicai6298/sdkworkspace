@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/action_bar_LL"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="#EEE"
+    android:gravity="center_vertical" >
+
+    <include
+        android:id="@+id/action_bar_back"
+        layout="@layout/jolo_common_header" />
+
+    <LinearLayout
+        android:id="@+id/ll_jolo_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/action_bar_back"
+        android:layout_marginTop="10dp"
+        android:orientation="horizontal"
+        android:visibility="gone" >
+<!--  android:src="@drawable/jolo_logo"-->
+        <ImageView
+            
+            android:id="@+id/jolo_logo_iv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="2dp"
+            android:layout_marginLeft="60dp"
+            android:layout_marginTop="10dp"
+             />
+
+   <!--      <TextView
+            android:id="@+id/jolo_logo_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="2dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="26dp"
+            android:text="@string/jolo_tel_qq"
+            android:textColor="@color/cmmn_gray"
+            android:textSize="14sp" /> -->
+    </LinearLayout>
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="6dp"
+        android:layout_below="@id/action_bar_back" />
+
+</RelativeLayout>

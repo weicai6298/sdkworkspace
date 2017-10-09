@@ -1,0 +1,116 @@
+-target 1.6 
+#-optimizationpasses 2 
+-dontusemixedcaseclassnames 
+-dontskipnonpubliclibraryclasses 
+-dontskipnonpubliclibraryclassmembers
+-dontshrink
+-dontpreverify 
+-verbose 
+-dontoptimize
+
+-keepparameternames
+-renamesourcefileattribute SourceFile
+
+-keepattributes Exceptions,InnerClasses,Signature,Deprecated,
+                SourceFile,LineNumberTable,*Annotation*,*JavascriptInterface*,EnclosingMethod
+
+-repackageclasses 'com.baidu.platformsdk.obf'
+-allowaccessmodification
+#-ignorewarnings 
+
+
+
+# -dump ./proguard/class_files.txt 
+# -printseeds ./proguard/seeds.txt 
+# -printusage ./proguard/unused.txt 
+# -printmapping ./proguard/mapping.txt 
+
+# The -optimizations option disables some arithmetic simplifications that Dalvik 1.0 and 1.5 can't handle. 
+-optimizations !code/simplification/arithmetic 
+
+
+-keep public class * extends android.app.Activity
+-keep public class * extends android.app.Application
+-keep public class * extends android.app.Service
+-keep public class * extends android.content.BroadcastReceiver
+-keep public class * extends android.content.ContentProvider
+#-keep public class com.android.vending.licensing.ILicensingService
+
+
+#-dontwarn com.baidu.android.bba.common.**
+#-keep class com.baidu.android.bba.common.** { *;}
+#-keep class * extends com.baidu.android.bba.common.**  
+
+#-dontwarn com.baidu.sapi2.**
+
+
+-keepclasseswithmembernames class * {
+    native <methods>;
+}
+
+-keepclasseswithmembernames class * {
+    public <init>(android.content.Context, android.util.AttributeSet);
+}
+
+-keepclasseswithmembernames class * {
+    public <init>(android.content.Context, android.util.AttributeSet, int);
+}
+
+-keepclassmembers enum * {
+    public static **[] values();
+    public static ** valueOf(java.lang.String);
+}
+
+#-keep class * implements android.os.Parcelable {
+#  public static final android.os.Parcelable$Creator *;
+#}
+
+-keepclassmembers class * implements android.os.Parcelable {
+      public static final android.os.Parcelable$Creator *;
+}
+
+-keep public class com.baidu.platformsdk.*  {
+  public * ; 
+}
+
+
+-keep public class com.baidu.platformsdk.controller.*  {
+  public * ; 
+  protected * ;
+}
+
+
+-keep public class com.baidu.platformsdk.analytics.TagRecorder {
+  public * ; 
+}
+
+-keep public class com.baidu.platformsdk.analytics.AccountTag {
+  * ; 
+}
+
+
+-keep public class com.baidu.sumeru.sso.**  {
+  public * ; 
+}
+
+-keep public interface com.baidu.platformsdk.utils.BDNoProguard
+
+
+-keep class * implements com.baidu.platformsdk.utils.BDNoProguard {
+    <fields>;
+    <methods>;
+}
+
+#-keep class com.baidu.android.bba.common.*.*
+#-keep class com.baidu.sapi2.**
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_margin="5dp"
+    android:orientation="vertical">
+
+<!--     <TextView -->
+<!--         android:id="@+id/ycx_tv_checkimg" -->
+<!--         android:layout_width="match_parent" -->
+<!--         android:layout_height="40dp" -->
+<!--         android:gravity="center" -->
+<!--         android:text="查看图片" -->
+<!--         android:textColor="@android:color/white" -->
+<!--         android:textSize="16sp" /> -->
+
+<!--     <View -->
+<!--         android:layout_width="match_parent" -->
+<!--         android:layout_height="1dp" -->
+<!--         android:background="@color/ycx_color_gray" /> -->
+
+    <TextView
+        android:id="@+id/ycx_tv_saveimg"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:gravity="center"
+        android:text="保存图片"
+        android:textColor="@android:color/white"
+        android:textSize="16sp" />
+
+</LinearLayout>

@@ -1,0 +1,112 @@
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.baidu.opengameloginsdk.lib"
+    android:versionCode="1"
+    android:versionName="1.0" >
+
+    <uses-sdk
+        android:minSdkVersion="8"
+        android:targetSdkVersion="18" />
+
+    <uses-permission android:name="android.permission.SEND_SMS" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.WRITE_SETTINGS" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.GET_TASKS" />
+    <uses-permission android:name="android.permission.READ_SMS" />
+    <uses-permission android:name="android.permission.WRITE_SETTINGS" />
+    <uses-permission android:name="android.permission.CHANGE_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW" />
+
+    <application android:allowBackup="true" >
+
+        <!-- ↓↓↓ SDK ↓↓↓ -->
+
+
+        <!-- 0-百度 1-多酷 2-91 -->
+
+        <meta-data
+            android:name="BDPlatformType"
+            android:value="0" />
+        <meta-data
+            android:name="BDGameVersion"
+            android:value="3.7.5" />
+
+        <activity
+            android:name="com.baidu.platformsdk.LoginActivity"
+            android:configChanges="orientation|navigation|screenSize|keyboard|keyboardHidden"
+            android:excludeFromRecents="true"
+            android:exported="false"
+            android:theme="@style/bdp_dialog_style_fullscreen" />
+        <activity
+            android:name="com.baidu.platformsdk.AssistActivity"
+            android:configChanges="orientation|navigation|screenSize|keyboard|keyboardHidden"
+            android:excludeFromRecents="true"
+            android:exported="false"
+            android:theme="@style/bdp_style_transparent" />
+        <activity
+            android:name="com.baidu.platformsdk.ConcertActivity"
+            android:configChanges="orientation|navigation|screenSize|keyboard|keyboardHidden"
+            android:excludeFromRecents="true"
+            android:exported="false"
+            android:theme="@style/bdp_style_transparent" />
+        <activity
+            android:name="com.baidu.platformsdk.BindPhoneActivity"
+            android:configChanges="orientation|navigation|screenSize|keyboard|keyboardHidden"
+            android:excludeFromRecents="true"
+            android:exported="false"
+            android:theme="@style/bdp_dialog_style_fullscreen" />
+        <activity
+            android:name="com.baidu.platformsdk.WebActivity"
+            android:configChanges="orientation|navigation|screenSize|keyboard|keyboardHidden"
+            android:exported="false"
+            android:theme="@android:style/Theme.NoTitleBar.Fullscreen"
+            android:windowSoftInputMode="adjustPan" />
+        <activity
+            android:name="com.baidu.platformsdk.ModifyPasswordActivity"
+            android:configChanges="orientation|navigation|screenSize|keyboard|keyboardHidden"
+            android:excludeFromRecents="true"
+            android:exported="false"
+            android:theme="@style/bdp_dialog_style_fullscreen" />
+        <activity
+            android:name="com.baidu.platformsdk.ThirdPartyLoginActivity"
+            android:configChanges="orientation|navigation|screenSize|keyboard|keyboardHidden"
+            android:excludeFromRecents="true"
+            android:exported="false"
+            android:theme="@android:style/Theme.NoTitleBar.Fullscreen" />
+        <activity
+            android:name="com.baidu.platformsdk.VisitorBindActivity"
+            android:configChanges="orientation|navigation|screenSize|keyboard|keyboardHidden"
+            android:excludeFromRecents="true"
+            android:exported="false"
+            android:theme="@style/bdp_dialog_style_fullscreen" />
+        <activity
+            android:name="com.baidu.platformsdk.SapiWebActivity"
+            android:configChanges="orientation|navigation|screenSize|keyboard|keyboardHidden"
+            android:exported="false"
+            android:theme="@style/bdp_dialog_style_fullscreen"
+            android:windowSoftInputMode="adjustPan" />
+        <activity
+            android:name="com.baidu.platformsdk.SapiLoginProxyActivity"
+            android:configChanges="orientation|navigation|screenSize|keyboard|keyboardHidden"
+            android:exported="false"
+            android:theme="@style/bdp_dialog_style_fullscreen"
+            android:windowSoftInputMode="adjustPan" />
+        <activity
+            android:name="com.baidu.platformsdk.AuthenticateActivity"
+            android:configChanges="orientation|navigation|screenSize|keyboard|keyboardHidden"
+            android:exported="false"
+            android:theme="@style/bdp_dialog_style_fullscreen"
+            android:windowSoftInputMode="adjustPan" />
+
+        <service
+            android:name="com.baidu.platformsdk.BDPlatformService"
+            android:exported="false" />
+
+        <!-- ↑↑↑ SDK ↑↑↑ -->
+    </application>
+
+</manifest>

@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@android:color/white"
+    android:orientation="horizontal"
+    android:padding="10dp" >
+
+    <LinearLayout
+        android:id="@+id/vocher_item_rl"
+        android:layout_width="90dp"
+        android:layout_height="60dp"
+        android:background="@drawable/voucher_bg"
+        android:gravity="center"
+        android:orientation="vertical" >
+
+        <TextView
+            android:id="@+id/bg_big_explain_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@android:color/white"
+            android:textSize="18sp" />
+    </LinearLayout>
+
+    <LinearLayout
+       android:layout_weight="1"
+        android:id="@+id/mygift_layout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+      
+        android:layout_marginLeft="8dp"
+      
+         android:layout_gravity="center_vertical"
+        android:orientation="vertical" >
+
+        <TextView
+            android:id="@+id/common_ticketdesc_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/cmmn_black"
+            android:textSize="16sp" />
+
+        <TextView
+            android:id="@+id/lasttime_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+         
+            android:ellipsize="end"
+            android:singleLine="true"
+          
+            android:textColor="@color/cmmn_gray" />
+    </LinearLayout>
+
+    <TextView
+        android:layout_gravity="center_vertical"
+        android:id="@+id/buy_outofdate_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:background="@drawable/btn_gray_shape_rect"
+        android:padding="5dp"
+        android:singleLine="true"
+      
+        android:textColor="@color/cmmn_black" />
+
+</LinearLayout>

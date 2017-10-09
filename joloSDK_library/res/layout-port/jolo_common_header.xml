@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="50dp"
+    android:background="@color/jolo_theme_blue" >
+
+    <ImageView
+        android:layout_width="50dp"
+        android:layout_height="35dp"
+        android:layout_centerVertical="true"
+        android:src="@drawable/jolopay_back" />
+
+    <TextView
+        android:id="@+id/title_text_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_centerInParent="true"
+        android:text="帐号管理中心"
+        android:textColor="#FFF"
+        android:gravity="center"
+        android:textSize="18sp" />
+
+</RelativeLayout>

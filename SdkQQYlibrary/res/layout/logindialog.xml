@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <LinearLayout
+        android:id="@+id/ysdk_login"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:orientation="vertical" >
+
+        <ImageView
+            android:id="@+id/qq_login"
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:src="@drawable/qq" />
+
+        <ImageView
+            android:id="@+id/wx_login"
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30dp"
+            android:src="@drawable/weixin" />
+    </LinearLayout>
+
+    <ProgressBar
+        android:id="@+id/ysdk_pro"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:visibility="gone"
+        android:indeterminateDrawable="@anim/large_progressbar_animator"
+        android:indeterminateDuration="1000" />
+
+</RelativeLayout>

@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F0F0F0"
+    android:orientation="vertical" >
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical" >
+
+            <EditText
+                android:id="@+id/question_detail_et"
+                android:layout_width="match_parent"
+                android:layout_height="120dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginTop="15dp"
+                android:background="@drawable/shape_person_model_bg"
+                android:gravity="top"
+                android:hint="@string/ask_questino_str"
+                android:padding="4dp"
+                android:textSize="16sp" />
+
+            <!--
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginTop="10dp" >
+
+                <Button
+                    android:id="@+id/select_pic_bt"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/shape_blue_button"
+                    android:padding="6dp"
+                    android:text="@string/select_pic"
+                    android:textColor="#FFF"
+                    android:textSize="16sp" />
+
+                <Button
+                    android:id="@+id/upload_pic_bt"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_toRightOf="@id/select_pic_bt"
+                    android:background="@drawable/shape_blue_button"
+                    android:padding="6dp"
+                    android:text="@string/uploading_pic"
+                    android:textColor="#FFF"
+                    android:textSize="16sp" />
+
+                <TextView
+                    android:id="@+id/choosed_img_count_tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:text="0/4"
+                    android:textColor="#333333" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_centerVertical="true"
+                    android:layout_toLeftOf="@id/choosed_img_count_tv"
+                    android:text="@string/has_select_pices"
+                    android:textColor="#333333" />
+            </RelativeLayout>
+            -->
+
+            <EditText
+                android:id="@+id/submit_link_et"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="9dp"
+                android:layout_marginTop="10dp"
+                android:hint="@string/tele_or_qq"
+                android:inputType="number"
+                android:textSize="16sp" />
+
+            <TextView
+                android:id="@+id/jolo_suggestion_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:textColor="#333333" />
+
+            <Button
+                android:id="@+id/look_for_normal_question_bt"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginTop="10dp"
+                android:background="#FC8F26"
+                android:padding="8dp"
+                android:text="@string/look_for_normal_question"
+                android:textColor="#FFF"
+                android:textSize="16sp" />
+
+            <Button
+                android:id="@+id/confirm_commit_bt"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:background="#26AEFC"
+                android:padding="8dp"
+                android:text="@string/confirm_upload"
+                android:textColor="#FFF"
+                android:textSize="16sp" />
+
+            <TextView
+             android:autoLink="phone"
+                android:id="@+id/customer_phone_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="30dp"
+                android:textColor="#333333" />
+
+            <TextView
+              
+                android:id="@+id/customer_qq_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:textColor="#333333" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+              
+                android:layout_marginLeft="10dp"
+                android:text="@string/jolo_working_time"
+                android:textColor="#333333" />
+             <TextView
+                 android:id="@+id/version_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="20dp"
+                android:layout_marginLeft="10dp"
+              
+                android:textColor="#333333" />
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>

@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/sdk_framework_channel_float_open_layout"
+    android:layout_width="200dip"
+    android:layout_height="180dip"
+    android:background="@android:color/white"
+    android:orientation="vertical" >
+
+    <Button
+        android:id="@+id/sdk_framework_channel_float_logout"
+        android:layout_width="120dip"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="12dip"
+        android:textColor="#7d8283"
+        android:drawableLeft="@drawable/sdk_channel_usercenter"
+        android:background="@android:color/transparent"
+        android:text="注　　销" />
+    <Button
+        android:id="@+id/sdk_framework_channel_float_usercenter"
+        android:layout_width="120dip"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:textColor="#7d8283"
+        android:drawableLeft="@drawable/sdk_channel_usercenter"
+        android:background="@android:color/transparent"
+        android:text="用户中心" />
+
+    <Button
+        android:id="@+id/sdk_framework_channel_float_back"
+        android:layout_width="120dip"
+        android:layout_height="wrap_content"
+        android:textColor="#7d8283"
+        android:layout_marginTop="5dip"
+        android:layout_marginBottom="12dip"
+        android:layout_gravity="center_horizontal"
+        android:drawableLeft="@drawable/sdk_channel_back"
+        android:background="@android:color/transparent"
+        android:text="点击返回" />
+
+</LinearLayout>

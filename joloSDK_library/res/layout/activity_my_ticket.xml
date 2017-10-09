@@ -1,0 +1,132 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:id="@+id/ll_bar"
+        android:layout_width="fill_parent"
+        android:layout_height="1dp"
+        android:background="@color/jolo_theme_blue"
+        android:orientation="vertical"
+        android:visibility="gone" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@color/cmmn_blue"
+        android:orientation="vertical" >
+
+        <ImageView
+            android:id="@+id/back_iv"
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="10dip"
+            android:contentDescription="@null"
+            android:scaleType="fitCenter"
+            android:src="@drawable/jolopay_back" />
+
+        <TextView
+            android:id="@+id/jolopay_title_tv"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:gravity="center_horizontal"
+            android:text="@string/myticket_title"
+            android:textColor="@color/jolopay_white"
+            android:textSize="18sp" />
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@android:color/white"
+        android:orientation="horizontal" >
+
+        <LinearLayout
+            android:id="@+id/ticket_store_ll"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:orientation="vertical" >
+
+            <TextView
+                android:id="@+id/ticket_store_tv"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:padding="2dp"
+                android:text="@string/ticket_store_title"
+                android:textColor="@color/cmmn_blue"
+                android:textSize="16sp" />
+
+            <View
+                android:id="@+id/ticket_store_view"
+                android:layout_width="match_parent"
+                android:layout_height="3dp"
+                android:background="@color/cmmn_blue" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/ticket_usable_ll"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:orientation="vertical" >
+
+            <TextView
+                android:id="@+id/ticket_usable_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:padding="2dp"
+                android:text="@string/ticket_usable_title"
+                android:textColor="@color/cmmn_gray"
+                android:textSize="16sp" />
+
+            <View
+                android:id="@+id/ticket_usable_view"
+                android:layout_width="match_parent"
+                android:layout_height="3dp"
+                android:background="@color/cmmn_blue"
+                android:visibility="invisible" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/ticket_unusable_ll"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:orientation="vertical" >
+
+            <TextView
+                android:id="@+id/ticket_unusable_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:padding="2dp"
+                android:text="@string/ticket_unusable_title"
+                android:textColor="@color/cmmn_gray"
+                android:textSize="16sp" />
+
+            <View
+                android:id="@+id/ticket_unusable_view"
+                android:layout_width="match_parent"
+                android:layout_height="3dp"
+                android:background="@color/cmmn_blue"
+                android:visibility="invisible" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <com.jolosdk.home.ui.widget.LazyViewPager
+        android:id="@+id/myvolume_pager"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@android:color/white" />
+
+</LinearLayout>

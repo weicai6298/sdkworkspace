@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.le.legamesdk.widget.LeMainBulletinView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="66dp">
+
+    <com.le.legamesdk.widget.LeImageView
+        android:id="@+id/le_main_bulletin_icon"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="16dp"
+        android:layout_marginStart="16dp"
+        android:contentDescription="@string/le_sdk_bulletin_icon_description" />
+
+    <TextView
+        android:id="@+id/le_main_bulletin_link"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:layout_marginEnd="24dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="24dp"
+        android:layout_marginStart="10dp"
+        android:autoLink="web"
+        android:text="@string/le_sdk_detail_info_link"
+        android:textColor="@color/sdk_orange"
+        android:textSize="14dp" />
+
+    <TextView
+        android:id="@+id/le_main_bulletin_content"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="10dp"
+        android:layout_marginStart="10dp"
+        android:layout_toEndOf="@id/le_main_bulletin_icon"
+        android:layout_toLeftOf="@id/le_main_bulletin_link"
+        android:layout_toRightOf="@id/le_main_bulletin_icon"
+        android:layout_toStartOf="@id/le_main_bulletin_link"
+        android:ellipsize="end"
+        android:gravity="start|center_vertical"
+        android:maxLines="2"
+        android:textColor="@color/lepay_common_dialog_desc_font_color"
+        android:textSize="14dp" />
+
+</com.le.legamesdk.widget.LeMainBulletinView>

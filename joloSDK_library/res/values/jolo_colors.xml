@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!-- 通用颜色 -->
+    <color name="cmmn_red">#ff4007</color>
+    <color name="cmmn_black">#292a2f</color>
+    <color name="cmmn_green">#5bc002</color>
+    <color name="cmmn_gray">#96968d</color>
+    <color name="cmmn_gray2">#f0f0f0</color>
+    <color name="cmmn_blue">#00b1fc</color>
+    <color name="hint_color">#afafaf</color>
+    <color name="common_gray">#A3A3A3</color>
+    
+    <!-- textView 字体 -->
+    <color name="color_tv">#a3a3a3</color>
+    <color name="jolo_white">#ffffff</color>
+    <color name="jolo_black">#000000</color>
+    <color name="divider_color">#d4d4d4</color>
+    <color name="jolo_theme_blue">#00B1FC</color>
+    <color name="jolo_orange">#FC8F26</color>
+    <color name="jolo_gray_font_color">#787878</color>
+    <color name="jolo_takeout_color">#aeaeae</color>
+    <color name="jolo_game_name_green">#31A129</color>
+
+    <!-- 透明 -->
+    <color name="transparent">#00000000</color>
+    <color name="translucence">#88000000</color>
+    <color name="read">#ff0000</color>
+    <color name="foot_txt_gray">#AEAEAE</color>
+    <color name="transparentt">#9000</color>
+
+    <!-- 悬浮球 -->
+    <color name="float_font">#646464</color>
+
+</resources>

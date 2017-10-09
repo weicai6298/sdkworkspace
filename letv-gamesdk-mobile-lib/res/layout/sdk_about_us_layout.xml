@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+    <com.le.legamesdk.widget.LeMainViewParent
+        android:id="@+id/le_main_parent"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/le_border_line_bg">
+
+        <RelativeLayout
+            android:id="@+id/about_us"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <include
+                android:id="@+id/le_main_view_action_bar"
+                layout="@layout/le_main_view_action_bar_layout"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/le_main_view_action_bar_height"
+                android:layout_alignParentTop="true"/>
+
+            <ImageView
+                android:id="@+id/letvsdk_logo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/le_main_view_action_bar"
+                android:layout_centerHorizontal="true"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginBottom="12dp"
+                android:layout_marginTop="12dp"
+                android:contentDescription="@string/le_oauth_account_manager_le_logo_description"
+                android:src="@drawable/sdk_about_us_logo"/>
+
+            <TextView
+                android:id="@+id/le_about_us_sdk_version"
+                style="@style/LeStyleBlack16"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/letvsdk_logo"
+                android:layout_marginBottom="12dp"
+                android:gravity="center_horizontal"/>
+
+            <LinearLayout
+                android:id="@+id/service"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/le_about_us_sdk_version"
+                android:layout_marginTop="@dimen/margin_10"
+                android:orientation="vertical">
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1px"
+                    android:background="@color/le_border_line_color"/>
+
+                <RelativeLayout
+                    android:id="@+id/online_service"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/le_item_view_height"
+                    android:background="@drawable/le_item_view_bg">
+
+                    <TextView
+                        style="@style/LeStyleBlack14"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentLeft="true"
+                        android:layout_alignParentStart="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="@dimen/le_item_view_left_right_offset"
+                        android:layout_marginStart="@dimen/le_item_view_left_right_offset"
+                        android:text="@string/sdk_online_service_name"/>
+
+                    <TextView
+                        style="@style/LeStyleBlack14"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentEnd="true"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginEnd="@dimen/le_item_view_left_right_offset"
+                        android:layout_marginRight="@dimen/le_item_view_left_right_offset"
+                        android:text="@string/sdk_online_service_value"/>
+                </RelativeLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1px"
+                    android:background="@color/le_border_line_color"/>
+
+                <!--<RelativeLayout-->
+                    <!--android:id="@+id/hotline_service"-->
+                    <!--android:layout_width="match_parent"-->
+                    <!--android:layout_height="@dimen/le_item_view_height"-->
+                    <!--android:background="@drawable/le_item_view_bg">-->
+
+                    <!--<TextView-->
+                        <!--style="@style/LeStyleBlack14"-->
+                        <!--android:layout_width="wrap_content"-->
+                        <!--android:layout_height="wrap_content"-->
+                        <!--android:layout_alignParentLeft="true"-->
+                        <!--android:layout_alignParentStart="true"-->
+                        <!--android:layout_centerVertical="true"-->
+                        <!--android:layout_marginLeft="@dimen/le_item_view_left_right_offset"-->
+                        <!--android:layout_marginStart="@dimen/le_item_view_left_right_offset"-->
+                        <!--android:text="@string/sdk_hotline_service_name"/>-->
+
+                    <!--<TextView-->
+                        <!--style="@style/LeStyleBlack14"-->
+                        <!--android:layout_width="wrap_content"-->
+                        <!--android:layout_height="wrap_content"-->
+                        <!--android:layout_alignParentEnd="true"-->
+                        <!--android:layout_alignParentRight="true"-->
+                        <!--android:layout_centerVertical="true"-->
+                        <!--android:layout_marginEnd="@dimen/le_item_view_left_right_offset"-->
+                        <!--android:layout_marginRight="@dimen/le_item_view_left_right_offset"-->
+                        <!--android:text="@string/sdk_hotline_service_value"/>-->
+                <!--</RelativeLayout>-->
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1px"
+                    android:background="@color/le_border_line_color"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_below="@id/service"
+                android:layout_marginBottom="36dp"
+                android:gravity="center_horizontal|bottom"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/hotline_service_name"
+                    style="@style/LeStyleBlack14"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/sdk_hotline_service_name"
+                    android:textColor="@color/sdk_c999999"/>
+
+                <TextView
+                    android:id="@+id/hotline_service_value"
+                    style="@style/LeStyleBlack14"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/sdk_hotline_service_value"
+                    android:textColor="@color/sdk_c555555"/>
+            </LinearLayout>
+
+        </RelativeLayout>
+    </com.le.legamesdk.widget.LeMainViewParent>
+
+</RelativeLayout>

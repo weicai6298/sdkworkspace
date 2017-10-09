@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:background="@drawable/shape_login_activity"
+    android:orientation="vertical"
+    android:padding="10dp" >
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content" >
+
+        <TextView
+            android:textColor="@color/cmmn_black"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/ticket_dialog_title" />
+      
+        <TextView
+            android:id="@+id/dialog_game_name_tv"
+            android:textColor="@color/cmmn_black"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="xx" />
+      
+
+       
+    </LinearLayout>
+
+    <LinearLayout
+          android:orientation="horizontal"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content" >
+
+        <TextView
+              android:textColor="@color/cmmn_black"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/volume_dialog_current_account" />
+
+        <TextView
+              android:textColor="@color/cmmn_black"
+            android:id="@+id/dialog_activity_current_account_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+    </LinearLayout>
+
+    <LinearLayout
+          android:orientation="horizontal"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content" >
+
+        <TextView
+            android:textColor="@color/cmmn_black"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/volume_dialog_money" />
+
+        <TextView
+            android:textColor="@color/cmmn_black"
+            android:id="@+id/money_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content" >
+
+        <TextView
+            android:textColor="@color/cmmn_black"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/volume_dialog_pay_money" />
+
+        <TextView
+            android:textColor="@color/cmmn_black"
+            android:id="@+id/pay_monty_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+    </LinearLayout>
+
+    <LinearLayout
+          android:orientation="horizontal"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content" >
+
+        <TextView
+            android:textColor="@color/cmmn_black"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/volume_dialog_lasttime" />
+
+        <TextView
+            android:textColor="@color/cmmn_black"
+            android:id="@+id/lasttime_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+    </LinearLayout>
+
+    <TextView
+       
+        android:layout_marginBottom="2dp"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/volume_dialog_desc"
+        android:textColor="@color/cmmn_red" />
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal" >
+
+        <TextView
+          android:textSize="16dp"
+            android:id="@+id/cancel_tv"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="5dp"
+            android:layout_weight="1"
+            android:background="@drawable/btn_gray2_shape_rect"
+            android:gravity="center"
+            android:padding="5dp"
+            android:text="@string/volume_dialog_cancle"
+            android:textColor="@android:color/white" />
+
+        <TextView
+             android:textSize="16dp"
+            android:id="@+id/ok_tv"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:layout_weight="1"
+            android:background="@drawable/btn_blue_shape_rect"
+            android:gravity="center"
+            android:padding="5dp"
+            android:text="@string/volume_dialog_ok"
+            android:textColor="@android:color/white" />
+    </LinearLayout>
+
+</LinearLayout>

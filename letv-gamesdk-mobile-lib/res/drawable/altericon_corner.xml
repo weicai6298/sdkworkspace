@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xml:android="http://schemas.android.com/apk/res/android" xmlns:android="http://schemas.android.com/apk/res/android">
+    <item>
+        <shape>
+            <solid android:color="@color/sdk_ic_giftbag_icon_bg_color"/>
+            <corners android:topRightRadius="6dp"
+                android:bottomRightRadius="6dp"
+                android:topLeftRadius="6dp"
+                android:bottomLeftRadius="6dp"/>
+        </shape>
+    </item>
+</selector>

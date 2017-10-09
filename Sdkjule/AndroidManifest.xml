@@ -1,0 +1,318 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.syhl.jzsg.htc"
+    android:versionCode="1"
+    android:versionName="1.0" >
+
+    <uses-sdk
+        android:minSdkVersion="13"
+        android:targetSdkVersion="21" />
+
+     <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <!-- 读取设备信息 -->
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.MOUNT_UNMOUNT_FILESYSTEMS" />
+    <!-- 往sdcard中写入数据的权限 -->
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <!-- 在sdcard中创建/删除文件的权限 -->
+    <uses-permission android:name="android.permission.MOUNT_UNMOUNT_FILESYSTEMS" />
+    <!-- 网络连接 -->
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <!-- 读取验证码 -->
+    <uses-permission android:name="android.permission.READ_SMS" />
+    <uses-permission android:name="android.permission.WRITE_SETTINGS" />
+    <!-- 微信支付权限 -->
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.VIBRATE" />
+    <uses-permission android:name="android.webkit.permission.PLUGIN" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.CHANGE_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <!-- 悬浮球显示申请权限 -->
+    <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW" />
+    <uses-permission android:name="android.permission.GET_TASKS" />
+    
+     <!-- 支持多屏幕 -->
+    <supports-screens
+        android:anyDensity="true"
+        android:largeScreens="true"
+        android:normalScreens="true"
+        android:smallScreens="true" />
+
+    <application
+        android:name="com.yayawan.impl.YYApplication"
+        android:allowBackup="true"
+        android:theme="@android:style/Theme.NoTitleBar.Fullscreen" >
+        <activity
+            android:name="com.yayawan.sdktemplate.MainActivity"
+            android:label="app_name" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+      
+        
+      <!-- 手游互联配置 -->
+     	 <meta-data
+            android:name="app_id"
+            android:value="kk2409517009" />
+        <meta-data
+            android:name="isLandscape"
+            android:value="true" />
+        
+         <meta-data
+            android:name="gamecode"
+            android:value="string2999106172763" />
+         <meta-data
+            android:name="publickey"
+            android:value="MIGfMA0GCSqGSIb3DQEBAQUAA4GNADCBiQKBgQDbRLzWfCD4pQb1mjeGLy6gw+AfOKZ1dpNbMUyZml+p3stTSdTyHHpkuPPsaOqsT9gFDSmXz5KRBt4w6KCeLj/R61KA5rmMJipDnSJV19kld0z6NW47kiEQHslaalDBCST94TUIcCzjhaiG3yTChDCTFo3v47qyt6j3YvVpih8UNQIDAQAB" />
+        
+         <meta-data
+            android:name="privatekey"
+            android:value="MIICdwIBADANBgkqhkiG9w0BAQEFAASCAmEwggJdAgEAAoGBAMxGkT+lRPoBLANb
+tTy8m6LPdZeQoiLZH3BqnRnknOQjaK7iZQW9ofjgPGDb6lqdfFwmyxngKqcYjR+K
+yyHwgQzeaBQVVjG6uYIOsCtgus0HdA4k8nRoApDdRqpxLgmr4wxOg/73RBrunq5S
+kcLHnVdoyvzK0JjJEE/WchtfG2fTAgMBAAECgYAsHgl8n2r4O4yP5RyNU4ahcQDK
+jRgXQqFBnCT11KP1uZgAPTDoPn5ey77+hEBm9aBIHrC6k+liUTEZYNZiLBkSlQpW
+YKhftKPeIgDB2UZKCPx7aLkcEGBpWmL7YujnETh+ZnJHi4t2biuwYjvbg1MUqmjr
+dEsvRZsIp8YH6Ba+IQJBAP+YtsFoqoGsWDtk+Bde5bqHXr5Ca4wIqVst1IuGh2+J
+BNJIPjQj3+ZeWh07xZSGhaIrBme0+SZSY79wW+xoJvsCQQDMmR1kJ/phiYzVqkRc
+IWxlXlXQTg/+qHJKow8EXESqi03vLjlncaha8RlRuk2FAuyW9KWpfXHTY8XphjiX
+S8sJAkEAkJIDhSA7mT8vZOD2htmRXVEmYL1W8Y0Qpdclaon8XzUEOiDMtlc4VKg3
+lmNxnVH9kj190PkHGArwCp92DyDWMwJAPyVmt9nK4j201OE3NgQu0155N9BQCXXt
+yHFpGhxsKQLTq+VlXDLtFhxhhyLr+Ah+At1BH/2Smv6pP7joUHHZGQJBAKk7oylC
+eZvxUxg1xY+VrhOmsKOreOzDJA0nNOIB1s5B/RTYxcYcGkPzI9xnFFmeXH3EVuQ/
+v7s/3pYhjdUc+3M=" />
+         
+         <meta-data
+            android:name="callback"
+            android:value="https://api.sdk.75757.com/pay/notify/2409517009/" />
+         <meta-data
+            android:name="gamename"
+            android:value="三国仙侠志" />
+         
+         
+           <!-- start请把以下内容 copy到游戏的AndroidManifest.xml中 -->
+        <!-- HTC SDK 渠道号定义 -->
+        <meta-data
+            android:name="HTC_CHANNEL"
+            android:value="htc" />
+        <!-- 登录 -->
+        <activity
+            android:name="com.jolo.account.activity.LoginActivity"
+            android:configChanges="keyboardHidden|locale|mcc|mnc"
+            android:theme="@style/Theme.Translucent" >
+        </activity>
+        <!-- 登录账号选项 -->
+        <activity
+            android:name="com.jolo.account.activity.LoginOptionActivity"
+            android:configChanges="keyboardHidden|locale|mcc|mnc"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar" >
+        </activity>
+
+        <!-- 注册选项 -->
+        <activity
+            android:name="com.jolo.account.activity.RegisterOptionActivity"
+            android:configChanges="keyboardHidden|locale|mcc|mnc"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+
+        <!-- 注册 -->
+        <activity
+            android:name="com.jolo.account.activity.NormalRegisterActivity"
+            android:configChanges="keyboardHidden|locale|mcc|mnc"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+
+        <!-- 手机注册 -->
+        <activity
+            android:name="com.jolo.account.activity.RegisterPhoneActivity"
+            android:configChanges="keyboardHidden|locale|mcc|mnc"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+
+        <!-- 绑定手机 -->
+        <activity
+            android:name="com.jolo.account.activity.BindPhoneActivity"
+            android:configChanges="keyboardHidden|locale|mcc|mnc"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+        <!-- 注册协议 -->
+        <activity
+            android:name="com.jolo.account.activity.ProtocolActivity"
+            android:configChanges="keyboardHidden|locale|mcc|mnc"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+
+        <!-- 修改密码 -->
+        <activity
+            android:name="com.jolo.account.activity.ModifyPwdActivity"
+            android:configChanges="keyboardHidden|locale|mcc|mnc"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar"
+            android:windowSoftInputMode="stateAlwaysVisible" />
+        
+          <!-- 第三方支付  start-->
+        <activity
+            android:name="com.ipaynow.plugin.activity.PayMethodActivity"
+            android:configChanges="orientation|keyboardHidden"
+            android:exported="false"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.Dialog" >
+        </activity>
+      
+        <!-- 微信支付注意：配置 android:configChanges="orientation|screenSize" -->
+        <activity
+            android:name="com.ipaynow.plugin.inner_plugin.wechat_plugin.activity.WeChatNotifyActivity"
+            android:configChanges="orientation|screenSize"
+            android:theme="@android:style/Theme.Translucent"
+            android:windowSoftInputMode="stateHidden" >
+        </activity>
+        <activity
+            android:name="com.ipaynow.wechatpay.plugin.inner_plugin.wechat_plugin.activity.WeChatNotifyActivity"
+            android:configChanges="orientation|screenSize"
+            android:screenOrientation="behind"
+            android:theme="@android:style/Theme.Translucent" >
+        </activity>
+        
+        <activity
+            android:name="com.unionpay.uppay.PayActivity"
+            android:configChanges="orientation|screenSize|keyboardHidden|screenLayout"
+            android:excludeFromRecents="true"
+            android:theme="@style/Theme.NoTitle" >
+        </activity>
+        <activity
+            android:name="com.alipay.sdk.app.H5PayActivity"
+            android:configChanges="orientation|keyboardHidden|navigation"
+            android:exported="false"
+            android:screenOrientation="behind"
+            android:windowSoftInputMode="adjustResize|stateHidden" >
+        </activity>
+         <!-- 第三方支付  end-->
+        <activity
+            android:name="com.jolosdk.home.activity.BusinessRecordActivity"
+            android:configChanges="keyboardHidden|locale|mcc|mnc"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+        <activity
+            android:name="com.jolosdk.home.activity.MessageActivity"
+            android:configChanges="keyboardHidden|locale|mcc|mnc"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+        <!-- 个人中心MainActivity -->
+        <activity
+            android:name="com.jolosdk.home.activity.PersonalCentraMainActivity"
+            android:configChanges="keyboardHidden|locale|mcc|mnc"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+        <activity
+            android:name="com.jolosdk.home.activity.GBaoExplainActivity"
+            android:configChanges="orientation|screenSize|keyboardHidden|screenLayout"
+            android:theme="@style/Theme.NoTitle" />
+        <activity
+            android:name="com.jolo.jolopay.JoloPayActivity"
+            android:configChanges="orientation|screenSize|keyboardHidden|navigation|orientation"
+            android:exported="true"
+            android:theme="@style/Theme.NoTitle"
+            android:windowSoftInputMode="stateHidden" >
+        </activity>
+        <activity
+            android:name="com.jolo.jolopay.JoloRechargeActivity"
+            android:configChanges="keyboardHidden|navigation|orientation|screenSize"
+            android:theme="@style/Theme.NoTitle"
+            android:windowSoftInputMode="stateHidden" >
+        </activity>
+
+        <!-- 我的代金劵 -->
+        <activity
+            android:name="com.jolosdk.home.activity.TicketActivity"
+            android:configChanges="orientation|screenSize|keyboardHidden|screenLayout"
+            android:theme="@style/Theme.NoTitle" >
+        </activity>
+        <!-- 代金劵详情 -->
+        <activity
+            android:name="com.jolosdk.home.activity.TicketDetailActivity"
+            android:configChanges="orientation|screenSize|keyboardHidden|screenLayout"
+            android:theme="@style/Theme.NoTitle" />
+        <!-- 获取代金劵 -->
+        <activity
+            android:name="com.jolosdk.home.activity.GainTicketActivity"
+            android:configChanges="orientation|screenSize|keyboardHidden|screenLayout"
+            android:theme="@style/Theme.NoTitle" >
+        </activity>
+        <!-- 代金劵说明页 -->
+        <activity
+            android:name="com.jolosdk.home.activity.TicketExplainActivity"
+            android:configChanges="orientation|screenSize|keyboardHidden|screenLayout"
+            android:theme="@style/Theme.NoTitle" >
+        </activity>
+        <!-- 代金劵充值页 -->
+        <activity
+            android:name="com.jolosdk.home.activity.TicketBuyActivity"
+            android:configChanges="orientation|screenSize|keyboardHidden|screenLayout"
+            android:theme="@android:style/Theme.Holo.Light.NoActionBar" >
+        </activity>
+        <!-- 代金劵购买页 -->
+        <activity
+            android:name="com.jolosdk.home.activity.TicketBuyDialogActivity"
+            android:configChanges="orientation|screenSize|keyboardHidden|screenLayout"
+            android:theme="@style/jolo_WaitingDialogStyle" >
+        </activity>
+
+        <!-- 游戏中直接代金劵的DialogActivity -->
+        <activity
+            android:name="com.jolosdk.home.activity.TicketPayListDialogActivity"
+            android:configChanges="orientation|screenSize|keyboardHidden|screenLayout"
+            android:theme="@style/jolo_WaitingDialogStyle" >
+        </activity>
+        <!-- 游戏中直接代金劵的WarnDialogActivity -->
+        <activity
+            android:name="com.jolosdk.home.activity.TicketPayWarnDialogActivity"
+            android:configChanges="orientation|screenSize|keyboardHidden|screenLayout"
+            android:theme="@style/jolo_WaitingDialogStyle" >
+        </activity>
+        <!-- 悬浮球后台服务 -->
+        <service android:name="com.jolosdk.home.ui.widget.floatball.FloatBallService" >
+        </service>
+
+        <!-- dzq -->
+        <activity
+            android:name="com.jolosdk.home.activity.BeforeLoginActivity"
+            android:configChanges="orientation|keyboardHidden"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar" >
+        </activity>
+        <activity
+            android:name="com.jolosdk.home.activity.NormalQuestionActivity"
+            android:theme="@android:style/Theme.Holo.Light.NoActionBar" >
+        </activity>
+        <activity
+            android:name="com.jolosdk.home.activity.MessageDetailActivity"
+            android:theme="@android:style/Theme.Holo.Light.NoActionBar" >
+        </activity>
+        <activity
+            android:name="com.jolosdk.home.ui.widget.picpicker.PicpickerActivity"
+            android:theme="@android:style/Theme.Holo.Light.NoActionBar" >
+        </activity>
+        <activity
+            android:name="com.jolosdk.home.activity.GiftDetailActivity"
+            android:theme="@android:style/Theme.Holo.Light.NoActionBar" >
+        </activity>
+        <activity
+            android:name="com.jolosdk.home.activity.AdvBannerActivity"
+            android:theme="@android:style/Theme.Holo.Light.NoActionBar" >
+        </activity>
+        
+        <!-- 微信H5支付 -->
+        <activity
+            android:name="com.jolo.jolopay.WXH5PayActivity"
+            android:theme="@style/Theme.NoTitle">
+        </activity>
+  
+        <!-- 实名制认证 -->
+        <activity
+            android:name="com.jolo.account.activity.UserAuthActivity"
+            android:theme="@style/Theme.NoTitle" >
+        </activity>
+        <!-- end请把以上内容 copy到游戏的AndroidManifest.xml中 -->
+    </application>
+
+</manifest>
+

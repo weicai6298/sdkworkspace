@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@android:color/white" >
+
+    <LinearLayout
+        android:id="@+id/ll_bar"
+        android:layout_width="fill_parent"
+        android:layout_height="1dp"
+        android:background="@color/jolo_theme_blue"
+        android:orientation="vertical"
+        />
+    
+    <RelativeLayout
+       android:id="@+id/title_rl"
+        android:layout_width="match_parent"
+        android:layout_height="50dip"
+        android:background="@color/cmmn_blue" >
+
+         <ImageView
+        android:id="@+id/back_iv"
+        android:layout_width="35dp"
+        android:layout_height="35dp"
+        android:layout_marginLeft="10dip"
+        android:contentDescription="@null"
+        android:scaleType="fitCenter"
+        android:layout_alignParentLeft="true"
+        android:layout_centerVertical="true"
+        android:src="@drawable/jolopay_back" />
+
+    <TextView
+     android:gravity="center_horizontal"
+        android:id="@+id/jolopay_title_tv"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+       android:layout_centerVertical="true"
+        android:text="@string/ticket_explain_title"
+        android:textColor="@color/jolopay_white"
+        android:textSize="20sp" />
+    </RelativeLayout>
+
+    <LinearLayout
+        
+     
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_below="@id/title_rl"
+        android:layout_margin="10dp"
+        android:orientation="vertical" >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/jolopay_what_ticket_title"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+
+        <TextView
+              android:id="@+id/ticket_explain_content1_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="5dp"
+            android:layout_marginTop="5dp"
+            android:text="@string/jolopay_what_ticket"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/jolopay_ticket_how_use_title"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+
+        <TextView
+           
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="5dp"
+            android:layout_marginTop="5dp"
+            android:text="@string/jolopay_ticket_how_use" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/jolopay_ticket_how_gain_title"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="5dp"
+            android:layout_marginTop="5dp"
+            android:text="@string/jolopay_ticket_how_gain" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/jolopay_look_ticket_title"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="5dp"
+            android:layout_marginTop="5dp"
+            android:text="@string/jolopay_look_ticket_content" />
+    </LinearLayout>
+
+</LinearLayout>
