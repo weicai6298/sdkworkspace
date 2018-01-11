@@ -74,13 +74,6 @@ typedef struct {
     std::string country;          //国家
     std::string province;          //省份(老版本属性，为了不让外部app改代码，没有放在AddressInfo)
     std::string city;             //城市(老版本属性，为了不让外部app改代码，没有放在AddressInfo)
-
-    //手Q相关字段
-    bool is_yellow_vip;
-    bool is_yellow_year_vip;
-    int yellow_vip_level;
-    bool is_yellow_high_vip;
-
 }PersonInfo;
 
 typedef struct {

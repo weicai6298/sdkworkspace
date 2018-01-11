@@ -97,9 +97,9 @@ public class YaYawanconstants {
 			}
 		});
 
-		pCenter= PluginCenter.getInstance(mActivity);
-		pCenter.onCreate(mActivity);// 传入的必须是一个Activity,必须在init()调用
-		pCenter.init();
+//		pCenter= PluginCenter.getInstance(mActivity);
+//		pCenter.onCreate(mActivity);// 传入的必须是一个Activity,必须在init()调用
+//		pCenter.init();
 		//初始化事件监听
 		pCenter.setpInitListener(new PInitListener() {
 

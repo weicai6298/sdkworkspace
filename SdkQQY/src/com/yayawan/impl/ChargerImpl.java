@@ -46,7 +46,6 @@ public class ChargerImpl implements YYWCharger {
 	}
 
 	private Activity mactivity;
-
 	
 	private static int moneyrate=10;
 	

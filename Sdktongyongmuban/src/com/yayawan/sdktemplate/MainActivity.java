@@ -102,19 +102,16 @@ public class MainActivity extends Activity {
 
 			@Override
 			public void onAnimSuccess(String arg0, Object arg1) {
-				// TODO Auto-generated method stub
 				Toast.makeText(MainActivity.this, "播放动画回调", Toast.LENGTH_SHORT).show();
 			}
 
 			@Override
 			public void onAnimFailed(String arg0, Object arg1) {
-				// TODO Auto-generated method stub
 
 			}
 
 			@Override
 			public void onAnimCancel(String arg0, Object arg1) {
-				// TODO Auto-generated method stub
 
 			}
 		});
@@ -132,20 +129,17 @@ public class MainActivity extends Activity {
 
             @Override
             public void onLoginSuccess(YYWUser user, Object arg1) {
-                // TODO Auto-generated method stub
                 System.out.println(user);
                 Toast.makeText(MainActivity.this, "登录回调" + user, Toast.LENGTH_SHORT).show();
             }
 
             @Override
             public void onLoginFailed(String arg0, Object arg1) {
-                // TODO Auto-generated method stub
 
             }
 
 			@Override
 			public void onCancel() {
-				// TODO Auto-generated method stub
 				
 			}
         });
@@ -158,19 +152,16 @@ public class MainActivity extends Activity {
 
 	            @Override
 	            public void onPaySuccess(YYWUser arg0, YYWOrder arg1, Object arg2) {
-	                // TODO Auto-generated method stub
 	            	Toast.makeText(MainActivity.this, "充值成功回调", Toast.LENGTH_SHORT).show();
 	            }
 
 	            @Override
 	            public void onPayFailed(String arg0, Object arg1) {
-	                // TODO Auto-generated method stub
 	                System.out.println("支付失败");
 	            }
 
 	            @Override
 	            public void onPayCancel(String arg0, Object arg1) {
-	                // TODO Auto-generated method stub
 	                System.out.println("支付退出");
 	            }
 	        });
@@ -227,7 +218,6 @@ public class MainActivity extends Activity {
 
 	    @Override
 	    protected void onActivityResult(int requestCode, int resultCode, Intent data) {
-	    	// TODO Auto-generated method stub
 	    	super.onActivityResult(requestCode, resultCode, data);
 	    	GameProxy.getInstent().onActivityResult(this, requestCode, resultCode, data);
 	    }
@@ -239,7 +229,6 @@ public class MainActivity extends Activity {
 					
 					@Override
 					public void onExit() {
-						// TODO Auto-generated method stub
 						paramActivity.finish();
 					}
 				});

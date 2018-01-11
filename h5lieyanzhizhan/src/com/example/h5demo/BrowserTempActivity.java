@@ -25,7 +25,7 @@ import android.widget.FrameLayout;
 import android.widget.ProgressBar;
 import android.widget.RelativeLayout;
 
-import com.syhl.tulongll.R;
+import com.bjay.jzjt.huawei.R;
 import com.yayawan.callback.YYWAnimCallBack;
 import com.yayawan.callback.YYWExitCallback;
 import com.yayawan.main.Kgame;
@@ -43,15 +43,21 @@ public class BrowserTempActivity extends Activity {
 	// "http://jump.h5.jiulingwan.com:81/webserver/07073/android/index.html";
 	// http://h5cqllyx.jiulingwan.com/webserver/07073/android/index.html
 	private static final String mHomeUrl = "http://pulsdk.7724.com/bufanyouxi/loginback/game/jstl";
+	
 	private static final String TAG = "SdkDemo";
+	
 	private static final int MAX_LENGTH = 14;
+	
 	private boolean mNeedTestPage = false;
+	
 	private final int disable = 120;
+	
 	private final int enable = 255;
 
 	private ProgressBar mPageLoadingProgressBar = null;
 
 	private URL mIntentUrl;
+	
 	private Timer mTimer;
 
 	@Override
@@ -221,16 +227,15 @@ public class BrowserTempActivity extends Activity {
 	public boolean onKeyDown(int keyCode, KeyEvent event) {
 
 		if (keyCode == KeyEvent.KEYCODE_BACK) {
-			Log.i("tag","退出");
 			Kgame.getInstance().exit(this, new YYWExitCallback() {
 				public void onExit() {
-					Log.i("tag","退出2");
 					finish();
 				}
 			});
-			return super.onKeyDown(keyCode, event);
-		}
+			return true;
+		}else {
 		return super.onKeyDown(keyCode, event);
+		}
 	}
 
 	protected void onActivityResult(int requestCode, int resultCode, Intent data) {

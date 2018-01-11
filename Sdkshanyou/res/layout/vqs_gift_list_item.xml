@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/vqs_white"
+    android:paddingBottom="1dp" >
+
+    <ImageView
+        android:layout_margin="15dp"
+        android:id="@+id/vqs_gift_item_icon"
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+        android:layout_centerVertical="true"
+        />
+
+    <TextView
+        android:id="@+id/vqs_gift_item_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@id/vqs_gift_item_icon"
+        android:layout_toRightOf="@id/vqs_gift_item_icon"
+        android:textColor="@color/vqs_text_black"
+        android:textSize="16sp" />
+
+    <TextView
+        android:id="@+id/vqs_gift_item_time"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_toRightOf="@id/vqs_gift_item_icon"
+        android:textColor="@color/vqs_text_gray"
+        android:textSize="14sp" />
+ 	<TextView
+        android:id="@+id/vqs_gift_item_count_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="剩余数量 : "
+        android:layout_alignBottom="@id/vqs_gift_item_icon"
+        android:layout_toRightOf="@id/vqs_gift_item_icon"
+        android:textColor="@color/vqs_text_gray"
+        android:textSize="14sp" />
+    <TextView
+        android:id="@+id/vqs_gift_item_count"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@id/vqs_gift_item_icon"
+        android:layout_toRightOf="@id/vqs_gift_item_count_tv"
+        android:textColor="@color/vqs_text_red"
+        android:textSize="14sp" />
+
+    <ImageView
+        android:id="@+id/vqs_gift_getgift"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:layout_marginRight="10dp"
+        android:src="@drawable/vqs_get_gift" />
+
+    <ImageView
+        android:id="@+id/vqs_gift_lookgift"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:layout_marginRight="10dp"
+        android:src="@drawable/vqs_look_gift"
+        android:visibility="invisible" />
+    <View
+        android:background="@color/vqs_gray_bg"
+        android:layout_width="fill_parent"
+        android:layout_height="1dp"
+        android:layout_alignParentBottom="true"
+        />
+
+</RelativeLayout>

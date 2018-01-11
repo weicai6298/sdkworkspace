@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <RelativeLayout
+        android:id="@+id/huo_sdk_rl_top"
+        android:layout_width="match_parent"
+        android:layout_height="50dip"
+        android:background="@color/huo_sdk_black2a"
+        >
+        <ImageView
+            android:id="@+id/huo_sdk_iv_return"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:src="@drawable/huo_sdk_float_ic_back"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="12dip"/>
+        <TextView
+            android:id="@+id/huo_sdk_tv_back"
+            android:layout_toRightOf="@id/huo_sdk_iv_return"
+            android:layout_width="wrap_content"
+            android:layout_height="38dp"
+            android:layout_centerVertical="true"
+
+            android:gravity="center"
+            android:paddingBottom="6dip"
+            android:paddingLeft="2dip"
+            android:paddingRight="8dip"
+            android:paddingTop="6dip"
+            android:text="返回"
+            android:textColor="@android:color/white" />
+        <TextView
+            android:id="@+id/huo_sdk_tv_charge_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="20dp"
+            android:text="消息中心"
+            android:maxLength="8"
+            android:layout_centerInParent="true"
+            android:textColor="@android:color/white"/>
+
+        <ImageView
+            android:id="@+id/huo_sdk_iv_cancel"
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:paddingTop="12dp"
+            android:paddingBottom="12dp"
+            android:paddingRight="24dp"
+            android:paddingLeft="20dp"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="5dip"
+            android:gravity="center"
+            android:src="@drawable/huo_sdk_float_ic_action_cancel" />
+
+    </RelativeLayout>
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+    <com.game.sdk.view.xlistview.XListView
+        android:id="@+id/huo_sdk_xlv_message"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:listSelector="@android:color/transparent"
+        android:divider="@null"
+        android:dividerHeight="0dp"
+        >
+    </com.game.sdk.view.xlistview.XListView>
+</LinearLayout>

@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:background="@drawable/m4399_ope_page_bg" >
+
+
+
+    <LinearLayout
+        android:padding="24dp"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1" 
+        android:orientation="vertical"
+        android:gravity="center">
+
+        <TextView
+            android:id="@+id/back_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="#ffffff"
+            android:textSize="18sp"
+            android:text="@string/m4399_rec_pro_dialog_msg_rowa" />
+
+        <TextView
+            android:id="@+id/textView2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="#ffffff"
+            android:textSize="18sp"
+            android:text="@string/m4399_rec_pro_dialog_msg_rowb" />
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="horizontal" >
+
+        <Button
+            android:id="@+id/sms_hint_cancel"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/m4399_rec_sum_btns_eara_height"
+            android:layout_weight="1"
+	    	android:background="@drawable/m4399_rec_white_btn_bg"
+	    	android:textColor="#333333"
+            android:text="@string/m4399_rec_pro_dialog_quit" />
+
+        <Button
+            android:id="@+id/sms_hint_pay"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/m4399_rec_sum_btns_eara_height"
+            android:layout_weight="1"
+			android:layout_marginLeft="3dp"
+	    	android:background="@drawable/m4399_rec_green_btn_bg"
+	    	android:textColor="#ffffff"
+            android:text="@string/m4399_rec_pro_dialog_pay" />
+
+    </LinearLayout>
+
+</LinearLayout>

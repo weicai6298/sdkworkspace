@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    style="@style/sdk_land_dialog_style"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:scrollbars="none"
+    android:overScrollMode="never"
+    android:clipToPadding="false">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:focusable="true"
+            android:focusableInTouchMode="true"
+            android:orientation="vertical">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/droi_account_sdk_dialog_close"
+                android:layout_gravity="right"
+                android:onClick="onClose"/>
+
+            <TextView
+                style="@style/sdk_land_dialog_title_style"
+                android:text="@string/droi_account_sdk_login_title"/>
+
+            <AutoCompleteTextView
+                style="@style/sdk_land_input_view_style"
+                android:id="@+id/droi_account_sdk_username_edit"
+                android:hint="@string/droi_account_sdk_login_username_hint"
+                android:imeOptions="actionNext"
+                android:layout_marginTop="@dimen/sdk_land_login_phone_margin_top"
+                android:drawableLeft="@drawable/droi_account_sdk_login_username_left_img" />
+            
+            <View
+                style="@style/droi_account_sdk_slipt_style" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/droi_account_sdk_global_inputbar_height"
+                android:layout_marginTop="@dimen/droi_account_sdk_login_password_margin_top">
+
+                <CheckBox
+                    android:id="@+id/droi_account_sdk_login_passwd_switch"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginRight="5dp"
+                    android:button="@drawable/droi_account_sdk_passwd_visible_selector"
+                    android:checked="false"
+                    android:gravity="center_vertical" />
+
+                <AutoCompleteTextView
+                    android:id="@+id/droi_account_sdk_password_edit"
+                    style="@style/sdk_land_password_style"
+                    android:hint="@string/droi_account_sdk_login_password_hint"
+                    android:imeOptions="actionSend"
+                    android:drawableLeft="@drawable/droi_account_sdk_login_password_left_img"
+                    android:layout_toLeftOf="@id/droi_account_sdk_login_passwd_switch"
+                    android:layout_alignParentLeft="true" />
+
+            </RelativeLayout>
+            
+
+            <View
+                style="@style/droi_account_sdk_slipt_style" />
+
+            <Button
+                style="@style/sdk_land_common_btn_style"
+                android:id="@+id/droi_account_sdk_login_btn"
+                android:background="@drawable/droi_account_sdk_login_button_selector"
+                android:text="@string/droi_account_sdk_login"
+                android:layout_marginTop="@dimen/sdk_land_login_btn_margin_top"/>
+
+            <Button
+                style="@style/sdk_land_common_btn_style"
+                android:id="@+id/droi_account_sdk_login_anonym_btn"
+                android:text="@string/droi_account_sdk_anonym"
+                android:layout_marginTop="@dimen/sdk_land_login_anonmy_margin_top"/>
+
+            <RelativeLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/sdk_land_login_new_margin_top" >
+
+                <TextView
+                    android:id="@+id/droi_account_sdk_forget_password"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:text="@string/droi_account_sdk_forget_code"
+                    android:textColor="@color/droi_account_sdk_grey_text_color"
+                    android:paddingRight="@dimen/sdk_land_login_new_padding_top"
+                    android:paddingTop="@dimen/sdk_land_login_new_padding_top"
+                    android:textSize="@dimen/droi_account_sdk_login_forget_text_size" />
+
+                <TextView
+                    android:id="@+id/droi_account_sdk_register"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:text="@string/droi_account_sdk_register_account"
+                    android:textColor="@color/droi_account_sdk_grey_text_color"
+                    android:paddingLeft="@dimen/sdk_land_login_new_padding_top"
+                    android:paddingTop="@dimen/sdk_land_login_new_padding_top"
+                    android:textSize="@dimen/droi_account_sdk_login_register_text_size" />
+
+            </RelativeLayout>
+
+        </LinearLayout>
+    </RelativeLayout>
+</ScrollView>

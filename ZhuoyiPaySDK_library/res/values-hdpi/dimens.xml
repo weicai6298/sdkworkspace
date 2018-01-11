@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <dimen name="zy_pay_dialog_width">261.3dp</dimen>
+    <dimen name="zy_pay_dialog_height">188dp</dimen>
+    <dimen name="zy_pay_dialog_title_height">44dp</dimen>
+    <dimen name="zy_pay_dialog_title_textsize">18.7sp</dimen>
+    <dimen name="zy_pay_dialog_cancel_width">12dp</dimen>
+    <dimen name="zy_pay_dialog_cancel_height">12dp</dimen>
+    <dimen name="zy_pay_dialog_cancel_margintop">17.3dp</dimen>
+    <dimen name="zy_pay_dialog_cancel_marginright">13.3dp</dimen>
+    <dimen name="zy_pay_dialog_content_width">224dp</dimen>
+    <dimen name="zy_pay_dialog_content_height">73.3dp</dimen>
+    <dimen name="zy_pay_dialog_content_margintop">13.3dp</dimen>
+    <dimen name="zy_pay_dialog_content_marginleft">32dp</dimen>
+    <dimen name="zy_pay_dialog_content_textSize">13.3sp</dimen>
+    <dimen name="zy_pay_dialog_content_good_height">24.7dp</dimen>
+    <dimen name="zy_pay_dialog_content_balance_height">24dp</dimen>
+    <dimen name="zy_pay_dialog_content_amount_unit_marginright">32dp</dimen>
+    <dimen name="zy_pay_dialog_content_amount_marginright">8dp</dimen>
+    <dimen name="zy_pay_dialog_imagebtn_height">29.3dp</dimen>
+    <dimen name="zy_pay_dialog_imagebtn">14.7sp</dimen>
+    <dimen name="zy_pay_continue_game_height">170.7dp</dimen>
+    <dimen name="zy_pay_continue_game_margintop">12dp</dimen>
+    <dimen name="zy_pay_continue_game_image_size">34.7dp</dimen>
+    <dimen name="zy_pay_continue_game_content_text_margintop">8dp</dimen>
+    <dimen name="zy_pay_continue_game_content_textsize">13.3sp</dimen>
+    <dimen name="zy_pay_continue_game_imagebtn_margintop">16dp</dimen>
+
+    <dimen name="zy_float_margin_top">9.5dp</dimen>
+    <dimen name="zy_float_padding_right">20dp</dimen>
+    <dimen name="zy_float_image_width">45.3dp</dimen>
+	<dimen name="zy_float_image_height">45.3dp</dimen>
+	<dimen name="zy_float_content_height">33.3dp</dimen>
+	<dimen name="zy_float_content_marginleft">13dp</dimen>
+	<dimen name="zy_text_margin_image">2.7dp</dimen>
+	<dimen name="zy_float_content_textsize">12dp</dimen>
+	<dimen name="zy_float_line_width">1.3dp</dimen>
+	<dimen name="zy_float_line_height">14.7dp</dimen>
+	<dimen name="zy_float_line_margin">9.3dp</dimen>
+	<dimen name="zy_float_content_parent_marginleft">23dp</dimen>
+	<dimen name="zy_float_content_parent_marginright">0dp</dimen>
+	<dimen name="zy_float_wel_layout_height">20dp</dimen>
+	<dimen name="zy_float_wel_icon_width">14.7dp</dimen>
+	<dimen name="zy_float_wel_icon_height">14.7dp</dimen>
+	<dimen name="zy_float_wel_icon_marginleft">12dp</dimen>
+	<dimen name="zy_float_wel_text_marginleft">4dp</dimen>
+	<dimen name="zy_float_wel_text_size">10.7sp</dimen>
+
+	
+	<dimen name="zy_anmonys_dialog_with">300dp</dimen>
+    <dimen name="zy_anmonys_dialog_height">310dp</dimen>
+<dimen name="zy_anmonys_dialog_top">25dp</dimen>
+	
+	 <!--  竖屏 
+  --> 
+  <dimen name="droi_account_sdk_global_dialog_height">287dp</dimen> 
+  <dimen name="droi_account_sdk_global_dialog_padding">11.3dp</dimen> 
+  <dimen name="droi_account_sdk_global_dialog_title_size">26sp</dimen> 
+  <dimen name="droi_account_sdk_global_margin_top_7">7dp</dimen> 
+  <dimen name="droi_account_sdk_global_margin_top_30">30dp</dimen> 
+  <dimen name="droi_account_sdk_global_margin_top_33">33dp</dimen> 
+  <dimen name="droi_account_sdk_global_margin_top_35">35dp</dimen> 
+  <dimen name="droi_account_sdk_global_margin_top_38">38dp</dimen> 
+  <dimen name="droi_account_sdk_global_button_height">30dp</dimen> 
+  <dimen name="droi_account_sdk_global_et_drawable_padding">13dp</dimen> 
+  <dimen name="droi_account_sdk_global_inputbar_height">32dp</dimen> 
+  <dimen name="droi_account_sdk_global_input_font_size">13.3sp</dimen> 
+  <dimen name="droi_account_sdk_global_btn_text_size">13.3sp</dimen> 
+  <dimen name="droi_account_sdk_login_btn_margin_top">20dp</dimen> 
+  <dimen name="droi_account_sdk_login_anonym_margin_top">12dp</dimen> 
+  <dimen name="droi_account_sdk_login_new_margin_top">7dp</dimen> 
+  <dimen name="droi_account_sdk_login_new_padding_top">7dp</dimen> 
+  <dimen name="droi_account_sdk_register_btn_margin_top">30dp</dimen> 
+  <dimen name="droi_account_sdk_register_agreement_margin_top">23dp</dimen> 
+  <dimen name="droi_account_sdk_register_agreement_padding_top">7dp</dimen> 
+  <dimen name="droi_account_sdk_register_agreement_text_size">10.6sp</dimen> 
+  <dimen name="droi_account_sdk_register_phone_margin_top">50dp</dimen> 
+  <dimen name="droi_account_sdk_register_tip_margin_top">14dp</dimen> 
+  <dimen name="droi_account_sdk_anonym_tip_text_size">10.6sp</dimen> 
+  <dimen name="droi_account_sdk_anonym_tip_margin_top">18dp</dimen> 
+  <dimen name="droi_account_sdk_anonym_login_margin_top">37dp</dimen> 
+  <dimen name="droi_account_sdk_login_user_margin_top">17dp</dimen> 
+  <dimen name="droi_account_sdk_login_password_margin_top">8.7dp</dimen> 
+  <dimen name="droi_account_sdk_find_phone_margin_top">50dp</dimen> 
+  <dimen name="droi_account_sdk_find_btn_margin_top">30dp</dimen> 
+  <dimen name="droi_account_sdk_find_agreement_margin_top">23.3dp</dimen> 
+  <dimen name="droi_account_sdk_find_resend_tip_text_size">10.6sp</dimen> 
+  <dimen name="droi_account_sdk_find_resend_text_size">10.6sp</dimen> 
+  <dimen name="droi_account_sdk_find_code_margin_top">18.7dp</dimen> 
+  <dimen name="droi_account_sdk_find_resend_height">20dp</dimen> 
+  <dimen name="droi_account_sdk_find_complete_margin_top">26.6dp</dimen> 
+  <dimen name="droi_account_sdk_find_resend_width">85dp</dimen> 
+ <!--  横屏 
+  --> 
+  <dimen name="sdk_land_dialog_height">287dp</dimen> 
+  <dimen name="sdk_land_dialog_title_size">20dp</dimen> 
+  <dimen name="sdk_land_anonym_login_margin_top">27dp</dimen> 
+  <dimen name="sdk_land_common_btn_height">36.7dp</dimen> 
+  <dimen name="sdk_land_register_phone_margin_top">52dp</dimen> 
+  <dimen name="sdk_land_register_next_margin_top">34dp</dimen> 
+  <dimen name="sdk_land_register_agreement_margin_top">25dp</dimen> 
+  <dimen name="sdk_land_register_agreement_padding_top">7dp</dimen> 
+  <dimen name="sdk_land_register_tip_margin_top">20dp</dimen> 
+  <dimen name="sdk_land_register_code_margin_top">22.6dp</dimen> 
+  <dimen name="sdk_land_register_complete_margin_top">32.6dp</dimen> 
+  <dimen name="sdk_land_login_phone_margin_top">17dp</dimen> 
+  <dimen name="sdk_land_login_btn_margin_top">15.5dp</dimen> 
+  <dimen name="sdk_land_login_anonmy_margin_top">13dp</dimen> 
+  <dimen name="sdk_land_login_new_margin_top">5dp</dimen> 
+  <dimen name="sdk_land_login_new_padding_top">7dp</dimen> 
+	
+	
+	
+	
+</resources>

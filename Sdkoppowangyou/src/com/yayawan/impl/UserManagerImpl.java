@@ -49,13 +49,16 @@ public class UserManagerImpl implements YYWUserManager {
 	@Override
 	public void setRoleData(Activity arg0) {
 		// TODO Auto-generated method stub
-		
+
 	}
-	
+
 	@Override
-	public void setData(Activity paramActivity, String roleId, String roleName,String roleLevel, String zoneId, String zoneName, String roleCTime,String ext) {
+	public void setData(Activity paramActivity, String roleId, String roleName,
+			String roleLevel, String zoneId, String zoneName, String roleCTime,
+			String ext) {
 		// TODO Auto-generated method stub
-		YaYawanconstants.setData(paramActivity, roleId, roleName, roleLevel, zoneId, zoneName, roleCTime, ext);
+		YaYawanconstants.setData(paramActivity, roleId, roleName, roleLevel,
+				zoneId, zoneName, roleCTime, ext);
 	}
 
 }

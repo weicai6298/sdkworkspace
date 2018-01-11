@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    style="@style/droi_account_sdk_dialog_style"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:overScrollMode="never"
+    android:scrollbars="none"
+    android:clipToPadding="false">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:id="@+id/droi_account_sdk_back_arrow"
+                style="@style/droi_account_sdk_dialog_back_style"
+                android:onClick="onBack">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/droi_account_sdk_dialog_back" />
+
+            </LinearLayout>
+
+            <TextView
+                style="@style/droi_account_sdk_dialog_title_style"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/droi_account_sdk_bind_phone_droi_account_sdk_title_view" />
+
+
+            <AutoCompleteTextView
+                style="@style/droi_account_sdk_input_view_style"
+                android:id="@+id/droi_account_sdk_bind_username_edit"
+                android:hint="@string/droi_account_sdk_bind_phone_hint"
+                android:imeOptions="actionSend"
+                android:layout_marginTop="@dimen/droi_account_sdk_register_phone_margin_top"
+                android:drawableLeft="@drawable/droi_account_sdk_phone_left_img" />
+
+            <View
+                style="@style/droi_account_sdk_slipt_style" />
+
+            <Button
+                style="@style/droi_account_sdk_common_btn_style"
+                android:id="@+id/droi_account_sdk_bind_next"
+                android:text="@string/droi_account_sdk_register_next_btn"
+                android:layout_marginTop="@dimen/droi_account_sdk_register_btn_margin_top"/>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/droi_account_sdk_register_agreement_margin_top"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="7dp"
+                    android:textSize="@dimen/droi_account_sdk_register_agreement_text_size"
+                    android:text="@string/droi_account_sdk_register_user_secrecy_agreement"
+                    android:textColor="@color/droi_account_sdk_grey_text_color"
+                    android:paddingTop="@dimen/droi_account_sdk_register_agreement_padding_top"/>
+
+                <TextView
+                    android:id="@+id/droi_account_sdk_bind_policy_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="@dimen/droi_account_sdk_register_agreement_text_size"
+                    android:text="@string/droi_account_sdk_user_items_privacy_text"
+                    android:textColor="@color/droi_account_sdk_blue_text_color"
+                    android:paddingTop="@dimen/droi_account_sdk_register_agreement_padding_top"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="@dimen/droi_account_sdk_register_agreement_text_size"
+                    android:text="@string/droi_account_sdk_register_user_secrecy_agreement_last"
+                    android:textColor="@color/droi_account_sdk_grey_text_color"
+                    android:paddingTop="@dimen/droi_account_sdk_register_agreement_padding_top"/>
+
+            </LinearLayout>
+
+        </LinearLayout>
+    </RelativeLayout>
+</ScrollView>

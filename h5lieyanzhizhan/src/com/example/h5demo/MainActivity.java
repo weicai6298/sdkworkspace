@@ -7,7 +7,7 @@ import android.util.Log;
 import android.webkit.WebSettings;
 import android.webkit.WebView;
 import android.webkit.WebViewClient;
-import com.syhl.tulongll.R;
+import com.bjay.jzjt.huawei.R;
 import com.yayawan.main.Kgame;
 import com.yayawan.proxy.GameApi;
 

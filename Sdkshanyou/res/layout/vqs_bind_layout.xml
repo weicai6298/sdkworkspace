@@ -1,0 +1,277 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="285dp"
+    android:layout_height="350dp"
+    android:layout_gravity="center"
+    android:orientation="vertical"
+    tools:context="${relativePackage}.${activityClass}" >
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/vqs_login_title_bg" >
+
+        <View
+            android:layout_width="0.5dp"
+            android:layout_height="0.5dp"
+            android:layout_alignParentRight="true" />
+
+        <ImageView
+            android:id="@+id/vqs_bind_back_img"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:padding="10dp"
+            android:src="@drawable/vqs_main_back" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="绑定账号"
+            android:textColor="@color/vqs_white"
+            android:textSize="18sp" />
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/vqs_login_body_bg"
+        android:orientation="vertical"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp" >
+
+        <TextView
+            android:id="@+id/vqs_bind_userid_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            android:layout_marginTop="10dp"
+            android:text=""
+            android:textColor="@color/vqs_text_black"
+            android:textSize="16sp" />
+
+        <LinearLayout
+            android:id="@+id/vqs_bind_layout_username_ll"
+            android:layout_width="fill_parent"
+            android:layout_height="30dp"
+            android:layout_marginTop="5dp"
+            android:orientation="horizontal" >
+
+            <ImageView
+                android:layout_width="23dp"
+                android:layout_height="23dp"
+                android:layout_gravity="center_vertical"
+                android:layout_marginRight="5dp"
+                android:background="@drawable/vqs_userid_icon"
+                android:gravity="center_vertical" />
+
+            <View
+                android:layout_width="0.5dp"
+                android:layout_height="23dp"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp"
+                android:background="@color/vqs_gray" />
+
+            <EditText
+                android:id="@+id/vqs_bind_layout_username_et"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@color/vqs_white"
+                android:digits="@string/abc"
+                android:gravity="center_vertical"
+                android:hint="登录使用新的用户名(必填)"
+                android:maxLength="12"
+                android:singleLine="true"
+                android:textColor="@color/vqs_gray"
+                android:textSize="13dp" />
+
+            <TextView
+                android:id="@+id/vqs_bind_layout_username_userable_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="#FF0000"
+                android:textSize="12dp" />
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:layout_gravity="center_vertical"
+            android:layout_marginTop="5dp"
+            android:background="@color/vqs_gray" />
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="30dp"
+            android:layout_marginTop="5dp"
+            android:orientation="horizontal" >
+
+            <ImageView
+                android:layout_width="23dp"
+                android:layout_height="23dp"
+                android:layout_gravity="center_vertical"
+                android:layout_marginRight="5dp"
+                android:background="@drawable/vqs_phone_icon"
+                android:gravity="center_vertical" />
+
+            <View
+                android:layout_width="0.5dp"
+                android:layout_height="23dp"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp"
+                android:background="@color/vqs_gray" />
+
+            <EditText
+                android:id="@+id/vqs_bind_phonenumber_et"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@color/vqs_white"
+                android:gravity="center_vertical"
+                android:hint="请输入手机号码(必填)"
+                android:maxLength="11"
+                android:numeric="integer"
+                android:singleLine="true"
+                android:textColor="@color/vqs_gray"
+                android:textSize="13dp" />
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:layout_gravity="center_vertical"
+            android:layout_marginTop="5dp"
+            android:background="@color/vqs_gray" />
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="30dp"
+            android:layout_marginTop="15dp"
+            android:orientation="horizontal" >
+
+            <ImageView
+                android:layout_width="23dp"
+                android:layout_height="23dp"
+                android:layout_gravity="center_vertical"
+                android:layout_marginRight="5dp"
+                android:background="@drawable/vqs_msg_icon"
+                android:gravity="center_vertical" />
+
+            <View
+                android:layout_width="0.5dp"
+                android:layout_height="23dp"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp"
+                android:background="@color/vqs_gray" />
+
+            <EditText
+                android:id="@+id/vqs_bind_code_et"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@color/vqs_white"
+                android:gravity="center_vertical"
+                android:hint="请输入验证码(必填)"
+                android:maxLength="12"
+                android:numeric="integer"
+                android:singleLine="true"
+                android:textColor="@color/vqs_gray"
+                android:textSize="13dp" />
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" >
+
+                <ImageView
+                    android:id="@+id/vqs_bind_getcode_unclicked_img"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/vqs_getcode_unclicked"
+                    android:visibility="invisible" />
+
+                <ImageView
+                    android:id="@+id/vqs_bind_getcode_clicked_img"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/vqs_getcode_clicked" />
+
+                <TextView
+                    android:id="@+id/vqs_bind_code_time_tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/vqs_code_time"
+                    android:gravity="center"
+                    android:textColor="@color/vqs_text_gray"
+                    android:visibility="invisible" />
+            </RelativeLayout>
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:layout_gravity="center_vertical"
+            android:layout_marginTop="5dp"
+            android:background="@color/vqs_gray" />
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="30dp"
+            android:layout_marginTop="15dp"
+            android:orientation="horizontal" >
+
+            <ImageView
+                android:layout_width="23dp"
+                android:layout_height="23dp"
+                android:layout_gravity="center_vertical"
+                android:layout_marginRight="5dp"
+                android:background="@drawable/vqs_password_icon"
+                android:gravity="center_vertical" />
+
+            <View
+                android:layout_width="0.5dp"
+                android:layout_height="23dp"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp"
+                android:background="@color/vqs_gray" />
+
+            <EditText
+                android:id="@+id/vqs_bind_pw_et"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@color/vqs_white"
+                android:digits="@string/abc"
+                android:gravity="center_vertical"
+                android:hint="请输入新密码(必填)"
+                android:singleLine="true"
+                android:textColor="@color/vqs_gray"
+                android:textSize="13dp" />
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:layout_gravity="center_vertical"
+            android:layout_marginTop="5dp"
+            android:background="@color/vqs_gray" />
+
+        <TextView
+            android:id="@+id/vqs_bind_bind_tv"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="20dp"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/vqs_main_text_bg"
+            android:gravity="center"
+            android:text="确定"
+            android:textColor="@color/vqs_white"
+            android:textSize="16sp" />
+    </LinearLayout>
+
+</LinearLayout>

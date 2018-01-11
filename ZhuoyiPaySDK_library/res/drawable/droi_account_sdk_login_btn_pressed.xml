@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<shape xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <corners android:radius="@dimen/droi_account_sdk_global_shape_radius" />
+    <solid android:color="@color/droi_account_sdk_login_btn_press_color" />
+
+</shape>

@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/zzz_local_page_bg">
+
+    <include
+        android:id="@+id/zzz_title"
+        layout="@layout/zzz_second_title_layout"/>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/zzz_title">
+
+        <LinearLayout
+            android:id="@+id/zzz_gift_detail_content"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+
+            android:orientation="vertical"/>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/zzz_title_gradient_height"
+            android:background="@drawable/zzz_title_gradient"/>
+    </RelativeLayout>
+</RelativeLayout>

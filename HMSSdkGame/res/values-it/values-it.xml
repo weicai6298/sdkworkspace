@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="hms_game_floatwindow_click_fail_toast" priority="translator">"Attiva l\'avvio secondario per HiGame in Gestione telefono o tra le Impostazioni e riprova."</string>
+    <string name="hms_game_login_notice">"Benvenuto %1$s"</string>
+</resources>

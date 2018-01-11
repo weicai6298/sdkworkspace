@@ -1,0 +1,245 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:layout_gravity="center"
+    android:background="@color/vqs_gray_bg"
+    android:orientation="vertical"
+    tools:context="${relativePackage}.${activityClass}" >
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="50dp"
+        android:background="@color/vqs_main_color" >
+
+        <TextView
+            android:id="@+id/vqs_user_activity_back_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="fill_parent"
+            android:drawableLeft="@drawable/vqs_main_back"
+            android:drawablePadding="10dp"
+            android:gravity="center_vertical"
+            android:paddingLeft="10dp"
+            android:text="用户中心"
+            android:textColor="@color/vqs_white"
+            android:textSize="18sp" />
+    </LinearLayout>
+
+    <ScrollView
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:scrollbars="@null" >
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:background="@color/vqs_gray_bg"
+            android:orientation="vertical" >
+
+            <RelativeLayout
+                android:layout_width="fill_parent"
+                android:layout_height="100dp"
+                android:background="@color/vqs_white" >
+
+                <ImageView
+                    android:id="@+id/vqs_user_userhead_img"
+                    android:layout_width="60dp"
+                    android:layout_height="60dp"
+                    android:layout_alignParentLeft="true"
+                    android:layout_margin="20dp"
+                    android:src="@drawable/vqs_user_icon" />
+
+                <TextView
+                    android:id="@+id/vqs_user_userid_tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignTop="@id/vqs_user_userhead_img"
+                    android:layout_toRightOf="@id/vqs_user_userhead_img"
+                    android:text="账号:"
+                    android:textColor="@color/vqs_text_black" />
+
+                <TextView
+                    android:id="@+id/vqs_user_coin_tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignBottom="@id/vqs_user_userhead_img"
+                    android:layout_toRightOf="@id/vqs_user_userhead_img"
+                    android:text="0.00"
+                    android:textColor="@color/vqs_main_color" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignBottom="@id/vqs_user_coin_tv"
+                    android:layout_toRightOf="@id/vqs_user_coin_tv"
+                    android:text="平台币"
+                    android:textColor="@color/vqs_text_gray" />
+
+                <ImageView
+                    android:id="@+id/vqs_user_topay"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="10dp"
+                    android:src="@drawable/vqs_user_topay" />
+            </RelativeLayout>
+
+            <TextView
+                android:id="@+id/vqs_useractivity_mymsg_tv"
+                android:layout_width="fill_parent"
+                android:layout_height="50dp"
+                android:layout_marginTop="10dp"
+                android:background="@color/vqs_white"
+                android:drawableLeft="@drawable/vqs_mymsg"
+                android:drawablePadding="10dp"
+                android:gravity="center_vertical"
+                android:paddingLeft="10dp"
+                android:text="我的消息"
+                android:textColor="@color/vqs_text_black"
+                android:textSize="16sp" />
+
+            <RelativeLayout
+                android:id="@+id/vqs_useractivity_authentication_rl"
+                android:layout_width="fill_parent"
+                android:layout_height="50dp"
+                android:layout_marginTop="0.5dp"
+                android:background="@color/vqs_white" >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="50dp"
+                    android:layout_marginTop="0.5dp"
+                    android:background="@color/vqs_white"
+                    android:drawableLeft="@drawable/vqs_authentication"
+                    android:drawablePadding="10dp"
+                    android:gravity="center_vertical"
+                    android:paddingLeft="10dp"
+                    android:text="实名认证"
+                    android:textColor="@color/vqs_text_black"
+                    android:textSize="16sp" />
+
+                <TextView
+                    android:id="@+id/vqs_useractivity_authentication_tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="10dp"
+                    android:textColor="@color/vqs_main_color"
+                    android:textSize="14sp" />
+            </RelativeLayout>
+
+            <TextView
+                android:id="@+id/vqs_useractivity_changepw_tv"
+                android:layout_width="fill_parent"
+                android:layout_height="50dp"
+                android:layout_marginTop="10dp"
+                android:background="@color/vqs_white"
+                android:drawableLeft="@drawable/vqs_changepw"
+                android:drawablePadding="10dp"
+                android:gravity="center_vertical"
+                android:paddingLeft="10dp"
+                android:text="修改密码"
+                android:textColor="@color/vqs_text_black"
+                android:textSize="16sp" />
+
+            <LinearLayout
+                android:id="@+id/vqs_useractivity_bind_ll"
+                android:layout_width="fill_parent"
+                android:layout_height="50dp"
+                android:layout_marginTop="0.5dp"
+                android:background="@color/vqs_white"
+                android:orientation="horizontal" >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="fill_parent"
+                    android:background="@color/vqs_white"
+                    android:drawableLeft="@drawable/vqs_safe"
+                    android:drawablePadding="10dp"
+                    android:gravity="center_vertical"
+                    android:paddingLeft="10dp"
+                    android:text="账户安全"
+                    android:textColor="@color/vqs_text_black"
+                    android:textSize="16sp" />
+
+                <TextView
+                    android:id="@+id/vqs_useractivity_phonenumber"
+                    android:layout_width="0dp"
+                    android:layout_height="fill_parent"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:textColor="@color/vqs_text_gray"
+                    android:textSize="12sp" />
+
+                <TextView
+                    android:id="@+id/vqs_useractivity_bind_tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginRight="5dp"
+                    android:padding="5dp"
+                    android:textColor="@color/vqs_main_color"
+                    android:textSize="14sp" />
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/vqs_useractivity_consume_tv"
+                android:layout_width="fill_parent"
+                android:layout_height="50dp"
+                android:layout_marginTop="10dp"
+                android:background="@color/vqs_white"
+                android:drawableLeft="@drawable/vqs_consume"
+                android:drawablePadding="10dp"
+                android:gravity="center_vertical"
+                android:paddingLeft="10dp"
+                android:text="消费明细"
+                android:textColor="@color/vqs_text_black"
+                android:textSize="16sp" />
+
+            <TextView
+                android:id="@+id/vqs_useractivity_mygift_tv"
+                android:layout_width="fill_parent"
+                android:layout_height="50dp"
+                android:layout_marginTop="0.5dp"
+                android:background="@color/vqs_white"
+                android:drawableLeft="@drawable/vqs_mygift"
+                android:drawablePadding="10dp"
+                android:gravity="center_vertical"
+                android:paddingLeft="10dp"
+                android:text="礼包中心"
+                android:textColor="@color/vqs_text_black"
+                android:textSize="16sp" />
+
+            <TextView
+                android:id="@+id/vqs_useractivity_openmsg_tv"
+                android:layout_width="fill_parent"
+                android:layout_height="50dp"
+                android:layout_marginTop="0.5dp"
+                android:background="@color/vqs_white"
+                android:drawableLeft="@drawable/vqs_openmsg"
+                android:drawablePadding="10dp"
+                android:gravity="center_vertical"
+                android:paddingLeft="10dp"
+                android:text="开服信息"
+                android:textColor="@color/vqs_text_black"
+                android:textSize="16sp" />
+
+            <TextView
+                android:id="@+id/vqs_useractivity_userservice_tv"
+                android:layout_width="fill_parent"
+                android:layout_height="50dp"
+                android:layout_marginTop="10dp"
+                android:background="@color/vqs_white"
+                android:drawableLeft="@drawable/vqs_userservice"
+                android:drawablePadding="10dp"
+                android:gravity="center_vertical"
+                android:paddingLeft="10dp"
+                android:text="客服中心"
+                android:textColor="@color/vqs_text_black"
+                android:textSize="16sp" />
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>

@@ -21,7 +21,7 @@ public class ActivityStubImpl implements YYWActivityStub {
 		Handle.active_handler(paramActivity);
 		YaYawanconstants.inintsdk(paramActivity);
 		YaYawanconstants.onCreate(paramActivity);
-		
+
 	}
 
 	@Override
@@ -74,7 +74,7 @@ public class ActivityStubImpl implements YYWActivityStub {
 	@Override
 	public void initSdk(Activity arg0) {
 		// TODO Auto-generated method stub
-		
+
 	}
 
 	@Override

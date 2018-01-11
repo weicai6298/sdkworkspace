@@ -12,7 +12,6 @@ import java.net.URL;
 import java.util.List;
 import java.util.Map;
 
-
 import android.os.Handler;
 import android.os.Message;
 import android.util.Log;
@@ -80,14 +79,15 @@ public abstract class Yibuhttputils {
 
 		try {
 
-		//	System.out.println("**************开始http通讯**************");
-		//	System.out.println("**************调用的接口地址为**************"
-		//			+ adress_Http);
+			// System.out.println("**************开始http通讯**************");
+			// System.out.println("**************调用的接口地址为**************"
+			// + adress_Http);
 
-		//	System.out.println("**************请求发送的数据为**************" + strJson
-		//			+ "******发送的token是*****" + token);
-			if (method.equals("GET")||method.equals("DELETE")) {
-				int code = get(adress_Http, token,method);
+			// System.out.println("**************请求发送的数据为**************" +
+			// strJson
+			// + "******发送的token是*****" + token);
+			if (method.equals("GET") || method.equals("DELETE")) {
+				int code = get(adress_Http, token, method);
 				return code;
 			} else {
 
@@ -122,7 +122,7 @@ public abstract class Yibuhttputils {
 			}
 
 			int responseCode = connection.getResponseCode();
-		//	System.out.println("++++++++返回的状态吗+++++++++" + responseCode);
+			// System.out.println("++++++++返回的状态吗+++++++++" + responseCode);
 			// connection.getErrorStream();
 			if (responseCode == 400) {
 				reader = new BufferedReader(new InputStreamReader(
@@ -136,22 +136,22 @@ public abstract class Yibuhttputils {
 
 			String line = "";
 
-		//	System.out.println("Contents of post request start");
+			// System.out.println("Contents of post request start");
 
 			while ((line = reader.readLine()) != null) {
 				// line = new String(line.getBytes(), "utf-8");
 				returnLine += line;
 
-				//System.out.println(line);
+				// System.out.println(line);
 
 			}
 
-		//	System.out.println("Contents of post request ends");
+			// System.out.println("Contents of post request ends");
 
 			reader.close();
 			connection.disconnect();
-			//System.out.println("返回的状态吗" + connection.getResponseCode()
-			//		+ "========返回的结果的为========" + returnLine);
+			// System.out.println("返回的状态吗" + connection.getResponseCode()
+			// + "========返回的结果的为========" + returnLine);
 
 			return connection.getResponseCode();
 			// returnLine = Chulifanhuidata(returnLine, connection);
@@ -173,7 +173,7 @@ public abstract class Yibuhttputils {
 
 	}
 
-	public static int get(String url1, String token,String method) {
+	public static int get(String url1, String token, String method) {
 		HttpURLConnection conn = null;
 		try {
 			// String url1 = Myconstants.restfulbaseurl + "/restful/drivers/";
@@ -216,7 +216,7 @@ public abstract class Yibuhttputils {
 				// line = new String(line.getBytes(), "utf-8");
 				returnLine += line;
 
-				//System.out.println(line);
+				// System.out.println(line);
 
 			}
 
@@ -224,8 +224,8 @@ public abstract class Yibuhttputils {
 
 			reader.close();
 			conn.disconnect();
-		//	System.out.println("返回的状态吗" + conn.getResponseCode()
-			//		+ "========返回的结果的为========" + returnLine);
+			// System.out.println("返回的状态吗" + conn.getResponseCode()
+			// + "========返回的结果的为========" + returnLine);
 			return conn.getResponseCode();
 		} catch (Exception e) {
 			e.printStackTrace();

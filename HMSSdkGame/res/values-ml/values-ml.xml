@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="hms_game_floatwindow_click_fail_toast" priority="translator">"ഫോൺ മാനേജറിലെ അല്ലെങ്കിൽ ക്രമീകരണത്തിലെ HiGame-യ്ക്കായി സെക്കൻഡറി ലോഞ്ച് പ്രവർത്തനസജ്ജമാക്കുക."</string>
+    <string name="hms_game_login_notice">"സ്വാഗതം %1$s"</string>
+</resources>

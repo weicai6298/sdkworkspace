@@ -1,6 +1,19 @@
 package com.yayawan.impl;
 
+import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.List;
+
+import org.apache.http.HttpResponse;
+import org.apache.http.NameValuePair;
+import org.apache.http.client.ClientProtocolException;
+import org.apache.http.client.entity.UrlEncodedFormEntity;
+import org.apache.http.client.methods.HttpPost;
+import org.apache.http.impl.client.DefaultHttpClient;
+import org.apache.http.message.BasicNameValuePair;
+import org.apache.http.protocol.HTTP;
+import org.apache.http.util.EntityUtils;
+import org.json.JSONObject;
 
 import android.app.Activity;
 import android.content.Context;
@@ -17,8 +30,10 @@ import com.kkgame.utils.DeviceUtil;
 import com.kkgame.utils.Handle;
 import com.kkgame.utils.JSONUtil;
 import com.yayawan.callback.YYWExitCallback;
+import com.yayawan.callback.YYWUserCallBack;
 import com.yayawan.domain.YYWUser;
 import com.yayawan.main.YYWMain;
+import com.yayawan.proxy.CommonGameProxy;
 
 
 public class YaYawanconstants{
@@ -44,6 +59,9 @@ public class YaYawanconstants{
 		private static String sign; // 支付订单签名(CP私钥签名)
 		private static String resultOrder;// 支付回执订单
 		private static String resultSign;// 支付回执订单签名(聚乐公钥验签)
+		
+		private static String bufanuserId; // 用户ID
+		private static String bufantoken; // 用户ID
 	/**
 	 * 初始化sdk
 	 */
@@ -96,9 +114,7 @@ public class YaYawanconstants{
 	 * @param mactivity
 	 */
 	public static void pay(Activity mactivity, String morderid) {
-
 		Yayalog.loger("YaYawanconstantssdk支付");
-		
 		Order or = new Order();
 		// 注意：参数里，不要出现类似“1元=10000个金币”的字段，因为“=”原因，会导致微信支付校验失败
 		or.setAmount(YYWMain.mOrder.money+""); // 设置支付金额，单位分
@@ -107,30 +123,64 @@ public class YaYawanconstants{
 		or.setGameName(gamename); // 设置游戏名称
 		or.setGameOrderid(morderid); // 设置游戏订单号
 		or.setNotifyUrl(DeviceUtil.getGameInfo(mActivity, "callback")); // 设置支付通知
-		if(YYWMain.mOrder.goods.equals("yb601")){
-			YYWMain.mOrder.goods = "60钻石";
-		}else if(YYWMain.mOrder.goods.equals("yb3001")){
-			YYWMain.mOrder.goods = "300钻石";
-		}else if(YYWMain.mOrder.goods.equals("yb9801")){
-			YYWMain.mOrder.goods = "980钻石";
-		}else if(YYWMain.mOrder.goods.equals("yb19801")){
-			YYWMain.mOrder.goods = "1980钻石";
-		}else if(YYWMain.mOrder.goods.equals("yb32801")){
-			YYWMain.mOrder.goods = "3280钻石";
-		}else if(YYWMain.mOrder.goods.equals("yb64801")){
-			YYWMain.mOrder.goods = "6480钻石";
-		}
 		or.setProductDes(YYWMain.mOrder.goods); // 设置产品描述
 		or.setProductID("s_"+YYWMain.mOrder.goods); // 设置产品ID
 		or.setProductName(YYWMain.mOrder.goods); // 设置产品名称
 		or.setSession(session); // 设置用户session
 		or.setUsercode(userId); // 设置用户ID
 		order = or.toJsonOrder(); // 生成Json字符串订单
-		String privatekey = ""+DeviceUtil.getGameInfo(mactivity, "privatekey");
-		sign = RsaSign.sign(order, privatekey); // 签名
-		Log.i("test", "order = " + order);
-		Log.i("test", "sign = " + sign);
-		JoloSDK.startPay(mactivity, order, sign); // 启动支付
+		new Thread(new Runnable() {
+			@Override
+			public void run() {
+				// TODO Auto-generated method stub
+		try{
+		HttpPost httpPost = new HttpPost("https://api.sdk.75757.com/data/get_uid/");
+		Log.i("tag","httpPost="+httpPost);
+		bufanuserId =YYWMain.mUser.yywuid;;
+		 bufantoken = YYWMain.mUser.yywtoken;
+		Log.i("tag","bufanuserId="+bufanuserId);
+		Log.i("tag","bufantoken="+bufantoken);
+		 List<NameValuePair> params = new ArrayList<NameValuePair>(); 
+	        params.add(new BasicNameValuePair("xstr", order)); 
+	        params.add(new BasicNameValuePair("app_id", DeviceUtil.getAppid(mActivity))); 
+	        params.add(new BasicNameValuePair("uid", bufanuserId)); 
+	        params.add(new BasicNameValuePair("token ", bufantoken)); 
+	        Log.i("tag","params="+params);
+	        try { 
+	            // 设置httpPost请求参数 
+	        	Log.i("tag","httpPost1");
+//	        	HttpClient hc = new DefaultHttpClient();
+	            httpPost.setEntity(new UrlEncodedFormEntity(params, HTTP.UTF_8)); 
+	            Log.i("tag","httpPost2");
+//	            HttpGet hg = new HttpGet("http://gameapi.weisuiyu.com/");
+	            HttpResponse httpResponse = new DefaultHttpClient().execute(httpPost); 
+	            Log.i("tag","httpPost3");
+	            Log.i("tag","httpResponse.getStatusLine().getStatusCode()="+httpResponse.getStatusLine().getStatusCode());
+	            if(httpResponse.getStatusLine().getStatusCode() == 200){
+	            	String re = EntityUtils.toString(httpResponse.getEntity());
+//	            	Log.i("tag","re="+re);
+	            	JSONObject js = new JSONObject(re);
+//	            	Log.i("tag","js="+js);
+	            	sign = js.getString("sign");
+//	            	Log.i("test", "order = " + order);
+//	            	Log.i("test", "sign = " + sign);
+	            	JoloSDK.startPay(mActivity, order, sign); // 启动支付
+	            }
+	        }catch(ClientProtocolException e){
+	        	e.printStackTrace();
+	        }
+
+	}catch (Exception e) {
+
+	}
+			}
+		}).start();
+		
+//		String privatekey = ""+DeviceUtil.getGameInfo(mactivity, "privatekey");
+//		sign = RsaSign.sign(order, privatekey); // 签名
+//		Log.i("test", "order = " + order);
+//		Log.i("test", "sign = " + sign);
+//		JoloSDK.startPay(mactivity, order, sign); // 启动支付
 	}
 
 	/**
@@ -340,6 +390,7 @@ public class YaYawanconstants{
 			Log.i("tag","userName="+userName);
 			Log.i("tag","session="+session);
 			loginSuce(mActivity, userId, userName, session);
+			
 			// 用户帐号信息签名(聚乐公钥验签)，密文，CP对该密文用公钥进行校验
 			accountSign = data.getStringExtra(JoloSDK.ACCOUNT_SIGN);
 			// 用户帐号信息，明文，用户加密的字符串

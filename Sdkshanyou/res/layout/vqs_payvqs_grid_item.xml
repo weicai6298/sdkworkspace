@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:background="@drawable/vqs_vqspay_item_unclick_bg"
+     >
+  	<TextView
+  	   android:paddingTop="10dp"
+  	    android:layout_alignParentTop="true"
+  	    android:textSize="16sp"
+  	    android:id="@+id/vqs_vqspay_item_coin"
+  	    android:textColor="@color/vqs_white"
+  	    android:layout_width="wrap_content"
+  	    android:layout_height="wrap_content"
+  	    android:text="20平台币"
+  	    android:layout_centerHorizontal="true"
+  	    />
+  	<TextView
+  	    android:paddingBottom="10dp"
+  	    android:layout_alignParentBottom="true"
+  	    android:id="@+id/vqs_vqspay_item_price"
+  	    android:textSize="12sp"
+  	    android:layout_centerHorizontal="true"
+  	    android:layout_width="wrap_content"
+  	    android:layout_height="wrap_content"
+  	    android:textColor="@color/vqs_white"
+  	    android:text="售价 : 20元"
+  	    />
+</RelativeLayout>

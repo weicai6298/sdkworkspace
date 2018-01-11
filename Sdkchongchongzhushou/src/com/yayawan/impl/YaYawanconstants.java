@@ -292,7 +292,7 @@ public class YaYawanconstants {
 	}
 
 	public static void payFail() {
-		// 支付成功
+		// 支付失败
 		if (YYWMain.mPayCallBack != null) {
 			YYWMain.mPayCallBack.onPayFailed(null, null);
 		}
@@ -303,7 +303,6 @@ public class YaYawanconstants {
 
 			  public void onLoginOut() {
 				 ToastUtils.showLongToast(mActivity, "账号注销了~");
-//				 login(mActivity);
 				 mActivity.runOnUiThread(new Runnable() {
 					
 					@Override

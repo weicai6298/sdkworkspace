@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="290dp"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:background="@drawable/m4399_ope_common_alertdialog_bg"
+    android:paddingTop="25dp">
+
+    <TextView
+        android:id="@+id/alert_title"
+        android:paddingLeft="25dp"
+        android:paddingRight="25dp"
+        android:layout_marginBottom="25dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textColor="#666666"
+        android:textSize="16sp"/>
+
+
+
+    <View style="@style/m4399PerfectLine"/>
+
+
+    <include layout="@layout/m4399_ope_common_dialog_foot"/>
+
+</LinearLayout>

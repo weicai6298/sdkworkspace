@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="285.0dip"
+    android:layout_height="wrap_content"
+    android:layout_gravity="center"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/vqs_login_title_bg" >
+
+        <ImageView
+            android:id="@+id/vqs_gift_dialog_cancel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:padding="10.0dip"
+            android:src="@drawable/vqs_dialog_cancel" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="礼包详情"
+            android:textColor="@color/vqs_white"
+            android:textSize="16.0sp" />
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:background="@color/vqs_gray_bg"
+        android:orientation="vertical" >
+
+        <RelativeLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/vqs_white"
+            android:paddingTop="5.0dip" >
+
+            <ImageView
+                android:id="@+id/vqs_gift_dialog_icon_iv"
+                android:layout_width="80.0dip"
+                android:layout_height="80.0dip"
+                android:layout_alignParentLeft="true"
+                android:layout_margin="10.0dip" />
+
+            <TextView
+                android:id="@+id/vqs_gift_dialog_title_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignTop="@id/vqs_gift_dialog_icon_iv"
+                android:layout_toRightOf="@id/vqs_gift_dialog_icon_iv"
+                android:singleLine="true"
+                android:textColor="@color/vqs_text_black"
+                android:textSize="16.0sp" />
+
+            <TextView
+                android:id="@+id/vqs_gift_dialog_time_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_toRightOf="@id/vqs_gift_dialog_icon_iv"
+                android:singleLine="true"
+                android:textColor="@color/vqs_text_gray"
+                android:textSize="14.0sp" />
+
+            <TextView
+                android:id="@+id/vqs_gift_dialog_count_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBottom="@id/vqs_gift_dialog_icon_iv"
+                android:layout_toRightOf="@id/vqs_gift_dialog_icon_iv"
+                android:singleLine="true"
+                android:textColor="@color/vqs_text_gray"
+                android:textSize="14.0sp" />
+        </RelativeLayout>
+
+        <TextView
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="1.0dip"
+            android:background="@color/vqs_white"
+            android:paddingLeft="10.0dip"
+            android:paddingTop="5.0dip"
+            android:text="兑换详情"
+            android:textColor="@color/vqs_text_black"
+            android:textSize="16.0sp" />
+
+        <TextView
+            android:id="@+id/vqs_gift_dialog_content"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/vqs_white"
+            android:paddingBottom="10.0dip"
+            android:paddingLeft="10.0dip"
+            android:paddingTop="5.0dip"
+            android:textColor="@color/vqs_text_gray"
+            android:textSize="14.0sp" />
+
+        <TextView
+            android:id="@+id/vqs_gift_dialog_code_tv"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="20.0dip"
+            android:layout_marginTop="20.0dip"
+            android:gravity="center"
+            android:singleLine="true"
+            android:textColor="@color/vqs_main_color"
+            android:textSize="14.0sp" />
+
+        <TextView
+            android:id="@+id/vqs_gift_dialog_copy_tv"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="20.0dip"
+            android:layout_marginLeft="10.0dip"
+            android:layout_marginRight="10.0dip"
+            android:background="@drawable/vqs_main_text_bg"
+            android:gravity="center"
+            android:text="复制"
+            android:textColor="@color/vqs_white"
+            android:textSize="16.0sp" />
+    </LinearLayout>
+
+</LinearLayout>

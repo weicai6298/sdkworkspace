@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/white"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/droi_account_sdk_title_bar_height"
+        android:orientation="horizontal">
+
+        <RelativeLayout
+            android:id="@+id/droi_account_sdk_privacy_title_icon"
+            android:layout_width="@dimen/droi_account_sdk_title_bar_height"
+            android:layout_height="@dimen/droi_account_sdk_title_bar_height"
+            android:onClick="onBack"
+            android:layout_alignParentLeft="true">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:background="@drawable/droi_account_sdk_dialog_back" />
+
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/droi_account_sdk_privacy_droi_account_sdk_title_view"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:gravity="center"
+            android:layout_toRightOf="@+id/droi_account_sdk_back_arrow"
+            android:text="@string/droi_account_sdk_privacy_title"
+            android:textColor="@color/droi_account_sdk_topbar_text_color"
+            android:textSize="@dimen/droi_account_sdk_title_bar_font_size" />
+    </RelativeLayout>
+
+    <WebView
+        android:id="@+id/droi_account_sdk_privacy_webview"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+</LinearLayout>

@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.yayawan.sdktemplate"
+    android:versionCode="1"
+    android:versionName="1.0" >
+
+    <uses-sdk
+        android:minSdkVersion="8"
+        android:targetSdkVersion="19" />
+
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
+			<uses-permission android:name="android.permission.ACCESS_MOCK_LOCATION"/>
+			<uses-permission android:name="android.permission.INTERNET"/>
+			<uses-permission android:name="android.permission.READ_PHONE_STATE"/>
+			<uses-permission android:name="android.permission.ACCESS_WIFI_STATE"/>
+			<uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+			<uses-permission android:name="android.permission.MOUNT_UNMOUNT_FILESYSTEMS"/>
+			<uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
+			<uses-permission android:name="android.permission.ACCESS_FINE_LOCATION"/>
+			<uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW"/>
+			<uses-permission android:name="android.permission.GET_TASKS"/>
+			<uses-permission android:name="android.permission.WAKE_LOCK"/>
+			<uses-permission android:name="android.permission.CHANGE_NETWORK_STATE"/>
+    
+
+    <application
+        android:name="com.yayawan.impl.YYApplication"
+        android:allowBackup="true"
+        android:theme="@android:style/Theme.NoTitleBar.Fullscreen" >
+        
+        <activity
+            android:name="com.yayawan.sdktemplate.MainActivity"
+            android:label="app_name" 
+            >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+      
+        
+      <!-- 手游互联配置 -->
+     	 <meta-data
+            android:name="app_id"
+            android:value="kk3678585224" />
+        <meta-data
+            android:name="isLandscape"
+            android:value="true" />
+        
+  <meta-data
+            android:name="callback"
+            android:value="https://api.sdk.75757.com/pay/notify/3678585224/" />       
+        
+         <!-- SNOWFISH SDK -->
+       
+        
+        <service
+            android:name="com.snowfish.a.a.s.ABGSvc"
+            android:enabled="true"
+            android:process="com.snowfish.a.a.bg" >
+            <intent-filter>
+                <action android:name="com.snowfish.a.a.s.ABGSvc" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </service>
+        
+        <meta-data
+            android:name="com.snowfish.appid"
+            android:value="{FAE96C40-FACF37C2}" >
+        </meta-data>
+        
+        <meta-data
+            android:name="com.snowfish.channelid"
+            android:value="{4ff036a1-3254eafe}" >
+        </meta-data>
+        
+        <meta-data
+            android:name="com.snowfish.customer"
+            android:value="SNOWFISH" >
+        </meta-data>
+        <meta-data
+            android:name="com.snowfish.channel"
+            android:value="SNOWFISH" >
+        </meta-data>
+        <meta-data
+            android:name="com.snowfish.sdk.version"
+            android:value="1" >
+        </meta-data>
+        <!-- SNOWFISH SDK -->
+    
+    </application>
+
+</manifest>
+

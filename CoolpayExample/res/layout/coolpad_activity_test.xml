@@ -1,0 +1,103 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical" >
+
+        <Button
+            android:id="@+id/test_btn"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:visibility="gone"
+            android:text="切换应用" />
+
+        <Button
+            android:id="@+id/test0_btn"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="支付0.01元" />
+
+        <Button
+            android:id="@+id/test1_btn"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="支付0.1元" />
+
+        <Button
+            android:id="@+id/test2_btn"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="支付1元" />
+
+        <EditText
+            android:id="@+id/price_et"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:maxLength="8"
+            android:numeric="integer"
+            android:text="1" />
+
+        <Button
+            android:id="@+id/test3_btn"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="CP传入价格" />
+
+        <Button
+            android:id="@+id/login_btn"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="login" />
+
+        <Button
+            android:id="@+id/logout_btn"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="logout" />
+
+        <Button
+            android:id="@+id/pay_style"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="全页面" />
+
+        <Button
+            android:id="@+id/pay_orientation"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="竖屏" />
+    </LinearLayout>
+
+    <RelativeLayout
+        android:id="@+id/coolpad_demo_shadow"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:alpha="0.5"
+        android:clickable="true"
+        android:visibility="gone"
+        android:background="@android:color/black" >
+
+        <ProgressBar
+            android:id="@+id/coolpad_demo_pb"
+            android:layout_width="45dp"
+            android:layout_height="45dp"
+            android:layout_centerInParent="true" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/coolpad_demo_pb"
+            android:layout_centerInParent="true"
+            android:text="支付中..."
+            android:textColor="@android:color/white"
+            android:textSize="16sp" />
+    </RelativeLayout>
+
+</RelativeLayout>

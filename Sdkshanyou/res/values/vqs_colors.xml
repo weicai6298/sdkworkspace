@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="vqs_text_gray">#999999</color>
+    <color name="vqs_white">#ffffff</color>
+    <color name="vqs_main_color">#FD8526</color>
+    <color name="vqs_gray">#8d8d8d</color>
+    <color name="vqs_gray_bg">#F0F0F0</color>
+    <color name="vqs_black">#000000</color>
+    <color name="vqs_black_tran">#88000000</color>
+    <color name="vqs_text_black">#676767</color>
+    <color name="vqs_text_red">#F75455</color>
+    <color name="vqs_green_bg">#1ECEB3</color>
+</resources>

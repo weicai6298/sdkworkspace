@@ -22,10 +22,11 @@ import com.nearme.game.sdk.callback.GameExitCallback;
 import com.nearme.game.sdk.common.model.ApiResult;
 import com.nearme.game.sdk.common.model.biz.PayInfo;
 import com.nearme.game.sdk.common.model.biz.ReportUserGameInfoParam;
+import com.umeng.analytics.MobclickAgent;
+import com.umeng.analytics.game.UMGameAgent;
 import com.yayawan.callback.YYWExitCallback;
 import com.yayawan.domain.YYWUser;
 import com.yayawan.main.YYWMain;
-
 
 public class YaYawanconstants {
 
@@ -33,14 +34,24 @@ public class YaYawanconstants {
 
 	private static Activity mActivity;
 
-	private static boolean isinit=false;
+	private static boolean isinit = false;
+	
+	private static int isyoumeng;
+	
+	private static String uid;
+
 	/**
 	 * 初始化sdk
 	 */
 	public static void inintsdk(Activity mactivity) {
 		mActivity = mactivity;
 		Yayalog.loger("YaYawanconstants初始化sdk");
-
+		String youmeng = DeviceUtil.getGameInfo(mActivity, "isyoumeng");
+		isyoumeng = Integer.parseInt(youmeng);
+		if(isyoumeng == 1){
+			UMGameAgent.setDebugMode(true);
+			UMGameAgent.init(mActivity);
+		}
 	}
 
 	/**
@@ -48,12 +59,13 @@ public class YaYawanconstants {
 	 */
 	public static void applicationInit(Context applicationContext) {
 		// TODO Auto-generated method stub
-		Log.i("tag","application初始化");
-		String appSecret = ""+DeviceUtil.getGameInfo(applicationContext, "appSecret");
-		Log.i("tag","appSecret="+appSecret);
+		Log.i("tag", "application初始化");
+		String appSecret = ""
+				+ DeviceUtil.getGameInfo(applicationContext, "appSecret");
+		Log.i("tag", "appSecret=" + appSecret);
 		GameCenterSDK.init(appSecret, applicationContext);
-		isinit = true ;
-		Log.i("tag","oppo初始化结束");
+		isinit = true;
+		Log.i("tag", "oppo初始化结束");
 	}
 
 	/**
@@ -61,8 +73,8 @@ public class YaYawanconstants {
 	 */
 	public static void login(final Activity mactivity) {
 		Yayalog.loger("YaYawanconstantssdk登录");
-		if(isinit){
-			Log.i("tag","登录-start");
+		if (isinit) {
+			Log.i("tag", "登录-start");
 			GameCenterSDK.getInstance().doLogin(mactivity, new ApiCallback() {
 
 				@Override
@@ -74,18 +86,17 @@ public class YaYawanconstants {
 				@Override
 				public void onFailure(String resultMsg, int resultCode) {
 					// 登录失败
-					Log.i("tag","登录失败");
+					Log.i("tag", "登录失败");
 					loginFail();
-					Log.i("tag","登录失败1");
+					Log.i("tag", "登录失败1");
 				}
 			});
-		}else {
+		} else {
 			inintsdk(mactivity);
 		}
 	}
 
-
-	//获取Token和SsoId
+	// 获取Token和SsoId
 	public static void doGetTokenAndSsoid() {
 		GameCenterSDK.getInstance().doGetTokenAndSsoid(new ApiCallback() {
 
@@ -95,21 +106,22 @@ public class YaYawanconstants {
 					JSONObject json = new JSONObject(resultMsg);
 					String token = json.getString("token");
 					String ssoid = json.getString("ssoid");
+					uid = ssoid;
 					String stoken = null;
 					try {
-						stoken = URLEncoder.encode(token,"UTF-8");
+						stoken = URLEncoder.encode(token, "UTF-8");
 					} catch (UnsupportedEncodingException e) {
 						// TODO Auto-generated catch block
 						e.printStackTrace();
 					}
-					Log.i("tag","token="+token);
-					Log.i("tag","stoken="+stoken);
-					Log.i("tag","ssoid="+ssoid);
-					Log.i("tag","登录成功");
+					Log.i("tag", "token=" + token);
+					Log.i("tag", "stoken=" + stoken);
+					Log.i("tag", "ssoid=" + ssoid);
+					Log.i("tag", "登录成功");
 					loginSuce(mActivity, ssoid, ssoid, stoken);
-					//					getVerifiedInfo();
-					Log.i("tag","登录成功1");
-					//					doGetUserInfoByCpClient(token, ssoid);
+					// getVerifiedInfo();
+					Log.i("tag", "登录成功1");
+					// doGetUserInfoByCpClient(token, ssoid);
 				} catch (JSONException e) {
 					e.printStackTrace();
 				}
@@ -121,6 +133,7 @@ public class YaYawanconstants {
 			}
 		});
 	}
+
 	/**
 	 * 支付
 	 * 
@@ -129,29 +142,30 @@ public class YaYawanconstants {
 	public static void pay(Activity mactivity, String morderid) {
 
 		Yayalog.loger("YaYawanconstantssdk支付");
-		int amount = Integer.parseInt(YYWMain.mOrder.money+""); // 支付金额，单位分
+		int amount = Integer.parseInt(YYWMain.mOrder.money + ""); // 支付金额，单位分
 		PayInfo payInfo = new PayInfo(morderid, "", amount);
-		//		payInfo.setProductDesc("商品描述");
+		// payInfo.setProductDesc("商品描述");
 		payInfo.setProductName(YYWMain.mOrder.goods);
-		payInfo.setCallbackUrl("https://api.sdk.75757.com/pay/notify/2462235735/");
-		GameCenterSDK.getInstance().doPay(mactivity, payInfo, new ApiCallback() {
+		payInfo.setCallbackUrl(DeviceUtil.getGameInfo(mActivity, "callback"));
+		GameCenterSDK.getInstance().doPay(mactivity, payInfo,
+				new ApiCallback() {
 
-			@Override
-			public void onSuccess(String arg0) {
-				// TODO Auto-generated method stub
-				Log.i("tag","支付成功");
-				paySuce();
-				Log.i("tag","支付成功1");
-			}
+					@Override
+					public void onSuccess(String arg0) {
+						// TODO Auto-generated method stub
+						Log.i("tag", "支付成功");
+						paySuce();
+						Log.i("tag", "支付成功1");
+					}
 
-			@Override
-			public void onFailure(String arg0, int arg1) {
-				// TODO Auto-generated method stub
-				Log.i("tag","支付失败");
-				payFail();
-				Log.i("tag","支付失败1");
-			}
-		});
+					@Override
+					public void onFailure(String arg0, int arg1) {
+						// TODO Auto-generated method stub
+						Log.i("tag", "支付失败");
+						payFail();
+						Log.i("tag", "支付失败1");
+					}
+				});
 	}
 
 	/**
@@ -163,21 +177,29 @@ public class YaYawanconstants {
 	public static void exit(Activity paramActivity,
 			final YYWExitCallback callback) {
 		Yayalog.loger("YaYawanconstantssdk退出");
-		GameCenterSDK.getInstance().onExit(paramActivity, new GameExitCallback() {
+		GameCenterSDK.getInstance().onExit(paramActivity,
+				new GameExitCallback() {
 
-			@Override
-			public void exitGame() {
-				// TODO Auto-generated method stub
-				mActivity.runOnUiThread(new Runnable() {
-					
 					@Override
-					public void run() {
+					public void exitGame() {
 						// TODO Auto-generated method stub
-						callback.onExit();
+						mActivity.runOnUiThread(new Runnable() {
+
+							@Override
+							public void run() {
+								// TODO Auto-generated method stub
+								if(isyoumeng == 1){
+									Log.i("tag", "友盟退出");
+									MobclickAgent.onProfileSignOff();
+									MobclickAgent.onKillProcess(mActivity);
+								}
+//								callback.onExit();
+								mActivity.finish();
+								System.exit(0);
+							}
+						});
 					}
 				});
-			}
-		});
 
 		//
 
@@ -188,31 +210,48 @@ public class YaYawanconstants {
 	 * 
 	 * @param arg0
 	 */
-	public static void setData(Activity paramActivity, String roleId, String roleName,String roleLevel, String zoneId, String zoneName, String roleCTime,String ext){
+	public static void setData(Activity paramActivity, String roleId,
+			String roleName, String roleLevel, String zoneId, String zoneName,
+			String roleCTime, String ext) {
 		// TODO Auto-generated method stub
 		Yayalog.loger("YaYawanconstants设置角色信息");
-		if (Integer.parseInt(ext) == 1){
-			GameCenterSDK.getInstance().doReportUserGameInfoData(new ReportUserGameInfoParam("3574641", zoneId, roleName, roleLevel),new ApiCallback() {
-				@Override
-				public void onSuccess(String resultMsg) {
-					// success
-				}
-				@Override
-				public void onFailure(String resultMsg, int resultCode) {
-					// failure
-				}
-			});
+		if (Integer.parseInt(ext) == 1) {
+			if(isyoumeng ==1){
+				Log.i("tag", "友盟进入游戏");
+				MobclickAgent.onProfileSignIn(uid);
+			}
+			
+			GameCenterSDK.getInstance().doReportUserGameInfoData(
+					new ReportUserGameInfoParam("3574641", zoneId, roleName,
+							roleLevel), new ApiCallback() {
+						@Override
+						public void onSuccess(String resultMsg) {
+							// success
+						}
+
+						@Override
+						public void onFailure(String resultMsg, int resultCode) {
+							// failure
+						}
+					});
 		}
 
 	}
+
 	public static void onResume(Activity paramActivity) {
 		// TODO Auto-generated method stub
 		GameCenterSDK.getInstance().onResume(paramActivity);
+		if(isyoumeng == 1){
+			MobclickAgent.onResume(paramActivity);
+		}
 	}
 
 	public static void onPause(Activity paramActivity) {
 		// TODO Auto-generated method stub
 		GameCenterSDK.getInstance().onPause();
+		if(isyoumeng == 1){
+			MobclickAgent.onPause(paramActivity);
+		}
 	}
 
 	public static void onDestroy(Activity paramActivity) {
@@ -249,8 +288,6 @@ public class YaYawanconstants {
 		// TODO Auto-generated method stub
 
 	}
-
-
 
 	/**
 	 * 登录成功调用
@@ -289,7 +326,6 @@ public class YaYawanconstants {
 		}
 	}
 
-
 	/**
 	 * 登出
 	 */
@@ -299,6 +335,7 @@ public class YaYawanconstants {
 
 		}
 	}
+
 	/**
 	 * 登录失败
 	 */
@@ -326,10 +363,5 @@ public class YaYawanconstants {
 			YYWMain.mPayCallBack.onPayFailed(null, null);
 		}
 	}
-
-
-
-
-
 
 }

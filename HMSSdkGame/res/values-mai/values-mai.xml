@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="hms_game_floatwindow_click_fail_toast" priority="translator">"फोन प्रबंधक वा सेटिंग सबमे HiGame केर लेल द्वितीयक लांच केर समर्थ करू आ पुनः प्रयास करू।"</string>
+    <string name="hms_game_login_notice">"%1$s स्वागत अछि"</string>
+</resources>

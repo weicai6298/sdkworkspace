@@ -1,0 +1,319 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.yayawan.sdktemplate"
+    android:versionCode="1"
+    android:versionName="1.0" >
+
+    <uses-sdk
+        android:minSdkVersion="14"
+        android:targetSdkVersion="21" />
+
+    
+     <!-- 开始添加Amigo Play SDK 需要的权限,开发者重点关注，直接复制即可，不要用手打，避免出错 -->
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
+    <uses-permission android:name="android.permission.GET_TASKS"/>
+    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE"/>
+    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE"/>
+    <uses-permission android:name="android.permission.READ_PHONE_STATE"/>
+    <uses-permission android:name="android.permission.INSTALL_PACKAGES"/>
+    <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW"/>
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION"/>
+    <uses-permission android:name="android.permission.WAKE_LOCK"/>
+    <uses-permission android:name="android.permission.VIBRATE"/>
+    <uses-permission android:name="android.permission.DOWNLOAD_WITHOUT_NOTIFICATION"/>
+    
+
+    <application
+        android:name="com.yayawan.impl.YYApplication"
+        android:allowBackup="true"
+        android:theme="@android:style/Theme.NoTitleBar.Fullscreen" >
+        <activity
+            android:name="com.yayawan.sdktemplate.MainActivity"
+            android:label="app_name" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+      
+        
+      <!-- 手游互联配置 -->
+     	 <meta-data
+            android:name="app_id"
+            android:value="kk2138745420" />
+        <meta-data
+            android:name="isLandscape"
+            android:value="true" />
+        
+        <meta-data
+            android:name="apikey"
+            android:value="F86D51A2A12A4CB28DE92C1FEB59D1DC" />
+        
+         <!-- Amigo Play SDK 组件声明开始 -->
+        <service android:name="com.gionee.gsp.floatingwindow.FloatingWindowService">
+            <intent-filter>
+                <action android:name="com.gionee.pay.ic.FloatingWindowService"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+            </intent-filter>
+        </service>
+
+        <activity
+            android:name="com.gionee.gamesdk.business.welfare.gift.GiftDetailActivity"
+            android:exported="false"
+			android:configChanges="orientation|screenSize"
+            android:theme="@style/zzz_activity_dialog">
+        </activity>
+        <activity
+            android:name="com.gionee.gamesdk.business.welfare.event.GameHallEventDetailActivity"
+            android:exported="false"
+			android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.NoTitleBar">
+        </activity>
+        <activity
+            android:name="com.gionee.gamesdk.business.welfare.event.SdkEventDetailActivity"
+            android:exported="false"
+			android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.NoTitleBar">
+            <intent-filter>
+                <action android:name="amigoplay.intent.action.EVENT.DETAIL"/>
+
+                <category android:name="android.intent.category.DEFAULT"/>
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.gionee.gamesdk.business.core.WebViewActivity"
+            android:exported="false"
+			android:configChanges="keyboardHidden|orientation|screenSize"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.DeviceDefault.Light.NoActionBar">
+            <intent-filter>
+                <action android:name="amigoplay.intent.action.WEBVIEW"/>
+
+                <category android:name="android.intent.category.DEFAULT"/>
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.gionee.gamesdk.business.welfare.gameticket.GrabGameTicketActivity"
+            android:exported="false"
+			android:configChanges="orientation|screenSize"
+            android:theme="@style/zzz_activity_dialog">
+            <intent-filter>
+                <action android:name="amigoplay.intent.action.EVENT_LIST"/>
+
+                <category android:name="android.intent.category.DEFAULT"/>
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.gionee.gamesdk.business.welfare.gameticket.MoreGameTicketActivity"
+            android:exported="false"
+			android:configChanges="orientation|screenSize"
+            android:theme="@style/zzz_activity_dialog">
+            <intent-filter>
+                <action android:name="com.gionee.pay.ic.MORE_GAME_TICKET"/>
+
+                <category android:name="android.intent.category.DEFAULT"/>
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.gionee.gamesdk.business.usercenter.daily_sign.DailySignActivity"
+            android:exported="false"
+			android:configChanges="keyboardHidden|orientation|screenSize"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.DeviceDefault.Light.NoActionBar"/>
+
+        <activity
+            android:name="com.gionee.gamesdk.business.core.lotterydraw.LotteryDrawDetailActivity"
+            android:exported="false"
+			android:configChanges="keyboardHidden|orientation|screenSize"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.DeviceDefault.Light.NoActionBar">
+            <intent-filter>
+                <action android:name="amigoplay.intent.action.LOTTERY_DRAW_DETAIL"/>
+
+                <category android:name="android.intent.category.DEFAULT"/>
+            </intent-filter>
+        </activity>
+
+        <service android:name="com.gionee.gamesdk.business.wash.NetCheckerService"/>
+
+        <activity
+            android:name="com.gionee.gamesdk.business.usercenter.billboard.CostBillboardActivity"
+            android:exported="false"
+			android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.DeviceDefault.Light.NoActionBar">
+            <intent-filter>
+                <action android:name="amigoplay.intent.action.COST_BILLBOARD"/>
+
+                <category android:name="android.intent.category.DEFAULT"/>
+            </intent-filter>
+        </activity>
+        <activity android:name="com.gionee.gamesdk.business.welfare.gift.GiftActivity"
+                  android:exported="false"
+			android:configChanges="orientation|screenSize"
+                  android:theme="@style/zzz_activity_dialog">
+            <intent-filter>
+                <action android:name="amigoplay.intent.action.GIFT"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+            </intent-filter>
+        </activity>
+
+        <activity android:name="com.gionee.gamesdk.business.wallet.acoin.MyAcoinDetailActivity"
+                  android:exported="false"
+				  android:configChanges="orientation|screenSize"
+                  android:theme="@style/zzz_activity_dialog">
+            <intent-filter>
+                <action android:name="amigoplay.intent.action.GIFT"/>
+
+                <category android:name="android.intent.category.DEFAULT"/>
+            </intent-filter>
+        </activity>
+
+        <activity android:name="com.gionee.gamesdk.business.usercenter.MineActivity"
+                  android:exported="false"
+			      android:configChanges="orientation|screenSize"
+                  android:theme="@style/zzz_activity_dialog">
+            <intent-filter>
+                <action android:name="amigoplay.intent.action.MY_CENTER"/>
+
+                <category android:name="android.intent.category.DEFAULT"/>
+            </intent-filter>
+        </activity>
+
+        <activity
+            android:name="com.gionee.gamesdk.business.welfare.gameticket.GameTicketsActivity"
+            android:exported="false"
+			android:configChanges="orientation|screenSize"
+            android:theme="@style/zzz_activity_dialog">
+            <intent-filter>
+                <action android:name="com.gionee.pay.ic.GAME_TICKETS"/>
+
+                <category android:name="android.intent.category.DEFAULT"/>
+            </intent-filter>
+        </activity>
+        <activity android:name="com.gionee.gamesdk.business.help.CustomerServiceActivity"
+                  android:exported="false"
+			      android:configChanges="orientation|screenSize"
+                  android:theme="@style/zzz_activity_dialog">
+            <intent-filter>
+                <action android:name="com.gionee.pay.ic.CUSTOMER_SERVICE"/>
+
+                <category android:name="android.intent.category.DEFAULT"/>
+            </intent-filter>
+        </activity>
+        <activity android:name="com.gionee.gamesdk.business.message.MyMessageActivity"
+                  android:exported="false"
+			      android:configChanges="orientation|screenSize"
+                  android:theme="@style/zzz_activity_dialog">
+            <intent-filter>
+                <action android:name="com.gionee.pay.ic.MESSAGE"/>
+
+                <category android:name="android.intent.category.DEFAULT"/>
+            </intent-filter>
+        </activity>
+        <activity android:name="com.gionee.gamesdk.business.welfare.WelfareActivity"
+                  android:exported="false"
+			      android:configChanges="orientation|screenSize"
+                  android:theme="@style/zzz_activity_dialog">
+            <intent-filter>
+                <action android:name="com.gionee.pay.ic.WELFARE"/>
+
+                <category android:name="android.intent.category.DEFAULT"/>
+            </intent-filter>
+        </activity>
+        <activity android:name="com.gionee.gamesdk.business.welfare.event.EventActivity"
+                  android:exported="false"
+			      android:configChanges="orientation|screenSize"
+                  android:theme="@style/zzz_activity_dialog">
+            <intent-filter>
+                <action android:name="amigoplay.intent.action.EVENT_LIST"/>
+
+                <category android:name="android.intent.category.DEFAULT"/>
+            </intent-filter>
+        </activity>
+
+        <activity android:name="com.gionee.gamesdk.business.forum.ForumActivity"
+                  android:exported="false"
+			      android:screenOrientation="portrait"
+                  android:theme="@android:style/Theme.DeviceDefault.Light.NoActionBar">
+            <intent-filter>
+                <action android:name="amigoplay.intent.action.FORUM"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+            </intent-filter>
+        </activity>
+        <activity android:name="com.gionee.gamesdk.business.welfareguide.WelfareGuideActivity"
+                  android:exported="false"
+			      android:configChanges="orientation|screenSize"
+                  android:theme="@style/zzz_activity_dialog">
+            <intent-filter>
+                <action android:name="amigoplay.intent.action.WELFARE_GUIDE"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+            </intent-filter>
+        </activity>
+      
+        <!--GSP service -->
+        <activity
+            android:name="com.gionee.gsp.service.activity.AssistActivity"
+            android:configChanges="mcc|mnc|orientation|screenSize"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar.Fullscreen"/>
+        <!--GSP service end -->
+        <!-- account SDK -->
+        <activity
+            android:name="com.gionee.account.sdk.activity.AssistActivity"
+            android:configChanges="mcc|mnc|orientation|screenSize"
+            android:exported="true"
+            android:screenOrientation="unspecified"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar">
+            <meta-data
+                android:name="version"
+                android:value="3.0.0">
+            </meta-data>
+        </activity>
+        <activity
+            android:name="com.gionee.account.sdk.core.activity.SDKAccountChangeActivity"
+            android:configChanges="mcc|mnc|orientation|screenSize"
+            android:launchMode="singleTop"
+            android:screenOrientation="unspecified"
+            android:theme="@style/gn_account_Theme.AndroidDevelopers.white"
+            android:windowSoftInputMode="adjustPan">
+        </activity>
+        <activity
+            android:name="com.gionee.account.sdk.core.activity.SDKAuthorizationActivity"
+            android:configChanges="mcc|mnc|screenSize"
+            android:launchMode="singleTop"
+            android:screenOrientation="unspecified"
+            android:theme="@style/gn_account_Theme.AndroidDevelopers.white"
+            android:windowSoftInputMode="adjustPan">
+        </activity>
+        <activity
+            android:name="com.gionee.account.sdk.core.activity.SDKLoginActivity"
+            android:configChanges="mcc|mnc|orientation|screenSize"
+            android:launchMode="singleTop"
+            android:screenOrientation="unspecified"
+            android:theme="@style/gn_account_sdk_Theme.FloatActivity"
+            android:windowSoftInputMode="adjustPan">
+        </activity>
+        <activity
+            android:name="com.gionee.account.sdk.core.activity.SDKLoginingActivity"
+            android:configChanges="mcc|mnc|orientation|screenSize"
+            android:launchMode="singleTop"
+            android:screenOrientation="unspecified"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar"
+            android:windowSoftInputMode="adjustPan">
+        </activity>
+
+        <service android:name="com.gionee.account.AccountService">
+            <intent-filter>
+                <action android:name="com.gionee.account.aidl.GNAccountInterface"/>
+            </intent-filter>
+        </service>
+        <!--account sdk end -->
+        <!-- Amigo Play SDK 组件声明结束 -->
+    
+    </application>
+
+</manifest>
+

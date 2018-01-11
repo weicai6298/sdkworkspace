@@ -49,7 +49,7 @@ public class AnimationImpl implements YYWAnimation {
 
 			@Override
 			public void run() {
-//				new LogoWindow(paramActivity);
+				// new LogoWindow(paramActivity);
 				YYWMain.mAnimCallBack.onAnimSuccess("success", "");
 			}
 		});
@@ -106,7 +106,7 @@ class LogoWindow {
 	private void createView() {
 
 		iv = new ImageView(con);
-		
+
 		lp = new android.widget.FrameLayout.LayoutParams(
 				LayoutParams.MATCH_PARENT, LayoutParams.MATCH_PARENT);
 		// lp.setMargins(machSize(10), machSize(80), 0, 0);

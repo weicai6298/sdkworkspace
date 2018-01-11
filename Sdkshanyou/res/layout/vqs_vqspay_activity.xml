@@ -1,0 +1,232 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:layout_gravity="center"
+    android:background="@color/vqs_gray_bg"
+    android:orientation="vertical"
+    tools:context="${relativePackage}.${activityClass}" >
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="50dp"
+        android:background="@color/vqs_main_color" >
+
+        <TextView
+            android:id="@+id/vqs_vqspay_activity_back_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="fill_parent"
+            android:drawableLeft="@drawable/vqs_main_back"
+            android:drawablePadding="10dp"
+            android:gravity="center_vertical"
+            android:paddingLeft="10dp"
+            android:text="充值中心"
+            android:textColor="@color/vqs_white"
+            android:textSize="18sp" />
+    </LinearLayout>
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="50dp"
+        android:background="@color/vqs_white"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp" >
+
+        <EditText
+            android:id="@+id/vqs_vqspay_set_et"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:background="@color/vqs_white"
+            android:hint="自定义金额"
+            android:maxLength="5"
+            android:numeric="integer"
+            android:singleLine="true"
+            android:textColor="@color/vqs_text_gray"
+            android:textSize="16sp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:text="平台币"
+            android:textColor="@color/vqs_text_black"
+            android:textSize="16sp" />
+    </RelativeLayout>
+
+    
+
+    <GridView
+        android:id="@+id/pay_kinds_gridview"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:background="@color/vqs_white"
+        android:horizontalSpacing="5dp"
+        android:listSelector="@android:color/transparent"
+        android:numColumns="3"
+        android:padding="10dp"
+        android:scrollbars="@null"
+        android:verticalSpacing="5dp" >
+    </GridView>
+
+    <TextView
+        android:layout_width="fill_parent"
+        android:layout_height="35dp"
+        android:layout_marginLeft="10dp"
+        android:gravity="center_vertical"
+        android:text="选择支付方式"
+        android:textColor="@color/vqs_text_black"
+        android:textSize="14sp" />
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="50dp"
+        android:background="@color/vqs_white"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp" >
+
+        <TextView
+            android:id="@+id/vqs_vqspay_ali_tv"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:drawableLeft="@drawable/vqs_pay_ali"
+            android:drawablePadding="10dp"
+            android:gravity="center_vertical"
+            android:text="支付宝支付"
+            android:textColor="@color/vqs_text_black" />
+
+        <ImageView
+            android:id="@+id/vqs_vqspay_ali_iv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:src="@drawable/vqs_pay_get" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="50dp"
+        android:layout_marginTop="1dp"
+        android:background="@color/vqs_white"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp" >
+
+        <TextView
+            android:id="@+id/vqs_vqspay_wechat_tv"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:drawableLeft="@drawable/vqs_pay_wechat"
+            android:drawablePadding="10dp"
+            android:gravity="center_vertical"
+            android:text="微信支付"
+            android:textColor="@color/vqs_text_black" />
+
+        <ImageView
+            android:id="@+id/vqs_vqspay_wechat_iv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:src="@drawable/vqs_pay_get"
+            android:visibility="invisible" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="50dp"
+        android:layout_marginTop="1dp"
+        android:background="@color/vqs_white"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp" >
+
+        <TextView
+            android:id="@+id/vqs_vqspay_qq_tv"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:drawableLeft="@drawable/vqs_pay_qq"
+            android:drawablePadding="10dp"
+            android:gravity="center_vertical"
+            android:text="QQ支付"
+            android:textColor="@color/vqs_text_black" />
+
+        <ImageView
+            android:id="@+id/vqs_vqspay_qq_iv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:src="@drawable/vqs_pay_get"
+            android:visibility="invisible" />
+    </RelativeLayout>
+    
+    <TextView
+        android:id="@+id/vqs_vqspay_activity_service_tv"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:background="@color/vqs_white"
+        android:lineSpacingExtra="3dp"
+        android:padding="10dp"
+        android:text="温馨提示：\n支付成功后，可能会有5-10分钟延迟，如有问题请联系客服\n客服QQ1：                   客服QQ2：                \n24小时热线: "
+        android:textColor="@color/vqs_text_gray"
+        android:textSize="12sp" />
+
+    <View
+        android:layout_width="fill_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1" />
+
+    <LinearLayout
+        android:gravity="center_vertical"
+        android:paddingLeft="10dp"
+        android:layout_width="fill_parent"
+        android:layout_height="40dp"
+        android:background="@color/vqs_white" >
+        <TextView 
+            android:textSize="14sp"
+            android:textColor="@color/vqs_text_gray"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="总计 : "
+            />
+        <TextView
+            android:id="@+id/vqs_pay_total_price_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="20.0"
+            android:textColor="@color/vqs_text_red"
+            android:textSize="14sp"
+            />
+         <TextView 
+             android:id="@+id/vqs_pay_total_coin_tv"
+            android:textSize="14sp"
+            android:textColor="@color/vqs_text_gray"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:text="元 "
+            />
+         <TextView
+             
+             android:id="@+id/vqs_pay_topay_tv"
+             android:gravity="center"
+             android:layout_width="150dp"
+             android:layout_height="fill_parent"
+             android:background="@color/vqs_main_color"
+             android:text="确认支付"
+             android:textColor="@color/vqs_white"
+             android:textSize="14sp"
+             
+             />
+    </LinearLayout>
+</LinearLayout>

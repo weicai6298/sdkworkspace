@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="hms_game_floatwindow_click_fail_toast" priority="translator">"Włącz funkcję uruchamiania pośredniego aplikacji HiGame w Menedżerze telefonu lub Ustawieniach i spróbuj ponownie."</string>
+    <string name="hms_game_login_notice">"Witaj %1$s"</string>
+</resources>

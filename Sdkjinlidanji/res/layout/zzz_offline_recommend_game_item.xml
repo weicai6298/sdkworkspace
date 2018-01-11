@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <View
+        android:id="@+id/zzz_recommend_seperate_line"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/zzz_seperate_line_height"
+        android:visibility="gone"
+        android:background="@color/zzz_seperate_line_color"/>
+
+    <View
+        android:id="@+id/zzz_top_blank_line"
+        android:layout_below="@id/zzz_recommend_seperate_line"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/zzz_offline_game_list_line_height"
+        android:layout_marginLeft="@dimen/zzz_offline_game_list_item_margin_leftright"
+        android:layout_marginRight="@dimen/zzz_offline_game_list_item_margin_leftright"
+        android:visibility="gone"
+        android:background="@color/zzz_offline_list_color"/>
+
+    <TextView
+        android:id="@+id/zzz_game_hint"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/zzz_offline_game_list_item_hint_height"
+        android:layout_below="@+id/zzz_top_blank_line"
+        android:layout_marginLeft="@dimen/zzz_offline_game_list_item_margin_leftright"
+        android:gravity="center"
+        android:text="@string/zzz_offline_recommend_game_hint"
+        android:textColor="@color/zzz_offline_hint_text_color"
+        android:textSize="@dimen/zzz_offline_game_list_item_hint_text_size"/>
+
+    <View
+        android:id="@+id/zzz_blank_line"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/zzz_offline_game_list_line_height"
+        android:layout_below="@+id/zzz_game_hint"
+        android:layout_marginLeft="@dimen/zzz_offline_game_list_item_margin_leftright"
+        android:layout_marginRight="@dimen/zzz_offline_game_list_item_margin_leftright"
+        android:background="@color/zzz_offline_list_color"/>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/zzz_offline_game_list_item_height"
+        android:layout_below="@+id/zzz_blank_line"
+        android:paddingLeft="@dimen/zzz_offline_game_list_item_margin_leftright"
+        android:paddingRight="@dimen/zzz_offline_game_list_item_margin_leftright">
+
+        <include
+            android:id="@+id/zzz_game_icon"
+            layout="@layout/zzz_alpha_anim_imageview"
+            android:layout_width="@dimen/zzz_gifticon_width_height"
+            android:layout_height="@dimen/zzz_gifticon_width_height"
+            android:layout_centerVertical="true"/>
+
+        <TextView
+            android:id="@+id/zzz_game_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/zzz_game_list_name_margin_left"
+            android:layout_marginRight="@dimen/zzz_game_list_name_margin_right"
+            android:layout_marginTop="@dimen/zzz_offline_game_recommend_item_title_margin_top"
+            android:layout_toRightOf="@id/zzz_game_icon"
+            android:layout_toLeftOf="@+id/zzz_game_download_btn"
+            android:ellipsize="end"
+            android:singleLine="true"
+            android:textColor="@color/zzz_offline_title_text_color"
+            android:textSize="@dimen/zzz_offline_game_item_title_text_size"/>
+
+        <TextView
+            android:id="@+id/zzz_game_remainder_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@id/zzz_game_name"
+            android:layout_below="@id/zzz_game_name"
+            android:layout_marginTop="@dimen/zzz_gift_item_remainder_margin_top"
+            android:layout_toLeftOf="@+id/zzz_game_download_btn"
+            android:ellipsize="end"
+            android:singleLine="true"
+            android:text="@string/zzz_gift_remainder"
+            android:textColor="@color/zzz_gifttext_gray"
+            android:textSize="@dimen/zzz_offline_game_remain_text_size"/>
+
+        <com.gionee.gameservice.download.DownloadButton
+            android:id="@+id/zzz_game_download_btn"
+            android:layout_width="@dimen/zzz_offline_game_item_button_width"
+            android:layout_height="@dimen/zzz_offline_game_item_button_height"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:textSize="@dimen/zzz_download_button_text_size"
+            android:focusable="false"
+            android:gravity="center"
+            android:background="@drawable/zzz_download_button_selector"
+            android:textColor="@color/zzz_main_green"/>
+    </RelativeLayout>
+</RelativeLayout>

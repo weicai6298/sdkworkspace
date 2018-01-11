@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/zzz_round_corner_bg">
+
+    <View
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/zzz_record_item_height"/>
+
+    <TextView
+        android:id="@+id/zzz_record_item_channel"
+        style="@style/zzz_MoneyListItemTextViewStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_marginLeft="@dimen/zzz_record_item_num_margin_left"
+        android:layout_marginTop="@dimen/zzz_record_item_num_margin_top"
+        android:maxWidth="@dimen/zzz_money_consume_item_text_max_width"
+        android:textSize="@dimen/zzz_record_item_num_text_size"/>
+
+    <TextView
+        android:id="@+id/zzz_record_item_time"
+        style="@style/zzz_MoneyListItemTextViewStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/zzz_record_item_channel"
+        android:layout_marginLeft="@dimen/zzz_record_item_num_margin_left"
+        android:layout_alignParentBottom="true"
+        android:paddingBottom="@dimen/zzz_record_item_time_padding_bottom"
+        android:textColor="@color/zzz_money_list_item_time_color"
+        android:textSize="@dimen/zzz_record_item_time_text_size"/>
+
+    <TextView
+        android:id="@+id/zzz_record_item_num"
+        style="@style/zzz_MoneyListItemTextViewStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:gravity="right"
+        android:layout_marginRight="@dimen/zzz_record_item_channel_margin_right"
+        android:layout_marginTop="@dimen/zzz_record_item_num_margin_top"
+        android:lineSpacingExtra="@dimen/zzz_money_consume_content_lineSpace"
+        android:singleLine="false"
+        android:textSize="@dimen/zzz_record_item_channel_text_size"/>
+
+</RelativeLayout>

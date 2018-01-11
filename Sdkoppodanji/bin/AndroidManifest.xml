@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.syhl.dydr.nearme.gamecenter"
+    android:versionCode="1"
+    android:versionName="1.0" >
+
+    <uses-sdk
+        android:minSdkVersion="8"
+        android:targetSdkVersion="19" />
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW" />
+    <uses-permission android:name="android.permission.GET_TASKS" />
+    <uses-permission android:name="android.permission.SEND_SMS" />
+    <uses-permission android:name="android.permission.READ_SMS" />
+    <uses-permission android:name="android.permission.WRITE_SMS" />
+    <uses-permission android:name="android.permission.RECEIVE_SMS" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.MOUNT_UNMOUNT_FILESYSTEMS" />
+    <uses-permission android:name="android.permission.GET_ACCOUNTS" />
+    <uses-permission android:name="android.permission.USE_CREDENTIALS" />
+    <uses-permission android:name="android.permission.CHANGE_NETWORK_STATE" />
+    <application
+        android:name="com.yayawan.impl.YYApplication"
+        android:allowBackup="true"
+        android:theme="@android:style/Theme.NoTitleBar.Fullscreen" >
+        <activity
+            android:name="com.yayawan.sdktemplate.MainActivity"
+            android:label="app_name" 
+            android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <!-- 手游互联配置 -->
+        <meta-data
+            android:name="app_id"
+            android:value="kk1107632854" />
+        <meta-data
+            android:name="isLandscape"
+            android:value="true" />
+
+        <!-- nearme game sdk config goes here -->
+        <meta-data
+            android:name="debug_mode"
+            android:value="false" />
+ <!-- 控制日志开关，发布时候设置false -->
+        <meta-data
+            android:name="is_offline_game"
+            android:value="true" />
+ <!-- true:单机游戏 false:网游 -->
+        <meta-data
+            android:name="interstitial_id"
+            android:value="string329" />
+       
+        <!--appid是广告id -->
+        <meta-data
+            android:name="appid"      
+            android:value="string3598132" />
+        <meta-data
+            android:name="app_key"
+            android:value="65tlS0f60C4c8480cc8gCOs4c" />
+        
+         <meta-data
+            android:name="appSecret"
+            android:value="1833b8a0Bb29c80642B8ebD62876E98C" />
+ <!-- appKey，开发者后台申请，务必使用游戏自己的appkey -->
+ 
+  <meta-data
+            android:name="callback"
+            android:value="https://api.sdk.75757.com/pay/notify/1107632854/" />
+        <activity
+            android:name="com.nearme.game.sdk.component.proxy.ProxyActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:process=":gcsdk"
+            android:screenOrientation="behind"
+            android:theme="@style/Theme_Dialog_Custom" >
+        </activity>
+
+        <service
+            android:name="com.nearme.game.sdk.component.proxy.ProxyApiService"
+            android:priority="1000"
+            android:screenOrientation="behind"
+            android:process=":gcsdk" >
+        </service>
+        <!-- nearme game sdk config end -->
+        
+        <!-- oppo广告 -->
+        <!-- <activity android:name="com.oppo.mobad.activity.AdActivity"/>
+<service android:name="com.oppo.mobad.service.AdService" /> -->
+        
+        
+
+    </application>
+
+</manifest>

@@ -1,0 +1,14 @@
+android {
+	 productFlavors {
+	 	 "portrait_SDK" {
+	 	 	 applicationId "com.game.sdk.niudaosy105"
+	 	 	 versionCode 280
+	 	 	 resValue( "string", "app_name", "牛刀手游demo竖屏版" )
+	 	 }
+	 	 "landscape_SDK" {
+	 	 	 applicationId "com.game.sdk.niudaosy105landscape"
+	 	 	 versionCode 280
+	 	 	 resValue( "string", "app_name", "牛刀手游demo横屏版" )
+	 	 }
+	 }
+}

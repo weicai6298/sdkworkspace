@@ -2,29 +2,20 @@ package com.yayawan.impl;
 
 import java.io.IOException;
 import java.io.InputStream;
-
 import android.app.Activity;
-import android.content.Context;
-import android.content.Intent;
 import android.content.res.AssetManager;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.graphics.Color;
-import android.os.Bundle;
 import android.os.Handler;
 import android.os.Looper;
 import android.os.Message;
-import android.view.Gravity;
-import android.view.View;
 import android.view.ViewGroup;
 import android.view.ViewGroup.LayoutParams;
 import android.view.WindowManager;
 import android.widget.ImageView;
 import android.widget.ImageView.ScaleType;
 import android.widget.LinearLayout;
-import android.widget.TextView;
-import android.widget.Toast;
-
 import com.yayawan.main.YYWMain;
 import com.yayawan.proxy.YYWAnimation;
 
@@ -32,7 +23,6 @@ public class AnimationImpl implements YYWAnimation {
 
 	@Override
 	public void anim(final Activity paramActivity) {
-		// TODO Auto-generated method stub
 		// Toast.makeText(paramActivity, "播放动画", Toast.LENGTH_SHORT).show();
 		System.err.println("播放动画");
 
@@ -50,7 +40,7 @@ public class AnimationImpl implements YYWAnimation {
 			@Override
 			public void run() {
 				new LogoWindow(paramActivity);
-
+//				YYWMain.mAnimCallBack.onAnimSuccess("success", "");
 			}
 		});
 
@@ -119,7 +109,6 @@ class LogoWindow {
 			istr = assetManager.open("yaya_logo_start.png");
 
 		} catch (IOException e) {
-			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
 		Bitmap bitmap = BitmapFactory.decodeStream(istr);

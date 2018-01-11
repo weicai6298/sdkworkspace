@@ -2,69 +2,74 @@ package com.yayawan.impl;
 
 import java.util.HashMap;
 import java.util.Random;
-
 import android.app.Activity;
 import android.app.Application;
 import android.content.Context;
 import android.content.Intent;
+import android.os.Build;
 import android.util.Log;
-import android.widget.Toast;
 
-import com.gionee.game.offlinesdk.AppInfo;
-import com.gionee.game.offlinesdk.GamePlatform;
-import com.gionee.game.offlinesdk.InitPluginCallback;
-import com.gionee.game.offlinesdk.MessagePayCallback;
-import com.gionee.game.offlinesdk.OrderInfo;
-import com.gionee.game.offlinesdk.PayCallback;
-import com.gionee.game.offlinesdk.QuitGameCallback;
+import com.gionee.game.offlinesdk.floatwindow.AppInfo;
+import com.gionee.game.offlinesdk.floatwindow.GamePlatform;
+import com.gionee.game.offlinesdk.floatwindow.QuitGameCallback;
+import com.gionee.game.offlinesdk.floatwindow.pay.GamePlayByTradeData;
+import com.gionee.game.offlinesdk.floatwindow.pay.OrderInfo;
+import com.gionee.game.offlinesdk.floatwindow.pay.PayGameCallback;
+import com.gionee.gsp.GnEFloatingBoxPositionModel;
+import com.gionee.pay.gsp.PayCallback;
 import com.kkgame.utils.DeviceUtil;
 import com.kkgame.utils.Handle;
 import com.kkgame.utils.JSONUtil;
 import com.kkgame.utils.Sputils;
+import com.umeng.analytics.MobclickAgent;
+import com.umeng.analytics.game.UMGameAgent;
 import com.yayawan.callback.YYWExitCallback;
-import com.yayawan.domain.YYWOrder;
 import com.yayawan.domain.YYWUser;
 import com.yayawan.main.YYWMain;
 
-
 public class YaYawanconstants {
 
-	private static HashMap<String, String> mGoodsid;
+	// private static HashMap<String, String> mGoodsid;
 
 	private static Activity mActivity;
 	private static Application application;
 
-	private static boolean isinit=false;
+	// private static boolean isinit = false;
+	private static String uid;
+	private static int isyoumeng;
 	/**
 	 * 初始化sdk
 	 */
 	public static void inintsdk(Activity mactivity) {
 		mActivity = mactivity;
 		Yayalog.loger("YaYawanconstants初始化sdk");
-
-		
-		InitPluginCallback initPluginCallback = new InitPluginCallback() {
-		    @Override
-		    public void onEvent(int event) {
-		        if (InitPluginCallback. EVENT_INIT_PLUGIN_FINISH == event) {
-		            // 插件初始化完成，请游戏根据实际情况处理
-		        	Yayalog.loger("初始化插件完成");
-		        }
-		    }};
+		/**
+		 * 6.0以上系统需要手动申请悬浮窗权限
+		 */
+		if (Build.VERSION.SDK_INT >= 23){
+			GamePlatform.requestFloatWindowsPermission(mactivity);
+		}
+		GamePlatform.setFloatingBoxOriginPosition(GnEFloatingBoxPositionModel.LEFT_TOP);
+		GamePlatform.startFloatWindowsService(mactivity);
+		String youmeng = DeviceUtil.getGameInfo(mActivity, "isyoumeng");
+		isyoumeng = Integer.parseInt(youmeng);
+		if(isyoumeng == 1) {
+			UMGameAgent.setDebugMode(true);
+			UMGameAgent.init(mActivity);
+		}
 	}
-	
+
 	/**
 	 * application初始化
 	 */
 	public static void applicationInit(Context applicationContext) {
-		// TODO Auto-generated method stub
-		application = (Application)applicationContext;
+		application = (Application) applicationContext;
 		AppInfo appInfo = new AppInfo();
-		String apiKey= ""+DeviceUtil.getGameInfo(application, "jinliapiKey");
-		String privateKey= ""+DeviceUtil.getGameInfo(application, "jinliprivateKey");
-		appInfo.setApiKey(apiKey);        // apiKey由开发者后台申请得到
-		appInfo.setPrivateKey(privateKey);  //privateKey由开发者后台申请得到
-		appInfo.setPayMode(AppInfo.PayMode.NO_ACCOUNT_BY_TRADE_DATA); //设置支付模式为“指定支付方式支付“
+		String apiKey = "" + DeviceUtil.getGameInfo(application, "jinliapiKey");
+		String privateKey = ""
+				+ DeviceUtil.getGameInfo(application, "jinliprivateKey");
+		appInfo.setApiKey(apiKey); // apiKey由开发者后台申请得到
+		appInfo.setPrivateKey(privateKey); // privateKey由开发者后台申请得到
 		GamePlatform.init(application, appInfo);
 	}
 
@@ -74,18 +79,18 @@ public class YaYawanconstants {
 	public static void login(final Activity mactivity) {
 		Yayalog.loger("YaYawanconstantssdk登录");
 		String tempuid = Sputils.getSPstring("uid", "tem", mactivity);
-		Log.i("tag","tempuid="+tempuid);
+		Log.i("tag", "tempuid=" + tempuid);
 		if (tempuid.equals("tem")) {
-			String uidtemp=System.currentTimeMillis()+"kk";
-			String uid=uidtemp.substring(4, uidtemp.length())+new Random().nextInt(10);
+			String uidtemp = System.currentTimeMillis() + "kk";
+			uid = uidtemp.substring(4, uidtemp.length())
+					+ new Random().nextInt(10);
 			Sputils.putSPstring("uid", uid, mactivity);
 			loginSuce(mactivity, uid, uid, uid);
-		}else {
+		} else {
+			uid = tempuid;
 			loginSuce(mactivity, tempuid, tempuid, tempuid);
 		}
-		
-		
-		
+
 	}
 
 	/**
@@ -94,33 +99,30 @@ public class YaYawanconstants {
 	 * @param mactivity
 	 */
 	public static void pay(Activity mactivity, String morderid) {
-
 		Yayalog.loger("YaYawanconstantssdk支付");
 		Log.i("tag", "发起支付");
 		OrderInfo orderInfo = new OrderInfo();
-        orderInfo.setCpOrderNum(morderid);
-        
-      //商品标题
-        orderInfo.setSubject(YYWMain.mOrder.goods);
-      //商品总价格
-      orderInfo.setTotalFee(YYWMain.mOrder.money/100+"");
-      //商品实际价格
-      orderInfo.setDealPrice(YYWMain.mOrder.money/100+"");
-        
-        Log.i("tag", "orderInfo="+orderInfo);
-		GamePlatform.getInstance().pay(mactivity, orderInfo, new PayCallback() {
-			
+		orderInfo.setCpOrderNum(morderid);
+		// 商品标题
+		orderInfo.setSubject(YYWMain.mOrder.goods);
+		// 商品总价格
+		orderInfo.setTotalFee(YYWMain.mOrder.money / 100 + "");
+		// 商品实际价格
+		orderInfo.setDealPrice(YYWMain.mOrder.money / 100 + "");
+		orderInfo.setProductName(YYWMain.mOrder.goods);
+		orderInfo.setPayMethod(GamePlayByTradeData.PAY_METHOD_UNSPECIFIED);
+		Log.i("tag", "orderInfo=" + orderInfo);
+		GamePlayByTradeData.getInstance().pay(mactivity, orderInfo, new PayGameCallback() {
+
 			@Override
 			public void onSuccess() {
-				// TODO Auto-generated method stub
 				Log.i("tag", "支付成功");
 				paySuce();
 				Log.i("tag", "支付成功1");
 			}
-			
+
 			@Override
 			public void onFail(String arg0, String arg1) {
-				// TODO Auto-generated method stub
 				Log.i("tag", "支付失败1");
 				payFail();
 				Log.i("tag", "支付失败1");
@@ -137,23 +139,24 @@ public class YaYawanconstants {
 	public static void exit(Activity paramActivity,
 			final YYWExitCallback callback) {
 		Yayalog.loger("YaYawanconstantssdk退出");
+		GamePlatform.quitGame(paramActivity,
+				new QuitGameCallback() {
 
-		GamePlatform.getInstance().quitGame(paramActivity, new QuitGameCallback() {
-			
 			@Override
 			public void onQuit() {
-				// TODO Auto-generated method stub
-				mActivity.finish();
+				if (isyoumeng == 1) {
+					Log.i("tag", "友盟退出");
+					MobclickAgent.onProfileSignOff();
+					//							MobclickAgent.onKillProcess(mActivity);
+				}
+				callback.onExit();
 			}
-			
+
 			@Override
 			public void onCancel() {
-				// TODO Auto-generated method stub
-				
+
 			}
 		});
-		//
-
 	}
 
 	/**
@@ -161,57 +164,61 @@ public class YaYawanconstants {
 	 * 
 	 * @param arg0
 	 */
-	public static void setData(Activity paramActivity, String roleId, String roleName,String roleLevel, String zoneId, String zoneName, String roleCTime,String ext){
-		// TODO Auto-generated method stub
+	public static void setData(Activity paramActivity, String roleId,
+			String roleName, String roleLevel, String zoneId, String zoneName,
+			String roleCTime, String ext) {
 		Yayalog.loger("YaYawanconstants设置角色信息");
+		if (Integer.parseInt(ext) == 1) {
+			if (isyoumeng == 1) {
+				Log.i("tag", "友盟进入游戏");
+				MobclickAgent.onProfileSignIn(uid);
+			}
+		}
 	}
-	public static void onResume(Activity paramActivity) {
-		// TODO Auto-generated method stub
-		
 
+	public static void onResume(Activity paramActivity) {
+		if(isyoumeng == 1){
+			MobclickAgent.onResume(paramActivity);
+		}
 	}
 
 	public static void onPause(Activity paramActivity) {
-		// TODO Auto-generated method stub
-
+		if(isyoumeng == 1){
+			MobclickAgent.onPause(paramActivity);
+		}
 	}
 
 	public static void onDestroy(Activity paramActivity) {
-		// TODO Auto-generated method stub
 
 	}
-	
-	public static void onActivityResult(Activity paramActivity) {
-		// TODO Auto-generated method stub
-		
+
+	public static void onActivityResult(Activity paramActivity, int paramInt1,
+			int paramInt2, Intent paramIntent) {
+		/**
+		 * 该处是为了提示权限赋予成功
+		 */
+		GamePlatform.onActivityResult(paramActivity, paramInt1, paramInt2, paramIntent);
 	}
 
 	public static void onNewIntent(Intent paramIntent) {
-		// TODO Auto-generated method stub
-		
+
 	}
 
-	public static void onStart(Activity mActivity2) {
-		// TODO Auto-generated method stub
-		
+	public static void onStart(Activity mActivity) {
+
 	}
 
 	public static void onRestart(Activity paramActivity) {
-		// TODO Auto-generated method stub
-		
+
 	}
 
 	public static void onCreate(Activity paramActivity) {
-		// TODO Auto-generated method stub
-		
+
 	}
 
 	public static void onStop(Activity paramActivity) {
-		// TODO Auto-generated method stub
-		
-	}
 
-	
+	}
 
 	/**
 	 * 登录成功调用
@@ -230,7 +237,6 @@ public class YaYawanconstants {
 		YYWMain.mUser = new YYWUser();
 
 		YYWMain.mUser.uid = DeviceUtil.getGameId(mactivity) + "-" + uid + "";
-		;
 		if (username != null) {
 			YYWMain.mUser.userName = DeviceUtil.getGameId(mactivity) + "-"
 					+ username + "";
@@ -250,7 +256,6 @@ public class YaYawanconstants {
 		}
 	}
 
-	
 	/**
 	 * 登出
 	 */
@@ -260,6 +265,7 @@ public class YaYawanconstants {
 
 		}
 	}
+
 	/**
 	 * 登录失败
 	 */
@@ -275,9 +281,7 @@ public class YaYawanconstants {
 	 */
 	public static void paySuce() {
 		// 支付成功
-		Log.i("tag", "下发道具");
 		if (YYWMain.mPayCallBack != null) {
-			Log.i("tag", "下发道具1");
 			YYWMain.mPayCallBack.onPaySuccess(YYWMain.mUser, YYWMain.mOrder,
 					"success");
 		}
@@ -289,10 +293,5 @@ public class YaYawanconstants {
 			YYWMain.mPayCallBack.onPayFailed(null, null);
 		}
 	}
-
-	
-	
-
-	
 
 }

@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.syhl.tulongll.lhh"
+    android:versionCode="1"
+    android:versionName="1.0" >
+
+    <uses-sdk
+        android:minSdkVersion="8"
+        android:targetSdkVersion="19" />
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW" />
+    <uses-permission android:name="android.permission.GET_TASKS" />
+     <uses-permission android:name="andorid.permission.MONUN_UNMOUNT_FILESYSTEMS" />
+     <uses-permission android:name="android.permission.CALL_PHONE" />
+
+    <application
+        android:name="com.yayawan.impl.YYApplication"
+        android:allowBackup="true"
+        android:theme="@android:style/Theme.NoTitleBar.Fullscreen" >
+        <activity
+            android:name="com.yayawan.sdktemplate.MainActivity"
+            android:screenOrientation="landscape"
+            android:label="app_name" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+      
+        
+      <!-- 手游互联配置 -->
+     	 <meta-data
+            android:name="app_id"
+            android:value="kk1475687178" />
+        <meta-data
+            android:name="isLandscape"
+            android:value="true" />
+        
+         <!-- sdk需要的配置 start -->
+         
+
+      <meta-data
+            android:name="pid"
+            android:value="string12285" />
+      <meta-data
+            android:name="appkey"
+            android:value="206f3228c652015c9b9aea5146126dfe" />
+
+        <activity
+            android:name="com.zqhy.sdk.ui.H5WebActivity"
+            android:configChanges="orientation|keyboardHidden|navigation"
+            android:launchMode="singleTask"
+            android:screenOrientation="behind"
+            android:theme="@style/CY_DialogTheme"
+            android:windowSoftInputMode="adjustResize|stateHidden" />
+
+        <activity
+            android:name="com.zqhy.sdk.ui.PersonalCenterActivity"
+            android:configChanges="orientation|keyboardHidden|navigation"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait" />
+
+        <receiver android:name="com.zqhy.sdk.pay.wechat.AppReciver_zqhy">
+            <intent-filter>
+                <action android:name="com.zqhy.wxpay.plugin.recive" />
+            </intent-filter>
+        </receiver>
+
+
+        <!-- alipay sdk begin -->
+        <activity
+            android:name="com.alipay.sdk.app.H5PayActivity"
+            android:configChanges="orientation|keyboardHidden|navigation"
+            android:exported="false"
+            android:screenOrientation="behind"
+            android:windowSoftInputMode="adjustResize|stateHidden" />
+        <activity
+            android:name="com.alipay.sdk.auth.AuthActivity"
+            android:configChanges="orientation|keyboardHidden|navigation"
+            android:exported="false"
+            android:screenOrientation="behind" />
+        <!-- alipay sdk end -->
+
+        <!-- 适配 Android 7.0 authorities 自行添加 建议：
+             authorities="你的包名.file.fileprovider" -->
+        <!--
+         <provider
+            android:name="android.support.v4.content.FileProvider"
+            android:authorities="string_package.flie.fileprovider"
+            android:exported="false"
+            android:grantUriPermissions="true">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/file_paths" />
+        </provider>
+             -->
+        <provider
+            android:name="android.support.v4.content.FileProvider"
+            android:authorities="string_package.flie.fileprovider"
+            android:exported="false"
+            android:grantUriPermissions="true">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/file_paths" />
+        </provider>
+
+        <meta-data
+            android:name="sdk_version"
+            android:value="7.1" />
+
+        <!-- sdk需要的配置 end -->
+    
+    </application>
+
+</manifest>
+

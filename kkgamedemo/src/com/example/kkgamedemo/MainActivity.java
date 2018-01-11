@@ -21,10 +21,6 @@ import com.yayawan.domain.YYWOrder;
 import com.yayawan.domain.YYWUser;
 import com.yayawan.main.Kgame;
 
-
-
-
-
 public class MainActivity extends Activity {
 
 	private TextView tv_view;
@@ -49,6 +45,7 @@ public class MainActivity extends Activity {
 		animButton.setText("anim");
 		animButton.setOnClickListener(new OnClickListener() {
 
+			@Override
 			public void onClick(View v) {
 				anim(mLinearLayout);
 
@@ -62,6 +59,7 @@ public class MainActivity extends Activity {
 		updateButton.setText("update");
 		updateButton.setOnClickListener(new OnClickListener() {
 
+			@Override
 			public void onClick(View v) {
 				upDate();
 			}
@@ -72,6 +70,7 @@ public class MainActivity extends Activity {
 		lgoinButton.setText("login");
 		lgoinButton.setOnClickListener(new OnClickListener() {
 
+			@Override
 			public void onClick(View v) {
 				login(mLinearLayout);
 
@@ -84,6 +83,7 @@ public class MainActivity extends Activity {
 		payButton.setText("pay");
 		payButton.setOnClickListener(new OnClickListener() {
 
+			@Override
 			public void onClick(View v) {
 				pay(mLinearLayout);
 
@@ -96,6 +96,7 @@ public class MainActivity extends Activity {
 		extButton.setText("exit");
 		extButton.setOnClickListener(new OnClickListener() {
 
+			@Override
 			public void onClick(View v) {
 				exit(mLinearLayout);
 
@@ -109,6 +110,7 @@ public class MainActivity extends Activity {
 		versionButton.setText("获取sdk版本号");
 		versionButton.setOnClickListener(new OnClickListener() {
 
+			@Override
 			public void onClick(View v) {
 				getversion(mLinearLayout);
 
@@ -120,6 +122,7 @@ public class MainActivity extends Activity {
 		inintButton.setText("无闪屏时的init接口");
 		inintButton.setOnClickListener(new OnClickListener() {
 
+			@Override
 			public void onClick(View v) {
 				initsdk(mLinearLayout);
 
@@ -133,6 +136,7 @@ public class MainActivity extends Activity {
 		logoutButton.setText("注销账号");
 		logoutButton.setOnClickListener(new OnClickListener() {
 
+			@Override
 			public void onClick(View v) {
 				Logout();
 
@@ -160,26 +164,26 @@ public class MainActivity extends Activity {
 	 * 回调成功后在onlogout中进行回到登录页面的操作
 	 */
 	protected void Logout() {
-		// TODO Auto-generated method stub
+
 		Kgame.getInstance().logout(null, new YYWUserCallBack() {
 
+			@Override
 			public void onLoginSuccess(YYWUser paramUser, Object paramObject) {
-				// TODO Auto-generated method stub
 
 			}
 
+			@Override
 			public void onLoginFailed(String paramString, Object paramObject) {
-				// TODO Auto-generated method stub
 
 			}
 
+			@Override
 			public void onLogout(Object paramObject) {
-				// TODO Auto-generated method stub
 
 			}
 
+			@Override
 			public void onCancel() {
-				// TODO Auto-generated method stub
 
 			}
 
@@ -199,20 +203,21 @@ public class MainActivity extends Activity {
 
 		Kgame.getInstance().anim(this, new YYWAnimCallBack() {
 
+			@Override
 			public void onAnimSuccess(String arg0, Object arg1) {
-				// TODO Auto-generated method stub
+
 				Toast.makeText(MainActivity.this, "播放动画回调", Toast.LENGTH_SHORT)
 						.show();
 
 			}
 
+			@Override
 			public void onAnimFailed(String arg0, Object arg1) {
-				// TODO Auto-generated method stub
 
 			}
 
+			@Override
 			public void onAnimCancel(String arg0, Object arg1) {
-				// TODO Auto-generated method stub
 
 			}
 		});
@@ -222,14 +227,15 @@ public class MainActivity extends Activity {
 		System.out.println("登录");
 		Kgame.getInstance().login(this, new YYWUserCallBack() {
 
+			@Override
 			public void onLogout(Object arg0) {
 				Toast.makeText(MainActivity.this, "退出", Toast.LENGTH_SHORT)
 						.show();
 
 			}
 
+			@Override
 			public void onLoginSuccess(YYWUser user, Object arg1) {
-				// TODO Auto-generated method stub
 				System.out.println("登录成功" + user);
 				Toast.makeText(MainActivity.this, "登录成功" + user,
 						Toast.LENGTH_SHORT).show();
@@ -241,15 +247,15 @@ public class MainActivity extends Activity {
 						System.currentTimeMillis() / 1000 + "", "1");
 			}
 
+			@Override
 			public void onLoginFailed(String arg0, Object arg1) {
-				// TODO Auto-generated method stub
 				System.out.println("失败");
 				Toast.makeText(MainActivity.this, "失败", Toast.LENGTH_SHORT)
 						.show();
 			}
 
+			@Override
 			public void onCancel() {
-				// TODO Auto-generated method stub
 				System.out.println("取消");
 				Toast.makeText(MainActivity.this, "取消", Toast.LENGTH_SHORT)
 						.show();
@@ -262,22 +268,22 @@ public class MainActivity extends Activity {
 	public void pay(View v) {
 
 		YYWOrder order = new YYWOrder(UUID.randomUUID().toString(), "大罗鞭",
-				10l, "");
+				100l, "");
 
 		Kgame.getInstance().pay(this, order, new YYWPayCallBack() {
+			@Override
 			public void onPaySuccess(YYWUser arg0, YYWOrder arg1, Object arg2) {
-				// TODO Auto-generated method stub
 				Toast.makeText(MainActivity.this, "充值成功回调", Toast.LENGTH_SHORT)
 						.show();
 			}
 
+			@Override
 			public void onPayFailed(String arg0, Object arg1) {
-				// TODO Auto-generated method stub
 				System.out.println("支付失败");
 			}
 
+			@Override
 			public void onPayCancel(String arg0, Object arg1) {
-				// TODO Auto-generated method stub
 				System.out.println("支付退出");
 			}
 		});
@@ -289,7 +295,6 @@ public class MainActivity extends Activity {
 	 * @param mLinearLayout
 	 */
 	private void getversion(LinearLayout mLinearLayout) {
-		// TODO Auto-generated method stub
 
 	}
 
@@ -303,6 +308,7 @@ public class MainActivity extends Activity {
 
 		Kgame.getInstance().exit(this, new YYWExitCallback() {
 
+			@Override
 			public void onExit() {
 				Toast.makeText(MainActivity.this, "退出回调", Toast.LENGTH_SHORT)
 						.show();
@@ -316,7 +322,6 @@ public class MainActivity extends Activity {
 	 * @param mLinearLayout
 	 */
 	private void initsdk(LinearLayout mLinearLayout) {
-		// TODO Auto-generated method stub
 		Kgame.getInstance().initSdk(this);
 	}
 
@@ -356,12 +361,11 @@ public class MainActivity extends Activity {
 	protected void onDestroy() {
 		Kgame.getInstance().onDestroy(this);
 		super.onDestroy();
-		
+
 	}
 
 	@Override
 	protected void onActivityResult(int requestCode, int resultCode, Intent data) {
-		// TODO Auto-generated method stub
 		super.onActivityResult(requestCode, resultCode, data);
 		System.out.println("onActivityResult");
 		// Yayalog.loger("demoonActivityResult");
@@ -372,7 +376,6 @@ public class MainActivity extends Activity {
 
 	@Override
 	protected void onNewIntent(Intent intent) {
-		// TODO Auto-generated method stub
 		super.onNewIntent(intent);
 		Kgame.getInstance().onNewIntent(intent);
 	}

@@ -1,0 +1,163 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:layout_gravity="center"
+    android:background="@color/vqs_gray_bg"
+    android:orientation="vertical"
+    tools:context="${relativePackage}.${activityClass}" >
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="50dp"
+        android:background="@color/vqs_main_color" >
+
+        <TextView
+            android:id="@+id/vqs_changepw_activity_back_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="fill_parent"
+            android:drawableLeft="@drawable/vqs_main_back"
+            android:drawablePadding="10dp"
+            android:gravity="center_vertical"
+            android:paddingLeft="10dp"
+            android:text="修改密码"
+            android:textColor="@color/vqs_white"
+            android:textSize="18sp" />
+    </LinearLayout>
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent" >
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:orientation="vertical" >
+
+            <TextView
+                android:id="@+id/vqs_changepw_activity_userid_tv"
+                android:layout_width="fill_parent"
+                android:layout_height="50dp"
+                android:gravity="center_vertical"
+                android:paddingLeft="10dp"
+                android:textColor="@color/vqs_text_black"
+                android:textSize="16sp" />
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="50dp"
+                android:background="@color/vqs_white"
+                android:orientation="horizontal" >
+
+                <TextView
+                    android:layout_width="100dp"
+                    android:layout_height="fill_parent"
+                    android:layout_marginLeft="10dp"
+                    android:gravity="center_vertical"
+                    android:text="旧密码"
+                    android:textColor="@color/vqs_text_black"
+                    android:textSize="16sp" />
+
+                <EditText
+                    android:id="@+id/vqs_changepw_activity_oldpw_et"
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:background="@color/vqs_white"
+                    android:digits="@string/abc"
+                    android:gravity="center_vertical"
+                    android:hint="请输入旧密码"
+                    android:maxLength="11"
+                    android:singleLine="true"
+                    android:textColor="@color/vqs_gray"
+                    android:textSize="16sp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="50dp"
+                android:layout_marginTop="0.5dp"
+                android:background="@color/vqs_white"
+                android:orientation="horizontal" >
+
+                <TextView
+                    android:layout_width="100dp"
+                    android:layout_height="fill_parent"
+                    android:layout_marginLeft="10dp"
+                    android:gravity="center_vertical"
+                    android:text="新密码"
+                    android:textColor="@color/vqs_text_black"
+                    android:textSize="16sp" />
+
+                <EditText
+                    android:id="@+id/vqs_changepw_activity_pw1_et"
+                    android:layout_width="0dp"
+                    android:layout_height="fill_parent"
+                    android:layout_weight="1"
+                    android:background="@color/vqs_white"
+                    android:digits="@string/abc"
+                    android:gravity="center_vertical"
+                    android:hint="请输入新密码"
+                    android:singleLine="true"
+                    android:textColor="@color/vqs_gray"
+                    android:textSize="16sp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="50dp"
+                android:layout_marginTop="0.5dp"
+                android:background="@color/vqs_white"
+                android:orientation="horizontal" >
+
+                <TextView
+                    android:layout_width="100dp"
+                    android:layout_height="fill_parent"
+                    android:layout_marginLeft="10dp"
+                    android:gravity="center_vertical"
+                    android:text="确认新密码"
+                    android:textColor="@color/vqs_text_black"
+                    android:textSize="16sp" />
+
+                <EditText
+                    android:id="@+id/vqs_changepw_activity_pw2_et"
+                    android:layout_width="0dp"
+                    android:layout_height="fill_parent"
+                    android:layout_weight="1"
+                    android:background="@color/vqs_white"
+                    android:digits="@string/abc"
+                    android:gravity="center_vertical"
+                    android:hint="请输入新密码"
+                    android:singleLine="true"
+                    android:textColor="@color/vqs_gray"
+                    android:textSize="16sp" />
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/vqs_changepw_activity_change_tv"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginTop="30dp"
+                android:background="@drawable/vqs_main_text_bg"
+                android:gravity="center"
+                android:text="确定"
+                android:textColor="@color/vqs_white" />
+        </LinearLayout>
+
+        <RelativeLayout
+            android:id="@+id/vqs_changepw_activity_loading_rl"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:background="@color/vqs_black_tran"
+            android:visibility="invisible" >
+
+            <ProgressBar
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:indeterminateDrawable="@drawable/vqs_progressbar" />
+        </RelativeLayout>
+    </RelativeLayout>
+
+</LinearLayout>

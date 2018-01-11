@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<shape xmlns:android="http://schemas.android.com/apk/res/android"
+       android:shape="rectangle">
+    <stroke
+            android:color="@color/zzz_download_button_text_load"
+            android:width="@dimen/zzz_download_button_scroke_width" />
+    <corners android:radius="@dimen/zzz_download_button_corners" />
+    <solid android:color="@android:color/transparent" />
+</shape>

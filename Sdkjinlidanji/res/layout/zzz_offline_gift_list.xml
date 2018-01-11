@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.gionee.game.offlinesdk.business.gift.OfflineGameListView
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:id="@+id/zzz_listview"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:divider="@null">
+</com.gionee.game.offlinesdk.business.gift.OfflineGameListView>

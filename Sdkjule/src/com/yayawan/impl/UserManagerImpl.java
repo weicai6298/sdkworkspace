@@ -25,7 +25,6 @@ public class UserManagerImpl implements YYWUserManager {
 	@Override
 	public void logout(Activity paramActivity, String paramString,
 			Object paramObject) {
-
 	}
 
 	@Override

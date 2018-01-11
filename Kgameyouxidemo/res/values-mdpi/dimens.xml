@@ -1,0 +1,5 @@
+<resources>
+
+	<dimen name="accountmanager_title_size">15sp</dimen>
+	<dimen name="icon_size">50dp</dimen>	
+</resources>

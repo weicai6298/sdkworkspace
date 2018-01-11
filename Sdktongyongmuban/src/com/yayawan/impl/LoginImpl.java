@@ -1,19 +1,10 @@
 package com.yayawan.impl;
 
-import java.net.URL;
-
-import org.json.JSONException;
-import org.json.JSONObject;
-
 import android.app.Activity;
 import android.app.ProgressDialog;
 import android.os.Handler;
 import android.os.Looper;
-import android.widget.Toast;
-
 import com.yayawan.callback.YYWUserCallBack;
-import com.yayawan.domain.YYWUser;
-import com.yayawan.main.YYWMain;
 import com.yayawan.proxy.YYWLoginer;
 
 public class LoginImpl implements YYWLoginer {
@@ -26,7 +17,6 @@ public class LoginImpl implements YYWLoginer {
 
 			@Override
 			public void run() {
-
 				YaYawanconstants.login(paramActivity);
 			}
 		});

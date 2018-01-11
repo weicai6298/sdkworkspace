@@ -112,8 +112,7 @@ public class YaYawanconstants {
 
 		Yayalog.loger("YaYawanconstantssdk支付");
 		
-        QiGuoApi.INSTANCE.pay(YYWMain.mOrder.goods, YYWMain.mOrder.goods, 
-        		(YYWMain.mOrder.money/100)+"",morderid, new QiGuoCallBack() {
+        QiGuoApi.INSTANCE.pay(YYWMain.mOrder.goods, YYWMain.mOrder.goods, (YYWMain.mOrder.money/100)+"",morderid, new QiGuoCallBack() {
             @Override
             public void onSuccess() {
                 Log.e("pay ", " pay  suc");
@@ -173,8 +172,6 @@ public class YaYawanconstants {
 				
 			}
 		});
-		//
-
 	}
 
 	/**

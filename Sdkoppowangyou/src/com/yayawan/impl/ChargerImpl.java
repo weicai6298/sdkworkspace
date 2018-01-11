@@ -13,7 +13,6 @@ import android.os.Looper;
 import android.util.Log;
 import android.widget.Toast;
 
-
 import com.kkgame.sdk.login.ViewConstants;
 import com.kkgame.utils.DeviceUtil;
 import com.lidroid.jxutils.HttpUtils;
@@ -29,7 +28,6 @@ import com.yayawan.main.YYWMain;
 import com.yayawan.main.YaYaWan;
 import com.yayawan.proxy.YYWCharger;
 import com.yayawan.sdktemplate.MainActivity;
-
 
 public class ChargerImpl implements YYWCharger {
 
@@ -47,7 +45,7 @@ public class ChargerImpl implements YYWCharger {
 
 			@Override
 			public void run() {
-					
+
 				createOrder(paramActivity);
 				// System.err.println("pay start");
 
@@ -69,20 +67,20 @@ public class ChargerImpl implements YYWCharger {
 		requestParams.addBodyParameter("remark", YYWMain.mOrder.ext);
 		requestParams.addBodyParameter("transid", YYWMain.mOrder.orderId);
 		requestParams.addBodyParameter("username", YYWMain.mUser.userName);
-		Yayalog.loger("uid:"+ YYWMain.mUser.yywuid);
-		Yayalog.loger("username:"+YYWMain.mUser.userName);
-		Yayalog.loger("app_id:"+DeviceUtil.getAppid(paramActivity));
-		Yayalog.loger("amount:"+YYWMain.mOrder.money);
-		Yayalog.loger("remark:"+YYWMain.mOrder.ext);
-		Yayalog.loger("transid:"+YYWMain.mOrder.orderId);
-		Yayalog.loger("url:"+ ViewConstants.unionmakeorder);
-		httpUtil.send(HttpMethod.POST, ViewConstants.unionmakeorder,requestParams,
-				new RequestCallBack<String>() {
+		Yayalog.loger("uid:" + YYWMain.mUser.yywuid);
+		Yayalog.loger("username:" + YYWMain.mUser.userName);
+		Yayalog.loger("app_id:" + DeviceUtil.getAppid(paramActivity));
+		Yayalog.loger("amount:" + YYWMain.mOrder.money);
+		Yayalog.loger("remark:" + YYWMain.mOrder.ext);
+		Yayalog.loger("transid:" + YYWMain.mOrder.orderId);
+		Yayalog.loger("url:" + ViewConstants.unionmakeorder);
+		httpUtil.send(HttpMethod.POST, ViewConstants.unionmakeorder,
+				requestParams, new RequestCallBack<String>() {
 
 					@Override
 					public void onFailure(HttpException arg0, String arg1) {
 						// TODO Auto-generated method stub
-						Yayalog.loger("下单失败"+arg1.toString());
+						Yayalog.loger("下单失败" + arg1.toString());
 						disprogress();
 					}
 
@@ -91,10 +89,10 @@ public class ChargerImpl implements YYWCharger {
 						// TODO Auto-generated method stub
 						disprogress();
 						try {
-							Yayalog.loger("下单成功"+arg0.result);
+							Yayalog.loger("下单成功" + arg0.result);
 							JSONObject obj = new JSONObject(arg0.result);
 							int err_code = obj.optInt("err_code");
-							Log.i("tag","err_code="+err_code);
+							Log.i("tag", "err_code=" + err_code);
 							if (err_code == 0) {
 								JSONObject data = obj.getJSONObject("data");
 								orderId = data.optString("id");

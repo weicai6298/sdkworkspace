@@ -1,0 +1,23 @@
+{
+  "is_show_float_view": true,
+  "game_source": 0,
+  "app_id": "",
+  "app_key": "",
+  "version": "",
+  "game_type": 0,
+  "cr": {
+    "partner": 0,
+    "partner_array": [
+      {
+        "partner": 0,
+        "gp_appid": "103531",
+        "gp_appkey":"W7MGIGF245BDNXWA"
+      },
+      {
+        "partner": 1,
+        "gp_appid": "103587",
+        "gp_appkey":"1UOE5YQMN7PSOC7A"
+      }
+    ]
+  }
+}

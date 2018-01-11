@@ -1,0 +1,123 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:layout_gravity="center"
+    android:background="@color/vqs_gray_bg"
+    android:orientation="vertical"
+    tools:context="${relativePackage}.${activityClass}" >
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="50dp"
+        android:background="@color/vqs_main_color" >
+
+        <TextView
+            android:id="@+id/vqs_openmsg_activity_back_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="fill_parent"
+            android:drawableLeft="@drawable/vqs_main_back"
+            android:drawablePadding="10dp"
+            android:gravity="center_vertical"
+            android:paddingLeft="10dp"
+            android:text="开服信息"
+            android:textColor="@color/vqs_white"
+            android:textSize="18sp" />
+    </LinearLayout>
+
+    <RelativeLayout
+        android:id="@+id/vqs_openmsg_rl"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:padding="10dp" >
+
+        <LinearLayout
+            android:id="@+id/vqs_openmsg_tom_ll"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true" >
+
+            <ImageView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:src="@drawable/vqs_openmsg_today_click" />
+
+            <ImageView
+                android:id="@+id/vqs_openmsg_tom_iv"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:src="@drawable/vqs_openmsg_tom_unclick" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/vqs_vqs_openmsg_today_ll"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:visibility="invisible" >
+
+            <ImageView
+                android:id="@+id/vqs_openmsg_today_iv"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:src="@drawable/vqs_openmsg_today_unclick" />
+
+            <ImageView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:src="@drawable/vqs_openmsg_tom_clicked" />
+        </LinearLayout>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:background="@color/vqs_white" >
+
+        <ListView
+            android:visibility="visible"
+            android:id="@+id/vqs_openmsg_today_listview"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:background="@color/vqs_white"
+            android:divider="@color/vqs_gray_bg"
+            android:dividerHeight="1px"
+            android:listSelector="#00000000"
+            android:scrollbars="@null" >
+        </ListView>
+
+        <ListView
+            android:id="@+id/vqs_openmsg_tom_listview"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:background="@color/vqs_white"
+            android:divider="@color/vqs_gray_bg"
+            android:dividerHeight="1px"
+            android:listSelector="#00000000"
+            android:scrollbars="@null"
+            android:visibility="invisible" >
+        </ListView>
+
+        <ImageView
+            android:id="@+id/nonitem"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:background="@color/vqs_white"
+            android:src="@drawable/vqs_main_non"
+            android:visibility="invisible" />
+
+        <ProgressBar
+            android:id="@+id/loading"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:indeterminateDrawable="@drawable/vqs_progressbar"
+            android:visibility="invisible" />
+    </RelativeLayout>
+
+</LinearLayout>

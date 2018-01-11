@@ -5,6 +5,7 @@ import static java.lang.Integer.parseInt;
 import java.net.URL;
 import java.util.Timer;
 
+import android.annotation.SuppressLint;
 import android.annotation.TargetApi;
 import android.app.Activity;
 import android.content.Intent;
@@ -26,11 +27,13 @@ import android.widget.FrameLayout;
 import android.widget.ProgressBar;
 import android.widget.RelativeLayout;
 
+import com.nzhy.cqll.jinli.R;
 import com.yayawan.callback.YYWAnimCallBack;
 import com.yayawan.callback.YYWExitCallback;
 import com.yayawan.main.Kgame;
 import com.yayawan.proxy.GameApi;
 
+@SuppressLint("Override")
 @TargetApi(21)
 public class BrowserTempActivity extends Activity {
 	/**
@@ -42,7 +45,9 @@ public class BrowserTempActivity extends Activity {
 	// private static final String mHomeUrl =
 	// "http://jump.h5.jiulingwan.com:81/webserver/07073/android/index.html";
 	// http://h5cqllyx.jiulingwan.com/webserver/07073/android/index.html
-	private static final String mHomeUrl = "http://h5cqllyx.jiulingwan.com/webserver/07073/android/index.html";
+	
+	private static final String mHomeUrl = "http://h5cqllyx.jiulingwan.com/webserver/07073/android/index.html"; //测试
+//	private static final String mHomeUrl = "http://h5cqllyx.jiulingwan.com/webserver/07073/androidNew/index.html"; //带logo
 	private static final String TAG = "SdkDemo";
 	private static final int MAX_LENGTH = 14;
 	private boolean mNeedTestPage = false;
@@ -228,9 +233,10 @@ public class BrowserTempActivity extends Activity {
 					finish();
 				}
 			});
-			return super.onKeyDown(keyCode, event);
+			return true;
 		}
 		return super.onKeyDown(keyCode, event);
+		
 	}
 
 	protected void onActivityResult(int requestCode, int resultCode, Intent data) {

@@ -1,7 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-    <string name="title_activity_main">MainActivity</string>
-    <string name="action_settings">Settings</string>
-    <string name="hello_world">Hello world!</string>
+    <string name="app_name">单机SDK测试</string>
+    
+    <string name="plugin_test">插件检测</string>
+    <string name="pay_test">支付测试</string>
+    <string name="app_name_pay_demo">支付测试程序</string>
+    <string name="out_order_num_tv">订单号(orderNum)</string>
+    <string name="product_name_tv">商品名称(productName)</string>
+    <string name="default_product_name">testPaymobile</string>
+    <string name="total_fee_tv">实际费用(totalFee)</string>
+    <string name="default_total_fee_value">0.01</string>
+    <string name="default_str"></string>
+    <string name="tests_user_define_pay">自定义订单支付</string>
+    <string name="user_id_des">用户id（userId，可选）</string>
+    <string name="default_user_id">asdfasd</string>
+    
+    <string name="deal_price_tv">真实价格(deal_price)</string>
+    <string name="deal_price_value">0.01</string>
+    <string name="deliver_type_tv">付款方式(deliver_type)</string>
+    <string name="deliver_type_value">1</string>
+    <string name="starting_pay">快速支付</string>
+    <string name="have_account">有账号</string>
+    <string name="not_account">无账号</string>
+    <string name="please_wait_for_a_moment">请稍后</string>
+    <string name="creating_order">正在创建订单&#8230;</string>
+    <string name="notify_url">自定义商户订单notify地址(notify_url)</string>
+    <string name="notify_url_hint">可选内容，单机版不需要配置</string>
+    <string name="tests_repeated_orders">测试重复订单交易</string>
+    <string name="tests_notify_url">http://test3.gionee.com/testPay/order/notify</string>
+    <string name="submit_time">(创建订单时间)submit_time</string>
+    <string name="enter_the_cashier">进入收银台</string>
+    <string name="tip">使用说明：\n需要在服务器先创建订单成功，再来这里填入相应参数，即可调起收银台。\nsubmit_time和创建订单号的时间必须一致。</string>
+    <string name="query_promotion">查询公告测试</string>
+    <string name="subject_tv">订单标题(subject)</string>
+    <string name="subject_value">testPaymobile</string>
 
+    <string name="api_key_tv">电商ID(api_key)</string>
+    <string name="out_order_id_tv">服务器下单结果所有信息原封不动传入</string>
+    <string name="consumed_rewards_tv">银币消耗数量（consumed_rewards）</string>
+    <string name="consumed_rewards_value"></string>
+    <string name="total_fee_value">0.01</string>
 </resources>

@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    package="com.szyp.goldfish6s.byfb.nearme.gamecenter"
+    package="com.syhl.bydsj.nearme.gamecenter"
     android:versionCode="1"
     android:versionName="1.0" >
 
@@ -32,22 +32,28 @@
         android:theme="@android:style/Theme.NoTitleBar.Fullscreen" >
         <activity
             android:name="com.yayawan.sdktemplate.MainActivity"
-            android:label="app_name" >
+            android:label="app_name"
+            android:screenOrientation="portrait" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-
         <!-- 手游互联配置 -->
         <meta-data
             android:name="app_id"
-            android:value="kk2462235735" />
+            android:value="kk357498976" />
         <meta-data
             android:name="isLandscape"
             android:value="true" />
-
+        <!-- 1有友盟  0没有 -->
+        <meta-data
+            android:name="isyoumeng"
+            android:value="string1" />
+        <meta-data
+            android:name="appid"
+            android:value="5a1d1bb6b27b0a37d200010c" />
         <!-- nearme game sdk config goes here -->
         <meta-data
             android:name="debug_mode"
@@ -59,12 +65,13 @@
         <!-- true:单机游戏 false:网游 -->
         <meta-data
             android:name="app_key"
-            android:value="6R835pxRTsowCGkKsG800s4so" />
-        
+            android:value="98oSTpc488co044gw8k88sW40" />
         <meta-data
             android:name="appSecret"
-            android:value="56CdD97a504fe6032F5eC27b4AAca6ee" />
-
+            android:value="6cb80E059a830caD6d964E158e29D6F1" />
+        <meta-data
+            android:name="callback"
+            android:value="https://api.sdk.75757.com/pay/notify/357498976/" />
 
         <activity
             android:name="com.nearme.game.sdk.component.proxy.ProxyActivity"
@@ -88,10 +95,14 @@
                 <action android:name="com.oppo.usercenter.account_logout" />
                 <action android:name="com.oppo.usercenter.modify_name" />
             </intent-filter>
-3
         </receiver>
         <!-- nearme game sdk config end -->
-
+        <meta-data
+            android:name="UMENG_APPKEY"
+            android:value="string_appid" />
+        <meta-data
+            android:name="UMENG_CHANNEL"
+            android:value="OPPO" />
     </application>
 
 </manifest>

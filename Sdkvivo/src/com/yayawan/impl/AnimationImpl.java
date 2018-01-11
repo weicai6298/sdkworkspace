@@ -116,7 +116,8 @@ class LogoWindow {
 		InputStream istr = null;
 		try {
 
-			istr = assetManager.open("yaya_logo_start.png");
+//			istr = assetManager.open("yaya_logo_start.png");
+			istr = assetManager.open("shanping.png");
 
 		} catch (IOException e) {
 			// TODO Auto-generated catch block
@@ -124,7 +125,7 @@ class LogoWindow {
 		}
 		Bitmap bitmap = BitmapFactory.decodeStream(istr);
 
-		iv.setBackgroundColor(Color.parseColor("#f7faf1"));
+		iv.setBackgroundColor(Color.parseColor("#000000"));
 		iv.setImageBitmap(bitmap);
 		iv.setScaleType(ScaleType.CENTER);
 		rootview.addView(iv);

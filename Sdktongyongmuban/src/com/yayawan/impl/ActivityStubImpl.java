@@ -62,7 +62,7 @@ public class ActivityStubImpl implements YYWActivityStub {
 	public void onActivityResult(Activity paramActivity, int paramInt1,
 			int paramInt2, Intent paramIntent) {
 		// TODO Auto-generated method stub
-		YaYawanconstants.onActivityResult(paramActivity);
+		YaYawanconstants.onActivityResult(paramActivity,paramInt1,paramInt2,paramIntent);
 	}
 
 	@Override

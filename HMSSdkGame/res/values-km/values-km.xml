@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="hms_game_floatwindow_click_fail_toast" priority="translator">"បើកការ​បើកដំណើរការបន្ទាប់បន្សំ​សម្រាប់ HiGame នៅក្នុង កម្មវិធីគ្រប់គ្រងទូរស័ព្ទ ឬ​ការកំណត់ រួច​ព្យាយាមម្ដងទៀត។"</string>
+    <string name="hms_game_login_notice">"សូមស្វាគមន៍ %1$s"</string>
+</resources>

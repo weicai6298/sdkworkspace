@@ -1,0 +1,69 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="285dp"
+    android:layout_height="100dp"
+    android:layout_gravity="center"
+    android:background="@drawable/vqs_autologin_bg"
+    tools:context="${relativePackage}.${activityClass}" >
+
+    <ImageView
+        android:id="@+id/vqs_main_logo_img"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_alignParentLeft="true"
+        android:layout_centerVertical="true"
+        android:layout_margin="10dp"
+        android:src="@drawable/vqs_main_logo" />
+
+    <TextView
+        android:id="@+id/vqs_autologin_userid_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@id/vqs_main_logo_img"
+        android:layout_toRightOf="@id/vqs_main_logo_img"
+        android:textColor="@color/vqs_text_gray"
+        android:textSize="20sp" />
+
+    <TextView
+        android:id="@+id/vqs_autologin_loading_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@id/vqs_main_logo_img"
+        android:layout_toRightOf="@id/vqs_main_logo_img"
+        android:text="账号登录中..."
+        android:textColor="@color/vqs_text_gray"
+        android:textSize="16sp" />
+
+    <TextView
+        android:id="@+id/vqs_autologin_succsee_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_toRightOf="@id/vqs_main_logo_img"
+        android:text="恭喜,登录成功!"
+        android:textColor="@color/vqs_text_gray"
+        android:textSize="20sp"
+        android:visibility="gone" />
+
+    <RelativeLayout
+       android:layout_marginRight="15dp"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true" >
+
+        <ImageView
+            android:id="@+id/vqs_autologin_success_img"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:src="@drawable/vqs_autologin_success"
+            android:visibility="gone" />
+
+        <ImageView
+            android:id="@+id/vqs_autologin_cancel_img"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:src="@drawable/vqs_autologin_cancel" />
+    </RelativeLayout>
+
+</RelativeLayout>

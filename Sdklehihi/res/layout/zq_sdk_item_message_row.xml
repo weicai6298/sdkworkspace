@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:expandable="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="#FFFFFF"
+    android:orientation="vertical">
+
+    <com.zqhy.sdk.ui.expand.ExpandableLayoutItem
+        android:id="@+id/row"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="8dp"
+        android:layout_marginRight="16dp"
+        expandable:el_contentLayout="@layout/zq_sdk_layout_view_content"
+        expandable:el_headerLayout="@layout/zq_sdk_layout_view_header"
+        android:background="@drawable/zq_sdk_shape_bg_radius_2"/>
+
+</RelativeLayout>

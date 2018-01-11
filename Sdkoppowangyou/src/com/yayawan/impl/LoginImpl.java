@@ -41,11 +41,11 @@ public class LoginImpl implements YYWLoginer {
 	}
 
 	public void getAccessToken(final Activity paramActivity, String code) {
-	
+
 	}
 
 	public void getAccessUserInfo(final Activity paramActivity, String code) {
-		
+
 	}
 
 	ProgressDialog progressDialog = null;

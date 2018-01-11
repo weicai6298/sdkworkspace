@@ -18,6 +18,8 @@ import com.android.volley.toolbox.Volley;
 import com.kkgame.utils.DeviceUtil;
 import com.kkgame.utils.Handle;
 import com.kkgame.utils.JSONUtil;
+import com.umeng.analytics.MobclickAgent;
+import com.umeng.analytics.game.UMGameAgent;
 import com.vivo.unionsdk.open.VivoAccountCallback;
 import com.vivo.unionsdk.open.VivoExitCallback;
 import com.vivo.unionsdk.open.VivoPayCallback;
@@ -51,6 +53,8 @@ public class YaYawanconstants {
 
 	private static String uid;
 	
+	private static int isyoumeng;
+	
 	private static String openId;
     private static VivoPayInfo mVivoPayInfo;
 	/**
@@ -59,6 +63,12 @@ public class YaYawanconstants {
 	public static void inintsdk(Activity mactivity) {
 		mActivity = mactivity;
 		Yayalog.loger("YaYawanconstants初始化sdk");
+		String youmeng = DeviceUtil.getGameInfo(mActivity, "isyoumeng");
+		isyoumeng = Integer.parseInt(youmeng);
+		if(isyoumeng == 1){
+			UMGameAgent.setDebugMode(true);
+			UMGameAgent.init(mActivity);
+		}
 		VivoUnionSDK.registerAccountCallback(mactivity, registeraccountcallback);
 	}
 
@@ -66,7 +76,6 @@ public class YaYawanconstants {
 	 * application初始化
 	 */
 	public static void applicationInit(Context applicationContext) {
-		// TODO Auto-generated method stub
 		//SDK初始化, 请传入自己游戏的appid替换demo中的appid。
 		APPID = ""+DeviceUtil.getGameInfo(applicationContext, "APPID");
 		APPKEY = ""+DeviceUtil.getGameInfo(applicationContext, "APPKEY");
@@ -80,19 +89,16 @@ public class YaYawanconstants {
 
 		@Override
 		public void onVivoAccountLogout(int arg0) {
-			// TODO Auto-generated method stub
 
 		}
 
 		@Override
 		public void onVivoAccountLoginCancel() {
-			// TODO Auto-generated method stub
 
 		}
 
 		@Override
 		public void onVivoAccountLogin(String userName, String openId, String authToken) {
-			// TODO Auto-generated method stub
 			uid = openId;
 			String username = userName;
 			String token = authToken;
@@ -164,13 +170,16 @@ public class YaYawanconstants {
 
 			@Override
 			public void onExitConfirm() {
-				// TODO Auto-generated method stub
+				if(isyoumeng == 1){
+					Log.i("tag", "友盟退出");
+					MobclickAgent.onProfileSignOff();
+					MobclickAgent.onKillProcess(mActivity);
+				}
 				callback.onExit();
 			}
-
+ 
 			@Override
 			public void onExitCancel() {
-				// TODO Auto-generated method stub
 
 			}
 		});
@@ -184,56 +193,54 @@ public class YaYawanconstants {
 	 * @param arg0
 	 */
 	public static void setData(Activity paramActivity, String roleId, String roleName,String roleLevel, String zoneId, String zoneName, String roleCTime,String ext){
-		// TODO Auto-generated method stub
 		Yayalog.loger("YaYawanconstants设置角色信息");
 		if (Integer.parseInt(ext) == 1){
+			if(isyoumeng ==1){
+				Log.i("tag", "友盟进入游戏");
+				MobclickAgent.onProfileSignIn(uid);
+			}
 			//登录成功后上报角色信息
 			//VivoUnionSDK.reportRoleInfo(new VivoRoleInfo("角色ID", "角色等级", "角色名称", "区服ID", "区服名称"));
 			VivoUnionSDK.reportRoleInfo(new VivoRoleInfo(roleId, roleLevel, roleName, zoneId, zoneName));
 		}
 	}
 	public static void onResume(Activity paramActivity) {
-		// TODO Auto-generated method stub
-
+		if(isyoumeng == 1){
+			MobclickAgent.onResume(paramActivity);
+		}
 	}
 
 	public static void onPause(Activity paramActivity) {
-		// TODO Auto-generated method stub
-
+		if(isyoumeng == 1){
+			MobclickAgent.onPause(paramActivity);
+		}
 	}
 
 	public static void onDestroy(Activity paramActivity) {
-		// TODO Auto-generated method stub
 
 	}
 
 	public static void onActivityResult(Activity paramActivity) {
-		// TODO Auto-generated method stub
 
 	}
 
 	public static void onNewIntent(Intent paramIntent) {
-		// TODO Auto-generated method stub
 
 	}
 
 	public static void onStart(Activity mActivity2) {
-		// TODO Auto-generated method stub
 
 	}
 
 	public static void onRestart(Activity paramActivity) {
-		// TODO Auto-generated method stub
 
 	}
 
 	public static void onCreate(Activity paramActivity) {
-		// TODO Auto-generated method stub
 
 	}
 
 	public static void onStop(Activity paramActivity) {
-		// TODO Auto-generated method stub
 
 	}
 
@@ -292,7 +299,6 @@ public class YaYawanconstants {
 	public static void loginFail() {
 		if (YYWMain.mUserCallBack != null) {
 			YYWMain.mUserCallBack.onLoginFailed(null, null);
-
 		}
 	}
 
@@ -313,10 +319,4 @@ public class YaYawanconstants {
 			YYWMain.mPayCallBack.onPayFailed(null, null);
 		}
 	}
-
-
-
-
-
-
 }

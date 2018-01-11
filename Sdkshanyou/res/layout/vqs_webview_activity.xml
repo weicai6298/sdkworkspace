@@ -1,0 +1,33 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:layout_gravity="center"
+    android:background="@color/vqs_gray_bg"
+    android:orientation="vertical"
+    tools:context="${relativePackage}.${activityClass}" >
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="50dp"
+        android:background="@color/vqs_main_color" >
+
+        <TextView
+            android:singleLine="true"
+            android:id="@+id/vqs_webview_activity_back_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="fill_parent"
+            android:drawableLeft="@drawable/vqs_main_back"
+            android:drawablePadding="10dp"
+            android:gravity="center_vertical"
+            android:paddingLeft="10dp"
+            android:textColor="@color/vqs_white"
+            android:textSize="18sp" />
+    </LinearLayout>
+	<WebView
+	    android:scrollbars="@null"
+	    android:id="@+id/vqs_webview_activity_wv"
+	    android:layout_width="fill_parent"
+	    android:layout_height="fill_parent"
+	    />
+</LinearLayout>

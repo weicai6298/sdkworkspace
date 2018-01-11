@@ -1,0 +1,137 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:layout_gravity="center"
+    android:background="@color/vqs_gray_bg"
+    android:orientation="vertical"
+    tools:context="${relativePackage}.${activityClass}" >
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="50dp"
+        android:background="@color/vqs_main_color" >
+
+        <TextView
+            android:id="@+id/vqs_unbind_activity_back_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="fill_parent"
+            android:drawableLeft="@drawable/vqs_main_back"
+            android:drawablePadding="10dp"
+            android:gravity="center_vertical"
+            android:paddingLeft="10dp"
+            android:text="解绑手机"
+            android:textColor="@color/vqs_white"
+            android:textSize="18sp" />
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/vqs_unbind_activity_userid_tv"
+        android:layout_width="fill_parent"
+        android:layout_height="50dp"
+        android:gravity="center_vertical"
+        android:paddingLeft="10dp"
+        android:text="用户名:456454523"
+        android:textColor="@color/vqs_text_black"
+        android:textSize="16sp" />
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="50dp"
+        android:background="@color/vqs_white"
+        android:orientation="horizontal" >
+
+        <TextView
+            android:layout_width="80dp"
+            android:layout_height="fill_parent"
+            android:layout_marginLeft="10dp"
+            android:gravity="center_vertical"
+            android:text="手机号"
+            android:textColor="@color/vqs_text_black"
+            android:textSize="16sp" />
+
+        <TextView
+            android:id="@+id/vqs_unbind_activity_phonenumber_tv"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:background="@color/vqs_white"
+            android:gravity="center_vertical"
+            android:singleLine="true"
+            android:numeric="integer"
+            android:textColor="@color/vqs_gray"
+            android:textSize="16sp" />
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_marginTop="0.5dp"
+        android:layout_width="fill_parent"
+        android:layout_height="50dp"
+        android:background="@color/vqs_white"
+        android:orientation="horizontal" >
+
+        <TextView
+            android:layout_width="80dp"
+            android:layout_height="fill_parent"
+            android:layout_marginLeft="10dp"
+            android:gravity="center_vertical"
+            android:text="验证码"
+            android:textColor="@color/vqs_text_black"
+            android:textSize="16sp" />
+
+        <EditText
+            android:numeric="integer"
+            android:id="@+id/vqs_unbind_activity_code_et"
+            android:layout_width="0dp"
+            android:layout_height="fill_parent"
+            android:layout_weight="1"
+            android:background="@color/vqs_white"
+            android:gravity="center_vertical"
+            android:hint="请输入验证码"
+            android:singleLine="true"
+            android:textColor="@color/vqs_gray"
+            android:textSize="16sp" />
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:paddingRight="10dp" >
+
+            <ImageView
+                android:id="@+id/vqs_unbind_activity_getcode_unclicked_iv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/vqs_getcode_unclicked"
+                android:visibility="invisible" />
+
+            <ImageView
+                android:id="@+id/vqs_unbind_activity_getcode_clicked_iv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/vqs_getcode_clicked" />
+
+            <TextView
+                android:id="@+id/vqs_unbind_activity_code_time_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/vqs_code_time"
+                android:gravity="center"
+                android:textColor="@color/vqs_text_gray"
+                android:visibility="invisible" />
+        </RelativeLayout>
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/vqs_unbind_activity_unbind_tv"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:background="@drawable/vqs_main_text_bg"
+        android:gravity="center"
+        android:text="解除绑定"
+        android:textColor="@color/vqs_white" />
+
+</LinearLayout>

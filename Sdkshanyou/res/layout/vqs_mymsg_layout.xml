@@ -1,0 +1,29 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    tools:context="${relativePackage}.${activityClass}" >
+	<TextView
+	    android:id="@+id/vqs_mymsg_content"
+	    android:singleLine="true"
+	    android:layout_width="0dp"
+	    android:layout_height="50dp"
+		android:gravity="center_vertical"
+		android:textSize="18sp"
+		android:layout_weight="1"
+		android:paddingLeft="10dp"
+		android:textColor="@color/vqs_text_black"	    
+	    
+	    />
+	<ImageView
+	    android:id="@+id/vqs_mymsg_enter_iv"
+	    android:paddingLeft="10dp"
+	    android:paddingRight="10dp"
+	  	android:src="@drawable/vqs_mymsg_enter"
+	    android:layout_width="wrap_content"
+	    android:layout_height="wrap_content"
+	    android:layout_gravity="center_vertical"
+	    />
+   
+</LinearLayout>

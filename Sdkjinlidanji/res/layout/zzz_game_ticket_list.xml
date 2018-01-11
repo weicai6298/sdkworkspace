@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.gionee.gameservice.online.wallet.gameticket.GameTicketListView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/zzz_listview"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:divider="@null"
+    android:dividerHeight="@dimen/zzz_item_divider_height"
+    android:paddingLeft="@dimen/zzz_list_padding_left"
+    android:paddingRight="@dimen/zzz_list_padding_right"/>

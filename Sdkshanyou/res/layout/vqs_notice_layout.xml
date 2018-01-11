@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="285dp"
+    android:layout_height="315dp"
+    android:minHeight="315dp"
+    android:layout_gravity="center"
+    android:orientation="vertical"
+    tools:context="${relativePackage}.${activityClass}" >
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="40dp"
+        android:background="@drawable/vqs_login_title_bg" >
+
+        <ImageView
+            android:id="@+id/vqs_notice_back_img"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:padding="10dp"
+            android:src="@drawable/vqs_main_back" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="公告"
+            android:textColor="@color/vqs_white"
+            android:textSize="16sp" />
+    </RelativeLayout>
+	<WebView
+	    android:scrollbars="@null"
+	    android:background="@color/vqs_white"
+	    android:id="@+id/vqs_notice_webview"
+	    android:layout_width="fill_parent"
+	    android:layout_height="275dp"
+	    />
+</LinearLayout>

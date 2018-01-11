@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:gravity="center_vertical"
+    android:paddingLeft="15dp"
+    android:paddingRight="15dp"
+    android:orientation="horizontal">
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/m4399_rec_amount_payment"
+        android:textSize="14sp"
+        android:textColor="#333333"
+        android:layout_marginRight="@dimen/m4399_rec_label_margin"
+        />
+    <TextView
+        android:id="@+id/sum"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/m4399_rec_color_yellow"
+        android:textSize="25sp"
+        android:textStyle="bold"
+        android:text="10" />
+    <TextView
+        android:id="@+id/unit"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="2dp"
+        android:layout_marginLeft="5dp"
+        android:text="@string/m4399_rec_unit_yuan"
+        android:textColor="#666666"
+        android:textSize="14sp" />
+
+
+    <cn.m4399.recharge.ui.widget.FtnnCircleTextView
+        android:id="@+id/subject"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="3dp"
+        android:layout_marginTop="2dp"
+        android:layout_weight="1.0"
+        android:ellipsize="marquee"
+        android:focusable="true"
+        android:focusableInTouchMode="true"
+        android:singleLine="true"
+        android:text="@string/m4399_rec_good_subject"
+        android:textColor="#666666"
+        android:textSize="14sp"
+        android:visibility="visible" />
+
+
+
+    <TextView
+        android:id="@+id/role_info"
+        style="@style/m4399GameInfoTextStyle"
+        android:text="luori366" />
+
+
+</LinearLayout>
+

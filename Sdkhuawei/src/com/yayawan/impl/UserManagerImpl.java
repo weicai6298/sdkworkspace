@@ -3,6 +3,9 @@ package com.yayawan.impl;
 import android.app.Activity;
 import android.widget.Toast;
 
+import com.huawei.android.hms.agent.HMSAgent;
+import com.huawei.android.hms.agent.hwid.handler.SignOutHandler;
+import com.huawei.hms.support.api.hwid.SignOutResult;
 import com.yayawan.callback.YYWExitCallback;
 import com.yayawan.callback.YYWUserManagerCallBack;
 import com.yayawan.proxy.YYWUserManager;
@@ -18,27 +21,35 @@ public class UserManagerImpl implements YYWUserManager {
 	@Override
 	public void login(Activity paramActivity, String paramString,
 			Object paramObject) {
-		// TODO Auto-generated method stub
 
 	}
 
 	@Override
-	public void logout(Activity paramActivity, String paramString,
+	public void logout(final Activity paramActivity, String paramString,
 			Object paramObject) {
-
+//		 HMSAgent.Hwid.signOut(new SignOutHandler() {
+//	            @Override
+//	            public void onResult(int rtnCode, SignOutResult signInResult) {
+//	                if (rtnCode == HMSAgent.AgentResultCode.HMSAGENT_SUCCESS && signInResult != null) {
+//	                    YaYawanconstants.Toast("退出登录成功");
+//	                    YaYawanconstants.loginOut();
+//	                } else {
+//	                	YaYawanconstants.Toast("退出登录失败:" + rtnCode);
+//	                }
+//	            }
+//
+//	        });
 	}
 
 	@Override
 	public void setUserListener(Activity paramActivity,
 			YYWUserManagerCallBack paramXMUserListener) {
-		// TODO Auto-generated method stub
 
 	}
 
 	@Override
 	public void exit(final Activity paramActivity,
 			final YYWExitCallback callback) {
-		// TODO Auto-generated method stub
 		// Toast.makeText(paramActivity, "退出游戏", Toast.LENGTH_SHORT).show();
 		System.out.println("来这里了");
 
@@ -48,13 +59,11 @@ public class UserManagerImpl implements YYWUserManager {
 
 	@Override
 	public void setRoleData(Activity arg0) {
-		// TODO Auto-generated method stub
 		
 	}
 	
 	@Override
 	public void setData(Activity paramActivity, String roleId, String roleName,String roleLevel, String zoneId, String zoneName, String roleCTime,String ext) {
-		// TODO Auto-generated method stub
 		YaYawanconstants.setData(paramActivity, roleId, roleName, roleLevel, zoneId, zoneName, roleCTime, ext);
 	}
 

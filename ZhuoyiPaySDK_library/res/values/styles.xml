@@ -1,0 +1,241 @@
+<resources>
+
+    <!--
+        Base application theme, dependent on API level. This theme is replaced
+        by AppBaseTheme from res/values-vXX/styles.xml on newer devices.
+    -->
+    <style name="AppBaseTheme" parent="android:Theme.Light">
+        <!--
+            Theme customizations available in newer API levels can go in
+            res/values-vXX/styles.xml, while customizations related to
+            backward-compatibility can go here.
+        -->
+    </style>
+
+    <style name="DialogBaseTheme" parent="@android:Theme.Holo.Light.Dialog">
+        <item name="android:windowBackground">@drawable/transparent_background</item>
+    </style>
+
+    <!-- Application theme. -->
+    <style name="AppTheme" parent="AppBaseTheme">
+        <!-- All customizations that are NOT specific to a particular API-level can go here. -->
+    </style>
+
+    <style name="zy_dialog" parent="@android:style/Theme.Dialog">
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowContentOverlay">@null</item>
+        <item name="android:backgroundDimEnabled">false</item>
+    </style>
+
+    <style name="zy_transparent">
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowFullscreen">true</item>
+        <item name="android:windowIsTranslucent">true</item>
+        <item name="android:windowAnimationStyle">@android:style/Animation.Translucent</item>
+    </style>
+
+    <style name="zy_translucent">
+        <item name="android:windowBackground">@color/zy_black_alph</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowFullscreen">true</item>
+        <item name="android:windowIsTranslucent">true</item>
+        <item name="android:windowAnimationStyle">@android:style/Animation.Translucent</item>
+    </style>
+
+    <style name="zy_style_tv_shadow">
+        <item name="android:textColor">@color/zy_white</item>
+        <item name="android:shadowColor">#ff000000</item>
+        <item name="android:shadowDx">1</item>
+        <item name="android:shadowDy">1</item>
+        <item name="android:shadowRadius">1</item>
+        <item name="android:background">@null</item>
+    </style>
+    
+    <style name="AccountDialog" parent="@android:Theme.Dialog">
+        <item name="android:windowFrame">@null</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowBackground">@drawable/transparent_background</item>
+        <item name="android:windowIsFloating">true</item>
+        <item name="android:windowContentOverlay">@null</item>
+    </style>
+
+    <style name="zhuoyi_dialog" parent="@android:style/Theme.Dialog">
+        <item name="android:windowFrame">@null</item>
+        <item name="android:windowIsFloating">true</item>
+        <item name="android:windowIsTranslucent">false</item>
+        <item name="android:windowBackground">@drawable/zy_pay_dialog_bg</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:backgroundDimEnabled">true</item>
+    </style>
+
+       <style name="LibDroiAccountPasswordStyle">
+        <item name="android:inputType">textPassword</item>
+        <item name="android:digits">@string/lib_droi_account_passwd_regular</item>
+        <item name="android:focusableInTouchMode">true</item>
+        <item name="android:singleLine">true</item>
+        <item name="android:hint"></item>
+        <item name="android:longClickable">false</item>
+        <item name="android:enabled">true</item>
+        <item name="android:focusable">true</item>
+        <item name="android:textSize">14sp</item>
+        <item name="android:maxLength">@integer/lib_droi_account_default_passwd_length</item>
+    </style>
+    
+       
+      
+        <!--  Style to show floating and translucent activity 
+  --> 
+ <style name="droi_account_sdk_dialog_activity_style" parent="@android:style/Theme.Dialog">
+ <!--  去黑边 
+  --> 
+  <item name="android:windowFrame">@null</item> 
+ <!--  设置是否悬浮 
+  --> 
+  <item name="android:windowIsFloating">true</item> 
+ <!--  设置全屏 
+  --> 
+  <item name="android:windowFullscreen">true</item> 
+ <!--  设置是否透明 
+  --> 
+  <item name="android:windowIsTranslucent">true</item> 
+ <!--  无标题 
+  --> 
+  <item name="android:windowNoTitle">true</item> 
+ <!--  背景 
+  --> 
+  <item name="android:background">@null</item> 
+ <!--  窗口背景 
+  --> 
+  <item name="android:windowBackground">@android:color/transparent</item> 
+<!--  是否变暗 
+  --> 
+  <item name="android:backgroundDimEnabled">true</item> 
+ <!--  点击空白部分activity不消失 
+  --> 
+  <item name="android:windowCloseOnTouchOutside">false</item> 
+  </style>
+ <style name="droi_account_sdk_dialog_style">
+  <item name="android:background">@drawable/droi_account_sdk_dialog_bg</item> 
+  <item name="android:minHeight">@dimen/droi_account_sdk_global_dialog_height</item> 
+  <item name="android:layout_gravity">center</item> 
+  <item name="android:layout_width">match_parent</item> 
+  <item name="android:layout_height">wrap_content</item> 
+  <item name="android:padding">@dimen/droi_account_sdk_global_dialog_padding</item> 
+  </style>
+ <style name="droi_account_sdk_dialog_title_style">
+  <item name="android:layout_gravity">center_horizontal</item> 
+  <item name="android:layout_width">wrap_content</item> 
+  <item name="android:layout_height">wrap_content</item> 
+  <item name="android:textColor">@color/droi_account_sdk_global_dialog_title_color</item> 
+  <item name="android:textSize">@dimen/droi_account_sdk_global_dialog_title_size</item> 
+  </style>
+ <style name="droi_account_sdk_input_view_style">
+  <item name="android:layout_gravity">center</item> 
+  <item name="android:layout_width">fill_parent</item> 
+  <item name="android:layout_height">@dimen/droi_account_sdk_global_inputbar_height</item> 
+  <item name="android:background">@null</item> 
+  <item name="android:paddingLeft">2dp</item> 
+  <item name="android:paddingRight">2dp</item> 
+  <item name="android:enabled">true</item> 
+  <item name="android:focusable">true</item> 
+  <item name="android:focusableInTouchMode">true</item> 
+  <item name="android:maxLines">1</item> 
+  <item name="android:textColor">@color/droi_account_sdk_input_font_color</item> 
+  <item name="android:textColorHint">@color/droi_account_sdk_input_hint_color</item> 
+  <item name="android:textCursorDrawable">@null</item> 
+  <item name="android:drawablePadding">@dimen/droi_account_sdk_global_et_drawable_padding</item> 
+  <item name="android:textSize">@dimen/droi_account_sdk_global_input_font_size</item> 
+  </style>
+ <style name="droi_account_sdk_password_style" parent="@style/droi_account_sdk_input_view_style">
+  <item name="android:inputType">textPassword</item> 
+  <item name="android:longClickable">false</item> 
+  </style>
+ <style name="droi_account_sdk_common_btn_style">
+  <item name="android:layout_height">@dimen/droi_account_sdk_global_button_height</item> 
+  <item name="android:layout_width">fill_parent</item> 
+  <item name="android:background">@drawable/droi_account_sdk_button_selector</item> 
+  <item name="android:focusable">true</item> 
+  <item name="android:gravity">center</item> 
+  <item name="android:textColor">@android:color/white</item> 
+  <item name="android:textSize">@dimen/droi_account_sdk_global_btn_text_size</item> 
+  </style>
+ <style name="droi_account_sdk_slipt_style">
+  <item name="android:background">#aeacac</item> 
+  <item name="android:layout_width">match_parent</item> 
+  <item name="android:layout_height">1.2dp</item> 
+  </style>
+ <style name="droi_account_sdk_dialog_back_style">
+  <item name="android:paddingLeft">4dp</item> 
+  <item name="android:paddingRight">12dp</item> 
+  <item name="android:paddingTop">4dp</item> 
+  <item name="android:paddingBottom">4dp</item> 
+  <item name="android:layout_width">wrap_content</item> 
+  <item name="android:layout_height">wrap_content</item> 
+  </style>
+ <!--  横屏 
+  --> 
+ <style name="sdk_land_dialog_style">
+  <item name="android:background">@drawable/droi_account_sdk_dialog_bg</item> 
+  <item name="android:minHeight">@dimen/sdk_land_dialog_height</item> 
+  <item name="android:layout_gravity">center</item> 
+  <item name="android:layout_width">match_parent</item> 
+  <item name="android:layout_height">wrap_content</item> 
+  <item name="android:padding">@dimen/droi_account_sdk_global_dialog_padding</item> 
+  </style>
+ <style name="sdk_land_dialog_title_style">
+  <item name="android:layout_gravity">center_horizontal</item> 
+  <item name="android:layout_width">wrap_content</item> 
+  <item name="android:layout_height">wrap_content</item> 
+  <item name="android:textColor">@color/droi_account_sdk_global_dialog_title_color</item> 
+  <item name="android:textSize">@dimen/sdk_land_dialog_title_size</item> 
+  </style>
+ <style name="sdk_land_input_view_style">
+  <item name="android:layout_gravity">center</item> 
+  <item name="android:layout_width">fill_parent</item> 
+  <item name="android:layout_height">@dimen/droi_account_sdk_global_inputbar_height</item> 
+  <item name="android:background">@null</item> 
+  <item name="android:paddingLeft">2dp</item> 
+  <item name="android:paddingRight">2dp</item> 
+  <item name="android:enabled">true</item> 
+  <item name="android:focusable">true</item> 
+  <item name="android:focusableInTouchMode">true</item> 
+  <item name="android:maxLines">1</item> 
+  <item name="android:textColor">@color/droi_account_sdk_input_font_color</item> 
+  <item name="android:textColorHint">@color/droi_account_sdk_input_hint_color</item> 
+  <item name="android:textCursorDrawable">@null</item> 
+  <item name="android:drawablePadding">@dimen/droi_account_sdk_global_et_drawable_padding</item> 
+  <item name="android:textSize">@dimen/droi_account_sdk_global_input_font_size</item> 
+  </style>
+<style name="sdk_land_password_style" parent="@style/sdk_land_input_view_style">
+  <item name="android:inputType">textPassword</item> 
+  <item name="android:longClickable">false</item> 
+  </style>
+ <style name="sdk_land_dialog_back_style">
+  <item name="android:paddingLeft">4dp</item> 
+  <item name="android:paddingRight">12dp</item> 
+  <item name="android:paddingTop">4dp</item> 
+  <item name="android:paddingBottom">2dp</item> 
+  <item name="android:layout_width">wrap_content</item> 
+  <item name="android:layout_height">wrap_content</item> 
+  </style>
+ <style name="sdk_land_common_btn_style">
+  <item name="android:layout_height">@dimen/sdk_land_common_btn_height</item> 
+  <item name="android:layout_width">fill_parent</item> 
+  <item name="android:background">@drawable/droi_account_sdk_button_selector</item> 
+  <item name="android:focusable">true</item> 
+  <item name="android:gravity">center</item> 
+  <item name="android:textColor">@android:color/white</item> 
+  <item name="android:textSize">@dimen/droi_account_sdk_global_btn_text_size</item> 
+  </style>
+       
+       
+       
+       
+       
+       
+       
+       
+       
+</resources>

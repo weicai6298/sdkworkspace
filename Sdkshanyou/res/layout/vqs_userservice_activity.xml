@@ -1,0 +1,74 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:layout_gravity="center"
+    android:background="@color/vqs_gray_bg"
+    android:orientation="vertical"
+    tools:context="${relativePackage}.${activityClass}" >
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="50dp"
+        android:background="@color/vqs_main_color" >
+
+        <TextView
+            android:id="@+id/vqs_userservice_activity_back_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="fill_parent"
+            android:drawableLeft="@drawable/vqs_main_back"
+            android:drawablePadding="10dp"
+            android:gravity="center_vertical"
+            android:paddingLeft="10dp"
+            android:text="客服中心"
+            android:textColor="@color/vqs_white"
+            android:textSize="18sp" />
+    </LinearLayout>
+    <ImageView 
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:src="@drawable/vqs_userserver_back"
+        />
+    <TextView
+          android:textColor="@color/vqs_text_black"
+        android:textSize="16sp"
+        android:background="@color/vqs_white"
+        android:paddingLeft="10dp"
+        android:layout_width="fill_parent"
+        android:layout_height="50dp"
+        android:layout_marginTop="10dp"
+        android:text="客服QQ1:"
+        android:gravity="center_vertical"
+        android:drawablePadding="10dp"
+        android:id="@+id/vqs_userserver_qq1"
+        android:drawableLeft="@drawable/vqs_userserver_qq"
+        />
+    <TextView
+          android:textColor="@color/vqs_text_black"
+        android:textSize="16sp"
+        android:background="@color/vqs_white"
+        android:paddingLeft="10dp"
+        android:layout_width="fill_parent"
+        android:layout_height="50dp"
+        android:layout_marginTop="1dp"
+        android:text="客服QQ2:"
+        android:gravity="center_vertical"
+        android:drawablePadding="10dp"
+        android:id="@+id/vqs_userserver_qq2"
+        android:drawableLeft="@drawable/vqs_userserver_qq"
+        />
+    <TextView
+        android:textColor="@color/vqs_text_black"
+        android:textSize="16sp"
+        android:background="@color/vqs_white"
+        android:paddingLeft="10dp"
+        android:layout_width="fill_parent"
+        android:layout_height="50dp"
+        android:layout_marginTop="10dp"
+        android:text="24小时热线:"
+        android:gravity="center_vertical"
+        android:drawablePadding="10dp"
+        android:id="@+id/vqs_userserver_phone"
+        android:drawableLeft="@drawable/vqs_userserver_phone"
+        />
+</LinearLayout>

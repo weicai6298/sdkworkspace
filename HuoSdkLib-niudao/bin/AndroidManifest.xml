@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<manifest xmlns:android="http://schemas.android.com/apk/res/android" xmlns:tools="http://schemas.android.com/tools" package="com.game.sdk">  
+  <uses-permission android:name="android.permission.INTERNET"/>  
+  <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>  
+  <uses-permission android:name="android.permission.CHANGE_NETWORK_STATE"/>  
+  <uses-permission android:name="android.permission.READ_PHONE_STATE"/>  
+  <uses-permission android:name="org.simalliance.openmobileapi.SMARTCARD"/>  
+  <uses-permission android:name="android.permission.NFC"/>  
+  <uses-feature android:name="android.hardware.nfc.hce"/>  
+  <uses-permission android:name="android.permission.SEND_SMS"/>  
+  <uses-permission android:name="android.permission.VIBRATE"/>  
+  <uses-permission android:name="android.webkit.permission.PLUGIN"/>  
+  <uses-permission android:name="android.permission.WRITE_SETTINGS"/>  
+  <uses-permission android:name="android.permission.CHANGE_WIFI_STATE"/>  
+  <uses-permission android:name="android.permission.WAKE_LOCK"/>  
+  <uses-permission android:name="android.permission.CALL_PHONE"/>  
+  <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW"/>  
+  <uses-permission android:name="android.permission.GET_TASKS"/>  
+  <!-- 在SDCard中创建与删除文件权限 -->  
+  <uses-permission android:name="android.permission.MOUNT_UNMOUNT_FILESYSTEMS"/>  
+  <uses-permission android:name="android.permission.ACCESS_WIFI_STATE"/>  
+  <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION"/>  
+  <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION"/>  
+  <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>  
+  <!-- 照相的权限 -->  
+  <uses-feature android:name="android.hardware.camera"/>  
+  <uses-permission android:name="android.permission.CAMERA"/>  
+  <uses-permission android:name="android.hardware.camera.autofocus"/>  
+  <!-- 读取短信验证码	可选 -->  
+  <uses-permission android:name="android.permission.RECEIVE_SMS"/>  
+  <uses-permission android:name="android.permission.READ_SMS"/>  
+  <!-- 录像需要的权限 -->  
+  <uses-permission android:name="android.permission.RECORD_VIDEO"/>  
+  <uses-permission android:name="android.permission.INTERACT_ACROSS_USERS_FULL"/>  
+  <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>  
+  <uses-permission android:name="com.android.launcher.permission.INSTALL_SHORTCUT"/>  
+  <uses-permission android:name="com.android.permission.WRITE_APN_SETTINGS"/>  
+  <application> 
+    <!--支付-->  
+    <activity android:name="com.game.sdk.ui.WebPayActivity" android:launchMode="singleTask" android:screenOrientation="behind" android:theme="@android:style/Theme.NoTitleBar.Fullscreen" android:configChanges="screenSize|orientation|keyboardHidden|navigation" android:windowSoftInputMode="adjustResize|stateHidden"/>  
+    <!-- 浮点 -->  
+    <activity android:name="com.game.sdk.ui.FloatWebActivity" android:configChanges="orientation|keyboardHidden" android:screenOrientation="behind" android:theme="@android:style/Theme.NoTitleBar.Fullscreen" android:windowSoftInputMode="adjustResize|stateHidden"/>  
+    <!--登陆-->  
+    <activity android:name="com.game.sdk.ui.HuoLoginActivity" android:theme="@android:style/Theme.Translucent.NoTitleBar.Fullscreen" android:configChanges="screenSize|orientation|keyboardHidden|navigation" android:windowSoftInputMode="adjustResize|stateHidden" android:screenOrientation="behind" android:launchMode="singleTask"/>  
+    <!--网页中心-->  
+    <activity android:name="com.game.sdk.ui.WebViewActivity" android:configChanges="screenSize|orientation|keyboardHidden|navigation" android:screenOrientation="behind" android:windowSoftInputMode="adjustResize|stateHidden"/>  
+    <!--消息中心-->  
+    <activity android:name="com.game.sdk.ui.MessageActivity" android:configChanges="screenSize|orientation|keyboardHidden|navigation" android:screenOrientation="behind" android:windowSoftInputMode="adjustResize|stateHidden"/>  
+    <!--服务-->  
+    <service android:name="com.game.sdk.HuosdkService"/>  
+    <!-- 支付宝alipay sdk begin -->  
+    <!-- 支付宝alipay sdk end -->  
+    <!-- 微付通支付activity  start -->  
+    <!-- 微付通支付activity  end -->  
+    <!--汇付宝start-->  
+    <!--汇付宝end-->  
+    <!-- 现在支付 start-->  
+    <!-- 微信WAP版支付 -->  
+    <!-- 现在支付 end-->  
+    <!--银联支付 start-->  
+    <!--银联支付 end-->  
+    <!--聚宝支付 start-->  
+    <!--聚宝支付 end-->  
+    <!-- 银联eco插件入口界面 -->  
+    <!-- 插件入口界面 -->  
+    <!-- 插件拍照界面 -->  
+    <!-- 插件录像界面 -->  
+    <!-- 百度插件部分 -->  
+    <!-- meta-data需要写在application中 -->  
+    <!--微信分享回调 -->  
+    <activity android:name="com.game.applicaionid.wxapi.WXEntryActivity" android:theme="@android:style/Theme.Translucent.NoTitleBar" android:configChanges="keyboardHidden|orientation|screenSize" android:exported="true" android:screenOrientation="portrait" android:label="noChangeScreenOrientation"/>  
+    <activity android:name="com.alipay.sdk.app.H5PayActivity" android:configChanges="orientation|keyboardHidden|navigation" android:exported="false" android:screenOrientation="behind" android:theme="@android:style/Theme.NoTitleBar.Fullscreen" android:windowSoftInputMode="adjustResize|stateHidden"/>  
+    <activity android:name="com.switfpass.pay.activity.QQWapPayWebView" android:configChanges="screenSize|orientation|keyboardHidden|navigation" android:screenOrientation="portrait" android:theme="@android:style/Theme.Translucent.NoTitleBar.Fullscreen"/>  
+    <meta-data android:name="HS_APPID" android:value="362620"/>  
+    <meta-data android:name="HS_CLIENTID" android:value="280"/>  
+    <meta-data android:name="HS_CLIENTKEY" android:value="8a58bef9b80e35bcc09537084ddacae4"/> 
+  </application> 
+</manifest>

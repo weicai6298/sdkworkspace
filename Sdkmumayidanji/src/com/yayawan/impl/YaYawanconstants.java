@@ -1,23 +1,14 @@
 package com.yayawan.impl;
 
 import org.json.JSONException;
-import android.provider.Settings;
 import org.json.JSONObject;
-import android.R.integer;
 import android.app.Activity;
-import android.app.AlertDialog;
-import android.app.Dialog;
 import android.content.Context;
-import android.content.DialogInterface;
 import android.content.Intent;
-import android.os.Build;
 import android.os.Bundle;
-import android.os.Handler;
-import android.os.Process;
 import android.text.TextUtils;
 import android.util.Log;
 import android.widget.Toast;
-
 import com.kkgame.sdk.bean.User;
 import com.kkgame.sdk.callback.KgameSdkCallback;
 import com.kkgame.sdkmain.KgameSdk;
@@ -32,10 +23,8 @@ import com.mumayi.paymentmain.ui.PaymentUsercenterContro;
 import com.mumayi.paymentmain.ui.pay.MMYInstance;
 import com.mumayi.paymentmain.ui.usercenter.PaymentFloatInteface;
 import com.mumayi.paymentmain.util.PaymentConstants;
-import com.mumayi.paymentmain.util.PaymentLog;
 import com.yayawan.callback.YYWExitCallback;
 import com.yayawan.domain.YYWUser;
-import com.yayawan.main.Kgame;
 import com.yayawan.main.YYWMain;
 
 
@@ -105,7 +94,8 @@ public abstract class YaYawanconstants{
         
      // 这个是检测是否具有开启悬浮窗的权限的方法 请开发者调用在登陆之前！！！
         instance.checkFloatPermission();
-        mUserCenter.showFloat();
+//		mUserCenter.showFloat();
+        
        
 //        mUserCenter.showFloat();
 		Log.i("tag","检测本地数据");
@@ -123,15 +113,13 @@ public abstract class YaYawanconstants{
 	 * application初始化
 	 */
 	public static void applicationInit(Context applicationContext) {
-		// TODO Auto-generated method stub
 		//		PluginManager.getInstance().performStartActivity(arg0)
 	}
 
 	static ITradeCallback tradecallback = new ITradeCallback() {
 
 		@Override
-		public void onTradeSuccess(String tradeType, int tradeCode, Intent
-				intent) {
+		public void onTradeSuccess(String tradeType, int tradeCode, Intent intent) {
 			Log.i("tag","Success-tradeType="+tradeType);
 			Log.i("tag","Success-tradeCode="+tradeCode);
 			Log.i("tag","Success-intent="+intent);
@@ -163,9 +151,7 @@ public abstract class YaYawanconstants{
 		}
 
 		@Override
-		public void onTradeFail(String tradeType, int tradeCode, Intent
-				intent) {
-			// TODO Auto-generated method stub
+		public void onTradeFail(String tradeType, int tradeCode, Intent intent) {
 			Log.i("tag","Fail-tradeType="+tradeType);
 			Log.i("tag","Fail-tradeCode="+tradeCode);
 			Log.i("tag","Fail-intent="+intent);
@@ -179,7 +165,6 @@ public abstract class YaYawanconstants{
 		@Override
 		public void onLoginSuccess(String loginSuccess) {
 			Log.i("tag","登录3");
-			// TODO Auto-generated method stub
 			Log.d("Welcome", "这是登陆成功的回调数据   ----->" + loginSuccess);
 			Log.i("tag","登录4");
 			if (!TextUtils.isEmpty(loginSuccess)) {
@@ -205,14 +190,13 @@ public abstract class YaYawanconstants{
 						Log.i("tag","uname="+uname);
 						
 						loginSuce(mActivity, uid, uname, token);
+//						instance.getUsercenterApi(mActivity).showFloat();
+						mUserCenter.showFloat();
 						Log.i("tag","登录8");
 
 
 						Log.d("","用户的uid-->" + uid + " 用户名-->" + uname + " 获取token-->" + token + " 获取session-->" + session);
 
-						//Intent go2play_intent = new Intent(WelcomeActivity.this, MainActivity.class);
-						//startActivity(go2play_intent);
-						//finish();
 					}
 
 				} catch (JSONException e) {
@@ -224,7 +208,6 @@ public abstract class YaYawanconstants{
 
 		@Override
 		public void onLoginFail(String status, String logiFail) {
-			// TODO Auto-generated method stub
 			loginFail();
 			Log.d("Welcome", "这是登陆失败的回调数据  status ----->" + status);
 			Log.d("Welcome", "这是登陆失败的回调数据  logiFail ----->" + logiFail);
@@ -253,13 +236,11 @@ public abstract class YaYawanconstants{
 		Log.i("tag","登录");
 		if(isinit){
 			Log.i("tag","登录1");
-			 instance.go2Login(mactivity);
+			instance.go2Login(mactivity);
 			Log.i("tag","登录2");
 		}else{
 			inintsdk(mactivity);
 		}
-
-
 	}
 	
 	/**
@@ -271,7 +252,6 @@ public abstract class YaYawanconstants{
 		
 		@Override
 		public void onLogoutSuccess(String logoutSuccess) {
-			// TODO Auto-generated method stub
 			 JSONObject mSuccJson = null;
 		        try {
 		            mSuccJson = new JSONObject(logoutSuccess);
@@ -289,7 +269,6 @@ public abstract class YaYawanconstants{
 		
 		@Override
 		public void onLogoutFail(String logoutFail) {
-			// TODO Auto-generated method stub
 			if (logoutFail.equals(PaymentConstants.LOGINOUT_FAILED)) {
 	            Log.d("注销失败账号信息", "失败了~~~~~");
 	        }
@@ -336,32 +315,27 @@ public abstract class YaYawanconstants{
 			@Override
 			public void run() {
 //				Log.i("tag","退出start-1");
-				// TODO Auto-generated method stub
 				KgameSdk.Exitgame(paramActivity, new KgameSdkCallback() {
 
 					
 
 					@Override
 					public void onCancel() {
-						// TODO Auto-generated method stub
 						
 					}
 
 					@Override
 					public void onError(int arg0) {
-						// TODO Auto-generated method stub
 						
 					}
 
 					@Override
 					public void onLogout() {
-						// TODO Auto-generated method stub
 						
 					}
 
 					@Override
 					public void onSuccess(User arg0, int arg1) {
-						// TODO Auto-generated method stub
 						Log.i("tag","退出Success1");
 //						Process.killProcess(Process.myPid());
 //						mActivity.finish();
@@ -386,7 +360,6 @@ public abstract class YaYawanconstants{
 	 * @param arg0
 	 */
 	public static void setData(Activity paramActivity, String roleId, String roleName,String roleLevel, String zoneId, String zoneName, String roleCTime,String ext){
-		// TODO Auto-generated method stub
 		Yayalog.loger("YaYawanconstants设置角色信息");
 		
 //		mzoneId = zoneId;
@@ -431,50 +404,42 @@ public abstract class YaYawanconstants{
 	}
 	
 	public static void onResume(Activity paramActivity) {
-		// TODO Auto-generated method stub
 //		mUserCenter .checkLogin();
+//		mUserCenter.showFloat();
 	}
 
 	public static void onPause(Activity paramActivity) {
-		// TODO Auto-generated method stub
 
 	}
 
 	public static void onDestroy(Activity paramActivity) {
-		// TODO Auto-generated method stub
 		// 释放资源，退出程序
 //				instance.exit();
 	}
 
 	public static void onActivityResult(Activity paramActivity, int paramInt1,
 			int paramInt2, Intent paramIntent) {
-		// TODO Auto-generated method stub
 
 	}
 
 	public static void onNewIntent(Intent paramIntent) {
-		// TODO Auto-generated method stub
 
 	}
 
 	public static void onStart(Activity mActivity2) {
-		// TODO Auto-generated method stub
 		// 显示悬浮框
 		 //显示悬浮窗
-		mUserCenter.showFloat();
+//		mUserCenter.showFloat();
 	}
 
 	public static void onRestart(Activity paramActivity) {
-		// TODO Auto-generated method stub
 //		mUserCenter.checkLogin();
 	}
 
 	public static void onCreate(Activity paramActivity) {
-		// TODO Auto-generated method stub
 	}
 
 	public static void onStop(Activity paramActivity) {
-		// TODO Auto-generated method stub
 	}
 
 

@@ -181,10 +181,6 @@ JNIEXPORT void JNICALL  Java_com_tencent_ysdk_module_user_UserNativeListener_OnR
           JniGetAndSetStringField(country, "country", jPersonInfoClass, jPerson, person);
           JniGetAndSetStringField(province, "province", jPersonInfoClass, jPerson, person);
           JniGetAndSetStringField(city, "city", jPersonInfoClass, jPerson, person);
-          JniGetAndSetBooleanField(is_yellow_vip, "is_yellow_vip", jPersonInfoClass, jPerson, person);
-          JniGetAndSetIntField(yellow_vip_level, "yellow_vip_level", jPersonInfoClass, jPerson, person);
-          JniGetAndSetBooleanField(is_yellow_year_vip, "is_yellow_year_vip", jPersonInfoClass, jPerson, person);
-          JniGetAndSetBooleanField(is_yellow_high_vip, "is_yellow_high_vip", jPersonInfoClass, jPerson, person);
 
           cRelactionRet.persons.push_back(person);
           env->DeleteLocalRef(jPerson);

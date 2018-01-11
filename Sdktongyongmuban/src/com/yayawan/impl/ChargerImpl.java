@@ -1,18 +1,11 @@
 package com.yayawan.impl;
 
-import java.net.URL;
-import java.net.URLEncoder;
-
 import org.json.JSONException;
 import org.json.JSONObject;
-
 import android.app.Activity;
 import android.app.ProgressDialog;
 import android.os.Handler;
 import android.os.Looper;
-import android.widget.Toast;
-
-
 import com.kkgame.sdk.login.ViewConstants;
 import com.kkgame.utils.DeviceUtil;
 import com.lidroid.jxutils.HttpUtils;
@@ -23,12 +16,8 @@ import com.lidroid.jxutils.http.callback.RequestCallBack;
 import com.lidroid.jxutils.http.client.HttpRequest.HttpMethod;
 import com.yayawan.callback.YYWPayCallBack;
 import com.yayawan.domain.YYWOrder;
-import com.yayawan.domain.YYWUser;
 import com.yayawan.main.YYWMain;
-import com.yayawan.main.YaYaWan;
 import com.yayawan.proxy.YYWCharger;
-import com.yayawan.sdktemplate.MainActivity;
-
 
 public class ChargerImpl implements YYWCharger {
 

@@ -29,6 +29,8 @@ import com.qihoo.gamecenter.sdk.matrix.Matrix;
 import com.qihoo.gamecenter.sdk.protocols.CPCallBackMgr.MatrixCallBack;
 import com.qihoo.gamecenter.sdk.protocols.ProtocolConfigs;
 import com.qihoo.gamecenter.sdk.protocols.ProtocolKeys;
+import com.umeng.analytics.MobclickAgent;
+import com.umeng.analytics.game.UMGameAgent;
 import com.yayawan.callback.YYWExitCallback;
 import com.yayawan.domain.YYWUser;
 import com.yayawan.main.YYWMain;
@@ -47,7 +49,17 @@ public class YaYawanconstants {
 	public static String mAccessToken;
 
 	public static String orderId;
-	;
+	
+	private static int isyoumeng;
+	
+	private static String dengluuid;
+	
+	private static String role_Id = "1";
+	private static String role_Name = "1";
+	private static String role_Level = "1";
+	private static String role_CTime = "1";
+	private static String zone_Id = "1";
+	private static String zone_Name = "1";
 	/**
 	 * 初始化sdk
 	 */
@@ -55,16 +67,19 @@ public class YaYawanconstants {
 		mActivity = mactivity;
 		Yayalog.loger("YaYawanconstants初始化sdk");
 		Boolean isLandscape = DeviceUtil.isLandscape(mActivity)?true:false;
-		Matrix.setActivity(mactivity, mSDKCallback);
-		
+		Matrix.setActivity(mactivity, mSDKCallback, false);
+		String youmeng = DeviceUtil.getGameInfo(mActivity, "isyoumeng");
+		isyoumeng = Integer.parseInt(youmeng);
+		if(isyoumeng == 1){
+			UMGameAgent.setDebugMode(true);
+			UMGameAgent.init(mActivity);
+		}
 
 	}
 	protected static boolean getLandscape(Context context) {
 		if (context == null) {
 			return false;
 		}
-		//		    	boolean landscape = (((Object) mActivity).getConfiguration().orientation
-		//		    			== Configuration.ORIENTATION_LANDSCAPE);
 		landscape = DeviceUtil.isLandscape(mActivity)?true:false;
 		return landscape;
 	}
@@ -98,12 +113,10 @@ public class YaYawanconstants {
 	public static void login(final Activity mactivity) {
 		Yayalog.loger("YaYawanconstantssdk登录");
 		Matrix.execute(mactivity,
-				getLoginIntent(false, mactivity, false),
+				getLoginIntent(DeviceUtil.isLandscape(mActivity)?true:false, mactivity, false),
 				new IDispatcherCallback() {
 			@Override
 			public void onFinished(String data) {
-				// TODO Auto-generated method stub
-				// press back
 				if (isCancelLogin(data)) {
 					System.out.println("登陆返回");
 					YYWMain.mUserCallBack.onLoginFailed(null,
@@ -112,11 +125,6 @@ public class YaYawanconstants {
 				}
 
 				// 显示一下登录结果
-				// Toast.makeText(SdkUserBaseActivity.this,
-				// data, Toast.LENGTH_LONG).show();
-				// Log.d(TAG,
-				// "mAccountSwitchSupportOfflineCB, data is " +
-				// data);
 				// 解析access_token
 				mAccessToken = parseAccessTokenFromLoginResult(data);
 
@@ -164,31 +172,20 @@ public class YaYawanconstants {
 		System.out.println("userid"+userid);
 		// 必需参数，用户access token，要使用注意过期和刷新问题，最大64字符。 
 		bundle.putString(ProtocolKeys.ACCESS_TOKEN, mAccessToken);
-		//		System.out.println("LoginImpl.mAccessToken"+mAccessToken);
 
 		bundle.putString(ProtocolKeys.AMOUNT, YYWMain.mOrder.money + "");
-		//		System.out.println("YYWMain.mOrder.money"+YYWMain.mOrder.money);
 		// 必需参数，所购买商品名称，应用指定，建议中文，最大10个中文字。
 		bundle.putString(ProtocolKeys.PRODUCT_NAME, YYWMain.mOrder.goods);
-		//		System.out.println("YYWMain.mOrder.goods"+YYWMain.mOrder.goods);
 
 		// 必需参数，购买商品的商品id，应用指定，最大16字符。
 		bundle.putString(ProtocolKeys.PRODUCT_ID, orderId);
-		//		System.out.println("orderId:"+orderId);
-
 		bundle.putString(ProtocolKeys.NOTIFY_URI,
 				DeviceUtil.getGameInfo(mactivity, "callback"));
-		//		 http://union.yayawan.com/pay/notify/1990796034/1774865554/
-		//		System.out.println("ProtocolKeys.NOTIFY_URI:"+DeviceUtil.getGameInfo(mactivity, "callback"));
 		bundle.putString(ProtocolKeys.APP_NAME,
 				DeviceUtil.getGameInfo(mactivity, "gamename"));
-		//		System.out.println("ProtocolKeys.APP_NAME:"+DeviceUtil.getGameInfo(mactivity, "gamename"));
 		bundle.putString(ProtocolKeys.APP_USER_NAME, YYWMain.mUser.userName);
-		//		System.out.println("YYWMain.mUser.userName:"+YYWMain.mUser.userName);
 		bundle.putString(ProtocolKeys.APP_USER_ID, YYWMain.mUser.uid);
-		//		System.out.println("YYWMain.mUser.uid:"+YYWMain.mUser.uid);
 		bundle.putString(ProtocolKeys.APP_ORDER_ID, orderId);
-		//		System.out.println("orderId:"+orderId);
 		Intent intent = new Intent(mactivity, ContainerActivity.class);
 		intent.putExtras(bundle);
 		return intent;
@@ -223,16 +220,18 @@ public class YaYawanconstants {
 
 			@Override
 			public void onFinished(String arg0) {
-				// TODO Auto-generated method stub
-
 				if (arg0.contains("2")) {
-
-
 					mActivity.runOnUiThread(new Runnable() {
 
 						@Override
 						public void run() {
 							// TODO Auto-generated method stub
+							if(isyoumeng == 1){
+								Log.i("tag", "友盟退出");
+								MobclickAgent.onProfileSignOff();
+								MobclickAgent.onKillProcess(mActivity);
+							}
+							doSdkGetUserInfoByCP("exitServer");
 							callback.onExit();
 						}
 					});
@@ -252,15 +251,38 @@ public class YaYawanconstants {
 	public static void setData(Activity paramActivity, String roleId, String roleName,String roleLevel, String zoneId, String zoneName, String roleCTime,String ext){
 		// TODO Auto-generated method stub
 		Yayalog.loger("YaYawanconstants设置角色信息");
+		role_Id =roleId;
+		role_Name = roleName;
+		role_Level = roleLevel;
+		role_CTime = roleCTime;
+		zone_Id = zoneId;
+		zone_Name = zoneName;
+		 //1为角色登陆成功  2为角色创建  3为角色升级。
+		if (Integer.parseInt(ext) == 1){
+			if(isyoumeng ==1){
+				Log.i("tag", "友盟进入游戏");
+				MobclickAgent.onProfileSignIn(dengluuid);
+			}
+			doSdkGetUserInfoByCP("enterServer");
+		}else if (Integer.parseInt(ext) == 2){
+			doSdkGetUserInfoByCP("createRole");
+		}else if(Integer.parseInt(ext) == 3){
+			doSdkGetUserInfoByCP("levelUp");
+		}
+		
 	}
 	public static void onResume(Activity paramActivity) {
 		// TODO Auto-generated method stub
-
+		if(isyoumeng == 1){
+			MobclickAgent.onResume(paramActivity);
+		}
 	}
 
 	public static void onPause(Activity paramActivity) {
 		// TODO Auto-generated method stub
-
+		if(isyoumeng == 1){
+			MobclickAgent.onPause(paramActivity);
+		}
 	}
 
 	public static void onDestroy(Activity paramActivity) {
@@ -465,7 +487,7 @@ public class YaYawanconstants {
 					String uid = app_id.substring(2, app_id.length());
 					Log.i("tag","uid="+uid);
 					YYWMain.mUser.uid =uid + "-"+ id + "";
-					;
+					dengluuid = YYWMain.mUser.uid;
 					YYWMain.mUser.userName =uid + "-" +name + "";
 					// YYWMain.mUser.nick = data.getNickName();
 					YYWMain.mUser.token = JSONUtil.formatToken(mactivity,
@@ -697,4 +719,87 @@ public class YaYawanconstants {
 		});
 
 	}
+	
+	/**
+     * 角色信息采集接口
+     */
+    public static void doSdkGetUserInfoByCP(String type) {
+    	
+    	//----------------------------模拟数据------------------------------
+    	//帐号余额
+        JSONArray balancelist = new JSONArray();
+        JSONObject balance1 = new JSONObject();
+        JSONObject balance2 = new JSONObject();
+
+        //好友关系
+        JSONArray friendlist = new JSONArray();
+        JSONObject friend1 = new JSONObject();
+        JSONObject friend2 = new JSONObject();
+
+        //排行榜列表
+        JSONArray ranklist = new JSONArray();
+        JSONObject rank1 = new JSONObject();
+        JSONObject rank2 = new JSONObject();
+
+        try {
+            balance1.put("balanceid","1");
+            balance1.put("balancename","bname1");
+            balance1.put("balancenum","200");
+            balance2.put("balanceid","2");
+            balance2.put("balancename","bname2");
+            balance2.put("balancenum","300");
+            balancelist.put(balance1).put(balance2);
+
+            friend1.put("roleid","1");
+            friend1.put("intimacy","0");
+            friend1.put("nexusid","300");
+            friend1.put("nexusname","情侣");
+            friend2.put("roleid","2");
+            friend2.put("intimacy","0");
+            friend2.put("nexusid","600");
+            friend2.put("nexusname","情侣");
+            friendlist.put(friend1).put(friend2);
+
+            rank1.put("listid","1");
+            rank1.put("listname","listname1");
+            rank1.put("num","num1");
+            rank1.put("coin","coin1");
+            rank1.put("cost","cost1");
+            rank2.put("listid","2");
+            rank2.put("listname","listname2");
+            rank2.put("num","num2");
+            rank2.put("coin","coin2");
+            rank2.put("cost","cost2");
+            ranklist.put(rank1).put(rank2);
+
+        } catch (JSONException e) {
+            e.printStackTrace();
+        }
+
+        HashMap<String, String> eventParams=new HashMap<String, String>();
+
+        eventParams.put("type",type);  //（必填）角色状态（enterServer（登录），levelUp（升级），createRole（创建角色），exitServer（退出））
+        eventParams.put("zoneid",zone_Id);  //（必填）游戏区服ID
+        eventParams.put("zonename",zone_Name);  //（必填）游戏区服名称
+        eventParams.put("roleid",role_Id);  //（必填）玩家角色ID
+        eventParams.put("rolename",role_Name);  //（必填）玩家角色名
+        eventParams.put("professionid","0");  //（必填）职业ID
+        eventParams.put("profession","无");  //（必填）职业名称
+        eventParams.put("gender","无");  //（必填）性别
+        eventParams.put("professionroleid","0");  //（选填）职业称号ID
+        eventParams.put("professionrolename","无");  //（选填）职业称号
+        eventParams.put("rolelevel",role_Level);  //（必填）玩家角色等级
+        eventParams.put("power","0");  //（必填）战力数值
+        eventParams.put("vip","0");  //（必填）当前用户VIP等级
+        eventParams.put("balance","0");  //（必填）帐号余额
+        eventParams.put("partyid","0");  //（必填）所属帮派帮派ID
+        eventParams.put("partyname","无");  //（必填）所属帮派名称
+        eventParams.put("partyroleid","0");  //（必填）帮派称号ID
+        eventParams.put("partyrolename","无");  //（必填）帮派称号名称
+        eventParams.put("friendlist","无");  //（必填）好友关系
+//        eventParams.put("ranking",ranklist.toString());  //（选填）排行榜列表
+        //参数eventParams相关的 key、value键值对 相关具体使用说明，请参考文档。
+        //----------------------------模拟数据------------------------------
+    	Matrix.statEventInfo(mActivity, eventParams);
+    }
 }

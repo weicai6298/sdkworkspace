@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/zzz_local_page_bg">
+
+    <com.gionee.gameservice.online.gift.MyGiftListView
+        android:id="@+id/zzz_listview"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:divider="@null"
+        android:footerDividersEnabled="false"
+        android:listSelector="@android:color/transparent"
+        android:overScrollMode="never"
+        android:scrollbars="none"/>
+
+    <RelativeLayout
+        android:id="@+id/zzz_empty"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:id="@+id/zzz_no_gift_des"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:drawablePadding="@dimen/zzz_no_gift_drawable_padding"
+            android:drawableTop="@drawable/zzz_no_data"
+            android:text="@string/zzz_no_gift_des"
+            android:textColor="@color/zzz_no_gift_des_color"
+            android:textSize="@dimen/zzz_no_gift_text_size"/>
+
+        <TextView
+            android:id="@+id/zzz_hot_gift"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="@dimen/zzz_more_hot_gift_margin_bottom"
+            android:text="@string/zzz_more_hot_gift"
+            android:textSize="@dimen/zzz_more_hot_gift_size"
+            android:textColor="@color/zzz_main_green"/>
+    </RelativeLayout>
+
+</RelativeLayout>

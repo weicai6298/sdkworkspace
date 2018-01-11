@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/huo_sdk_float_ll_menu_item"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_marginLeft="10dp"
+    android:gravity="center"
+    android:orientation="vertical"
+    >
+    <RelativeLayout
+        android:layout_width="25dp"
+        android:layout_height="20dp">
+        <ImageView
+            android:id="@+id/huo_sdk_iv_menu_item"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:adjustViewBounds="true"
+            android:scaleType="fitXY"
+            android:src="@drawable/huo_sdk_float_user_bg"
+            android:layout_alignParentBottom="true"
+            />
+        <TextView
+            android:id="@+id/huo_sdk_msg_red"
+            android:layout_width="12dp"
+            android:layout_height="12dp"
+            android:layout_alignParentRight="true"
+            android:text="0"
+            android:textColor="#ffffff"
+            android:background="@drawable/huo_sdk_msg_red_small_bg"
+            android:gravity="center"
+            android:textSize="6sp"
+            android:visibility="gone"
+            />
+    </RelativeLayout>
+    <TextView
+        android:id="@+id/huo_sdk_tv_menu_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:text="礼包礼包礼包礼包"
+        android:textColor="#ffffff"
+        android:textSize="@dimen/huo_sdk_float_min_font" />
+</LinearLayout>

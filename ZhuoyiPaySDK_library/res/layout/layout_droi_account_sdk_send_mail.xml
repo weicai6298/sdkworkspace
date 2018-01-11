@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/white"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:id="@+id/title_layout"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/droi_account_sdk_title_bar_height"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:id="@+id/droi_account_sdk_back_arrow"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/droi_account_sdk_global_padding"
+            android:background="@drawable/droi_account_sdk_dialog_back"
+            android:onClick="onBack" />
+
+        <TextView
+            android:id="@+id/droi_account_sdk_title_view"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:gravity="center"
+            android:text="@string/droi_account_sdk_send_mail_title"
+            android:textColor="@color/droi_account_sdk_topbar_text_color"
+            android:textSize="@dimen/droi_account_sdk_title_bar_font_size" />
+    </RelativeLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scrollbars="none"
+        android:fillViewport="true">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:id="@+id/droi_account_sdk_logo"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:layout_marginTop="@dimen/droi_account_sdk_mail_logo_margin_top"
+                android:scaleType="centerInside"
+                android:src="@drawable/droi_account_sdk_send_mail_logo" />
+
+            <TextView
+                android:id="@+id/droi_account_sdk_tv_address"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/droi_account_sdk_logo"
+                android:layout_gravity="center"
+                android:layout_marginBottom="@dimen/droi_account_sdk_active_mail_hint_margin_bottom"
+                android:layout_marginTop="@dimen/droi_account_sdk_active_mail_hint_margin_top"
+                android:gravity="center"
+                android:text="@string/droi_account_sdk_send_mail_content"
+                android:textColor="#737373"
+                android:textSize="15sp" />
+
+            <Button
+                android:id="@+id/droi_account_sdk_btn_resend"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/droi_account_sdk_tv_address"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="@dimen/droi_account_sdk_resend_mail_btn_margin_top"
+                android:background="@null"
+                android:text="@string/droi_account_sdk_mail_resend_hint"
+                android:textColor="@drawable/droi_account_sdk_text_view_selector" />
+
+            <Button
+                android:id="@+id/droi_account_sdk_btn_finish"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_gravity="bottom"
+                android:layout_marginBottom="@dimen/droi_account_sdk_mail_finish_btn_margin_bottom"
+                android:background="@drawable/droi_account_sdk_button_selector"
+                android:gravity="center"
+                android:text="@string/droi_account_sdk_send_mail_finish"
+                android:textColor="@android:color/white" />
+        </RelativeLayout>
+    </ScrollView>
+</LinearLayout>

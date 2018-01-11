@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="@dimen/m4399_ope_share_width"
+    android:layout_height="@dimen/m4399_ope_share_height"
+    android:background="@drawable/m4399_ope_vip_page_bg">
+
+    <RelativeLayout
+        android:id="@+id/share_close"
+        android:padding="15dp"
+        android:layout_alignParentRight="true"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:layout_width="14dp"
+            android:layout_height="14dp"
+            android:src="@drawable/m4399_rec_coupon_close"/>
+    </RelativeLayout>
+
+<LinearLayout
+    android:id="@+id/share_la"
+    android:layout_marginTop="15dp"
+    android:gravity="center_horizontal"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/m4399_ope_screenshot_share"
+        android:textSize="16sp"
+        android:textColor="#333333"/>
+    <ImageView
+        android:id="@+id/share_img"
+        android:layout_marginTop="13dp"
+        android:layout_width="178dp"
+        android:layout_height="100dp"
+        android:scaleType="fitCenter"
+        android:src="@drawable/m4399_ope_share_add"/>
+
+    <TextView
+        android:id="@+id/share_warn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/m4399_ope_share_choose_worn"
+        android:textSize="12sp"
+        android:textColor="#a3a3a3"
+        android:layout_marginTop="12dp"/>
+
+    <View
+        android:id="@+id/share_line"
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:background="#dddddd"
+        android:layout_marginTop="16dp"
+        />
+
+    <GridView
+        android:listSelector="@color/m4399_ope_transparent"
+        android:id="@+id/share_channel_gv"
+        android:layout_margin="15dp"
+        android:horizontalSpacing="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+    </GridView>
+
+
+</LinearLayout>
+
+<!--    <View
+        android:layout_alignBottom="@id/share_la"
+        android:id="@+id/share_mask_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#e0ffffff"
+        />-->
+</RelativeLayout>

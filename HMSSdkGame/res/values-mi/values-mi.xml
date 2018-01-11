@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="hms_game_floatwindow_click_fail_toast" priority="translator">"Whakahohe Whakarewa Tuarua mō HiGame i Pūwhakahaere Waea, Ngā tautuhinga rānei ka ngana anō."</string>
+    <string name="hms_game_login_notice">"Nau mai %1$s"</string>
+</resources>
