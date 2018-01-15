@@ -35,9 +35,9 @@ public class YaYawanconstants {
 	private static Activity mActivity;
 
 	private static boolean isinit = false;
-	
+
 	private static int isyoumeng;
-	
+
 	private static String uid;
 
 	/**
@@ -119,7 +119,7 @@ public class YaYawanconstants {
 					Log.i("tag", "ssoid=" + ssoid);
 					Log.i("tag", "登录成功");
 					loginSuce(mActivity, ssoid, ssoid, stoken);
-					// getVerifiedInfo();
+//					getVerifiedInfo();
 					Log.i("tag", "登录成功1");
 					// doGetUserInfoByCpClient(token, ssoid);
 				} catch (JSONException e) {
@@ -133,6 +133,35 @@ public class YaYawanconstants {
 			}
 		});
 	}
+
+//	protected static void getVerifiedInfo() {
+//		GameCenterSDK.getInstance().doGetVerifiedInfo(new ApiCallback() {
+//			@Override
+//			public void onSuccess(String resultMsg) {
+//				try {
+//					//解析年龄（age）
+//					int age = Integer.parseInt(resultMsg);
+//					if (age < 18) {
+//						//已实名但未成年，CP开始处理防沉迷
+//					} else {
+//						//已实名且已成年，尽情玩游戏吧
+//					}
+//				} catch (Exception e) {
+//					e.printStackTrace();
+//				}
+//			}
+//			@Override
+//			public void onFailure(String resultMsg, int resultCode) {
+//				if(resultCode == ApiResult.RESULT_CODE_VERIFIED_FAILED_AND_RESUME_GAME){
+//					//实名认证失败，但还可以继续玩游戏
+//				}else if(resultCode ==
+//						ApiResult.RESULT_CODE_VERIFIED_FAILED_AND_STOP_GAME){
+//					//实名认证失败，不允许继续游戏，CP需自己处理退出游戏
+//				}
+//			}
+//		});
+//
+//	}
 
 	/**
 	 * 支付
@@ -150,22 +179,22 @@ public class YaYawanconstants {
 		GameCenterSDK.getInstance().doPay(mactivity, payInfo,
 				new ApiCallback() {
 
-					@Override
-					public void onSuccess(String arg0) {
-						// TODO Auto-generated method stub
-						Log.i("tag", "支付成功");
-						paySuce();
-						Log.i("tag", "支付成功1");
-					}
+			@Override
+			public void onSuccess(String arg0) {
+				// TODO Auto-generated method stub
+				Log.i("tag", "支付成功");
+				paySuce();
+				Log.i("tag", "支付成功1");
+			}
 
-					@Override
-					public void onFailure(String arg0, int arg1) {
-						// TODO Auto-generated method stub
-						Log.i("tag", "支付失败");
-						payFail();
-						Log.i("tag", "支付失败1");
-					}
-				});
+			@Override
+			public void onFailure(String arg0, int arg1) {
+				// TODO Auto-generated method stub
+				Log.i("tag", "支付失败");
+				payFail();
+				Log.i("tag", "支付失败1");
+			}
+		});
 	}
 
 	/**
@@ -180,26 +209,26 @@ public class YaYawanconstants {
 		GameCenterSDK.getInstance().onExit(paramActivity,
 				new GameExitCallback() {
 
-					@Override
-					public void exitGame() {
-						// TODO Auto-generated method stub
-						mActivity.runOnUiThread(new Runnable() {
+			@Override
+			public void exitGame() {
+				// TODO Auto-generated method stub
+				mActivity.runOnUiThread(new Runnable() {
 
-							@Override
-							public void run() {
-								// TODO Auto-generated method stub
-								if(isyoumeng == 1){
-									Log.i("tag", "友盟退出");
-									MobclickAgent.onProfileSignOff();
-									MobclickAgent.onKillProcess(mActivity);
-								}
-//								callback.onExit();
-								mActivity.finish();
-								System.exit(0);
-							}
-						});
+					@Override
+					public void run() {
+						// TODO Auto-generated method stub
+						if(isyoumeng == 1){
+							Log.i("tag", "友盟退出");
+							MobclickAgent.onProfileSignOff();
+							MobclickAgent.onKillProcess(mActivity);
+						}
+						//								callback.onExit();
+						mActivity.finish();
+						System.exit(0);
 					}
 				});
+			}
+		});
 
 		//
 
@@ -220,7 +249,7 @@ public class YaYawanconstants {
 				Log.i("tag", "友盟进入游戏");
 				MobclickAgent.onProfileSignIn(uid);
 			}
-			
+
 			GameCenterSDK.getInstance().doReportUserGameInfoData(
 					new ReportUserGameInfoParam("3574641", zoneId, roleName,
 							roleLevel), new ApiCallback() {
