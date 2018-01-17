@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?><!--有边界的水波纹-->
+<ripple xmlns:android="http://schemas.android.com/apk/res/android"
+    android:color="#cccc">
+    <!--限定扩散范围，后面颜色值无效（但不能纯透明）-->
+    <item android:drawable="@drawable/openaccount_dialog_button_positive_shape" />
+</ripple>

@@ -1,0 +1,16 @@
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <item>
+        <shape android:shape="rectangle">
+            <solid android:color="@color/account_color_f7f7f7" />
+            <size
+                android:width="60dp"
+                android:height="60dp"></size>
+            <corners android:radius="2dp" />
+        </shape>
+    </item>
+    <item>
+        <bitmap
+            android:gravity="center"
+            android:src="@drawable/account_default_app_ic" />
+    </item>
+</layer-list>

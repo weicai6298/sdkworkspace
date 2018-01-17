@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?><!-- 按照MaterialDesign规范的对话框 -->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/openaccount_dialog_bg_shape"
+    android:orientation="vertical"
+    android:paddingTop="9dp">
+
+    <ImageView
+        android:id="@+id/account_capture_close_iv"
+        android:layout_width="12dp"
+        android:layout_height="12dp"
+        android:layout_gravity="right"
+        android:layout_marginBottom="8dp"
+        android:layout_marginRight="9dp"
+        android:background="@drawable/openaccount_dialog_close_sel" />
+
+    <com.meitu.library.openaccount.widget.OpenAccountBoldTextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:maxLines="2"
+        android:paddingLeft="16dp"
+        android:paddingRight="16dp"
+        android:text="@string/account_common_capture_tips"
+        android:textColor="@color/account_color_333333"
+        android:textSize="17dp" />
+
+    <!--验证码-->
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_marginTop="30dp"
+        android:paddingLeft="16dp"
+        android:paddingRight="16dp">
+
+        <ImageView
+            android:id="@+id/account_capture_code_refresh_iv"
+            android:layout_width="84dp"
+            android:layout_height="32dp"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="8dp" />
+
+        <com.meitu.library.openaccount.widget.AccountClearEditText
+            android:id="@+id/account_capture_code_et"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_toLeftOf="@id/account_capture_code_refresh_iv"
+            app:account_hint="@string/account_forget_code_hit"
+            app:account_hint_text_color="@color/account_color_dddddd"
+            app:account_right_clear_margin="4dp"
+            app:account_text_color="@color/account_color_333333"
+            app:account_text_size="16dp"
+            app:account_hint_size="14dp"/>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:layout_alignParentBottom="true"
+            android:background="@color/account_line_color" />
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/account_capture_refresh_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="right"
+        android:layout_marginRight="16dp"
+        android:layout_marginTop="7dp"
+        android:text="@string/account_forget_code_message"
+        android:textColor="@color/openaccount_common_color_sel"
+        android:textSize="13dp" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:layout_marginTop="26dp"
+        android:background="@color/account_line_color" />
+
+    <Button
+        android:id="@+id/account_btn_neutral"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_weight="1"
+        android:background="@drawable/openaccount_dialog_button_single_sel"
+        android:text="@string/account_common_sure"
+        android:textColor="@color/account_color_4085fa"
+        android:textSize="15dp" />
+</LinearLayout>

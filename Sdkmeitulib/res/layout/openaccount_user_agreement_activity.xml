@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:background="@color/account_white">
+
+    <com.meitu.library.openaccount.widget.OpenAccountTitleLayout
+        android:id="@+id/account_user_agreement_layout"
+        android:layout_width="match_parent"
+        android:layout_height="44dp"
+        android:background="@color/account_white"/>
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <com.meitu.library.openaccount.widget.OpenAccountWebView
+            android:id="@+id/account_user_agreement_web"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
+        <include
+            android:id="@+id/account_webview_net_error_layout"
+            layout="@layout/openaccount_webview_neterror_view"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:visibility="gone" />
+    </RelativeLayout>
+
+</LinearLayout>

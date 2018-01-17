@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="44dp"
+    tools:background="@color/account_white">
+
+    <TextView
+        android:id="@+id/account_bottom_bar_left_label"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="8dp"
+        android:drawableLeft="@drawable/openaccount_back_sel"
+        android:gravity="center"
+        android:singleLine="true"
+        android:textColor="@color/account_color_333333"
+        android:textSize="15dp"
+        tools:text="label" />
+
+    <com.meitu.library.openaccount.widget.OpenAccountBoldTextView
+        android:id="@+id/account_bottom_bar_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:layout_marginLeft="40dp"
+        android:layout_marginRight="40dp"
+        android:ellipsize="end"
+        android:gravity="center"
+        android:singleLine="true"
+        android:textColor="@color/account_color_333333"
+        android:textSize="16dp"
+        tools:text="title" />
+
+    <TextView
+        android:id="@+id/account_bottom_bar_right_label"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:layout_marginRight="16dp"
+        android:gravity="center"
+        android:singleLine="true"
+        android:textColor="@color/openaccount_color_333333_sel"
+        android:textSize="15dp"
+        android:visibility="gone"
+        tools:drawableRight="@drawable/openaccount_back_sel"
+        tools:text="label" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:layout_alignParentBottom="true"
+        android:background="@color/account_line_color" />
+</RelativeLayout>

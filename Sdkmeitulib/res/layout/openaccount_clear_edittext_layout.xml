@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ImageButton
+        android:id="@+id/account_imgBtn_clear_input"
+        android:layout_width="24dp"
+        android:layout_height="24dp"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:background="@drawable/openaccount_clear_sel"
+        android:visibility="invisible" />
+
+    <EditText
+        android:id="@+id/account_edit_input"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_toLeftOf="@id/account_imgBtn_clear_input"
+        android:background="@android:color/transparent"
+        android:textCursorDrawable="@drawable/openaccount_cursor_shape"/>
+
+</RelativeLayout>

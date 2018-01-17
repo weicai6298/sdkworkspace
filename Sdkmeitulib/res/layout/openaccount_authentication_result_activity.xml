@@ -1,0 +1,174 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:background="@color/account_white">
+    <!--Title-->
+    <com.meitu.library.openaccount.widget.OpenAccountTitleLayout
+        android:id="@+id/account_auth_back_layout"
+        android:layout_width="match_parent"
+        android:layout_height="44dp"
+        android:background="@color/account_white"
+        app:account_title="@string/account_auth_title" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scrollbars="none"
+        android:layout_below="@id/account_auth_back_layout">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <!--手机图标-->
+            <ImageView
+                android:id="@+id/account_auth_result_iv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/openaccount_authentication_result_success_ic"
+                android:layout_marginTop="37dp"
+                android:layout_centerHorizontal="true"/>
+            <!--认证结果描述-->
+            <com.meitu.library.openaccount.widget.OpenAccountBoldTextView
+                android:id="@+id/account_auth_result_desc_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="40dp"
+                android:text="@string/account_auth_result_desc"
+                android:textColor="@color/account_color_333333"
+                android:textSize="17dp"
+                android:layout_below="@id/account_auth_result_iv"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="45dp"
+                android:orientation="vertical"
+                android:layout_below="@id/account_auth_result_desc_tv">
+
+                <!--证件类型-->
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:layout_marginTop="16dp"
+                    android:paddingLeft="20dp"
+                    android:paddingRight="20dp">
+
+                    <TextView
+                        android:id="@+id/account_auth_result_type_tv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:paddingRight="16dp"
+                        android:text="@string/account_auth_type"
+                        android:textColor="@color/account_color_333333"
+                        android:textSize="16dp" />
+
+                    <TextView
+                        android:id="@+id/account_auth_result_type_value_tv"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="@dimen/account_auth_id_margin_left"
+                        android:layout_toRightOf="@id/account_auth_result_type_tv"
+                        android:gravity="center|left"
+                        android:text="@string/account_auth_id_china"
+                        android:textColor="@color/account_color_333333"
+                        android:textSize="16dp" />
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="0.5dp"
+                        android:layout_alignParentBottom="true"
+                        android:background="@color/account_line_color" />
+                </RelativeLayout>
+
+                <!--真实姓名-->
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:layout_marginTop="16dp"
+                    android:paddingLeft="20dp"
+                    android:paddingRight="20dp">
+
+                    <TextView
+                        android:id="@+id/account_auth_result_name_tv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:paddingRight="16dp"
+                        android:text="@string/account_auth_name"
+                        android:textColor="@color/account_color_333333"
+                        android:textSize="16dp" />
+
+                    <TextView
+                        android:id="@+id/account_auth_result_name_value_tv"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="@dimen/account_auth_id_margin_left"
+                        android:layout_toRightOf="@id/account_auth_result_name_tv"
+                        android:gravity="center|left"
+                        android:textSize="16dp"
+                        android:textColor="@color/account_color_333333" />
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="0.5dp"
+                        android:layout_alignParentBottom="true"
+                        android:background="@color/account_line_color" />
+                </RelativeLayout>
+
+                <!--证件号码-->
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:layout_marginTop="16dp"
+                    android:paddingLeft="20dp"
+                    android:paddingRight="20dp">
+
+                    <TextView
+                        android:id="@+id/account_auth_result_tv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:paddingRight="16dp"
+                        android:text="@string/account_auth_code"
+                        android:textColor="@color/account_color_333333"
+                        android:textSize="16dp" />
+
+                    <TextView
+                        android:id="@+id/account_auth_result_value_tv"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="@dimen/account_auth_id_margin_left"
+                        android:layout_toRightOf="@id/account_auth_result_tv"
+                        android:gravity="center|left"
+                        android:textSize="16dp"
+                        android:textColor="@color/account_color_333333" />
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="0.5dp"
+                        android:layout_alignParentBottom="true"
+                        android:background="@color/account_line_color" />
+                </RelativeLayout>
+
+                <Button
+                    android:id="@+id/account_auth_goon_btn"
+                    style="?android:attr/borderlessButtonStyle"
+                    android:layout_width="match_parent"
+                    android:layout_height="48dp"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginRight="20dp"
+                    android:layout_marginTop="56dp"
+                    android:layout_marginBottom="56dp"
+                    android:background="@drawable/openaccount_common_button_sel"
+                    android:text="@string/account_auth_result_goon"
+                    android:textColor="@color/account_white"
+                    android:textSize="17dp"/>
+            </LinearLayout>
+        </RelativeLayout>
+    </ScrollView>
+</RelativeLayout>

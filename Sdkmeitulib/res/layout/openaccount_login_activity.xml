@@ -1,0 +1,372 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:background="#f7f7f7">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:orientation="vertical">
+
+        <com.meitu.library.openaccount.widget.OpenAccountTitleLayout
+            android:id="@+id/account_login_back_layout"
+            android:layout_width="match_parent"
+            android:layout_height="44dp"
+            android:background="@color/account_white"
+            app:account_title="@string/account_title_login" />
+
+        <Space
+            android:layout_width="match_parent"
+            android:layout_height="8dp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="3.3"
+            android:background="@color/account_white"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:paddingLeft="20dp"
+            android:paddingRight="20dp">
+
+            <Space
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_gravity="center"
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:layout_width="60dp"
+                        android:layout_height="60dp"
+                        android:background="@drawable/openaccount_logo"
+                        android:scaleType="fitXY"
+                        android:src="@drawable/openaccount_stroke_shape" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginTop="10dp"
+                        android:gravity="center"
+                        android:text="@string/account_app"
+                        android:textColor="@color/account_color_333333"
+                        android:textSize="13dp" />
+                </LinearLayout>
+
+                <ImageView
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginTop="22dp"
+                    android:background="@drawable/openaccount_switch_ic" />
+
+                <LinearLayout
+
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <RelativeLayout
+                        android:layout_width="61dp"
+                        android:layout_height="61dp"
+                        android:layout_marginLeft="20dp">
+
+                        <ImageView
+                            android:id="@+id/account_other_icon_iv"
+                            android:layout_width="60dp"
+                            android:layout_height="60dp"
+                            android:layout_centerInParent="true"
+                            android:scaleType="fitXY"
+                            android:src="@drawable/openaccount_default_app_shape" />
+
+                        <ImageView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:background="@drawable/openaccount_stroke_shape" />
+                    </RelativeLayout>
+
+                    <TextView
+                        android:id="@+id/account_other_icon_tv"
+                        android:layout_width="101dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginTop="9dp"
+                        android:gravity="center"
+                        android:maxLines="2"
+                        android:textColor="@color/account_color_333333"
+                        android:textSize="13dp"
+                        tools:text="美图秀秀" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <Space
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="0.5" />
+            <!--手机栏-->
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="40dp">
+
+                <TextView
+                    android:id="@+id/account_login_country_code_tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:paddingRight="16dp"
+                    android:text="+86"
+                    android:textColor="@color/account_color_333333"
+                    android:textSize="16dp" />
+
+                <ImageView
+                    android:id="@+id/account_common_triangle"
+                    android:layout_width="6dp"
+                    android:layout_height="4dp"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="-12dp"
+                    android:layout_marginRight="9dp"
+                    android:layout_toRightOf="@id/account_login_country_code_tv"
+                    android:background="@drawable/openaccount_triangle_ic"
+                    android:clickable="false" />
+
+                <View
+                    android:id="@+id/account_login_country_line"
+                    android:layout_width="0.5dp"
+                    android:layout_height="16dp"
+                    android:layout_centerVertical="true"
+                    android:layout_toRightOf="@id/account_common_triangle"
+                    android:background="@color/account_line_color" />
+
+                <com.meitu.library.openaccount.widget.AccountClearEditText
+                    android:id="@+id/account_login_phone_et"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="7.5dp"
+                    android:layout_toRightOf="@id/account_login_country_line"
+                    app:account_hint="@string/account_input_phone"
+                    app:account_hint_text_color="@color/account_color_dddddd"
+                    app:account_input_type="phone"
+                    app:account_right_clear_margin="8dp"
+                    app:account_text_color="@color/account_color_333333"
+                    app:account_text_size="16dp" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="0.5dp"
+                    android:layout_alignParentBottom="true"
+                    android:background="@color/account_line_color" />
+            </RelativeLayout>
+
+            <!--密码栏-->
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_marginTop="15dp">
+
+                <Button
+                    android:id="@+id/account_login_password_see_btn"
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="8dp"
+                    android:background="@drawable/openaccount_password_see_sel" />
+
+                <com.meitu.library.openaccount.widget.AccountClearEditText
+                    android:id="@+id/account_login_password_et"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_toLeftOf="@id/account_login_password_see_btn"
+                    app:account_hint="@string/account_input_password"
+                    app:account_hint_text_color="@color/account_color_dddddd"
+                    app:account_input_type="textPassword"
+                    app:account_right_clear_margin="16dp"
+                    app:account_text_color="@color/account_color_333333"
+                    app:account_text_size="16dp" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="0.5dp"
+                    android:layout_alignParentBottom="true"
+                    android:background="@color/account_line_color" />
+            </RelativeLayout>
+            <!--验证码-->
+            <RelativeLayout
+                android:id="@+id/account_phone_capture_rl"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_marginTop="15dp"
+                android:visibility="gone">
+
+                <ImageView
+                    android:id="@+id/account_phone_code_refresh_iv"
+                    android:layout_width="84dp"
+                    android:layout_height="32dp"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="8dp" />
+
+                <com.meitu.library.openaccount.widget.AccountClearEditText
+                    android:id="@+id/account_phone_code_et"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_toLeftOf="@id/account_phone_code_refresh_iv"
+                    app:account_hint="@string/account_forget_code_hit"
+                    app:account_hint_text_color="@color/account_color_dddddd"
+                    app:account_right_clear_margin="16dp"
+                    app:account_text_color="@color/account_color_333333"
+                    app:account_text_size="16dp" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="0.5dp"
+                    android:layout_alignParentBottom="true"
+                    android:background="@color/account_line_color" />
+            </RelativeLayout>
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:id="@+id/account_login_message_tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="right"
+                    android:layout_marginLeft="3.5dp"
+                    android:layout_marginTop="7dp"
+                    android:text="@string/account_title_sms"
+                    android:textColor="@color/openaccount_common_color_sel"
+                    android:textSize="13dp" />
+
+                <TextView
+                    android:id="@+id/account_phone_refresh_tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="right"
+                    android:layout_marginTop="7dp"
+                    android:text="@string/account_forget_code_message"
+                    android:textColor="@color/openaccount_common_color_sel"
+                    android:textSize="13dp"
+                    android:visibility="gone" />
+            </FrameLayout>
+
+            <Space
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1" />
+
+            <Button
+                android:id="@+id/account_login_btn"
+                style="?android:attr/borderlessButtonStyle"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:background="@drawable/openaccount_common_button_sel"
+                android:text="@string/account_login_text"
+                android:textColor="@color/account_white"
+                android:textSize="17dp" />
+
+            <!--忘记密码和立即注册-->
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_gravity="center"
+                android:layout_marginTop="10dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/account_login_to_forget_tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/account_forget_password_text"
+                    android:textColor="@color/openaccount_common_color_sel"
+                    android:textSize="13dp" />
+
+                <View
+                    android:layout_width="0.5dp"
+                    android:layout_height="16dp"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="9.5dp"
+                    android:layout_toRightOf="@id/account_login_country_code_tv"
+                    android:background="@color/account_line_color" />
+
+                <TextView
+                    android:id="@+id/account_login_to_register_tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="@string/account_register_text"
+                    android:textColor="@color/openaccount_common_color_sel"
+                    android:textSize="13dp" />
+
+            </LinearLayout>
+
+            <Space
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <Space
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="@string/account_login_permission_text"
+                android:textColor="@color/account_color_bbbbbb"
+                android:textSize="15dp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="15dp"
+                android:drawableLeft="@drawable/openaccount_oval_shape"
+                android:drawablePadding="7dp"
+                android:gravity="center"
+                android:text="@string/account_login_permission_info_text"
+                android:textColor="@color/account_color_bfbfbf"
+                android:textSize="12dp" />
+
+            <Space
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="3" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <FrameLayout
+        android:id="@+id/account_common_message_fl"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="44dp"
+        android:minHeight="36dp" />
+</RelativeLayout>

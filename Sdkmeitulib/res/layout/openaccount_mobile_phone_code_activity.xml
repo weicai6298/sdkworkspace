@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:background="@color/account_white">
+
+    <com.meitu.library.openaccount.widget.OpenAccountTitleLayout
+        android:id="@+id/account_city_back_layout"
+        android:layout_width="match_parent"
+        android:layout_height="44dp"
+        android:background="@color/account_white"
+        app:account_title="@string/account_area_title" />
+
+    <RelativeLayout
+        android:id="@+id/rl_search"
+        android:layout_width="fill_parent"
+        android:layout_height="29dp"
+        android:layout_below="@+id/account_city_back_layout"
+        android:layout_margin="9dp"
+        android:background="@drawable/openaccount_shape_rect_bg_white_radius_6">
+
+        <EditText
+            android:id="@+id/edt_search_mobile_code"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="6dp"
+            android:background="@android:color/transparent"
+            android:imeOptions="actionSearch"
+            android:paddingLeft="1dp"
+            android:paddingRight="1dp"
+            android:singleLine="true"
+            android:textColor="@color/account_color_333333"
+            android:textCursorDrawable="@drawable/openaccount_cursor_shape"
+            android:textSize="14dp" />
+
+        <TextView
+            android:id="@+id/tv_search_hint"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:drawableLeft="@drawable/openaccount_ic_search_black"
+            android:gravity="center"
+            android:text="@string/account_area_search"
+            android:textColor="@color/account_color_bbbbbb"
+            android:textSize="14dp"/>
+
+    </RelativeLayout>
+
+    <com.meitu.library.openaccount.city.widget.OpenAccountIndexableExpandListView
+        android:id="@+id/mobile_code_expandlistview"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/rl_search"
+        android:cacheColorHint="@android:color/transparent"
+        android:divider="@android:color/transparent"
+        android:dividerHeight="0dp"
+        android:fastScrollEnabled="false"
+        android:footerDividersEnabled="false" />
+
+    <com.meitu.library.openaccount.city.widget.OpenAccountIndexableExpandListView
+        android:id="@+id/search_mobile_code_expandlistview"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/rl_search"
+        android:layout_marginTop="40dp"
+        android:cacheColorHint="@android:color/transparent"
+        android:divider="@android:color/transparent"
+        android:dividerHeight="0dp"
+        android:fastScrollEnabled="false"
+        android:footerDividersEnabled="false"
+        android:visibility="gone" />
+
+    <RelativeLayout
+        android:id="@+id/rl_empty_search_result_view"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_below="@+id/rl_search"
+        android:visibility="gone">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="100dip"
+            android:gravity="center_horizontal"
+            android:text="@string/account_choose_mobile_code_empty_tip"
+            android:textColor="@color/account_color_333333"
+            android:textSize="14dp" />
+    </RelativeLayout>
+
+
+</RelativeLayout>

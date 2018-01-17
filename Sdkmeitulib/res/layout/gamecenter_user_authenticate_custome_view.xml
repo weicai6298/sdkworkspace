@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:gravity="center_horizontal"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="320dp"
+        android:layout_height="59dp"
+        android:background="@color/gamecenter_color_F3F3F3"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="126dp"
+            android:layout_height="25dp"
+            android:gravity="center"
+            android:text="@string/gamecenter_user_authenticate_ui_title"
+            android:textColor="@color/gamecenter_color_E6000000"
+            android:textSize="18dp" />
+    </LinearLayout>
+
+    <TextView
+        android:layout_width="293dp"
+        android:layout_height="88dp"
+        android:layout_marginLeft="13dp"
+        android:layout_marginRight="13dp"
+        android:layout_marginTop="15dp"
+        android:text="@string/gamecenter_user_authenticate_ui_content"
+        android:textColor="@color/gamecenter_color_E6000000"
+        android:textSize="15dp" />
+
+    <View
+        android:layout_width="320dp"
+        android:layout_height="1dp"
+        android:background="@color/gamecenter_dialog_divider_line_color" />
+
+    <TextView
+        android:id="@+id/gamecenter_begin_user_authenticate_tv"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:background="@drawable/gamecenter_user_authenticate_background"
+        android:gravity="center"
+        android:text="@string/gamecenter_user_authenticate_ui_action_text"
+        android:textColor="@color/gamecenter_color_3BB73B"
+        android:textSize="15dp" />
+</LinearLayout>

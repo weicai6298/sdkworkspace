@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:background="@color/account_white">
+
+    <com.meitu.library.openaccount.widget.OpenAccountTitleLayout
+        android:id="@+id/account_city_back_layout"
+        android:layout_width="match_parent"
+        android:layout_height="44dp"
+        android:background="@color/account_white"
+        app:account_title="@string/account_area_title" />
+
+
+    <FrameLayout
+        android:id="@+id/content_frame"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+</LinearLayout>

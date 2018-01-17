@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/openaccount_dialog_bg_shape"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/tV_Select_Date_Title"
+        android:layout_width="wrap_content"
+        android:layout_height="48dp"
+        android:layout_marginLeft="12dp"
+        android:gravity="center_vertical"
+        android:textColor="@color/account_color_4085fa"
+        android:textSize="16dp" />
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="20dp">
+
+        <LinearLayout
+            android:layout_width="75dp"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            android:orientation="vertical">
+
+            <ImageButton
+                android:id="@+id/imgBtn_year_top"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:background="@android:color/transparent"
+                android:src="@drawable/openaccount_imgbtn_top" />
+
+            <com.meitu.library.openaccount.widget.date.wheel.OpenAccountWheelView
+                android:id="@+id/year"
+                android:layout_width="75dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="1dp" />
+
+            <ImageButton
+                android:id="@+id/imgBtn_year_bottom"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:background="@android:color/transparent"
+                android:src="@drawable/openaccount_imgbtn_bottom" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="75dp"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            android:orientation="vertical">
+
+            <ImageButton
+                android:id="@+id/imgBtn_month_top"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:background="@android:color/transparent"
+                android:src="@drawable/openaccount_imgbtn_top" />
+
+            <com.meitu.library.openaccount.widget.date.wheel.OpenAccountWheelView
+                android:id="@+id/month"
+                android:layout_width="75dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="1dp" />
+
+            <ImageButton
+                android:id="@+id/imgBtn_month_bottom"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:background="@android:color/transparent"
+                android:src="@drawable/openaccount_imgbtn_bottom" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="75dp"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            android:orientation="vertical">
+
+            <ImageButton
+                android:id="@+id/imgBtn_day_top"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:background="@android:color/transparent"
+                android:src="@drawable/openaccount_imgbtn_top" />
+
+            <com.meitu.library.openaccount.widget.date.wheel.OpenAccountWheelView
+                android:id="@+id/day"
+                android:layout_width="75dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="1dp" />
+
+            <ImageButton
+                android:id="@+id/imgBtn_day_bottom"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:background="@android:color/transparent"
+                android:src="@drawable/openaccount_imgbtn_bottom" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/account_line_size"
+        android:layout_marginTop="24dp"
+        android:background="@color/account_line_color" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_gravity="center"
+        android:gravity="center_horizontal">
+
+        <Button
+            android:id="@+id/btn_Select_Date_Cancel"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@drawable/openaccount_dialog_button_negative_sel"
+            android:gravity="center"
+            android:text="@string/account_common_cancel"
+            android:textAllCaps="false"
+            android:textColor="@color/account_color_bbbbbb"
+            android:textSize="18dp" />
+
+        <View
+            android:layout_width="@dimen/account_line_size"
+            android:layout_height="match_parent"
+            android:background="@color/account_line_color" />
+
+        <Button
+            android:id="@+id/btn_Select_Date_Submit"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@drawable/openaccount_dialog_button_positive_sel"
+            android:gravity="center"
+            android:text="@string/account_common_sure"
+            android:textAllCaps="false"
+            android:textColor="@color/account_color_4085fa"
+            android:textSize="18dp" />
+    </LinearLayout>
+
+</LinearLayout>

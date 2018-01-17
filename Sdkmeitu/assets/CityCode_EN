@@ -1,0 +1,5073 @@
+{
+    "158710000": {
+        "country": "Taiwan",
+        "provinces": {
+            "158710100": {
+                "province": "New Taipei City"
+            },
+            "158710200": {
+                "province": "Kaohsiung City"
+            },
+            "158710300": {
+                "province": "Taichung City"
+            },
+            "158710400": {
+                "province": "Taipei City"
+            },
+            "158710500": {
+                "province": "Taoyuan City"
+            },
+            "158710600": {
+                "province": "Tainan City"
+            },
+            "158710700": {
+                "province": "Changhua County"
+            },
+            "158710800": {
+                "province": "Pingtung County"
+            },
+            "158710900": {
+                "province": "Yunlin County"
+            },
+            "158711000": {
+                "province": "Miaoli County"
+            },
+            "158711100": {
+                "province": "Hsinchu County"
+            },
+            "158711200": {
+                "province": "Chiayi County"
+            },
+            "158711300": {
+                "province": "Nantou County"
+            },
+            "158711400": {
+                "province": "Yilan County"
+            },
+            "158711500": {
+                "province": "Hsinchu City"
+            },
+            "158711600": {
+                "province": "Keelung City"
+            },
+            "158711700": {
+                "province": "Hualien County"
+            },
+            "158711800": {
+                "province": "Chiayi City"
+            },
+            "158711900": {
+                "province": "Taitung County"
+            },
+            "158712000": {
+                "province": "Kinmen County"
+            },
+            "158712100": {
+                "province": "Penghu County"
+            }
+        }
+    },
+    "100000": {
+        "country": "China",
+        "provinces": {
+            "110000": {
+                "province": "Beijing"
+            },
+            "120000": {
+                "province": "Tianjin"
+            },
+            "130000": {
+                "province": "Hebei",
+                "citys": {
+                    "130100": "Shijiazhuang",
+                    "130200": "Tangshan",
+                    "130300": "Qinhuangdao",
+                    "130400": "Handan",
+                    "130500": "Xingtai",
+                    "130600": "Baoding",
+                    "130700": "Zhangjiakou",
+                    "130800": "Chengde",
+                    "130900": "Cangzhou",
+                    "131000": "Langfang",
+                    "131100": "Hengshui"
+                }
+            },
+            "140000": {
+                "province": "Shanxi",
+                "citys": {
+                    "140100": "Taiyuan",
+                    "140200": "Da Tong",
+                    "140300": "Yangquan",
+                    "140400": "Changzhi",
+                    "140500": "Jincheng",
+                    "140600": "Shuozhou",
+                    "140700": "Jinzhong",
+                    "140800": "Yuncheng",
+                    "140900": "Xinzhou",
+                    "141000": "Linfen",
+                    "141100": "Lvliang"
+                }
+            },
+            "150000": {
+                "province": "Inner Mongolia",
+                "citys": {
+                    "150100": "Hohhot",
+                    "150200": "Baotou",
+                    "150300": "Wuhai",
+                    "150400": "Chifeng",
+                    "150500": "Tongliao",
+                    "150600": "Ordos",
+                    "150700": "Hulun Buir",
+                    "150800": "Bayannaoer",
+                    "150900": "Wulanchabu",
+                    "152200": "Xingan Meng",
+                    "152500": "Xilinguole Meng",
+                    "152900": "Alxa League"
+                }
+            },
+            "210000": {
+                "province": "Liaoning",
+                "citys": {
+                    "210100": "Shenyang",
+                    "210200": "Dalian",
+                    "210300": "Anshan",
+                    "210400": "Fushun",
+                    "210500": "Benxi",
+                    "210600": "Dandong",
+                    "210700": "Jinzhou",
+                    "210800": "Yingkou",
+                    "210900": "Fuxin",
+                    "211000": "Liaoyang",
+                    "211100": "Panjin",
+                    "211200": "Tieling",
+                    "211300": "Chaoyang",
+                    "211400": "Huludao"
+                }
+            },
+            "220000": {
+                "province": "Jilin",
+                "citys": {
+                    "220100": "Changchun",
+                    "220200": "Jilin City",
+                    "220300": "Siping",
+                    "220400": "Liaoyuan",
+                    "220500": "Tonghua",
+                    "220600": "Mount Bai",
+                    "220700": "Songyuan",
+                    "220800": "Baicheng",
+                    "222400": "Yanbian"
+                }
+            },
+            "230000": {
+                "province": "Heilongjiang",
+                "citys": {
+                    "230100": "Harbin",
+                    "230200": "Qigihar",
+                    "230300": "Jixi",
+                    "230400": "Hegang",
+                    "230500": "Shuangyashan",
+                    "230600": "Daqing",
+                    "230700": "Yichun",
+                    "230800": "Jiamusi",
+                    "230900": "Qitaihe",
+                    "231000": "Mudanjiang",
+                    "231100": "Heihe",
+                    "231200": "Suihua",
+                    "232700": "Greater Khingan Range Area"
+                }
+            },
+            "310000": {
+                "province": "Shanghai"
+            },
+            "320000": {
+                "province": "Jiangsu",
+                "citys": {
+                    "320100": "Nanjing",
+                    "320200": "Wuxi",
+                    "320300": "Xuzhou",
+                    "320400": "Changzhou",
+                    "320500": "Suzhou",
+                    "320600": "Nantong",
+                    "320700": "Lianyungang",
+                    "320800": "Huaian",
+                    "320900": "Yancheng",
+                    "321000": "Yangzhou",
+                    "321100": "Zhenjiang",
+                    "321200": "Taizhou",
+                    "321300": "Suqian"
+                }
+            },
+            "330000": {
+                "province": "Zhejiang",
+                "citys": {
+                    "330100": "Hangzhou",
+                    "330200": "Ningbo",
+                    "330300": "Wenzhou",
+                    "330400": "Jiaxing",
+                    "330500": "Huzhou",
+                    "330600": "Shaoxing",
+                    "330700": "Jinhua",
+                    "330800": "Quzhou",
+                    "330900": "Zhoushan",
+                    "331000": "Taizhou",
+                    "331100": "Lishui"
+                }
+            },
+            "340000": {
+                "province": "Anhui",
+                "citys": {
+                    "340100": "Hefei",
+                    "340200": "Wuhu",
+                    "340300": "Bengbu",
+                    "340400": "Huainan",
+                    "340500": "Maanshan",
+                    "340600": "Huaibei",
+                    "340700": "Tongling",
+                    "340800": "Anqing",
+                    "341000": "Mount Huangshan",
+                    "341100": "Chuzhou",
+                    "341200": "Fuyang",
+                    "341300": "Suzhou",
+                    "341500": "Luan",
+                    "341600": "Bozhou",
+                    "341700": "Chizhou",
+                    "341800": "Xuancheng"
+                }
+            },
+            "350000": {
+                "province": "Fujian",
+                "citys": {
+                    "350100": "Fuzhou",
+                    "350200": "Xiamen",
+                    "350300": "Putian",
+                    "350400": "Sanming",
+                    "350500": "Quanzhou",
+                    "350600": "Zhangzhou",
+                    "350700": "Nanping",
+                    "350800": "Longyan",
+                    "350900": "Ningde"
+                }
+            },
+            "360000": {
+                "province": "Jiangxi",
+                "citys": {
+                    "360100": "Nanchang",
+                    "360200": "Jingdezhen",
+                    "360300": "Pingxiang",
+                    "360400": "Jiujiang",
+                    "360500": "Xinyu",
+                    "360600": "Yingtan",
+                    "360700": "Ganzhou",
+                    "360800": "JiAn",
+                    "360900": "Yichun",
+                    "361000": "Fuzhou",
+                    "361100": "Shangrao"
+                }
+            },
+            "370000": {
+                "province": "Shandong",
+                "citys": {
+                    "370100": "JiNan",
+                    "370200": "Qingdao",
+                    "370300": "Zibo",
+                    "370400": "Zaozhuang",
+                    "370500": "Dongying",
+                    "370600": "Yantai",
+                    "370700": "Weifang",
+                    "370800": "Jining",
+                    "370900": "Taian",
+                    "371000": "Weihai",
+                    "371100": "Sunshine",
+                    "371200": "Laiwu",
+                    "371300": "Linyi",
+                    "371400": "Texas",
+                    "371500": "Liaocheng",
+                    "371600": "Binzhou",
+                    "371700": "Heze"
+                }
+            },
+            "410000": {
+                "province": "Henan",
+                "citys": {
+                    "410100": "Zhengzhou",
+                    "410200": "Kaifeng",
+                    "410300": "Luoyang",
+                    "410400": "Pingdingshan",
+                    "410500": "Anyang",
+                    "410600": "Hebi",
+                    "410700": "Xinxiang",
+                    "410800": "Jiaozuo",
+                    "410900": "Puyang",
+                    "411000": "Xuchang",
+                    "411100": "Luohe",
+                    "411200": "Sanmenxia",
+                    "411300": "Nanyang",
+                    "411400": "Shangqiu",
+                    "411500": "Xinyang",
+                    "411600": "Zhoukou",
+                    "411700": "Zhumadian",
+                    "419001": "Jiyuan"
+                }
+            },
+            "420000": {
+                "province": "Hubei",
+                "citys": {
+                    "420100": "Wuhan",
+                    "420200": "Huangshi",
+                    "420300": "Shiyan",
+                    "420500": "Yichang",
+                    "420600": "Xiangyang",
+                    "420700": "Ezhou",
+                    "420800": "Jingmen",
+                    "420900": "Xiaogan",
+                    "421000": "Jingzhou",
+                    "421100": "Huanggang",
+                    "421200": "Xianning",
+                    "421300": "Suizhou",
+                    "422800": "Enshi",
+                    "429004": "Xiantao",
+                    "429005": "Qianjiang",
+                    "429006": "Tianmen",
+                    "429021": "Shennongjia"
+                }
+            },
+            "430000": {
+                "province": "Hunan",
+                "citys": {
+                    "430100": "Changsha",
+                    "430200": "Zhuzhou",
+                    "430300": "Xiangtan",
+                    "430400": "Hengyang",
+                    "430500": "Shaoyang",
+                    "430600": "Yueyang",
+                    "430700": "Changde",
+                    "430800": "Zhangjiajie",
+                    "430900": "Yiyang",
+                    "431000": "Chenzhou",
+                    "431100": "Yongzhou",
+                    "431200": "Huaihua",
+                    "431300": "Loudi",
+                    "433100": "Xiangxi"
+                }
+            },
+            "440000": {
+                "province": "Guangdong",
+                "citys": {
+                    "440100": "Guangzhou",
+                    "440200": "Shaoguan",
+                    "440300": "Shenzhen",
+                    "440400": "Zhuhai",
+                    "440500": "Shantou",
+                    "440600": "Foshan",
+                    "440700": "Jiangmen",
+                    "440800": "Zhanjiang",
+                    "440900": "Maoming",
+                    "441200": "Zhaoqing",
+                    "441300": "Huizhou",
+                    "441400": "Meizhou",
+                    "441500": "Shanwei",
+                    "441600": "Heyuan",
+                    "441700": "Yangjiang",
+                    "441800": "Qingyuan",
+                    "441900": "Dongguan",
+                    "442000": "Zhongshan",
+                    "445100": "Chaozhou",
+                    "445200": "Jieyang",
+                    "445300": "Yunfu",
+                    "449900": "Pratas Island"
+                }
+            },
+            "450000": {
+                "province": "Guangxi",
+                "citys": {
+                    "450100": "Nanning",
+                    "450200": "Liuzhou",
+                    "450300": "Guilin",
+                    "450400": "Wuzhou",
+                    "450500": "The North Sea",
+                    "450600": "Fangchenggang",
+                    "450700": "Qinzhou",
+                    "450800": "Guigang",
+                    "450900": "Yulin",
+                    "451000": "Baise",
+                    "451100": "Hezhou",
+                    "451200": "Hechi",
+                    "451300": "Guest",
+                    "451400": "Chongzuo"
+                }
+            },
+            "460000": {
+                "province": "Hainan",
+                "citys": {
+                    "460100": "Haikou",
+                    "460200": "Sanya",
+                    "460300": "Sansha",
+                    "460400": "Danzhou",
+                    "469001": "Five Fingers Group",
+                    "469002": "Qionghai",
+                    "469005": "Wenchang",
+                    "469006": "Wanning",
+                    "469007": "Dongfang",
+                    "469021": "Dingan",
+                    "469022": "Tunchang",
+                    "469023": "Chengmai",
+                    "469024": "Lingao",
+                    "469025": "Baisha",
+                    "469026": "Changjiang",
+                    "469027": "Leche",
+                    "469028": "Lingshui",
+                    "469029": "Baoting",
+                    "469030": "Qiongzhong"
+                }
+            },
+            "500000": {
+                "province": "Chongqing"
+            },
+            "510000": {
+                "province": "Sichuan",
+                "citys": {
+                    "510100": "Chengdu",
+                    "510300": "Zigong",
+                    "510400": "Panzhihua",
+                    "510500": "Luzhou",
+                    "510600": "Deyang",
+                    "510700": "Mianyang",
+                    "510800": "Guangyuan",
+                    "510900": "Suining",
+                    "511000": "Neijiang",
+                    "511100": "Leshan",
+                    "511300": "Nanchong",
+                    "511400": "Meishan",
+                    "511500": "Yibin",
+                    "511600": "GuangAn",
+                    "511700": "Dazhou",
+                    "511800": "Yaan",
+                    "511900": "Bazhong",
+                    "512000": "Ziyang",
+                    "513200": "Aba",
+                    "513300": "Ganzi",
+                    "513400": "Liangshan"
+                }
+            },
+            "520000": {
+                "province": "Guizhou",
+                "citys": {
+                    "520100": "Guiyang",
+                    "520200": "Liupanshui",
+                    "520300": "Zunyi",
+                    "520400": "Anshun",
+                    "520500": "Bijie",
+                    "520600": "Tongren",
+                    "522300": "Qianxinan",
+                    "522600": "Qiandongnan",
+                    "522700": "Qiannan"
+                }
+            },
+            "530000": {
+                "province": "Yunnan",
+                "citys": {
+                    "530100": "Kunming",
+                    "530300": "Qujing",
+                    "530400": "Yuxi",
+                    "530500": "Baoshan",
+                    "530600": "Zhaotong",
+                    "530700": "Lijiang",
+                    "530800": "Puer",
+                    "530900": "Lincang",
+                    "532300": "Chuxiong",
+                    "532500": "Honghe",
+                    "532600": "Wenshan",
+                    "532800": "Xishuangbanna",
+                    "532900": "Dali",
+                    "533100": "Dehong",
+                    "533300": "Nujiang",
+                    "533400": "Diqing"
+                }
+            },
+            "540000": {
+                "province": "Tibet",
+                "citys": {
+                    "540100": "Lhasa",
+                    "540200": "Shigatse",
+                    "540300": "Changdu",
+                    "540400": "Linzhi",
+                    "542200": "Shannan Area",
+                    "542400": "Nagqu Area",
+                    "542500": "Ali Area"
+                }
+            },
+            "610000": {
+                "province": "Shaanxi",
+                "citys": {
+                    "610100": "XiAn",
+                    "610200": "Tongchuan",
+                    "610300": "Baoji",
+                    "610400": "Xianyang",
+                    "610500": "Weinan",
+                    "610600": "Yanan",
+                    "610700": "Hanzhoung",
+                    "610800": "Yulin",
+                    "610900": "Ankang",
+                    "611000": "Shangluo"
+                }
+            },
+            "620000": {
+                "province": "Gansu",
+                "citys": {
+                    "620100": "Lanzhou",
+                    "620200": "Jiayuguan",
+                    "620300": "Jinchang",
+                    "620400": "Silver",
+                    "620500": "Tianshui",
+                    "620600": "Wuwei",
+                    "620700": "Zhangye",
+                    "620800": "Pingliang",
+                    "620900": "Jiuquan",
+                    "621000": "Qingyang",
+                    "621100": "Dingxi",
+                    "621200": "Longnan",
+                    "622900": "Linxia",
+                    "623000": "Gannan"
+                }
+            },
+            "630000": {
+                "province": "Qinghai",
+                "citys": {
+                    "630100": "Xining",
+                    "630200": "Haidong",
+                    "632200": "Haibei",
+                    "632300": "Huangnan",
+                    "632500": "Hainan",
+                    "632600": "Guoluo",
+                    "632700": "Yushu",
+                    "632800": "Haixi"
+                }
+            },
+            "640000": {
+                "province": "Ningxia",
+                "citys": {
+                    "640100": "Yinchuan",
+                    "640200": "Shizuishan",
+                    "640300": "Wuzhong",
+                    "640400": "Guyuan",
+                    "640500": "Zhongwei"
+                }
+            },
+            "650000": {
+                "province": "Xinjiang",
+                "citys": {
+                    "650100": "Urumqi",
+                    "650200": "Karamay",
+                    "650400": "Turpan",
+                    "652200": "Hami Area",
+                    "652300": "Changji",
+                    "652700": "Bortala",
+                    "652800": "Bayinguoleng",
+                    "652900": "Akesu Area",
+                    "653000": "Kizilsu Kirghiz",
+                    "653100": "Kashi Area",
+                    "653200": "Hetian Area",
+                    "654000": "Yili",
+                    "654200": "Tacheng Area",
+                    "654300": "Aletai Area",
+                    "659001": "Shihezi",
+                    "659002": "Alar",
+                    "659003": "Figure wooden Shook",
+                    "659004": "Wujiaqu",
+                    "659005": "Beitun"
+                }
+            },
+            "710000": {
+                "province": "Taiwan",
+                "citys": {
+                    "710100": "New Taipei City",
+                    "710200": "Kaohsiung City",
+                    "710300": "Taichung City",
+                    "710400": "Taipei City",
+                    "710500": "Taoyuan City",
+                    "710600": "Tainan City",
+                    "710700": "Changhua County",
+                    "710800": "Pingtung County",
+                    "710900": "Yunlin County",
+                    "711000": "Miaoli County",
+                    "711100": "Hsinchu County",
+                    "711200": "Chiayi County",
+                    "711300": "Nantou County",
+                    "711400": "Yilan County",
+                    "711500": "Hsinchu City",
+                    "711600": "Keelung City",
+                    "711700": "Hualien County",
+                    "711800": "Chiayi City",
+                    "711900": "Taitung County",
+                    "712000": "Kinmen County",
+                    "712100": "Penghu County"
+                }
+            },
+            "810000": {
+                "province": "Hong Kong"
+            },
+            "820000": {
+                "province": "Macau"
+            }
+        }
+    },
+    "10040000": {
+        "country": "Afghanistan"
+    },
+    "10080000": {
+        "country": "Albania"
+    },
+    "10120000": {
+        "country": "Algeria"
+    },
+    "10160000": {
+        "country": "American Samoa"
+    },
+    "10200000": {
+        "country": "Andorra"
+    },
+    "10240000": {
+        "country": "Angola"
+    },
+    "10280000": {
+        "country": "Antigua and Barbuda"
+    },
+    "10310000": {
+        "country": "Azerbaijan"
+    },
+    "10320000": {
+        "country": "Argentina",
+        "provinces": {
+            "10320100": {
+                "province": "Neuquén",
+                "citys": {
+                    "10320101": "Neuquén"
+                }
+            },
+            "10320200": {
+                "province": "Buenos Aires"
+            },
+            "10320300": {
+                "province": "Córdoba",
+                "citys": {
+                    "10320301": "Córdoba"
+                }
+            }
+        }
+    },
+    "10360000": {
+        "country": "Australia",
+        "provinces": {
+            "10360100": {
+                "province": "Northern Territory"
+            },
+            "10360200": {
+                "province": "South Australia",
+                "citys": {
+                    "10360201": "Adelaide"
+                }
+            },
+            "10360300": {
+                "province": "Tasmania",
+                "citys": {
+                    "10360301": "Hobart"
+                }
+            },
+            "10360400": {
+                "province": "New South Wales",
+                "citys": {
+                    "10360401": "North Ryde",
+                    "10360402": "Tuggerah",
+                    "10360403": "Sydney",
+                    "10360404": "Silverwater"
+                }
+            },
+            "10360500": {
+                "province": "Queensland",
+                "citys": {
+                    "10360501": "Brisbane",
+                    "10360502": "Townsville"
+                }
+            },
+            "10360600": {
+                "province": "Victoria",
+                "citys": {
+                    "10360601": "Brunswick",
+                    "10360602": "Melbourne",
+                    "10360603": "Preston"
+                }
+            },
+            "10360700": {
+                "province": "Western Australia",
+                "citys": {
+                    "10360701": "Perth"
+                }
+            },
+            "10360800": {
+                "province": "Australian Capital Territory",
+                "citys": {
+                    "10360801": "Canberra"
+                }
+            }
+        }
+    },
+    "10400000": {
+        "country": "Austria",
+        "provinces": {
+            "10400100": {
+                "province": "Carinthia",
+                "citys": {
+                    "10400101": "Klagenfurt"
+                }
+            },
+            "10400200": {
+                "province": "Styria",
+                "citys": {
+                    "10400201": "Graz"
+                }
+            },
+            "10400300": {
+                "province": "Vienna",
+                "citys": {
+                    "10400301": "Vienna"
+                }
+            }
+        }
+    },
+    "10440000": {
+        "country": "Bahamas"
+    },
+    "10480000": {
+        "country": "Bahrain"
+    },
+    "10500000": {
+        "country": "Bangladesh",
+        "provinces": {
+            "10500100": {
+                "province": "Dhaka"
+            }
+        }
+    },
+    "10510000": {
+        "country": "Armenia",
+        "provinces": {
+            "10510100": {
+                "province": "Yerevan"
+            }
+        }
+    },
+    "10520000": {
+        "country": "Barbados"
+    },
+    "10560000": {
+        "country": "Belgium",
+        "provinces": {
+            "10560100": {
+                "province": "Brussels Capital",
+                "citys": {
+                    "10560101": "Brussels"
+                }
+            },
+            "10560200": {
+                "province": "Flemish Region",
+                "citys": {
+                    "10560201": "Oostkamp",
+                    "10560202": "Antwerp",
+                    "10560203": "Zaventem",
+                    "10560204": "Ghent"
+                }
+            },
+            "10560300": {
+                "province": "Walloon Region",
+                "citys": {
+                    "10560301": "Saint-Ghislain",
+                    "10560302": "Gosselies"
+                }
+            }
+        }
+    },
+    "10600000": {
+        "country": "Bermuda"
+    },
+    "10640000": {
+        "country": "Bhutan"
+    },
+    "10680000": {
+        "country": "Bolivia"
+    },
+    "10700000": {
+        "country": "Bosnia and Herzegovina",
+        "provinces": {
+            "10700100": {
+                "province": "Sarajevo Canton",
+                "citys": {
+                    "10700101": "Sarajevo"
+                }
+            }
+        }
+    },
+    "10720000": {
+        "country": "Botswana"
+    },
+    "10760000": {
+        "country": "Brazil",
+        "provinces": {
+            "10760100": {
+                "province": "Rio Grande do Sul",
+                "citys": {
+                    "10760101": "Porto Alegre"
+                }
+            },
+            "10760200": {
+                "province": "Sao Paulo",
+                "citys": {
+                    "10760201": "Sao Paulo",
+                    "10760202": "Campinas",
+                    "10760203": "Sao Jose do Rio Preto",
+                    "10760204": "Guarulhos"
+                }
+            },
+            "10760300": {
+                "province": "Santa Catarina",
+                "citys": {
+                    "10760301": "Florianopolis"
+                }
+            },
+            "10760400": {
+                "province": "Bahia",
+                "citys": {
+                    "10760401": "Salvador"
+                }
+            },
+            "10760500": {
+                "province": "Parana",
+                "citys": {
+                    "10760501": "Curitiba"
+                }
+            },
+            "10760600": {
+                "province": "Paraiba",
+                "citys": {
+                    "10760601": "Campina Grande"
+                }
+            },
+            "10760700": {
+                "province": "Goias",
+                "citys": {
+                    "10760701": "Goiania"
+                }
+            },
+            "10760800": {
+                "province": "Minas Gerais",
+                "citys": {
+                    "10760801": "Belo Horizonte"
+                }
+            },
+            "10760900": {
+                "province": "Distrito Federal",
+                "citys": {
+                    "10760901": "Brasilia"
+                }
+            },
+            "10761000": {
+                "province": "Rio De Janeiro",
+                "citys": {
+                    "10761001": "Rio De Janeiro"
+                }
+            }
+        }
+    },
+    "10840000": {
+        "country": "Belize"
+    },
+    "10860000": {
+        "country": "British India Ocean Territory"
+    },
+    "10900000": {
+        "country": "Solomon Islands"
+    },
+    "10920000": {
+        "country": "The British Virgin Islands"
+    },
+    "10960000": {
+        "country": "Brunei"
+    },
+    "11000000": {
+        "country": "Bulgaria",
+        "provinces": {
+            "11000100": {
+                "province": "Blagoevgrad",
+                "citys": {
+                    "11000101": "Blagoevgrad"
+                }
+            },
+            "11000200": {
+                "province": "Varna",
+                "citys": {
+                    "11000201": "Varna"
+                }
+            },
+            "11000300": {
+                "province": "Sofia"
+            },
+            "11000400": {
+                "province": "Haskovo",
+                "citys": {
+                    "11000401": "Haskovo"
+                }
+            }
+        }
+    },
+    "11040000": {
+        "country": "Burma"
+    },
+    "11080000": {
+        "country": "Burundi"
+    },
+    "11120000": {
+        "country": "Belarus",
+        "provinces": {
+            "11120100": {
+                "province": "Minsk Oblast",
+                "citys": {
+                    "11120101": "Minsk"
+                }
+            }
+        }
+    },
+    "11160000": {
+        "country": "Kampuchea"
+    },
+    "11200000": {
+        "country": "Cameroon"
+    },
+    "11240000": {
+        "country": "Canada",
+        "provinces": {
+            "11240100": {
+                "province": "British Columbia",
+                "citys": {
+                    "11240101": "North Vancouver",
+                    "11240102": "Kamloops",
+                    "11240103": "Kelowna",
+                    "11240104": "Burnaby",
+                    "11240105": "Vancouver",
+                    "11240106": "Surrey",
+                    "11240107": "Victoria"
+                }
+            },
+            "11240200": {
+                "province": "Ontario",
+                "citys": {
+                    "11240201": "London",
+                    "11240202": "Burlington",
+                    "11240203": "Cambridge",
+                    "11240204": "North Bay",
+                    "11240205": "Hamilton",
+                    "11240206": "St. Catharines",
+                    "11240207": "Guelph",
+                    "11240208": "Kitchener",
+                    "11240209": "Toronto",
+                    "11240210": "Oakville",
+                    "11240211": "Mississauga",
+                    "11240212": "Barrie",
+                    "11240213": "Brampton",
+                    "11240214": "Brantford",
+                    "11240215": "Cornwall",
+                    "11240216": "Peterborough",
+                    "11240217": "Thunder Bay",
+                    "11240218": "Ottawa",
+                    "11240219": "Windsor",
+                    "11240220": "Waterloo",
+                    "11240221": "Malton",
+                    "11240222": "Newmarket",
+                    "11240223": "Belleville",
+                    "11240224": "Kingston"
+                }
+            },
+            "11240300": {
+                "province": "Nova Scotia",
+                "citys": {
+                    "11240301": "Halifax",
+                    "11240302": "Antigonish",
+                    "11240303": "Wolfville"
+                }
+            },
+            "11240400": {
+                "province": "Manitoba",
+                "citys": {
+                    "11240401": "Winnipeg"
+                }
+            },
+            "11240500": {
+                "province": "Newfoundland and Labrador",
+                "citys": {
+                    "11240501": "St. Johns"
+                }
+            },
+            "11240600": {
+                "province": "Alberta",
+                "citys": {
+                    "11240601": "Calgary",
+                    "11240602": "Edmonton",
+                    "11240603": "Athabasca"
+                }
+            },
+            "11240700": {
+                "province": "Saskatchewan",
+                "citys": {
+                    "11240701": "Saskatoon",
+                    "11240702": "Regina"
+                }
+            },
+            "11240800": {
+                "province": "Quebec",
+                "citys": {
+                    "11240801": "Beauharnois",
+                    "11240802": "Saint-Lambert",
+                    "11240803": "Laurentides",
+                    "11240804": "Joliette",
+                    "11240805": "Montreal",
+                    "11240806": "Hull"
+                }
+            }
+        }
+    },
+    "11320000": {
+        "country": "Cape Verde"
+    },
+    "11360000": {
+        "country": "The Cayman Islands"
+    },
+    "11400000": {
+        "country": "Central African"
+    },
+    "11440000": {
+        "country": "Sri Lanka"
+    },
+    "11480000": {
+        "country": "Chad"
+    },
+    "11520000": {
+        "country": "Chile",
+        "provinces": {
+            "11520100": {
+                "province": "Santiago"
+            },
+            "11520200": {
+                "province": "Valparaiso",
+                "citys": {
+                    "11520201": "Valparaiso"
+                }
+            }
+        }
+    },
+    "11620000": {
+        "country": "Christmas Island"
+    },
+    "11660000": {
+        "country": "Cocos (Keeling) Islands (the)"
+    },
+    "11700000": {
+        "country": "Columbia",
+        "provinces": {
+            "11700100": {
+                "province": "Antioquia",
+                "citys": {
+                    "11700101": "Medellin"
+                }
+            },
+            "11700200": {
+                "province": "Bogota"
+            }
+        }
+    },
+    "11740000": {
+        "country": "Comoros"
+    },
+    "11750000": {
+        "country": "Mayotte"
+    },
+    "11780000": {
+        "country": "Republic of the Congo"
+    },
+    "11800000": {
+        "country": "Democratic Republic of Congo",
+        "provinces": {
+            "11800100": {
+                "province": "Kinshasa"
+            }
+        }
+    },
+    "11840000": {
+        "country": "The Cook Islands"
+    },
+    "11880000": {
+        "country": "Costa Rica",
+        "provinces": {
+            "11880100": {
+                "province": "San Jose",
+                "citys": {
+                    "11880101": "San Jose"
+                }
+            },
+            "11880200": {
+                "province": "Alajuela",
+                "citys": {
+                    "11880201": "Alajuela"
+                }
+            }
+        }
+    },
+    "11910000": {
+        "country": "Croatia",
+        "provinces": {
+            "11910100": {
+                "province": "Zagreb"
+            }
+        }
+    },
+    "11920000": {
+        "country": "Cuba"
+    },
+    "11960000": {
+        "country": "Cyprus",
+        "provinces": {
+            "11960100": {
+                "province": "Nicosia"
+            }
+        }
+    },
+    "12030000": {
+        "country": "Czech",
+        "provinces": {
+            "12030100": {
+                "province": "Zlin",
+                "citys": {
+                    "12030101": "Zlin"
+                }
+            },
+            "12030200": {
+                "province": "South Moravian",
+                "citys": {
+                    "12030201": "Brno"
+                }
+            },
+            "12030300": {
+                "province": "Prague"
+            },
+            "12030400": {
+                "province": "Hradec Králové",
+                "citys": {
+                    "12030401": "Hradec Králové"
+                }
+            }
+        }
+    },
+    "12040000": {
+        "country": "Benin",
+        "provinces": {
+            "12040100": {
+                "province": "Cotonou"
+            }
+        }
+    },
+    "12080000": {
+        "country": "Denmark",
+        "provinces": {
+            "12080100": {
+                "province": "Region Syddanmark",
+                "citys": {
+                    "12080101": "Odense",
+                    "12080102": "Billund"
+                }
+            },
+            "12080200": {
+                "province": "Region Hovedstaden",
+                "citys": {
+                    "12080201": "Copenhagen",
+                    "12080202": "Ballerup",
+                    "12080203": "Tastrup"
+                }
+            }
+        }
+    },
+    "12120000": {
+        "country": "Dominica"
+    },
+    "12140000": {
+        "country": "Dominica",
+        "provinces": {
+            "12140100": {
+                "province": "Columbia"
+            }
+        }
+    },
+    "12180000": {
+        "country": "Ecuador",
+        "provinces": {
+            "12180100": {
+                "province": "Guayas",
+                "citys": {
+                    "12180101": "Guayaquil"
+                }
+            }
+        }
+    },
+    "12220000": {
+        "country": "El Salvador"
+    },
+    "12260000": {
+        "country": "Equatorial Guinea"
+    },
+    "12310000": {
+        "country": "Ethiopia"
+    },
+    "12320000": {
+        "country": "Eritrea"
+    },
+    "12330000": {
+        "country": "Estonia",
+        "provinces": {
+            "12330100": {
+                "province": "Ida-Viru maakond",
+                "citys": {
+                    "12330101": "Johvi"
+                }
+            },
+            "12330200": {
+                "province": "Harju maakond",
+                "citys": {
+                    "12330201": "Tallinn"
+                }
+            }
+        }
+    },
+    "12340000": {
+        "country": "The Faroe Islands"
+    },
+    "12380000": {
+        "country": "Falkland Islands"
+    },
+    "12390000": {
+        "country": "South Georgia and the South Sandwich Islands"
+    },
+    "12420000": {
+        "country": "Fiji",
+        "provinces": {
+            "12420100": {
+                "province": "Suva"
+            }
+        }
+    },
+    "12460000": {
+        "country": "Finland",
+        "provinces": {
+            "12460100": {
+                "province": "Uusimaa",
+                "citys": {
+                    "12460101": "Helsinki"
+                }
+            },
+            "12460200": {
+                "province": "Pirkanmaa",
+                "citys": {
+                    "12460201": "Tampere"
+                }
+            }
+        }
+    },
+    "12480000": {
+        "country": "Aland Islands"
+    },
+    "12500000": {
+        "country": "France",
+        "provinces": {
+            "12500100": {
+                "province": "Haute Normandie",
+                "citys": {
+                    "12500101": "Rouen"
+                }
+            },
+            "12500200": {
+                "province": "Nord Pas de Calais",
+                "citys": {
+                    "12500201": "Gravelines",
+                    "12500202": "Lille",
+                    "12500203": "Roubaix"
+                }
+            },
+            "12500300": {
+                "province": "Midi Pyrenees",
+                "citys": {
+                    "12500301": "Toulouse"
+                }
+            },
+            "12500400": {
+                "province": "Indre-et-Loire",
+                "citys": {
+                    "12500401": "Tours"
+                }
+            },
+            "12500500": {
+                "province": "Brittany",
+                "citys": {
+                    "12500501": "Rennes"
+                }
+            },
+            "12500600": {
+                "province": "Provence Alpes blue coast",
+                "citys": {
+                    "12500601": "Nice",
+                    "12500602": "Marseille"
+                }
+            },
+            "12500700": {
+                "province": "Languedoc Roussillon",
+                "citys": {
+                    "12500701": "Montpellier"
+                }
+            },
+            "12500800": {
+                "province": "Ile de France",
+                "citys": {
+                    "12500801": "Le Plessis Bouchard",
+                    "12500802": "Saint Ouen",
+                    "12500803": "Sainte Genevieve des Bois",
+                    "12500804": "Vitry sur Seine",
+                    "12500805": "Aubervilliers",
+                    "12500806": "Lagny sur Marne",
+                    "12500807": "Puteaux",
+                    "12500808": "Les Clayes sous Bois",
+                    "12500809": "Massy",
+                    "12500810": "Paris"
+                }
+            },
+            "12500900": {
+                "province": "Poitou-Charentes",
+                "citys": {
+                    "12500901": "Poitiers"
+                }
+            },
+            "12501000": {
+                "province": "Picardie",
+                "citys": {
+                    "12501001": "Neuilly-en-Thelle"
+                }
+            },
+            "12501100": {
+                "province": "Rhone Alpes",
+                "citys": {
+                    "12501101": "Echirolles",
+                    "12501102": "Grenoble",
+                    "12501103": "Lyon"
+                }
+            },
+            "12501200": {
+                "province": "Aquitaine",
+                "citys": {
+                    "12501201": "Bordeaux"
+                }
+            },
+            "12501300": {
+                "province": "Alsace",
+                "citys": {
+                    "12501301": "Strasbourg"
+                }
+            },
+            "12501400": {
+                "province": "Champagne-Ardenne",
+                "citys": {
+                    "12501401": "Reims"
+                }
+            },
+            "12501500": {
+                "province": "Basse Normandie",
+                "citys": {
+                    "12501501": "Caen"
+                }
+            }
+        }
+    },
+    "12540000": {
+        "country": "French Guiana"
+    },
+    "12580000": {
+        "country": "French Polynesia"
+    },
+    "12620000": {
+        "country": "Djibouti"
+    },
+    "12660000": {
+        "country": "Gabon"
+    },
+    "12680000": {
+        "country": "Georgia"
+    },
+    "12700000": {
+        "country": "Gambia",
+        "provinces": {
+            "12700100": {
+                "province": "Serekunda"
+            }
+        }
+    },
+    "12750000": {
+        "country": "Palestine"
+    },
+    "12760000": {
+        "country": "Germany",
+        "provinces": {
+            "12760100": {
+                "province": "Lowersaxony",
+                "citys": {
+                    "12760101": "Brunswick",
+                    "12760102": "Goettingen",
+                    "12760103": "Emsland",
+                    "12760104": "Oldenburg",
+                    "12760105": "Osnabrueck",
+                    "12760106": "Hannover"
+                }
+            },
+            "12760200": {
+                "province": "Bremen",
+                "citys": {
+                    "12760201": "Bremen"
+                }
+            },
+            "12760300": {
+                "province": "North Rhine Westphalia",
+                "citys": {
+                    "12760301": "Aachen",
+                    "12760302": "Wuppertal",
+                    "12760303": "Krefeld",
+                    "12760304": "Essen",
+                    "12760305": "Dortmund",
+                    "12760306": "Oberhausen",
+                    "12760307": "Ense",
+                    "12760308": "Muenster",
+                    "12760309": "Dusseldorf",
+                    "12760310": "Meschede",
+                    "12760311": "Bielefeld",
+                    "12760312": "Bonn",
+                    "12760313": "Cologne",
+                    "12760314": "Siegen"
+                }
+            },
+            "12760400": {
+                "province": "Thuringia",
+                "citys": {
+                    "12760401": "Erfurt",
+                    "12760402": "Jena"
+                }
+            },
+            "12760500": {
+                "province": "Bavaria",
+                "citys": {
+                    "12760501": "Augsburg",
+                    "12760502": "Munich",
+                    "12760503": "Bayreuth",
+                    "12760504": "Falkenstein",
+                    "12760505": "Coburg",
+                    "12760506": "Nuremberg",
+                    "12760507": "Würzburg",
+                    "12760508": "Kempten",
+                    "12760509": "Raisting",
+                    "12760510": "Regensburg"
+                }
+            },
+            "12760600": {
+                "province": "Baden Wurttemberg",
+                "citys": {
+                    "12760601": "Ulm",
+                    "12760602": "Karlsruhe",
+                    "12760603": "Ortenaukreis",
+                    "12760604": "Konstanz",
+                    "12760605": "Freiburg im Breisgau",
+                    "12760606": "Stuttgart",
+                    "12760607": "Mannheim",
+                    "12760608": "Goeppingen",
+                    "12760609": "Heidelberg",
+                    "12760610": "Rottweil"
+                }
+            },
+            "12760700": {
+                "province": "Berlin",
+                "citys": {
+                    "12760701": "Berlin"
+                }
+            },
+            "12760800": {
+                "province": "Hamburger",
+                "citys": {
+                    "12760801": "Hamburger"
+                }
+            },
+            "12760900": {
+                "province": "Frankfurt Dusseldorf"
+            },
+            "12761000": {
+                "province": "Schleswig Holstein",
+                "citys": {
+                    "12761001": "Luebeck",
+                    "12761002": "Kiel"
+                }
+            },
+            "12761100": {
+                "province": "Rheinland Pfalz",
+                "citys": {
+                    "12761101": "Trier Saarburg"
+                }
+            },
+            "12761200": {
+                "province": "Sachsen",
+                "citys": {
+                    "12761201": "Leipzig"
+                }
+            },
+            "12761300": {
+                "province": "Sachsen Anhalt",
+                "citys": {
+                    "12761301": "Sudliches Anhalt"
+                }
+            },
+            "12761400": {
+                "province": "Saarland",
+                "citys": {
+                    "12761401": "Sankt Wendel"
+                }
+            },
+            "12761500": {
+                "province": "Heessen",
+                "citys": {
+                    "12761501": "Kassel",
+                    "12761502": "Giessen",
+                    "12761503": "Fulda",
+                    "12761504": "Frankfurt",
+                    "12761505": "Darmstadt Dieburg"
+                }
+            },
+            "12761600": {
+                "province": "Freistaat Sachsen",
+                "citys": {
+                    "12761601": "Dresden"
+                }
+            }
+        }
+    },
+    "12880000": {
+        "country": "Garner"
+    },
+    "12920000": {
+        "country": "Gibraltar"
+    },
+    "12960000": {
+        "country": "Kiribati"
+    },
+    "13000000": {
+        "country": "Greece",
+        "provinces": {
+            "13000100": {
+                "province": "Eastern Macedonia and Thrace",
+                "citys": {
+                    "13000101": "Xanthi"
+                }
+            },
+            "13000200": {
+                "province": "Central Macedonia",
+                "citys": {
+                    "13000201": "Thessaloniki"
+                }
+            },
+            "13000300": {
+                "province": "Crete",
+                "citys": {
+                    "13000301": "Heraklion",
+                    "13000302": "Chania"
+                }
+            },
+            "13000400": {
+                "province": "Thessaloniki",
+                "citys": {
+                    "13000401": "Thessaloniki"
+                }
+            },
+            "13000500": {
+                "province": "Attica",
+                "citys": {
+                    "13000501": "Athens"
+                }
+            }
+        }
+    },
+    "13040000": {
+        "country": "Greenland"
+    },
+    "13080000": {
+        "country": "Grenada"
+    },
+    "13120000": {
+        "country": "Guadeloupe"
+    },
+    "13160000": {
+        "country": "Guam"
+    },
+    "13200000": {
+        "country": "Guatemala"
+    },
+    "13240000": {
+        "country": "Guinea"
+    },
+    "13280000": {
+        "country": "Guyana"
+    },
+    "13320000": {
+        "country": "Haiti",
+        "provinces": {
+            "13320100": {
+                "province": "Port au Prince"
+            }
+        }
+    },
+    "13360000": {
+        "country": "Vatican"
+    },
+    "13400000": {
+        "country": "Honduras",
+        "provinces": {
+            "13400100": {
+                "province": "Francisco Morazan",
+                "citys": {
+                    "13400101": "Tegucigalpa"
+                }
+            },
+            "13400200": {
+                "province": "Cortes",
+                "citys": {
+                    "13400201": "San Pedro Sula"
+                }
+            }
+        }
+    },
+    "13480000": {
+        "country": "Hungary",
+        "provinces": {
+            "13480100": {
+                "province": "Pest Megye",
+                "citys": {
+                    "13480101": "Budapest"
+                }
+            },
+            "13480200": {
+                "province": "Csongrad",
+                "citys": {
+                    "13480201": "Szeged"
+                }
+            }
+        }
+    },
+    "13520000": {
+        "country": "Iceland",
+        "provinces": {
+            "13520100": {
+                "province": "Hafnarfjordur"
+            },
+            "13520200": {
+                "province": "Hofudborgarsvadi",
+                "citys": {
+                    "13520201": "Reykjavik"
+                }
+            }
+        }
+    },
+    "13560000": {
+        "country": "India",
+        "provinces": {
+            "13560100": {
+                "province": "Madhya Pradesh",
+                "citys": {
+                    "13560101": "Indore"
+                }
+            },
+            "13560200": {
+                "province": "Uttar Pradesh",
+                "citys": {
+                    "13560201": "Noida"
+                }
+            },
+            "13560300": {
+                "province": "Karnataka",
+                "citys": {
+                    "13560301": "Bangalore"
+                }
+            },
+            "13560400": {
+                "province": "Gujarat",
+                "citys": {
+                    "13560401": "Ahmedabad"
+                }
+            },
+            "13560500": {
+                "province": "Haryana",
+                "citys": {
+                    "13560501": "Gurgaon"
+                }
+            },
+            "13560600": {
+                "province": "Kerala",
+                "citys": {
+                    "13560601": "Cochin"
+                }
+            },
+            "13560700": {
+                "province": "Andhra Pradesh",
+                "citys": {
+                    "13560701": "Nellore",
+                    "13560702": "Ongole",
+                    "13560703": "Hyderabad"
+                }
+            },
+            "13560800": {
+                "province": "National Capital Territory of Delhi",
+                "citys": {
+                    "13560801": "Delhi",
+                    "13560802": "New Delhi"
+                }
+            },
+            "13560900": {
+                "province": "Rajasthan",
+                "citys": {
+                    "13560901": "Jaipur"
+                }
+            },
+            "13561000": {
+                "province": "Tamil Nadu",
+                "citys": {
+                    "13561001": "Chennai"
+                }
+            },
+            "13561100": {
+                "province": "West Bengal",
+                "citys": {
+                    "13561101": "Calcutta"
+                }
+            },
+            "13561200": {
+                "province": "Maharashtra",
+                "citys": {
+                    "13561201": "Deori",
+                    "13561202": "Thane",
+                    "13561203": "Mumbai",
+                    "13561204": "Pune",
+                    "13561205": "Nashik",
+                    "13561206": "Thane"
+                }
+            }
+        }
+    },
+    "13600000": {
+        "country": "Indonesia",
+        "provinces": {
+            "13600100": {
+                "province": "East Java",
+                "citys": {
+                    "13600101": "Surabaya"
+                }
+            },
+            "13600200": {
+                "province": "Riau islands",
+                "citys": {
+                    "13600201": "Batam Island"
+                }
+            },
+            "13600300": {
+                "province": "Yogyakarta",
+                "citys": {
+                    "13600301": "Yogyakarta"
+                }
+            },
+            "13600400": {
+                "province": "West Java",
+                "citys": {
+                    "13600401": "Bandung",
+                    "13600402": "Depok"
+                }
+            },
+            "13600500": {
+                "province": "Jakarta",
+                "citys": {
+                    "13600501": "Jakarta"
+                }
+            }
+        }
+    },
+    "13640000": {
+        "country": "Iran"
+    },
+    "13680000": {
+        "country": "Iraq"
+    },
+    "13720000": {
+        "country": "Ireland",
+        "provinces": {
+            "13720100": {
+                "province": "Wicklow"
+            },
+            "13720200": {
+                "province": "County Cork",
+                "citys": {
+                    "13720201": "Clonakilty",
+                    "13720202": "Cork",
+                    "13720203": "Rosscarbery"
+                }
+            },
+            "13720300": {
+                "province": "County Dublin",
+                "citys": {
+                    "13720301": "Dublin"
+                }
+            }
+        }
+    },
+    "13760000": {
+        "country": "Israel",
+        "provinces": {
+            "13760100": {
+                "province": "Tel Aviv",
+                "citys": {
+                    "13760101": "Tel Aviv"
+                }
+            }
+        }
+    },
+    "13800000": {
+        "country": "Italy",
+        "provinces": {
+            "13800100": {
+                "province": "Lombardy",
+                "citys": {
+                    "13800101": "Osnago",
+                    "13800102": "Milan"
+                }
+            },
+            "13800200": {
+                "province": "Liguria",
+                "citys": {
+                    "13800201": "Genova"
+                }
+            },
+            "13800300": {
+                "province": "Veneto",
+                "citys": {
+                    "13800301": "Venice",
+                    "13800302": "Padova"
+                }
+            },
+            "13800400": {
+                "province": "Brescia",
+                "citys": {
+                    "13800401": "Brescia"
+                }
+            },
+            "13800500": {
+                "province": "Tuscany",
+                "citys": {
+                    "13800501": "Florence",
+                    "13800502": "Arezzo"
+                }
+            },
+            "13800600": {
+                "province": "Latium",
+                "citys": {
+                    "13800601": "Rome"
+                }
+            },
+            "13800700": {
+                "province": "Piedmont",
+                "citys": {
+                    "13800701": "Caselle Torinese",
+                    "13800702": "Turin"
+                }
+            },
+            "13800800": {
+                "province": "Milan Palermo"
+            },
+            "13800900": {
+                "province": "Sicilia",
+                "citys": {
+                    "13800901": "Catania",
+                    "13800902": "Palermo"
+                }
+            }
+        }
+    },
+    "13840000": {
+        "country": "Ivory Coast",
+        "provinces": {
+            "13840100": {
+                "province": "Abidjan"
+            }
+        }
+    },
+    "13880000": {
+        "country": "Jamaica",
+        "provinces": {
+            "13880100": {
+                "province": "Kingston"
+            }
+        }
+    },
+    "13920000": {
+        "country": "Japan",
+        "provinces": {
+            "13920100": {
+                "province": "Tokyo",
+                "citys": {
+                    "13920101": "Tokyo",
+                    "13920102": "Hachioji",
+                    "13920103": "Shinagawa"
+                }
+            },
+            "13920200": {
+                "province": "Kyoto",
+                "citys": {
+                    "13920201": "Kyoto"
+                }
+            },
+            "13920300": {
+                "province": "Sendai area"
+            },
+            "13920400": {
+                "province": "Okayama",
+                "citys": {
+                    "13920401": "Okayama"
+                }
+            },
+            "13920500": {
+                "province": "Okinawa",
+                "citys": {
+                    "13920501": "Nakagami"
+                }
+            },
+            "13920600": {
+                "province": "Hokkaido",
+                "citys": {
+                    "13920601": "Sapporo",
+                    "13920602": "Ebetsu",
+                    "13920603": "Ishikari",
+                    "13920604": "Wakkanai"
+                }
+            },
+            "13920700": {
+                "province": "Chiba",
+                "citys": {
+                    "13920701": "Chiba-shi",
+                    "13920702": "Urayasu-shi"
+                }
+            },
+            "13920800": {
+                "province": "Osaka",
+                "citys": {
+                    "13920801": "Daito",
+                    "13920802": "Osaka",
+                    "13920803": "Neyagawa"
+                }
+            },
+            "13920900": {
+                "province": "Miyagi",
+                "citys": {
+                    "13920901": "Sendai"
+                }
+            },
+            "13921000": {
+                "province": "Yamagata",
+                "citys": {
+                    "13921001": "Yamagata"
+                }
+            },
+            "13921100": {
+                "province": "Yamagata",
+                "citys": {
+                    "13921101": "Tsuruoka"
+                }
+            },
+            "13921200": {
+                "province": "Hiroshima",
+                "citys": {
+                    "13921201": "Hiroshima"
+                }
+            },
+            "13921300": {
+                "province": "Niigata",
+                "citys": {
+                    "13921301": "Niigata"
+                }
+            },
+            "13921400": {
+                "province": "Aichi ",
+                "citys": {
+                    "13921401": "Nagoya"
+                }
+            },
+            "13921500": {
+                "province": "Ishikawa",
+                "citys": {
+                    "13921501": "Kanazawa"
+                }
+            },
+            "13921600": {
+                "province": "Fukuoka",
+                "citys": {
+                    "13921601": "Fukuoka",
+                    "13921602": "kitakyushu-shi"
+                }
+            },
+            "13921700": {
+                "province": "Fukushima",
+                "citys": {
+                    "13921701": "Aizu Wakamatsu",
+                    "13921702": "Shirakawa-shi"
+                }
+            },
+            "13921800": {
+                "province": "Akita Prefecture",
+                "citys": {
+                    "13921801": "Akita"
+                }
+            },
+            "13921900": {
+                "province": "Ibaraki",
+                "citys": {
+                    "13921901": "Tsukuba"
+                }
+            },
+            "13922000": {
+                "province": "Aomori",
+                "citys": {
+                    "13922001": "Goshogawara",
+                    "13922002": "Hachinohe",
+                    "13922003": "Towada",
+                    "13922004": "Hirosaki ",
+                    "13922005": "Aomori"
+                }
+            },
+            "13922100": {
+                "province": "Shizuoka",
+                "citys": {
+                    "13922101": "Shizuoka-shi"
+                }
+            },
+            "13922200": {
+                "province": "Kagawa Prefecture",
+                "citys": {
+                    "13922201": "Takamatsu"
+                }
+            },
+            "13922300": {
+                "province": "Kochi",
+                "citys": {
+                    "13922301": "Nankoku",
+                    "13922302": "Kochi"
+                }
+            },
+            "13922400": {
+                "province": "Tottori",
+                "citys": {
+                    "13922401": "Tottori"
+                }
+            },
+            "13922500": {
+                "province": "Tochigi"
+            }
+        }
+    },
+    "13980000": {
+        "country": "Kazakhstan",
+        "provinces": {
+            "13980100": {
+                "province": "Karaganda",
+                "citys": {
+                    "13980101": "Karaganda"
+                }
+            },
+            "13980200": {
+                "province": "Almaty"
+            },
+            "13980300": {
+                "province": "Astana"
+            }
+        }
+    },
+    "14000000": {
+        "country": "Jordan",
+        "provinces": {
+            "14000100": {
+                "province": "Amman"
+            }
+        }
+    },
+    "14040000": {
+        "country": "Kenya",
+        "provinces": {
+            "14040100": {
+                "province": "Nairobi"
+            },
+            "14040200": {
+                "province": "Mombasa"
+            }
+        }
+    },
+    "14080000": {
+        "country": "North Korea"
+    },
+    "14100000": {
+        "country": "The Republic of Korea",
+        "provinces": {
+            "14100100": {
+                "province": "Inchon"
+            },
+            "14100200": {
+                "province": "Jeollabuk do",
+                "citys": {
+                    "14100201": "Jeonju"
+                }
+            },
+            "14100300": {
+                "province": "Seoul"
+            }
+        }
+    },
+    "14140000": {
+        "country": "Kuwait"
+    },
+    "14170000": {
+        "country": "Kyrgyzstan"
+    },
+    "14180000": {
+        "country": "Laos"
+    },
+    "14220000": {
+        "country": "Lebanon",
+        "provinces": {
+            "14220100": {
+                "province": "Beirut"
+            }
+        }
+    },
+    "14260000": {
+        "country": "Lesotho"
+    },
+    "14280000": {
+        "country": "Latvia",
+        "provinces": {
+            "14280100": {
+                "province": "Riga"
+            }
+        }
+    },
+    "14300000": {
+        "country": "Liberia"
+    },
+    "14340000": {
+        "country": "Libya"
+    },
+    "14380000": {
+        "country": "Liechtenstein"
+    },
+    "14400000": {
+        "country": "Lithuania",
+        "provinces": {
+            "14400100": {
+                "province": "Siauliai"
+            },
+            "14400200": {
+                "province": "Vilnius"
+            },
+            "14400300": {
+                "province": "Kaunas"
+            }
+        }
+    },
+    "14420000": {
+        "country": "Luxemburg"
+    },
+    "14500000": {
+        "country": "Madagascar"
+    },
+    "14540000": {
+        "country": "Mawlawi"
+    },
+    "14580000": {
+        "country": "Malaysia",
+        "provinces": {
+            "14580100": {
+                "province": "Kuala Lumpur"
+            },
+            "14580200": {
+                "province": "Putrajaya",
+                "citys": {
+                    "14580201": "Putrajaya"
+                }
+            },
+            "14580300": {
+                "province": "Selangor",
+                "citys": {
+                    "14580301": "Subang Jaya",
+                    "14580302": "Cyberjaya"
+                }
+            }
+        }
+    },
+    "14620000": {
+        "country": "Maldives"
+    },
+    "14660000": {
+        "country": "Mali"
+    },
+    "14700000": {
+        "country": "Malta"
+    },
+    "14740000": {
+        "country": "Martinique Island"
+    },
+    "14780000": {
+        "country": "Mauritania"
+    },
+    "14800000": {
+        "country": "Mauritius",
+        "provinces": {
+            "14800100": {
+                "province": "Ebene"
+            }
+        }
+    },
+    "14840000": {
+        "country": "Mexico",
+        "provinces": {
+            "14840100": {
+                "province": "Baja California",
+                "citys": {
+                    "14840101": "Mexicali"
+                }
+            },
+            "14840200": {
+                "province": "Querétaro",
+                "citys": {
+                    "14840201": "Querétaro"
+                }
+            },
+            "14840300": {
+                "province": "Jalisco",
+                "citys": {
+                    "14840301": "Guadalajara"
+                }
+            },
+            "14840400": {
+                "province": "The Federal District of Mexico",
+                "citys": {
+                    "14840401": "Mexico City"
+                }
+            },
+            "14840500": {
+                "province": "Nuevo Leon",
+                "citys": {
+                    "14840501": "Monterrey"
+                }
+            }
+        }
+    },
+    "14920000": {
+        "country": "Monaco"
+    },
+    "14960000": {
+        "country": "Mongolia",
+        "provinces": {
+            "14960100": {
+                "province": "Ulan Bator"
+            }
+        }
+    },
+    "14980000": {
+        "country": "Moldova",
+        "provinces": {
+            "14980100": {
+                "province": "Chisinau"
+            }
+        }
+    },
+    "14990000": {
+        "country": "Montenegro",
+        "provinces": {
+            "14990100": {
+                "province": "Podgorica"
+            }
+        }
+    },
+    "15000000": {
+        "country": "Montserrat"
+    },
+    "15040000": {
+        "country": "Morocco"
+    },
+    "15080000": {
+        "country": "Mozambique",
+        "provinces": {
+            "15080100": {
+                "province": "Maputo"
+            }
+        }
+    },
+    "15120000": {
+        "country": "Oman"
+    },
+    "15160000": {
+        "country": "Namibia",
+        "provinces": {
+            "15160100": {
+                "province": "Windhoek"
+            }
+        }
+    },
+    "15200000": {
+        "country": "Nauru"
+    },
+    "15240000": {
+        "country": "Nepal",
+        "provinces": {
+            "15240100": {
+                "province": "Kathmandu"
+            }
+        }
+    },
+    "15280000": {
+        "country": "Netherlands",
+        "provinces": {
+            "15280100": {
+                "province": "North Brabant",
+                "citys": {
+                    "15280101": "Breda",
+                    "15280102": "Steenbergen",
+                    "15280103": "Rijen"
+                }
+            },
+            "15280200": {
+                "province": "North Netherlands",
+                "citys": {
+                    "15280201": "Schiphol",
+                    "15280202": "Haarlem",
+                    "15280203": "Wormerveer",
+                    "15280204": "Amsterdam"
+                }
+            },
+            "15280300": {
+                "province": "South Netherlands",
+                "citys": {
+                    "15280301": "Spijkenisse",
+                    "15280302": "Zoetermeer",
+                    "15280303": "Naaldwijk",
+                    "15280304": "Alblasserdam",
+                    "15280305": "Rotterdam"
+                }
+            },
+            "15280400": {
+                "province": "Flevoland",
+                "citys": {
+                    "15280401": "Dronten"
+                }
+            },
+            "15280500": {
+                "province": "Enschede"
+            },
+            "15280600": {
+                "province": "Limburg",
+                "citys": {
+                    "15280601": "Heerlen"
+                }
+            },
+            "15280700": {
+                "province": "Groningen",
+                "citys": {
+                    "15280701": "Groningen"
+                }
+            },
+            "15280800": {
+                "province": "Gelderland",
+                "citys": {
+                    "15280801": "Arnhem"
+                }
+            }
+        }
+    },
+    "15330000": {
+        "country": "Aruba"
+    },
+    "15400000": {
+        "country": "New Caledonia"
+    },
+    "15480000": {
+        "country": "Vanuatu"
+    },
+    "15540000": {
+        "country": "New Zealand",
+        "provinces": {
+            "15540100": {
+                "province": "Canterbury",
+                "citys": {
+                    "15540101": "Christchurch",
+                    "15540102": "Lincoln"
+                }
+            },
+            "15540200": {
+                "province": "Auckland",
+                "citys": {
+                    "15540201": "Auckland"
+                }
+            },
+            "15540300": {
+                "province": "Otago",
+                "citys": {
+                    "15540301": "North Dunedin"
+                }
+            },
+            "15540400": {
+                "province": "Waikato",
+                "citys": {
+                    "15540401": "Hamilton"
+                }
+            },
+            "15540500": {
+                "province": "Wellington",
+                "citys": {
+                    "15540501": "Wellington"
+                }
+            },
+            "15540600": {
+                "province": "Manawatu Wanganui",
+                "citys": {
+                    "15540601": "Palmerston North"
+                }
+            }
+        }
+    },
+    "15580000": {
+        "country": "Nicaragua"
+    },
+    "15620000": {
+        "country": "Niger"
+    },
+    "15660000": {
+        "country": "Nigeria",
+        "provinces": {
+            "15660100": {
+                "province": "Lagos",
+                "citys": {
+                    "15660101": "Lagos"
+                }
+            }
+        }
+    },
+    "15700000": {
+        "country": "Niue"
+    },
+    "15740000": {
+        "country": "Norfolk Island"
+    },
+    "15780000": {
+        "country": "Norway",
+        "provinces": {
+            "15780100": {
+                "province": "Ostfold",
+                "citys": {
+                    "15780101": "Halden"
+                }
+            },
+            "15780200": {
+                "province": "Sor Trondelag",
+                "citys": {
+                    "15780201": "Trondheim"
+                }
+            },
+            "15780300": {
+                "province": "Oslo",
+                "citys": {
+                    "15780301": "Oslo"
+                }
+            },
+            "15780400": {
+                "province": "Akershus",
+                "citys": {
+                    "15780401": "Nittedal"
+                }
+            },
+            "15780500": {
+                "province": "Hordaland",
+                "citys": {
+                    "15780501": "Bergen"
+                }
+            }
+        }
+    },
+    "15800000": {
+        "country": "Northern Mariana Islands"
+    },
+    "15830000": {
+        "country": "The Federated States of Micronesia"
+    },
+    "15840000": {
+        "country": "The Marshall Islands"
+    },
+    "15850000": {
+        "country": "Palau"
+    },
+    "15860000": {
+        "country": "Pakistan",
+        "provinces": {
+            "15860100": {
+                "province": "Sindh",
+                "citys": {
+                    "15860101": "Karachi"
+                }
+            }
+        }
+    },
+    "15910000": {
+        "country": "Panama"
+    },
+    "15980000": {
+        "country": "Papua New Guinea"
+    },
+    "16000000": {
+        "country": "Paraguay"
+    },
+    "16040000": {
+        "country": "Peru",
+        "provinces": {
+            "16040100": {
+                "province": "Provincia de Lima",
+                "citys": {
+                    "16040101": "Lurin"
+                }
+            },
+            "16040200": {
+                "province": "Lima",
+                "citys": {
+                    "16040201": "Lima"
+                }
+            }
+        }
+    },
+    "16080000": {
+        "country": "Philippines",
+        "provinces": {
+            "16080100": {
+                "province": "Laguna",
+                "citys": {
+                    "16080101": "Los Banos"
+                }
+            },
+            "16080200": {
+                "province": "Metro Manila",
+                "citys": {
+                    "16080201": "Makati",
+                    "16080202": "Manila"
+                }
+            }
+        }
+    },
+    "16160000": {
+        "country": "Poland",
+        "provinces": {
+            "16160100": {
+                "province": "Warsaw Poznan"
+            },
+            "16160200": {
+                "province": "Holy Cross Province",
+                "citys": {
+                    "16160201": "Kielce"
+                }
+            },
+            "16160300": {
+                "province": "Greater Poland",
+                "citys": {
+                    "16160301": "Poznan"
+                }
+            },
+            "16160400": {
+                "province": "Lesser Poland",
+                "citys": {
+                    "16160401": "Krakow"
+                }
+            },
+            "16160500": {
+                "province": "Warmian-Masurian",
+                "citys": {
+                    "16160501": "Olsztyn"
+                }
+            },
+            "16160600": {
+                "province": "West Pomeranian",
+                "citys": {
+                    "16160601": "Koszalin"
+                }
+            },
+            "16160700": {
+                "province": "Mazowieckie",
+                "citys": {
+                    "16160701": "Warsaw",
+                    "16160702": "Radom"
+                }
+            },
+            "16160800": {
+                "province": "Silesian",
+                "citys": {
+                    "16160801": "Tarnowskie Gory",
+                    "16160802": "Katowice"
+                }
+            },
+            "16160900": {
+                "province": "Lower Silesian",
+                "citys": {
+                    "16160901": "Wroclaw"
+                }
+            }
+        }
+    },
+    "16200000": {
+        "country": "Portugal",
+        "provinces": {
+            "16200100": {
+                "province": "Setubal",
+                "citys": {
+                    "16200101": "Seixal"
+                }
+            },
+            "16200200": {
+                "province": "Porto",
+                "citys": {
+                    "16200201": "Porto"
+                }
+            },
+            "16200300": {
+                "province": "Lisbon",
+                "citys": {
+                    "16200301": "Lisbon"
+                }
+            }
+        }
+    },
+    "16240000": {
+        "country": "Guinea Bissau"
+    },
+    "16260000": {
+        "country": "East Timor"
+    },
+    "16300000": {
+        "country": "Puerto Rico",
+        "provinces": {
+            "16300100": {
+                "province": "San Juan"
+            }
+        }
+    },
+    "16340000": {
+        "country": "Qatar"
+    },
+    "16380000": {
+        "country": "Reunion Island"
+    },
+    "16420000": {
+        "country": "Romania",
+        "provinces": {
+            "16420100": {
+                "province": "Cluj",
+                "citys": {
+                    "16420101": "Cluj Napoca",
+                    "16420102": "Dej"
+                }
+            },
+            "16420200": {
+                "province": "Bucharest"
+            },
+            "16420300": {
+                "province": "Constanta",
+                "citys": {
+                    "16420301": "Constanta",
+                    "16420302": "Murfatlar",
+                    "16420303": "Cernavoda",
+                    "16420304": "EforieNord",
+                    "16420305": "Ovidiu",
+                    "16420306": "Medgidia",
+                    "16420307": "Navodari"
+                }
+            },
+            "16420400": {
+                "province": "Timis",
+                "citys": {
+                    "16420401": "Timisoara"
+                }
+            },
+            "16420500": {
+                "province": "Sibiu",
+                "citys": {
+                    "16420501": "Sibiu"
+                }
+            },
+            "16420600": {
+                "province": "Galati",
+                "citys": {
+                    "16420601": "Galati"
+                }
+            },
+            "16420700": {
+                "province": "Tulcea",
+                "citys": {
+                    "16420701": "Tulcea"
+                }
+            },
+            "16420800": {
+                "province": "Dolj",
+                "citys": {
+                    "16420801": "Craiova"
+                }
+            },
+            "16420900": {
+                "province": "Bacau",
+                "citys": {
+                    "16420901": "Bacau",
+                    "16420902": "Onesti"
+                }
+            },
+            "16421000": {
+                "province": "Braila",
+                "citys": {
+                    "16421001": "Braila"
+                }
+            },
+            "16421100": {
+                "province": "Brasov",
+                "citys": {
+                    "16421101": "Brasov"
+                }
+            },
+            "16421200": {
+                "province": "Gorj",
+                "citys": {
+                    "16421201": "Targu Jiu"
+                }
+            },
+            "16421300": {
+                "province": "Bihor",
+                "citys": {
+                    "16421301": "Oradea",
+                    "16421302": "Salonta",
+                    "16421303": "Alesd",
+                    "16421304": "Marghita"
+                }
+            },
+            "16421400": {
+                "province": "Salaj",
+                "citys": {
+                    "16421401": "Zalau"
+                }
+            },
+            "16421500": {
+                "province": "Hunedoara",
+                "citys": {
+                    "16421501": "Vulcan",
+                    "16421502": "Lupeni",
+                    "16421503": "Petrosani"
+                }
+            },
+            "16421600": {
+                "province": "Suceava",
+                "citys": {
+                    "16421601": "Suceava"
+                }
+            },
+            "16421700": {
+                "province": "Alba",
+                "citys": {
+                    "16421701": "Ocna Mures",
+                    "16421702": "Blaj"
+                }
+            },
+            "16421800": {
+                "province": "Arad",
+                "citys": {
+                    "16421801": "Arad"
+                }
+            },
+            "16421900": {
+                "province": "Iasi",
+                "citys": {
+                    "16421901": "Iasi",
+                    "16421902": "Pascani"
+                }
+            },
+            "16422000": {
+                "province": "Harghita County",
+                "citys": {
+                    "16422001": "Gheorgheni",
+                    "16422002": "Miercurea Ciuc"
+                }
+            },
+            "16422100": {
+                "province": "Olt County",
+                "citys": {
+                    "16422101": "Slatina"
+                }
+            },
+            "16422200": {
+                "province": "Vrancea County",
+                "citys": {
+                    "16422201": "Focsani"
+                }
+            },
+            "16422300": {
+                "province": "Prahova County",
+                "citys": {
+                    "16422301": "Ploiesti"
+                }
+            },
+            "16422400": {
+                "province": "Mehedinti County",
+                "citys": {
+                    "16422401": "Drobeta-Turnu Severin"
+                }
+            },
+            "16422500": {
+                "province": "Bistrita-Nasaud County",
+                "citys": {
+                    "16422501": "Bistrita"
+                }
+            },
+            "16422600": {
+                "province": "Valcea",
+                "citys": {
+                    "16422601": "Ramnicu Valcea"
+                }
+            },
+            "16422700": {
+                "province": "Vaslui County",
+                "citys": {
+                    "16422701": "Barlad"
+                }
+            },
+            "16422800": {
+                "province": "Mures County",
+                "citys": {
+                    "16422801": "Targu Mures",
+                    "16422802": "Sighisoara"
+                }
+            },
+            "16422900": {
+                "province": "Satu Mare County",
+                "citys": {
+                    "16422901": "Carei"
+                }
+            },
+            "16423000": {
+                "province": "Arges County",
+                "citys": {
+                    "16423001": "Pitesti"
+                }
+            },
+            "16423100": {
+                "province": "Maramures County",
+                "citys": {
+                    "16423101": "Baia Mare"
+                }
+            }
+        }
+    },
+    "16430000": {
+        "country": "Russia",
+        "provinces": {
+            "16430100": {
+                "province": "Nizhny Novgorod Oblast",
+                "citys": {
+                    "16430101": "Nizhny Novgorod",
+                    "16430102": "Golgi"
+                }
+            },
+            "16430200": {
+                "province": "Ulyanovsk",
+                "citys": {
+                    "16430201": "Ulyanovsk"
+                }
+            },
+            "16430300": {
+                "province": "Krasnoyarsk"
+            },
+            "16430400": {
+                "province": "Krasnodarskiy Kray",
+                "citys": {
+                    "16430401": "Sochi"
+                }
+            },
+            "16430500": {
+                "province": "Crimea"
+            },
+            "16430600": {
+                "province": "Leningrad",
+                "citys": {
+                    "16430601": "Kirishi"
+                }
+            },
+            "16430700": {
+                "province": "Lipetsk",
+                "citys": {
+                    "16430701": "Lipetsk"
+                }
+            },
+            "16430800": {
+                "province": "BelgoRod",
+                "citys": {
+                    "16430801": "BelgoRod"
+                }
+            },
+            "16430900": {
+                "province": "Saint Petersburg"
+            },
+            "16431000": {
+                "province": "Bryansk",
+                "citys": {
+                    "16431001": "Bryansk"
+                }
+            },
+            "16431100": {
+                "province": "Vladimir",
+                "citys": {
+                    "16431101": "Vladimir"
+                }
+            },
+            "16431200": {
+                "province": "Tomsk Oblast",
+                "citys": {
+                    "16431201": "Tomsk"
+                }
+            },
+            "16431300": {
+                "province": "Stavropol",
+                "citys": {
+                    "16431301": "Stavropol"
+                }
+            },
+            "16431400": {
+                "province": "Sverdlovskaya Oblast",
+                "citys": {
+                    "16431401": "Nizhnya Tura",
+                    "16431402": "Krasnoturinsk",
+                    "16431403": "Yekaterinburg",
+                    "16431404": "Serov"
+                }
+            },
+            "16431500": {
+                "province": "Novosibirsk",
+                "citys": {
+                    "16431501": "Novosibirsk"
+                }
+            },
+            "16431600": {
+                "province": "Ryazanskaya Oblast",
+                "citys": {
+                    "16431601": "Ryazan"
+                }
+            },
+            "16431700": {
+                "province": "Chukchi"
+            },
+            "16431800": {
+                "province": "Voronezh \/ Ventura \/ Belgorod"
+            },
+            "16431900": {
+                "province": "Voronezh",
+                "citys": {
+                    "16431901": "Voronezh"
+                }
+            },
+            "16432000": {
+                "province": "Khabarovsk",
+                "citys": {
+                    "16432001": "Khabarovsk",
+                    "16432002": "Vladivostok"
+                }
+            },
+            "16432100": {
+                "province": "Tver",
+                "citys": {
+                    "16432101": "Bologoe",
+                    "16432102": "Tver"
+                }
+            },
+            "16432200": {
+                "province": "Tyumen",
+                "citys": {
+                    "16432201": "Tyumen"
+                }
+            },
+            "16432300": {
+                "province": "Rostovskaya Oblast",
+                "citys": {
+                    "16432301": "Rostov na Don"
+                }
+            },
+            "16432400": {
+                "province": "Moscow"
+            },
+            "16432500": {
+                "province": "Moscow"
+            },
+            "16432600": {
+                "province": "Saratov",
+                "citys": {
+                    "16432601": "Saratov"
+                }
+            },
+            "16432700": {
+                "province": "Samara",
+                "citys": {
+                    "16432701": "Samara"
+                }
+            },
+            "16432800": {
+                "province": "Siberia"
+            },
+            "16432900": {
+                "province": "Novgorod",
+                "citys": {
+                    "16432901": "Novgorod"
+                }
+            },
+            "16433000": {
+                "province": "Chelyabinsk Oblast",
+                "citys": {
+                    "16433001": "Chelyabinsk"
+                }
+            },
+            "16433100": {
+                "province": "Tyndinskiy Raion",
+                "citys": {
+                    "16433101": "Tynda"
+                }
+            },
+            "16433200": {
+                "province": "Tatarstan",
+                "citys": {
+                    "16433201": "Kazan"
+                }
+            }
+        }
+    },
+    "16460000": {
+        "country": "Rwanda",
+        "provinces": {
+            "16460100": {
+                "province": "Kigali"
+            }
+        }
+    },
+    "16590000": {
+        "country": "Saint Kitts and Nevis"
+    },
+    "16600000": {
+        "country": "Anguilla"
+    },
+    "16620000": {
+        "country": "Saint Lucia"
+    },
+    "16660000": {
+        "country": "Saint Pierre and Miquelon"
+    },
+    "16700000": {
+        "country": "Saint Vincent and the Grenadines"
+    },
+    "16740000": {
+        "country": "San Marino"
+    },
+    "16780000": {
+        "country": "Sao Tome and Principe"
+    },
+    "16820000": {
+        "country": "Saudi Arabia",
+        "provinces": {
+            "16820100": {
+                "province": "Makkah",
+                "citys": {
+                    "16820101": "Jeddah",
+                    "16820102": "Thuwal"
+                }
+            }
+        }
+    },
+    "16860000": {
+        "country": "Senegal"
+    },
+    "16880000": {
+        "country": "Serbia",
+        "provinces": {
+            "16880100": {
+                "province": "Belgrade"
+            }
+        }
+    },
+    "16900000": {
+        "country": "Seychelles"
+    },
+    "16940000": {
+        "country": "Sierra Leone"
+    },
+    "17020000": {
+        "country": "Singapore"
+    },
+    "17030000": {
+        "country": "Slovakia",
+        "provinces": {
+            "17030100": {
+                "province": "Bratislavsky Kraj",
+                "citys": {
+                    "17030101": "Bratislava"
+                }
+            },
+            "17030200": {
+                "province": "Kosice Kraj",
+                "citys": {
+                    "17030201": "Kosice"
+                }
+            }
+        }
+    },
+    "17040000": {
+        "country": "Vietnam",
+        "provinces": {
+            "17040100": {
+                "province": "Da Nang"
+            },
+            "17040200": {
+                "province": "Hanoi"
+            },
+            "17040300": {
+                "province": "Hai Phong"
+            },
+            "17040400": {
+                "province": "Ho Chi Minh City"
+            }
+        }
+    },
+    "17050000": {
+        "country": "Slovenia",
+        "provinces": {
+            "17050100": {
+                "province": "Ljubljana"
+            }
+        }
+    },
+    "17060000": {
+        "country": "Somalia"
+    },
+    "17100000": {
+        "country": "South Africa",
+        "provinces": {
+            "17100100": {
+                "province": "Eestern Cape",
+                "citys": {
+                    "17100101": "Grahamstown"
+                }
+            },
+            "17100200": {
+                "province": "KwaZulu Natal",
+                "citys": {
+                    "17100201": "Mtunzini",
+                    "17100202": "Durban"
+                }
+            },
+            "17100300": {
+                "province": "Free State",
+                "citys": {
+                    "17100301": "Bloemfontein"
+                }
+            },
+            "17100400": {
+                "province": "Western Cape",
+                "citys": {
+                    "17100401": "Cape Town"
+                }
+            },
+            "17100500": {
+                "province": "Gauteng",
+                "citys": {
+                    "17100501": "Randburg",
+                    "17100502": "Pretoria",
+                    "17100503": "Johannesburg"
+                }
+            }
+        }
+    },
+    "17160000": {
+        "country": "Zimbabwe",
+        "provinces": {
+            "17160100": {
+                "province": "Matabeleland North",
+                "citys": {
+                    "17160101": "Bulawayo"
+                }
+            }
+        }
+    },
+    "17240000": {
+        "country": "Spain",
+        "provinces": {
+            "17240100": {
+                "province": "Catalonia",
+                "citys": {
+                    "17240101": "Barcelona"
+                }
+            },
+            "17240200": {
+                "province": "Andalusia",
+                "citys": {
+                    "17240201": "Sevilla",
+                    "17240202": "Granada",
+                    "17240203": "Malaga"
+                }
+            },
+            "17240300": {
+                "province": "Basque",
+                "citys": {
+                    "17240301": "San Sebastian",
+                    "17240302": "Bilbao"
+                }
+            },
+            "17240400": {
+                "province": "Valencia",
+                "citys": {
+                    "17240401": "Elda",
+                    "17240402": "Valencia"
+                }
+            },
+            "17240500": {
+                "province": "Murcia",
+                "citys": {
+                    "17240501": "Murcia"
+                }
+            },
+            "17240600": {
+                "province": "Aragon",
+                "citys": {
+                    "17240601": "Albarracin"
+                }
+            },
+            "17240700": {
+                "province": "Asturies",
+                "citys": {
+                    "17240701": "Gijon"
+                }
+            },
+            "17240800": {
+                "province": "Madrid \/ Barcelona"
+            },
+            "17240900": {
+                "province": "Madrid",
+                "citys": {
+                    "17240901": "Madrid"
+                }
+            },
+            "17241000": {
+                "province": "Galicia",
+                "citys": {
+                    "17241001": "Vigo"
+                }
+            }
+        }
+    },
+    "17360000": {
+        "country": "Sudan",
+        "provinces": {
+            "17360100": {
+                "province": "Khartoum"
+            }
+        }
+    },
+    "17400000": {
+        "country": "Suriname"
+    },
+    "17480000": {
+        "country": "Swaziland"
+    },
+    "17520000": {
+        "country": "Sweden",
+        "provinces": {
+            "17520100": {
+                "province": "Norrbottens lan",
+                "citys": {
+                    "17520101": "Lulea"
+                }
+            },
+            "17520200": {
+                "province": "Gotlands lan",
+                "citys": {
+                    "17520201": "Visby"
+                }
+            },
+            "17520300": {
+                "province": "Stockholms lan",
+                "citys": {
+                    "17520301": "Stockholm"
+                }
+            },
+            "17520400": {
+                "province": "Skane lan",
+                "citys": {
+                    "17520401": "Malmo"
+                }
+            },
+            "17520500": {
+                "province": "Vasterbottens lan",
+                "citys": {
+                    "17520501": "Umea"
+                }
+            },
+            "17520600": {
+                "province": "Vastra Gotalands lan",
+                "citys": {
+                    "17520601": "Goteborg",
+                    "17520602": "Stromstad"
+                }
+            },
+            "17520700": {
+                "province": "Vasternorrlands lan",
+                "citys": {
+                    "17520701": "Sundsvall"
+                }
+            }
+        }
+    },
+    "17560000": {
+        "country": "Switzerland",
+        "provinces": {
+            "17560100": {
+                "province": "Kanton Bern",
+                "citys": {
+                    "17560101": "Bern"
+                }
+            },
+            "17560200": {
+                "province": "St Gallen",
+                "citys": {
+                    "17560201": "St Gallen",
+                    "17560202": "Buchs"
+                }
+            },
+            "17560300": {
+                "province": "Basel",
+                "citys": {
+                    "17560301": "Basel"
+                }
+            },
+            "17560400": {
+                "province": "Geneva",
+                "citys": {
+                    "17560401": "Geneva"
+                }
+            },
+            "17560500": {
+                "province": "Zug",
+                "citys": {
+                    "17560501": "Zug"
+                }
+            },
+            "17560600": {
+                "province": "Vaud",
+                "citys": {
+                    "17560601": "Crissier",
+                    "17560602": "Lausanne"
+                }
+            },
+            "17560700": {
+                "province": "Zurich",
+                "citys": {
+                    "17560701": "Opfikon",
+                    "17560702": "Winterthur",
+                    "17560703": "Zurich"
+                }
+            }
+        }
+    },
+    "17600000": {
+        "country": "Syria"
+    },
+    "17620000": {
+        "country": "Tajikistan"
+    },
+    "17640000": {
+        "country": "Thailand",
+        "provinces": {
+            "17640100": {
+                "province": "Songkhla",
+                "citys": {
+                    "17640101": "Songkhla"
+                }
+            },
+            "17640200": {
+                "province": "Bangkok"
+            }
+        }
+    },
+    "17680000": {
+        "country": "Togo"
+    },
+    "17720000": {
+        "country": "Tokelau Islands"
+    },
+    "17760000": {
+        "country": "Tonga"
+    },
+    "17800000": {
+        "country": "Trinidad and Tobago"
+    },
+    "17840000": {
+        "country": "The United Arab Emirates",
+        "provinces": {
+            "17840100": {
+                "province": "Fujairah"
+            },
+            "17840200": {
+                "province": "Dubai"
+            },
+            "17840300": {
+                "province": "Abu Dhabi",
+                "citys": {
+                    "17840301": "Al Ain"
+                }
+            }
+        }
+    },
+    "17880000": {
+        "country": "Tunisia"
+    },
+    "17920000": {
+        "country": "Turkey",
+        "provinces": {
+            "17920100": {
+                "province": "Izmir",
+                "citys": {
+                    "17920101": "Izmir"
+                }
+            },
+            "17920200": {
+                "province": "Istanbul",
+                "citys": {
+                    "17920201": "Istanbul"
+                }
+            },
+            "17920300": {
+                "province": "Ankara",
+                "citys": {
+                    "17920301": "Ankara"
+                }
+            }
+        }
+    },
+    "17950000": {
+        "country": "Turkmenistan"
+    },
+    "17960000": {
+        "country": "Turks and Caicos Islands"
+    },
+    "17980000": {
+        "country": "Tuvalu"
+    },
+    "18000000": {
+        "country": "Uganda",
+        "provinces": {
+            "18000100": {
+                "province": "Kampala",
+                "citys": {
+                    "18000101": "Kampala"
+                }
+            }
+        }
+    },
+    "18040000": {
+        "country": "Ukraine",
+        "provinces": {
+            "18040100": {
+                "province": "Chernivtsi Oblast",
+                "citys": {
+                    "18040101": "Chernivtsi"
+                }
+            },
+            "18040200": {
+                "province": "Lugansk",
+                "citys": {
+                    "18040201": "Lugansk"
+                }
+            },
+            "18040300": {
+                "province": "Kharkov",
+                "citys": {
+                    "18040301": "Kharkov"
+                }
+            },
+            "18040400": {
+                "province": "Kiev"
+            },
+            "18040500": {
+                "province": "Kiev Lviv"
+            },
+            "18040600": {
+                "province": "Kiev",
+                "citys": {
+                    "18040601": "Obukhiv",
+                    "18040602": "Borispol"
+                }
+            },
+            "18040700": {
+                "province": "Zakarpattia",
+                "citys": {
+                    "18040701": "Uzhgorod"
+                }
+            },
+            "18040800": {
+                "province": "Zaporizhia",
+                "citys": {
+                    "18040801": "Zaporizhia"
+                }
+            },
+            "18040900": {
+                "province": "Ternopil Oblast",
+                "citys": {
+                    "18040901": "Ternopil"
+                }
+            },
+            "18041000": {
+                "province": "Odessa",
+                "citys": {
+                    "18041001": "Odessa"
+                }
+            },
+            "18041100": {
+                "province": "Dnipropetrovsk",
+                "citys": {
+                    "18041101": "Dnipropetrovsk"
+                }
+            },
+            "18041200": {
+                "province": "Khmelnytskyi",
+                "citys": {
+                    "18041201": "Khmelnytskyi"
+                }
+            },
+            "18041300": {
+                "province": "Donetsk",
+                "citys": {
+                    "18041301": "Donetsk"
+                }
+            }
+        }
+    },
+    "18070000": {
+        "country": "Macedonia",
+        "provinces": {
+            "18070100": {
+                "province": "Skopje"
+            }
+        }
+    },
+    "18180000": {
+        "country": "Egypt",
+        "provinces": {
+            "18180100": {
+                "province": "Cairo",
+                "citys": {
+                    "18180101": "Cairo"
+                }
+            }
+        }
+    },
+    "18260000": {
+        "country": "United Kingdom",
+        "provinces": {
+            "18260100": {
+                "province": "Cheshire East",
+                "citys": {
+                    "18260101": "MacClesfield"
+                }
+            },
+            "18260200": {
+                "province": "Worcestershire",
+                "citys": {
+                    "18260201": "Redditch"
+                }
+            },
+            "18260300": {
+                "province": "London",
+                "citys": {
+                    "18260301": "Brentford",
+                    "18260302": "Enfield"
+                }
+            },
+            "18260400": {
+                "province": "London \/ Leicester"
+            },
+            "18260500": {
+                "province": "Berkshire",
+                "citys": {
+                    "18260501": "Bracknell",
+                    "18260502": "Slough",
+                    "18260503": "Maidenhead",
+                    "18260504": "Newbury",
+                    "18260505": "Reading"
+                }
+            },
+            "18260600": {
+                "province": "Lancashire County",
+                "citys": {
+                    "18260601": "Preston"
+                }
+            },
+            "18260700": {
+                "province": "Northamptonshire",
+                "citys": {
+                    "18260701": "Northampton"
+                }
+            },
+            "18260800": {
+                "province": "Northern Ireland",
+                "citys": {
+                    "18260801": "Belfast"
+                }
+            },
+            "18260900": {
+                "province": "South Yorkshire",
+                "citys": {
+                    "18260901": "Sheffield"
+                }
+            },
+            "18261000": {
+                "province": "Greater Manchester",
+                "citys": {
+                    "18261001": "Manchester"
+                }
+            },
+            "18261100": {
+                "province": "Wiltshire",
+                "citys": {
+                    "18261101": "Swindon"
+                }
+            },
+            "18261200": {
+                "province": "Bristol"
+            },
+            "18261300": {
+                "province": "Pembrokeshire",
+                "citys": {
+                    "18261301": "Haverfordwest"
+                }
+            },
+            "18261400": {
+                "province": "Derbyshire",
+                "citys": {
+                    "18261401": "Derby"
+                }
+            },
+            "18261500": {
+                "province": "Glasgow"
+            },
+            "18261600": {
+                "province": "Glasgow \/ London"
+            },
+            "18261700": {
+                "province": "Gloucestershire",
+                "citys": {
+                    "18261701": "Cheltenham",
+                    "18261702": "Gloucester"
+                }
+            },
+            "18261800": {
+                "province": "Hampshire",
+                "citys": {
+                    "18261801": "Gosport",
+                    "18261802": "Portsmouth",
+                    "18261803": "Farnborough",
+                    "18261804": "Basingstoke",
+                    "18261805": "Fareham"
+                }
+            },
+            "18261900": {
+                "province": "Edinburgh",
+                "citys": {
+                    "18261901": "Newbridge"
+                }
+            },
+            "18262000": {
+                "province": "Oxfordshire",
+                "citys": {
+                    "18262001": "Oxford"
+                }
+            },
+            "18262100": {
+                "province": "Buckinghamshire",
+                "citys": {
+                    "18262101": "Milton Keynes"
+                }
+            },
+            "18262200": {
+                "province": "Kent",
+                "citys": {
+                    "18262201": "Sandwich",
+                    "18262202": "Maidstone"
+                }
+            },
+            "18262300": {
+                "province": "Essex"
+            },
+            "18262400": {
+                "province": "Scotland",
+                "citys": {
+                    "18262401": "Dundee"
+                }
+            },
+            "18262500": {
+                "province": "England Area"
+            },
+            "18262600": {
+                "province": "Leicester Nottingham"
+            },
+            "18262700": {
+                "province": "Leicestershire",
+                "citys": {
+                    "18262701": "Leicester"
+                }
+            },
+            "18262800": {
+                "province": "Surrey",
+                "citys": {
+                    "18262801": "Guildford",
+                    "18262802": "Woking"
+                }
+            },
+            "18262900": {
+                "province": "Stockton on Tees",
+                "citys": {
+                    "18262901": "Wynyard"
+                }
+            },
+            "18263000": {
+                "province": "West Midlands",
+                "citys": {
+                    "18263001": "Birmingham",
+                    "18263002": "Coventry"
+                }
+            },
+            "18263100": {
+                "province": "West Yorkshire",
+                "citys": {
+                    "18263101": "Leeds",
+                    "18263102": "Bradford"
+                }
+            },
+            "18263200": {
+                "province": "West Sussex",
+                "citys": {
+                    "18263201": "Southwater"
+                }
+            },
+            "18263300": {
+                "province": "Nottingham \/ London"
+            },
+            "18263400": {
+                "province": "Nottingham Glasgow"
+            },
+            "18263500": {
+                "province": "Nottingham Leicester"
+            },
+            "18263600": {
+                "province": "Nottinghamshire",
+                "citys": {
+                    "18263601": "Nottingham"
+                }
+            },
+            "18263700": {
+                "province": "Bedfordshire",
+                "citys": {
+                    "18263701": "Bedford"
+                }
+            },
+            "18263800": {
+                "province": "Hertfordshire",
+                "citys": {
+                    "18263801": "Hemel Hempstead"
+                }
+            },
+            "18263900": {
+                "province": "Durham "
+            },
+            "18264000": {
+                "province": "Merseyside",
+                "citys": {
+                    "18264001": "Southport"
+                }
+            }
+        }
+    },
+    "18310000": {
+        "country": "Guernsey"
+    },
+    "18320000": {
+        "country": "Jersey"
+    },
+    "18330000": {
+        "country": "Isle of Man"
+    },
+    "18340000": {
+        "country": "Tanzania",
+        "provinces": {
+            "18340100": {
+                "province": "Dar es Salaam Region",
+                "citys": {
+                    "18340101": "Dar es Salaam"
+                }
+            },
+            "18340200": {
+                "province": "Arusha"
+            }
+        }
+    },
+    "18400000": {
+        "country": "United States",
+        "provinces": {
+            "18400100": {
+                "province": "The northeast region (Boston \/ New York \/ Washington)"
+            },
+            "18400200": {
+                "province": "Georgia",
+                "citys": {
+                    "18400201": "Atlanta",
+                    "18400202": "Clayton County",
+                    "18400203": "Lawrenceville",
+                    "18400204": "Carrollton",
+                    "18400205": "Columbia County",
+                    "18400206": "Smyrna",
+                    "18400207": "Dalton",
+                    "18400208": "Thomasville",
+                    "18400209": "Gwinnett County",
+                    "18400210": "Macon",
+                    "18400211": "Trenton",
+                    "18400212": "Marietta",
+                    "18400213": "Roswell",
+                    "18400214": "Suwanee",
+                    "18400215": "Savannah",
+                    "18400216": "Tifton",
+                    "18400217": "Norcross",
+                    "18400218": "Alpharetta",
+                    "18400219": "Athens"
+                }
+            },
+            "18400300": {
+                "province": "Arizona",
+                "citys": {
+                    "18400301": "Phoenix",
+                    "18400302": "Tucson",
+                    "18400303": "Tempe",
+                    "18400304": "Queen Creek",
+                    "18400305": "Yuma",
+                    "18400306": "Paradise Valley",
+                    "18400307": "Flagstaff",
+                    "18400308": "Florence",
+                    "18400309": "Tolleson",
+                    "18400310": "Scottsdale",
+                    "18400311": "Prescott Valley",
+                    "18400312": "Coolidge",
+                    "18400313": "Glendale",
+                    "18400314": "Mesa",
+                    "18400315": "Show Low",
+                    "18400316": "Chandler"
+                }
+            },
+            "18400400": {
+                "province": "Alabama",
+                "citys": {
+                    "18400401": "Huntsville",
+                    "18400402": "Birmingham",
+                    "18400403": "Tuscaloosa",
+                    "18400404": "Dothan",
+                    "18400405": "Opelika",
+                    "18400406": "Auburn",
+                    "18400407": "Montgomery"
+                }
+            },
+            "18400500": {
+                "province": "Illinois",
+                "citys": {
+                    "18400501": "East Peoria",
+                    "18400502": "East Moline",
+                    "18400503": "Naperville",
+                    "18400504": "South Holland",
+                    "18400505": "Carbondale",
+                    "18400506": "Carlyle",
+                    "18400507": "Urbana",
+                    "18400508": "Evanston",
+                    "18400509": "Aurora",
+                    "18400510": "Champaign",
+                    "18400511": "University Park",
+                    "18400512": "Paxton",
+                    "18400513": "Palatine",
+                    "18400514": "Palos Hills",
+                    "18400515": "Cook County",
+                    "18400516": "Des Plaines",
+                    "18400517": "Wheaton",
+                    "18400518": "Springfield",
+                    "18400519": "Lombard",
+                    "18400520": "Glen Ellyn",
+                    "18400521": "Oak Brook",
+                    "18400522": "Edwardsville",
+                    "18400523": "Peoria",
+                    "18400524": "Collinsville",
+                    "18400525": "Schaumburg",
+                    "18400526": "Rock Island",
+                    "18400527": "Sugar Grove",
+                    "18400528": "Chicago",
+                    "18400529": "Lisle",
+                    "18400530": "Normal",
+                    "18400531": "Dixon",
+                    "18400532": "Decatur",
+                    "18400533": "DeKalb",
+                    "18400534": "River Forest",
+                    "18400535": "Macomb",
+                    "18400536": "Arlington Heights"
+                }
+            },
+            "18400600": {
+                "province": "Florida",
+                "citys": {
+                    "18400601": "Daytona Beach",
+                    "18400602": "Lee County",
+                    "18400603": "Leesburg",
+                    "18400604": "Fort Lauderdale",
+                    "18400605": "Boca Raton",
+                    "18400606": "Saint Leo",
+                    "18400607": "St. Lucie County",
+                    "18400608": "St Petersburg",
+                    "18400609": "Tampa",
+                    "18400610": "Kissimmee",
+                    "18400611": "Tallahassee",
+                    "18400612": "Melbourne",
+                    "18400613": "Orlando",
+                    "18400614": "Osceola County",
+                    "18400615": "Panama City",
+                    "18400616": "Broward County",
+                    "18400617": "Hillsborough County",
+                    "18400618": "Pensacola",
+                    "18400619": "DeLand",
+                    "18400620": "Dade City",
+                    "18400621": "Plant City",
+                    "18400622": "Jupiter",
+                    "18400623": "Jacksonville",
+                    "18400624": "Collier County",
+                    "18400625": "Sanford",
+                    "18400626": "Palm Coast",
+                    "18400627": "Winter Park",
+                    "18400628": "Gainesville",
+                    "18400629": "Coral Gables",
+                    "18400630": "Lake Worth",
+                    "18400631": "Sarasota",
+                    "18400632": "Sarasota County",
+                    "18400633": "West Palm Beach",
+                    "18400634": "Fort Myers",
+                    "18400635": "Miami",
+                    "18400636": "Deerfield Beach",
+                    "18400637": "Manatee County",
+                    "18400638": "Palm Beach County",
+                    "18400639": "Key West",
+                    "18400640": "Winter Haven",
+                    "18400641": "Medley ",
+                    "18400642": "Lakeland"
+                }
+            },
+            "18400700": {
+                "province": "Vermont",
+                "citys": {
+                    "18400701": "Burlington",
+                    "18400702": "Putney",
+                    "18400703": "Bennington",
+                    "18400704": "Poultney",
+                    "18400705": "Middlebury"
+                }
+            },
+            "18400800": {
+                "province": "Ohio",
+                "citys": {
+                    "18400801": "Dayton",
+                    "18400802": "Wooster",
+                    "18400803": "Cleveland",
+                    "18400804": "Lima",
+                    "18400805": "Columbus",
+                    "18400806": "Canton",
+                    "18400807": "Oberlin",
+                    "18400808": "University Heights",
+                    "18400809": "Brecksville",
+                    "18400810": "Toledo",
+                    "18400811": "Youngstown",
+                    "18400812": "Stow",
+                    "18400813": "Mason",
+                    "18400814": "Wadsworth",
+                    "18400815": "Kirtland",
+                    "18400816": "Yellow Springs",
+                    "18400817": "Kent",
+                    "18400818": "Belmont",
+                    "18400819": "Cincinnati",
+                    "18400820": "Miamisburg",
+                    "18400821": "Dublin",
+                    "18400822": "Akron",
+                    "18400823": "Powell",
+                    "18400824": "Bowling Green",
+                    "18400825": "Defiance",
+                    "18401517": "North Carolina"
+                }
+            },
+            "18400900": {
+                "province": "Oklahoma",
+                "citys": {
+                    "18400901": "Oklahoma City",
+                    "18400902": "Tulsa",
+                    "18400903": "Norman",
+                    "18400904": "Hinton"
+                }
+            },
+            "18401000": {
+                "province": "Oregon",
+                "citys": {
+                    "18401001": "Woodburn",
+                    "18401002": "Clackamas County",
+                    "18401003": "Klamath Falls",
+                    "18401004": "Boardman",
+                    "18401005": "Salem",
+                    "18401006": "Eugene",
+                    "18401007": "Prineville",
+                    "18401008": "Bend",
+                    "18401009": "Gresham",
+                    "18401010": "Sandy",
+                    "18401011": "Medford",
+                    "18401012": "Portland",
+                    "18401013": "Corvallis",
+                    "18401014": "Roseburg",
+                    "18401015": "Dalles",
+                    "18401016": "Canby",
+                    "18401017": "Terrebonne",
+                    "18401018": "Redmond",
+                    "18401019": "Molalla"
+                }
+            },
+            "18401100": {
+                "province": "Nevada",
+                "citys": {
+                    "18401101": "Henderson",
+                    "18401102": "Pahrump",
+                    "18401103": "Las Vegas",
+                    "18401104": "Lincoln County",
+                    "18401105": "Washoe County",
+                    "18401106": "Reno",
+                    "18401107": "Carson City"
+                }
+            },
+            "18401200": {
+                "province": "Nebraska",
+                "citys": {
+                    "18401201": "Omaha",
+                    "18401202": "Lincoln",
+                    "18401203": "Grand Island",
+                    "18401204": "Alliance"
+                }
+            },
+            "18401300": {
+                "province": "California",
+                "citys": {
+                    "18401301": "Chula Vista",
+                    "18401302": "Berkeley",
+                    "18401303": "Burbank",
+                    "18401304": "Folsom",
+                    "18401305": "Claremont",
+                    "18401306": "Rancho Cordova",
+                    "18401307": "Livermore",
+                    "18401308": "Garden Grove",
+                    "18401309": "Carlsbad",
+                    "18401310": "Imperial",
+                    "18401311": "San Jose",
+                    "18401312": "San Pedro",
+                    "18401313": "Santa Paula",
+                    "18401314": "Santa Clara",
+                    "18401315": "Santa Cruz",
+                    "18401316": "San Diego",
+                    "18401317": "Santa Clarita",
+                    "18401318": "Santa Barbara",
+                    "18401319": "Santa Ana",
+                    "18401320": "Santa Monica",
+                    "18401321": "San Luis Obispo",
+                    "18401322": "San Marino",
+                    "18401323": "San Marcos",
+                    "18401324": "San Mateo",
+                    "18401325": "Campbell",
+                    "18401326": "Tustin",
+                    "18401327": "Chico",
+                    "18401328": "Oakland",
+                    "18401329": "Ontario",
+                    "18401330": "Anaheim",
+                    "18401331": "Fullerton",
+                    "18401332": "Irvine",
+                    "18401333": "Mountain View",
+                    "18401334": "Brawley",
+                    "18401335": "Brea",
+                    "18401336": "Palo Alto",
+                    "18401337": "Pasadena",
+                    "18401338": "Rancho Cucamonga",
+                    "18401339": "Vernon",
+                    "18401340": "Fresno",
+                    "18401341": "Davis",
+                    "18401342": "La Mirada",
+                    "18401343": "Ramona",
+                    "18401344": "Stanford",
+                    "18401345": "Stockton",
+                    "18401346": "San Francisco",
+                    "18401347": "Pleasant Hill",
+                    "18401348": "Pleasanton",
+                    "18401349": "Ventura County",
+                    "18401350": "Glendale",
+                    "18401351": "Palm Springs",
+                    "18401352": "Sunnyvale",
+                    "18401353": "Orange County",
+                    "18401354": "Irvine",
+                    "18401355": "Beverly Hills",
+                    "18401356": "Poway",
+                    "18401357": "Pomona",
+                    "18401358": "Los Altos Hills",
+                    "18401359": "Los Angeles",
+                    "18401360": "Hayward",
+                    "18401361": "Marian Del Jord",
+                    "18401362": "Foster City",
+                    "18401363": "Costa Mesa",
+                    "18401364": "Sonoma County",
+                    "18401365": "Napa",
+                    "18401366": "Thousand Oaks",
+                    "18401367": "Rocklin",
+                    "18401368": "Rohnert Park",
+                    "18401369": "Loma Linda",
+                    "18401370": "Moraga",
+                    "18401371": "Moffett Field",
+                    "18401372": "Lake County",
+                    "18401373": "Lathrop",
+                    "18401374": "Sacramento",
+                    "18401375": "Monterey",
+                    "18401376": "Simi Valley",
+                    "18401377": "West Sacramento",
+                    "18401378": "Bakersfield",
+                    "18401379": "Fremont",
+                    "18401380": "Fair Oaks",
+                    "18401381": "Riverside",
+                    "18401382": "Long Beach",
+                    "18401383": "Menlo Park",
+                    "18401384": "Atherton",
+                    "18401385": "Alhambra",
+                    "18401386": "Azusa",
+                    "18401387": "Redding",
+                    "18401388": "Redwood City",
+                    "18401389": "Malibu",
+                    "18401390": "Merced",
+                    "18401391": "Fremont",
+                    "18401392": "Orange",
+                    "18401393": "San Bruno",
+                    "18401394": "Walnut Creek",
+                    "18401395": "Newark",
+                    "18401396": "Redlands",
+                    "18401397": "El Segundo"
+                }
+            },
+            "18401400": {
+                "province": "North California (San Jose \/ Santa Clara \/ Mir Pittas)"
+            },
+            "18401500": {
+                "province": "North Carolina",
+                "citys": {
+                    "18401501": "Randolph County",
+                    "18401502": "Lenoir",
+                    "18401503": "Cary",
+                    "18401504": "Elkin",
+                    "18401505": "Charlotte",
+                    "18401506": "Durham",
+                    "18401507": "Morganton",
+                    "18401508": "Chapel Hill",
+                    "18401509": "Greensboro",
+                    "18401510": "Greenville",
+                    "18401511": "High Point",
+                    "18401512": "Winston Salem",
+                    "18401513": "Forsyth County",
+                    "18401514": "Salisbury",
+                    "18401515": "Raleigh",
+                    "18401516": "Mt Olive",
+                    "18401518": "Morrisville",
+                    "18401519": "Rocky Mount"
+                }
+            },
+            "18401600": {
+                "province": "North Dakota",
+                "citys": {
+                    "18401601": "Bismarck",
+                    "18401602": "Fargo"
+                }
+            },
+            "18401700": {
+                "province": "Washington, D.C."
+            },
+            "18401800": {
+                "province": "Washington",
+                "citys": {
+                    "18401801": "Yakima",
+                    "18401802": "Yakima County",
+                    "18401803": "Cheney",
+                    "18401804": "Kalama",
+                    "18401805": "Ellensburg",
+                    "18401806": "Edmonds",
+                    "18401807": "Tukwila",
+                    "18401808": "Tacoma",
+                    "18401809": "Okanogan County",
+                    "18401810": "Spokane",
+                    "18401811": "Quincy",
+                    "18401812": "Pullman",
+                    "18401813": "Lynwood",
+                    "18401814": "Grant County",
+                    "18401815": "Walla Walla",
+                    "18401816": "College Place",
+                    "18401817": "Kennewick",
+                    "18401818": "Leavenworth",
+                    "18401819": "SeaTac",
+                    "18401820": "Seattle",
+                    "18401821": "Douglas County",
+                    "18401822": "Aberdeen",
+                    "18401823": "Wenatchee",
+                    "18401824": "Bellingham",
+                    "18401825": "Silverdale",
+                    "18401826": "Redmond",
+                    "18401827": "Bellevue"
+                }
+            },
+            "18401900": {
+                "province": "Southern California"
+            },
+            "18402000": {
+                "province": "South Carolina",
+                "citys": {
+                    "18402001": "Clemson",
+                    "18402002": "North Charleston",
+                    "18402003": "Columbia",
+                    "18402004": "Orangeburg county",
+                    "18402005": "Florence",
+                    "18402006": "Spartanburg",
+                    "18402007": "Charleston",
+                    "18402008": "Greenville",
+                    "18402009": "Denmark",
+                    "18402010": "Berkeley",
+                    "18402011": "Greenwood"
+                }
+            },
+            "18402100": {
+                "province": "South Dakota",
+                "citys": {
+                    "18402101": "Brookings",
+                    "18402102": "Vermillion",
+                    "18402103": "Rapid City",
+                    "18402104": "Spearfish",
+                    "18402105": "Sioux Falls",
+                    "18402106": "Aberdeen",
+                    "18402107": "Madison"
+                }
+            },
+            "18402200": {
+                "province": "Indiana",
+                "citys": {
+                    "18402201": "South Bend",
+                    "18402202": "Indianapolis",
+                    "18402203": "Hammond",
+                    "18402204": "Columbus",
+                    "18402205": "Evansville",
+                    "18402206": "Auburn",
+                    "18402207": "Buffalo",
+                    "18402208": "Muncie",
+                    "18402209": "Terre Haute",
+                    "18402210": "Lebanon",
+                    "18402211": "Montgomery",
+                    "18402212": "West Lafayette",
+                    "18402213": "Fort Wayne",
+                    "18402214": "Westville",
+                    "18402215": "Marion County",
+                    "18402216": "Noblesville",
+                    "18402217": "Lafayette"
+                }
+            },
+            "18402300": {
+                "province": "Santa Clara Denver"
+            },
+            "18402400": {
+                "province": "Kansas",
+                "citys": {
+                    "18402401": "Lenexa",
+                    "18402402": "Liberal",
+                    "18402403": "Lawrence",
+                    "18402404": "Pittsburg",
+                    "18402405": "Kansas City",
+                    "18402406": "Olathe",
+                    "18402407": "Wichita",
+                    "18402408": "Topeka",
+                    "18402409": "Manhattan",
+                    "18402410": "Overland Park",
+                    "18402411": "Hays",
+                    "18402412": "Johnson County",
+                    "18402413": "Haviland"
+                }
+            },
+            "18402500": {
+                "province": "Hawaii",
+                "citys": {
+                    "18402501": "Kapolei",
+                    "18402502": "Laie",
+                    "18402503": "Honolulu"
+                }
+            },
+            "18402600": {
+                "province": "Wisconsin",
+                "citys": {
+                    "18402601": "Stevens Point",
+                    "18402602": "St. Croix County",
+                    "18402603": "Kenosha",
+                    "18402604": "Oshkosh",
+                    "18402605": "Milwaukee",
+                    "18402606": "Whitewater",
+                    "18402607": "La Crosse",
+                    "18402608": "Platteville",
+                    "18402609": "Green Bay",
+                    "18402610": "Mequon",
+                    "18402611": "Menomonie",
+                    "18402612": "Eau Claire",
+                    "18402613": "Waukesha County",
+                    "18402614": "Superior",
+                    "18402615": "River Falls",
+                    "18402616": "Appleton",
+                    "18402617": "Madison"
+                }
+            },
+            "18402700": {
+                "province": "Pennsylvania",
+                "citys": {
+                    "18402701": "Elizabethtown",
+                    "18402702": "Erie",
+                    "18402703": "Easton",
+                    "18402704": "Bethlehem",
+                    "18402705": "Collegeville",
+                    "18402706": "Lancaster",
+                    "18402707": "Chester County ",
+                    "18402708": "Lewisburg",
+                    "18402709": "Pittsburgh",
+                    "18402710": "Indiana",
+                    "18402711": "Haverford",
+                    "18402712": "Harrisburg",
+                    "18402713": "Wilkes Barre",
+                    "18402714": "Williamsport",
+                    "18402715": "Bucks County",
+                    "18402716": "Blue Bell",
+                    "18402717": "Bryn Mawr",
+                    "18402718": "Youngwood",
+                    "18402719": "Scranton",
+                    "18402720": "Swarthmore",
+                    "18402721": "Schnecksville",
+                    "18402722": "Glenside",
+                    "18402723": "Greensburg",
+                    "18402724": "Greenville",
+                    "18402725": "Mechanicsburg",
+                    "18402726": "Nanticoke",
+                    "18402727": "Moon",
+                    "18402728": "York",
+                    "18402729": "Johnstown",
+                    "18402730": "Newtown",
+                    "18402731": "Villanova",
+                    "18402732": "Montgomery County",
+                    "18402733": "West Chester",
+                    "18402734": "Philadelphia",
+                    "18402735": "Selinsgrove",
+                    "18402736": "Monroeville",
+                    "18402737": "Allentown",
+                    "18402738": "Allegheny County",
+                    "18402739": "Aston",
+                    "18402740": "Reading",
+                    "18402741": "Wayne",
+                    "18402742": "Muncy"
+                }
+            },
+            "18402800": {
+                "province": "Michigan",
+                "citys": {
+                    "18402801": "Port Huron",
+                    "18402802": "Birimingham",
+                    "18402803": "Lansing",
+                    "18402804": "Livonia",
+                    "18402805": "Garden City",
+                    "18402806": "Cadillac",
+                    "18402807": "Grand Rapids",
+                    "18402808": "Auburn Hills",
+                    "18402809": "Owosso",
+                    "18402810": "Ann Arbor",
+                    "18402811": "Battle Creek",
+                    "18402812": "Detroit",
+                    "18402813": "Flint",
+                    "18402814": "Wyandotte",
+                    "18402815": "Benton Harbor",
+                    "18402816": "Jackson",
+                    "18402817": "Berrien Springs",
+                    "18402818": "Highland Park",
+                    "18402819": "Troy",
+                    "18402820": "Southfield",
+                    "18402821": "Royal Oak",
+                    "18402822": "Allen Park",
+                    "18402823": "Mt Pleasant",
+                    "18402824": "Saginaw",
+                    "18402825": "Saginaw County",
+                    "18402826": "Dearborn",
+                    "18402827": "Albion",
+                    "18402828": "Wayne",
+                    "18402829": "Muskegon",
+                    "18402830": "Allendale"
+                }
+            },
+            "18402900": {
+                "province": "Missouri",
+                "citys": {
+                    "18402901": "Columbia",
+                    "18402902": "Saint Louis",
+                    "18402903": "Kansas City",
+                    "18402904": "Kirksville",
+                    "18402905": "Rolla",
+                    "18402906": "Fenton",
+                    "18402907": "Webster Groves",
+                    "18402908": "Springfield",
+                    "18402909": "Owensville"
+                }
+            },
+            "18403000": {
+                "province": "Mississippi",
+                "citys": {
+                    "18403001": "Jackson",
+                    "18403002": "Oxford"
+                }
+            },
+            "18403100": {
+                "province": "Connecticut",
+                "citys": {
+                    "18403101": "Hartford",
+                    "18403102": "Wilton",
+                    "18403103": "New London",
+                    "18403104": "Wallingford",
+                    "18403105": "New Haven",
+                    "18403106": "Southbury",
+                    "18403107": "West Hartford",
+                    "18403108": "Norwalk",
+                    "18403109": "Fairfield",
+                    "18403110": "Greenwich",
+                    "18403111": "Stamford",
+                    "18403112": "West Haven"
+                }
+            },
+            "18403200": {
+                "province": "Virginia",
+                "citys": {
+                    "18403201": "Alexandria",
+                    "18403202": "Boydton",
+                    "18403203": "Harrisonburg",
+                    "18403204": "Salem",
+                    "18403205": "Charlottesville",
+                    "18403206": "Williamsburg",
+                    "18403207": "Wise",
+                    "18403208": "Radford",
+                    "18403209": "Sweet Briar",
+                    "18403210": "Springfield",
+                    "18403211": "Sterling",
+                    "18403212": "Lynchburg",
+                    "18403213": "Gloucester Point",
+                    "18403214": "Winchester",
+                    "18403215": "Vienna",
+                    "18403216": "Norfolk",
+                    "18403217": "Roanoke",
+                    "18403218": "Fairfax",
+                    "18403219": "Ferrum",
+                    "18403220": "Herndon",
+                    "18403221": "Richmond",
+                    "18403222": "Ashland",
+                    "18403223": "Ashburn",
+                    "18403224": "Arlington",
+                    "18403225": "Reston",
+                    "18403226": "Manassas",
+                    "18403227": "McLean"
+                }
+            },
+            "18403300": {
+                "province": "Texas",
+                "citys": {
+                    "18403301": "Huntsville",
+                    "18403302": "Houston",
+                    "18403303": "Dallas",
+                    "18403304": "Galveston",
+                    "18403305": "Beaumont",
+                    "18403306": "Carrollton",
+                    "18403307": "Katy",
+                    "18403308": "Harlingen",
+                    "18403309": "Harris County",
+                    "18403310": "Sanantonio",
+                    "18403311": "San Angelo",
+                    "18403312": "San Marcos",
+                    "18403313": "Canyon",
+                    "18403314": "El Paso",
+                    "18403315": "Elgin",
+                    "18403316": "Killeen",
+                    "18403317": "Tarrant County",
+                    "18403318": "College Station",
+                    "18403319": "Orange",
+                    "18403320": "Austin",
+                    "18403321": "Wichita Falls",
+                    "18403322": "Angleton",
+                    "18403323": "Brenham",
+                    "18403324": "Blanchard",
+                    "18403325": "Fort Bliss",
+                    "18403326": "Brownsville",
+                    "18403327": "Bryan",
+                    "18403328": "Lubbock",
+                    "18403329": "La Grange",
+                    "18403330": "Laredo",
+                    "18403331": "Odessa",
+                    "18403332": "Spring",
+                    "18403333": "Stephenville",
+                    "18403334": "Plano",
+                    "18403335": "Prairie View",
+                    "18403336": "Longview",
+                    "18403337": "Irving",
+                    "18403338": "Fort Worth",
+                    "18403339": "Tyler",
+                    "18403340": "Edinburgh",
+                    "18403341": "Texarkana",
+                    "18403342": "Richardson",
+                    "18403343": "Denton",
+                    "18403344": "Corpus Christi",
+                    "18403345": "Commerce",
+                    "18403346": "Midland",
+                    "18403347": "Sour Lake",
+                    "18403348": "Nacogdoches",
+                    "18403349": "Victoria",
+                    "18403350": "Sugar Land",
+                    "18403351": "Lake Jackson",
+                    "18403352": "Sherman",
+                    "18403353": "Bellmead",
+                    "18403354": "Baytown",
+                    "18403355": "Dallas",
+                    "18403356": "Decatur",
+                    "18403357": "Kingsville",
+                    "18403358": "Alvin ",
+                    "18403359": "Abilene",
+                    "18403360": "Arlington",
+                    "18403361": "Port Arthur",
+                    "18403362": "Waco",
+                    "18403363": "Marshall",
+                    "18403364": "McAllen",
+                    "18403365": "Eagle Pass",
+                    "18403366": "Frisco",
+                    "18403367": "Cedar Park",
+                    "18403368": "Lakeway",
+                    "18403369": "Conroe"
+                }
+            },
+            "18403400": {
+                "province": "Wyoming",
+                "citys": {
+                    "18403401": "Gillette",
+                    "18403402": "Cheyenne",
+                    "18403403": "Laramie",
+                    "18403404": "Afton"
+                }
+            },
+            "18403500": {
+                "province": "New Mexico",
+                "citys": {
+                    "18403501": "Farmington",
+                    "18403502": "Los Alamos",
+                    "18403503": "Roswell",
+                    "18403504": "Albuquerque"
+                }
+            },
+            "18403600": {
+                "province": "New Jersey",
+                "citys": {
+                    "18403601": "Clifton",
+                    "18403602": "North Bergen",
+                    "18403603": "South Orange",
+                    "18403604": "Hackettstown",
+                    "18403605": "Hackensack",
+                    "18403606": "Atlantic City",
+                    "18403607": "Oakland",
+                    "18403608": "Weehawken",
+                    "18403609": "Parsippany-Troy Hills",
+                    "18403610": "Pennsauken",
+                    "18403611": "New Brunswick",
+                    "18403612": "New Brunswick \/ Prisca Te Vee \/ Newark \/ Kenton",
+                    "18403613": "Princeton",
+                    "18403614": "Jersey City",
+                    "18403615": "Edison",
+                    "18403616": "Trenton",
+                    "18403617": "Piscataway",
+                    "18403618": "Newark",
+                    "18403619": "Camden",
+                    "18403620": "Mahwah",
+                    "18403621": "Somerset",
+                    "18403622": "Glassboro",
+                    "18403623": "Montclair",
+                    "18403624": "Secaucus",
+                    "18403625": "Cedar Knolls",
+                    "18403626": "Red Bank",
+                    "18403627": "Hoboken",
+                    "18403628": "Wayne",
+                    "18403629": "Teaneck",
+                    "18403630": "Belleville ",
+                    "18403631": "Hanover",
+                    "18403632": "Vineland",
+                    "18403633": "Plainfield"
+                }
+            },
+            "18403700": {
+                "province": "New Hampshire",
+                "citys": {
+                    "18403701": "Keene",
+                    "18403702": "New London",
+                    "18403703": "Plymouth",
+                    "18403704": "Manchester",
+                    "18403705": "Hanover",
+                    "18403706": "Nashua"
+                }
+            },
+            "18403800": {
+                "province": "Minnesota",
+                "citys": {
+                    "18403801": "Kasson",
+                    "18403802": "St Paul",
+                    "18403803": "St. Cloud",
+                    "18403804": "St Peter",
+                    "18403805": "St. Joseph",
+                    "18403806": "Brainerd",
+                    "18403807": "Minneapolis",
+                    "18403808": "Mankato",
+                    "18403809": "Duluth",
+                    "18403810": "Windom",
+                    "18403811": "Moorhead",
+                    "18403812": "Rochester",
+                    "18403813": "Northfield",
+                    "18403814": "Alexandria"
+                }
+            },
+            "18403900": {
+                "province": "Losangeles Phoenix"
+            },
+            "18404000": {
+                "province": "Iowa",
+                "citys": {
+                    "18404001": "Council Bluffs",
+                    "18404002": "Des Moines",
+                    "18404003": "Lamoni",
+                    "18404004": "Grinnell",
+                    "18404005": "Osage",
+                    "18404006": "Waterloo",
+                    "18404007": "Iowa City",
+                    "18404008": "Ames",
+                    "18404009": "Mount Vernon",
+                    "18404010": "Monticello",
+                    "18404011": "Dubuque",
+                    "18404012": "Decorah",
+                    "18404013": "Cedar Rapids",
+                    "18404014": "Cedar Falls",
+                    "18404015": "Muscatine"
+                }
+            },
+            "18404100": {
+                "province": "Idaho",
+                "citys": {
+                    "18404101": "Lewiston",
+                    "18404102": "Boise",
+                    "18404103": "Nampa",
+                    "18404104": "Pocatello",
+                    "18404105": "Idaho Falls",
+                    "18404106": "Twin Falls",
+                    "18404107": "Coeur d Alene",
+                    "18404108": "Midvale",
+                    "18404109": "Rockland",
+                    "18404110": "Moscow",
+                    "18404111": "Ammon",
+                    "18404112": "Rexburg"
+                }
+            },
+            "18404200": {
+                "province": "Delaware",
+                "citys": {
+                    "18404201": "Dover",
+                    "18404202": "Wilmington",
+                    "18404203": "Newark"
+                }
+            },
+            "18404300": {
+                "province": "Utah",
+                "citys": {
+                    "18404301": "South Jordan",
+                    "18404302": "Orem",
+                    "18404303": "Provo",
+                    "18404304": "Lehi",
+                    "18404305": "Logan",
+                    "18404306": "Salt Lake City",
+                    "18404307": "Murray",
+                    "18404308": "Ogden"
+                }
+            },
+            "18404400": {
+                "province": "Tennessee",
+                "citys": {
+                    "18404401": "Columbia",
+                    "18404402": "Tullahoma",
+                    "18404403": "Memphis",
+                    "18404404": "Cookeville",
+                    "18404405": "Spring City",
+                    "18404406": "Oak Ridge",
+                    "18404407": "Johnson City",
+                    "18404408": "Nashville",
+                    "18404409": "Morristown",
+                    "18404410": "Knoxville",
+                    "18404411": "Murfreesboro",
+                    "18404412": "Pikeville",
+                    "18404413": "Franklin"
+                }
+            },
+            "18404500": {
+                "province": "Colorado",
+                "citys": {
+                    "18404501": "Denver",
+                    "18404502": "Boulder",
+                    "18404503": "Boulder County",
+                    "18404504": "Broomfield",
+                    "18404505": "Golden",
+                    "18404506": "Pueblo",
+                    "18404507": "Longmont",
+                    "18404508": "Durango",
+                    "18404509": "Glenwood Springs",
+                    "18404510": "Grand County",
+                    "18404511": "Greeley",
+                    "18404512": "Centennial",
+                    "18404513": "Buena Vista",
+                    "18404514": "Fort Collins",
+                    "18404515": "Colorado Springs",
+                    "18404516": "Colorado Springs",
+                    "18404517": "Alamosa",
+                    "18404518": "Highlands Ranch",
+                    "18404519": "Aspen"
+                }
+            },
+            "18404600": {
+                "province": "New York \/ Newark"
+            },
+            "18404700": {
+                "province": "New York \/ Newark \/ North Bergen \/ tin Cox"
+            },
+            "18404800": {
+                "province": "New York",
+                "citys": {
+                    "18404801": "Utica",
+                    "18404802": "Hempstead",
+                    "18404803": "Ithaca",
+                    "18404804": "Clifton Park",
+                    "18404805": "Garden City",
+                    "18404806": "Hamilton",
+                    "18404807": "Dobbs Ferry",
+                    "18404808": "Orange County",
+                    "18404809": "Albany",
+                    "18404810": "Oneonta",
+                    "18404811": "Williamsville",
+                    "18404812": "Binghamton",
+                    "18404813": "Buffalo",
+                    "18404814": "Brooklyn",
+                    "18404815": "Brookhaven",
+                    "18404816": "Brookville",
+                    "18404817": "White Plains",
+                    "18404818": "Bethpage",
+                    "18404819": "Schenectady",
+                    "18404820": "Stamford",
+                    "18404821": "New Paltz",
+                    "18404822": "New Rochelle",
+                    "18404823": "Jericho",
+                    "18404824": "Watertown",
+                    "18404825": "Farmingdale",
+                    "18404826": "Poughkeepsie",
+                    "18404827": "Potsdam",
+                    "18404828": "Lockport",
+                    "18404829": "Troy",
+                    "18404830": "Valhalla",
+                    "18404831": "Cortland",
+                    "18404832": "Newburgh",
+                    "18404833": "New York City",
+                    "18404834": "Verona",
+                    "18404835": "Rochester",
+                    "18404836": "Alfred",
+                    "18404837": "Suffolk County",
+                    "18404838": "Latham",
+                    "18404839": "Saratoga Springs",
+                    "18404840": "Dutchess County",
+                    "18404841": "Syracuse",
+                    "18404842": "Ardsley",
+                    "18404843": "Amsterdam",
+                    "18404844": "Amherst",
+                    "18404845": "Hammond"
+                }
+            },
+            "18404900": {
+                "province": "Maine",
+                "citys": {
+                    "18404901": "Brunswick",
+                    "18404902": "Lewiston",
+                    "18404903": "Presque Isle",
+                    "18404904": "Charleston",
+                    "18404905": "Waterville",
+                    "18404906": "Bangor"
+                }
+            },
+            "18405000": {
+                "province": "Rhode Island",
+                "citys": {
+                    "18405001": "Smithfield",
+                    "18405002": "Providence",
+                    "18405003": "Kingston"
+                }
+            },
+            "18405100": {
+                "province": "Kentucky",
+                "citys": {
+                    "18405101": "Danville",
+                    "18405102": "Versailles",
+                    "18405103": "Erlanger",
+                    "18405104": "Williamsburg",
+                    "18405105": "London",
+                    "18405106": "Morehead",
+                    "18405107": "Louisville",
+                    "18405108": "Bowling Green",
+                    "18405109": "Murray",
+                    "18405110": "Franklin"
+                }
+            },
+            "18405200": {
+                "province": "Montana",
+                "citys": {
+                    "18405201": "Bozeman",
+                    "18405202": "Kalispell",
+                    "18405203": "Havre",
+                    "18405204": "Missoula",
+                    "18405205": "Billings"
+                }
+            },
+            "18405300": {
+                "province": "West Virginia",
+                "citys": {
+                    "18405301": "Berkeley Springs",
+                    "18405302": "Clarksburg",
+                    "18405303": "Institute",
+                    "18405304": "Morgantown",
+                    "18405305": "Charleston"
+                }
+            },
+            "18405400": {
+                "province": "Louisiana",
+                "citys": {
+                    "18405401": "Shreveport",
+                    "18405402": "Leland",
+                    "18405403": "Hammond",
+                    "18405404": "Baton Rouge",
+                    "18405405": "Ruston",
+                    "18405406": "Lafayette",
+                    "18405407": "Springhill",
+                    "18405408": "New Orleans",
+                    "18405409": "Mansfield",
+                    "18405410": "Haynesville",
+                    "18405411": "Waynesboro",
+                    "18405412": "Natchitoches",
+                    "18405413": "Monroe",
+                    "18405414": "DeRidder"
+                }
+            },
+            "18405500": {
+                "province": "Alaska",
+                "citys": {
+                    "18405501": "Anchorage",
+                    "18405502": "Juneau"
+                }
+            },
+            "18405600": {
+                "province": "Arkansas",
+                "citys": {
+                    "18405601": "Fort Smith",
+                    "18405602": "El Dorado",
+                    "18405603": "Little Rock",
+                    "18405604": "Conway",
+                    "18405605": "Russellville",
+                    "18405606": "Pine Bluff",
+                    "18405607": "Jonesboro",
+                    "18405608": "Monticello",
+                    "18405609": "Fayetteville",
+                    "18405610": "Arkadelphia"
+                }
+            },
+            "18405700": {
+                "province": "Massachusetts",
+                "citys": {
+                    "18405701": "Easton",
+                    "18405702": "Worcester",
+                    "18405703": "Burlington",
+                    "18405704": "Lancaster",
+                    "18405705": "Lexington",
+                    "18405706": "Cambridge",
+                    "18405707": "North Adams",
+                    "18405708": "Great Barrington",
+                    "18405709": "Williamstown",
+                    "18405710": "Franklin",
+                    "18405711": "Needham",
+                    "18405712": "Brockton",
+                    "18405713": "Bridgewater",
+                    "18405714": "Concord",
+                    "18405715": "Tyngsborough",
+                    "18405716": "Dedham",
+                    "18405717": "Springfield",
+                    "18405718": "Chestnut Hill",
+                    "18405719": "Waltham",
+                    "18405720": "Boston",
+                    "18405721": "Lowell",
+                    "18405722": "Fall River",
+                    "18405723": "Milton",
+                    "18405724": "Norton",
+                    "18405725": "Beverly",
+                    "18405726": "Wellesley",
+                    "18405727": "Westfield",
+                    "18405728": "Norwood",
+                    "18405729": "Somerville",
+                    "18405730": "Woburn"
+                }
+            },
+            "18405800": {
+                "province": "Maryland",
+                "citys": {
+                    "18405801": "Chestertown",
+                    "18405802": "Chevy Chase",
+                    "18405803": "Laurel",
+                    "18405804": "Calvert County",
+                    "18405805": "Carroll County",
+                    "18405806": "University Park",
+                    "18405807": "Westminster",
+                    "18405808": "Anne Arundel County",
+                    "18405809": "Annapolis",
+                    "18405810": "Fulton",
+                    "18405811": "Baltimore",
+                    "18405812": "Frederick",
+                    "18405813": "Largo",
+                    "18405814": "Gaithersburg",
+                    "18405815": "Rockville",
+                    "18405816": "Adelphi",
+                    "18405817": "Bethesda",
+                    "18405818": "Bel Air",
+                    "18405819": "Towson",
+                    "18405820": "Howard County",
+                    "18405821": "Hagerstown"
+                }
+            }
+        }
+    },
+    "18500000": {
+        "country": "The United States Virgin Islands",
+        "provinces": {
+            "18500100": {
+                "province": "Christiansted"
+            }
+        }
+    },
+    "18540000": {
+        "country": "Burkina Faso"
+    },
+    "18580000": {
+        "country": "Uruguay"
+    },
+    "18600000": {
+        "country": "Uzbekistan"
+    },
+    "18620000": {
+        "country": "Venezuela",
+        "provinces": {
+            "18620100": {
+                "province": "Caracas"
+            },
+            "18620200": {
+                "province": "Merida",
+                "citys": {
+                    "18620201": "Merida"
+                }
+            }
+        }
+    },
+    "18760000": {
+        "country": "Wallis and Futuna Islands"
+    },
+    "18820000": {
+        "country": "Samoa"
+    },
+    "18870000": {
+        "country": "Yemen"
+    },
+    "18940000": {
+        "country": "Zambia",
+        "provinces": {
+            "18940100": {
+                "province": "Lusaka"
+            }
+        }
+    },
+    "90010000": {
+        "country": "South Sudan"
+    },
+    "90020000": {
+        "country": "Saint Barthelemy"
+    },
+    "90030000": {
+        "country": "Curacao"
+    },
+    "90040000": {
+        "country": "French Sint Maarten"
+    },
+    "90050000": {
+        "country": "Kosovo"
+    },
+    "90060000": {
+        "country": "Netherlands Caribbean"
+    },
+    "90070000": {
+        "country": "Dutch Saint Martin"
+    },
+    "10100000": {
+        "country": "Antarctica"
+    },
+    "99010000": {
+        "country": "Africa Area"
+    },
+    "99020000": {
+        "country": "North America"
+    },
+    "99030000": {
+        "country": "The Latin American region"
+    },
+    "99040000": {
+        "country": "The Asia Pacific Region"
+    },
+    "99050000": {
+        "country": "European Union"
+    }
+}

@@ -1,0 +1,248 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="account_black_0">#00000000</color>
+    <color name="account_black_10">#19000000</color>
+    <color name="account_color_333333">#333333</color>
+    <color name="account_color_333333_50">#7f333333</color>
+    <color name="account_color_4085fa">#4085fa</color>
+    <color name="account_color_4085fa_50">#7f4085fa</color>
+    <color name="account_color_bbbbbb">#bbbbbb</color>
+    <color name="account_color_bfbfbf">#bfbfbf</color>
+    <color name="account_color_dddddd">#dddddd</color>
+    <color name="account_color_f7f7f7">#f7f7f7</color>
+    <color name="account_color_fd4965">#E5fd4965</color>
+    <color name="account_line_color">#e8e8e8</color>
+    <color name="account_white">#FFFFFF</color>
+    <color name="common_color_19000000">#19000000</color>
+    <color name="common_color_209D20">#209D20</color>
+    <color name="common_color_E6000000">#E6000000</color>
+    <color name="common_color_E63BB73B">#E63BB73B</color>
+    <color name="common_color_F0F0F0">#F0F0F0</color>
+    <color name="common_color_F5F5F5">#F5F5F5</color>
+    <color name="common_color_FF538F">#FF538F</color>
+    <color name="common_exit_dialog_btn_bg">@color/common_color_FF538F</color>
+    <color name="common_white_background_btn_bg_pressed">@color/common_color_F0F0F0</color>
+    <color name="common_white_background_btn_bg_selected_activated_pressed">
+        @color/common_color_19000000
+    </color>
+    <color name="common_white_background_btn_stroke_line_color">@color/common_color_E63BB73B</color>
+    <color name="gamecenter_color_3BB73B">#3BB73B</color>
+    <color name="gamecenter_color_E6000000">#E6000000</color>
+    <color name="gamecenter_color_F3F3F3">#F3F3F3</color>
+    <color name="gamecenter_dialog_divider_line_color">#e7e7e7</color>
+    <color name="gamecenter_dialog_positive_btn_text_color">@color/gamecenter_color_3BB73B</color>
+    <color name="pay_app_color_F5F5F5">#F5F5F5</color>
+    <color name="pay_app_title_bg">@color/pay_app_color_F5F5F5</color>
+    <declare-styleable name="AccountClearEditText"><attr format="dimension" name="account_right_clear_margin"/><attr format="dimension" name="account_left_input_margin"/><attr format="dimension" name="account_text_size"/><attr format="color" name="account_text_color"/><attr name="account_input_type">
+            <enum name="phone" value="0"/>
+            <enum name="textEmailAddress" value="1"/>
+            <enum name="textPassword" value="2"/>
+            <enum name="number" value="3"/>
+        </attr><attr format="string" name="account_hint"/><attr format="dimension" name="account_hint_size"/><attr format="color" name="account_hint_text_color"/><attr format="reference" name="account_input_id"/><attr format="integer" name="account_max_length"/></declare-styleable>
+    <declare-styleable name="OpenAccountCircleImageView"><attr format="dimension" name="account_border_width"/><attr format="color" name="account_border_color"/><attr name="account_border_style">
+            <enum name="inner" value="0"/>
+            <enum name="outer" value="1"/>
+        </attr></declare-styleable>
+    <declare-styleable name="OpenAccountPhotoCropView"><attr format="dimension" name="account_crop_padding"/><attr format="dimension" name="account_crop_width"/><attr format="color" name="account_crop_color"/><attr format="dimension" name="account_crop_radius"/><attr format="dimension" name="account_crop_rect_width"/><attr format="dimension" name="account_crop_rect_height"/></declare-styleable>
+    <declare-styleable name="OpenAccountTitleLayout"><attr format="string" name="account_title"/><attr format="string" name="account_right_table"/></declare-styleable>
+    <dimen name="account_auth_id_margin_left">40dp</dimen>
+    <dimen name="account_line_size">1px</dimen>
+    <dimen name="gamecenter_dialog_btn_text_size">@dimen/gamecenter_dialog_btn_title_text_size</dimen>
+    <dimen name="gamecenter_dialog_btn_title_text_size">15dp</dimen>
+    <dimen name="gamecenter_welcome_dialog_top_distance">20dp</dimen>
+    <string name="account_app">美图帐号</string>
+    <string name="account_area_search">搜索</string>
+    <string name="account_area_title">地区</string>
+    <string name="account_auth_code">证件号码</string>
+    <string name="account_auth_code_hint">请输入证件号码</string>
+    <string name="account_auth_id_china">中国大陆身份证</string>
+    <string name="account_auth_message">请准确填写个人的身份证件信息，身份证件信息认证后将不可更改：</string>
+    <string name="account_auth_name">真实姓名</string>
+    <string name="account_auth_name_hint">请输入真实姓名</string>
+    <string name="account_auth_result_desc">你已完成身份认证！</string>
+    <string name="account_auth_result_goon">继续</string>
+    <string name="account_auth_title">身份认证</string>
+    <string name="account_auth_type">证件类型</string>
+    <string name="account_choose_mobile_code_empty_tip">无结果</string>
+    <string name="account_common_back_login">返回登录</string>
+    <string name="account_common_cancel">取消</string>
+    <string name="account_common_capture_tips">操作过于频繁，请输入验证码</string>
+    <string name="account_common_complete">完成</string>
+    <string name="account_common_data_lost">数据丢失</string>
+    <string name="account_common_id">ID:%1$s</string>
+    <string name="account_common_login_success">登录成功</string>
+    <string name="account_common_network_no">网络信号找不到了</string>
+    <string name="account_common_next">下一步</string>
+    <string name="account_common_ok">好的</string>
+    <string name="account_common_password_hit">请设置6-16位的密码</string>
+    <string name="account_common_password_warm">密码中须包含字母、数字和特殊字符中的任意2种</string>
+    <string name="account_common_phone_hit">请输入注册手机号码</string>
+    <string name="account_common_picture_error">抱歉，图片无法读取</string>
+    <string name="account_common_submit">提交</string>
+    <string name="account_common_sure">确定</string>
+    <string name="account_common_tips_password_error">密码最多为16位字符</string>
+    <string name="account_common_tips_phone_error">请输入正确的手机号码</string>
+    <string name="account_common_verify_phone">验证手机号</string>
+    <string name="account_complaint_explain_message">申诉后我们将会在2个工作日内将审核结果通过短信发到你的手机。</string>
+    <string name="account_complaint_explain_title">请尽量准确的输入你注册美图帐号的时间、地点、使用的手机型号等信息，输入信息准确度越高，将越快通过申诉。</string>
+    <string name="account_complaint_hit">请描述你遇到的问题</string>
+    <string name="account_complaint_message">申诉说明</string>
+    <string name="account_complaint_phone_hit">请输入你可用的手机号</string>
+    <string name="account_complaint_submit_message">你的申诉留言已提交，审核结果将会通过短信发到你的手机，请注意查收。</string>
+    <string name="account_complaint_submit_success">提交成功</string>
+    <string name="account_forget_back"><Data>返回 &lt;font color="#4085fa">登录&lt;/font></Data></string>
+    <string name="account_forget_back_sms"><Data>返回 &lt;font color="#4085fa">短信验证码登录&lt;/font></Data></string>
+    <string name="account_forget_code_hit">请输入右侧验证码</string>
+    <string name="account_forget_code_message">看不清，换一张</string>
+    <string name="account_forget_password_text">忘记密码</string>
+    <string name="account_forget_phone_enable">手机号不可用</string>
+    <string name="account_info_avatar_hit">请选择头像</string>
+    <string name="account_info_date">生日</string>
+    <string name="account_info_date_hit">请选择生日</string>
+    <string name="account_info_head_album">从手机相册选择</string>
+    <string name="account_info_head_camera">拍照</string>
+    <string name="account_info_hit">请点击选择</string>
+    <string name="account_info_location">所在地</string>
+    <string name="account_info_location_hit">请选择所在地</string>
+    <string name="account_info_name">昵称</string>
+    <string name="account_info_name_empty">昵称不能为空</string>
+    <string name="account_info_name_hit">请输入昵称</string>
+    <string name="account_info_name_warm">昵称为2~20个字符，请重新输入。（不支持@、#、空格、中英文冒号）</string>
+    <string name="account_info_sex">性别</string>
+    <string name="account_info_sex_hit">请选择性别</string>
+    <string name="account_info_sex_man">男</string>
+    <string name="account_info_sex_woman">女</string>
+    <string name="account_info_signature">个性签名</string>
+    <string name="account_info_signature_hit">留下一句话告诉我你有多美</string>
+    <string name="account_info_signature_tips">请输入个性签名</string>
+    <string name="account_input_password">请输入密码</string>
+    <string name="account_input_phone">请输入手机号码</string>
+    <string name="account_login_permission_info_text">获得你的公开信息（昵称、头像等）</string>
+    <string name="account_login_permission_text">登录后该应用将获得以下权限</string>
+    <string name="account_login_phone_no_password">该手机号还未设置密码，请先设置密码或选择短信验证码登录~</string>
+    <string name="account_login_phone_no_password_set">设置密码</string>
+    <string name="account_login_phone_no_password_sms">短信验证码登录</string>
+    <string name="account_login_phone_password_error">密码输入错误，试试短信验证码登录？</string>
+    <string name="account_login_text">授权并登录</string>
+    <string name="account_logining">美图账号登录中...</string>
+    <string name="account_password_set_hit">请设置6-16位的密码</string>
+    <string name="account_password_set_message">新密码设置成功，请返回使用新密码重新登录</string>
+    <string name="account_password_set_success">设置成功</string>
+    <string name="account_phone_change_tips1">手机号换了？</string>
+    <string name="account_phone_change_tips2">点这里</string>
+    <string name="account_phone_dialog_btn_back">返回</string>
+    <string name="account_phone_dialog_btn_wait">等待</string>
+    <string name="account_phone_dialog_message">验证码短信可能略有延迟，确定返回并重新开始？</string>
+    <string name="account_phone_dialog_title">确认手机号码</string>
+    <string name="account_phone_resend">重新获取</string>
+    <string name="account_phone_tips"><Data>短信验证码已发送到 &lt;font color="#4085fa">%1$s %2$s&lt;/font>，请填写验证码：</Data></string>
+    <string name="account_please_set_legal_date">请设置正确的日期</string>
+    <string name="account_register_forget">忘记密码，重设密码</string>
+    <string name="account_register_login_now">是我的，立即登录</string>
+    <string name="account_register_main_account_message">该手机号已注册以上美图帐号，请确认是否是你的帐号</string>
+    <string name="account_register_meitu_message">注册美图帐号，即可登录所有美图产品</string>
+    <string name="account_register_message">服务协议</string>
+    <string name="account_register_message_header">注册表示同意 帐号规则 和 隐私政策</string>
+    <string name="account_register_reload">换个手机号重新注册</string>
+    <string name="account_register_send_phone">发送手机验证码</string>
+    <string name="account_register_text">立即注册</string>
+    <string name="account_register_user_agreement_title">美图帐号服务协议</string>
+    <string name="account_sms_agreement">帐号规则</string>
+    <string name="account_sms_hit">请输入验证码</string>
+    <string name="account_sms_privacy">隐私政策</string>
+    <string name="account_sms_send_code">发送短信验证码</string>
+    <string name="account_sms_tips">我们将发送验证码短信到这个手机号码：\n%1$s %2$s</string>
+    <string name="account_sms_verify_tips">温馨提示：未注册美图帐号的手机号，登录时将自动注册，且代表您已同意 帐号规则 和 隐私政策</string>
+    <string name="account_tip_permission_camera">请先开启摄像头权限再回来拍摄</string>
+    <string name="account_tip_permission_sd">请先开启存储权限</string>
+    <string name="account_title_complaint">申诉留言</string>
+    <string name="account_title_forget">忘记密码</string>
+    <string name="account_title_information">完善资料</string>
+    <string name="account_title_login">美图帐号登录</string>
+    <string name="account_title_password">设置新密码</string>
+    <string name="account_title_register">手机号注册</string>
+    <string name="account_title_sms">短信验证码登录</string>
+    <string name="account_toggle_add">添加或注册帐号</string>
+    <string name="account_toggle_add_message">最多添加8个帐号</string>
+    <string name="account_toggle_delete">删除</string>
+    <string name="account_toggle_delete_message">已是最后一个登录帐号，确认删除？</string>
+    <string name="account_toggle_edit">编辑</string>
+    <string name="account_toggle_logout_message">确认退出当前帐号？</string>
+    <string name="account_toggle_message">已登录以下帐号，可选择直接切换：</string>
+    <string name="account_toggle_op_success">操作成功</string>
+    <string name="account_toggle_quit">退出当前帐号</string>
+    <string name="account_toggle_title">切换帐号</string>
+    <string name="app_name">CommonLib</string>
+    <string name="common_network_unavailable">网络连接异常</string>
+    <string name="gamecenter_check_login_progress_title">游戏帐号登录中...</string>
+    <string name="gamecenter_exit_game_quit">退出游戏</string>
+    <string name="gamecenter_exit_game_resume">继续游戏</string>
+    <string name="gamecenter_login_fail">登录失败</string>
+    <string name="gamecenter_login_success">登录成功</string>
+    <string name="gamecenter_login_ui_account_btn_text">登录美图帐号</string>
+    <string name="gamecenter_login_welcome_progress_change_account_text">切换帐号</string>
+    <string name="gamecenter_login_welcome_progress_title">%s，欢迎回来</string>
+    <string name="gamecenter_pay_cancel_btn_txt">取消</string>
+    <string name="gamecenter_pay_install_btn_txt">安装（无需下载）</string>
+    <string name="gamecenter_pay_install_failure">安装失败</string>
+    <string name="gamecenter_pay_install_message">您尚未安装\"美图支付\"服务，安装后可使用充值支付服务，并确保支付安全。如果取消则无法支付。</string>
+    <string name="gamecenter_pay_payparams_error_toast">订单创建失败，请稍后重试</string>
+    <string name="gamecenter_pay_visit_external_storage_fail">安装（无需下载）</string>
+    <string name="gamecenter_user_authenticate_request_error">认证失败</string>
+    <string name="gamecenter_user_authenticate_ui_action_text">开始认证</string>
+    <string name="gamecenter_user_authenticate_ui_content">您的美图帐号尚未进行实名认证，根据法律要求，为了防止未成年人沉迷网络游戏，必须进行身份信息实名认证。我们承诺严格保护您的信息安全，决不泄漏。</string>
+    <string name="gamecenter_user_authenticate_ui_title">实名认证</string>
+    <string name="gamecenter_user_has_been_authenticated">已认证</string>
+    <string name="gamecenter_user_not_authenticated">未认证</string>
+    <style name="AccountCommonDialog" parent="@android:style/Theme.Dialog">
+        <!--边框-->
+        <item name="android:windowFrame">@null</item>
+        <!--是否浮现在activity之上-->
+        <item name="android:windowIsFloating">true</item>
+        <!--无标题-->
+        <item name="android:windowNoTitle">true</item>
+        <!--背景-->
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <!--模糊-->
+        <item name="android:backgroundDimEnabled">true</item>
+        <item name="android:backgroundDimAmount">0.5</item>
+    </style>
+    <style name="Common.NormalDialogTheme" parent="android:Theme.DeviceDefault.Light.Dialog">
+        <item name="android:windowBackground">@drawable/common_dialog_window_background</item>
+        <item name="android:windowNoTitle">true</item>
+    </style>
+    <style name="OpenAccount.Theme" parent="android:Theme.Black">
+        <item name="android:windowAnimationStyle">@style/OpenAccountLeftRightAnimationActivity</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowFullscreen">false</item>
+        <item name="android:windowContentOverlay">@null</item>
+        <item name="android:windowIsTranslucent">false</item>
+    </style>
+    <style name="OpenAccount.Theme.ColorF7F7F7">
+        <item name="android:windowBackground">@color/account_color_f7f7f7</item>
+    </style>
+    <style name="OpenAccount.Theme.WHITE">
+        <item name="android:windowBackground">@color/account_white</item>
+    </style>
+    <style name="OpenAccountLeftRightAnimationActivity" parent="@android:style/Animation.Activity">
+        <item name="android:activityOpenEnterAnimation">@anim/openaccount_slide_right_in</item>
+        <item name="android:activityOpenExitAnimation">@anim/openaccount_fade_out_300</item>
+        <item name="android:activityCloseEnterAnimation">@anim/oepnaccount_fade_in_300</item>
+        <item name="android:activityCloseExitAnimation">@anim/openaccount_slide_right_out</item>
+    </style>
+    <style name="openaccount_bottom_dialog_anim" parent="android:Animation">
+        <item name="android:windowEnterAnimation">@anim/openaccount_dialog_bottom_slide_in</item>
+        <item name="android:windowExitAnimation">@anim/openaccount_dialog_bottom_slide_out</item>
+    </style>
+    <style name="openaccount_common_dialog" parent="@android:style/Theme.Dialog">
+        <item name="android:windowFrame">@null</item>
+        <!-- 边框 -->
+        <item name="android:windowIsFloating">true</item>
+        <!-- 是否浮现在activity之上 -->
+        <item name="android:windowNoTitle">true</item>
+        <!-- 无标题 -->
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <!-- 模糊 -->
+        <!--<item name="android:backgroundDimEnabled">false</item> -->
+    </style>
+</resources>

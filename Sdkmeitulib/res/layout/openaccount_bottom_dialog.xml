@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/account_white"
+    android:orientation="vertical">
+
+    <ListView
+        android:id="@+id/account_bottom_list"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:divider="@color/account_color_f7f7f7"
+        android:dividerHeight="0.5dp"
+        android:listSelector="#00000000" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="4dp"
+        android:background="@color/account_color_f7f7f7" />
+
+    <TextView
+        android:id="@+id/account_bottom_cancel"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:gravity="center"
+        android:text="@string/account_common_cancel"
+        android:textColor="@color/openaccount_common_color_sel"
+        android:background="@drawable/openaccount_bottom_button_sel"
+        android:textSize="16dp" />
+</LinearLayout>

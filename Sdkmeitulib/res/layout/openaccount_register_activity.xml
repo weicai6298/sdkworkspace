@@ -1,0 +1,231 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:focusable="true"
+    android:focusableInTouchMode="true"
+    android:orientation="vertical"
+    tools:background="@color/account_white">
+
+    <com.meitu.library.openaccount.widget.OpenAccountTitleLayout
+        android:id="@+id/account_register_back_layout"
+        android:layout_width="match_parent"
+        android:layout_height="44dp"
+        android:background="@color/account_white"
+        app:account_title="@string/account_title_register" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="44dp"
+        android:orientation="vertical"
+        android:paddingLeft="20dp"
+        android:paddingRight="20dp">
+
+        <ImageView
+            android:layout_width="144dp"
+            android:layout_height="51dp"
+            android:layout_gravity="center"
+            android:layout_marginTop="28dp"
+            android:background="@drawable/openaccount_logo_ic" />
+
+        <Space
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1" />
+        <!--手机栏-->
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="40dp">
+
+            <TextView
+                android:id="@+id/account_register_country_code_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:paddingRight="16dp"
+                android:text="+86"
+                android:textColor="@color/account_color_333333"
+                android:textSize="16dp" />
+
+            <ImageView
+                android:id="@+id/account_common_triangle"
+                android:layout_width="6dp"
+                android:layout_height="4dp"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="-12dp"
+                android:layout_marginRight="9dp"
+                android:layout_toRightOf="@id/account_register_country_code_tv"
+                android:background="@drawable/openaccount_triangle_ic" />
+
+            <View
+                android:id="@+id/account_register_country_line"
+                android:layout_width="0.5dp"
+                android:layout_height="16dp"
+                android:layout_centerVertical="true"
+                android:layout_toRightOf="@id/account_common_triangle"
+                android:background="@color/account_line_color" />
+
+            <com.meitu.library.openaccount.widget.AccountClearEditText
+                android:id="@+id/account_register_phone_et"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="7.5dp"
+                android:layout_toRightOf="@id/account_register_country_line"
+                app:account_hint="@string/account_input_phone"
+                app:account_hint_text_color="@color/account_color_dddddd"
+                app:account_input_type="phone"
+                app:account_right_clear_margin="8dp"
+                app:account_text_color="@color/account_color_333333"
+                app:account_text_size="16dp" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:layout_alignParentBottom="true"
+                android:background="@color/account_line_color" />
+        </RelativeLayout>
+
+        <!--密码栏-->
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_marginTop="15dp">
+
+            <Button
+                android:id="@+id/account_register_password_see_btn"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="8dp"
+                android:background="@drawable/openaccount_password_see_sel" />
+
+            <com.meitu.library.openaccount.widget.AccountClearEditText
+                android:id="@+id/account_register_password_et"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_toLeftOf="@id/account_register_password_see_btn"
+                app:account_hint="@string/account_common_password_hit"
+                app:account_hint_text_color="@color/account_color_dddddd"
+                app:account_input_type="textPassword"
+                app:account_right_clear_margin="16dp"
+                app:account_text_color="@color/account_color_333333"
+                app:account_text_size="16dp" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:layout_alignParentBottom="true"
+                android:background="@color/account_line_color" />
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/account_register_password_message_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="7dp"
+            android:text="@string/account_common_password_warm"
+            android:textColor="@color/account_color_bbbbbb"
+            android:textSize="13dp"
+            android:visibility="invisible" />
+
+        <Space
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1.25" />
+
+        <Button
+            android:id="@+id/account_register_btn"
+            style="?android:attr/borderlessButtonStyle"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:background="@drawable/openaccount_common_button_sel"
+            android:text="@string/account_register_send_phone"
+            android:textColor="@color/account_white"
+            android:textSize="17dp" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="11dp">
+
+            <TextView
+                android:id="@+id/account_register_message_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/account_register_message_header"
+                android:textColor="@color/account_color_bbbbbb"
+                android:textSize="13dp" />
+
+        </LinearLayout>
+
+        <Space
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="6.8" />
+    </LinearLayout>
+
+    <FrameLayout
+        android:id="@+id/account_common_message_fl"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="44dp"
+        android:minHeight="36dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="58dp"
+        android:text="@string/account_register_meitu_message"
+        android:textColor="@color/account_color_bbbbbb"
+        android:textSize="12dp" />
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="20dp">
+
+        <ImageView
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:background="@drawable/openaccount_meitu_ic" />
+
+        <ImageView
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:layout_marginLeft="20dp"
+            android:background="@drawable/openaccount_meipai_ic" />
+
+        <ImageView
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:layout_marginLeft="20dp"
+            android:background="@drawable/openaccount_beauty_ic" />
+
+        <ImageView
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:layout_marginLeft="20dp"
+            android:background="@drawable/openaccount_self_ic" />
+
+        <ImageView
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:layout_marginLeft="20dp"
+            android:background="@drawable/openaccount_meipu_ic" />
+
+        <ImageView
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:layout_marginLeft="20dp"
+            android:background="@drawable/openaccount_makeup_ic" />
+    </LinearLayout>
+</RelativeLayout>

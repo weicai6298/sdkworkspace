@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:background="@color/account_white">
+
+    <com.meitu.library.openaccount.widget.OpenAccountBoldTextView
+        android:id="@+id/account_toggle_add_account_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="72dp"
+        android:layout_marginLeft="16dp"
+        android:drawableLeft="@drawable/openaccount_toggle_avatar_ic"
+        android:drawablePadding="12dp"
+        android:gravity="center|left"
+        android:text="@string/account_toggle_add"
+        android:textColor="@color/openaccount_color_333333_sel"
+        android:textSize="15dp" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="10dp"
+        android:background="@color/account_color_f7f7f7" />
+
+    <TextView
+        android:id="@+id/account_toggle_quit"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_alignParentBottom="true"
+        android:gravity="center"
+        android:text="@string/account_toggle_quit"
+        android:textColor="@color/openaccount_common_color_sel" />
+</LinearLayout>

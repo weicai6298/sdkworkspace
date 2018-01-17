@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--自定义的网络错误提示-->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/account_color_f7f7f7"
+    android:gravity="center"
+    android:orientation="vertical">
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/account_network_none_ic"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="15dp"
+        android:text="@string/account_common_network_no"
+        android:textColor="#cacbcc"
+        android:textSize="15dp"/>
+
+</LinearLayout>

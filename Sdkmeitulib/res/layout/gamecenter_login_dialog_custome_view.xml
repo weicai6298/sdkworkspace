@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:gravity="center_horizontal"
+    android:orientation="vertical">
+
+    <ImageView
+        android:layout_width="58dp"
+        android:layout_height="64dp"
+        android:layout_marginTop="26dp"
+        android:src="@drawable/gamecenter_account_login_icon" />
+
+    <Button
+        android:id="@+id/gamecent_account_login_btn"
+        style="?android:attr/borderlessButtonStyle"
+        android:layout_width="152dp"
+        android:layout_height="30dp"
+        android:layout_marginBottom="26dp"
+        android:layout_marginLeft="30dp"
+        android:layout_marginRight="30dp"
+        android:layout_marginTop="29dp"
+        android:background="@drawable/common_green_stroke_btn_bg"
+        android:gravity="center"
+        android:includeFontPadding="false"
+        android:paddingBottom="0dp"
+        android:paddingTop="0dp"
+        android:text="@string/gamecenter_login_ui_account_btn_text"
+        android:textColor="@color/common_color_E63BB73B"
+        android:textSize="15dp" />
+</LinearLayout>

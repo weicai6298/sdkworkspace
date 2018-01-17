@@ -1,0 +1,176 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.hulian.mystore.meitu"
+    android:versionCode="1"
+    android:versionName="1.0" >
+
+    <uses-sdk
+        android:minSdkVersion="14"
+        android:targetSdkVersion="25" />
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW" />
+    <uses-permission android:name="android.permission.GET_TASKS" />
+    
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+
+    <application
+        android:name="com.yayawan.impl.YYApplication"
+        android:allowBackup="true"
+        android:theme="@android:style/Theme.NoTitleBar.Fullscreen" >
+        <activity
+            android:name="com.yayawan.sdktemplate.MainActivity"
+            android:label="app_name" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+      
+        
+      <!-- 手游互联配置 -->
+     	 <meta-data
+            android:name="app_id"
+            android:value="kk2006388670" />
+        <meta-data
+            android:name="isLandscape"
+            android:value="true" />
+        
+         <meta-data
+            android:name="meitu_appid"
+            android:value="string2016867568" />
+         <meta-data
+            android:name="meitu_appkey"
+            android:value="HCTzpiAx9cbaEeu2anqJ" />
+        
+        <!-- 手机登录页面 -->
+        <activity
+            android:name="com.meitu.library.openaccount.activity.OpenAccountLoginActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:screenOrientation="portrait"
+            android:theme="@style/OpenAccount.Theme.ColorF7F7F7"
+            android:windowSoftInputMode="stateHidden|adjustPan" /> <!-- 手机注册 -->
+        <activity
+            android:name="com.meitu.library.openaccount.activity.OpenAccountRegisterActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:screenOrientation="portrait"
+            android:theme="@style/OpenAccount.Theme.WHITE"
+            android:windowSoftInputMode="stateHidden|adjustPan" /> <!-- 忘记密码页面 -->
+        <activity
+            android:name="com.meitu.library.openaccount.activity.OpenAccountForgetActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:screenOrientation="portrait"
+            android:theme="@style/OpenAccount.Theme.WHITE"
+            android:windowSoftInputMode="stateHidden|adjustPan" /> <!-- 手机短信快速登录页面 -->
+        <activity
+            android:name="com.meitu.library.openaccount.activity.OpenAccountSMSActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:screenOrientation="portrait"
+            android:theme="@style/OpenAccount.Theme.WHITE"
+            android:windowSoftInputMode="stateHidden|adjustPan" /> <!-- 设置密码页面 -->
+        <activity
+            android:name="com.meitu.library.openaccount.activity.OpenAccountSetPassWordActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:screenOrientation="portrait"
+            android:theme="@style/OpenAccount.Theme.WHITE"
+            android:windowSoftInputMode="stateHidden|adjustPan" /> <!-- 验证短信验证码页面 -->
+        <activity
+            android:name="com.meitu.library.openaccount.activity.OpenAccountVerifyPhoneActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:screenOrientation="portrait"
+            android:theme="@style/OpenAccount.Theme.WHITE"
+            android:windowSoftInputMode="stateHidden|adjustPan" /> <!-- 申述页面 -->
+        <activity
+            android:name="com.meitu.library.openaccount.activity.OpenAccountComplainActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:screenOrientation="portrait"
+            android:theme="@style/OpenAccount.Theme.WHITE"
+            android:windowSoftInputMode="stateHidden|adjustPan" /> <!-- 完善资料页面 -->
+        <activity
+            android:name="com.meitu.library.openaccount.activity.OpenAccountInformationActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:screenOrientation="portrait"
+            android:theme="@style/OpenAccount.Theme.WHITE"
+            android:windowSoftInputMode="stateHidden|adjustPan" /> <!-- 选择地区页面 -->
+        <activity
+            android:name="com.meitu.library.openaccount.activity.OpenAccountSdkChooseCityActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:screenOrientation="portrait"
+            android:theme="@style/OpenAccount.Theme.WHITE" /> <!-- 手机区号页面 -->
+        <activity
+            android:name="com.meitu.library.openaccount.activity.OpenAccountSdkMobilePhoneCodeActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:screenOrientation="portrait"
+            android:theme="@style/OpenAccount.Theme.WHITE"
+            android:windowSoftInputMode="stateHidden|adjustPan" /> <!-- 头像剪裁页面 -->
+        <activity
+            android:name="com.meitu.library.openaccount.photocrop.OpenAccountPhotoCropActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:screenOrientation="portrait"
+            android:theme="@style/OpenAccount.Theme.WHITE"
+            android:windowSoftInputMode="stateHidden|adjustPan" /> <!-- 用户协议页面 -->
+        <activity
+            android:name="com.meitu.library.openaccount.activity.OpenAccountUserAgreementActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:screenOrientation="portrait"
+            android:theme="@style/OpenAccount.Theme.WHITE"
+            android:windowSoftInputMode="stateHidden|adjustPan" /> <!-- 切换帐号页面 -->
+        <activity
+            android:name="com.meitu.library.openaccount.activity.OpenAccountToggleActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:screenOrientation="portrait"
+            android:theme="@style/OpenAccount.Theme.WHITE"
+            android:windowSoftInputMode="stateHidden|adjustPan" /> <!-- 手机注册主页 -->
+        <activity
+            android:name="com.meitu.library.openaccount.activity.OpenAccountRegisterMainActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:screenOrientation="portrait"
+            android:theme="@style/OpenAccount.Theme.WHITE"
+            android:windowSoftInputMode="stateHidden|adjustPan" /> <!-- 身份认证页面 -->
+        <activity
+            android:name="com.meitu.library.openaccount.activity.OpenAccountAuthenticationActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:screenOrientation="portrait"
+            android:theme="@style/OpenAccount.Theme.WHITE"
+            android:windowSoftInputMode="stateHidden|adjustPan" /> <!-- 身份认证结果页面 -->
+        <activity
+            android:name="com.meitu.library.openaccount.activity.OpenAccountAuthenticationResultActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:screenOrientation="portrait"
+            android:theme="@style/OpenAccount.Theme.WHITE"
+            android:windowSoftInputMode="stateHidden|adjustPan" />
+
+        <meta-data
+            android:name="OPEN_ACCOUNT_VERSION"
+            android:value="1.1.0" />
+
+        <provider
+            android:name="com.meitu.library.openaccount.provider.OpenAccountProvider"
+            android:authorities="string_package.openaccount"
+            android:exported="false"
+            android:grantUriPermissions="true" >
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/openaccount_file_paths" />
+        </provider>
+        <provider
+            android:name="com.meitu.library.gamecenter.GameCenterFileProvider"
+            android:authorities="string_package.gamecenter.provider"
+            android:exported="false"
+            android:grantUriPermissions="true" >
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/game_center_provider_paths" />
+        </provider>
+    
+    </application>
+
+</manifest>
+

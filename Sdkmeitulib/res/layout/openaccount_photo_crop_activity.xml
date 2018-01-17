@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#000000">
+
+    <com.meitu.library.openaccount.photocrop.widget.OpenAccountPhotoCropView
+        android:id="@+id/pcv_crop_photo"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="52dp"
+        android:layout_alignParentBottom="true"
+        android:background="#E5131313">
+
+        <TextView
+            android:id="@+id/account_crop_cancel"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_alignParentLeft="true"
+            android:gravity="center"
+            android:paddingLeft="15dp"
+            android:paddingRight="15dp"
+            android:text="@string/account_common_cancel"
+            android:textColor="@color/openaccount_text_crop_color_sel"
+            android:textSize="16dp" />
+
+        <TextView
+            android:id="@+id/account_crop_sure"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_alignParentRight="true"
+            android:gravity="center"
+            android:paddingLeft="15dp"
+            android:paddingRight="15dp"
+            android:text="@string/account_common_complete"
+            android:textColor="@color/openaccount_text_crop_color_sel"
+            android:textSize="16dp" />
+    </RelativeLayout>
+
+</RelativeLayout>

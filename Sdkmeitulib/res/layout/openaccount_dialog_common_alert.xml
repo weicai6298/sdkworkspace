@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?><!-- 按照MaterialDesign规范的对话框 -->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/openaccount_dialog_bg_shape"
+    android:orientation="vertical"
+    android:paddingTop="28dp">
+
+    <com.meitu.library.openaccount.widget.OpenAccountBoldTextView
+        android:id="@+id/account_dialog_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="15dp"
+        android:gravity="center"
+        android:maxLines="2"
+        android:paddingLeft="16dp"
+        android:paddingRight="16dp"
+        android:textColor="@color/account_color_333333"
+        android:textSize="17dp"
+        tools:text="title" />
+
+    <TextView
+        android:id="@+id/account_dialog_message"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="28dp"
+        android:gravity="center"
+        android:paddingLeft="8dp"
+        android:paddingRight="8dp"
+        android:scrollbars="vertical"
+        android:textColor="@color/account_color_333333"
+        android:textSize="15dp"
+        tools:text="message" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/account_line_size"
+        android:background="@color/account_line_color" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp">
+
+        <Button
+            android:id="@+id/account_btn_neutral"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@drawable/openaccount_dialog_button_single_sel"
+            android:textColor="@color/account_color_4085fa"
+            android:textSize="15dp"
+            tools:text="返回登录"
+            tools:visibility="gone"/>
+
+        <Button
+            android:id="@+id/account_btn_negative"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@drawable/openaccount_dialog_button_negative_sel"
+            android:textColor="@color/account_color_bbbbbb"
+            android:textSize="15dp"
+            tools:text="取消" />
+
+        <View
+            android:layout_width="@dimen/account_line_size"
+            android:layout_height="match_parent"
+            android:background="@color/account_line_color" />
+
+        <Button
+            android:id="@+id/account_btn_positive"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@drawable/openaccount_dialog_button_positive_sel"
+            android:textColor="@color/account_color_4085fa"
+            android:textSize="15dp"
+            tools:text="确定" />
+    </LinearLayout>
+</LinearLayout>
