@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="5dp"
+        android:layout_marginLeft="3dp"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/dcn_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="title"
+            android:textColor="#333"
+            android:textSize="12sp" />
+
+        <TextView
+            android:id="@+id/dcn_content"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="content"
+            android:textColor="#999"
+            android:textSize="9sp" />
+    </LinearLayout>
+
+    <View
+        android:id="@+id/dcn_select"
+        android:layout_width="15dp"
+        android:layout_height="15dp"
+        android:background="@drawable/dcn_check_press"
+        android:layout_gravity="center_vertical|right"
+        android:layout_marginRight="10dp"/>
+</FrameLayout>

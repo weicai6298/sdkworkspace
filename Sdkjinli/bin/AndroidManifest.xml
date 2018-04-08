@@ -44,14 +44,14 @@
       <!-- 手游互联配置 -->
      	 <meta-data
             android:name="app_id"
-            android:value="kk2138745420" />
+            android:value="kk1017840888" />
         <meta-data
             android:name="isLandscape"
             android:value="true" />
         
         <meta-data
             android:name="apikey"
-            android:value="F86D51A2A12A4CB28DE92C1FEB59D1DC" />
+            android:value="9D7E1F6D37BE4C00A36E096B876073CF" />
         
          <!-- Amigo Play SDK 组件声明开始 -->
         <service android:name="com.gionee.gsp.floatingwindow.FloatingWindowService">

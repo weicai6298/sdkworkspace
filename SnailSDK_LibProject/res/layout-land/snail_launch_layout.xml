@@ -1,0 +1,210 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@color/title_background" >
+
+        <LinearLayout
+            android:id="@+id/back_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="50dp"
+            android:background="@drawable/snail_back_layout_bg"
+            android:focusable="true"
+            android:focusableInTouchMode="false"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:paddingRight="13dp" >
+
+            <View
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:background="@drawable/snail_back_bg" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/snail_login"
+                android:textColor="@color/white"
+                android:textSize="20sp" />
+        </LinearLayout>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" >
+
+        <LinearLayout
+            android:id="@+id/normal_login_layout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/rank_bg_color"
+            android:orientation="vertical" >
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="3"
+                android:gravity="center_horizontal"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/app_store_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="35dp"
+                    android:text="@string/snail_store_name"
+                    android:textColor="#000000"
+                    android:textSize="32sp" />
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal">
+
+                    <TextView
+                        android:id="@+id/tips_text"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/snail_tips"
+                        android:textColor="#a8abb5"
+                        android:textSize="12sp" />
+
+                    <com.snailgame.mobilesdk.views.CircleView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="2dp"
+                        android:layout_toRightOf="@id/tips_text" />
+                </RelativeLayout>
+            </LinearLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="4" >
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:layout_marginLeft="18dp"
+                    android:layout_marginRight="18dp"
+                    android:orientation="vertical" >
+
+                    <Button
+                        android:id="@+id/onekey_login_btn"
+                        style="@style/snail_style_button_green_h"
+                        android:layout_centerHorizontal="true"
+                        android:text="@string/snail_quick_login" />
+
+                    <TextView
+                        android:id="@+id/common_login_btn"
+                        android:layout_width="wrap_content"
+                        android:layout_height="20dp"
+                        android:layout_alignRight="@id/onekey_login_btn"
+                        android:layout_below="@id/onekey_login_btn"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_marginTop="8dp"
+                        android:background="@drawable/snail_graybg_btn_selector"
+                        android:focusable="true"
+                        android:focusableInTouchMode="false"
+                        android:text="@string/snail_common_login"
+                        android:textColor="@color/login_btn"
+                        android:textSize="14sp" />
+
+                    <TextView
+                        android:id="@+id/forgetpwd_button"
+                        android:layout_width="wrap_content"
+                        android:layout_height="20dp"
+                        android:layout_alignLeft="@id/onekey_login_btn"
+                        android:layout_below="@id/onekey_login_btn"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_marginTop="8dp"
+                        android:background="@drawable/snail_graybg_btn_selector"
+                        android:focusable="true"
+                        android:focusableInTouchMode="false"
+                        android:text="@string/snail_forgotpwd"
+                        android:textColor="@color/login_btn"
+                        android:textSize="14sp" />
+
+                    <RelativeLayout
+                        android:id="@+id/terms_layout_relatvive"
+                        android:layout_width="wrap_content"
+                        android:layout_height="20dp"
+                        android:layout_centerInParent="true"
+                        android:layout_below="@id/forgetpwd_button"
+                        android:layout_marginTop="18dp" >
+
+                        <LinearLayout
+                            android:id="@+id/terms_layout"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal" >
+
+                            <CheckBox
+                                android:id="@+id/terms_checkbox"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:button="@drawable/login_checkbox_selector"
+                                android:checked="true"
+                                android:focusable="true"
+                                android:focusableInTouchMode="false" />
+
+                            <TextView
+                                android:id="@+id/snail_agree_text"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center_vertical"
+                                android:layout_marginLeft="5dp"
+                                android:text="@string/snail_agree"
+                                android:textColor="#a8abb5"
+                                android:textSize="12sp" />
+
+                            <TextView
+                                android:id="@+id/terms_text"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center_vertical"
+                                android:background="@drawable/snail_graybg_btn_selector"
+                                android:focusable="true"
+                                android:focusableInTouchMode="false"
+                                android:paddingLeft="8dp"
+                                android:text="@string/snail_terms"
+                                android:textColor="@color/title_background"
+                                android:textSize="12sp" />
+                        </LinearLayout>
+                    </RelativeLayout>
+                </RelativeLayout>
+            </RelativeLayout>
+
+            <!-- <RelativeLayout -->
+            <!-- android:layout_width="match_parent" -->
+            <!-- android:layout_height="0dp" -->
+            <!-- android:layout_weight="1" > -->
+            <!-- <LinearLayout -->
+            <!-- android:layout_width="wrap_content" -->
+            <!-- android:layout_height="wrap_content" -->
+            <!-- android:layout_marginLeft="2dp" -->
+            <!-- android:layout_marginRight="2dp" -->
+            <!-- android:layout_centerInParent="true" -->
+            <!-- android:orientation="vertical" > -->
+
+
+            <!-- <TextView -->
+            <!-- android:layout_width="match_parent" -->
+            <!-- android:layout_height="wrap_content" -->
+            <!-- android:text="@string/snail_login_warmtip1" -->
+            <!-- android:textColor="@color/login_little_text" -->
+            <!-- android:textSize="12sp" /> -->
+            <!-- </LinearLayout> -->
+
+
+            <!-- </RelativeLayout> -->
+        </LinearLayout>
+    </RelativeLayout>
+
+</LinearLayout>

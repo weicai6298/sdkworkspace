@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:id="@+id/tabParent"
+        android:clickable="true">
+    <!--android:layout_marginTop="@dimen/main_bottom_magin_t"-->
+
+    <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/tabMain"
+            android:gravity="center"
+            android:layout_centerInParent="true"
+            android:layout_marginTop="2dp">
+
+        <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/img"
+                android:src="@drawable/papasdk_mg_tab_loading"/>
+
+        <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="模块"
+                android:id="@+id/text"
+                android:gravity="center"
+                android:textSize="@dimen/main_detial_textsize"/>
+
+    </LinearLayout>
+
+    <TextView
+            android:layout_width="8dp"
+            android:layout_height="8dp"
+            android:id="@+id/badge"
+            android:gravity="center"
+            android:text=""
+            android:background="@drawable/papasdk_mygame_big_round"
+            android:textColor="@android:color/white"
+            android:visibility="gone"
+            android:textSize="8sp"
+            android:layout_alignTop="@id/tabMain"
+            android:layout_alignRight="@id/tabMain"
+            android:layout_marginRight="-4dp"
+            android:layout_marginTop="1dp"/>
+
+</RelativeLayout>

@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:id="@+id/dcn_ll_parent"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/dcn_ll_float_menu_content_hint"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:visibility="invisible">
+
+        <ImageView
+            android:id="@+id/dcn_img_float_menu_content_hint"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="25dp"
+            android:src="@drawable/dcn_float_menu_sanjiaoxing" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/dcn_float_menu_task_hint_bg"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/dcn_tv_float_menu_content_hint"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingBottom="2dp"
+                android:paddingLeft="8dp"
+                android:paddingTop="2dp"
+                android:text=""
+                android:textColor="@color/dcn_orange_common"
+                android:textSize="10dp" />
+
+            <View
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"/>
+
+            <View
+                android:layout_width="10dp"
+                android:layout_height="10dp"
+                android:background="@drawable/dcn_footerbar_ic_goforward_n"
+                android:layout_gravity="center_vertical"
+                android:layout_marginRight="5dp"/>
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>

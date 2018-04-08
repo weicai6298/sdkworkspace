@@ -1,0 +1,329 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/yyh_corner_botton_white_bg"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:paddingLeft="16dp"
+        android:paddingRight="16dp">
+
+        <LinearLayout
+            android:id="@+id/yyh_center_rl_dj"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/yyh_account_center_item"
+            android:gravity="center_vertical">
+
+            <ImageView
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:src="@drawable/yyh_center_doujuan"
+                tools:ignore="ContentDescription" />
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="16dp"
+                android:layout_weight="1"
+                android:orientation="vertical"
+                tools:ignore="RtlHardcoded">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/yyh_tv_doujuanduihuan"
+                    android:textColor="@color/yyh_gray_dark"
+                    android:textSize="14sp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="6dp"
+                    android:text="@string/yyh_tv_chong_doujuanduihuan"
+                    android:textColor="@color/yyh_gray_light"
+                    android:textSize="11sp"
+                    tools:ignore="SmallSp" />
+            </LinearLayout>
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/yyh_arrow_right"
+                tools:ignore="ContentDescription" />
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1px"
+            android:background="@color/yyh_gray" />
+
+        <LinearLayout
+            android:id="@+id/yyh_center_rl_cz"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/yyh_account_center_item"
+            android:gravity="center_vertical">
+
+            <ImageView
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:src="@drawable/yyh_center_chongzhi"
+                tools:ignore="ContentDescription" />
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="16dp"
+                android:layout_weight="1"
+                android:orientation="vertical"
+                tools:ignore="RtlHardcoded">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/yyh_tv_chongzhijilu"
+                    android:textColor="@color/yyh_gray_dark"
+                    android:textSize="14sp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="6dp"
+                    android:text="@string/yyh_tv_chong_yingyongdou"
+                    android:textColor="@color/yyh_gray_light"
+                    android:textSize="11sp"
+                    tools:ignore="SmallSp" />
+            </LinearLayout>
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/yyh_arrow_right"
+                tools:ignore="ContentDescription" />
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1px"
+            android:background="@color/yyh_gray" />
+
+        <LinearLayout
+            android:id="@+id/yyh_center_rl_binding"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/yyh_account_center_item"
+            android:gravity="center_vertical">
+
+            <ImageView
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:src="@drawable/yyh_center_binding"
+                tools:ignore="ContentDescription" />
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="16dp"
+                android:layout_weight="1"
+                android:orientation="vertical"
+                tools:ignore="RtlHardcoded">
+
+                <TextView
+                    android:id="@+id/yyh_center_tv_bingding_title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/yyh_tv_binding"
+                    android:textColor="@color/yyh_gray_dark"
+                    android:textSize="14sp" />
+
+                <TextView
+                    android:id="@+id/yyh_center_tv_bingding"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="6dp"
+                    android:text="@string/yyh_tv_no_binding"
+                    android:textColor="@color/yyh_gray_light"
+                    android:textSize="11sp"
+                    tools:ignore="SmallSp" />
+            </LinearLayout>
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/yyh_arrow_right"
+                tools:ignore="ContentDescription" />
+        </LinearLayout>
+
+        <View
+            android:id="@+id/yyh_center_line_binding"
+            android:layout_width="match_parent"
+            android:layout_height="1px"
+            android:background="@color/yyh_gray" />
+
+        <LinearLayout
+            android:id="@+id/yyh_center_rl_pwd"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/yyh_account_center_item"
+            android:gravity="center_vertical">
+
+            <ImageView
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:src="@drawable/yyh_center_pwd"
+                tools:ignore="ContentDescription" />
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="16dp"
+                android:layout_weight="1"
+                android:orientation="vertical"
+                tools:ignore="RtlHardcoded">
+
+                <TextView
+                    android:id="@+id/yyh_text_userAccount_password"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/yyh_tv_pwd"
+                    android:textColor="@color/yyh_gray_dark"
+                    android:textSize="14sp" />
+
+                <TextView
+                    android:id="@+id/yyh_text_userAccount_passwordTips"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="6dp"
+                    android:text="@string/yyh_tv_change_the_pwd"
+                    android:textColor="@color/yyh_gray_light"
+                    android:textSize="11sp"
+                    tools:ignore="SmallSp" />
+            </LinearLayout>
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/yyh_arrow_right"
+                tools:ignore="ContentDescription" />
+        </LinearLayout>
+
+        <View
+            android:id="@+id/yyh_center_line_pwd"
+            android:layout_width="match_parent"
+            android:layout_height="1px"
+            android:background="@color/yyh_gray" />
+
+        <LinearLayout
+            android:id="@+id/yyh_center_rl_authentication"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/yyh_account_center_item"
+            android:gravity="center_vertical">
+
+            <ImageView
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:src="@drawable/yyh_center_shiming"
+                tools:ignore="ContentDescription" />
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="16dp"
+                android:layout_weight="1"
+                android:orientation="vertical"
+                tools:ignore="RtlHardcoded">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/yyh_real_name_authentication"
+                    android:textColor="@color/yyh_gray_dark"
+                    android:textSize="14sp" />
+
+                <TextView
+                    android:id="@+id/yyh_text_userAccount_authenticationTips"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="6dp"
+                    android:text="@string/yyh_text_no_authentication_tips"
+                    android:textColor="@color/yyh_gray_light"
+                    android:textSize="11sp"
+                    tools:ignore="SmallSp" />
+            </LinearLayout>
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/yyh_arrow_right"
+                tools:ignore="ContentDescription" />
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1px"
+            android:background="@color/yyh_gray" />
+
+        <LinearLayout
+            android:id="@+id/yyh_center_rl_return"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/yyh_account_center_item"
+            android:gravity="center_vertical">
+
+            <ImageView
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:src="@drawable/yyh_center_return"
+                tools:ignore="ContentDescription" />
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="16dp"
+                android:layout_weight="1"
+                android:orientation="vertical"
+                tools:ignore="RtlHardcoded">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/yyh_tv_switch_account"
+                    android:textColor="@color/yyh_gray_dark"
+                    android:textSize="14sp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="6dp"
+                    android:text="@string/yyh_tv_switch_content"
+                    android:textColor="@color/yyh_gray_light"
+                    android:textSize="11sp"
+                    tools:ignore="SmallSp" />
+            </LinearLayout>
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/yyh_arrow_right"
+                tools:ignore="ContentDescription" />
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1px"
+            android:background="@color/yyh_gray" />
+
+        <Button
+            android:id="@+id/yyh_center_logout"
+            android:layout_width="200dp"
+            android:layout_height="44dp"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginBottom="10dp"
+            android:layout_marginTop="30dp"
+            android:background="@drawable/yyh_corner_red_bg"
+            android:text="@string/yyh_exit"
+            android:textColor="@color/yyh_white"
+            android:textSize="16sp" />
+    </LinearLayout>
+</ScrollView>

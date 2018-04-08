@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="40dip"
+    android:layout_marginBottom="40dip"
+    android:background="#00000000"
+    android:gravity="center" >
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" >
+
+        <!-- 包含竖线和XX，公告内容和公告title -->
+
+            <!-- android:layout_centerInParent="true" -->
+        <RelativeLayout
+            android:id="@+id/gonggao_rl"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="40dip"  
+            android:layout_centerHorizontal="true"    
+            android:orientation="vertical"
+            android:paddingRight="20dip" >
+
+            <!-- 公告内容和公告title -->
+
+            <LinearLayout
+                android:id="@+id/gonggao_ll"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"              
+                android:background="@drawable/x7_gonggao_dialog_bg"
+                android:gravity="center"                                     
+                android:orientation="vertical"
+                android:paddingLeft="20dip"
+                android:paddingRight="20dip" >
+
+                <ScrollView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="15dip"
+                    android:layout_marginTop="15dip"
+                    android:fadingEdge="none"
+                    android:scrollbars="none" >
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical" >
+
+                        <TextView
+                            android:id="@+id/gonggao_title"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_horizontal"
+                            android:layout_marginBottom="5dip"
+                            android:layout_marginTop="5dip"
+                            android:text="小7公告"
+                            android:textColor="@color/text_green"
+                            android:textSize="16sp" />
+
+                        <TextView
+                            android:id="@+id/gonggao_content"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_horizontal"
+                            android:layout_marginBottom="30dip"
+                            android:text="小7公告的内容阿凡达分方式方法发送方法法萨芬凤飞飞凤飞飞凤飞飞阿发嘎嘎 "
+                            android:textColor="#333333"
+                            android:textSize="12sp" />
+                    </LinearLayout>
+                </ScrollView>
+            </LinearLayout>         
+        </RelativeLayout>
+
+        <ImageView
+            android:id="@+id/landorientate_dialog_cancell"
+            android:layout_marginTop="20dip"  
+            android:layout_width="40dip"
+            android:layout_height="40dip"
+            android:layout_alignRight="@+id/gonggao_rl"
+            android:clickable="true"
+            android:src="@drawable/x7_gonggao_cancell" />
+        <!-- 小7公告的图片 -->
+
+        <ImageView
+            android:layout_width="100dip"
+            android:layout_height="60dip"
+            android:layout_centerHorizontal="true"
+            android:src="@drawable/x7_gonggao_dialog" />
+    </RelativeLayout>
+
+</RelativeLayout>

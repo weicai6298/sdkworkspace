@@ -27,7 +27,7 @@ import android.widget.FrameLayout;
 import android.widget.ProgressBar;
 import android.widget.RelativeLayout;
 
-import com.nzhy.cqll.R;
+import com.syhl.qmdfh.R;
 import com.yayawan.callback.YYWAnimCallBack;
 import com.yayawan.callback.YYWExitCallback;
 import com.yayawan.main.Kgame;
@@ -231,6 +231,7 @@ public class BrowserTempActivity extends Activity {
 				public void onExit() {
 					Log.i("tag","退出2");
 					finish();
+					System.exit(0);
 				}
 			});
 			return true;

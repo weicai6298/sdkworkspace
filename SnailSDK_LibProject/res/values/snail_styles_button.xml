@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:android="http://schemas.android.com/apk/res/android">
+    
+    <style name="snail_style_button_basic">
+        <item name="android:textColor">@color/white</item>
+        <item name="android:gravity">center</item>
+        <item name="android:textSize">14sp</item>
+    </style>
+    
+    <!-- 定高按钮 -->
+    <style name="snail_style_button_green_h" parent="snail_style_button_basic">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">40dp</item>
+        <item name="android:background">@drawable/common_green_btn_selector</item>
+    </style>
+    <!-- 验证码按钮 -->
+    <style name="snail_style_button_green_code_h" parent="snail_style_button_basic">
+        <item name="android:layout_width">100dp</item>
+        <item name="android:layout_height">35dp</item>
+        <item name="android:background">@drawable/common_green_btn_selector</item>
+    </style>
+    
+</resources>

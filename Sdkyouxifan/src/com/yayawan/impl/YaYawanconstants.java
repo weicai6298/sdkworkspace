@@ -19,7 +19,6 @@ import com.game.sdk.domain.RoleInfo;
 import com.game.sdk.domain.RolecallBack;
 import com.game.sdk.domain.onRoleListener;
 import com.game.sdk.util.Constants;
-import com.game.sdk.util.LogUtil;
 import com.kkgame.sdk.bean.User;
 import com.kkgame.sdk.callback.KgameSdkCallback;
 import com.kkgame.sdkmain.KgameSdk;
@@ -90,8 +89,7 @@ public class YaYawanconstants {
 								logincallback.toString(),
 								Toast.LENGTH_SHORT).show();*/
 						islogin=true;
-						LogUtil.getInstance(TAG).d(
-								"登录成功-----" + logincallback.toString());
+						Log.i("tag","登录成功-----" + logincallback.toString());
 						loginSuce(mactivity, logincallback.userId, logincallback.username, logincallback.sign);
 					}
 
@@ -139,10 +137,13 @@ public class YaYawanconstants {
 	 * @param paramActivity
 	 * @param callback
 	 */
-	public static void exit(Activity paramActivity,
+	public static void exit(final Activity paramActivity,
 			final YYWExitCallback callback) {
 		Yayalog.loger("YaYawanconstantssdk退出");
-
+paramActivity.runOnUiThread(new Runnable() {
+	
+	@Override
+	public void run() {
 		KgameSdk.Exitgame(paramActivity, new KgameSdkCallback() {
 			
 			public void onSuccess(User arg0, int arg1) {
@@ -165,7 +166,8 @@ public class YaYawanconstants {
 				
 			}
 		});
-		//
+	}
+	});
 
 	}
 
@@ -182,6 +184,11 @@ public class YaYawanconstants {
 		role_Level = roleLevel;
 		zone_Id = zoneId;
 		zone_Name = zoneName;
+		Log.i("tag","role_Id = " +role_Id);
+		Log.i("tag","role_Name = " +role_Name);
+		Log.i("tag","role_Level = " +role_Level);
+		Log.i("tag","zone_Id = " +zone_Id);
+		Log.i("tag","zone_Name = " +zone_Name);
 		if (YYWMain.mRole!=null) {
 			RoleInfo info = new RoleInfo();
 			info.setRoleName(role_Name);// 角色名
@@ -190,7 +197,6 @@ public class YaYawanconstants {
 			info.setServerID(zone_Id);// 区服id
 			info.setServerName(zone_Name);// 区服名
 		if (Integer.parseInt(ext)==1) {
-			
 			YXFSDKManager.getInstance(paramActivity).getRoleInfo(paramActivity, info,
 					Constants.TYPE_LOGIN_SUCCESS, new onRoleListener() {
 						public void onSuccess(RolecallBack rolecallBack) {
@@ -249,7 +255,6 @@ public class YaYawanconstants {
 		if (islogin) {
 			YXFSDKManager.getInstance(paramActivity).showFloatView();
 		}
-		//
 	}
 
 	public static void onPause(Activity paramActivity) {

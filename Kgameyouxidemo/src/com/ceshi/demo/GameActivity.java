@@ -13,6 +13,7 @@ import android.widget.LinearLayout;
 import android.widget.Toast;
 
 import com.example.kkgamedemo.R;
+import com.kkgame.sdkmain.KgameSdk;
 import com.yayawan.callback.YYWAnimCallBack;
 import com.yayawan.callback.YYWExitCallback;
 import com.yayawan.callback.YYWPayCallBack;
@@ -301,6 +302,7 @@ public class GameActivity extends Activity {
 		// TODO Auto-generated method stub
 		// YYWMain.mUserCallBack.onLogout(null);
 		// Toast.makeText(this, Kgame.getSdkversion(), 0).show();
+//		KgameSdk.accountManager(this);
 	}
 
 	/**

@@ -84,16 +84,16 @@ public class YaYawanconstants {
 		if (isinit) {
 			mSogouGamePlatform.login(mactivity, new LoginCallbackListener() {
 
-				
-
 				public void loginSuccess(int code, UserInfo userInfo) {
-					
 					mActivity.runOnUiThread(new Runnable() {
 						
 						public void run() {
 							// TODO Auto-generated method stub
-							mFloatMenu = mSogouGamePlatform.createFloatMenu(mactivity, true);
-							mFloatMenu.show();
+							if(mFloatMenu == null){
+								mFloatMenu = mSogouGamePlatform.createFloatMenu(mactivity, true);
+								mFloatMenu.show();
+							}
+						
 							// 浮动设置切换帐号监听器
 							mFloatMenu.setSwitchUserListener(new SwitchUserListener() {
 								public void switchSuccess(int code, UserInfo userInfo) {
@@ -145,9 +145,10 @@ public class YaYawanconstants {
 	public static void paynow(Activity mactivity, boolean isAmountEditable,String orderid) {
 		Map<String, Object> data = new HashMap<String, Object>();
 		// 游戏货币名字（必传）
-		data.put("currency", DeviceUtil.getGameInfo(mactivity, "gamemoneyname"));
+//		data.put("currency", DeviceUtil.getGameInfo(mactivity, "gamemoneyname"));
+		data.put("currency", YYWMain.mOrder.goods);
 		// 人民币兑换比例（必传）,小数 比例得加 f
-		data.put("rate", 10f);
+		data.put("rate",0);
 
 		// 购买商品名字（必传）
 		data.put("product_name", YYWMain.mOrder.goods);

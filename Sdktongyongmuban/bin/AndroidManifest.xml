@@ -25,6 +25,7 @@
         android:theme="@android:style/Theme.NoTitleBar.Fullscreen" >
         <activity
             android:name="com.yayawan.sdktemplate.MainActivity"
+            android:configChanges="keyboardHidden|navigation|orientation|screenSize"
             android:label="app_name" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

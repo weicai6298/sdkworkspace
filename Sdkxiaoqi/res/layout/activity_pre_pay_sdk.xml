@@ -1,0 +1,299 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background_gray"
+    android:orientation="vertical" >
+
+    <!-- 支付的标题 -->
+
+    <include
+        android:id="@+id/main_title_rl"
+        layout="@layout/item_main_title_rl" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scrollbars="none" >
+
+        <LinearLayout
+            android:layout_width="@dimen/activity_horizontal_width"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:orientation="vertical" >
+
+            <!-- 购买信息部分 -->
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="55dip"
+                android:layout_marginLeft="10dip"
+                android:gravity="center_vertical"
+                android:text="购买信息:"
+                android:textColor="@color/text_black6"
+                android:textSize="16sp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="40dip"
+                android:background="@color/white"
+                android:gravity="center_vertical"
+                android:orientation="horizontal" >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dip"
+                    android:text="购买道具:"
+                    android:textColor="@color/text_black3"
+                    android:textSize="16sp" />
+
+                <TextView
+                    android:id="@+id/prepay_buytools_tv"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="10dip"
+                    android:gravity="right"
+                    android:text="180砖礼包"
+                    android:textColor="@color/text_black3"
+                    android:textSize="16sp" />
+            </LinearLayout>
+
+            <RelativeLayout
+                android:id="@+id/act_prepay_moneyticket_rl"
+                android:layout_width="match_parent"
+                android:layout_height="40dip"
+                android:background="@color/white"
+                android:clickable="true" >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="fill_parent"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="10dip"
+                    android:gravity="center_vertical"
+                    android:text="代金券:"
+                    android:textColor="@color/text_black3"
+                    android:textSize="16sp" />
+
+                <TextView
+                    android:id="@+id/act_prepay_momeyticketprice_tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="fill_parent"
+                    android:layout_toLeftOf="@+id/act_prepay_iv_fourth"
+                    android:gravity="center_vertical"
+                    android:paddingRight="10dip"
+                    android:text=""
+                    android:textColor="@color/text_red"
+                    android:textSize="16sp" />
+
+                <ImageView
+                    android:id="@+id/act_prepay_iv_fourth"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="10dip"
+                    android:src="@drawable/rightjiantou" />
+            </RelativeLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="40dip"
+                android:background="@color/white"
+                android:gravity="center_vertical"
+                android:orientation="horizontal" >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dip"
+                    android:text="实际价格:"
+                    android:textColor="@color/text_black3"
+                    android:textSize="16sp" />
+
+                <TextView
+                    android:id="@+id/prepay_toolprice_tv"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="10dip"
+                    android:gravity="right"
+                    android:text="180元"
+                    android:textColor="@color/text_black3"
+                    android:textSize="16sp" />
+            </LinearLayout>
+            
+             <!--  <TextView
+                android:id="@+id/prepay_pingtaibi_tv"
+                style="@style/act_pre_pay"
+                android:text="送平台币：10.00元(赠送至钱包余额)"
+                android:visibility="gone" /> -->
+                  <!--   送平台币 -->
+         <LinearLayout
+               android:id="@+id/prepay_pingtaibi_ll"
+                android:layout_width="match_parent"
+                android:layout_height="40dip"
+                android:background="@color/white"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:visibility="gone" >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dip"
+                    android:text="返平台币："
+                    android:textColor="@color/text_black3"
+                    android:textSize="16sp" />
+
+                <TextView
+                    android:id="@+id/prepay_pingtaibi_tv"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="10dip"
+                    android:gravity="right"
+                    android:text="100.00元（赠送到钱包余额）"
+                    android:textColor="@color/text_black3"
+                    android:textSize="16sp" />
+            </LinearLayout> 
+
+             <LinearLayout
+               android:id="@+id/prepay_balance_ll"
+                android:layout_width="match_parent"
+                android:layout_height="40dip"
+                android:background="@color/white"
+                android:gravity="center_vertical"
+                android:layout_marginTop="5dip"
+                android:orientation="horizontal"
+                android:visibility="visible" >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dip"
+                    android:text="钱包余额："
+                    android:textColor="@color/text_black3"
+                    android:textSize="16sp" />
+
+                <TextView
+                    android:id="@+id/prepay_balance_tv"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="10dip"
+                    android:gravity="right"
+                    android:text="0元"
+                    android:textColor="@color/text_black3"
+                    android:textSize="16sp" />
+            </LinearLayout>  
+            
+              <LinearLayout
+               android:id="@+id/prepay_topay_tv_ll"
+                android:layout_width="match_parent"
+                android:layout_height="40dip"
+                android:background="@color/white"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:visibility="visible" >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dip"
+                    android:text="还需支付："
+                    android:textColor="@color/text_black3"
+                    android:textSize="16sp" />
+
+                <TextView
+                    android:id="@+id/prepay_topay_tv"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="10dip"
+                    android:gravity="right"
+                    android:text="购买费用从钱包扣除"
+                    android:textColor="#ff0000"
+                    android:textSize="16sp" />
+            </LinearLayout>    
+         
+           <!--   <TextView
+                android:id="@+id/prepay_balance_tv"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="10dip"
+                android:layout_marginTop="20dip"
+                android:gravity="right"
+                android:text="钱包余额：0.00元"
+                android:textColor="@color/text_black3"
+                android:textSize="16sp" />
+
+            <TextView
+                android:id="@+id/prepay_topay_tv"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="10dip"
+                android:layout_marginTop="10dip"
+                android:gravity="right"
+                android:text="需 支 付：10.00元"                
+                android:textColor="#ff0000"
+                android:textSize="16sp" /> -->
+          
+            <!-- 选择支付方式部分部分 -->
+
+            <LinearLayout
+                android:id="@+id/act_prepay_allpayway_ll"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical" >
+
+                <TextView
+                    style="@style/act_pre_pay"
+                    android:layout_height="60dip"
+                    android:background="@color/background_gray"
+                    android:text="选择支付方式" />
+
+                <com.smwl.smsdk.myview.PrePayItemReSDK
+                    android:id="@+id/prepay_ali"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:clickable="true" />
+
+                <com.smwl.smsdk.myview.PrePayItemReSDK
+                    android:id="@+id/prepay_weixin"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:clickable="true" />
+
+                <com.smwl.smsdk.myview.PrePayItemReSDK
+                    android:id="@+id/prepay_yinlian"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:clickable="true" />
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/fast_toPay"
+                android:layout_width="match_parent"
+                android:layout_height="45dip"
+                android:layout_marginLeft="20dip"
+                android:layout_marginRight="20dip"
+                android:layout_marginTop="20dip"
+                android:background="@drawable/green_radio_bg"
+                android:gravity="center"
+                android:text="立即支付"
+                android:clickable="true"
+                android:textColor="@color/white"
+                android:textSize="18sp"
+                />
+
+            <TextView
+                android:id="@+id/prepay_connection"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dip"
+                android:gravity="center"
+                android:text=""
+                android:textColor="#333333"
+                android:layout_marginBottom="20dip" />
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>

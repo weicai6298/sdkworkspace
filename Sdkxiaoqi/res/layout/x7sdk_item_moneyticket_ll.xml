@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background_gray"
+    android:gravity="center_horizontal"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:id="@+id/item_moneyticket_top_ll"
+        android:layout_width="320dip"
+        android:layout_height="60dip"
+        android:layout_marginLeft="20dip"
+        android:layout_marginRight="20dip"
+        android:layout_marginTop="20dip"
+        android:background="@drawable/x7sdk_moneyticket_bule_bg"
+        android:orientation="horizontal" >
+
+        <LinearLayout
+            android:layout_width="0dip"
+            android:layout_height="match_parent"
+            android:layout_weight="3"
+            android:gravity="center"
+            android:orientation="horizontal" >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="30dip"
+                android:gravity="bottom"
+                android:paddingBottom="2dip"
+                android:text="¥"
+                android:textColor="@color/white"
+                android:textSize="14sp" />
+
+            <TextView
+                android:id="@+id/item_moneyticket_vipprice_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="30dip"
+                android:layout_marginLeft="5dip"
+                android:gravity="bottom"
+                android:text="666"
+                android:textColor="@color/white"
+                android:textSize="21sp" />
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="3dip"
+            android:layout_height="42dip"
+            android:layout_gravity="center_vertical"
+            android:background="@drawable/x7sdk_moneyticket_point_bg"
+            android:gravity="center_vertical" />
+
+        <RelativeLayout
+            android:layout_width="0dip"
+            android:layout_height="match_parent"
+            android:layout_weight="5" >
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical" 
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="15dip"
+                >
+                <TextView
+                android:id="@+id/item_moneyticket_userrequst_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="满3000元可用"
+                android:textColor="@color/white"
+                android:textSize="13sp" />
+
+            <TextView
+                android:id="@+id/item_moneyticket_userdate_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:ellipsize="end"
+                android:paddingTop="2dip"
+                android:singleLine="true"
+                android:text="有效期：2017/06/06-2018/08/08"
+                android:textColor="@color/white"
+                android:textSize="11sp" />
+            </LinearLayout>
+                      
+            <ImageView 
+                android:id="@+id/item_moneyticket_outofdate_iv"
+                android:layout_width="50dip"
+                android:layout_height="26dip"
+                android:src="@drawable/x7sdk_moneyticket_outofdate"
+                android:layout_alignParentRight="true"
+                android:visibility="gone"
+                />
+        </RelativeLayout>
+    </LinearLayout>
+
+    <RelativeLayout
+        android:id="@+id/item_moneyticket_detailmore_ll"
+        android:layout_width="320dip"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dip"
+        android:layout_marginRight="20dip"
+        android:clickable="true" 
+        android:background="@drawable/x7sdk_moneyticket_white_bg" >
+
+        <TextView
+            android:id="@+id/item_moneyticket_userrange_tv"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_toLeftOf="@+id/item_moneyticket_detailmore_tv"
+            android:maxLines="1"
+            android:paddingBottom="8dip"
+            android:paddingLeft="10dip"
+            android:paddingRight="5dip"
+            android:paddingTop="8dip"
+            android:text="适用游戏：大主宰，放开那三国，御剑情缘"
+            android:textColor="@color/text_black6"
+            android:textSize="11sp" />
+
+        <TextView
+            android:id="@+id/item_moneyticket_detailmore_tv"
+            android:layout_width="14dip"
+            android:layout_height="14dip"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="10dip"
+            android:layout_centerVertical="true"
+            android:background="@drawable/x7sdk_moneyticket_more_down_bg_iv"
+           />
+    </RelativeLayout>
+
+</LinearLayout>

@@ -17,6 +17,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_centerInParent="true"
+        android:visibility="gone"
         >
     </com.game.sdk.view.HuoLoginView>
 
@@ -36,4 +37,12 @@
         android:visibility="gone"
         >
     </com.game.sdk.view.HuoUserNameRegisterView>
+    <com.game.sdk.view.SelectAccountView
+        android:id="@+id/huo_sdk_selectAccountView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:visibility="gone">
+
+    </com.game.sdk.view.SelectAccountView>
 </RelativeLayout>

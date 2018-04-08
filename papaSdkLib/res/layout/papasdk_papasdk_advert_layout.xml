@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout  xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_height="match_parent"
+        android:layout_width="match_parent"
+        >
+
+    <FrameLayout
+
+            android:layout_width="@dimen/dp868" android:layout_height="@dimen/dp1184"
+            android:background="@android:color/transparent"
+            android:layout_gravity="center"
+        >
+
+        <ImageView android:layout_width="@dimen/dp801"
+                   android:layout_height="@dimen/dp1125"
+                   android:id="@+id/img"
+                   android:scaleType="fitXY"
+                   android:layout_gravity="center"
+
+                />
+        <ImageView android:layout_width="@dimen/dp100" android:layout_height="@dimen/dp100"
+                   android:layout_gravity="top|right"
+                   android:src="@drawable/papasdk_ad_close"
+                   android:id="@+id/close"
+                   android:padding="@dimen/dp15"
+                />
+
+
+
+    </FrameLayout>
+
+</FrameLayout>

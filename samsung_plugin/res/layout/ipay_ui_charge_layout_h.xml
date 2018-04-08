@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/RelativeLayout1"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/ipay_color_value_2"
+    android:orientation="vertical" >
+
+    <include
+        android:id="@+id/v_title_bar_aipay"
+        layout="@layout/ipay_ui_title_bar_normal" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="horizontal">
+
+        <ScrollView
+            android:id="@+id/ipay_charge_scrollview"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:fadeScrollbars="false"
+            android:paddingRight="@dimen/ipay_margin_5"
+            android:scrollbarThumbVertical="@drawable/ipay_common_scrollbar"
+            android:scrollbars="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/ipay_color_value_2"
+                android:orientation="vertical"
+                android:paddingLeft="@dimen/ipay_margin_15"
+                android:paddingRight="@dimen/ipay_margin_15"
+                android:paddingBottom="@dimen/ipay_margin_5">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="@dimen/ipay_height_41"
+                    android:layout_centerVertical="true"
+                    android:gravity="center_vertical"
+                    android:text="@string/ipay_select_charge_amount"
+                    android:textColor="@color/ipay_color_value_5"
+                    android:textSize="@dimen/ipay_text_size_13"/>
+
+                <com.samsung.ui.view.ChargeAmountGridView
+                    android:id="@+id/ipay_charge_amount_grid_view"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/ipay_margin_15"
+                    android:horizontalSpacing="@dimen/ipay_margin_8"
+                    android:listSelector="@android:color/transparent"
+                    android:numColumns="3"
+                    android:verticalSpacing="@dimen/ipay_margin_8"/>
+
+                <LinearLayout
+                    android:id="@+id/ipay_charge_present_area"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/ipay_bg"
+                    android:paddingLeft="@dimen/ipay_margin_10"
+                    android:paddingTop="@dimen/ipay_margin_10"
+                    android:paddingRight="@dimen/ipay_margin_5"
+                    android:paddingBottom="@dimen/ipay_margin_10" >
+
+                    <com.samsung.ui.widget.ScrollTextView
+                        android:id="@+id/ipay_charge_present_range"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/ipay_color_value_4"
+                        android:textSize="@dimen/ipay_text_size_12"
+                        android:maxLines="6"
+                        android:scrollbars="vertical"
+                        android:fadeScrollbars="false"
+                        android:scrollbarThumbVertical="@drawable/ipay_common_scrollbar"/>
+
+                </LinearLayout>
+
+            </LinearLayout>
+        </ScrollView>
+
+        <LinearLayout
+            android:layout_width="@dimen/ipay_height_280"
+            android:layout_height="match_parent"
+            android:background="@color/ipay_color_value_1"
+            android:orientation="vertical">
+
+                <ScrollView
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:layout_marginBottom="@dimen/ipay_margin_2"
+                    android:scrollbars="vertical"
+                    android:fadeScrollbars="false"
+                    android:scrollbarThumbVertical="@drawable/ipay_common_scrollbar">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="1"
+                        android:layout_marginBottom="@dimen/ipay_margin_2">
+
+                    <LinearLayout
+                        android:id="@+id/ipay_ll_charge_listview"
+                        android:layout_marginTop="@dimen/ipay_margin_24"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"/>
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/ipay_height_24"
+                            android:textColor="@color/ipay_color_value_4"
+                            android:gravity="bottom"
+                            android:layout_marginLeft="@dimen/ipay_margin_15"
+                            android:textSize="@dimen/ipay_text_size_13"
+                            android:text="@string/ipay_select_charge_type"/>
+
+                    </RelativeLayout>
+                </ScrollView>
+
+
+            <Button
+                android:id="@+id/next_bt"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/ipay_height_48"
+                android:background="@drawable/ipay_common_rectangle_btn_bg_color"
+                android:enabled="false"
+                android:gravity="center"
+                android:text="@string/ipay_recharge_sure_btn"
+                android:textColor="@drawable/ipay_common_btn_text_color"
+                android:textSize="@dimen/ipay_text_size_15"/>
+        </LinearLayout>
+
+    </LinearLayout>
+
+
+</LinearLayout>

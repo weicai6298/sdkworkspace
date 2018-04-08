@@ -146,7 +146,7 @@ public class MainActivity extends Activity {
     }
 
 	 public void pay(View v) {
-	        YYWOrder order = new YYWOrder(UUID.randomUUID().toString(), "600元宝", 600l,  "xxxx");
+	        YYWOrder order = new YYWOrder(UUID.randomUUID().toString(), "60元宝", 600l,  "xxxx");
 	       
 	        GameProxy.getInstent().pay(this, order, new YYWPayCallBack() {
 

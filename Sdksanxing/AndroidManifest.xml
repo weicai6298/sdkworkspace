@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.yayawan.sdktemplate"
+    android:versionCode="1"
+    android:versionName="1.0" >
+
+    <uses-sdk
+        android:minSdkVersion="8"
+        android:targetSdkVersion="19" />
+
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW" />
+    <uses-permission android:name="android.permission.GET_TASKS" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.CHANGE_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.CAMERA" />
+
+    <!-- 定位 -->
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.GET_ACCOUNTS" />
+
+    <application
+        android:name="com.yayawan.impl.YYApplication"
+        android:allowBackup="true"
+        android:theme="@android:style/Theme.NoTitleBar.Fullscreen" >
+        <activity
+            android:name="com.yayawan.sdktemplate.MainActivity"
+            android:label="app_name" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+
+        <!-- 手游互联配置 -->
+        <meta-data
+            android:name="app_id"
+            android:value="kk3501505954" />
+        <meta-data
+            android:name="isLandscape"
+            android:value="true" />
+        <meta-data
+            android:name="sanxing_appId"
+            android:value="string5001321372" />
+        <meta-data
+            android:name="sanxing_privateKey"
+            android:value="MIICXAIBAAKBgQC2k/1VUe/7bN3Fsuzqw3+lm9I0qSvR6i5ckzDtrd/lLop0FDeaXD1HDbwitebemefXXzGZ+TozsVAe8olrGhezcaGcZVyeUSPmUCYKyf+iuoso6vh5VjiXkRDXnB3WneS/vchsGV6h9EYboT6CCZiUqfAVI00NULJlC3t2YM5enQIDAQABAoGAQWmUAdVxXWsLqaEJMLMKMJM7JJLXmEWGhrRVe1IoPTwHbr8vjKYvbh2Fogn5xRbu8UKxyrB4Ib0NL4lFopGem5fA9PRb9gY4qeweqLEkKj/sg9pUe4D84T/TRvCqhTv6d/0ktqZloZ4iceRcRaj46YXdyU3UVQY9FbgcgXDFDSECQQDzbT3OnSy+i+H7M+e6k6pCmKa8D8pxYCNFNFnux6yW28Oz54crymPAcVc1q9jyizBLp5sgVeIMjjuHkyH7AAzvAkEAwAIqMm5jKDIjgWxfEmvvAP0Fd3mVoHVYKL+L2fqaTNEeUk9HBSt83/ciBhCtC43uiwk/tQOGCZdtlHSno2blMwJAPv3S06eKj5hlFvsciQRzN56G7v1rFqGZHuxoJUkYWUVvRBuyt9s8quzpc2MP1du82Kb7loeC4lrf/rpNPcWKkwJBAJK0lL03rreVp59JyFJw+YqNyNGCqpqRTizEPfztB1xOI5bMT/1ZPu55CxwLPcyoQ20kQfLyoEVP2EAn6bZl9hUCQBgzuUbVK2uq2yA70zuP0Jlb/BifuL19dJ01m7wNvZcJtl4GMgpjhgxNgnUZk7x5mA7/WX/Gzv92v5JgrK5q10Y=" />
+        <meta-data
+            android:name="sanxing_clientID"
+            android:value="92cl7nd225" />
+        <meta-data
+            android:name="sanxing_clientSecret"
+            android:value="F3944297BCEEF82F237FCAD11C319B6B" />
+
+        <!-- 屏幕适配 -->
+        <meta-data
+            android:name="android.max_aspect"
+            android:value="2.1" />
+        <!-- 微支付SDK界面 -->
+        <!-- 显示网页界面 -->
+        <activity
+            android:name="com.samsung.sdk.main.WebActivity"
+            android:configChanges="screenSize|orientation|keyboard|navigation|layoutDirection"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+        <activity
+            android:name="com.samsung.ui.activity.PersonCenterActivity"
+            android:configChanges="screenSize|orientation|keyboard|navigation|layoutDirection"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+        <activity
+            android:name="com.samsung.sdk.main.SamsungAccountActivity"
+            android:configChanges="screenSize|orientation|keyboard|navigation|layoutDirection"
+            android:theme="@android:style/Theme.Translucent" />
+        <activity
+            android:name="com.samsung.name.auth.NameAuthActivity"
+            android:configChanges="screenSize|orientation|keyboard|navigation|layoutDirection"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar"
+            android:windowSoftInputMode="adjustPan" />
+        <activity
+            android:name="com.samsung.name.auth.CameraActivity"
+            android:configChanges="screenSize|orientation|keyboard|navigation|layoutDirection"
+            android:theme="@android:style/Theme.Translucent" />
+        <!-- 收银台-普通 -->
+        <activity
+            android:name="com.samsung.ui.activity.PayHubActivity"
+            android:configChanges="screenSize|orientation|keyboard|navigation|layoutDirection"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+
+        <!-- 收银台-三星币 -->
+        <activity
+            android:name="com.samsung.ui.activity.IAppPayHubActivity"
+            android:configChanges="screenSize|orientation|keyboard|navigation|layoutDirection"
+            android:theme="@android:style/Theme.Translucent" >
+        </activity>
+
+        <!-- 充值界面 -->
+        <activity
+            android:name="com.samsung.ui.activity.ChargeActivity"
+            android:configChanges="screenSize|orientation|keyboard|navigation|layoutDirection"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar" >
+        </activity>
+        <!-- 游戏卡和话费卡界面 -->
+        <activity
+            android:name="com.samsung.pay.channel.gamepay.GamepayActivity"
+            android:configChanges="screenSize|orientation|keyboard|navigation|layoutDirection"
+            android:launchMode="singleTask"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+
+        <!-- 现金券 -->
+        <activity
+            android:name="com.samsung.ui.activity.CashCouponActivity"
+            android:configChanges="screenSize|orientation|keyboard|navigation|layoutDirection"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+
+        <!-- alipay sdk begin (新的支付宝) -->
+        <activity
+            android:name="com.alipay.sdk.app.H5PayActivity"
+            android:configChanges="orientation|keyboardHidden|navigation"
+            android:exported="false"
+            android:screenOrientation="behind"
+            android:windowSoftInputMode="adjustResize|stateHidden" />
+        <activity
+            android:name="com.alipay.sdk.auth.AuthActivity"
+            android:configChanges="orientation|keyboardHidden|navigation"
+            android:exported="false"
+            android:screenOrientation="behind" />
+        <!-- alipay sdk end -->
+
+    </application>
+
+</manifest>

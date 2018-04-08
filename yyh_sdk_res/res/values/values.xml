@@ -1,0 +1,272 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:ns1="http://schemas.android.com/tools">
+    <color name="ipay_color_listview_item">#faf7ed</color>
+    <color name="ipay_color_value_1">#ffffff</color>
+    <color name="ipay_color_value_2">#ededed</color>
+    <color name="ipay_color_value_2_0">#f6f6f6</color>
+    <color name="ipay_color_value_2_1">#3c4653</color>
+    <color name="ipay_color_value_2_2">#303a48</color>
+    <color name="ipay_color_value_2_3">#5f6975</color>
+    <color name="ipay_color_value_2_4">#f8f8f8</color>
+    <color name="ipay_color_value_3">#cdcdcd</color>
+    <color name="ipay_color_value_4">#a4a4a4</color>
+    <color name="ipay_color_value_5">#767676</color>
+    <color name="ipay_color_value_6">#000000</color>
+    <color name="ipay_color_value_7">#2cbae7</color>
+    <color name="ipay_color_value_7_1">#1096c7</color>
+    <color name="ipay_color_value_7_2">#00c2ff</color>
+    <color name="ipay_color_value_7_3">#deeff4</color>
+    <color name="ipay_color_value_7_4">#80acb9</color>
+    <color name="ipay_color_value_7_5">#0c6cc5</color>
+    <color name="ipay_color_value_8">#eb5353</color>
+    <color name="ipay_color_value_8_1">#f5eaea</color>
+    <color name="ipay_color_value_8_2">#f18d0b</color>
+    <color name="ipay_color_value_8_3">#ef772e</color>
+    <color name="ipay_color_value_9">#18ca20</color>
+    <color name="ipay_color_value_9_1">#02ae00</color>
+    <color name="ipay_transparent">#00000000</color>
+    <color name="ipay_transparent_75">#bf000000</color>
+    <color name="payeco_bgColor">#E8E8E8</color>
+    <color name="payeco_hintTextColor">#C4C4C4</color>
+    <color name="payeco_textColorBlack">#2B2B2B</color>
+    <color name="payeco_textColorBlue">#6CA6CD</color>
+    <color name="payeco_textColorGrayTwo">#A2A2A2</color>
+    <color name="payeco_textColorWhite">#FFFFFF</color>
+    <color name="payeco_textColorYellow">#FF8C00</color>
+    <color name="payeco_tipsTextColor">#4A5761</color>
+    <color name="payeco_titleTextColor">#1780C7</color>
+    <color name="transparent_half">#50000000</color>
+    <color name="yyh_a_1">#ffffff</color>
+    <color name="yyh_b_1">#f7f7f7</color>
+    <color name="yyh_black">#000000</color>
+    <color name="yyh_blue">#0382DA</color>
+    <color name="yyh_blue_half_transparent">#7F0382DA</color>
+    <color name="yyh_c_1">#ebebeb</color>
+    <color name="yyh_c_2">#f69b0f</color>
+    <color name="yyh_c_3">#1588fe</color>
+    <color name="yyh_center_selected">@color/yyh_white</color>
+    <color name="yyh_center_unselected">@color/yyh_gray</color>
+    <color name="yyh_color_d1d">#cacaca</color>
+    <color name="yyh_d_1">#cacaca</color>
+    <color name="yyh_gray">#CCCCCC</color>
+    <color name="yyh_gray_dark">#333333</color>
+    <color name="yyh_gray_light">#aaaaaa</color>
+    <color name="yyh_pressed">#5a000000</color>
+    <color name="yyh_red">#d54542</color>
+    <color name="yyh_transparent">#00000000</color>
+    <color name="yyh_white">#FFFFFF</color>
+    <color name="yyh_windowbg_dialog">#00000000</color>
+    <dimen name="activity_horizontal_margin">16dp</dimen>
+    <dimen name="activity_vertical_margin">16dp</dimen>
+    <dimen name="ipay_button_heigth">50dp</dimen>
+    <dimen name="ipay_divid_line_h">0.5dp</dimen>
+    <dimen name="ipay_height_38">38dp</dimen>
+    <dimen name="ipay_height_48">48dp</dimen>
+    <dimen name="ipay_height_50">50dp</dimen>
+    <dimen name="ipay_margin_10">10dp</dimen>
+    <dimen name="ipay_margin_11">11dp</dimen>
+    <dimen name="ipay_margin_12">12dp</dimen>
+    <dimen name="ipay_margin_13">13dp</dimen>
+    <dimen name="ipay_margin_15">15dp</dimen>
+    <dimen name="ipay_margin_16">16dp</dimen>
+    <dimen name="ipay_margin_17">17dp</dimen>
+    <dimen name="ipay_margin_18">18dp</dimen>
+    <dimen name="ipay_margin_19">19dp</dimen>
+    <dimen name="ipay_margin_20">20dp</dimen>
+    <dimen name="ipay_margin_22">22dp</dimen>
+    <dimen name="ipay_margin_25">25dp</dimen>
+    <dimen name="ipay_margin_26">26dp</dimen>
+    <dimen name="ipay_margin_27">27dp</dimen>
+    <dimen name="ipay_margin_3">3dp</dimen>
+    <dimen name="ipay_margin_30">30dp</dimen>
+    <dimen name="ipay_margin_4">4dp</dimen>
+    <dimen name="ipay_margin_40">40dp</dimen>
+    <dimen name="ipay_margin_5">5dp</dimen>
+    <dimen name="ipay_margin_6">6dp</dimen>
+    <dimen name="ipay_margin_7">7dp</dimen>
+    <dimen name="ipay_margin_8">8dp</dimen>
+    <dimen name="ipay_margin_9">9dp</dimen>
+    <dimen name="ipay_password_edittext_h">53dp</dimen>
+    <dimen name="ipay_password_edittext_w">318dp</dimen>
+    <dimen name="ipay_text_size_12">12sp</dimen>
+    <dimen name="ipay_text_size_13">13sp</dimen>
+    <dimen name="ipay_text_size_14">14sp</dimen>
+    <dimen name="ipay_text_size_15">15sp</dimen>
+    <dimen name="ipay_text_size_16">16sp</dimen>
+    <dimen name="ipay_text_size_17">17sp</dimen>
+    <dimen name="ipay_text_size_18">18sp</dimen>
+    <dimen name="ipay_text_size_19">19sp</dimen>
+    <dimen name="ipay_text_size_20">20sp</dimen>
+    <dimen name="ipay_text_size_28">28sp</dimen>
+    <dimen name="ipay_title_bar_text_line_margin">1dp</dimen>
+    <dimen name="ipay_title_h">50dp</dimen>
+    <dimen name="ipay_title_line_heigth">1dp</dimen>
+    <dimen name="ipay_title_mini_h">45dp</dimen>
+    <dimen name="ipay_wh_13">13dp</dimen>
+    <dimen name="ipay_wh_20">20dp</dimen>
+    <dimen name="payeco_button_textsize">18.0sp</dimen>
+    <dimen name="payeco_large_textsize">18.0sp</dimen>
+    <dimen name="payeco_larger_textsize">22.0sp</dimen>
+    <dimen name="payeco_middle_textsize">17.0sp</dimen>
+    <dimen name="payeco_normal_textsize">16.0sp</dimen>
+    <dimen name="payeco_pw_textsize">20.0sp</dimen>
+    <dimen name="payeco_pwkeyboard_button_textsize">15.0sp</dimen>
+    <dimen name="payeco_small_textsize">15.0sp</dimen>
+    <dimen name="payeco_smaller_textsize">14.0sp</dimen>
+    <dimen name="yyh_account_center_item">60dp</dimen>
+    <dimen name="yyh_toolbar_items_margin">8dp</dimen>
+    <string name="ipay_common_dialog_title">提  示</string>
+    <string name="ipay_common_loading">正在加载%s...</string>
+    <string name="ipay_common_pay_fail">支付失败，请重试。</string>
+    <string name="ipay_network_error">系统繁忙，请稍候再试...</string>
+    <string name="ipay_network_unconnent">网络连接失败，请检查网络！</string>
+    <string name="ipay_sub_game_balance_yuan">%1$s元</string>
+    <string name="ipay_sub_game_chargefeee_tips">本次支付%1$s元，其中%2$s元为通道手续费，实际到账%3$s元</string>
+    <string name="ipay_sub_game_final_rate_msg_3_without">支付%1$s元，其中支付商品%2$s元，剩余%3$s元将充值%4$s%5$s</string>
+    <string name="ipay_sub_game_final_rate_msg_charge">支付%1$s元，其中支付商品%2$s元，剩余%3$s元将充值%4$s%5$s(其中%6$s元为手续费)</string>
+    <string name="ipay_sub_game_final_rate_msg_new">支付%1$s元，其中支付商品%2$s元(含%3$s元手续费)，剩余%4$s元将充值%5$s%6$s(其中%7$s元为手续费)</string>
+    <string name="ipay_sub_game_final_rate_msg_pay">支付%1$s元，其中支付商品%2$s元(含%3$s元手续费)，剩余%4$s元将充值%5$s%6$s</string>
+    <string name="payeco_confirm">"确\u0020\u0020认"</string>
+    <string name="payeco_error_get_order_error">"获取订单失败"</string>
+    <string name="payeco_keyboard">"密\u0020\u0020码\u0020\u0020键\u0020\u0020盘"</string>
+    <string name="payeco_keyboard_character">"字母"</string>
+    <string name="payeco_keyboard_confirm">"确\u0020\u0020定"</string>
+    <string name="payeco_keyboard_delete">"回\u0020\u0020退"</string>
+    <string name="payeco_keyboard_digital">"数字"</string>
+    <string name="payeco_keyboard_edit_hint">"请输入银行卡密码"</string>
+    <string name="payeco_keyboard_next">"下一页"</string>
+    <string name="payeco_keyboard_pre">"上一页"</string>
+    <string name="payeco_keyboard_symbol">"符号"</string>
+    <string name="payeco_keyboard_tips">"采用银联标准加密技术传输，保证密码输入安全"</string>
+    <string name="payeco_networkError">"没有网络连接，请检查网络设置"</string>
+    <string name="payeco_pay_cvn2">"卡背面签名栏后三位"</string>
+    <string name="payeco_pay_validate">"有效期:"</string>
+    <string name="payeco_plugin_initing">"正在初始化..."</string>
+    <string name="payeco_plugin_pay_fail">"支付失败"</string>
+    <string name="payeco_plugin_pay_init_fail">"插件初始化失败"</string>
+    <string name="payeco_plugin_pay_verify_fail">"订单验证失败"</string>
+    <string name="payeco_prompt">"提示"</string>
+    <string name="yyh_authentication_remind">无法认证？请加QQ群：471380849</string>
+    <string name="yyh_authentication_submit">提交</string>
+    <string name="yyh_btn_chongzhi">充值</string>
+    <string name="yyh_btn_get_num">领号</string>
+    <string name="yyh_button_voice_captcha">语音验证码</string>
+    <string name="yyh_dialog_now_show">本次活动不再提醒</string>
+    <string name="yyh_dianjifuzhi">点击复制</string>
+    <string name="yyh_exit">退出登录</string>
+    <string name="yyh_gsou_login">极速登录</string>
+    <string name="yyh_gsou_login_notify">须知：\n1.极速登录会自动帮您生成登录账号，只需输入密码即可登录\n2.下次在登录页面，直接点击极速登录，即可登录\n3.建议绑定手机号，之后可以用手机号进行登录</string>
+    <string name="yyh_guanliyuan">管理员</string>
+    <string name="yyh_login">登录</string>
+    <string name="yyh_real_name_authentication">实名认证</string>
+    <string name="yyh_registration_agreement">&lt;font color="#777777">注册账号表示您同意&lt;/font>&lt;font color="#1588fe">%1$s&lt;/font></string>
+    <string name="yyh_text_authentication_tips">已实名认证</string>
+    <string name="yyh_text_gsou_tips">亲爱的汇员：\n由于账号系统调整，不再支持创建极速账号，已有的极速账号可继续使用，为避免您清除数据时导致账号丢失，请绑定手机号/邮箱，以后可以使用手机号/邮箱登录</string>
+    <string name="yyh_text_no_authentication_tips">为了资金安全，请实名认证</string>
+    <string name="yyh_text_voice_captcha_prefix">验证码没收到？试试</string>
+    <string name="yyh_title_authentication">实名认证</string>
+    <string name="yyh_toast_voice_captcha_send_success">正在拨号中，请注意接听电话</string>
+    <string name="yyh_toolbar_active">活动</string>
+    <string name="yyh_toolbar_boutique">精品</string>
+    <string name="yyh_toolbar_center">个人中心</string>
+    <string name="yyh_toolbar_help">客服</string>
+    <string name="yyh_toolbar_pay">粮饷</string>
+    <string name="yyh_toolbar_tip">锦囊</string>
+    <string name="yyh_tv_account">账号</string>
+    <string name="yyh_tv_act">动态</string>
+    <string name="yyh_tv_binding">绑定手机</string>
+    <string name="yyh_tv_change_the_pwd">为了账户安全，请定期修改密码</string>
+    <string name="yyh_tv_chong_doujuanduihuan">豆券可以兑换应用豆哦</string>
+    <string name="yyh_tv_chong_yingyongdou">充值应用豆记录，消费记录</string>
+    <string name="yyh_tv_chongzhijilu">查看记录</string>
+    <string name="yyh_tv_doujuanduihuan">豆券兑换</string>
+    <string name="yyh_tv_gift">礼包</string>
+    <string name="yyh_tv_msg">消息</string>
+    <string name="yyh_tv_no_binding">暂未绑定手机号</string>
+    <string name="yyh_tv_pwd">修改密码</string>
+    <string name="yyh_tv_switch_account">切换小号</string>
+    <string name="yyh_tv_switch_content">多个小号一键切换</string>
+    <style name="YYHAlertDialog" parent="android:style/Theme.Dialog">
+        <item name="android:background">#00000000</item>
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowIsFloating">true</item>
+    </style>
+    <style name="YYHDialogTheme" parent="android:Theme.Dialog">
+        <item name="android:background">@android:color/transparent</item>
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:windowFrame">@null</item>
+        <item name="android:windowIsTranslucent">true</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:backgroundDimEnabled" ns1:ignore="NewApi">true</item>
+        <item name="android:backgroundDimAmount">0.3</item>
+        
+        <item name="android:windowIsFloating">true</item>
+    </style>
+    <style name="YYHProgressDialog" parent="android:Theme.Dialog">
+        <item name="android:windowFrame">@null</item>
+        <item name="android:windowAnimationStyle">@android:style/Animation.Dialog</item>
+        <item name="android:windowSoftInputMode" ns1:ignore="NewApi">stateUnspecified|adjustPan</item>
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:backgroundDimEnabled" ns1:ignore="NewApi">true</item>
+        <item name="android:windowIsFloating">true</item>
+    </style>
+    <style name="ipay_dialog" parent="@android:style/Theme.Dialog">
+        <item name="android:windowFrame">@null</item>
+        <!-- 边框 -->
+        <item name="android:windowIsFloating">true</item>
+        <!-- 是否浮现在activity之上 -->
+        <item name="android:windowIsTranslucent">false</item>
+        <!-- 半透明 -->
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowBackground">@color/ipay_transparent</item>
+        <item name="android:background">@color/ipay_transparent</item>
+        <item name="android:backgroundDimEnabled">true</item>
+        <!-- 模糊 -->
+        <item name="android:paddingTop">35dip</item>
+        <item name="android:paddingBottom">35dip</item>
+        <item name="android:paddingLeft">15dip</item>
+        <item name="android:paddingRight">15dip</item>
+    </style>
+    <style name="payeco_datepPickDialog" parent="android:Theme.Holo.Light.Dialog">
+        <item name="android:layout_width">fill_parent</item>
+        <item name="android:layout_height">fill_parent</item>
+        <item name="android:windowBackground">@android:color/transparent</item>
+    </style>
+    <style name="payeco_fullHeightDialog" parent="android:style/Theme.Dialog">
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowFrame">@null</item>
+        <item name="android:windowBackground">@android:color/transparent</item>
+    </style>
+    <style name="payeco_keyboardButton">
+        <item name="android:textColor">#ffffff</item>
+        <item name="android:layout_width">70.0dip</item>
+        <item name="android:layout_height">fill_parent</item>
+        <item name="android:layout_weight">1.0</item>
+        <item name="android:gravity">center</item>
+        <item name="android:button">@null</item>
+        <item name="android:textSize">@dimen/payeco_pwkeyboard_button_textsize</item>
+    </style>
+    <style name="payeco_keyboardDigitButton_hx">
+        <item name="android:textSize">16sp</item>
+        <item name="android:textColor">#333333</item>
+        <item name="android:background">@drawable/payeco_stand_digtselector</item>
+        <item name="android:layout_width">0px</item>
+        <item name="android:layout_height">fill_parent</item>
+        <item name="android:gravity">center</item>
+    </style>
+    <style name="payeco_pluginNormalText">
+        <item name="android:textSize">@dimen/payeco_normal_textsize</item>
+        <item name="android:textColor">@color/payeco_textColorBlack</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+    </style>
+    <style name="payeco_pluginSpinnerButton">
+        <item name="android:background">@drawable/payeco_plugin_spinner_selector</item>
+        <item name="android:gravity">center_vertical</item>
+        <item name="android:textColor">@color/payeco_textColorBlack</item>
+        <item name="android:textSize">@dimen/payeco_small_textsize</item>
+        <item name="android:layout_height">30.0dip</item>
+    </style>
+</resources>

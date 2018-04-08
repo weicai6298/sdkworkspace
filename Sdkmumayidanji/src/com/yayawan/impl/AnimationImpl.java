@@ -50,8 +50,8 @@ public class AnimationImpl implements YYWAnimation {
 
 			@Override
 			public void run() {
-//				new LogoWindow(paramActivity);
-				YYWMain.mAnimCallBack.onAnimSuccess("success", "");
+				new LogoWindow(paramActivity);
+//				YYWMain.mAnimCallBack.onAnimSuccess("success", "");
 			}
 		});
 
@@ -132,7 +132,7 @@ class LogoWindow {
 		iv.setBackgroundColor(Color.parseColor("#f7faf1"));
 //		iv.setBackgroundColor(Color.parseColor("#000000"));
 		iv.setImageBitmap(bitmap);
-		iv.setScaleType(ScaleType.CENTER);
+		iv.setScaleType(ScaleType.CENTER_CROP);
 		rootview.addView(iv);
 
 		mHandler.sendEmptyMessageDelayed(1, 3000L);

@@ -136,9 +136,14 @@ public class YaYawanconstants {
 	 * @param paramActivity
 	 * @param callback
 	 */
-	public static void exit(Activity paramActivity,
+	public static void exit(final Activity paramActivity,
 			final YYWExitCallback callback) {
 		Yayalog.loger("YaYawanconstantssdk退出");
+		paramActivity.runOnUiThread(new Runnable() {
+			
+			@Override
+			public void run() {
+				
 		GamePlatform.quitGame(paramActivity,
 				new QuitGameCallback() {
 
@@ -155,6 +160,8 @@ public class YaYawanconstants {
 			@Override
 			public void onCancel() {
 
+			}
+		});
 			}
 		});
 	}
@@ -280,18 +287,30 @@ public class YaYawanconstants {
 	 * 支付成功
 	 */
 	public static void paySuce() {
+		mActivity.runOnUiThread(new Runnable() {
+			
+			@Override
+			public void run() {
 		// 支付成功
 		if (YYWMain.mPayCallBack != null) {
 			YYWMain.mPayCallBack.onPaySuccess(YYWMain.mUser, YYWMain.mOrder,
 					"success");
 		}
+			}
+		});
 	}
 
 	public static void payFail() {
-		// 支付成功
-		if (YYWMain.mPayCallBack != null) {
-			YYWMain.mPayCallBack.onPayFailed(null, null);
-		}
+		mActivity.runOnUiThread(new Runnable() {
+			
+			@Override
+			public void run() {
+				// 支付成功
+				if (YYWMain.mPayCallBack != null) {
+					YYWMain.mPayCallBack.onPayFailed(null, null);
+				}
+			}
+		});
 	}
 
 }

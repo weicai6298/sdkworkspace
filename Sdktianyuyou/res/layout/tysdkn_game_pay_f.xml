@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#ffffff"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:layout_marginBottom="20dp">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_centerVertical="true"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:paddingLeft="10dp">
+
+            <ImageView
+                android:id="@+id/tysdkn_game_pay_back"
+                android:layout_width="16dp"
+                android:layout_height="16dp"
+                android:src="@drawable/tysdkn_back"/>
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="10dp"
+                android:layout_weight="1"
+                android:ellipsize="end"
+                android:gravity="center_vertical"
+                android:maxLines="1"
+                android:text="游戏充值"
+                android:textColor="#111111"
+                android:textSize="14sp"/>
+        </LinearLayout>
+
+
+        <TextView
+            android:id="@+id/tysdkn_game_pay_gamename"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:layout_gravity="center"
+            android:textColor="#111111"
+            tools:text="游戏名称"/>
+    </RelativeLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:orientation="horizontal">
+
+                <include layout="@layout/tysdkn_game_pay_content"/>
+
+                <View
+                    android:layout_width="0.5dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="20dp"
+                    android:background="#dcdcdc"/>
+
+                <include
+                    android:id="@+id/tysdkn_game_pay_right"
+                    layout="@layout/tysdkn_game_pay_right_layout"/>
+
+            </LinearLayout>
+
+
+            <include
+                android:id="@+id/tysdkn_game_pay_bottom"
+                layout="@layout/tysdkn_game_pay_bottom_layout"/>
+
+
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

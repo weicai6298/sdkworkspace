@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    package="com.hulian.wszj.huawei"
+    package="com.syhl.mdwsw.huawei"
     android:installLocation="auto"
     android:versionCode="1"
     android:versionName="1.0" >
@@ -38,43 +38,43 @@
       <!-- 手游互联配置 -->
      	 <meta-data
             android:name="app_id"
-            android:value="kk1226908841" />
+            android:value="kk1055758164" />
         <meta-data
             android:name="isLandscape"
             android:value="true" />
         <meta-data
             android:name="companyname"
-            android:value="北京奥优科技有限公司" />
+            android:value="宿州手游互联信息技术有限公司" />
         <meta-data
             android:name="appid"
-            android:value="string100178189" />
+            android:value="string100241979" />
         <meta-data
             android:name="cpid"
-            android:value="string890086000102098025" />
+            android:value="string890086000102062327" />
         
    <!-- 接入HMSSDK 需要注册的appid参数。value的值“appid”用实际申请的应用ID替换，来源于开发者联盟网站应用的权益详情。
             格式 android:value="appid=xxxxxx" -->
         <meta-data
             android:name="com.huawei.hms.client.appid"
-            android:value="appid=100178189"/>
+            android:value="appid=100241979"/>
 
         <!-- 接入HMSSDK 游戏或支付时需要注册的cpid参数。value的值“cpid”用实际申请的应用cpID替换，来源于开发者联盟网站应用的权益详情。
             格式 android:value="cpid=xxxxxx" -->
         <meta-data
             android:name="com.huawei.hms.client.cpid"
-            android:value="cpid=890086000102098025"/>
+            android:value="cpid=890086000102062327"/>
 
         <!-- 接入HMSSDK 需要注册的provider，authorities 一定不能与其他应用一样，所以这边 ${PACKAGE_NAME} 要替换上您应用的包名 -->
         <provider
             android:name="com.huawei.hms.update.provider.UpdateProvider"
-            android:authorities="string_package.hms.update.provider"
+            android:authorities="com.phoneu.goldtoadfish.bf618.huawei.hms.update.provider"
             android:exported="false"
             android:grantUriPermissions="true"/>
         
 	<!-- 接入HMSSDK 需要注册的provider，authorities 一定不能与其他应用一样，所以这边 ${PACKAGE_NAME} 要替换上您应用的包名 -->
         <provider
             android:name="com.huawei.updatesdk.fileprovider.UpdateSdkFileProvider"
-            android:authorities="string_package.updateSdk.fileProvider"
+            android:authorities="com.phoneu.goldtoadfish.bf618.huawei.updateSdk.fileProvider"
             android:exported="false"
             android:grantUriPermissions="true">
         </provider>

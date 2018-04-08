@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="48dp"
+    android:background="@color/white">
+
+    <ImageView
+        android:id="@+id/indicator"
+        android:layout_width="18dp"
+        android:layout_height="18dp"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:layout_marginRight="21dp"
+        android:scaleType="centerCrop" />
+    <TextView
+        android:id="@+id/title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_toLeftOf="@id/date"
+        android:ellipsize="end"
+        android:paddingRight="20dp"
+        android:layout_marginLeft="21dp"
+        android:singleLine="true"
+        tools:text="您已在线5分钟，免商店给您准备了一个大礼包"
+        android:textColor="#333333"
+        android:textSize="15sp" />
+
+    <TextView
+        android:id="@+id/date"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_toLeftOf="@id/indicator"
+        android:paddingRight="10dp"
+        android:textColor="#a8000000"
+        tools:text="2019-10-10 23:23:23"
+        android:textSize="10sp" />
+
+</RelativeLayout>

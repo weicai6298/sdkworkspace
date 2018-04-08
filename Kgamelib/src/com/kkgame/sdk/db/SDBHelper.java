@@ -8,6 +8,8 @@ import android.os.Environment;
  * 外部数据库,
  */
 public class SDBHelper {
+	
+	public static String Rootpath="QianGuoUserData";
 
     public static String DB_DIR = Environment.getExternalStorageDirectory()
             .getPath()

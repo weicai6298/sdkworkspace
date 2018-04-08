@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@color/title_background" >
+
+        <LinearLayout
+            android:id="@+id/back_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="50dp"
+            android:background="@drawable/snail_back_layout_bg"
+            android:focusable="true"
+            android:focusableInTouchMode="false"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:paddingRight="13dp" >
+
+            <View
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:background="@drawable/snail_back_bg" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/snail_notice"
+                android:textColor="@color/white"
+                android:textSize="20sp" />
+        </LinearLayout>
+    </RelativeLayout>
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" >
+
+        <ProgressBar
+            android:id="@+id/progressbar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center" />
+
+        
+        <LinearLayout
+            android:id="@+id/notice_empty_layout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:translationY="-15dp"
+            android:orientation="vertical"
+            android:visibility="gone" >
+            
+		<ImageView
+		    android:layout_width="wrap_content"
+		    android:layout_height="wrap_content"
+		    android:src="@drawable/snail_sorry_icon" />
+            
+            
+        <TextView
+            android:id="@+id/txt_empty"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/snail_notice_empty"
+            android:textColor="@color/black"
+            android:textSize="18sp" />
+        </LinearLayout>
+        
+        
+		<ExpandableListView
+            android:id="@+id/snail_expand_list"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:cacheColorHint="@android:color/transparent"
+            android:childDivider="@drawable/common_divider"
+            android:divider="@drawable/common_divider"
+            android:dividerHeight="1px"
+            android:layout_marginLeft="18dp"
+            android:drawSelectorOnTop="false"
+            android:scrollbars="none"
+            android:visibility="gone" >
+        </ExpandableListView>
+        
+    </FrameLayout>
+
+</LinearLayout>

@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:fitsSystemWindows="true"
+                android:background="@color/activity_default_background">
+
+    <FrameLayout
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_weight="1"
+            android:id="@+id/mg_mian_fragmentlayout"
+            android:layout_alignParentLeft="false"
+            android:layout_marginBottom="@dimen/main_content_margin_b"
+            android:layout_alignParentBottom="false"
+            android:visibility="visible">
+
+    </FrameLayout>
+
+    <!--tab-->
+    <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="fill_parent"
+            android:layout_height="@dimen/main_content_margin_b"
+            android:id="@+id/mainTab"
+            android:layout_alignParentBottom="true"
+            android:background="@drawable/papasdk_mg_main_table_back"
+    >
+
+        <!--<include layout="@layout/mg_main_tab_item"-->
+                 <!--android:layout_height="match_parent"-->
+                 <!--android:layout_width="wrap_content"-->
+                 <!--android:layout_weight="1"/>-->
+
+    </LinearLayout>
+
+
+    <!--bottom-->
+    <View android:layout_width="match_parent" android:layout_height="0dp" android:id="@+id/bottom"
+          android:layout_alignParentBottom="true"/>
+
+    <VideoView android:layout_width="0dp" android:layout_height="0dp"/>
+    <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/imageButton"
+            android:text="加载本地测试网页"
+            android:background="#93000000"
+            android:paddingTop="10dp"
+            android:paddingBottom="10dp"
+            android:layout_gravity="left|top"
+            android:layout_marginLeft="80dp"
+            android:visibility="gone"
+            />
+
+</RelativeLayout>

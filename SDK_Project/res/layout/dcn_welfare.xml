@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:background="#F1F2F4"
+              android:orientation="vertical">
+
+    <LinearLayout
+        android:id="@+id/dcn_welfare_action_bar"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dcn_title_height"
+        android:orientation="horizontal"
+        android:background="@drawable/dcn_web_title_bg">
+
+        <ImageView
+            android:id="@+id/dcn_actionbar_close_iv"
+            android:layout_width="38dp"
+            android:layout_height="@dimen/dcn_title_height"
+            android:layout_gravity="center"
+            android:paddingLeft="11dp"
+            android:paddingRight="11dp"
+            android:paddingTop="15dp"
+            android:paddingBottom="15dp"
+            android:background="@drawable/dcn_selector_actionbar_btn"
+            android:src="@drawable/dcn_actionbar_back"
+            android:scaleType="fitCenter"/>
+        <View
+            android:layout_width="@dimen/dcn_divider_size"
+            android:layout_height="20dp"
+            android:background="#30ffffff"
+            android:layout_gravity="center_vertical"
+            />
+
+        <TextView
+            android:id="@+id/dcn_welfare_back"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="10dp"
+            android:text="@string/dcn_welfare_title"
+            android:layout_weight="1"
+            android:textColor="#ffffff"
+            android:textSize="16sp"/>
+
+        <LinearLayout
+            android:id="@+id/dcn_actionbar_menu_group"
+            android:layout_width="38dp"
+            android:layout_height="@dimen/dcn_title_height"
+            android:orientation="horizontal"
+            android:layout_gravity="center_vertical"
+            android:addStatesFromChildren="true"
+            android:background="@drawable/dcn_selector_actionbar_btn"
+            >
+            <View
+                android:layout_width="@dimen/dcn_divider_size"
+                android:layout_height="20dp"
+                android:background="#30ffffff"
+                android:layout_gravity="center_vertical"
+                />
+            <CheckBox
+                android:id="@+id/dcn_welfare_scale"
+                android:layout_width="16dp"
+                android:layout_height="16dp"
+                android:layout_gravity="center"
+                android:background="@drawable/dcn_webview_actionbar_scale"
+                android:button="@null"
+                android:checked="false"
+                android:contentDescription="@null"
+                android:layout_margin="10dp"
+                android:scaleType="fitCenter"/>
+        </LinearLayout>
+    </LinearLayout>
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:id="@+id/dcn_welfare_container"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+            </LinearLayout>
+        </ScrollView>
+    </FrameLayout>
+</LinearLayout>

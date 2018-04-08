@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="background_tab_pressed">#6633B5E5</color>
+    <color name="sex_normal_bg">#c0c0c0</color>
+    <color name="sex_selected_bg">#C4E1E1</color>
+    <color name="green">#090</color>
+    <color name="white">#FFF</color>
+    <color name="black">#000000</color>
+    <color name="red">#F00</color>
+    <color name="download_pressed">#fbd571</color>
+    <color name="menu_selector_color">#ff22262f</color>
+	<color name="actionbar_background">#292d39</color>
+	<color name="title_background">#eb413d</color>
+	<color name="reg_item_sel">#ff363f</color>
+	<color name="editor_color">#333333</color>
+	<color name="editor_tip_color">#979797</color>
+	<color name="cut_off_rule">#dedede</color>
+    <!-- 半透明 -->
+    <color name="translucent">#50000000</color>
+
+    <color name="custom_title_color">#ffffff</color>
+    <color name="custom_subtitle_color">#FF868686</color>
+    <color name="translucent_50_white">#80ffffff</color>
+    <color name="translucent_20_white">#33ffffff</color>
+
+    <color name="tab_unselect_text">#3e3935</color>
+    <color name="game_bg">#fff9d4</color>
+    <color name="download_manage_item_version">#9b9b9b</color>
+    <color name="list_selector_line">#edeae3</color>
+    <color name="app_detail_app_title">#ffae00</color>
+    <color name="app_detail_app_version">#3e3935</color>
+    <color name="app_detail_free_phone">#ae7736</color>
+    <color name="feedback_color">#3e3935</color>
+    <color name="phone_call">#15a714</color>
+
+    <color name="holo_blue">#FF33E5B5</color>
+    <color name="ab_item_bg">#693d1e</color>
+
+    <color name="forum_summary_color">#af5822</color>
+    <color name="forum_title_color">#3e3935</color>
+
+    <color name="search_edit_text_color">#ffffae00</color>
+    <color name="description_textcolor">#8c6a4c</color>
+    <color name="description_bg">#d6d0c5</color>
+    <color name="download_state_color">#5db513</color>
+
+    <!--  rank -->
+    <color name="rank_version_color">#9b9b9b</color>
+    <color name="rank_bg_color">#f2f2f2</color>
+    <color name="play_game_line">#acb1bf</color>
+
+   <!-- login-->
+	<color name="login_little_text">#666666</color>
+	<color name="login_edit_color">#333333</color>
+    <color name="orange">#fe7f00</color>
+    <color name="email">#ff8448</color>
+    <color name="pass_format_color">#cccccc</color>
+    <color name="login_btn">#6dc343</color>
+
+    <!-- buyDialog -->
+    <color name="buydialog_red">#fc5353</color>
+    
+    <!-- regist -->
+    <color name="regist_line">#c7cbd5</color>
+
+    <!-- changpwd -->
+    <color name="changepwd_tip">#c7c7c7</color>
+    
+    <!-- contact -->
+    <color name="phone_color1">#6dc343</color>
+    <color name="phone_color2">#fc5353</color>
+    
+    <!-- Scan QR code -->
+    <color name="viewfinder_frame">#ff000000</color>
+    <color name="viewfinder_laser">#ffff0000</color>
+    <color name="viewfinder_mask">#60000000</color>
+    <color name="result_view">#b0000000</color>
+    <color name="possible_result_points">#c0ffff00</color>
+    <drawable name="search_item_text_bg_pressed">#9b9b9b</drawable>
+    <drawable name="search_item_text_bg_formal">#ffffff</drawable>
+    <!-- txt -->
+    <color name="sel_txt">#9fa7b7</color>
+    <color name="default_txt">#434b5b</color>
+
+    <color name="view_pager_title_bg">#22262f</color>
+    <color name="actionbar_bg">#292d39</color>
+
+    <color name="actionbar_bg_search_content_nor">#585e6f</color>
+    <color name="actionbar_bg_search_content_sel">@color/white</color>
+    <color name="actionbar_search_auto_complete_item_sel">#d9d9d9</color>
+    <drawable name="actionbar_search_auto_complete_list_divider">#d6d6d6</drawable>
+
+    <color name="common_nor_list_item_bg">@color/white</color>
+    <color name="common_sel_list_item_bg">#d9d9d9</color>
+    <color name="common_app_list_item_des">#6c6c6c</color>
+    <color name="common_app_list_item_green">#55c45f</color>
+    <color name="common_app_list_item_blue">#5589c4</color>
+    <color name="common_app_des_line">#9d9d9d</color>
+    <color name="app_detail_gallery_bg">#ff21242c</color>
+    <color name="user_center_list_text">#8a8a8a</color>
+    <color name="obox_hint_textcolor">#9a9a9a</color>
+    <drawable name="loading_ico">#d1d5e2</drawable>
+	<color name="list_divider">#1a000000</color>
+</resources>

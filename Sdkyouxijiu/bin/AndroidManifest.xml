@@ -1,0 +1,238 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.yayawan.sdktemplate"
+    android:versionCode="1"
+    android:versionName="1.0" >
+
+    <uses-sdk
+        android:minSdkVersion="8"
+        android:targetSdkVersion="19" />
+
+    
+    
+     <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.CALL_PHONE" />
+    <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW" />
+    <uses-permission android:name="android.permission.GET_TASKS" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <!-- 在SDCard中创建与删除文件权限 -->
+    <uses-permission android:name="android.permission.MOUNT_UNMOUNT_FILESYSTEMS" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+
+    <!-- 照相的权限 -->
+    <uses-feature android:name="android.hardware.camera" />
+
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.hardware.camera.autofocus" />
+
+    <!-- 读取短信验证码	可选 -->
+    <uses-permission android:name="android.permission.RECEIVE_SMS" />
+    <uses-permission android:name="android.permission.READ_SMS" />
+
+    <!-- 录像需要的权限 -->
+    <uses-permission android:name="android.permission.RECORD_VIDEO" />
+
+    
+     <supports-screens
+        android:anyDensity="true"
+        android:largeScreens="true"
+        android:normalScreens="true"
+        android:resizeable="true"
+        android:smallScreens="true" />
+     
+    <application
+        android:name="com.yayawan.impl.YYApplication"
+        android:allowBackup="true"
+        android:theme="@android:style/Theme.NoTitleBar.Fullscreen" >
+        <activity
+            android:name="com.yayawan.sdktemplate.MainActivity"
+            android:configChanges="keyboardHidden|navigation|orientation|screenSize"
+            android:label="app_name" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+      
+        
+      <!-- 手游互联配置 -->
+     	 <meta-data
+            android:name="app_id"
+            android:value="kk1461416075" />
+        <meta-data
+            android:name="isLandscape"
+            android:value="true" />
+    
+        
+       <activity
+            android:name="com.game.sdk.ui.ChargeActivity"
+            android:configChanges="keyboardHidden|orientation"
+            android:launchMode="singleTask"
+            android:screenOrientation="behind"
+            android:theme="@android:style/Theme.Light.NoTitleBar" />
+        <activity
+            android:name="com.game.sdk.ui.LoginActivity"
+            android:configChanges="keyboardHidden|orientation"
+            android:launchMode="singleTask"
+            android:screenOrientation="behind"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar.Fullscreen" />
+        <!-- 浮点 -->
+        <activity
+            android:name="com.game.sdk.floatwindow.FloatWebActivity"
+            android:configChanges="orientation|keyboardHidden"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar.Fullscreen" />
+        <activity
+            android:name="com.alipay.sdk.auth.AuthActivity"
+            android:configChanges="orientation|keyboardHidden|navigation"
+            android:exported="false"
+            android:screenOrientation="behind" >
+        </activity>
+        <activity
+            android:name="com.game.sdk.pay.ptbpay.PtbActivity"
+            android:configChanges="keyboardHidden|orientation"
+            android:screenOrientation="behind"
+            android:theme="@android:style/Theme.NoTitleBar" />
+        <activity
+            android:name="com.game.sdk.pay.yxbpay.GameCurrencyActivity"
+            android:configChanges="keyboardHidden|orientation"
+            android:screenOrientation="behind"
+            android:theme="@android:style/Theme.NoTitleBar" />
+
+        <!-- alipay sdk begin -->
+        <activity
+            android:name="com.alipay.sdk.app.H5PayActivity"
+            android:configChanges="orientation|keyboardHidden|navigation"
+            android:exported="false"
+            android:screenOrientation="behind"
+            android:windowSoftInputMode="adjustResize|stateHidden" >
+        </activity>
+        <activity
+            android:name="com.game.sdk.pay.alipay.AlipayActivity"
+            android:configChanges="keyboardHidden|orientation"
+            android:launchMode="singleTask"
+            android:screenOrientation="behind"
+            android:theme="@android:style/Theme.NoDisplay" />
+
+        <!-- alipay sdk end -->
+        <activity
+            android:name="com.game.sdk.ui.TenPayActivity"
+            android:configChanges="keyboardHidden|orientation"
+            android:launchMode="singleTask"
+            android:screenOrientation="behind"
+            android:theme="@android:style/Theme.NoDisplay" />
+        <activity
+            android:name="com.game.sdk.pay.yibaopay.YiBaoPayActivity"
+            android:configChanges="keyboardHidden|orientation"
+            android:launchMode="singleTask"
+            android:screenOrientation="behind"
+            android:theme="@android:style/Theme.NoDisplay" />
+        <activity
+            android:name="com.game.sdk.pay.yibaopay.OnkeypayChargeNextActivity"
+            android:configChanges="keyboardHidden|orientation"
+            android:screenOrientation="behind" />
+        <activity
+            android:name="com.game.sdk.ui.ShenFuPayActivity"
+            android:configChanges="keyboardHidden|orientation"
+            android:launchMode="singleTask"
+            android:screenOrientation="behind"
+            android:theme="@android:style/Theme.NoDisplay" />
+        <activity
+            android:name="com.shengpay.smc.HybridClientActivity"
+            android:configChanges="orientation|keyboardHidden|keyboard|screenSize|locale"
+            android:windowSoftInputMode="adjustResize" >
+            <intent-filter>
+                <action android:name="android.intent.action.INIT" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.game.sdk.ui.PtbActivity"
+            android:configChanges="keyboardHidden|orientation"
+            android:screenOrientation="behind"
+            android:theme="@android:style/Theme.NoTitleBar" />
+        <activity
+            android:name="com.game.sdk.ui.OnkeypayChargeNextActivity"
+            android:configChanges="keyboardHidden|orientation"
+            android:screenOrientation="behind" />
+        <activity
+            android:name="com.game.sdk.ui.GameCurrencyActivity"
+            android:configChanges="keyboardHidden|orientation"
+            android:screenOrientation="behind"
+            android:theme="@android:style/Theme.NoTitleBar" />
+        <activity
+            android:name="com.game.sdk.pay.hfbpay.HeePayActivity"
+            android:configChanges="keyboardHidden|orientation"
+            android:launchMode="singleTask"
+            android:screenOrientation="behind"
+            android:theme="@android:style/Theme.NoDisplay" />
+        <activity
+            android:name="com.heepay.plugin.activity.WeChatNotityActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:screenOrientation="behind"
+            android:theme="@android:style/Theme.NoDisplay" />
+        <activity
+            android:name="com.game.sdk.ui.MoblieCardNextDealActivity"
+            android:configChanges="keyboardHidden|orientation"
+            android:screenOrientation="behind" />
+        <!-- 浮点 -->
+
+
+        <!-- alipay sdk begin -->
+
+
+        <!-- alipay sdk end -->
+
+        <service android:name="com.game.sdk.YTAppService" >
+            <intent-filter android:priority="1000" >
+            </intent-filter>
+        </service>
+
+        <!-- 插件入口界面 -->
+        <activity
+            android:name="com.payeco.android.plugin.PayecoPluginLoadingActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="behind" />
+
+        <!-- 插件拍照界面 -->
+        <activity
+            android:name="com.payeco.android.plugin.PayecoCameraActivity"
+            android:screenOrientation="behind" />
+
+        <!-- 插件录像界面 -->
+        <activity
+            android:name="com.payeco.android.plugin.PayecoVedioActivity"
+            android:process="com.payeco.android.plugin.vedio"
+            android:screenOrientation="behind" />
+
+        <service android:name="com.game.sdk.YTAppService" >
+            <intent-filter android:priority="1000" >
+            </intent-filter>
+        </service>
+
+        <meta-data
+            android:name="YL_APPID"
+            android:value="38" />
+        <meta-data
+            android:name="YL_CLIENTID"
+            android:value="38" />
+        <meta-data
+            android:name="YL_CLIENTKEY"
+            android:value="cdeeaa7a4eb95c7c5c62c12787047129" />
+        <meta-data
+            android:name="AGENT"
+            android:value="default" />
+    </application>
+
+</manifest>
+

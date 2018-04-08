@@ -1,0 +1,4 @@
+[armeabi]
+lib_ucsdk_patch.so = 512f10c5718234d30c6dccc56ce96dfa
+lib_ucsdk_softlink.so = cb1779c339e3ba3e355c9d88a4ebdff8
+lib_ucsdk_xcrypt.so = 0d29440e50d48335a2d3442fe23cc6b1

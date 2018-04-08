@@ -1,0 +1,239 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="#00000000">
+
+    <RelativeLayout
+        android:id="@+id/container"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <!--登陆页面-->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30dp"
+            android:background="@drawable/gg_plugin_login_common_shape"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="33dp"
+                android:text="GG大玩家"
+                android:textColor="#333333"
+                android:textSize="15sp" />
+            <!--输入框登陆页面展示  start-->
+            <LinearLayout
+                android:id="@+id/common_login_container"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:visibility="gone">
+
+                <EditText
+                    android:id="@+id/phone_number"
+                    style="@style/login_edittext_style"
+                    android:hint="请输入手机号码"
+                    android:inputType="phone"
+                    android:textColor="#333333"
+                    android:textColorHint="#999999" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="16dp"
+                    android:layout_marginTop="10dp">
+
+                    <EditText
+                        android:id="@+id/verify_code"
+                        style="@style/login_edittext_style"
+                        android:layout_marginRight="11dp"
+                        android:layout_weight="1"
+                        android:hint="请输入短信验证码"
+                        android:inputType="number"
+                        android:textColor="#333333"
+                        android:textColorHint="#999999" />
+
+                    <TextView
+                        android:id="@+id/send_code"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/gg_plugin_send_code_shape"
+                        android:paddingBottom="10dp"
+                        android:paddingLeft="5dp"
+                        android:paddingRight="5dp"
+                        android:paddingTop="10dp"
+                        android:singleLine="true"
+                        android:text="获取验证码"
+                        android:textColor="#ffffff" />
+                    <!--重新发送-->
+                    <TextView
+                        android:id="@+id/resend_code"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/gg_plugin_resend_unenable_shape"
+                        android:paddingBottom="10dp"
+                        android:paddingLeft="5dp"
+                        android:paddingRight="5dp"
+                        android:paddingTop="10dp"
+                        android:singleLine="true"
+                        android:text="获取验证码"
+                        android:textColor="#ffffff"
+                        android:visibility="gone" />
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/enter_game"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="16dp"
+                    android:layout_marginRight="16dp"
+                    android:layout_marginTop="10dp"
+                    android:background="@drawable/gg_plugin_enter_game_shape"
+                    android:gravity="center"
+                    android:paddingBottom="9dp"
+                    android:paddingTop="9dp"
+                    android:singleLine="true"
+                    android:text="进入游戏"
+                    android:textColor="#ffffff" />
+
+                <TextView
+                    android:id="@+id/quick_game"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="right"
+                    android:layout_marginRight="16dp"
+                    android:layout_marginTop="10dp"
+                    android:text="快速游戏"
+                    android:textColor="#999999"
+                    android:textSize="12sp" />
+            </LinearLayout>
+            <!--输入框登陆页面展示  end-->
+            <!--登陆中... start -->
+            <LinearLayout
+                android:id="@+id/logining_container"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:visibility="gone">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="16dp"
+                    android:layout_marginRight="16dp"
+                    android:layout_marginTop="20dp"
+                    android:background="@drawable/gg_plugin_login_tip_shape"
+                    android:orientation="horizontal"
+                    android:padding="10dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="GG账号:"
+                        android:textColor="#333333"
+                        android:textSize="14sp" />
+
+                    <TextView
+                        android:id="@+id/longing_user"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="快速游戏"
+                        android:textColor="#999999"
+                        android:textSize="14sp" />
+                </LinearLayout>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="10dp"
+                    android:text="登录中..."
+                    android:textColor="#57d1b3"
+                    android:textSize="13sp" />
+
+                <TextView
+                    android:id="@+id/convert_user"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="right"
+                    android:layout_marginRight="12dp"
+                    android:layout_marginTop="13dp"
+                    android:drawableLeft="@drawable/gg_plugin_icon_convert_id"
+                    android:text="切换账号"
+                    android:textColor="#57d1b3"
+                    android:textSize="12sp" />
+
+            </LinearLayout>
+            <!--登陆中... end -->
+
+            <!--登陆失败 start -->
+            <LinearLayout
+                android:id="@+id/retry_login_container"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="16dp"
+                android:layout_marginRight="16dp"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/gg_plugin_edittext_back_ground_shape"
+                    android:orientation="horizontal"
+                    android:padding="10dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="GG账号:"
+                        android:textColor="@color/c_33"
+                        android:textSize="14sp" />
+
+                    <TextView
+                        android:id="@+id/user_id"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="5dp"
+                        android:textColor="#999999"
+                        android:textSize="14sp" />
+                </LinearLayout>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_horizontal"
+                    android:padding="11dp"
+                    android:text="登录失败"
+                    android:textColor="#57d1b3"
+                    android:textSize="13sp" />
+
+                <TextView
+                    android:id="@+id/retry_login"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/gg_plugin_enter_game_shape"
+                    android:gravity="center"
+                    android:padding="10dp"
+                    android:text="重新登陆"
+                    android:textColor="#ffffff"
+                    android:textSize="15sp" />
+            </LinearLayout>
+            <!--登陆失败 end -->
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="13dp" />
+        </LinearLayout>
+
+        <ImageView
+            android:id="@+id/plugin_logo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:src="@drawable/gg_plugin_icon_checked" />
+
+    </RelativeLayout>
+</ScrollView>

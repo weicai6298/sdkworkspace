@@ -102,12 +102,10 @@ public class MainActivity extends Activity {
 					//					new Thread(new Runnable() {
 					//						public void run() {
 					dialog = new ProgressDialog(MainActivity.this);
-					dialog.setCancelable(false);
+					dialog.setCancelable(true);
 					dialog.setMessage("正在下载，请稍后...");
 					dialog.show();
 					downFile(url);
-					//						}
-					//					}).start();
 				}
 				return super.shouldOverrideUrlLoading(view, url);
 			}
@@ -249,7 +247,6 @@ public class MainActivity extends Activity {
 	public boolean onKeyDown(int keyCode, KeyEvent event) {
 
 		if (keyCode == KeyEvent.KEYCODE_BACK) {
-			
 				//退出
 				exit();
 			

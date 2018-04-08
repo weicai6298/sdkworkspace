@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_marginLeft="30dp"
+    android:layout_marginRight="30dp"
+    android:background="#f2f2f2"
+    android:orientation="vertical" >
+
+                <RelativeLayout
+			        android:layout_width="match_parent"
+			        android:layout_height="50dp"
+			        android:orientation="horizontal" >
+			
+			        <TextView
+			            android:layout_width="wrap_content"
+			            android:layout_height="wrap_content"
+			            android:layout_centerVertical="true"
+			            android:layout_marginLeft="18dp"
+			            android:text="@string/snail_shareto"
+			            android:textColor="#434b5b"
+			            android:textSize="18sp" />
+			        
+			        <LinearLayout
+			            android:id="@+id/snail_share_close"
+			            android:layout_width="40dp"
+			            android:layout_height="40dp"
+			            android:focusable="true"
+			            android:focusableInTouchMode="false"
+			            android:background="@drawable/snail_back_layout_bg"
+			            android:layout_marginRight="18dp"
+			            android:layout_alignParentRight="true"
+			            android:gravity="center"
+			            android:layout_centerInParent="true">
+			            
+			            <ImageView 
+				            android:layout_width="wrap_content"
+				            android:layout_height="wrap_content"
+				            android:background="@drawable/snail_share_close"/>
+			        </LinearLayout>
+			
+			    </RelativeLayout>
+			
+			    <LinearLayout
+			        android:layout_width="match_parent"
+			        android:layout_height="1dp"
+			        android:layout_marginLeft="18dp"
+			        android:layout_marginRight="18dp"
+			        android:background="#dedede" >
+			    </LinearLayout>
+			
+			    <LinearLayout
+			        android:layout_width="match_parent"
+			        android:layout_height="match_parent"
+			        android:layout_marginLeft="18dp"
+			        android:layout_marginRight="18dp"
+			        android:layout_marginTop="8dp"
+			        android:orientation="vertical" >
+			
+			        <GridView 
+			            android:id="@+id/snail_share_gv"
+			            android:layout_width="match_parent"
+			            android:layout_height="wrap_content"
+			        	android:numColumns="auto_fit"    
+			        	android:columnWidth="80dp"
+			        	android:stretchMode="columnWidth">
+			            
+			        </GridView>
+			    </LinearLayout>
+    
+</LinearLayout>

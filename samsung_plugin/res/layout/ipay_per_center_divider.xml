@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <View
+         android:layout_width="match_parent"
+         android:layout_height="@dimen/ipay_height_15"
+         android:background="@color/ipay_color_value_2" />
+    <View
+         android:layout_width="match_parent"
+         android:layout_height="@dimen/ipay_divid_line_h"
+         android:background="@color/ipay_color_value_3_1" />
+</LinearLayout>

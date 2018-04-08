@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" 
+    android:background="@color/white">
+    
+	<RelativeLayout
+	    android:layout_width="match_parent"
+	    android:layout_height="40dip" 
+	    android:background="@drawable/x7sdk_gray_bg"
+	    android:paddingLeft="13dip"
+	    android:paddingRight="13dip"
+	    android:layout_marginBottom="20dip"
+	    >
+	    <TextView
+	        android:id="@+id/item_seletcLogin_smallhaoname_tv"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:text="小号"
+	        android:layout_centerVertical="true"
+	        android:gravity="center_vertical"
+	        android:textColor="@color/text_black6"
+	        android:textSize="14sp"
+	        android:ellipsize="end"
+	        android:maxEms="12"
+	        />
+	    <TextView
+	         android:id="@+id/item_seletcLogin_dealstate_tv"
+	         android:textSize="14sp"
+	         android:layout_width="wrap_content"
+	         android:layout_height="wrap_content"
+	         android:layout_alignParentRight="true"
+	         android:layout_centerVertical="true"
+	         android:text="进入游戏>>"
+	         android:textColor="@color/text_black6"
+	         android:gravity="center"
+	         android:visibility="visible"
+	        />
+	</RelativeLayout>
+</RelativeLayout>

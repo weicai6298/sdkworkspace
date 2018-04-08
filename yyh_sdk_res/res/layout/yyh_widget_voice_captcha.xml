@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/yyh_layout_voiceCaptcha_root"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content">
+
+    <TextView
+        android:id="@+id/yyh_text_voiceCaptcha_prefix"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:text="@string/yyh_text_voice_captcha_prefix"
+        android:textColor="@color/yyh_gray_dark"
+        android:textSize="12dp"
+        tools:ignore="HardcodedText,SpUsage" />
+
+    <TextView
+        android:id="@+id/yyh_text_voiceCaptcha"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:text="@string/yyh_button_voice_captcha"
+        android:textColor="#1588fe"
+        android:textSize="12dp"
+        tools:ignore="HardcodedText,SpUsage" />
+</LinearLayout>

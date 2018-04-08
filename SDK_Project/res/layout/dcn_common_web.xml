@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:fab="http://schemas.android.com/apk/res-auto"
+    android:fitsSystemWindows="true">
+
+    <!-- 标题栏 -->
+    <LinearLayout
+        android:id="@+id/dcn_actionbar"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dcn_title_height"
+        android:background="@drawable/dcn_web_title_bg"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:id="@+id/dcn_actionbar_close_iv"
+            android:layout_width="38dp"
+            android:layout_height="@dimen/dcn_title_height"
+            android:layout_gravity="center"
+            android:paddingLeft="11dp"
+            android:paddingRight="11dp"
+            android:paddingTop="15dp"
+            android:paddingBottom="15dp"
+            android:background="@drawable/dcn_selector_actionbar_btn"
+            android:src="@drawable/dcn_actionbar_back"
+            android:scaleType="fitCenter"/>
+
+        <View
+            android:layout_width="@dimen/dcn_divider_size"
+            android:layout_height="20dp"
+            android:background="#30ffffff"
+            android:layout_gravity="center_vertical"
+            />
+        <TextView
+            android:id="@+id/dcn_actionbar_tv_title"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="10dp"
+            android:layout_weight="1"
+            android:ellipsize="end"
+            android:singleLine="true"
+            android:text="@string/dcn_game_forum"
+            android:textColor="@android:color/white"
+            android:textSize="16sp" />
+
+        <LinearLayout
+            android:id="@+id/dcn_actionbar_menu_group"
+            android:layout_width="38dp"
+            android:layout_height="@dimen/dcn_title_height"
+            android:orientation="horizontal"
+            android:layout_gravity="center_vertical"
+            android:addStatesFromChildren="true"
+            android:background="@drawable/dcn_selector_actionbar_btn"
+            >
+            <View
+                android:layout_width="@dimen/dcn_divider_size"
+                android:layout_height="20dp"
+                android:background="#30ffffff"
+                android:layout_gravity="center_vertical"
+                />
+            <CheckBox
+                android:id="@+id/dcn_actionbar_cx_scale"
+                android:layout_width="16dp"
+                android:layout_height="16dp"
+                android:layout_gravity="center"
+                android:background="@drawable/dcn_webview_actionbar_scale"
+                android:button="@null"
+                android:checked="false"
+                android:contentDescription="@null"
+                android:layout_margin="10dp"
+                android:scaleType="fitCenter" />
+        </LinearLayout>
+
+        <View
+            android:layout_width="@dimen/dcn_divider_size"
+            android:layout_height="20dp"
+            android:background="#30ffffff"
+            android:layout_gravity="center_vertical"
+            />
+
+        <ImageView
+            android:id="@+id/dcn_actionbar_iv_setting"
+            android:layout_width="38dp"
+            android:layout_height="@dimen/dcn_title_height"
+            android:layout_gravity="center"
+            android:paddingLeft="11dp"
+            android:paddingRight="11dp"
+            android:paddingTop="15dp"
+            android:paddingBottom="15dp"
+            android:background="@drawable/dcn_selector_actionbar_btn"
+            android:src="@drawable/dcn_webview_title_setting_new"
+            android:contentDescription="@null"
+            android:scaleType="fitCenter" />
+    </LinearLayout>
+
+    <!-- 网页内容 -->
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/dcn_actionbar">
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/dcn_black" />
+
+        <WebView
+            android:id="@+id/dcn_common_wv_content"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/dcn_white"
+            android:overScrollMode="never"
+            android:visibility="visible" />
+    </FrameLayout>
+
+    <ProgressBar
+        android:id="@+id/dcn_popupwindow_up_progressbar"
+        style="@android:style/Widget.ProgressBar.Horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="3dp"
+        android:layout_below="@+id/dcn_actionbar"
+        android:progressDrawable="@drawable/dcn_progress" />
+
+    <com.downjoy.widget.fab.FloatingActionsMenu
+        android:id="@+id/dcn_fab_menu"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:paddingBottom="48dp"
+        android:paddingRight="8dp"
+        fab:fab_addButtonSize="mini"
+        fab:fab_labelStyle="@style/dcn_fab_label_style"
+        android:visibility="gone"
+        />
+</RelativeLayout>

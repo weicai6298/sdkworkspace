@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.mappn.gfansdkdemo"
+    android:versionCode="1"
+    android:versionName="1.0" >
+
+    <uses-sdk
+        android:minSdkVersion="8"
+        android:targetSdkVersion="19" />
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW" />
+    <uses-permission android:name="android.permission.GET_TASKS" />
+    
+
+    <application
+        android:name="com.yayawan.impl.YYApplication"
+        android:allowBackup="true"
+        android:theme="@android:style/Theme.NoTitleBar.Fullscreen" >
+        <activity
+            android:name="com.yayawan.sdktemplate.MainActivity"
+            android:configChanges="keyboardHidden|navigation|orientation|screenSize"
+            android:label="app_name" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+      
+        
+      <!-- 手游互联配置 -->
+     	 <meta-data
+            android:name="app_id"
+            android:value="kk2139315178" />
+        <meta-data
+            android:name="isLandscape"
+            android:value="true" />
+        
+          <!-- GfanSDK 开始 -->
+          <!-- 登录 -->
+        <activity
+            android:name="com.mappn.sdk.uc.LoginActivity"
+            android:screenOrientation="behind"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+        <!-- 启动页 -->
+        <activity
+            android:name="com.mappn.sdk.init.SplashActivity"
+            android:screenOrientation="behind"
+            android:theme="@android:style/Theme.NoTitleBar.Fullscreen" />
+        <!-- 邀请码页面 -->
+        <activity
+            android:name="com.mappn.sdk.init.InviteActivity"
+            android:screenOrientation="behind"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+        <!-- 找回密码 -->
+        <activity
+            android:name="com.mappn.sdk.uc.PsdRetrievalActivity"
+            android:screenOrientation="behind"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+        <!-- 充值支付页面 -->
+        <activity
+            android:name="com.mappn.sdk.gfanpay.ChargeActivity"
+            android:launchMode="singleTop"
+            android:screenOrientation="behind"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+        <!-- 消费页面 -->
+        <activity
+            android:name="com.mappn.sdk.gfanpay.ConsumeActivity"
+            android:screenOrientation="behind"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+        <!-- 注册 -->
+        <activity
+            android:name="com.mappn.sdk.uc.RegisterActivity"
+            android:screenOrientation="behind"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+
+        <!-- 微信支付 现在支付 -->
+        <activity
+            android:name="com.ipaynow.wechatpay.plugin.inner_plugin.wechat_plugin.activity.WeChatNotifyActivity"
+            android:configChanges="orientation|keyboardHidden|keyboard|smallestScreenSize|locale|screenLayout"
+            android:screenOrientation="behind"
+            android:theme="@android:style/Theme.Translucent" />
+      
+
+        <!-- alipay sdk begin -->
+
+        <activity
+            android:name="com.alipay.sdk.app.H5PayActivity"
+            android:configChanges="orientation|keyboardHidden|navigation|screenSize"
+            android:exported="false"
+            android:screenOrientation="behind"
+            android:windowSoftInputMode="adjustResize|stateHidden" >
+        </activity>
+        <activity
+            android:name="com.alipay.sdk.app.H5AuthActivity"
+            android:configChanges="orientation|keyboardHidden|navigation"
+            android:exported="false"
+            android:screenOrientation="behind"
+            android:windowSoftInputMode="adjustResize|stateHidden" >
+        </activity>
+
+        <!-- alipay sdk end -->
+        <!-- 充值卡支付 -->
+        <!-- 充值界面 -->
+        <activity
+            android:name="com.mappn.sdk.gfanpay.ChargeH5Activity"
+            android:launchMode="singleTop"
+            android:screenOrientation="behind"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+        <!-- 公告 -->
+        <activity
+            android:name="com.mappn.sdk.init.affiche.AfficheActivity"
+            android:screenOrientation="behind"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+        <!-- 实名认证 -->
+        <activity
+            android:name="com.mappn.sdk.uc.AutonymActivity"
+            android:screenOrientation="behind"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+          <meta-data
+            android:name="gfan_cpid"
+            android:value="32232634" />
+        <meta-data
+            android:name="gfan_pay_appkey"
+            android:value="2003767538" />
+         <!-- GfanSDK 结束 -->
+    
+    </application>
+
+</manifest>
+

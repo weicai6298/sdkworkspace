@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:paddingLeft="26dp"
+    android:paddingRight="26dp"
+    android:paddingTop="16dp"
+    tools:background="#33ff0000">
+
+    <TextView
+        android:id="@+id/text_perfectGsouAccount_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:drawableLeft="@drawable/yyh_back"
+        android:drawablePadding="10dp"
+        android:text="找回密码"
+        android:textColor="@color/yyh_gray_dark"
+        android:textSize="17dp"
+        tools:ignore="HardcodedText,RtlHardcoded,SpUsage" />
+
+    <RadioGroup
+        android:id="@+id/radioGroup_perfectGsouAccount_way"
+        android:layout_width="match_parent"
+        android:layout_height="32dp"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/yyh_blue_frame_bg"
+        android:orientation="horizontal"
+        android:padding="0.75dp">
+
+        <RadioButton
+            android:id="@+id/radio_perfectGsouAccount_phone"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@drawable/yyh_redio_btn_blue_left"
+            android:button="@null"
+            android:checked="true"
+            android:gravity="center"
+            android:text="手机号"
+            android:textColor="@color/yyh_text_selector_blue_white"
+            tools:ignore="HardcodedText" />
+
+        <RadioButton
+            android:id="@+id/radio_perfectGsouAccount_mail"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@drawable/yyh_redio_btn_blue_right"
+            android:button="@null"
+            android:checked="false"
+            android:gravity="center"
+            android:text="邮箱"
+            android:textColor="@color/yyh_text_selector_blue_white"
+            tools:ignore="HardcodedText" />
+    </RadioGroup>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="5dp"
+                android:layout_marginTop="5dp"
+                android:text="@string/yyh_text_gsou_tips"
+                android:textColor="@color/yyh_black"
+                android:textSize="12dp"
+                tools:ignore="SpUsage" />
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <EditText
+                    android:id="@+id/edit_perfectGsouAccount_phone"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:background="@drawable/yyh_edittext_bg"
+                    android:hint="请输入手机号"
+                    android:inputType="phone"
+                    android:maxLength="11"
+                    android:textSize="14dp"
+                    tools:ignore="HardcodedText,SpUsage" />
+
+                <EditText
+                    android:id="@+id/edit_perfectGsouAccount_email"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:background="@drawable/yyh_edittext_bg"
+                    android:hint="请输入邮箱"
+                    android:inputType="textEmailAddress"
+                    android:textSize="14dp"
+                    tools:alpha="0.6"
+                    tools:ignore="HardcodedText,SpUsage,TextFields" />
+            </FrameLayout>
+
+            <com.appchina.usersdk.CaptchaEditText
+                android:id="@+id/edit_perfectGsouAccount_captcha"
+                android:layout_width="match_parent"
+                android:layout_height="40dp" />
+
+            <com.appchina.usersdk.YYHVoiceCaptchaView
+                android:id="@+id/yyh_edit_perfectGsouAccount_voiceCaptcha"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"/>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp">
+
+                <Button
+                    android:id="@+id/button_perfectGsouAccount_confirm"
+                    android:layout_width="180dp"
+                    android:layout_height="44dp"
+                    android:layout_centerInParent="true"
+                    android:background="@drawable/yyh_btn_blue_bg"
+                    android:text="确认"
+                    android:textColor="@color/yyh_white"
+                    android:textSize="14dp"
+                    tools:ignore="HardcodedText,SpUsage" />
+
+                <TextView
+                    android:id="@+id/text_perfectGsouAccount_skip"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="16dp"
+                    android:layout_toRightOf="@id/button_perfectGsouAccount_confirm"
+                    android:gravity="center_vertical"
+                    android:text="跳过，先不绑定"
+                    android:textColor="@color/yyh_gray_dark"
+                    android:textSize="10dp"
+                    tools:ignore="HardcodedText,RtlHardcoded,SpUsage" />
+            </RelativeLayout>
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

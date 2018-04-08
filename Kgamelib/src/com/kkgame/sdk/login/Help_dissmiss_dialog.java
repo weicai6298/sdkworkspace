@@ -137,51 +137,49 @@ public class Help_dissmiss_dialog extends Basedialogview {
 				.get9DrawableFromAssetsFile("yaya_loginbut.9.png", mActivity));
 		ll_content.setGravity(Gravity.CENTER_VERTICAL);
 
-		LinearLayout ll_textline = new LinearLayout(mActivity);
-		machineFactory.MachineView(ll_textline, 0, MATCH_PARENT, 1,
-				mLinearLayout);
-		ll_textline.setGravity(Gravity.CENTER_VERTICAL);
+//		LinearLayout ll_textline = new LinearLayout(mActivity);
+//		machineFactory.MachineView(ll_textline, 0, MATCH_PARENT, 1,
+//				mLinearLayout);
+//		ll_textline.setGravity(Gravity.CENTER_VERTICAL);
 
-		tv_message1 = new TextView(mActivity);
-		machineFactory.MachineTextView(tv_message1, WRAP_CONTENT, WRAP_CONTENT,
-				0, "长按3秒小助手隐藏,摇一摇会重新出现哦.", tv_textsize, mLinearLayout, 10, 0, 0,
-				0);
-		tv_message1.setTextColor(Color.parseColor("#ec7600"));
+//		tv_message1 = new TextView(mActivity);
+//		machineFactory.MachineTextView(tv_message1, WRAP_CONTENT, WRAP_CONTENT,
+//				0, "长按3秒小助手隐藏,摇一摇会重新出现哦.", tv_textsize, mLinearLayout, 10, 0, 0,
+//				0);
+//		tv_message1.setTextColor(Color.parseColor("#ec7600"));
 
-		tv_userid = new TextView(mActivity);
-		machineFactory.MachineTextView(tv_userid, WRAP_CONTENT, WRAP_CONTENT,
-				0, "", tv_textsize, mLinearLayout, 0, 0, 0, 0);
-		tv_userid.setTextColor(Color.parseColor("#ec7600"));
+//		tv_userid = new TextView(mActivity);
+//		machineFactory.MachineTextView(tv_userid, WRAP_CONTENT, WRAP_CONTENT,
+//				0, "", tv_textsize, mLinearLayout, 0, 0, 0, 0);
+//		tv_userid.setTextColor(Color.parseColor("#ec7600"));
 
+//		ll_textline.addView(tv_message1);
+//		ll_textline.addView(tv_userid);
+
+//		bt_change = new Button(mActivity);
+//		machineFactory.MachineButton(bt_change, bt_with, 80, 0, "不再提示",
+//				bt_textsize, mLinearLayout, 0, 0, 10, 0);
+//		bt_change.setBackgroundDrawable(GetAssetsutils
+//				.get9DrawableFromAssetsFile("yaya_greenbut.9.png", mContext));
+//		bt_change.setTextColor(Color.WHITE);
 		
-		ll_textline.addView(tv_message1);
-		ll_textline.addView(tv_userid);
 
-		bt_change = new Button(mActivity);
-		machineFactory.MachineButton(bt_change, bt_with, 80, 0, "不再提示",
-				bt_textsize, mLinearLayout, 0, 0, 10, 0);
-		bt_change.setBackgroundDrawable(GetAssetsutils
-				.get9DrawableFromAssetsFile("yaya_greenbut.9.png", mContext));
-		bt_change.setTextColor(Color.WHITE);
-		
+//		ll_content.addView(ll_textline);
+//		ll_content.addView(bt_change);
 
-		// TODO
-		ll_content.addView(ll_textline);
-		ll_content.addView(bt_change);
+//		baselin.addView(ll_content);
+//		dialog.setContentView(baselin);
+//		Window dialogWindow = dialog.getWindow();
+//		WindowManager.LayoutParams lp = dialogWindow.getAttributes();
+//		dialogWindow.setGravity(Gravity.CENTER);
 
-		baselin.addView(ll_content);
-		dialog.setContentView(baselin);
-		Window dialogWindow = dialog.getWindow();
-		WindowManager.LayoutParams lp = dialogWindow.getAttributes();
-		dialogWindow.setGravity(Gravity.CENTER);
+//		lp.alpha = 0.9f; // 透明度
 
-		lp.alpha = 0.9f; // 透明度
-
-		lp.dimAmount = 0f; // 设置背景色对比度
+//		lp.dimAmount = 0f; // 设置背景色对比度
 
 		// lp.y = 60;
 
-		dialogWindow.setAttributes(lp);
+//		dialogWindow.setAttributes(lp);
 
 		dialog.setCanceledOnTouchOutside(true);
 
@@ -192,7 +190,7 @@ public class Help_dissmiss_dialog extends Basedialogview {
 		dialog.getWindow().setBackgroundDrawable(new BitmapDrawable());
 		// dialog.setCanceledOnTouchOutside(true);
 
-		initlog();
+//		initlog();
 
 	}
 

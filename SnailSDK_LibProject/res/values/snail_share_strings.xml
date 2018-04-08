@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="snail_shareto">分享到</string>
+    <string name="snail_share_weixin">微信</string>
+    <string name="snail_share_weixinfriends">朋友圈</string>
+    <string name="snail_share_qq">QQ</string>
+    <string name="snail_share_more">更多</string>
+
+</resources>

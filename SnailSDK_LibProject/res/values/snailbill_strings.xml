@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="snailbill_launch_button1">快速进入</string>
+    <string name="snailbill_launch_button2">登录</string>
+    <string name="snailbill_launch_button3">注册</string>
+    <!--  -->
+    <string name="snailbill_login_title">登录</string>
+    <string name="snailbill_login_input_account">请输入蜗牛通行证</string>
+    <string name="snailbill_login_input_pwd">请输入密码</string>
+    <string name="snailbill_login_forget">忘记密码？</string>
+    <string name="snailbill_login_button">登录</string>
+    <!--  -->
+    <string name="snailbill_register_title">快速注册</string>
+    <string name="snailbill_register_input_account">创建账号</string>
+    <string name="snailbill_register_input_pwd1">设置密码</string>
+    <string name="snailbill_register_input_pwd2">确认密码</string>
+    <string name="snailbill_register_button">提交</string>
+    <!--  -->
+    <string name="snailbill_forget_title">密码找回</string>
+    <string name="snailbill_forget_input_account">蜗牛通行证</string>
+    <string name="snailbill_forget_button1">账号验证</string>
+    <string name="snailbill_forget_button2">获取验证码</string>
+    <string name="snailbill_forget_input_captcha">请输入验证码</string>
+    <string name="snailbill_forget_button3">确认找回</string>
+    <!--  -->
+    <string name="snailbill_bind_title">绑定手机号码</string>
+    <string name="snailbill_bind_input_mobile">请输入手机号码</string>
+    <string name="snailbill_bind_button1">获取验证码</string>
+    <string name="snailbill_bind_input_captcha">请输入验证码</string>
+    <string name="snailbill_bind_button2">确认绑定</string>
+    <!--  -->
+    <string name="snailbill_password_title">修改密码</string>
+    <string name="snailbill_password_input_account">蜗牛通行证</string>
+    <string name="snailbill_password_input_old_pwd">输入旧密码</string>
+    <string name="snailbill_password_input_pwd1">请输入新密码</string>
+    <string name="snailbill_password_input_pwd2">请确认新密码</string>
+    <string name="snailbill_password_button">提交</string>
+    <!--  -->
+    <string name="snailbill_user_center_title">用户中心</string>
+    <string name="snailbill_user_center_text1">绑定手机</string>
+    <string name="snailbill_user_center_text2">修改密码</string>
+    <string name="snailbill_user_center_text3">切换用户</string>
+    <string name="snailbill_user_center_text4">联系客服</string>
+    <!--  -->
+    <string name="snailbill_phone_title">用户中心</string>
+
+</resources>

@@ -26,8 +26,10 @@ import android.webkit.WebViewClient;
 import android.widget.FrameLayout;
 import android.widget.ProgressBar;
 import android.widget.RelativeLayout;
+import android.widget.Toast;
 
-import com.nzhy.cqll.jinli.R;
+import com.example.h5demo.ScreenListener.ScreenStateListener;
+import com.nzhy.cqll.R;
 import com.yayawan.callback.YYWAnimCallBack;
 import com.yayawan.callback.YYWExitCallback;
 import com.yayawan.main.Kgame;
@@ -46,8 +48,8 @@ public class BrowserTempActivity extends Activity {
 	// "http://jump.h5.jiulingwan.com:81/webserver/07073/android/index.html";
 	// http://h5cqllyx.jiulingwan.com/webserver/07073/android/index.html
 	
-	private static final String mHomeUrl = "http://h5cqllyx.jiulingwan.com/webserver/07073/android/index.html"; //测试
-//	private static final String mHomeUrl = "http://h5cqllyx.jiulingwan.com/webserver/07073/androidNew/index.html"; //带logo
+//	private static final String mHomeUrl = "http://h5cqllyx.jiulingwan.com/webserver/07073/android/index.html"; //测试
+	private static final String mHomeUrl = "http://h5cqllyx.jiulingwan.com/webserver/07073/androidNew/index.html"; //带logo
 	private static final String TAG = "SdkDemo";
 	private static final int MAX_LENGTH = 14;
 	private boolean mNeedTestPage = false;
@@ -58,6 +60,7 @@ public class BrowserTempActivity extends Activity {
 
 	private URL mIntentUrl;
 	private Timer mTimer;
+	private static  Activity mActivity;
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -78,6 +81,7 @@ public class BrowserTempActivity extends Activity {
 		 */
 		requestWindowFeature(Window.FEATURE_NO_TITLE);
 		setContentView(R.layout.activity_x5view);
+		mActivity = this;
 
 		Kgame.getInstance().anim(this, new YYWAnimCallBack() {
 
@@ -103,11 +107,11 @@ public class BrowserTempActivity extends Activity {
 		rl_webview = (RelativeLayout) findViewById(R.id.rl_webview);
 
 		rl_webview.setVisibility(View.GONE);
-
+		ScreenListener();
 	}
 
-	RelativeLayout rl_webview;
-	private WebView mWebView;
+	static RelativeLayout rl_webview;
+	private static WebView mWebView;
 
 	private void init() {
 		Log.i("tag","登陆1");
@@ -262,6 +266,7 @@ public class BrowserTempActivity extends Activity {
 			mWebView.destroy();
 		super.onDestroy();
 		Kgame.getInstance().onDestroy(this);
+		ScreenListener.unregisterListener();
 	}
 
 	@Override
@@ -297,5 +302,33 @@ public class BrowserTempActivity extends Activity {
 	public static final int MSG_INIT_UI = 1;
 	private final int mUrlStartNum = 0;
 	private int mCurrentUrl = mUrlStartNum;
+	
+	private static void ScreenListener(){
+		ScreenListener screenlistener = new ScreenListener(mActivity);
+		screenlistener.begin(new ScreenStateListener() {
+
+            @Override
+            public void onUserPresent() {// 解锁
+                Log.e("onUserPresent", "onUserPresent");
+//                Toast.makeText(mActivity, "解锁了" , Toast.LENGTH_SHORT ).show();
+                mWebView.onResume();
+//                mWebView.resumeTimers();
+            }
+
+            @Override
+            public void onScreenOn() {// 开屏
+                Log.e("onScreenOn", "onScreenOn");
+//                Toast.makeText(mActivity, "屏幕打开了" , Toast.LENGTH_SHORT ).show();
+            }
+
+            @Override
+            public void onScreenOff() {// 锁屏
+                Log.e("onScreenOff", "onScreenOff");
+//                Toast.makeText(mActivity, "屏幕关闭了" , Toast.LENGTH_SHORT ).show();
+                mWebView.onPause();
+//                mWebView.pauseTimers();
+            }
+        });
+	}
 
 }

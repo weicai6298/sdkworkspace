@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/dcn_shape_bg_float_hint_popwindow">
+
+    <ListView
+        android:id="@+id/dcn_float_hint_list"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:cacheColorHint="@android:color/transparent"
+        android:scrollbars="none"
+        android:divider="#66999999"
+        android:dividerHeight="@dimen/dcn_divider_size"></ListView>
+</FrameLayout>

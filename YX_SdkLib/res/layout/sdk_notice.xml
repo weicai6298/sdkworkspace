@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:id="@+id/rl_login"
+        android:layout_width="fill_parent"
+        android:layout_height="280dip"
+        android:layout_centerInParent="true"
+        android:layout_marginLeft="10dip"
+        android:layout_marginRight="10dip"
+        android:background="@drawable/sdk_edit_two_bg" >
+
+
+        <TextView
+            android:id="@+id/tv_notic_title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:gravity="center"
+            android:text="公告栏"
+            android:textColor="@color/bg_yellow"
+            android:textSize="18dp" />
+
+        <TextView
+            android:id="@+id/tv_line"
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:layout_below="@+id/tv_notic_title"
+            android:layout_marginTop="10dp"
+            android:background="@color/gray5" />
+
+        <ScrollView
+            android:id="@+id/sv_notice_content"
+            android:layout_width="match_parent"
+            android:layout_height="140dp"
+            android:layout_below="@+id/tv_line"
+            android:scrollbars="@null"
+            android:layout_marginTop="10dp" >
+
+            <TextView
+                android:id="@+id/tv_notice_content"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="5dp"
+                android:text="大空间是否看见的哈是否来就好了按时交电费了健康的哈桑发链接哈市了看见对方回答上课了交话费的空间是否打算看见回复大师傅健康是刘德华付款了较好的萨拉快放寒假的拉升房间号打发第三方发反反复复反复反复反复反复反复反复反复反复反复反复反复反复反复反复反复反复反复反复反复反复反复反复反复aaaaaaaaaaasaaaaaaaaaaaa" />
+        </ScrollView>
+
+        <Button
+            android:id="@+id/btn_goin"
+            android:layout_width="85dp"
+            android:layout_height="30dp"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="10dp"
+            android:background="@drawable/sdk_login_in"
+            android:text="确定"
+            android:textColor="@android:color/white" />
+
+        <TextView
+            android:id="@+id/tv_line1"
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="50dp"
+            android:background="@color/gray5" />
+    </RelativeLayout>
+
+</RelativeLayout>

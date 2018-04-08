@@ -234,7 +234,7 @@ public class KgameSdk {
 	public static void update(Activity activity,
 			KgameSdkUpdateCallback updateCallback) {
 		mUpdateCallback = updateCallback;
-		// UpdateUtil.isUpdate(activity);
+//		 UpdateUtil.isUpdate(activity);
 
 	}
 

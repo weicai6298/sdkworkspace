@@ -2,6 +2,7 @@ package com.yayawan.impl;
 
 import android.app.Activity;
 import android.content.Intent;
+import android.util.Log;
 
 import com.kkgame.utils.Handle;
 import com.yayawan.proxy.YYWActivityStub;
@@ -10,13 +11,11 @@ public class ActivityStubImpl implements YYWActivityStub {
 
 	@Override
 	public void applicationInit(Activity paramActivity) {
-		// TODO Auto-generated method stub
 
 	}
 
 	@Override
 	public void onCreate(Activity paramActivity) {
-		// TODO Auto-generated method stub
 
 		Handle.active_handler(paramActivity);
 		YaYawanconstants.inintsdk(paramActivity);
@@ -26,7 +25,6 @@ public class ActivityStubImpl implements YYWActivityStub {
 
 	@Override
 	public void onStop(Activity paramActivity) {
-		// TODO Auto-generated method stub
 		YaYawanconstants.onStop(paramActivity);
 	}
 
@@ -37,13 +35,11 @@ public class ActivityStubImpl implements YYWActivityStub {
 
 	@Override
 	public void onPause(Activity paramActivity) {
-		// TODO Auto-generated method stub
 		YaYawanconstants.onPause(paramActivity);
 	}
 
 	@Override
 	public void onRestart(Activity paramActivity) {
-		// TODO Auto-generated method stub
 		YaYawanconstants.onRestart(paramActivity);
 	}
 
@@ -54,32 +50,27 @@ public class ActivityStubImpl implements YYWActivityStub {
 
 	@Override
 	public void applicationDestroy(Activity paramActivity) {
-		// TODO Auto-generated method stub
 
 	}
 
 	@Override
 	public void onActivityResult(Activity paramActivity, int paramInt1,
 			int paramInt2, Intent paramIntent) {
-		// TODO Auto-generated method stub
 		YaYawanconstants.onActivityResult(paramActivity);
 	}
 
 	@Override
 	public void onNewIntent(Intent paramIntent) {
-		// TODO Auto-generated method stub
 		YaYawanconstants.onNewIntent(paramIntent);
 	}
 
 	@Override
 	public void initSdk(Activity arg0) {
-		// TODO Auto-generated method stub
 		
 	}
 
 	@Override
 	public void onStart(Activity mActivity) {
-		// TODO Auto-generated method stub
 		YaYawanconstants.onStart(mActivity);
 	}
 

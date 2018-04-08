@@ -21,7 +21,6 @@ import com.mumayi.paymentmain.business.ITradeCallback;
 import com.mumayi.paymentmain.ui.PaymentCenterInstance;
 import com.mumayi.paymentmain.ui.PaymentUsercenterContro;
 import com.mumayi.paymentmain.ui.pay.MMYInstance;
-import com.mumayi.paymentmain.ui.usercenter.PaymentFloatInteface;
 import com.mumayi.paymentmain.util.PaymentConstants;
 import com.yayawan.callback.YYWExitCallback;
 import com.yayawan.domain.YYWUser;
@@ -33,18 +32,6 @@ public abstract class YaYawanconstants{
 	private static Activity mActivity;
 
 	private static boolean isinit=false;
-
-	private static String gamename;
-
-	private static String appkey;
-	
-	private static String mzoneId; //区服id
-	
-	private static String mroleName; //人物名称
-	
-	private static int mroleLevel; //人物等级
-
-	private static  PaymentFloatInteface floatInteface;
 
 	private static PaymentCenterInstance instance = null;
 
@@ -59,8 +46,8 @@ public abstract class YaYawanconstants{
 		// 获取用户中心的实例
 		mUserCenter = instance.getUsercenterApi(mactivity);
 		Yayalog.loger("YaYawanconstants初始化sdk");
-		gamename = ""+DeviceUtil.getGameInfo(mActivity, "gamename");
-		appkey = ""+DeviceUtil.getGameInfo(mActivity, "appkey");
+		String gamename = ""+DeviceUtil.getGameInfo(mActivity, "gamename");
+		String appkey = ""+DeviceUtil.getGameInfo(mActivity, "appkey");
 		Log.i("tag","gamename="+gamename);
 		Log.i("tag","appkey="+appkey);
 		instance = PaymentCenterInstance.getInstance(mActivity);
@@ -212,7 +199,6 @@ public abstract class YaYawanconstants{
 			Log.d("Welcome", "这是登陆失败的回调数据  status ----->" + status);
 			Log.d("Welcome", "这是登陆失败的回调数据  logiFail ----->" + logiFail);
 			JSONObject statusobject = null;
-			JSONObject logiFailobject = null;
 			try {
 				statusobject = new JSONObject(status);
 				// 登录失败
@@ -505,11 +491,17 @@ public abstract class YaYawanconstants{
 	 * 支付成功
 	 */
 	public static void paySuce() {
-		// 支付成功
-		if (YYWMain.mPayCallBack != null) {
-			YYWMain.mPayCallBack.onPaySuccess(YYWMain.mUser, YYWMain.mOrder,
-					"success");
-		}
+		mActivity.runOnUiThread(new Runnable() {
+			
+			@Override
+			public void run() {
+				// 支付成功
+				if (YYWMain.mPayCallBack != null) {
+					YYWMain.mPayCallBack.onPaySuccess(YYWMain.mUser, YYWMain.mOrder,
+							"success");
+				}
+			}
+		});
 	}
 
 	public static void payFail() {

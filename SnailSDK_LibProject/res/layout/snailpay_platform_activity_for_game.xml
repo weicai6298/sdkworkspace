@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/snailpay_mode_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <include
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        layout="@layout/snailpay_title_layout" />
+
+      <LinearLayout  
+         android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="10dp">
+        <GridView
+            android:id="@+id/snailpay_grid_view"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:numColumns="2"
+            android:stretchMode="columnWidth"
+            android:layout_gravity="center_horizontal"
+            android:gravity="center"          
+            android:listSelector="@android:color/transparent">
+        </GridView>
+      </LinearLayout>
+  
+
+</LinearLayout>

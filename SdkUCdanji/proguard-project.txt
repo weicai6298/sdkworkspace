@@ -18,3 +18,52 @@
 #-keepclassmembers class fqcn.of.javascript.interface.for.webview {
 #   public *;
 #}
+
+
+
+-dontshrink
+-dontoptimize
+
+-keep public class * extends android.app.Activity
+-keep public class * extends android.app.Service
+
+-keepclassmembers enum * {
+    public static **[] values();
+    public static ** valueOf(java.lang.String);
+}
+
+-keep class android.**{
+<methods>;
+<fields>;
+}
+
+-keep class cn.uc.**{
+<methods>;
+<fields>;
+}
+
+#################### alipay ####################
+-keep class com.alipay.**{*;} 
+-keep class com.ta.utdid2.**{*;}
+-keep class com.ut.** {*;}
+#################### alipay ####################
+ 
+#now微信支付2.x混淆添加开始
+-keep public class com.ipaynow.wechatpay.plugin.utils.MerchantTools{
+<fields>;
+<methods>;
+}
+-keep public class com.ipaynow.wechatpay.plugin.utils.PreSignMessageUtil{
+<fields>;
+<methods>;
+}
+-keep public class com.ipaynow.wechatpay.plugin.api.WechatPayPlugin{
+<fields>;
+<methods>;
+}
+-keep public class
+com.ipaynow.wechatpay.plugin.manager.route.dto.RequestParams{
+<fields>;
+<methods>;
+}
+#now微信支付2.x混淆添加结束 

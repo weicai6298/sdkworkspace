@@ -2,9 +2,6 @@ package com.yayawan.impl;
 
 import android.app.Activity;
 import android.widget.Toast;
-
-import com.huawei.android.hms.agent.HMSAgent;
-import com.huawei.android.hms.agent.hwid.handler.SignOutHandler;
 import com.huawei.hms.support.api.hwid.SignOutResult;
 import com.yayawan.callback.YYWExitCallback;
 import com.yayawan.callback.YYWUserManagerCallBack;

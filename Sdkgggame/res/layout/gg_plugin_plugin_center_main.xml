@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content">
+<!--小把手 控制中心-->
+   <FrameLayout
+       android:id="@+id/plugin_control_center"
+       android:layout_width="wrap_content"
+       android:layout_height="wrap_content"
+       >
+       <RelativeLayout
+           android:id="@+id/sidebar"
+           android:layout_width="wrap_content"
+           android:layout_height="wrap_content"
+           android:layout_marginLeft="1dp"
+           android:layout_marginTop="60dp"
+           android:background="#66000000"
+           >
+       </RelativeLayout>
+
+
+       <ImageView
+           android:id="@+id/dragbar"
+           android:layout_width="wrap_content"
+           android:layout_height="60dp"
+           android:layout_marginLeft="1dp"
+           android:paddingBottom="8dp"
+           android:paddingTop="20dp"
+           android:scaleType="fitCenter"
+           android:src="@drawable/gg_plugin_icon" />
+
+
+       <FrameLayout
+           android:id="@+id/purchase_dialog"
+           android:layout_width="match_parent"
+           android:layout_height="match_parent"
+           android:visibility="gone" />
+
+
+       <FrameLayout
+           android:id="@+id/gg_dialog"
+           android:layout_width="wrap_content"
+           android:layout_height="wrap_content"
+           android:layout_marginLeft="1dp"
+           android:layout_marginTop="60dp"
+           android:visibility="gone" />
+   </FrameLayout>
+    <RelativeLayout
+        android:id="@+id/plugin_container"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+    </RelativeLayout>
+
+</FrameLayout>

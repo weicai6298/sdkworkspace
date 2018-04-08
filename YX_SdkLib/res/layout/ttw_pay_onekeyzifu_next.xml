@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+    <include
+        android:id="@+id/icl_top"
+        layout="@layout/ttw_cz_navigation" /><!-- @layout/ttw_cz_navigation在布局里头隐藏了布局，到时候该的时候注意一下 -->
+    <WebView 
+        android:id="@+id/wv_content"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_below="@id/icl_top"
+        />
+</RelativeLayout>

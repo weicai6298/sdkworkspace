@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/rank_bg_color"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@color/title_background" >
+
+        <LinearLayout
+            android:id="@+id/back_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="50dp"
+            android:background="@drawable/snail_back_layout_bg"
+            android:focusable="true"
+            android:focusableInTouchMode="false"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:paddingRight="13dp" >
+
+            <View
+				android:id="@+id/back_btn_image"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:background="@drawable/snail_back_bg" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/snail_user_realname"
+                android:textColor="@color/white"
+                android:textSize="20sp" />
+        </LinearLayout>
+
+		<LinearLayout
+			android:id="@+id/back_btn_noback"
+			android:layout_width="wrap_content"
+			android:layout_height="50dp"
+			android:background="@drawable/snail_back_layout_bg"
+			android:focusable="true"
+			android:focusableInTouchMode="false"
+			android:gravity="center_vertical"
+			android:orientation="horizontal"
+			android:paddingRight="13dp" >
+
+			<TextView
+				android:layout_marginLeft="20dp"
+				android:layout_marginRight="20dp"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:text="@string/snail_user_realname"
+				android:textColor="@color/white"
+				android:textSize="20sp" />
+		</LinearLayout>
+    </RelativeLayout>
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" >
+		<ScrollView
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content">
+        <LinearLayout
+            android:id="@+id/certification_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="18dp"
+            android:layout_marginRight="18dp"
+            android:orientation="vertical"
+            android:visibility="gone" >
+			<TextView
+				android:layout_width="match_parent"
+				android:layout_height="wrap_content"
+				android:id="@+id/snail_notice_certification_label"
+				android:layout_marginTop="10dp"
+				android:text="@string/snail_notice_certification_label"
+				android:textSize="12sp"
+				android:textColor="#ff9600"/>
+        	<EditText
+	            android:id="@+id/snail_certification_input_realname"
+	            style="@style/snail_style_textview_round_top_h"
+	            android:layout_marginTop="10dp"
+				android:singleLine="true"
+	            android:hint="@string/snail_common_hint_realname"/>
+        	<View 
+			    android:layout_width="match_parent"
+			    android:layout_height="1px"
+			    android:background="@color/cut_off_rule"/>
+        	<EditText
+	            android:id="@+id/snail_certification_input_identity"
+	           	style="@style/snail_style_textview_rectangle_h"
+	            android:hint="@string/snail_common_hint_identity"
+				android:digits="0123456789xyzXYZ"/>
+			<View
+				android:layout_width="match_parent"
+				android:layout_height="1px"
+				android:background="@color/cut_off_rule"/>
+			<EditText
+				android:id="@+id/snail_certification_phoneno"
+				style="@style/snail_style_textview_round_bottom_h"
+				android:ems="10"
+				android:hint="@string/snail_common_hint_mobile"/>
+        	<TextView
+        	    android:id="@+id/txt_fail_tip"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:gravity="center"
+                android:textColor="@color/red"
+                android:text="@string/snail_notice_certification_fail"
+                android:visibility="gone"/>
+        	<Button
+                android:id="@+id/snail_certification_auth"
+                style="@style/snail_style_button_green_h"
+                android:layout_marginTop="10dp"
+				android:layout_marginBottom="10dp"
+                android:layout_gravity="bottom"
+                android:text="@string/snail_notice_certification_submit"/>
+        </LinearLayout>
+		</ScrollView>
+        <LinearLayout
+            android:id="@+id/certification_ok_layout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:orientation="vertical"
+            android:visibility="gone" >
+        	<ImageView
+			    android:layout_width="wrap_content"
+			    android:layout_height="wrap_content"
+			    android:layout_gravity="center"
+			    android:src="@drawable/snail_sorry_icon" />
+	        <TextView
+	            android:id="@+id/txt_empty"
+	            android:layout_width="wrap_content"
+	            android:layout_height="wrap_content"
+	            android:paddingLeft="30dp"
+	            android:paddingRight="30dp"
+	            android:gravity="center"
+	            android:text="@string/snail_notice_certification_qa"
+	            android:textColor="@color/black"
+	            android:textSize="18sp" />
+        </LinearLayout>
+		<ProgressBar
+			android:id="@+id/progressbar"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:layout_gravity="center"
+			android:visibility="visible"/>
+    </FrameLayout>
+</LinearLayout>

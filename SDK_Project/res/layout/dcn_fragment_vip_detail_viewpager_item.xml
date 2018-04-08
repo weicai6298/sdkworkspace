@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:paddingLeft="20dp"
+    android:paddingRight="20dp">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="50dp"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <com.downjoy.widget.vollyextend.CircleRoundImageView
+                android:id="@+id/dcn_item_niv1"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_gravity="center_horizontal"
+                android:src="@drawable/dcn_image_default_1"></com.downjoy.widget.vollyextend.CircleRoundImageView>
+
+            <TextView
+                android:id="@+id/dcn_privilege_name1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:lines="1"
+                android:paddingBottom="4dp"
+                android:paddingTop="4dp"
+                android:textColor="#333333"
+                android:textSize="8dp" />
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="50dp"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:orientation="vertical">
+
+            <com.downjoy.widget.vollyextend.CircleRoundImageView
+                android:id="@+id/dcn_item_niv2"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_gravity="center_horizontal"
+                android:src="@drawable/dcn_image_default_1"></com.downjoy.widget.vollyextend.CircleRoundImageView>
+
+            <TextView
+                android:id="@+id/dcn_privilege_name2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:lines="1"
+                android:paddingBottom="4dp"
+                android:paddingTop="4dp"
+                android:textColor="#333333"
+                android:textSize="8dp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="50dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:orientation="vertical">
+
+            <com.downjoy.widget.vollyextend.CircleRoundImageView
+                android:id="@+id/dcn_item_niv3"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_gravity="center_horizontal"
+                android:src="@drawable/dcn_image_default_1"></com.downjoy.widget.vollyextend.CircleRoundImageView>
+
+            <TextView
+                android:id="@+id/dcn_privilege_name3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:lines="1"
+                android:paddingBottom="4dp"
+                android:paddingTop="4dp"
+                android:textColor="#333333"
+                android:textSize="8dp" />
+        </LinearLayout>
+    </RelativeLayout>
+
+    <com.downjoy.widget.LineSelectView
+        android:id="@+id/dcn_line_select_view"
+        android:layout_width="match_parent"
+        android:layout_height="5dp" />
+
+    <TextView
+        android:id="@+id/dcn_vipdetail_item_detail"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:lineSpacingMultiplier="1.2"
+        android:paddingBottom="6dp"
+        android:paddingTop="5dp"
+        android:scrollbars="none"
+        android:text="123"
+        android:textColor="#333333"
+        android:textSize="10dp" />
+
+
+    <com.downjoy.widget.ArrowButton
+        android:id="@+id/dcn_see_privilege_detail"
+        android:layout_width="125dp"
+        android:layout_height="25dp"
+        android:layout_gravity="center_horizontal"
+        android:gravity="center"
+        android:layout_marginBottom="22dp"
+        android:background="@drawable/dcn_selector_vipdetail_btn"
+        android:text="查看详情"
+        android:textColor="#CC9638"
+        android:textSize="11dp" />
+</LinearLayout>

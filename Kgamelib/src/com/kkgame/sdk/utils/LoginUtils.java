@@ -125,13 +125,11 @@ public class LoginUtils {
 						Utilsjf.stopDialog();
 						Yayalog.loger("登陆结果" + result.result);
 						User user = parserLoginResult(result.result);
-						
 						if (user == null) {
+							startlogin();
 							mUserCallback.onError(1);
-							startlogin();//密码错误，重新弹出登录框
 							return;
 						}
-						Yayalog.loger("登陆结果" + result.result);
 						AgentApp.mUser = user;
 
 						UserDao.getInstance(mActivity).writeUser(

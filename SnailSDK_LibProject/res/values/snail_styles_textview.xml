@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <style name="snail_style_textview_basic" parent="@android:style/Theme.Light">
+        <item name="android:textColor">@color/editor_color</item>
+        <item name="android:textColorHint">@color/editor_tip_color</item>
+        <item name="android:textSize">14sp</item>
+        <item name="android:paddingTop">8dp</item>
+        <item name="android:paddingBottom">8dp</item>
+        <item name="android:paddingLeft">16dp</item>
+        <item name="android:paddingRight">16dp</item>
+    </style>
+
+    <style name="snail_style_textview_h_cv" parent="snail_style_textview_basic">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">48dp</item>
+        <item name="android:gravity">center_vertical</item>
+    </style>
+    
+    <!-- 四周圆角 -->
+    <style name="snail_style_textview_round" parent="snail_style_textview_basic">
+        <item name="android:background">@drawable/snail_corners_textbg_yuanjiao</item>
+    </style>
+
+    <!-- 定高-顶部圆角 -->
+    <style name="snail_style_textview_round_top_h" parent="snail_style_textview_h_cv">
+        <item name="android:background">@drawable/snail_corners_textbg_yuanjiaotop</item>
+    </style>
+
+    <!-- 定高-底部圆角 -->
+    <style name="snail_style_textview_round_bottom_h" parent="snail_style_textview_h_cv">
+        <item name="android:background">@drawable/snail_corners_textbg_yuanjiaobottom</item>
+    </style>
+
+    <!-- 定高-矩形 -->
+    <style name="snail_style_textview_rectangle_h" parent="snail_style_textview_h_cv">
+        <item name="android:background">@drawable/snail_corners_textbg_zhijiao</item>
+    </style>
+
+    <!-- 定高-四周圆角 -->
+    <style name="snail_style_textview_round_h" parent="snail_style_textview_h_cv">
+        <item name="android:background">@drawable/snail_corners_textbg_yuanjiao</item>
+    </style>
+
+</resources>

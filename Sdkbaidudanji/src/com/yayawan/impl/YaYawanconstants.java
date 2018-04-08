@@ -241,13 +241,13 @@ public class YaYawanconstants {
 		//		}else if(YYWMain.mOrder.goods.equals("清凉武士")){
 		//			paycode = "35027";
 		//		}
-		goods = getgoodsname(YYWMain.mOrder.goods);
+//		goods = getgoodsname(YYWMain.mOrder.goods);
 		code = getpaycode(YYWMain.mOrder.goods);
 		// 支付接口
 		Log.i("tag","goods = "+goods );
 		Log.i("tag","code = "+code );
 		Log.i("tag","YYWMain.mOrder.goods = "+YYWMain.mOrder.goods );
-		GamePropsInfo propsSecond = new GamePropsInfo(code, ""+YYWMain.mOrder.money/100, goods,morderid);
+		GamePropsInfo propsSecond = new GamePropsInfo(code, ""+YYWMain.mOrder.money/100, YYWMain.mOrder.goods,morderid);
 		Log.i("tag","YYWMain.mOrder.goods_id="+YYWMain.mOrder.goods_id);
 		Log.i("tag","propsSecond="+propsSecond);
 		DKPlatform.getInstance().invokePayCenterActivity(mactivity, 
@@ -569,36 +569,91 @@ public class YaYawanconstants {
 	private static String getpaycode(String goods) {
 		String paycode = "";
 		//捕鱼大世界
-		if(goods.equals("首充特惠礼包")){
-			paycode = "39845";
-		}else if(goods.equals("贵族礼包")){
-			paycode = "39846";
-		}else if(goods.equals("金币礼包(6元)")){
-			paycode = "39847";
-		}else if(goods.equals("金币礼包(12元)")){
-			paycode = "39848";
-		}else if(goods.equals("金币礼包(28元)")){
-			paycode = "39849";
-		}else if(goods.equals("金币礼包(50元)")){
-			paycode = "39850";
-		}else if(goods.equals("金币礼包(108元)")){
-			paycode = "39851";
-		}else if(goods.equals("金币礼包(328元)")){
-			paycode = "39852";
-		}else if(goods.equals("金币礼包(618元)")){
-			paycode = "39853";
-		}else if(goods.equals("钻石礼包(6元)")){
-			paycode = "39854";
-		}else if(goods.equals("钻石礼包(12元)")){
-			paycode = "39855";
-		}else if(goods.equals("钻石礼包(28元)")){
-			paycode = "39856";
-		}else if(goods.equals("钻石礼包(50元)")){
-			paycode = "39857";
-		}else if(goods.equals("钻石礼包(108元)")){
-			paycode = "39858";
-		}else if(goods.equals("钻石礼包(328元)")){
-			paycode = "39858";
+//		if(goods.equals("首充特惠礼包")){
+//			paycode = "39845";
+//		}else if(goods.equals("贵族礼包")){
+//			paycode = "39846";
+//		}else if(goods.equals("金币礼包(6元)")){
+//			paycode = "39847";
+//		}else if(goods.equals("金币礼包(12元)")){
+//			paycode = "39848";
+//		}else if(goods.equals("金币礼包(28元)")){
+//			paycode = "39849";
+//		}else if(goods.equals("金币礼包(50元)")){
+//			paycode = "39850";
+//		}else if(goods.equals("金币礼包(108元)")){
+//			paycode = "39851";
+//		}else if(goods.equals("金币礼包(328元)")){
+//			paycode = "39852";
+//		}else if(goods.equals("金币礼包(618元)")){
+//			paycode = "39853";
+//		}else if(goods.equals("钻石礼包(6元)")){
+//			paycode = "39854";
+//		}else if(goods.equals("钻石礼包(12元)")){
+//			paycode = "39855";
+//		}else if(goods.equals("钻石礼包(28元)")){
+//			paycode = "39856";
+//		}else if(goods.equals("钻石礼包(50元)")){
+//			paycode = "39857";
+//		}else if(goods.equals("钻石礼包(108元)")){
+//			paycode = "39858";
+//		}else if(goods.equals("钻石礼包(328元)")){
+//			paycode = "39858";
+//		}
+		//我的便利店
+		if(goods.equals("10钻石")){
+			paycode = "43243";
+		}else if(goods.equals("32钻石")){
+			paycode = "43244";
+		}else if(goods.equals("57钻石")){
+			paycode = "43245";
+		}else if(goods.equals("120钻石")){
+			paycode = "43246";
+		}else if(goods.equals("390钻石")){
+			paycode = "43247";
+		}else if(goods.equals("680钻石")){
+			paycode = "43248";
+		}else if(goods.equals("1450钻石")){
+			paycode = "43249";
+		}
+		else if(goods.equals("首冲390钻石")){
+			paycode = "43250";
+		}
+		else if(goods.equals("每日钻石套餐")){
+			paycode = "43251";
+		}
+		else if(goods.equals("新手套餐")){
+			paycode = "43252";
+		}
+		else if(goods.equals("实惠套餐")){
+			paycode = "43253";
+		}
+		else if(goods.equals("高级套餐")){
+			paycode = "43254";
+		}
+		else if(goods.equals("每日特惠周一")){
+			paycode = "43255";
+		}
+		else if(goods.equals("每日特惠周二")){
+			paycode = "43256";
+		}
+		else if(goods.equals("每日特惠周三")){
+			paycode = "43257";
+		}
+		else if(goods.equals("每日特惠周四")){
+			paycode = "43258";
+		}
+		else if(goods.equals("每日特惠周五")){
+			paycode = "43259";
+		}
+		else if(goods.equals("每日特惠周六")){
+			paycode = "43260";
+		}
+		else if(goods.equals("每日特惠周日")){
+			paycode = "43261";
+		}
+		else if(goods.equals("首充礼包")){
+			paycode = "43262";
 		}
 		return paycode;
 	}

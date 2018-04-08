@@ -1,0 +1,278 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/c_f5"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:id="@+id/title_bar"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:background="#57D1B3">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="@string/str_gg_pay_center"
+            android:textColor="@color/c_ff"
+            android:textSize="16sp" />
+    </RelativeLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/title_bar"
+        android:layout_marginTop="15dp">
+<!--支付信息-->
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <LinearLayout
+                android:id="@+id/content_container"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/c_ff"
+                android:orientation="vertical">
+                <!--游戏名称-->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingTop="17dp"
+                    >
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="15dp"
+                        android:text="@string/str_game_name"
+                        android:textColor="@color/c_33"
+                        android:textSize="16sp" />
+
+                    <TextView
+                        android:id="@+id/game_name"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="15dp"
+                        android:ellipsize="end"
+                        android:singleLine="true"
+                        android:textColor="@color/c_33"
+                        android:textSize="16sp"
+                        android:textStyle="bold" />
+                </LinearLayout>
+                <!--支付金额-->
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="15dp"
+                    android:paddingBottom="17dp"
+                    >
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="15dp"
+                        android:text="@string/str_pay_account"
+                        android:textColor="@color/c_33"
+                        android:textSize="16sp" />
+
+                    <TextView
+                        android:id="@+id/pay_account"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="15dp"
+                        android:ellipsize="end"
+                        android:singleLine="true"
+                        android:textColor="@color/c_FFA548"
+                        android:textSize="16sp"
+                        android:textStyle="bold" />
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="15dp"
+                    android:background="@color/c_f5" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginRight="15dp"
+                    android:orientation="horizontal">
+                    <!--微信支付-->
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1">
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_vertical"
+                            android:src="@drawable/gg_plugin_wechat_pay_icon" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_vertical"
+                            android:layout_marginLeft="15dp"
+                            android:layout_marginRight="46dp"
+                            android:text="@string/str_wechat_pay"
+                            android:textColor="@color/c_33"
+                            android:textSize="15sp" />
+
+                        <RadioButton
+                            android:id="@+id/wechat_pay_type"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_vertical"
+                            android:button="@null"
+                            android:checked="true"
+                            android:drawableRight="@drawable/gg_plugin_pay_btn_shape"
+                            android:padding="16dp" />
+                    </LinearLayout>
+                    <!--支付宝支付-->
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1">
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_vertical"
+                            android:src="@drawable/gg_plugin_ali_pay_icon" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_vertical"
+                            android:layout_marginLeft="15dp"
+                            android:layout_marginRight="40dp"
+                            android:text="@string/str_ali_pay"
+                            android:textColor="@color/c_33"
+                            android:textSize="15sp" />
+
+                        <RadioButton
+                            android:id="@+id/ali_pay_type"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_vertical"
+                            android:button="@null"
+                            android:drawableRight="@drawable/gg_plugin_pay_btn_shape"
+                            android:padding="16dp" />
+                    </LinearLayout>
+                    <!--qq支付-->
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        >
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_vertical"
+                            android:src="@drawable/gg_plugin_qq_pay_icon" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_vertical"
+                            android:layout_marginLeft="15dp"
+                            android:layout_marginRight="40dp"
+                            android:text="@string/str_qq_pay"
+                            android:textColor="@color/c_33"
+                            android:textSize="15sp" />
+
+                        <RadioButton
+                            android:id="@+id/qq_pay_type"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_vertical"
+                            android:button="@null"
+                            android:drawableRight="@drawable/gg_plugin_pay_btn_shape"
+                            android:padding="16dp" />
+                    </LinearLayout>
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="0.3dp"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginRight="15dp"
+                    android:background="@color/c_d3" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/c_f5"
+                    android:paddingLeft="30dp"
+                    android:paddingRight="30dp"
+                    android:paddingTop="20dp">
+
+                    <TextView
+                        android:id="@+id/cancel_pay"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="15dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/gg_plugin_common_btn_gray_shape"
+                        android:gravity="center"
+                        android:paddingBottom="12dp"
+                        android:paddingTop="12dp"
+                        android:text="@string/str_pay_cancel"
+                        android:textColor="@color/c_75"
+                        android:textSize="15sp" />
+
+                    <TextView
+                        android:id="@+id/pay"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="15dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/gg_plugin_send_code_shape"
+                        android:gravity="center"
+                        android:paddingBottom="12dp"
+                        android:paddingTop="12dp"
+                        android:text="@string/str_pay_next"
+                        android:textColor="@color/c_ff"
+                        android:textSize="15sp" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/loading"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:orientation="vertical"
+                android:visibility="gone">
+
+                <ProgressBar
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/str_submit_order" />
+            </LinearLayout>
+            <!--支付成功-->
+            <include
+                android:id="@+id/pay_success_container"
+                layout="@layout/gg_plugin_pay_success_layout"
+                android:visibility="gone"
+                ></include>
+            <!--支付失败-->
+            <include
+                android:id="@+id/pay_error_container"
+                layout="@layout/gg_plugin_pay_error_layout"
+                android:visibility="gone"
+                ></include>
+        </RelativeLayout>
+    </ScrollView>
+</RelativeLayout>

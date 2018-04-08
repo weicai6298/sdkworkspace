@@ -4,6 +4,7 @@ package com.yayawan.impl;
 import com.kkgame.utils.Yayalog;
 import com.yayawan.proxy.YYWApplication;
 
+import android.app.Activity;
 import android.app.Application;
 import android.content.Context;
 
@@ -17,7 +18,8 @@ public class YYApplication extends YYWApplication {
 		super.onCreate();
 		mContext = getApplicationContext();
 		// System.out.println("YYApplication");
-		Yayalog.logerlife("YYApplicationoncreate");
+		
+		
 	}
 
 	public static Context getmContext() {

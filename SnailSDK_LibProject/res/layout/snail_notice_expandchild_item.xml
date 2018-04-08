@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+	tools:background="@android:color/white"
+    android:orientation="vertical" >
+
+	<TextView
+	    android:id="@+id/notice_text"
+	    android:layout_width="wrap_content"
+	    android:layout_height="wrap_content"
+	    android:layout_marginTop="2dp"
+		tools:text="这个内容只是测试用！！！"
+		android:textColor="#a8000000"
+	    android:textSize="14sp" />
+	
+	<TextView
+	    android:id="@+id/date"
+	    android:layout_width="wrap_content"
+	    android:layout_height="wrap_content"
+	    android:layout_marginTop="2dp"
+		tools:text="2999-10-10 00:00:00"
+		android:textColor="#a8000000"
+	    android:textSize="12sp" />
+
+	<TextView
+		android:id="@+id/useTip"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:layout_marginTop="2dp"
+		android:textColor="#a8000000"
+		android:textSize="12sp"
+		tools:text="使用方法：这么使用" />
+
+</LinearLayout>

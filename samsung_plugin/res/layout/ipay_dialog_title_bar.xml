@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/ipay_height_40"
+                android:background="@drawable/ipay_bg_btn_color_2">
+
+    <TextView
+        android:id="@+id/dialog_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="@dimen/ipay_text_size_15"
+        android:layout_centerInParent="true"
+        android:textColor="@color/ipay_color_value_5"/>
+
+    <LinearLayout
+        android:id="@+id/dialog_title_close"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_alignParentRight="true"
+        android:visibility="gone"
+        android:gravity="center">
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="@dimen/ipay_margin_10"
+            android:src="@drawable/ipay_dialog_coupon_title_close"/>
+
+    </LinearLayout>
+
+
+</RelativeLayout>

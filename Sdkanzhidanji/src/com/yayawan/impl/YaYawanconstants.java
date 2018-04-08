@@ -97,7 +97,7 @@ public class YaYawanconstants {
 			Log.i("tag", "code: " + type + ", result: " + result);
 			switch (type) {
 			case SingleGameCallBack.SDK_TYPE_INIT: // 初始化操作
-				midManage.login(mActivity);
+//				midManage.login(mActivity);
 				//                login(mActivity); // 调用登录方法，游戏方选择在合适位置调用
 				midManage.addPop(mActivity);// 添加悬浮球
 				break;
@@ -306,7 +306,13 @@ public class YaYawanconstants {
 	public static void exit(Activity paramActivity,
 			final YYWExitCallback callback) {
 		Yayalog.loger("YaYawanconstantssdk退出");
-		midManage.exitGame(mActivity);
+		paramActivity.runOnUiThread(new Runnable() {
+			
+			@Override
+			public void run() {
+				midManage.exitGame(mActivity);
+			}
+		});
 
 		//
 

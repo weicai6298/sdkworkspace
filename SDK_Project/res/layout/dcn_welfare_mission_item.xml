@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#ffffff">
+
+    <TextView
+        android:id="@+id/dcn_welfare_mission_item_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="100dp"
+        android:layout_marginTop="15dp"
+        android:ellipsize="end"
+        android:maxLines="1"
+        android:textColor="@color/dcn_light_black"
+        android:textSize="14sp"/>
+
+    <TextView
+        android:id="@+id/dcn_welfare_mission_item_award"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/dcn_welfare_mission_item_title"
+        android:layout_marginLeft="15dp"
+        android:layout_marginTop="9dp"
+        android:layout_toLeftOf="@+id/dcn_welfare_mission_item_fun_des"
+        android:drawablePadding="1dp"
+        android:maxLines="1"
+        android:ellipsize="end"
+        android:textColor="#666666"
+        android:textSize="10sp"/>
+
+
+    <ImageView
+        android:id="@+id/dcn_welfare_mission_item_arrow"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:layout_marginRight="10dp"
+        android:focusable="false"
+        android:src="@drawable/dcn_welfare_task_more"
+        android:visibility="gone"/>
+
+    <TextView
+        android:id="@+id/dcn_welfare_mission_item_fun"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="17dp"
+        android:background="@drawable/dcn_shape_welfare_button_bg"
+        android:focusable="false"
+        android:paddingBottom="2dp"
+        android:paddingLeft="20dp"
+        android:paddingRight="20dp"
+        android:paddingTop="2dp"
+        android:textColor="#F97D31"
+        android:textSize="14sp"
+        android:visibility="gone"/>
+
+    <TextView
+        android:id="@+id/dcn_welfare_mission_item_fun_des"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_below="@+id/dcn_welfare_mission_item_fun"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="3dp"
+        android:maxLines="1"
+        android:textColor="#A6A7A8"
+        android:textSize="10sp"
+        android:visibility="gone"/>
+
+    <View
+        android:id="@+id/dcn_welfare_mission_item_divider"
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:layout_below="@+id/dcn_welfare_mission_item_award"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="15dp"
+        android:background="#E4E4E4"/>
+</RelativeLayout>
+

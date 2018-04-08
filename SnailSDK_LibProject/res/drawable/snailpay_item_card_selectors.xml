@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:drawable="@drawable/snailpay_bg_click" android:state_checked="true"/>
+    <item android:drawable="@drawable/snailpay_bg_bottom" android:state_checked="false" android:state_focused="false"/>
+<!--  
+<item android:drawable="@drawable/snailpay_bg_click" android:state_focused="true" android:state_checked="false"/>
+	   <shape>
+            <solid android:color="#ff4bbd1c" />
+
+            <padding android:bottom="15dp" 
+                android:left="5dp" 
+                android:right="5dp" 
+                android:top="15dp" />
+        </shape>
+         --> 
+</selector>

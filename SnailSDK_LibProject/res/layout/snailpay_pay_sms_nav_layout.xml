@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical" >
+    <LinearLayout 
+	    android:layout_width="match_parent"
+	    android:layout_height="50dp"
+	    android:baselineAligned="false" >
+	
+	    <FrameLayout
+	        android:id="@+id/snailpay_tab_tabs_layout_unicom"
+	        android:layout_width="0dp"
+	        android:layout_height="match_parent"
+	        android:layout_weight="1"
+	        android:paddingLeft="8dp"
+	        android:visibility="gone">
+	
+	        <LinearLayout
+	            android:layout_width="wrap_content"
+	            android:layout_height="wrap_content"
+	            android:orientation="vertical"
+	            android:layout_gravity="center" >
+		        <TextView
+		            android:id="@+id/snailpay_tab_tabs_unicom_name"
+		            android:layout_width="wrap_content"
+		            android:layout_height="wrap_content"
+		            android:layout_marginBottom="5dp"
+		            android:layout_marginLeft="5dp"
+		            android:layout_marginRight="5dp"
+		            android:textSize="16sp" 
+		            android:focusable="true"
+		          	android:focusableInTouchMode="false"
+		          	android:background="@drawable/snailpay_common_graybg_selector"/>
+		        <ImageView
+		            android:id="@+id/snailpay_tab_tabs_unicom_image"
+		            android:layout_width="match_parent"
+		            android:layout_height="2dp"
+		            android:layout_gravity="center_horizontal"
+		            android:background="@drawable/snailpay_indicator" />
+	        </LinearLayout>
+	    </FrameLayout>
+	
+	    <FrameLayout
+	        android:id="@+id/snailpay_tab_tabs_layout_telecom"
+	        android:layout_width="0dp"
+	        android:layout_height="match_parent"
+	        android:layout_weight="1" 
+	        android:visibility="gone">
+	
+	        <LinearLayout
+	            android:layout_width="wrap_content"
+	            android:layout_height="wrap_content"
+	            android:orientation="vertical"
+	            android:layout_gravity="center" >
+		        <TextView
+		            android:id="@+id/snailpay_tab_tabs_telecom_name"
+		            android:layout_width="wrap_content"
+		            android:layout_height="wrap_content"
+		            android:layout_marginBottom="5dp"
+		            android:layout_marginLeft="5dp"
+		            android:layout_marginRight="5dp"
+		            android:textSize="16sp" 
+		            android:focusable="true"
+		          	android:focusableInTouchMode="false"
+			        android:background="@drawable/snailpay_common_graybg_selector"/>
+		
+		        <ImageView
+		            android:id="@+id/snailpay_tab_tabs_telecom_image"
+		            android:layout_width="match_parent"
+		            android:layout_height="2dp"
+		            android:layout_gravity="center_horizontal"
+		            android:background="@drawable/snailpay_indicator" />
+	        </LinearLayout>
+	    </FrameLayout>
+	
+	    <FrameLayout
+	        android:id="@+id/snailpay_tab_tabs_layout_mobile"
+	        android:layout_width="0dp"
+	        android:layout_height="match_parent"
+	        android:layout_weight="1" 
+	        android:paddingRight="8dp"
+	        android:visibility="gone">
+	
+	        <LinearLayout
+	            android:layout_width="wrap_content"
+	            android:layout_height="wrap_content"
+	            android:orientation="vertical"
+	            android:layout_gravity="center" >
+		        <TextView
+		            android:id="@+id/snailpay_tab_tabs_mobile_name"
+		            android:layout_width="wrap_content"
+		            android:layout_height="wrap_content"
+		            android:layout_marginBottom="5dp"
+		            android:layout_marginLeft="5dp"
+		            android:layout_marginRight="5dp"
+		            android:textSize="16sp" 
+		            android:focusable="true"
+			        android:focusableInTouchMode="false"
+			        android:background="@drawable/snailpay_common_graybg_selector"/>
+		
+		        <ImageView
+		            android:id="@+id/snailpay_tab_tabs_mobile_image"
+		            android:layout_width="match_parent"
+		            android:layout_height="2dp"
+		            android:layout_gravity="center_horizontal"
+		            android:background="@drawable/snailpay_indicator" />
+	        </LinearLayout>
+	    </FrameLayout>
+	</LinearLayout>
+</LinearLayout>

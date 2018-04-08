@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="horizontal" 
+    android:padding="10dp"
+    android:gravity="center_vertical">
+
+   <TextView
+       android:id="@+id/snailpay_text_name"
+       android:layout_width="wrap_content"
+       android:layout_height="wrap_content"
+       android:textSize="17sp"
+       android:layout_alignParentLeft="true"
+       android:textColor="@drawable/snailpay_textview_selector"/>
+   
+   <ImageView
+       android:id="@+id/snailpay_image_icon"
+       android:layout_width="wrap_content"
+       android:layout_height="wrap_content"
+       android:src="@drawable/snailpay_imageview_selector"
+       android:layout_alignParentRight="true"/>
+
+</RelativeLayout>

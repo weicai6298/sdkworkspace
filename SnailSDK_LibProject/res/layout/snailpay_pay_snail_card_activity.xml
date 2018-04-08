@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical" >
+
+    <include
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        layout="@layout/snailpay_title_layout" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" >
+
+        <ScrollView
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_above="@+id/snailpay_bottom_tab_layout" >
+
+            <LinearLayout
+                android:id="@+id/sanilpay_layout_main"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:visibility="gone" >
+
+                <include
+		            android:layout_width="match_parent"
+		            android:layout_height="wrap_content"
+		            android:layout_marginTop="8dp"
+		            layout="@layout/snailpay_pay_account_layout" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:paddingLeft="10dp"
+                    android:paddingRight="10dp"
+                    android:paddingBottom="16dp"
+                    android:paddingTop="16dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginBottom="10dp"
+                    android:background="#ffffff" >
+
+                    <EditText
+                        android:id="@+id/snailpay_input_card"
+                        style="@style/snailpay_edit_text_style"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="@string/snailpay_input_charge_card_number"
+                        android:singleLine="true" />
+                    
+                    <EditText
+                        android:id="@+id/snailpay_input_password"
+                        style="@style/snailpay_edit_text_style"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="@string/snailpay_input_charge_card_password"
+                        android:inputType="textPassword"
+                        android:singleLine="true" />
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/snailpay_text_remark"
+                    android:layout_width="300dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginTop="12dp"
+                    android:text="@string/snailpay_help"
+                    android:textColor="#949494"
+                    android:textSize="10sp"
+                    android:visibility="gone" />
+            </LinearLayout>
+        </ScrollView>
+
+        <include
+            android:id="@+id/snailpay_bottom_tab_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            layout="@layout/snailpay_bottom_layout" />
+    </RelativeLayout>
+
+</LinearLayout>

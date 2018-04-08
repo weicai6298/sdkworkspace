@@ -1,14 +1,14 @@
 android {
 	 productFlavors {
 	 	 "portrait_SDK" {
-	 	 	 applicationId "com.game.sdk.aile74portrait"
+	 	 	 applicationId "com.game.sdk.shouyouhuyu212"
 	 	 	 versionCode 1
-	 	 	 resValue( "string", "app_name", "爱乐demo竖屏版" )
+	 	 	 resValue( "string", "app_name", "兽游互娱SDK竖屏版" )
 	 	 }
 	 	 "landscape_SDK" {
-	 	 	 applicationId "com.game.sdk.aile74landscape"
+	 	 	 applicationId "com.game.sdk.shouyouhuyu212landscape"
 	 	 	 versionCode 1
-	 	 	 resValue( "string", "app_name", "爱乐demo横屏版" )
+	 	 	 resValue( "string", "app_name", "兽游互娱SDK横屏版" )
 	 	 }
 	 }
 }

@@ -1,0 +1,197 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:gravity="center_vertical"
+    android:orientation="vertical"
+    android:paddingTop="0dp"
+    android:paddingBottom="@dimen/ipay_margin_10"
+    >
+
+    <RelativeLayout
+        android:id="@+id/rl_list_view_item"
+        android:layout_width="fill_parent"
+        android:layout_height="69dp"
+        android:background="@drawable/ipay_border_style"
+        android:clickable="false"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:id="@+id/ll_amount_show"
+            android:layout_width="82dp"
+            android:layout_height="69dp"
+            android:orientation="horizontal"
+            android:background="@drawable/ipay_cash_coupon_balance_bg"
+            android:gravity="center"
+            >
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/ipay_symbol_rmb"
+                android:textColor="@color/ipay_color_value_1"
+                android:textSize="@dimen/ipay_text_size_11"
+                />
+
+            <TextView
+                android:id="@+id/tv_cash_coupon_balance"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="20000.01"
+                android:textColor="@color/ipay_color_value_1"
+                android:textSize="@dimen/ipay_text_size_18"
+                android:gravity="center"
+                />
+        </LinearLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/ipay_margin_8"
+            android:layout_marginTop="2.5dp"
+            android:layout_toRightOf="@id/ll_amount_show"
+            android:orientation="vertical"
+            >
+
+            <TextView
+                android:id="@+id/tv_cash_coupon_expairet"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text=""
+                android:textColor="@color/ipay_color_value_4"
+                android:textSize="@dimen/ipay_text_size_10"
+                android:layout_marginBottom="@dimen/ipay_margin_2"
+                />
+
+            <LinearLayout
+                android:id="@+id/ll_zonge"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/tv_cash_coupon_expairet"
+                android:orientation="horizontal"
+                android:layout_marginBottom="@dimen/ipay_margin_2"
+                >
+
+                <TextView
+                    android:id="@+id/tv_cash_coupon_resource"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:includeFontPadding="false"
+                    android:lineSpacingExtra="0dp"
+                    android:lineSpacingMultiplier="1"
+                    android:text=""
+                    android:textColor="@color/ipay_color_value_4"
+                    android:textSize="@dimen/ipay_text_size_11"
+                    />
+
+                <TextView
+                    android:id="@+id/tv_cash_coupon_amount"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:includeFontPadding="false"
+                    android:lineSpacingExtra="0dp"
+                    android:lineSpacingMultiplier="1"
+                    android:paddingLeft="@dimen/ipay_margin_5"
+                    android:text=""
+                    android:textColor="@color/ipay_color_value_4"
+                    android:textSize="@dimen/ipay_text_size_11"
+
+                    />
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/tv_cash_coupon_range"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/ll_zonge"
+                android:includeFontPadding="false"
+                android:lineSpacingExtra="0dp"
+                android:lineSpacingMultiplier="1"
+                android:text=""
+                android:textColor="@color/ipay_color_value_4"
+                android:textSize="@dimen/ipay_text_size_11"
+                android:layout_marginBottom="@dimen/ipay_margin_7"
+                />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:paddingBottom="@dimen/ipay_margin_5">
+
+                <TextView
+                    android:id="@+id/tv_to_show_app"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:drawablePadding="@dimen/ipay_margin_4"
+                    android:text="查看使用限制"
+                    android:gravity="center"
+                    android:textColor="@color/ipay_color_value_7"
+                    android:textSize="@dimen/ipay_text_size_11"
+                    android:visibility="gone"
+                    android:layout_centerVertical="true"
+                    android:clickable="true"
+                    />
+                <CheckBox
+                    android:id="@+id/cbx_cash_coupon"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="@dimen/ipay_margin_7"
+                    android:button="@drawable/ipay_checkbox_button_bg"
+                    android:clickable="false"
+                    android:focusable="false"
+                    android:enabled="false"
+                    android:focusableInTouchMode="false"
+                    android:layout_alignParentRight="true"
+                    />
+            </RelativeLayout>
+
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <FrameLayout
+            android:id="@+id/ll_show_app_all"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginLeft="@dimen/ipay_margin_10"
+            android:layout_marginRight="@dimen/ipay_margin_10"
+            android:visibility="gone"
+            >
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/ipay_border_style"
+                >
+                <TextView
+                    android:id="@+id/tv_show_app_all"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textSize="@dimen/ipay_text_size_10"
+                    android:textColor="@color/ipay_color_value_5"
+                    android:paddingTop="@dimen/ipay_margin_10"
+                    android:paddingBottom="@dimen/ipay_margin_10"
+                    android:paddingLeft="@dimen/ipay_margin_6"
+                    android:paddingRight="@dimen/ipay_margin_6"
+                    />
+
+            </LinearLayout>
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="8dp"
+                android:background="@drawable/ipay_ui_shadow_down"
+                ></View>
+        </FrameLayout>
+    </ScrollView>
+    <include
+        android:id="@+id/list_no_more"
+        layout="@layout/ipay_layout_no_more"></include>
+    <include
+        android:id="@+id/list_empty"
+        layout="@layout/ipay_layout_listview_empty"></include>
+
+</LinearLayout>

@@ -14,6 +14,7 @@ public class YYWApplication extends Application {
 	public void onCreate() {
 		// TODO Auto-generated method stub
 		super.onCreate();
+		GameApitest.initOnapplication(this);
 		mContext = getApplicationContext();
 		// System.out.println("YYApplication");
 		YYcontants.ISDEBUG=DeviceUtil.isDebug(getApplicationContext());

@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    >
+    <ScrollView 
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="center_horizontal"
+        android:fadingEdge="none"
+        android:scrollbars="none">
+    	<LinearLayout 
+    	    android:layout_width="match_parent"
+		    android:layout_height="wrap_content"
+		    android:layout_marginTop="@dimen/snail_margin_top_title"
+		    android:gravity="center_horizontal"
+		    android:orientation="vertical" >
+			<TextView
+                android:id="@+id/account_textview"
+                style="@style/snail_style_textview_round_top_h"
+                android:layout_marginLeft="20dp"
+    			android:layout_marginRight="20dp"
+                android:text="@string/snail_account"/>
+            <View 
+			    android:layout_width="match_parent"
+			    android:layout_height="1px"
+			    android:layout_marginLeft="20dp"
+    			android:layout_marginRight="20dp"
+			    android:background="@color/cut_off_rule"/>
+            <EditText
+		        android:id="@+id/snail_user_center_pwd_input_old"
+		        style="@style/snail_style_textview_rectangle_h"
+		        android:layout_marginLeft="20dp"
+    			android:layout_marginRight="20dp"
+		        android:ems="10"
+		        android:hint="@string/snail_pwd_old"
+		        android:inputType="textPassword" />
+            <View 
+			    android:layout_width="match_parent"
+			    android:layout_height="1px"
+			    android:layout_marginLeft="20dp"
+    			android:layout_marginRight="20dp"
+			    android:background="@color/cut_off_rule"/>
+            <EditText
+		        android:id="@+id/snail_user_center_pwd_input_new"
+		        style="@style/snail_style_textview_rectangle_h"
+		        android:layout_marginLeft="20dp"
+    			android:layout_marginRight="20dp"
+		        android:ems="10"
+		        android:hint="@string/snail_pwd_new"
+		        android:inputType="textPassword" />
+            <View 
+			    android:layout_width="match_parent"
+			    android:layout_height="1px"
+			    android:layout_marginLeft="20dp"
+    			android:layout_marginRight="20dp"
+			    android:background="@color/cut_off_rule"/>
+            <EditText
+		        android:id="@+id/snail_user_center_pwd_input_new_again"
+		        style="@style/snail_style_textview_round_bottom_h"
+		        android:layout_marginLeft="20dp"
+    			android:layout_marginRight="20dp"
+		        android:ems="10"
+		        android:hint="@string/snail_pwd_new_again"
+		        android:inputType="textPassword"/>
+            
+            <Button
+               android:id="@+id/snail_submit"
+               style="@style/snail_style_button_green_h"
+               android:layout_marginLeft="20dp"
+    			android:layout_marginRight="20dp"
+                android:layout_marginTop="30dp"
+               android:text="@string/snail_submit"/>
+            
+            <TextView 
+                android:layout_width="match_parent"
+               	android:layout_height="wrap_content"
+                android:layout_marginTop="18dp"
+                android:layout_marginLeft="20dp"
+    			android:layout_marginRight="20dp"
+                android:textColor="@color/editor_tip_color"
+                android:textSize="14sp"
+               	android:text="@string/snail_change_pwd_tips2"
+                />
+          </LinearLayout> 
+    </ScrollView>
+</LinearLayout>

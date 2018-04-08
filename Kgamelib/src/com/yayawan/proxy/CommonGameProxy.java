@@ -94,8 +94,10 @@ public class CommonGameProxy implements YYWGameProxy {
 	public void login(final Activity paramActivity,
 			final YYWUserCallBack userCallBack) {
 		mActivity = paramActivity;
+		
+		GameApitest.getGameApitestInstants(paramActivity).sendTest("login");
 		// YYWMain.mUserCallBack=userCallBack;
-		Yayalog.logerlife("login");
+		Yayalog.logerlife("login",paramActivity);
 		Yayalog.loger("commmonGameproxylogin");
 		
 		if (ViewConstants.ISKGAME) {
@@ -225,12 +227,12 @@ public class CommonGameProxy implements YYWGameProxy {
 	@Override
 	public void logout(Activity paramActivity, YYWUserCallBack userCallBack) {
 		YYWMain.mUserCallBack = userCallBack;
-		Yayalog.logerlife("logout");
+		Yayalog.logerlife("logout",paramActivity);
 		//this.mLogin.relogin(paramActivity, userCallBack, "relogin");
 	}
 
 	public void logout(Activity paramActivity) {
-		Yayalog.logerlife("logout");
+		Yayalog.logerlife("logout",paramActivity);
 		this.mUserManager.logout(paramActivity, null, null);
 	}
 
@@ -238,7 +240,7 @@ public class CommonGameProxy implements YYWGameProxy {
 	public void charge(Activity paramActivity, YYWOrder order,
 			YYWPayCallBack payCallBack) {
 		YYWMain.mPayCallBack = payCallBack;
-		Yayalog.logerlife("charge");
+		Yayalog.logerlife("charge",paramActivity);
 		YYWMain.mOrder = order;
 		this.mCharger.charge(paramActivity, order, payCallBack);
 	}
@@ -246,7 +248,7 @@ public class CommonGameProxy implements YYWGameProxy {
 	@Override
 	public void pay(Activity paramActivity, YYWOrder order,
 			YYWPayCallBack payCallBack) {
-		Yayalog.logerlife("pay");
+		Yayalog.logerlife("pay",paramActivity);
 		YYWMain.mPayCallBack = payCallBack;
 		YYWMain.mOrder = order;
 
@@ -289,7 +291,7 @@ public class CommonGameProxy implements YYWGameProxy {
 
 	@Override
 	public void manager(Activity paramActivity) {
-		Yayalog.logerlife("manager");
+		Yayalog.logerlife("manager",paramActivity);
 		this.mUserManager.manager(paramActivity);
 
 	}
@@ -297,14 +299,14 @@ public class CommonGameProxy implements YYWGameProxy {
 	@Override
 	public void exit(final Activity paramActivity,
 			final YYWExitCallback exitCallBack) {
-		Yayalog.logerlife("exit");
+		Yayalog.logerlife("exit",paramActivity);
 		YYWMain.mExitCallback = exitCallBack;
 		this.mUserManager.exit(paramActivity, exitCallBack);
 	}
 
 	@Override
 	public void anim(Activity paramActivity, YYWAnimCallBack animCallback) {
-		Yayalog.logerlife("anim");
+		Yayalog.logerlife("anim",paramActivity);
 		YYWMain.mAnimCallBack = animCallback;
 		this.mAnimation.anim(paramActivity);
 
@@ -332,7 +334,7 @@ public class CommonGameProxy implements YYWGameProxy {
 		templevel = Integer.parseInt(roleLevel);
 		YYWMain.mRole = new YYWRole(roleId, roleName, roleLevel, zoneId,
 				zoneName, roleCTime, ext);
-		Yayalog.logerlife("setData"+ext+":"+YYWMain.mRole.toString());
+		Yayalog.logerlife("setData"+ext+":"+YYWMain.mRole.toString(),paramActivity);
 		//Yayalog.loger("调用了commongameproxy中setData:"+YYWMain.mRole.toString());
 		//Yayalog.logerlife("anim:"+YYWMain.mRole.toString());
 
@@ -360,7 +362,7 @@ public class CommonGameProxy implements YYWGameProxy {
 		Yayalog.setCanlog(DeviceUtil.isDebug(paramActivity));//设置是否打log
 		System.out.println("是否可以打印yayalog："+Yayalog.canlog);
 		
-		Yayalog.logerlife("onCreate:");
+		Yayalog.logerlife("onCreate：",paramActivity);
 		
 		// 获取公告
 		new JFnoticeUtils().getNotice(paramActivity);
@@ -374,14 +376,14 @@ public class CommonGameProxy implements YYWGameProxy {
 
 	@Override
 	public void onStop(Activity paramActivity) {
-		Yayalog.logerlife("onStop:");
+		Yayalog.logerlife("onStop:",paramActivity);
 		this.mStub.onStop(paramActivity);
 		
 	}
 
 	@Override
 	public void onResume(Activity paramActivity) {
-		Yayalog.logerlife("onResume:");
+		Yayalog.logerlife("onResume:",paramActivity);
 
 		this.mStub.onResume(paramActivity);
 
@@ -390,7 +392,7 @@ public class CommonGameProxy implements YYWGameProxy {
 	@Override
 	public void onPause(Activity paramActivity) {
 		
-		Yayalog.logerlife("onPause:");
+		Yayalog.logerlife("onPause:",paramActivity);
 
 
 		this.mStub.onPause(paramActivity);
@@ -399,27 +401,27 @@ public class CommonGameProxy implements YYWGameProxy {
 
 	@Override
 	public void onRestart(Activity paramActivity) {
-		Yayalog.logerlife("onRestart:");
+		Yayalog.logerlife("onRestart:",paramActivity);
 
 		this.mStub.onRestart(paramActivity);
 	}
 
 	@Override
 	public void onDestroy(Activity paramActivity) {
-		Yayalog.logerlife("onDestroy:");
+		Yayalog.logerlife("onDestroy:",paramActivity);
 		this.mStub.onDestroy(paramActivity);
 	}
 
 	@Override
 	public void applicationDestroy(Activity paramActivity) {
-		Yayalog.logerlife("applicationDestroy:");
+		Yayalog.logerlife("applicationDestroy:",paramActivity);
 		this.mStub.applicationDestroy(paramActivity);
 	}
 
 	@Override
 	public void onActivityResult(Activity paramActivity, int paramInt1,
 			int paramInt2, Intent paramIntent) {
-		Yayalog.logerlife("onActivityResult:");
+		Yayalog.logerlife("onActivityResult:",paramActivity);
 		this.mStub.onActivityResult(paramActivity, paramInt1, paramInt2,
 				paramIntent);
 
@@ -429,13 +431,13 @@ public class CommonGameProxy implements YYWGameProxy {
 	public void onNewIntent(Intent paramIntent) {
 		if (mActivity != null) {
 		}
-		Yayalog.logerlife("onNewIntent:");
+		Yayalog.logerlife("onNewIntent:",mActivity);
 		this.mStub.onNewIntent(paramIntent);
 	}
 
 	@Override
 	public void initSdk(Activity paramActivity) {
-		Yayalog.logerlife("initSdk:");
+		Yayalog.logerlife("initSdk:",paramActivity);
 		// TODO Auto-generated method stub
 		// Class.forName("ActivityStubImpl").
 		// 为了兼容老sdk判断是否有初始化方法再执行

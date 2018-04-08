@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView    
+    xmlns:android="http://schemas.android.com/apk/res/android"  
+    xmlns:tools="http://schemas.android.com/tools"  
+    android:layout_width="fill_parent"    
+    android:layout_height="fill_parent"    
+    android:scrollbars="vertical"    
+    android:fadingEdge="vertical">  
+<RelativeLayout 
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <Button
+        android:id="@+id/ExitBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:text="退出游戏" />
+
+    <Button
+        android:id="@+id/GetAnnBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/ExitBtn"
+        android:text="获取公告" />
+
+    <Button
+        android:id="@+id/IsOrLogin"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/GetAnnBtn"
+        android:text="是否已经登录" />
+    
+     <Button
+        android:id="@+id/dk_id_key"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/IsOrLogin"
+        android:visibility="gone"
+        android:text="设置dk_id_key" />
+     
+      <Button
+        android:id="@+id/getUserInfo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/dk_id_key"
+        android:text="获取用户uid" />
+      
+        <Button
+        android:id="@+id/getAccessToken"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/getUserInfo"
+        android:text="获取AccessToken" />
+        
+        <Button
+        android:id="@+id/logout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/getAccessToken"
+        android:text="登出 Logout " />
+        
+         <Button
+        android:id="@+id/isAuthenticateState"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/logout"
+        android:text="查詢实名" />
+         
+          <Button
+        android:id="@+id/setTagInfo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/isAuthenticateState"
+        android:text="自定义打点" />
+          
+            <Button
+        android:id="@+id/modifyPwd"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/setTagInfo"
+        android:text="修改密码" />
+            
+             <Button
+        android:id="@+id/isBindPhone"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/modifyPwd"
+        android:text="是否绑定手机" />
+             
+             <Button
+        android:id="@+id/haveChannel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/isBindPhone"
+        android:text="获取渠道" />
+             
+              <Button
+        android:id="@+id/enterRecharge"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/haveChannel"
+        android:text="充值记录" />
+              
+              <Button
+        android:id="@+id/changeBindPhoneNum"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/enterRecharge"
+        android:text="修改绑定手机" />
+              
+              <Button
+        android:id="@+id/bindPhoneNum"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/changeBindPhoneNum"
+        android:text="绑定手机号" />
+              
+              <Button
+        android:id="@+id/haveUserInfo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/bindPhoneNum"
+        android:text="获取用户信息" />
+              
+        <Button
+        android:id="@+id/downLoadGame"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/haveUserInfo"
+        android:text="下载游戏" />
+
+</RelativeLayout>
+</ScrollView>  

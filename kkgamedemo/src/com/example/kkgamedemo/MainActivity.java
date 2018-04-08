@@ -306,14 +306,14 @@ public class MainActivity extends Activity {
 	public void exit(View v) {
 		System.out.println("登录");
 
-		Kgame.getInstance().exit(this, new YYWExitCallback() {
-
-			@Override
-			public void onExit() {
-				Toast.makeText(MainActivity.this, "退出回调", Toast.LENGTH_SHORT)
-						.show();
-			}
-		});
+//		Kgame.getInstance().exit(this, new YYWExitCallback() {
+//
+//			@Override
+//			public void onExit() {
+//				Toast.makeText(MainActivity.this, "退出回调", Toast.LENGTH_SHORT)
+//						.show();
+//			}
+//		});
 	}
 
 	/**

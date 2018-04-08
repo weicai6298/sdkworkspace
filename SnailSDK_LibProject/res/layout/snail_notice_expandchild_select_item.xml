@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="horizontal"
+    tools:background="@android:color/white">
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="18"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/notice_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="2dp"
+            android:textColor="#a8000000"
+            android:textSize="14sp"
+            tools:text="这个内容只是测试用！！！" />
+
+        <TextView
+            android:id="@+id/date"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="2dp"
+            android:textColor="#a8000000"
+            android:textSize="12sp"
+            tools:text="2999-10-10 00:00:00" />
+
+        <TextView
+            android:id="@+id/useTip"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="2dp"
+            android:textColor="#a8000000"
+            android:textSize="12sp"
+            tools:text="使用方法：这么使用" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="40dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:gravity="right"
+        android:padding="5dp">
+
+        <Button
+            android:id="@+id/btn_get"
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            android:padding="2dp"
+            android:layout_gravity="center"
+            android:background="@drawable/common_green_btn_selector"
+            android:textSize="12sp"
+            android:textColor="@color/white"
+            android:text="@string/snail_notice_get" />
+
+    </LinearLayout>
+
+</LinearLayout>

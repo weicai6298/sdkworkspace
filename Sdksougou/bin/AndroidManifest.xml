@@ -354,24 +354,23 @@
       
        <meta-data
             android:name="gid"
-            android:value="string16499" />
+            android:value="string17447" />
        
        <meta-data
             android:name="gamemoneyname"
-            android:value="元寶" />
+            android:value="钻石" />
        <meta-data
             android:name="Appkey"
-            android:value="ef5bcbacc7ad74f6fee252ab44f349f0573b1f28d672049d5ae6c8e55e078883" />
+            android:value="67ed1e375ef41c6ed75ef96e8892825d1516e6ed2ec573f28f49bedc1948de48" />
        
        <meta-data
             android:name="gamename"
-            android:value="捕鱼风暴" />
+            android:value="我的便利店" />
        
-
        
         <meta-data
             android:name="app_id"
-            android:value="kk3302523257" />
+            android:value="kk2973972750" />
         
         <meta-data
             android:name="islandscape"

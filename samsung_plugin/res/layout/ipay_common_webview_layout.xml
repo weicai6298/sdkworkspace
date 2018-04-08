@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/ipay_transparent"
+    android:orientation="vertical">
+
+    <include
+        android:id="@+id/iapppay_ui_title_bar"
+        layout="@layout/ipay_ui_title_bar_normal" />
+    <ProgressBar
+        android:id="@+id/webview_progress"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/ipay_margin_2"
+        android:max="100"
+        style="?android:attr/progressBarStyleHorizontal"
+        android:progressDrawable="@drawable/ipay_progress_hori_bg"
+        android:visibility="gone"/>
+    <FrameLayout
+        android:id="@+id/fl_webView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+</LinearLayout>

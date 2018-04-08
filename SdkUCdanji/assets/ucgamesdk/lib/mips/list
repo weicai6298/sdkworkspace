@@ -1,0 +1,4 @@
+[mips]
+lib_ucsdk_patch.so = 131e8550fa7c08f96bac98072381a2c9
+lib_ucsdk_softlink.so = d899a5e741cdc326bf3f4d3dac4c76ff
+lib_ucsdk_xcrypt.so = 7c5a0e2d587fbc31c963de1458555ac5

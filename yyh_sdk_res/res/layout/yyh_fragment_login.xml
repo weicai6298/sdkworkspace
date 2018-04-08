@@ -1,0 +1,289 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingLeft="26dp"
+    android:paddingRight="26dp"
+    tools:background="#33ff0000">
+
+    <ImageView
+        android:id="@+id/iv_close"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="right"
+        android:src="@drawable/yyh_activity_close"
+        tools:ignore="ContentDescription,RtlHardcoded" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/page_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="35dp"
+            android:text="应用汇帐号登录"
+            android:textColor="@color/yyh_black"
+            android:textSize="18dp"
+            tools:ignore="HardcodedText,SpUsage" />
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="35dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <FrameLayout
+                    android:id="@+id/username_container"
+                    android:layout_width="match_parent"
+                    android:layout_height="44dp">
+
+                    <EditText
+                        android:id="@+id/username"
+                        android:layout_width="match_parent"
+                        android:layout_height="44dp"
+                        android:background="@drawable/yyh_edittext_bg"
+                        android:hint="手机号/邮箱/用户名"
+                        android:textSize="14dp"
+                        tools:ignore="HardcodedText,SpUsage" />
+
+                    <ImageView
+                        android:id="@+id/recoreded_username"
+                        android:layout_width="44dp"
+                        android:layout_height="44dp"
+                        android:layout_gravity="right"
+                        android:background="@null"
+                        android:scaleType="center"
+                        android:src="@drawable/yyh_arrow_down"
+                        tools:ignore="ContentDescription,RtlHardcoded" />
+                </FrameLayout>
+
+                <FrameLayout
+                    android:id="@+id/layout_login_password"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <EditText
+                        android:id="@+id/password"
+                        android:layout_width="match_parent"
+                        android:layout_height="44dp"
+                        android:background="@drawable/yyh_edittext_bg"
+                        android:hint="请输入密码"
+                        android:inputType="textPassword"
+                        android:maxLength="18"
+                        android:paddingRight="70dp"
+                        android:textSize="14dp"
+                        tools:ignore="HardcodedText,RtlHardcoded,RtlSymmetry,SpUsage"
+                        tools:text="aaaaaaaaaaaaaaaaaaaaaaaaaaaaa" />
+
+                    <TextView
+                        android:id="@+id/retrieve_password"
+                        android:layout_width="wrap_content"
+                        android:layout_height="44dp"
+                        android:layout_gravity="right"
+                        android:gravity="center"
+                        android:text="找回密码"
+                        android:textColor="@color/yyh_blue"
+                        tools:ignore="HardcodedText,RtlHardcoded" />
+                </FrameLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <EditText
+                    android:id="@+id/edit_login_phone"
+                    android:layout_width="match_parent"
+                    android:layout_height="44dp"
+                    android:background="@drawable/yyh_edittext_bg"
+                    android:hint="仅支持中国大陆手机号"
+                    android:inputType="phone"
+                    android:maxLength="11"
+                    android:textSize="14dp"
+                    tools:alpha="0.3"
+                    tools:ignore="HardcodedText,SpUsage" />
+
+                <com.appchina.usersdk.CaptchaEditText
+                    android:id="@+id/edit_login_captcha"
+                    android:layout_width="match_parent"
+                    android:layout_height="44dp"/>
+            </LinearLayout>
+        </FrameLayout>
+
+        <com.appchina.usersdk.YYHVoiceCaptchaView
+            android:id="@+id/edit_login_voiceCaptcha"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"/>
+
+        <Button
+            android:id="@+id/login"
+            android:layout_width="match_parent"
+            android:layout_height="44dp"
+            android:layout_marginTop="30dp"
+            android:background="@drawable/yyh_btn_blue_bg"
+            android:text="登录"
+            android:textColor="@color/yyh_white"
+            android:textSize="14dp"
+            tools:ignore="HardcodedText,SpUsage" />
+
+        <TextView
+            android:id="@+id/text_login_fastLoginTips"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:gravity="center"
+            android:text="未注册的手机号码验证后自动创建汇汇账号"
+            android:textColor="@color/yyh_gray"
+            android:textSize="12dp"
+            tools:ignore="HardcodedText,SpUsage" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/gsou_login"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:paddingBottom="20dp"
+                android:paddingTop="20dp"
+                android:text="极速登录"
+                android:textColor="@color/yyh_blue"
+                tools:ignore="HardcodedText" />
+
+            <View
+                android:layout_width="1dp"
+                android:layout_height="12dp"
+                android:layout_gravity="center_vertical"
+                android:background="@color/yyh_gray" />
+
+            <TextView
+                android:id="@+id/regist"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:paddingBottom="20dp"
+                android:paddingTop="20dp"
+                android:text="邮箱注册"
+                android:textColor="@color/yyh_blue"
+                tools:ignore="HardcodedText" />
+
+            <View
+                android:layout_width="1dp"
+                android:layout_height="12dp"
+                android:layout_gravity="center_vertical"
+                android:background="@color/yyh_gray" />
+
+            <TextView
+                android:id="@+id/switchFastLogin"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:paddingBottom="20dp"
+                android:paddingTop="20dp"
+                android:text="手机号登录"
+                android:textColor="@color/yyh_blue"
+                tools:ignore="HardcodedText" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="250dp"
+            android:layout_height="match_parent"
+            android:layout_gravity="center_horizontal"
+            android:gravity="bottom"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <View
+                    android:layout_width="0dp"
+                    android:layout_height="0.5dp"
+                    android:layout_marginRight="8dp"
+                    android:layout_weight="1"
+                    android:background="@color/yyh_gray" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="其他登录方式"
+                    android:textColor="@color/yyh_gray"
+                    android:textSize="12dp"
+                    tools:ignore="SpUsage" />
+
+                <View
+                    android:layout_width="0dp"
+                    android:layout_height="0.5dp"
+                    android:layout_marginLeft="8dp"
+                    android:layout_weight="1"
+                    android:background="@color/yyh_gray" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_horizontal">
+
+                <ImageView
+                    android:id="@+id/weChatLogin"
+                    android:layout_width="47dp"
+                    android:layout_height="47dp"
+                    android:layout_marginBottom="16dp"
+                    android:layout_marginLeft="6dp"
+                    android:layout_marginRight="6dp"
+                    android:layout_marginTop="6dp"
+                    android:src="@drawable/yyh_wechat_login" />
+
+                <ImageView
+                    android:id="@+id/qqLogin"
+                    android:layout_width="47dp"
+                    android:layout_height="47dp"
+                    android:layout_marginBottom="16dp"
+                    android:layout_marginLeft="6dp"
+                    android:layout_marginRight="6dp"
+                    android:layout_marginTop="6dp"
+                    android:src="@drawable/yyh_qq_login" />
+
+                <ImageView
+                    android:id="@+id/weiBoLogin"
+                    android:layout_width="47dp"
+                    android:layout_height="47dp"
+                    android:layout_marginBottom="16dp"
+                    android:layout_marginLeft="6dp"
+                    android:layout_marginRight="6dp"
+                    android:layout_marginTop="6dp"
+                    android:src="@drawable/yyh_weibo_login" />
+
+                <ImageView
+                    android:id="@+id/facebookLogin"
+                    android:layout_width="47dp"
+                    android:layout_height="47dp"
+                    android:layout_marginBottom="16dp"
+                    android:layout_marginLeft="6dp"
+                    android:layout_marginRight="6dp"
+                    android:layout_marginTop="6dp"
+                    android:src="@drawable/yyh_facebook_login" />
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+</FrameLayout>

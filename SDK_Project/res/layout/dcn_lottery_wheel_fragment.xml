@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/dcn_lottery_view"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/dcn_lottery_bg_style_ver_1">
+
+    <ImageView
+        android:id="@+id/dcn_lottery_close"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/dcn_lottery_back" />
+
+    <ImageView
+        android:id="@+id/dcn_lottery_banner"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:scaleType="centerInside"
+        android:layout_below="@+id/dcn_lottery_close"
+        android:src="@drawable/dcn_lottery_banner_style_ver_1" />
+
+    <!-- 抽奖转盘 -->
+    <RelativeLayout
+        android:id="@+id/dcn_lottery_container"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/dcn_lottery_banner"> <!--按竖版设计,切换到横版时below dcn_lottery_wheel_close -->
+
+        <RelativeLayout
+            android:id="@+id/dcn_lottery_wheel_view"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true">
+
+            <com.downjoy.widget.LotteryWheelDisc
+                android:id="@+id/dcn_lottery_wheel_disc"
+                android:layout_width="260dp"
+                android:layout_height="260dp"
+                android:layout_centerHorizontal="true"
+                android:visibility="gone" />
+
+            <com.downjoy.widget.LotteryWheelLeaf
+                android:id="@+id/dcn_lottery_wheel_leaf"
+                android:layout_width="220dp"
+                android:layout_height="220dp"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="20dp"
+                android:visibility="gone" />
+
+            <ImageView
+                android:id="@+id/dcn_lottery_wheel_go"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:clickable="true"
+                android:src="@drawable/dcn_lottery_wheel_start"
+                android:visibility="gone" />
+        </RelativeLayout>
+
+        <!-- 抽奖次数 -->
+        <TextView
+            android:id="@+id/dcn_lottery_counts"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/dcn_lottery_wheel_view"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="5dp"
+            android:background="@drawable/dcn_shape_lottery_bg"
+            android:paddingBottom="5dp"
+            android:paddingLeft="25dp"
+            android:paddingRight="25dp"
+            android:paddingTop="5dp"
+            android:textColor="@color/dcn_white"
+            android:textSize="16sp"
+            android:visibility="gone" />
+    </RelativeLayout>
+
+    <!-- 抽奖结果 -->
+    <com.downjoy.widget.LotteryResult
+        android:id="@+id/dcn_lottery_result"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true" />
+
+    <!--中奖记录及其它 -->
+    <LinearLayout
+        android:id="@+id/dcn_lottery_layout_info"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:paddingTop="10dp"
+        android:visibility="gone"
+        android:layout_below="@+id/dcn_lottery_container"> <!-- 按竖版设计，切换到横版时放到banner下面 -->
+
+        <TextView
+            android:id="@+id/dcn_lottery_record_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="中奖名单"
+            android:textColor="@color/dcn_white"
+            android:textSize="16sp"
+            android:layout_gravity="center_horizontal"
+            android:gravity="center"
+            android:background="@drawable/dcn_lottery_record"
+            android:visibility="gone"
+            />
+        <ListView
+            android:id="@+id/dcn_lottery_record"
+            android:layout_width="match_parent"
+            android:layout_height="110dp"
+            android:layout_gravity="center_horizontal"
+            android:background="@drawable/dcn_shape_lottery_record_bg"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:padding="12dp"
+            android:divider="@android:color/transparent"
+            android:dividerHeight="3dp"
+            android:scrollbars="none"
+            android:fadingEdgeLength="0dp"
+            android:cacheColorHint="@android:color/transparent"
+            android:listSelector="@android:color/transparent"
+            android:visibility="gone"
+            >
+
+        </ListView>
+
+        <TextView
+            android:id="@+id/dcn_lottery_record_empty"
+            android:layout_width="match_parent"
+            android:layout_height="110dp"
+            android:layout_gravity="center_horizontal"
+            android:gravity="center"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:background="@drawable/dcn_shape_lottery_record_bg"
+            android:textSize="16dp"
+            android:textColor="#88ffffff"
+            android:paddingTop="8dp"
+            android:paddingBottom="8dp"
+            android:lineSpacingMultiplier="1.2"
+            android:visibility="gone"
+            />
+
+        <include
+            android:id="@+id/dcn_lottery_other"
+            layout="@layout/dcn_lottery_other"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="16dp" />
+    </LinearLayout>
+</RelativeLayout>

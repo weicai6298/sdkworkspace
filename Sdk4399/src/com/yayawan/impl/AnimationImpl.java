@@ -119,7 +119,8 @@ class LogoWindow {
 		}
 		Bitmap bitmap = BitmapFactory.decodeStream(istr);
 
-		iv.setBackgroundColor(Color.parseColor("#f7faf1"));
+//		iv.setBackgroundColor(Color.parseColor("#f7f7f1"));
+		iv.setBackgroundColor(Color.parseColor("#F6F6F6"));
 		iv.setImageBitmap(bitmap);
 		iv.setScaleType(ScaleType.CENTER);
 		rootview.addView(iv);

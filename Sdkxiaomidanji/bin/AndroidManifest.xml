@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    package="com.syhl.bydsj.mi"
+    package="com.syhl.qmdfh.mi"
     android:versionCode="1"
     android:versionName="1.0" >
 
@@ -39,22 +39,22 @@
       <!-- 手游互联配置 -->
      	 <meta-data
             android:name="app_id"
-            android:value="kk915584500" />
+            android:value="kk1459827000" />
         <meta-data
             android:name="isLandscape"
             android:value="true" />
         
         <meta-data
             android:name="AppID"
-            android:value="string2882303761517674774" />
+            android:value="string2882303761517702265" />
         
         <meta-data
             android:name="AppKey"
-            android:value="string5121767480774" />
+            android:value="string5171770270265" />
         
         <meta-data
             android:name="AppSecret"
-            android:value="bChAhYbdN7mvAKApIi68pA==" />
+            android:value="g8f1+/5KO5vfVbbEUXSnLg==" />
         
          <!-- 1有友盟  0没有 -->
         <meta-data

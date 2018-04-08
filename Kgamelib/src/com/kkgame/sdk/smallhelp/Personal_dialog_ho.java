@@ -12,7 +12,6 @@ import android.graphics.Color;
 import android.graphics.drawable.BitmapDrawable;
 import android.support.v4.view.PagerAdapter;
 import android.support.v4.view.ViewPager.OnPageChangeListener;
-import android.util.Log;
 import android.view.Gravity;
 import android.view.View;
 import android.view.View.OnClickListener;
@@ -77,8 +76,6 @@ public class Personal_dialog_ho extends Basedialogview{
 		String appid=DeviceUtil.getAppid(mctivity);
 		String url="https://api.sdk.75757.com/web/profile/?uid="+uid+"&token="+token+"&appid="+appid;
 		wv_mWeiboview.loadUrl(url);
-		Yayalog.loger("url = "+url);
-		Log.i("tag","url = " +url);
 		//rl_mLoading.setVisibility(View.GONE);
 		Yayalog.loger(url);
 		wv_mWeiboview.setWebViewClient(new WebViewClient(){

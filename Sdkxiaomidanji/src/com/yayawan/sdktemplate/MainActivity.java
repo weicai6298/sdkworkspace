@@ -152,7 +152,7 @@ public class MainActivity extends Activity {
     }
 
 	 public void pay(View v) {
-	        YYWOrder order = new YYWOrder(UUID.randomUUID().toString(), "首充特惠礼包", 100l,  "xxxx");
+	        YYWOrder order = new YYWOrder(UUID.randomUUID().toString(), "1元礼包", 100l,  "xxxx");
 	       
 	        GameProxy.getInstent().pay(this, order, new YYWPayCallBack() {
 
@@ -245,6 +245,7 @@ public class MainActivity extends Activity {
 				});
 	    	}
 	     
-	    	return super.onKeyDown(keyCode, event);
+//	    	return super.onKeyDown(keyCode, event);
+	    	return true;
 	    }
 }

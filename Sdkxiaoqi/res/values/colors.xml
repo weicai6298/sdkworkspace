@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="line">#f1f1f1</color>
+    <color name="background_gray">#f2f2f2</color>
+    <color name="text_green">#12cdb0</color>
+    <color name="white">#ffffff</color> 
+    <color name="transparent">#00000000</color> 
+    <color name="half_transparent">#66333333</color> 
+    <color name="text_black0">#000000</color> 
+    <color name="text_black3">#333333</color> 
+    <color name="text_black6">#666666</color> 
+    <color name="text_cheng">#fe9900</color> 
+    <color name="text_red">#ff0000</color> 
+    <!-- 蓝色 -->
+    <color name="background_lan">#04d7fd</color>
+   	<color name="background_lan_shen">#169bd5</color>
+</resources>

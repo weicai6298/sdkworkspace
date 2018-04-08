@@ -40,7 +40,6 @@ import com.kkgame.sdk.xml.Loginpo_listviewitem;
 import com.kkgame.sdk.xml.MachineFactory;
 import com.kkgame.sdkmain.AgentApp;
 import com.kkgame.utils.DeviceUtil;
-import com.kkgame.utils.Yayalog;
 
 public class Login_ho_dialog extends Basedialogview {
 
@@ -387,9 +386,11 @@ public class Login_ho_dialog extends Basedialogview {
 						return;
 					}
 					
+
 					LoginUtils loginUtils = new LoginUtils(mActivity,
 							login_ho_dialog, 0);
 					loginUtils.login(mName, mPassword);
+
 				}
 			}
 		});

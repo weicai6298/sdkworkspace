@@ -4,7 +4,6 @@ import android.annotation.SuppressLint;
 import android.app.Activity;
 import android.content.Context;
 import android.graphics.PixelFormat;
-import android.util.Log;
 import android.view.Display;
 import android.view.Gravity;
 import android.view.MotionEvent;
@@ -146,10 +145,8 @@ public class HelpActivty {
 		
 		public FloatView(Context context) {
 			super(context);
-//			setImageBitmap(GetAssetsutils.getImageFromAssetsFile(
-//					"yaya_yylogo.png", mActivity));
 			setImageBitmap(GetAssetsutils.getImageFromAssetsFile(
-					"yaya_huafei.png", mActivity));
+					"yaya_yylogo.png", mActivity));
 			// setImageResource(ResourceUtil.getDrawableId(mContext, "yylogo"));
 		}
 
@@ -298,6 +295,7 @@ public class HelpActivty {
 
 		private void onClick(View v) {
 			int id = v.getId();
+
 			// if (id == ResourceUtil.getId(mContext, "iv_floating_icon")) {
 			//YayaWan.stop(mActivity);
 			// 打开选择窗口

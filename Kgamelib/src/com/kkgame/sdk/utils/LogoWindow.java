@@ -71,11 +71,8 @@ public class LogoWindow {
 			switch (msg.what) {
 			case 1:
 				if (myview != null && params.x == 0) {
-//					myview.setImageBitmap(GetAssetsutils
-//							.getImageFromAssetsFile("yaya_yylogotouming.png",
-//									mactivity));
 					myview.setImageBitmap(GetAssetsutils
-							.getImageFromAssetsFile("yaya_huafeitouming.png",
+							.getImageFromAssetsFile("yaya_yylogotouming.png",
 									mactivity));
 				}
 			case 521:
@@ -126,10 +123,8 @@ public class LogoWindow {
 			myview.setLayoutParams(new LinearLayout.LayoutParams(machSize(100),
 					machSize(100)));
 
-//			myview.setImageBitmap(GetAssetsutils.getImageFromAssetsFile(
-//					"yaya_yylogo.png", mactivity));
 			myview.setImageBitmap(GetAssetsutils.getImageFromAssetsFile(
-					"yaya_huafei.png", mactivity));
+					"yaya_yylogo.png", mactivity));
 
 			myview.setOnTouchListener(new OnTouchListener() {
 
@@ -170,11 +165,8 @@ public class LogoWindow {
 						// wm.addView(myview, params);
 						// Yayalog.loger("我的图像的x"+myview.getX());
 
-//						myview.setImageBitmap(GetAssetsutils
-//								.getImageFromAssetsFile("yaya_yylogo.png",
-//										mactivity));
 						myview.setImageBitmap(GetAssetsutils
-								.getImageFromAssetsFile("yaya_huafei.png",
+								.getImageFromAssetsFile("yaya_yylogo.png",
 										mactivity));
 						break;
 
@@ -255,7 +247,7 @@ public class LogoWindow {
 
 					wm.updateViewLayout(myview, params);
 					myview.setImageBitmap(GetAssetsutils
-							.getImageFromAssetsFile("yaya_huafeitouming.png",
+							.getImageFromAssetsFile("yaya_yylogotouming.png",
 									mactivity));
 					// myview.startAnimation(alphaAnimation);
 

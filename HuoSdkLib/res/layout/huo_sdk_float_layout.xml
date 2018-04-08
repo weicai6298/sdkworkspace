@@ -12,7 +12,6 @@
         android:layout_centerVertical="true"
         android:maxHeight="58dp"
         android:maxWidth="58dp"
-        android:paddingLeft="5dip"
         android:adjustViewBounds="true"
         android:src="@drawable/huo_sdk_fload"/>
     

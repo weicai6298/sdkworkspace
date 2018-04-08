@@ -8,4 +8,7 @@
     <color name="huo_sdk_black2a">#2A2A2A</color>
     <color name="huo_sdk_orange">#FF8400</color>
     <color name="huo_sdk_gray7f">#7F7C7C</color>
+    <color name="huo_sdk_graycc">#cccccc</color>
+    <color name="huosdk_float_bg">#99000000</color>
+    <color name="huo_sdk_white">#ffffff</color>
 </resources>

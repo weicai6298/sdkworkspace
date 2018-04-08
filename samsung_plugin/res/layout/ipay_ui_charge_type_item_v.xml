@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/RelativeLayout1"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:gravity="center_vertical"
+    android:layout_marginBottom="@dimen/ipay_margin_10"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:id="@+id/rl_list_view_item"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/ipay_color_value_1"
+        android:clickable="false"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:id="@+id/iv_pay_type_icon"
+            android:layout_width="@dimen/ipay_margin_25"
+            android:layout_height="@dimen/ipay_margin_25"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/ipay_margin_15"
+            android:scaleType="fitCenter"
+            android:src="@drawable/ipay_icon_paytype_aibeibi" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/ipay_height_60"
+            android:layout_gravity="center_vertical"
+            android:layout_toLeftOf="@+id/ipay_payType_check"
+            android:layout_toRightOf="@+id/iv_pay_type_icon"
+            android:gravity="center_vertical"
+            android:orientation="vertical"
+            android:layout_marginRight="@dimen/ipay_margin_15"
+            android:paddingLeft="@dimen/ipay_margin_15">
+
+            <LinearLayout
+                android:id="@+id/ll_pay_type_item_top"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/tv_pay_type_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="TextView"
+                    android:textColor="@color/ipay_color_value_6"
+                    android:textSize="@dimen/ipay_text_size_15" />
+                <TextView
+                    android:id="@+id/btn_charge"
+                    android:layout_width="wrap_content"
+                    android:layout_height="@dimen/ipay_height_19"
+                    android:layout_marginLeft="@dimen/ipay_margin_5"
+                    android:background="@drawable/ipay_common_btn_bg_color"
+                    android:paddingLeft="@dimen/ipay_margin_5"
+                    android:paddingRight="@dimen/ipay_margin_5"
+                    android:text="@string/ipay_charge"
+                    android:gravity="center"
+                    android:textColor="@color/ipay_color_value_1"
+                    android:textSize="@dimen/ipay_text_size_11" />
+                <TextView
+                    android:id="@+id/tv_balance_notEnough"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/ipay_margin_5"
+                    android:padding="@dimen/ipay_margin_2"
+                    android:text=""
+                    android:textColor="@color/ipay_color_value_4"
+                    android:textSize="@dimen/ipay_text_size_10"
+                    />
+                <TextView
+                    android:id="@+id/tv_pay_type_discount"
+                    android:layout_width="wrap_content"
+                    android:layout_height="@dimen/ipay_height_14"
+                    android:layout_marginLeft="@dimen/ipay_margin_5"
+                    android:background="@drawable/ipay_fillet_border_color_8"
+                    android:paddingLeft="2dp"
+                    android:paddingRight="2dp"
+                    android:textColor="@color/ipay_color_value_1"
+                    android:textSize="@dimen/ipay_text_size_10"
+                    android:gravity="center"
+                    />
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/tv_pay_type_msg"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="3dp"
+                android:singleLine="true"
+                android:textColor="@color/ipay_color_value_4"
+                android:textSize="@dimen/ipay_text_size_10" />
+
+        </LinearLayout>
+
+        <CheckBox
+            android:id="@+id/ipay_payType_check"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerInParent="true"
+            android:layout_marginRight="@dimen/ipay_margin_15"
+            android:clickable="false"
+            android:focusable="false"
+            android:focusableInTouchMode="false"
+            android:button="@drawable/ipay_checkbox_button_bg"/>
+
+    </RelativeLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/ipay_divid_line_h"
+        android:background="@color/ipay_color_value_3_1" />
+
+</LinearLayout>

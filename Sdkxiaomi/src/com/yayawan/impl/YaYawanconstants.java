@@ -303,11 +303,17 @@ public class YaYawanconstants {
 	 * 支付成功
 	 */
 	public static void paySuce() {
-		// 支付成功
-		if (YYWMain.mPayCallBack != null) {
-			YYWMain.mPayCallBack.onPaySuccess(YYWMain.mUser, YYWMain.mOrder,
-					"success");
-		}
+		mActivity.runOnUiThread(new Runnable() {
+			
+			@Override
+			public void run() {
+				// 支付成功
+				if (YYWMain.mPayCallBack != null) {
+					YYWMain.mPayCallBack.onPaySuccess(YYWMain.mUser, YYWMain.mOrder,
+							"success");
+				}
+			}
+		});
 	}
 
 	public static void payFail() {

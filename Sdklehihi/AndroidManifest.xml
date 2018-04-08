@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    package="com.syhl.tulongll.lhh"
+    package="com.hulian.mystore.lhh"
     android:versionCode="1"
     android:versionName="1.0" >
 
@@ -17,8 +17,9 @@
     <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
     <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW" />
     <uses-permission android:name="android.permission.GET_TASKS" />
-     <uses-permission android:name="andorid.permission.MONUN_UNMOUNT_FILESYSTEMS" />
-     <uses-permission android:name="android.permission.CALL_PHONE" />
+    <uses-permission android:name="andorid.permission.MONUN_UNMOUNT_FILESYSTEMS" />
+    <uses-permission android:name="android.permission.CALL_PHONE" />
+    <uses-permission android:name="android.permission.VIBRATE" />
 
     <application
         android:name="com.yayawan.impl.YYApplication"
@@ -26,54 +27,64 @@
         android:theme="@android:style/Theme.NoTitleBar.Fullscreen" >
         <activity
             android:name="com.yayawan.sdktemplate.MainActivity"
-            android:screenOrientation="landscape"
-            android:label="app_name" >
+            android:configChanges="keyboardHidden|navigation|orientation|screenSize"
+            android:label="app_name"
+            android:screenOrientation="landscape" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-      
-        
-      <!-- 手游互联配置 -->
-     	 <meta-data
+
+        <!-- 手游互联配置 -->
+        <meta-data
             android:name="app_id"
-            android:value="kk1475687178" />
+            android:value="kk2693519949" />
         <meta-data
             android:name="isLandscape"
             android:value="true" />
-        
-         <!-- sdk需要的配置 start -->
-         
 
-      <meta-data
+        <!-- sdk需要的配置 start -->
+
+        <meta-data
             android:name="pid"
-            android:value="string12285" />
-      <meta-data
+            android:value="string12967" />
+        <meta-data
             android:name="appkey"
-            android:value="206f3228c652015c9b9aea5146126dfe" />
+            android:value="9d7376182f3ecd93193eef512d2905ee" />
+        <meta-data
+            android:name="lhh_debug"
+            android:value="string0" />
 
         <activity
             android:name="com.zqhy.sdk.ui.H5WebActivity"
-            android:configChanges="orientation|keyboardHidden|navigation"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:exported="false"
             android:launchMode="singleTask"
             android:screenOrientation="behind"
             android:theme="@style/CY_DialogTheme"
             android:windowSoftInputMode="adjustResize|stateHidden" />
-
         <activity
-            android:name="com.zqhy.sdk.ui.PersonalCenterActivity"
-            android:configChanges="orientation|keyboardHidden|navigation"
+            android:name="com.zqhy.sdk.ui.HomeWebActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
             android:launchMode="singleTask"
-            android:screenOrientation="portrait" />
+            android:screenOrientation="portrait"
+            android:theme="@style/CY_DialogTheme"
+            android:windowSoftInputMode="adjustResize|stateHidden" />
+        <activity
+            android:name="com.zqhy.sdk.ui.FloatActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:launchMode="singleTask"
+            android:screenOrientation="behind"
+            android:theme="@style/zq_sdk_activity_transparent"
+            android:windowSoftInputMode="adjustResize|stateHidden" />
 
-        <receiver android:name="com.zqhy.sdk.pay.wechat.AppReciver_zqhy">
+        <receiver android:name="com.zqhy.sdk.pay.wechat.AppReciver_zqhy" >
             <intent-filter>
                 <action android:name="com.zqhy.wxpay.plugin.recive" />
             </intent-filter>
         </receiver>
-
 
         <!-- alipay sdk begin -->
         <activity
@@ -89,24 +100,13 @@
             android:screenOrientation="behind" />
         <!-- alipay sdk end -->
 
-        <!-- 适配 Android 7.0 authorities 自行添加 建议：
-             authorities="你的包名.file.fileprovider" -->
-        <!--
-         <provider
-            android:name="android.support.v4.content.FileProvider"
-            android:authorities="string_package.flie.fileprovider"
-            android:exported="false"
-            android:grantUriPermissions="true">
-            <meta-data
-                android:name="android.support.FILE_PROVIDER_PATHS"
-                android:resource="@xml/file_paths" />
-        </provider>
-             -->
+        <service android:name="com.lzy.okserver.download.DownloadService" />
+
         <provider
             android:name="android.support.v4.content.FileProvider"
-            android:authorities="string_package.flie.fileprovider"
+            android:authorities="string_package.file.fileprovider"
             android:exported="false"
-            android:grantUriPermissions="true">
+            android:grantUriPermissions="true" >
             <meta-data
                 android:name="android.support.FILE_PROVIDER_PATHS"
                 android:resource="@xml/file_paths" />
@@ -114,11 +114,9 @@
 
         <meta-data
             android:name="sdk_version"
-            android:value="7.1" />
-
+            android:value="8.0" />
         <!-- sdk需要的配置 end -->
-    
+
     </application>
 
 </manifest>
-

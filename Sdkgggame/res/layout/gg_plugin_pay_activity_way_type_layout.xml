@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/c_ff"
+    >
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:text="请选择支付方式"
+        android:gravity="center"
+        android:layout_marginBottom="60dp"
+        />
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="支付宝"
+        android:gravity="center_horizontal"
+        android:textSize="20sp"
+        android:padding="10dp"
+        android:onClick="aliPay"
+        />
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="微信"
+        android:gravity="center_horizontal"
+        android:textSize="20sp"
+        android:padding="10dp"
+        android:onClick="wechatPay"
+        />
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="手机qq"
+        android:gravity="center_horizontal"
+        android:textSize="20sp"
+        android:padding="10dp"
+        android:onClick="qqPay"
+        />
+
+</LinearLayout>

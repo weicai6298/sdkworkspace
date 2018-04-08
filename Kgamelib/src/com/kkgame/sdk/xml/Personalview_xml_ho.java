@@ -1,5 +1,7 @@
 package com.kkgame.sdk.xml;
 
+
+
 import android.app.Activity;
 import android.graphics.Color;
 import android.view.Gravity;
@@ -179,11 +181,13 @@ public class Personalview_xml_ho extends Basexml implements Layoutxml {
 		ll_username.addView(ll_usernamelist1);
 		ll_username.addView(ll_usernamelist2);
 
+		
 		// 余额列表
-		LinearLayout ll_yue = new LinearLayout(mContext);
-		machineFactory.MachineView(ll_yue, 400, MATCH_PARENT, mLinearLayout);
-		ll_yue.setOrientation(LinearLayout.VERTICAL);
-
+				LinearLayout ll_yue = new LinearLayout(mContext);
+				machineFactory.MachineView(ll_yue, 400, MATCH_PARENT,
+						mLinearLayout);
+				ll_yue.setOrientation(LinearLayout.VERTICAL);
+				
 		LinearLayout ll_balance = new LinearLayout(mContext);
 		machineFactory.MachineView(ll_balance, MATCH_PARENT, WRAP_CONTENT,
 				mLinearLayout);
@@ -195,19 +199,22 @@ public class Personalview_xml_ho extends Basexml implements Layoutxml {
 		machineFactory.MachineTextView(tv_mBalance, WRAP_CONTENT, WRAP_CONTENT,
 				0, "$300", 26, mLinearLayout, 10, 0, 0, 0);
 		tv_mBalance.setTextColor(Color.parseColor("#ec7600"));
-
+		
+		
+		
 		// TODO
 		ll_balance.addView(tv_balance1);
 		ll_balance.addView(tv_mBalance);
 
+		
 		tv_mChongzhi = new TextView(mContext);
-		machineFactory.MachineTextView(tv_mChongzhi, WRAP_CONTENT,
-				WRAP_CONTENT, 0, "点击充值丫丫币", 25, mLinearLayout, 0, 10, 0, 0);
+		machineFactory.MachineTextView(tv_mChongzhi, WRAP_CONTENT, WRAP_CONTENT,
+				0, "点击充值丫丫币", 25, mLinearLayout, 0, 10, 0, 0);
 		tv_mChongzhi.setTextColor(Color.parseColor("#ec7600"));
 
 		ll_yue.addView(ll_balance);
 		ll_yue.addView(tv_mChongzhi);
-
+		
 		// TODO
 		ll_perdetail.addView(ll_head);
 		ll_perdetail.addView(ll_username);
@@ -327,9 +334,11 @@ public class Personalview_xml_ho extends Basexml implements Layoutxml {
 		LinearLayout ll_funtionline2 = new LinearLayout(mActivity);
 		machineFactory.MachineView(ll_funtionline2, MATCH_PARENT, 120,
 				mLinearLayout, 2, funtionmaginbut);
-		// ll_funtionline2.setGravity(Gravity.CENTER);
+		//ll_funtionline2.setGravity(Gravity.CENTER);
 		ll_funtionline2.setOrientation(LinearLayout.HORIZONTAL);
 
+		
+		
 		ll_mAboutus = new LinearLayout(mContext);
 		machineFactory.MachineView(ll_mAboutus, 0, MATCH_PARENT, 1,
 				mLinearLayout);
@@ -346,27 +355,31 @@ public class Personalview_xml_ho extends Basexml implements Layoutxml {
 
 		ll_mAboutus.addView(iv_mAboutus);
 		ll_mAboutus.addView(tv_mAboutus);
-
+		
+		
+		
 		ll_mRealNameAuthentication = new LinearLayout(mContext);
-		machineFactory.MachineView(ll_mRealNameAuthentication, 0, MATCH_PARENT,
-				1, mLinearLayout);
+		machineFactory.MachineView(ll_mRealNameAuthentication, 0, MATCH_PARENT, 1,
+				mLinearLayout);
 		ll_mRealNameAuthentication.setGravity(Gravity.CENTER);
 		ll_mRealNameAuthentication.setOrientation(LinearLayout.VERTICAL);
 
 		ImageView iv_mRealNameAuthentication = new ImageView(mActivity);
-		machineFactory.MachineView(iv_mRealNameAuthentication, 80, 80,
-				mLinearLayout);
-		iv_mRealNameAuthentication.setImageBitmap(GetAssetsutils
-				.getImageFromAssetsFile("yaya_certification.png", mActivity));
+		machineFactory.MachineView(iv_mRealNameAuthentication, 80, 80, mLinearLayout);
+		iv_mRealNameAuthentication.setImageBitmap(GetAssetsutils.getImageFromAssetsFile(
+				"yaya_certification.png", mActivity));
 		tv_mRealNameAuthentication = new TextView(mContext);
-		machineFactory.MachineTextView(tv_mRealNameAuthentication,
-				WRAP_CONTENT, WRAP_CONTENT, 0, "实名认证", 24, mLinearLayout, 3, 3,
-				0, 0);
+		machineFactory.MachineTextView(tv_mRealNameAuthentication, WRAP_CONTENT, WRAP_CONTENT,
+				0, "实名认证", 24, mLinearLayout, 3, 3, 0, 0);
 		tv_mRealNameAuthentication.setTextColor(Color.parseColor("#fc3a6d"));
 
 		ll_mRealNameAuthentication.addView(iv_mRealNameAuthentication);
 		ll_mRealNameAuthentication.addView(tv_mRealNameAuthentication);
-
+		
+		
+		
+		
+		
 		ll_mResetPhone = new LinearLayout(mContext);
 		machineFactory.MachineView(ll_mResetPhone, 0, MATCH_PARENT, 1,
 				mLinearLayout);
@@ -378,11 +391,13 @@ public class Personalview_xml_ho extends Basexml implements Layoutxml {
 		iv_mResetPhone.setImageBitmap(GetAssetsutils.getImageFromAssetsFile(
 				"yaya_bindphone.png", mActivity));
 		TextView tv_mResetPhone = new TextView(mContext);
-		machineFactory.MachineTextView(tv_mResetPhone, WRAP_CONTENT,
-				WRAP_CONTENT, 0, "更换手机", 24, mLinearLayout, 0, 3, 0, 0);
+		machineFactory.MachineTextView(tv_mResetPhone, WRAP_CONTENT, WRAP_CONTENT,
+				0, "更换手机", 24, mLinearLayout, 0, 3, 0, 0);
 
 		ll_mResetPhone.addView(iv_mResetPhone);
 		ll_mResetPhone.addView(tv_mResetPhone);
+		
+		
 
 		// 占位1
 		ll_zhanwei1 = new LinearLayout(mContext);
@@ -729,8 +744,7 @@ public class Personalview_xml_ho extends Basexml implements Layoutxml {
 		return tv_mRealNameAuthentication;
 	}
 
-	public void setTv_mRealNameAuthentication(
-			TextView tv_mRealNameAuthentication) {
+	public void setTv_mRealNameAuthentication(TextView tv_mRealNameAuthentication) {
 		this.tv_mRealNameAuthentication = tv_mRealNameAuthentication;
 	}
 

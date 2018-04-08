@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    style="@style/gfan_no_padding_bg"
+    android:orientation="vertical"
+    tools:context="com.mappn.sdk.uc.PsdRetrievalActivity">
+
+    <TextView
+        style="@style/gfan_title_style"
+        android:text="找回密码" />
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="@dimen/gfan_uc_bg_title_margin_top"
+        android:paddingLeft="@dimen/gfan_uc_bg_padding"
+        android:paddingRight="@dimen/gfan_uc_bg_padding">
+
+        <include layout="@layout/gfan_psd_retrieval_view" />
+
+    </FrameLayout>
+</LinearLayout>

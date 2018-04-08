@@ -1,31 +1,36 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    package="com.szyp.goldfish6s.byfb.uc"
+    package="com.syhl.bydsj.aligames"
     android:versionCode="1"
     android:versionName="1.0" >
 
     <uses-sdk
         android:minSdkVersion="8"
         android:targetSdkVersion="19" />
-
-    <uses-permission android:name="android.permission.INTERNET" />
-    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
-    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
-    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
-    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
-    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
-    <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW" />
-    <uses-permission android:name="android.permission.GET_TASKS" />
     
-    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+   <supports-screens
+        android:anyDensity="true"
+        android:largeScreens="true"
+        android:normalScreens="true"
+        android:resizeable="true"
+        android:smallScreens="true" />
+    
+     <uses-permission android:name="android.permission.INTERNET" />
+	<uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+	<uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+	<uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+	<uses-permission android:name="android.permission.READ_PHONE_STATE" />
+	<uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
 	<uses-permission android:name="android.permission.SEND_SMS" />
 	<uses-permission android:name="android.permission.GET_TASKS" />
+	<uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW" />
 	<uses-permission android:name="android.permission.VIBRATE" />
+    
 	<uses-permission android:name="android.permission.AUTHENTICATE_ACCOUNTS" />
 	<uses-permission android:name="android.permission.GET_ACCOUNTS" />
 	<uses-permission android:name="android.permission.USE_CREDENTIALS" />
-		<uses-permission android:name="android.webkit.permission.PLUGIN" />
+	<uses-permission android:name="android.webkit.permission.PLUGIN" />
 	<uses-permission android:name="android.permission.CHANGE_NETWORK_STATE" /> 
      <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
 	
@@ -48,16 +53,20 @@
       <!-- 手游互联配置 -->
      	 <meta-data
             android:name="app_id"
-            android:value="kk554325328" />
+            android:value="kk2890408428" />
         <meta-data
             android:name="isLandscape"
             android:value="true" />
         
+        <!-- alipay sdk begin -->
+        
+         <meta-data
+            android:name="gameId"
+            android:value="string920796" />
          <meta-data
             android:name="gamename"
-            android:value="街机捕鱼" />
-
-         <!-- UC支付SDK声明 -->
+            android:value="天天玩捕鱼" />
+        <!-- UC支付SDK声明 -->
         <activity
             android:name="cn.uc.paysdk.SDKActivity"
             android:configChanges="keyboardHidden|orientation|screenSize" 
@@ -72,7 +81,7 @@
            android:process=":TProcess">
         </service> 
 
-        <activity android:name="cn.uc.gamesdk.sa.activity.ProxyActivity" 
+        <activity android:name="cn.uc.gamesdk.activity.ProxyActivity" 
             android:configChanges="keyboardHidden|orientation|screenSize"
             android:label="@string/app_name"
             android:theme="@android:style/Theme.Translucent.NoTitleBar"
@@ -85,10 +94,12 @@
                 <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
         </activity>
+
         <!-- End of UC支付SDK声明 -->
-        
-         <!-- 支付宝声明 -->
-        <activity
+         
+
+       <!-- 支付宝声明 -->
+       <activity
             android:name="com.alipay.sdk.app.H5PayActivity"
             android:configChanges="orientation|keyboardHidden|navigation"
             android:exported="false"
@@ -107,22 +118,11 @@
              android:screenOrientation="behind"
              android:windowSoftInputMode="adjustResize|stateHidden">
          </activity>
- 
-         <!-- now 微信SDK支付2.x相关添加开始 -->
-        <activity android:name="com.ipaynow.wechatpay.plugin.inner_plugin.wechat_plugin.activity.WeChatNotifyActivity"
-            android:configChanges="keyboardHidden|orientation|screenSize"
-            android:screenOrientation="behind"
-            android:theme="@android:style/Theme.Translucent" >
-        </activity>
-        <!-- now 微信SDK支付2.x相关添加结束 -->
-        
-    </application>
- <supports-screens
-        android:anyDensity="true"
-        android:largeScreens="true"
-        android:normalScreens="true"
-        android:resizeable="true"
-        android:smallScreens="true" />
+       
+       
+
     
+    </application>
+
 </manifest>
 

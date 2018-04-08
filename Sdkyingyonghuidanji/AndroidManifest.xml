@@ -1,0 +1,172 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.yayawan.sdktemplate"
+    android:versionCode="1"
+    android:versionName="1.0" >
+
+    <uses-sdk
+        android:minSdkVersion="8"
+        android:targetSdkVersion="19" />
+
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW" />
+    
+
+
+    <!-- common -->
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.CHANGE_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.GET_TASKS" /> <!-- 定位 -->
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" /> <!-- 银联3.3.3添加权限  支持NFC的手机不加这俩权限就会崩溃，不提示 -->
+    <uses-permission android:name="android.permission.NFC" />
+
+    <uses-feature android:name="android.hardware.nfc.hce" /> <!-- 银联3.3.3添加权限 -->
+    <uses-permission android:name="android.permission.RECORD_AUDIO" />
+    <uses-permission android:name="android.permission.MODIFY_AUDIO_SETTINGS" />
+    <uses-permission android:name="org.simalliance.openmobileapi.SMARTCARD" />
+    
+    <application
+        android:name="com.yayawan.impl.YYApplication"
+        android:allowBackup="true"
+        android:theme="@android:style/Theme.NoTitleBar.Fullscreen" >
+        <activity
+            android:name="com.yayawan.sdktemplate.MainActivity"
+            android:configChanges="keyboardHidden|navigation|orientation|screenSize"
+            android:label="app_name" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+      
+        
+      <!-- 手游互联配置 -->
+     	 <meta-data
+            android:name="app_id"
+            android:value="kk2515665847" />
+        <meta-data
+            android:name="isLandscape"
+            android:value="true" />
+        
+         <meta-data
+            android:name="yyh_appid"
+            android:value="string5002423864" />
+          <meta-data
+            android:name="yyh_privateKey"
+            android:value="MIICXwIBAAKBgQC8WeIUPQPF8P6POfuyC6dbAVGZQ/zcc5yGG2BWWNJKTwalGk6ajIL1UGEFiJF78huf+pYEnfQsYHuPOHg7huNz52tznb+FfITqrjvTHD+tMX3bvpXnokQMmBHg4Jz/2u7Qqmar0hE5kWhPfCWDbyqVZ+7cMCozTodvFZMAAc0TCQIDAQABAoGBAK2t9FrVKHWOFC3eOcmkFV5FiQjbOH/P27WN6Pe2T7NVy7rS10iL6PZseAqyM/Um+3I5j7wSKuYA0e7vE29QosrYz7C0st3w/Elyuqx7lT1OituT3+cmq1dPxV9Xw0IPFQgRP2pDrgwT1V2t7plRCHEllw15yC7oACZsxN3tstFBAkEA3UkDTAhOinof5PXIYDNkwUbZn9S0EJi32PUqskECkTPIsXxEWTo5EtI2p3i0+q8tL/Qn2bDixnDa6/4rAuQt/wJBANnmNgLOYj1eYwVxjyXGgEWdg7fixeAUIBpsjwRksPWWVSVHal+XSoA09rlgQO9KH27HC0tVjvR4Y9lrTmBfTvcCQQCWuSecvz+4BKz6yAqetALZvwd2XWv0rgDzrzJQzgUQoAQAGFN5rzW2wyZk9cvXwD/4HMaT+W7NmYsUGUB0rLVDAkEAgQKOI+cxvwftNMHhcQov1AfIfs0jPuJrh3mSy5UaOK2DSAkab/JRR8sT8PmOOJ74MUxj4XyMoS3OYGHqC6EiTQJBALYPZW1uvdNeeUP1w8C14xWzkFCjLviTNV9vBHhx1BCgEvcgqooDjdTQtdf1rJtpfO7+uYOKf00kO1R14y7wC6Q=" />
+           <meta-data
+            android:name="yyh_publicKey"
+            android:value="MIGfMA0GCSqGSIb3DQEBAQUAA4GNADCBiQKBgQCVEu0XR1n30M+1nBXnn/MF6q7zkMHHdoNVGEHb5zrB512pB/J63F7hdkfDaEVPlkeLdlwPj/+J1P94o3APOq3vvpBH9//Y9p/DlHNTQmFasfTpRBilPJqBcHpm5B3n9sJJ/iHb53hY77ObzrwSGTVhjz6m1J/j/kblBQfqUjI6RwIDAQAB" />
+        
+        <meta-data
+            android:name="yyh_loginid"
+            android:value="string13350" />
+        
+        <meta-data
+            android:name="yyh_loginkey"
+            android:value="v4pdq4286w9ydq84" />
+           
+          <activity
+            android:name="com.appchina.usersdk.YYHSplashActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize" />
+        <activity
+            android:name="com.appchina.usersdk.YYHLoginActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:theme="@style/YYHDialogTheme" />
+        <activity
+            android:name="com.appchina.usersdk.YYHAccountCenterActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:theme="@style/YYHDialogTheme" />
+        <activity
+            android:name="com.appchina.usersdk.YYHWebActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:theme="@style/YYHDialogTheme" />
+
+        <service
+            android:name="com.appchina.usersdk.YYHMessageService"
+            android:exported="false" />
+        <!-- 微支付SDK界面 -->
+        <activity
+            android:name="com.iapppay.ui.activity.ServiceCenterActivity"
+            android:configChanges="screenSize|orientation|keyboard|navigation|layoutDirection"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar" /> <!-- Now Weixin2.0.0 -->
+        <activity
+            android:name="com.ipaynow.wechatpay.plugin.inner_plugin.wechat_plugin.activity.WeChatNotifyActivity"
+            android:configChanges="screenSize|orientation|keyboard|navigation|layoutDirection"
+            android:theme="@android:style/Theme.Translucent" >
+        </activity> <!-- Now Weixin end -->
+        <!-- 收银台-普通 -->
+        <activity
+            android:name="com.iapppay.ui.activity.normalpay.PayHubActivity"
+            android:configChanges="screenSize|orientation|keyboard|navigation|layoutDirection"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar" >
+        </activity> <!-- 选择充值金额界面 -->
+        <activity
+            android:name="com.iapppay.ui.activity.SelectAmountActivity"
+            android:configChanges="screenSize|orientation|keyboard|navigation|layoutDirection"
+            android:launchMode="singleTask"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar" >
+        </activity>
+        <activity
+            android:name="com.iapppay.ui.activity.normalpay.ChargeActivity"
+            android:configChanges="screenSize|orientation|keyboard|navigation|layoutDirection"
+            android:launchMode="singleTask"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar" >
+        </activity>
+        <activity
+            android:name="com.iapppay.pay.channel.weixinpay.WeixinWapPayActivity"
+            android:configChanges="screenSize|orientation|keyboard|navigation|layoutDirection"
+            android:theme="@android:style/Theme.Translucent" />
+        <activity
+            android:name="com.iapppay.pay.channel.weixinpay.NowWeixinActivity"
+            android:configChanges="screenSize|orientation|keyboard|navigation|layoutDirection"
+            android:theme="@android:style/Theme.Translucent" /> <!-- 游戏卡和话费卡界面 -->
+        <activity
+            android:name="com.iapppay.pay.channel.gamepay.GamepayActivity"
+            android:configChanges="screenSize|orientation|keyboard|navigation|layoutDirection"
+            android:launchMode="singleTask"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar" >
+        </activity> <!-- 银联支付结果返回 -->
+        <activity
+            android:name="com.iapppay.pay.channel.unionpay.UpPayResultActivity"
+            android:configChanges="orientation|keyboardHidden"
+            android:theme="@android:style/Theme.Translucent" /> <!-- 银联3.3.3 start -->
+        <uses-library
+            android:name="org.simalliance.openmobileapi"
+            android:required="false" />
+
+        <activity
+            android:name="com.unionpay.uppay.PayActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:excludeFromRecents="true"
+            android:screenOrientation="portrait" /> <!-- 银联3.3.3 end -->
+        <!-- alipay sdk begin (新的支付宝) -->
+        <activity
+            android:name="com.alipay.sdk.app.H5PayActivity"
+            android:configChanges="orientation|keyboardHidden|navigation"
+            android:exported="false"
+            android:screenOrientation="behind"
+            android:windowSoftInputMode="adjustResize|stateHidden" >
+        </activity> <!-- alipay sdk end -->
+        <!-- 财付通wap start -->
+        <activity
+            android:name="com.iapppay.pay.channel.tenpay.wap.TenpayWapPayActivity"
+            android:configChanges="screenSize|orientation|keyboard|navigation|layoutDirection"
+            android:theme="@android:style/Theme.Translucent" />
+        <activity
+            android:name="com.iapppay.pay.channel.tenpay.wap.WebActivity"
+            android:configChanges="screenSize|orientation|keyboard|navigation|layoutDirection"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar" >
+        </activity>
+    
+    </application>
+
+</manifest>
+

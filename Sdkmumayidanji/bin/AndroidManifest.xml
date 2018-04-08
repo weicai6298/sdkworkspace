@@ -59,27 +59,26 @@
         <!-- 手游互联配置 -->
         <meta-data
             android:name="app_id"
-            android:value="kk1465030061" />
+            android:value="kk2957110051" />
         <meta-data
             android:name="isLandscape"
             android:value="true" />
         <meta-data
             android:name="appkey"
-            android:value="50137c387b340ec4NzCjpK1k106FWf2kPEonzlfkkDv1iEHosjJdc7vmCsVD7bNXWFTJ0w" />
+            android:value="3b803cad8a2701550ZQUNObZO25Bjx9DcLoh7Em6BBBdcRDLe3J2l8B6j2frGgEgf62ukw" />
         <meta-data
             android:name="gamename"
-            android:value="捕鱼侠3D" />
+            android:value="我的便利店" />
 
-        <!--SDK 接入 需要copy 的配置    start-->
+      <!--SDK 接入 需要copy 的配置    start-->
 
         <activity
             android:name="com.mumayi.Proxy"
             android:configChanges="orientation|keyboardHidden|screenSize" />
-
+ <activity android:name="com.zeus.ZeusActivityForStandard"/>
         <service android:name="com.mumayi.down.service.DownService" />
         <service android:name="com.mumayi.paymentmain.ui.PaymentCenterDownLoadService" />
         <service android:name="com.mumayi.paymentuserinfo.MMYService" />
-
 
         <service
             android:name="com.baidu.location.f"

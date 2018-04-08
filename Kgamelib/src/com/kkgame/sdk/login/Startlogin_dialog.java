@@ -70,6 +70,7 @@ public class Startlogin_dialog extends Basedialogview {
 	 * 打开登录对话框
 	 */
 	private void startlogin() {
+
 		dialogDismiss();
 		Login_ho_dialog login_ho_dialog = new Login_ho_dialog(mActivity);
 		login_ho_dialog.dialogShow();
@@ -185,6 +186,7 @@ public class Startlogin_dialog extends Basedialogview {
 			startlogin();
 			return;
 		}
+
 		mNames = new ArrayList<String>();
 		initDBData();
 

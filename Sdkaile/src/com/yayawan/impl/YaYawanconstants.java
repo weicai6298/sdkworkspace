@@ -205,19 +205,19 @@ public class YaYawanconstants {
         payParam.setCp_order_id(morderid);
         payParam.setProduct_price(Float.parseFloat(money));
         payParam.setProduct_count(1);
-        if(YYWMain.mOrder.goods.equals("yb601")){
-			YYWMain.mOrder.goods = "60钻石";
-		}else if(YYWMain.mOrder.goods.equals("yb3001")){
-			YYWMain.mOrder.goods = "300钻石";
-		}else if(YYWMain.mOrder.goods.equals("yb9801")){
-			YYWMain.mOrder.goods = "980钻石";
-		}else if(YYWMain.mOrder.goods.equals("yb19801")){
-			YYWMain.mOrder.goods = "1980钻石";
-		}else if(YYWMain.mOrder.goods.equals("yb32801")){
-			YYWMain.mOrder.goods = "3280钻石";
-		}else if(YYWMain.mOrder.goods.equals("yb64801")){
-			YYWMain.mOrder.goods = "6480钻石";
-		}
+//        if(YYWMain.mOrder.goods.equals("yb601")){
+//			YYWMain.mOrder.goods = "60钻石";
+//		}else if(YYWMain.mOrder.goods.equals("yb3001")){
+//			YYWMain.mOrder.goods = "300钻石";
+//		}else if(YYWMain.mOrder.goods.equals("yb9801")){
+//			YYWMain.mOrder.goods = "980钻石";
+//		}else if(YYWMain.mOrder.goods.equals("yb19801")){
+//			YYWMain.mOrder.goods = "1980钻石";
+//		}else if(YYWMain.mOrder.goods.equals("yb32801")){
+//			YYWMain.mOrder.goods = "3280钻石";
+//		}else if(YYWMain.mOrder.goods.equals("yb64801")){
+//			YYWMain.mOrder.goods = "6480钻石";
+//		}
         payParam.setProduct_id("s_"+YYWMain.mOrder.goods);
         payParam.setProduct_name(YYWMain.mOrder.goods);
         payParam.setProduct_desc(YYWMain.mOrder.goods);

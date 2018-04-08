@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.hulian.mystore.qmdy"
+    android:versionCode="1"
+    android:versionName="1.0" >
+
+    <uses-sdk
+        android:minSdkVersion="8"
+        android:targetSdkVersion="19" />
+
+    <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW" />
+    <uses-permission android:name="android.permission.GET_TASKS" />
+
+    <!-- 网络访问权限 -->
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <!-- 往存储中读写数据的权限 -->
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.MOUNT_UNMOUNT_FILESYSTEMS" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <!-- 手机状态权限 -->
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE" />
+    <!-- 定位状态权限 -->
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+
+    <application
+        android:name="com.yayawan.impl.YYApplication"
+        android:allowBackup="true"
+        android:theme="@android:style/Theme.NoTitleBar.Fullscreen" >
+        <activity
+            android:name="com.yayawan.sdktemplate.MainActivity"
+            android:configChanges="keyboardHidden|navigation|orientation|screenSize"
+            android:label="app_name" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <!-- 手游互联配置 -->
+        <meta-data
+            android:name="app_id"
+            android:value="kk2286415072" />
+        <meta-data
+            android:name="isLandscape"
+            android:value="true" />
+        
+         <meta-data
+            android:name="callback"
+            android:value="https://api.sdk.75757.com/pay/notify/2286415072/" />
+
+        <!-- 联运SDK相关配置开始 -->
+        <meta-data
+            android:name="com.dianyou.game.api.GAME_ID"
+            android:value="tujLTBbVwqQ=" />
+        <meta-data
+            android:name="com.dianyou.game.api.APP_KEY"
+            android:value="dd93cc6d33b049e9f" />
+        <meta-data
+            android:name="com.dianyou.game.APP_SECRET"
+            android:value="084f3830a8ac305eefadf37c11affe9f7e14589b2c9cac98" />
+        <!-- 切换账号是否弹出登录对话框,默认true为弹出 -->
+        <meta-data
+            android:name="com.dianyou.game.switch.user.LOGIN_POPUP_WINDOW"
+            android:value="true" />
+        <!-- 悬浮球菜单项是否显示退出游戏,默认true为隐藏 -->
+        <meta-data
+            android:name="com.dianyou.game.float.EXIT_GAME"
+            android:value="true" />
+
+        <activity
+            android:name="com.dianyou.pay.DYPayActivity"
+            android:configChanges="keyboardHidden|navigation|orientation|screenSize"
+            android:exported="false"
+            android:launchMode="singleTop"
+            android:screenOrientation="behind"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+        <activity
+            android:name="com.dianyou.pay.DYControlMethodActivity"
+            android:configChanges="keyboardHidden|navigation|orientation|screenSize"
+            android:exported="false"
+            android:launchMode="singleTop"
+            android:screenOrientation="behind"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+        <activity
+            android:name="com.dianyou.pay.H5PayActivity"
+            android:configChanges="keyboardHidden|navigation|orientation|screenSize"
+            android:exported="false"
+            android:launchMode="singleTop"
+            android:screenOrientation="behind"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+        <activity
+            android:name="com.sj.pay.sdk.app.ui.view.PayActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:screenOrientation="behind"
+            android:theme="@android:style/Theme.Light.Panel" />
+    </application>
+
+</manifest>

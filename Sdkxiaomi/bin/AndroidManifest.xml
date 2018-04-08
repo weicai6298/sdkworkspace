@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    package="com.nzhy.cqll.mi"
+    package="com.hulian.mystore.mi"
     android:versionCode="1"
     android:versionName="1.0" >
 
@@ -46,15 +46,15 @@
         
         <meta-data
             android:name="AppID"
-            android:value="string2882303761517647547" />
+            android:value="string2882303761517681802" />
         
         <meta-data
             android:name="AppKey"
-            android:value="string5491764733547" />
+            android:value="string5521768171802" />
         
         <meta-data
             android:name="AppSecret"
-            android:value="1bwGDm+ARgeJjzJuszgjwA==" />
+            android:value="F2qXOmPcnkeL+al5KVo7LQ==" />
         
     </application>
 

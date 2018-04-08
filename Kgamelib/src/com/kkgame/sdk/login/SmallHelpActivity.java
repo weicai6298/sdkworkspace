@@ -12,7 +12,6 @@ import android.app.Activity;
 import android.content.Intent;
 import android.graphics.Color;
 import android.os.Bundle;
-import android.util.Log;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.view.Window;
@@ -44,8 +43,7 @@ public class SmallHelpActivity extends Activity{
 		String token=AgentApp.mUser.token;
 		String appid=DeviceUtil.getAppid(this);
 		
-//		String url="https://api.sdk.75757.com/web/profile/?uid="+uid+"&token="+token+"&appid="+appid;
-		String url="https://api.sdk.75757.com/web/mobilecode/?uid="+uid+"&token="+token+"&appid="+appid;//传奇卡券
+		String url="https://api.sdk.75757.com/web/profile/?uid="+uid+"&token="+token+"&appid="+appid;
 		WebSettings webSetting = wv_mWeiboview.getSettings();
 		webSetting.setAllowFileAccess(true);
 		webSetting.setLayoutAlgorithm(LayoutAlgorithm.NARROW_COLUMNS);
@@ -108,7 +106,7 @@ public class SmallHelpActivity extends Activity{
 		});
 		wv_mWeiboview.loadUrl(url);
 		//rl_mLoading.setVisibility(View.GONE);
-		Yayalog.loger("url="+url);
+		Yayalog.loger(url);
 		
 		
 		smallHelp_xml.getBaseLinearLayout().setOnClickListener(new OnClickListener() {

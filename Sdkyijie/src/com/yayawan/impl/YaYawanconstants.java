@@ -144,14 +144,12 @@ public class YaYawanconstants {
 					public void onOderNo(String remain) {
 						Log.i("tag", "支付失败remain=" + remain);
 						payFail();
-						Toast("支付失败");
 					}
 
 					@Override
 					public void onFailed(String remain) {
 						Log.i("tag", "支付失败remain=" + remain);
 						payFail();
-						Toast("支付失败");
 					}
 				});
 	}
@@ -182,7 +180,13 @@ public class YaYawanconstants {
 					public void onSDKExit(boolean arg0) {
 						// SDK已经退出，此处可以调用游戏的退出函数
 						if (arg0) {
-							callback.onExit();
+							mActivity.runOnUiThread(new Runnable() {
+								
+								@Override
+								public void run() {
+									callback.onExit();
+								}
+							});
 						}
 					}
 
@@ -193,12 +197,23 @@ public class YaYawanconstants {
 					 */
 					@Override
 					public void onNoExiterProvide() {
+						paramActivity.runOnUiThread(new Runnable() {
+							
+							@Override
+							public void run() {
+								
 						KgameSdk.Exitgame(paramActivity,
 								new KgameSdkCallback() {
 
 									@Override
 									public void onSuccess(User arg0, int arg1) {
-										callback.onExit();
+										mActivity.runOnUiThread(new Runnable() {
+											
+											@Override
+											public void run() {
+												callback.onExit();
+											}
+										});
 									}
 
 									@Override
@@ -216,6 +231,8 @@ public class YaYawanconstants {
 
 									}
 								});
+							}
+						});
 					}
 				});
 			}

@@ -1,0 +1,172 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical" >
+
+    <include
+        android:id="@+id/act_selectlogin_title_rl"
+        layout="@layout/login_header" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:scrollbars="none" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" >
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dip"
+                android:background="@color/line" />
+
+            <LinearLayout
+                android:layout_width="320dip"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="20dip"
+                android:orientation="vertical" >
+
+                <RelativeLayout
+                    android:id="@+id/act_selectlogin_top_rl"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dip" >
+
+                    <TextView
+                        android:id="@+id/act_selectlogin_username_tv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:text="haohao88"
+                        android:textColor="@color/text_cheng"
+                        android:textSize="18sp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="10dip"
+                        android:layout_toRightOf="@+id/act_selectlogin_username_tv"
+                        android:text="欢迎登录"
+                        android:textColor="@color/text_black0"
+                        android:textSize="15sp" />
+
+                    <Button
+                        android:id="@+id/act_selectlogin_change_btn"
+                        android:layout_width="60dip"
+                        android:layout_height="30dip"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:background="@drawable/x7sdk_orange_round_bg"
+                        android:gravity="center"
+                        android:text="切换"
+                        android:textColor="@color/white"
+                        android:textSize="14sp" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/act_selectlogin_usernew_rl"
+                    android:layout_width="match_parent"
+                    android:layout_height="60dip"
+                    android:layout_marginTop="5dip" 
+                    android:visibility="gone">
+
+                    <TextView
+                        android:id="@+id/act_selectlogin_news_tv"
+                        android:layout_width="match_parent"
+                        android:layout_height="60dip"
+                        android:background="@drawable/x7sdk_gray_bg"
+                        android:ellipsize="end"
+                        android:gravity="center_vertical"
+                        android:maxLines="3"
+                        android:paddingLeft="10dip"
+                        android:paddingRight="10dip"
+                        android:paddingBottom="10dip"
+                        android:textColor="@color/text_black6"
+                        android:textSize="13sp" />
+
+                    <Button
+                        android:id="@+id/act_selectlogin_click_btn"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentBottom="true"
+                        android:layout_alignParentRight="true"
+                        android:background="#f2f2f2"
+                        android:gravity="center"
+                        android:paddingBottom="3dip"
+                        android:paddingRight="3dip"
+                        android:paddingTop="2dip"
+                        android:layout_marginRight="7dip"
+                        android:text="【 立即参与 】"
+                        android:textColor="@color/text_cheng"
+                        android:visibility="gone"
+                        android:textSize="13sp" />
+                </RelativeLayout>
+            </LinearLayout>
+
+            <View
+                android:layout_width="320dip"
+                android:layout_height="0.5dip"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="20dip"
+                android:background="@color/line" />
+
+            <RelativeLayout
+                android:layout_width="320dip"
+                android:layout_height="40dip"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="13dip" >
+
+                <TextView
+                    android:id="@+id/selehao_tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="选择小号进入游戏"
+                    android:clickable="true"
+                    android:textColor="@color/text_green"
+                    android:textSize="16sp" 
+                    android:gravity="center_vertical"
+                    android:layout_centerVertical="true"
+                    />
+                
+                <TextView 
+                    android:id="@+id/selehao_tv_tishi"
+                    android:layout_width="15dip"
+                    android:layout_height="15dip"
+                    android:layout_toRightOf="@+id/selehao_tv"
+                    android:background="@drawable/x7_isselehao"
+                    android:layout_marginLeft="5dip"
+                    android:layout_centerVertical="true"
+                    android:gravity="center_vertical"
+                    />
+
+                <Button
+                    android:id="@+id/act_selectlogin_addsmallhao_btn"
+                    android:layout_width="60dip"
+                    android:layout_height="30dip"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:background="@drawable/x7sdk_orange_green_bg"
+                    android:gravity="center"
+                    android:text="增加"
+                    android:textColor="@color/white"
+                    android:textSize="14sp" />
+            </RelativeLayout>
+
+            <com.smwl.smsdk.myview.MyListView
+                android:layout_marginTop="15dip"
+                android:id="@+id/act_selectlogin_listview"
+                android:layout_width="320dip"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:cacheColorHint="#00000000"
+                android:listSelector="#00000000" >
+            </com.smwl.smsdk.myview.MyListView>
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>

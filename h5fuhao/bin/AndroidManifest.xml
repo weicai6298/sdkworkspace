@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.nzhy.cqll"
+    package="com.syhl.qmdfh"
     android:versionCode="1"
     android:versionName="1" >
 
@@ -52,11 +52,12 @@
         android:icon="@drawable/icon"
         android:name="com.yayawan.impl.YYApplication"
         android:label="@string/app_name"
-        android:theme="@style/AppTheme" >
+         >
         <activity
             android:name="com.example.h5demo.BrowserTempActivity"
             android:label="@string/app_name" 
-            android:screenOrientation="portrait">
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.game.Start">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
                 <category android:name="android.intent.category.LAUNCHER" />

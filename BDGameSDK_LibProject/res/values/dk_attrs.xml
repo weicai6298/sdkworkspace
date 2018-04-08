@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<resources>
+
+    <declare-styleable name="dk_ViewPagerIndicator">
+        <attr name="dk_vpiIconPageIndicatorStyle" format="reference" />
+        <attr name="dk_vpiTabPageIndicatorStyle" format="reference" />
+    </declare-styleable>
+    <declare-styleable name="dk_CircleProgressBar">
+        <attr name="dk_inner_radius" format="dimension" />
+        <attr name="dk_background_color" format="color" />
+        <attr name="dk_progress_color" format="color" />
+        <attr name="dk_progress_stoke_width" format="dimension" />
+        <attr name="dk_show_arrow" format="boolean" />
+        <attr name="dk_enable_circle_background" format="boolean" />
+        <attr name="dk_arrow_width" format="dimension" />
+        <attr name="dk_arrow_height" format="dimension" />
+        <attr name="dk_progress" format="integer" />
+        <attr name="dk_max" format="integer" />
+        <attr name="dk_progress_text_size" format="dimension" />
+        <attr name="dk_progress_text_color" format="color" />
+        <attr name="dk_progress_text_visibility" format="enum">
+            <enum name="visible" value="0" />
+            <enum name="invisible" value="1" />
+        </attr>
+    </declare-styleable>
+
+</resources>

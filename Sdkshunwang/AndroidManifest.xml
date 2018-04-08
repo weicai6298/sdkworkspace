@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.yayawan.sdktemplate"
+    android:versionCode="1"
+    android:versionName="1.0" >
+
+    <uses-sdk
+        android:minSdkVersion="8"
+        android:targetSdkVersion="19" />
+
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    
+    <uses-permission android:name="android.permission.INTERNET" />
+<uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+<uses-permission android:name="android.permission.READ_PHONE_STATE" />
+<uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+<uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW" />
+<uses-permission android:name="android.permission.READ_PHONE_STATE" />
+<uses-permission android:name="android.permission.INTERNET" />
+<uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+<uses-permission android:name="android.permission.CHANGE_NETWORK_STATE" />
+<uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+<uses-permission android:name="android.permission.GET_TASKS" />
+    
+
+    <application
+        android:name="com.yayawan.impl.YYApplication"
+        android:allowBackup="true"
+        android:theme="@android:style/Theme.NoTitleBar.Fullscreen" >
+        <activity
+            android:name="com.yayawan.sdktemplate.MainActivity"
+            android:configChanges="keyboardHidden|navigation|orientation|screenSize"
+            android:screenOrientation="portrait"
+            android:label="app_name" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+      
+        
+      <!-- 手游互联配置 -->
+     	 <meta-data
+            android:name="app_id"
+            android:value="kk2017779022" />
+        <meta-data
+            android:name="isLandscape"
+            android:value="true" />
+        
+        <meta-data
+            android:name="gameid"
+            android:value="string10614" />
+        <meta-data
+            android:name="siteId"
+            android:value="string10614" />
+        <meta-data
+            android:name="md5Key"
+            android:value="8D31B4DA5EA248E58D669B4EBC292C77" />
+        <meta-data
+            android:name="rsaKey"
+            android:value="MIICeAIBADANBgkqhkiG9w0BAQEFAASCAmIwggJeAgEAAoGBAIT/3xPNlI08WKpDgcvyvtf7uhuWCw5dQmk+JSEbxmasTc+FLuQDhmdOfLm96nKg7k66PCLms/3E3Bgk4H3nbst+ziri1hNgHJE8BgVoMNFAZVEnaf6ajl2VLbfqmq96Qoi9mpn5CJ7iFmEJyI1CxN1USuJBRFhE8IepZbVxL+2tAgMBAAECgYBf/NdAUJgNEuefApez3R81fD0GWdTi6hXbJPnhGk2nnmWOBz4fXBftiSzlVRbW4iT79tceDUkMNr7uQfcvhw9jjM9FM6jS6Nl4aSXBxFD8XoRFpIwI4c6sMbDPoR3iCnZo7zwvCWiuvyRLnUIBuDLw0J7oWrFKsomDfvybfavtVQJBAM3nEUhKZZ4YNxT37LP2CNSkHL7o76Woa9SFb+pR71ZUOEb1C3Ds5Nl1GxCULT2fXTxgYPW3VoYCtyDUeAbfqc8CQQClW+53qaeiAZL+0u8sqWh9PnkrBBALncq8+hZsk+D/POvoqcbl+2n5i6LPF8rdXgsbdm/QuAW0BDda5w5Te1vDAkEAkoER+/TrnvSt5J6PbnDmUZ6/0VregWl36AxV2E0aVbuxG1PqIxx7rPq1GjPEiO8moPoWo18jElFGSfbDvGhSYwJBAJKWQXrg8dLjFF1DvnTYJOHKLP3eFx9FHUGTbaeJHE8HwZW6U7DyxEpM5+IwFE1THgOVZaAgUiX4Ct5Rr9h/paMCQQCzMkaIMAjxtw1FkBt3sVBv0gDN8gm06YtC+3d8Pj3ABJVE4XKqNV11lvByL/zXX1a+cjJ3dtBtlvGs6xv6LnJm" />
+        
+        <meta-data
+            android:name="callback"
+            android:value="https://api.sdk.75757.com/pay/notify/2017779022/" />
+        
+        <activity
+            android:name="com.shunwang.sdk.game.ui.WelcomeActivity"
+            android:screenOrientation="landscape"
+            android:configChanges="orientation|screenSize|keyboardHidden" >
+        </activity>
+        <activity
+            android:name="com.shunwang.sdk.game.ui.ThirdLoginWebviewActivity"
+            android:configChanges="orientation|screenSize|keyboardHidden" >
+        </activity>
+        <activity
+            android:name="com.shunwang.sdk.game.ui.LoginActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:theme="@android:style/Theme.Dialog" >
+        </activity>
+        <activity
+            android:name="com.shunwang.sdk.game.ui.RechargeActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:launchMode="singleTop"
+            android:theme="@android:style/Theme.Dialog" />
+        <activity
+            android:name="com.shunwang.sdk.game.ui.RegisterActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize" />
+        <activity
+            android:name="com.shunwang.sdk.game.ui.AccountActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize" />
+        <activity
+            android:name="com.shunwang.sdk.game.ui.CommonWebviewActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize" />
+        <activity
+            android:name="com.shunwang.sdk.game.ui.CouponActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize" />
+        <activity
+            android:name="com.alipay.sdk.app.H5PayActivity"
+            android:configChanges="orientation|keyboardHidden|navigation"
+            android:exported="false"
+            android:screenOrientation="behind"
+            android:windowSoftInputMode="adjustResize|stateHidden" >
+        </activity>
+
+        <service android:name="com.shunwang.sdk.game.service.FxService" />
+
+        <!-- 星期天微信支付 -->
+        <activity
+            android:name="com.ipaynow.wechatpay.plugin.inner_plugin.wechat_plugin.activity.WeChatNotifyActivity"
+            android:configChanges="orientation|screenSize"
+            android:screenOrientation="behind"
+            android:theme="@android:style/Theme.Translucent" >
+         </activity>
+        <!-- 星期天微信支付 -->
+    
+    </application>
+
+</manifest>
+

@@ -46,9 +46,9 @@
         android:smallScreens="true" />
 
     <application
+        android:name="com.yayawan.impl.YYApplication"
         android:allowBackup="true"
         android:label="sdkyywdabao"
-        android:name="com.yayawan.impl.YYApplication"
         android:theme="@android:style/Theme.NoTitleBar.Fullscreen" >
         <activity
             android:name="com.yayawan.sdkyyw.MainActivity"
@@ -61,16 +61,15 @@
             </intent-filter>
         </activity>
 
-         <!-- BaseLogin_Activity 登录 -->
+        <!-- BaseLogin_Activity 登录 -->
         <activity
             android:name="com.kkgame.sdk.login.BaseLogin_Activity"
             android:configChanges="keyboardHidden|navigation|orientation|screenSize"
             android:theme="@android:style/Theme.Dialog" />
         <activity
             android:name="com.kkgame.sdk.login.SmallHelpActivity"
-          	android:configChanges="keyboardHidden|navigation|orientation|screenSize"
-          	android:theme="@android:style/Theme.Translucent" 
-           >
+            android:configChanges="keyboardHidden|navigation|orientation|screenSize"
+            android:theme="@android:style/Theme.Translucent" >
         </activity>
 
         <!-- yayawan_nochangecount设置为true这取消切换账号..除个别特殊游戏外.都不能取消切换账号这个选项 -->
@@ -80,34 +79,33 @@
         <meta-data
             android:name="app_id"
             android:value="kk1965363965" />
-   
 
         <!-- 是否为调试模式 -->
         <meta-data
             android:name="isdebug"
-            android:value="true" />
+            android:value="false" />
         <!-- 横屏设置 -->
+
 
         <!--
              <meta-data
             android:name="yayawan_orientation"
-            android:value="landscape" />
+            android:value="landscape" />
         -->
         <!-- 竖屏设置 -->
 
         <meta-data
             android:name="yayawan_orientation"
             android:value="portrait" />
- 		<meta-data
+        <meta-data
             android:name="isLandscape"
             android:value="false" />
-     
+
         <!-- 腾讯广点通上报方案 -->
-      
+
         <meta-data
             android:name="guangdiantong"
             android:value="yes" />
-       
     </application>
 
 </manifest>

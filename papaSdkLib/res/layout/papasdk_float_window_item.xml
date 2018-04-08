@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:id="@+id/parent">
+
+    <ImageView
+            android:id="@+id/img"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"/>
+
+    <TextView
+            android:layout_width="8dp"
+            android:layout_height="8dp"
+            android:id="@+id/badge"
+            android:gravity="center"
+            android:background="@drawable/papasdk_mygame_big_round"
+            android:textColor="@android:color/white"
+            android:visibility="gone"
+            android:textSize="8sp"
+            android:layout_alignTop="@+id/img"
+            android:layout_alignRight="@+id/img"
+            android:layout_marginRight="3dp"
+    />
+
+</RelativeLayout>

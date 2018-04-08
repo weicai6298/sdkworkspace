@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:layout_width="@dimen/dcn_progress_size"
+        android:layout_height="@dimen/dcn_progress_size"
+        android:background="@drawable/dcn_float_progress">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:layout_gravity="center"
+            android:orientation="vertical"
+            android:padding="5dp">
+
+            <com.downjoy.widget.CircleProgressBar
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_gravity="center_horizontal"/>
+
+            <TextView
+                android:id="@+id/dcn_loading_tv_txt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:ellipsize="end"
+                android:singleLine="true"
+                android:text="@string/dcn_please_waiting"
+                android:layout_marginTop="5dp"
+                android:textColor="#f8eae2"
+                android:textSize="12sp" />
+        </LinearLayout>
+    </RelativeLayout>
+</FrameLayout>

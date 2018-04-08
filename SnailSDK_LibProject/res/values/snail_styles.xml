@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <style name="Dialog_Fullscreen">
+        <item name="android:windowFullscreen">true</item>
+        <item name="android:windowNoTitle">true</item>
+    </style>
+
+    <style name="showdialogscale" parent="@android:style/Theme.Dialog">
+        <item name="android:windowFrame">@null</item>
+        <item name="android:windowIsFloating">true</item>
+        <item name="android:windowIsTranslucent">false</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:background">@drawable/snail_translucent_bg</item>
+        <item name="android:windowBackground">@drawable/snail_translucent_bg</item>
+        <item name="android:backgroundDimEnabled">false</item>
+    </style>
+
+    <style name="showupdatedialog" parent="@android:style/Theme.Dialog">
+
+        <!-- <item name="android:windowFrame">@null</item> -->
+        <!-- <item name="android:windowIsFloating">true</item> -->
+        <item name="android:windowIsTranslucent">false</item>
+        <item name="android:windowNoTitle">true</item>
+        <!-- <item name="android:background">@drawable/snail_translucent_bg</item> -->
+        <item name="android:windowBackground">@drawable/snail_translucent_bg</item>
+        <!-- <item name="android:backgroundDimEnabled">false</item> -->
+    </style>
+
+    <style name="SnailActivation">
+        <item name="android:windowFrame">@null</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:backgroundDimEnabled">true</item>
+    </style>
+
+    <style name="SnailActivity">
+        <item name="android:windowFullscreen">true</item>
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:windowFrame">@null</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowIsTranslucent">true</item>
+        <item name="android:windowContentOverlay">@null</item>
+        <item name="android:backgroundDimEnabled">true</item>
+    </style>
+
+    <style name="SnailBuyActivity">
+        <item name="android:windowFrame">@null</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:backgroundDimEnabled">true</item>
+    </style>
+
+    <style name="SnailShareRedDialog">
+        <item name="android:windowFrame">@null</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:backgroundDimEnabled">true</item>
+        <item name="android:windowBackground">@android:color/transparent</item>
+    </style>
+
+    <style name="OboxSnailBuyActivity">
+        <item name="android:windowFullscreen">true</item>
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:windowFrame">@null</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowIsTranslucent">true</item>
+        <item name="android:windowContentOverlay">@null</item>
+        <item name="android:backgroundDimEnabled">true</item>
+    </style>
+
+    <style name="accountpopwindow_anim_style">
+        <item name="android:windowEnterAnimation">@anim/snail_accountpopshow_anim</item>
+        <!-- 指定显示的动画xml -->
+        <item name="android:windowExitAnimation">@anim/snail_accountpophidden_anim</item>
+        <!-- 指定消失的动画xml -->
+    </style>
+
+    <style name="snail_coupon_item_style">
+        <item name="android:paddingLeft">10dp</item>
+        <item name="android:layout_marginLeft">5dp</item>
+        <item name="android:button">@drawable/snail_buy_coupon_selector</item>
+        <item name="android:textColor">@color/login_little_text</item>
+    </style>
+
+    <style name="snail_ticket_item_style">
+        <item name="android:paddingLeft">10dp</item>
+        <item name="android:layout_marginLeft">5dp</item>
+        <item name="android:button">@drawable/snail_buy_checkbox_selector</item>
+        <item name="android:textColor">@color/login_little_text</item>
+    </style>
+
+    <style name="horizonal_progressBar" parent="@android:style/Widget.ProgressBar.Horizontal">
+        <item name="android:indeterminateDrawable">@drawable/snail_progress_indeterminate_horizontal</item>
+    </style>
+
+</resources>

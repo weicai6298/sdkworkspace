@@ -104,7 +104,7 @@ public class YaYawanconstants {
 								Log.i("tag","name="+name);
 								Log.i("tag","token="+token);
 								Log.i("tag","登录-成功");
-								loginSuce(mactivity, uid, name, "");
+								loginSuce(mactivity, uid, name, token);
 								islogin = true ;
 								tishi("登录成功");
 							}

@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:layout_marginTop="8dp"
+              android:background="@color/dcn_white"
+              android:orientation="vertical"
+              android:paddingBottom="20dp"
+              android:paddingTop="10dp">
+
+    <TextView
+        android:id="@+id/dcn_welfare_vip_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:drawableLeft="@drawable/dcn_welfare_vip_title"
+        android:drawablePadding="5dp"
+        android:paddingBottom="10dp"
+        android:text="@string/dcn_welfare_vip"
+        android:textColor="#333333"
+        android:textSize="14sp"/>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:background="#f0f0f0"/>
+
+    <com.downjoy.android.volley.toolbox.NetworkImageView
+        android:id="@+id/dcn_welfare_vip_img"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
+        android:layout_marginTop="10dp"/>
+
+    <TextView
+        android:id="@+id/dcn_welfare_vip_des"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
+        android:layout_marginTop="10dp"
+        android:textColor="@color/dcn_light_black"
+        android:textSize="12sp"/>
+
+</LinearLayout>

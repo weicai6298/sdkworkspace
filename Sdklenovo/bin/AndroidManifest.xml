@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    package="com.hulian.wszj.lenovo"
+    package="com.syhl.mdwsw.lenovo"
     android:versionCode="1"
     android:versionName="1.0" >
 
@@ -65,7 +65,7 @@
         <activity
             android:name="com.lenovo.lsf.gamesdk.ui.WelcomeActivity"
             android:configChanges="orientation|keyboardHidden"
-            android:screenOrientation="landscape"
+            android:screenOrientation="behind"
             android:theme="@android:style/Theme.NoTitleBar.Fullscreen"
             android:windowSoftInputMode="stateHidden" >
             <intent-filter>
@@ -78,16 +78,16 @@
         <!-- 手游互联配置 -->
         <meta-data
             android:name="app_id"
-            android:value="kk634605720" />
+            android:value="kk342174322" />
         <meta-data
             android:name="isLandscape"
             android:value="true" />
         <meta-data
             android:name="appid"
-            android:value="1712210948519.app.ln" />
+            android:value="1804020841903.app.ln" />
         <meta-data
             android:name="appkey"
-            android:value="MIICeAIBADANBgkqhkiG9w0BAQEFAASCAmIwggJeAgEAAoGBALgyY7+CDhjQsUcW04P3XaQkA1XPe4QGEDPqCcWx1ten4pX3XVyQkylqWYY/co6ImZXqo4EPkTBkBxLnAsAYxkru2K1CsbASMscP6OSMvafk7uNXYxGWRfdWOYpAD1jRwIGEgZcPDCWMNPXxuuawZ4z/7mSS1x9CvjtngsykE0PXAgMBAAECgYEAr7+MgxaRYsYE0CKMcJbeZxXhhMeyP3cVkKMW7eVQa3YJcTOThhWABH0vrDLvl+XoPS2jEiqLSpO2WCfI7Qb2crjN3xbGn7v1sq0WdbWOGmhspMJ3eazuMGMQflWUguqnPau/+kcEZx2ZPtzFfR2BPxoRijV6hHFNtBjjwZVSEKECQQD30qxCakrkia3NkjkJf5b3MRgX6MuiQQAp63fiEoVPdqZYh3TuUqlDokw1ZJndBsyGzCBer3stI5CBjvZ5rr7RAkEAvkZGi/qEPr87brAetGIUt7BBIiOoFHPO9ggd0EaGGGwBt298oQ88uowrCRO+sgTPo9oPWK6vWP6RJQ66WdGSJwJAGpCBmIjuSDsd30hKRuNfWlXv4Dg7A8R18QhljF0x3we34wt6FEXWEQLnql2DRLcC23wsCBpFWNxUFB8v+nEp0QJBAKukG1mEaC1uNn+4EkqoO4YkUe0o+yNQAL9CPRq3s5luPPIreOKVKzQg42Vx0VEnM+Pb/oICOp1uLqKeMY56lXsCQQC11YKY9q5S22zZ8l7ZPG2CSGQHKzE+opJVBWQSKNv04gR4oh6vy5YZnzfv1tAbw5fP2bZlD/BErLzc7lSr1opA" />
+            android:value="MIICdgIBADANBgkqhkiG9w0BAQEFAASCAmAwggJcAgEAAoGBAJw14gQhoIhldPtyEaF0odbwH5fY0HYsmLT8VFS44i/d6u0jIkm/VcCGHcavZ3NuSNEqXtKPAzqcfJ/dSkHjd6Cd1dIq2Q3w2JkKuHFdOx1XrAW4zJ5OwP+YuDV0MVej8eDHmdKaIdFvnUW48t4FKY63JMF5iob0nOMAY1dhdkotAgMBAAECgYBS+dxAzYv0Z9An8IOk+8sr3QkrI6Q34aCMIqy5BCxBuOOda1g/TD9EsPkIHQwaqK5NTPBpcEYK0Czyzh0vuqBD/AdYmvMN4io1tHsWwthkgc5mnq8QAVYEgTeSbHEGhJJMprWJlrCMppZZ4DPylhM72QjB9wiYVVrgFVaq0FuEkQJBAPYg/5mko23xviO6BRLGfpe/SYZ1PGXGDk67nxMn+pdjqpsArN7NEaL3wG50Ue45W7FV6IkQYFyq9uA1bE8hVHMCQQCiebGEYds4oLr3lAEtE3d23ZVNRfLsfsSGWJI7Pf6sa7pjS1eWuQ9JFHifqsvn1My3ABiBzG34QYngpt9Iht7fAkEAuYOTxEXA3Ryp2RnbuxQb1NrcW1lAJeHLZPKr6u9mRPddXyl6IxDkazZcN6S7IFjhUN/UvoK2bwJ5w/LgaSBRGwJAIhIg3qDiprJV4rr/sCMn5x46Q9UKRvuiXIXQTGoIsMF6eX4AJRQzl2CalujrD3d5Ylq7yOREn02nCxwTMJNPwwJAcD0Vrn5tdnWSi8DSBrj/EtHLVT6X7/GWPvia5quEwVB5Wq60H1cieC9DiI1ImESlenCmFpesVtOS8ouRX4dVvw==" />
 
         <!--
               <meta-data
@@ -138,7 +138,7 @@
         <!-- 登录配置开始 -->
         <meta-data
             android:name="lenovo.open.appid"
-            android:value="1712210948519.app.ln" />
+            android:value="1712141805367.app.ln" />
         <!-- 在此处填入申请的lenovo open AppID -->
 
         <meta-data

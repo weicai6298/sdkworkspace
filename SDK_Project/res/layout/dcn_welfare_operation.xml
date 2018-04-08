@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/dcn_white"
+                android:paddingBottom="12dp"
+                android:paddingTop="12dp">
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginLeft="20dp"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/dcn_welfare_beans_left"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:drawablePadding="10dp"
+            android:drawableTop="@drawable/dcn_welfare_bean"
+            android:gravity="center_horizontal"
+            android:textColor="#F3163A"
+            android:textSize="16sp"
+            android:textStyle="bold"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/dcn_welfare_beans_left"
+            android:layout_gravity="center_horizontal"
+            android:textSize="9sp"
+            android:textColor="#999999"/>
+
+
+        <TextView
+            android:id="@+id/dcn_welfare_beans_charge"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/dcn_welfare_button"
+            android:gravity="center"
+            android:text="@string/dcn_welfare_charge"
+            android:textColor="@color/dcn_white"/>
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/dcn_welfare_beans_discount"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="65dp"
+        android:layout_marginTop="80dp"
+        android:background="@drawable/dcn_welfare_charge_discount"
+        android:text="95折"
+        android:textColor="#ffffff"
+        android:textSize="12sp"/>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/dcn_welfare_coins_left"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:drawablePadding="10dp"
+            android:drawableTop="@drawable/dcn_welfare_coin"
+            android:gravity="center_horizontal"
+            android:textColor="#F3163A"
+            android:textSize="16sp"
+            android:textStyle="bold"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/dcn_welfare_coins_left"
+            android:layout_gravity="center_horizontal"
+            android:textSize="9sp"
+            android:textColor="#999999"/>
+
+        <TextView
+            android:id="@+id/dcn_welfare_coins_exchange"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/dcn_welfare_button"
+            android:gravity="center"
+            android:text="@string/dcn_welfare_exchange"
+            android:textColor="@color/dcn_white"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="20dp"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/dcn_welfare_lottery_left"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:drawablePadding="10dp"
+            android:drawableTop="@drawable/dcn_welfare_lottery"
+            android:gravity="center_horizontal"
+            android:textColor="#F3163A"
+            android:textSize="16sp"
+            android:textStyle="bold"/>
+
+        <TextView
+            android:id="@+id/dcn_welfare_lottery_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/dcn_welfare_lottery_left"
+            android:layout_gravity="center_horizontal"
+            android:textSize="9sp"
+            android:textColor="#999999"/>
+
+        <TextView
+            android:id="@+id/dcn_welfare_lottery"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/dcn_welfare_button"
+            android:gravity="center"
+            android:text="@string/dcn_welfare_lottery"
+            android:textColor="@color/dcn_white"/>
+    </LinearLayout>
+
+</RelativeLayout>

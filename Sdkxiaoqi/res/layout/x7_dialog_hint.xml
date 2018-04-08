@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:background="@color/transparent" 
+    android:gravity="center">
+
+    <ImageView
+        android:id="@+id/popu_iv"
+        android:layout_width="120dip"
+        android:layout_height="120dip"
+        android:src="@drawable/x7_xuan_tishi_green" />
+
+    <TextView
+        android:id="@+id/popu_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dip"
+        android:background="#00000000"
+        android:text="拖到此处隐藏" 
+        android:visibility="gone"/>
+
+</LinearLayout>

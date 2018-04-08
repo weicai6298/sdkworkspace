@@ -76,22 +76,22 @@
       <!-- 手游互联配置 -->
      	 <meta-data
             android:name="app_id"
-            android:value="kk78087134" />
+            android:value="kk3127985904" />
         <meta-data
             android:name="isLandscape"
             android:value="true" />
         
         <meta-data
             android:name="appid"
-            android:value="string113832" />
+            android:value="string115620" />
         
         <meta-data
             android:name="appkey"
-            android:value="JQWFL56R6RRQ8PIZ" />
+            android:value="2QSSW3R6BSH1BBKG" />
         
          <meta-data
             android:name="rate"
-            android:value="string10" />
+            android:value="string0.6" />
         
          <!-- 果盘sdk -->
 

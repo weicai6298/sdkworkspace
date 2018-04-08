@@ -1,122 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<resources>
-
-    <string name="content_description_icon">icon</string>
-    <string name="refresh">刷新</string>
-    <string name="yaya_news">新闻</string>
-    <string name="yaya_loading">正在加载中,请稍后...</string>
-    <string name="yaya_bindphone">绑定手机</string>
-    <string name="yaya_phonenum">手机号</string>
-    <string name="yaya_security">验证码</string>
-    <string name="yaya_getsecurity">获取验证码</string>
-    <string name="yaya_submitbind">提交绑定</string>
-    <string name="yaya_inputquestion">请输入你要描述的问题</string>
-    <string name="yaya_send">发送</string>
-    <string name="yaya_findpassword">找回密码</string>
-    <string name="yaya_text1">收到验证码后即可修改密码</string>
-    <string name="yaya_text2">请输入用户名</string>
-    <string name="yaya_nobindphone">未绑定手机</string>
-    <string name="yaya_gamebbs">游戏论坛</string>
-    <string name="yaya_inputpassword">请输入密码</string>
-    <string name="yaya_onekeyregister">手机号一键注册</string>
-    <string name="yaya_register">注册</string>
-    <string name="yaya_login">立即登录</string>
-    <string name="yaya_text3">将用您的手机发送验证短信</string>
-    <string name="yaya_forgetpassword">忘记密码</string>
-    <string name="yaya_text4">收到验证码后立即登录</string>
-    <string name="yaya_inputphone">请输入手机号</string>
-    <string name="yaya_nosecurity">未收到验证码?</string>
-    <string name="yaya_register1">"  注册账号"</string>
-    <string name="yaya_activity">活动</string>
-    <string name="yaya_gamestrategy">游戏攻略</string>
-    <string name="yaya_gamedata">游戏资料</string>
-    <string name="yaya_changeuser">切换账号</string>
-    <string name="yaya_paylog">消费记录</string>
-    <string name="yaya_time">时间</string>
-    <string name="yaya_goodsname">商品名称</string>
-    <string name="yaya_moneyyaya">金额(丫丫币)</string>
-    <string name="yaya_paystate">状态</string>
-    <string name="yaya_protocol">丫丫玩用户协议</string>
-    <string name="yaya_rechargelog">充值记录</string>
-    <string name="yaya_paymethod">充值方式</string>
-    <string name="yaya_moneyrmb">金额(元)</string>
-    <string name="yaya_register3">账号注册</string>
-    <string name="yaya_registernow">立即注册</string>
-    <string name="yaya_changepassword">修改密码</string>
-    <string name="yaya_currentpassword">当前密码</string>
-    <string name="yaya_newpassword">新密码</string>
-    <string name="yaya_newpasswordre">确认密码</string>
-    <string name="yaya_submitchange">提交修改</string>
-    <string name="yaya_download">下载</string>
-    <string name="yaya_size">大小：</string>
-    <string name="yaya_type">类型：</string>
-    <string name="yaya_giftstarttime">礼包领取时间</string>
-    <string name="yaya_giftendtime">礼包过期时间</string>
-    <string name="yaya_giftkey">礼包激活码</string>
-    <string name="yaya_giftinfo">礼包内容</string>
-    <string name="yaya_giftuserdata">使用期限</string>
-    <string name="yaya_giftinstruction">使用说明</string>
-    <string name="yaya_schedule">进度显示</string>
-    <string name="yaya_inputsecurity">请输入验证码</string>
-    <string name="yaya_submitpay">确认支付</string>
-    <string name="yaya_text5">1.请确宝您填写的手机号和当时开卡行预留的手机号一致</string>
-    <string name="yaya_text6">2.单卡单笔1000元，单卡单日5000元，单卡当月10000,易宝宝客服热线:4001-500800</string>
-    <string name="yaya_text7">支付安全承诺:丫丫玩采用国际标准的加密算法来保证支付信息安全传输，并承诺保障用户在丫丫玩的信息安全，一旦由丫丫玩的安全问题造成的损失，丫丫玩全额赔付。</string>
-    <string name="yaya_text8">"【温馨提示】 \\n  不能使用特定游戏专属充值卡支付。 特定游戏包括大唐风云、传说、蜗牛、猫扑一卡通、九鼎、雅典娜、山河等游戏。 \n  在此使用过的骏网一卡通，卡内剩余J点只能在富汇易达合作商家进行支付使用。\n  充值卡遇到问题请拨打客服4001-500800  "</string>
-    <string name="yaya_text9">"【支持卡种】 \n 支持骏网一卡通卡、 卡号、密码都是16位的阿拉伯数字 "</string>
-    <string name="yaya_text10">"【支持面额】\n  任意面额 \n  对应点数：1元=100J点  "</string>
-    <string name="yaya_text11">1.请务必使用与此面额相同的充值卡,否则会导致支付不成功,或资金丢失(如使用面额100元充值卡但充值50元,高于50元部分不返还)</string>
-    <string name="yaya_text12">2.不支持彩铃充值卡和短信充值卡,选择任何面额彩铃充值卡将不予退还任何金额</string>
-    <string name="yaya_text13">3.若多次充值未能成功到账，请拨打电话4001500800，拨通后按3，再按1，转接人工服务，查询充值卡号或订单号状态。</string>
-    <string name="yaya_text14">通过手机或电脑找回帐号或密码</string>
-    <string name="yaya_text15">访问passport.yayawan.com\\n</string>
-    <string name="yaya_text16">通过客服找回帐号或密码</string>
-    <string name="yaya_text17">客服邮箱 ： kf@yayawan.com\\n</string>
-    <string name="yaya_text18">"【重要提示】 \n请务必使用与您所选面额相同的Q币卡进行支付，否则您将承担因此而引起的交易失败或者交易金额丢失所造成的损失。 \n注意：只支持Q币卡卡密支付，不支持QQ账户内Q币或Q点支付 \n充值卡遇到问题请拨打客服4001-500800 "</string>
-    <string name="yaya_text19">【支持卡种】 \n全国各地Q币卡，卡号：9位的阿拉伯数字、密码：12位的阿拉伯数字。</string>
-    <string name="yaya_text20">【支持面额】 \n5元,10元,15元,20元,30元,50元,60元,100元,200元 \n对应点数：1元=1Q币=10Q点</string>
-    <string name="yaya_text21">"【温馨提示】 \n请使用卡号以CSC5、CS、S、CA、CSB、YA、YB、YC、YD、80133开头的 盛大互动娱乐卡 进行支付。\n充值卡遇到问题请拨打客服4001-500800  "</string>
-    <string name="yaya_text22">【支持卡种】 \n支持盛大一卡通、卡号15位或16位的数字字母，密码8位或9位的阿拉伯数字。</string>
-    <string name="yaya_text23">"【支持面额】 \n实卡面值：5元、10元、15元、25元、30元、35元、45元、50元、100元、350元、1000元 \n虚卡面值：（任意面值，不含卡密，直充） "</string>
-    <string name="yaya_text24">1.支持支付宝账户余额充值、借记卡、和信用卡直充，免开通网银</string>
-    <string name="yaya_text25">2.余额单日10000元，卡通5000元，快捷单卡单笔500元，单卡单日500元，单卡当月500,支付宝客服热线:0751-88156688</string>
-    <string name="yaya_text26">1.使用该充值方式，需要本地安装支付宝快捷支付服务插件</string>
-    <string name="yaya_text27">2.支持支付宝账户余额充值、借记卡、和信用卡直充，免开通网银</string>
-    <string name="yaya_text28">3.余额单日10000元，卡通5000元，快捷单卡单笔500元，单卡单日500元，单卡当月500,支付宝客服热线:0751-88156688</string>
-    <string name="yaya_aboutyayawan">关于丫丫玩</string>
-    <string name="yaya_serviceqq">客服QQ</string>
-    <string name="yaya_qq">2518792532</string>
-    <string name="yaya_hotline">客服热线</string>
-    <string name="yaya_hotlinenum">400-004-2115</string>
-    <string name="yaya_email">投诉邮箱</string>
-    <string name="yaya_tousuemail">tousu@yayawan.com</string>
-    <string name="yaya_web">官方网址</string>
-    <string name="yaya_yayawan">www.yayawan.com</string>
-    <string name="yaya_accountmanager">个人中心</string>
-    <string name="yaya_text29">(pay.yayawan.com充值更方便)</string>
-    <string name="yaya_recharge">充值</string>
-    <string name="yaya_changepaymethod">选择其他方式支付</string>
-    <string name="yaya_cashnum">储蓄卡卡号</string>
-    <string name="yaya_cashname">持卡人姓名</string>
-    <string name="yaya_userid">持卡人身份证号码</string>
-    <string name="yaya_bindcard">使用已绑定卡</string>
-    <string name="yaya_paynow">立即支付</string>
-    <string name="yaya_changebank">选择其他银行</string>
-    <string name="yaya_creditnum">信用卡卡号</string>
-    <string name="yaya_creditphone">信用卡关联手机号</string>
-    <string name="yaya_valperiod">有效期(0218)</string>
-    <string name="yaya_idennum">校验码(124)</string>
-    <string name="yaya_helperutil">隐藏小助手</string>
-    <string name="yaya_bbs">论坛交流</string>
-    <string name="yaya_feedback">问题反馈</string>
-    <string name="yaya_about">关于我们</string>
-    <string name="yaya_inputnum">请输入充值卡卡号</string>
-    <string name="yaya_inputcardpassword">请输入充值卡密码</string>
-    <string name="yaya_othercardnum">一卡通卡号</string>
-    <string name="yaya_othercardpassword">一卡通密码</string>
-    <string name="yaya_choosemethod">请选择充值方式</string>
-    <string name="yaya_yayabi">丫丫币</string>
-    <string name="yaya_residue">剩余</string>
-    <string name="yaya_text30">若丫丫币不足,建议您通过电脑打开https://pay.yayawan.com充值,然后在游戏中使用丫丫币兑换</string>
-
-</resources>

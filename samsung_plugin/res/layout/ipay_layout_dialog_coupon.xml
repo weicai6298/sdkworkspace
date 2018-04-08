@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/ipay_bg"
+    android:orientation="vertical">
+
+    <!--titleBar-->
+    <include
+        android:id="@+id/dialog_title_layout"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/ipay_height_40"
+        layout="@layout/ipay_dialog_title_bar"/>
+
+    <!--content-->
+    <ScrollView
+        android:id="@+id/sv_dialog"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <!--兑换区域-->
+            <RelativeLayout
+                android:id="@+id/ipay_dialog_convert_coupon_area"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="@dimen/ipay_margin_10"
+                android:layout_marginRight="@dimen/ipay_margin_10"
+                android:layout_marginTop="25dp"
+                android:visibility="visible">
+
+                <EditText
+                    android:id="@+id/dialog_coupon_input_et"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/ipay_height_45"
+                    android:background="@drawable/ipay_edit_border"
+                    android:hint="@string/ipay_coupon_hint_tip"
+                    android:digits="abcdefghjklmnpqrstuvwxyzABCDEFGHJKLMNPQRSTUVWXYZ0123456789"
+                    android:paddingLeft="@dimen/ipay_margin_10"
+                    android:inputType="text"
+                    android:singleLine="true"
+                    android:maxLength="100"
+                    android:textColor="@color/ipay_color_value_6"
+                    android:textColorHint="@color/ipay_color_value_4"
+                    android:textSize="@dimen/ipay_text_size_13"/>
+
+                <LinearLayout
+                    android:id="@+id/dialog_coupon_verify_code_area"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/ipay_edit_border"
+                    android:layout_below="@id/dialog_coupon_input_et"
+                    android:layout_marginTop="@dimen/ipay_margin_10"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+                    <EditText
+                        android:id="@+id/dialog_coupon_verify_code_et"
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:layout_height="@dimen/ipay_height_45"
+                        android:hint="@string/ipay_coupon_verify_hint_tip"
+                        android:maxLength="10"
+                        android:paddingLeft="@dimen/ipay_margin_10"
+                        android:singleLine="true"
+                        android:background="@null"
+                        android:inputType="text"
+                        android:longClickable="false"
+                        android:textColor="@color/ipay_color_value_6"
+                        android:textColorHint="@color/ipay_color_value_4"
+                        android:textSize="@dimen/ipay_text_size_13"/>
+
+                    <ImageView
+                        android:id="@+id/dialog_coupon_verify_code_view"
+                        android:layout_width="@dimen/ipay_height_78"
+                        android:layout_height="match_parent"
+                        android:layout_margin="@dimen/ipay_margin_5"/>
+                    <TextView
+                        android:id="@+id/dialog_coupon_verify_code_refresh"
+                        android:layout_width="@dimen/ipay_height_78"
+                        android:layout_height="match_parent"
+                        android:gravity="center"
+                        android:textColor="@color/ipay_color_value_7"
+                        android:textSize="@dimen/ipay_text_size_12"
+                        android:layout_margin="@dimen/ipay_margin_5"
+                        android:text="@string/ipay_coupon_click_refresh"
+                        android:visibility="gone"/>
+
+                    <ProgressBar
+                        android:id="@+id/dialog_coupon_image_loading"
+                        android:layout_width="@dimen/ipay_height_78"
+                        android:layout_height="match_parent"
+                        android:layout_margin="@dimen/ipay_margin_5"/>
+
+
+                </LinearLayout>
+
+            </RelativeLayout>
+        </LinearLayout>
+
+    </ScrollView>
+
+    <!--dialog底部按钮区域-->
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/ipay_divid_line_h"
+            android:background="@color/ipay_color_value_3"
+            android:layout_marginTop="25dp"/>
+
+        <Button
+            android:id="@+id/dialog_sure"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/ipay_height_45"
+            android:gravity="center"
+            android:background="@null"
+            android:text="@string/ipay_coupon_exchange"
+            android:textColor="@color/ipay_color_value_7"
+            android:textSize="@dimen/ipay_text_size_15" />
+
+</LinearLayout>

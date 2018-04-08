@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:background="@drawable/snail_graybg_btn_selector" >
+    <CheckBox
+        android:id="@+id/coupon_checkbox"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical"
+        android:focusable="false"
+        android:clickable="false"
+        android:gravity="center_vertical" 
+        style="@style/snail_ticket_item_style"/>
+</LinearLayout>

@@ -70,7 +70,6 @@ public class YaYawanconstants {
 
 	/**
 	 * 支付
-	 * 
 	 * @param mactivity
 	 */
 	public static void pay(Activity mactivity, String morderid) {

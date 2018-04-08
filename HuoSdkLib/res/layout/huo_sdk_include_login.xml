@@ -192,30 +192,54 @@
     </LinearLayout>
 
     <LinearLayout
-        android:id="@+id/huo_sdk_ll_loginMsgLogin"
+        android:id="@+id/huo_sdk_ll_loginByThird"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:visibility="visible"
         android:layout_alignParentBottom="true"
-        android:visibility="gone"
-        android:layout_below="@id/huo_sdk_btn_loginSubmit" >
-
-
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true">
         <TextView
-            android:id="@+id/huo_sdk_tv_loginMsgLogin"
+            android:id="@+id/huo_sdk_tv_loginByThird"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center_vertical"
-            android:text="短信登录"
+            android:text="第三方登录 "
             android:textColor="@color/huo_sdk_text_blacks"
-            android:textSize="14dip" />
+            android:textSize="14dip"
+            android:visibility="gone"
+            />
 
         <ImageView
-            android:id="@+id/huo_sdk_iv_loginMsgLogin"
+            android:id="@+id/huo_sdk_iv_loginQq"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_height="40dp"
             android:layout_gravity="center_vertical"
-            android:background="@drawable/huo_sdk_ic_login_mobile" />
+            android:paddingLeft="8dp"
+            android:paddingRight="8dp"
+            android:src="@drawable/huo_sdk_ic_qq"
+            android:visibility="gone"
+            />
+
+        <ImageView
+            android:id="@+id/huo_sdk_iv_loginWx"
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:layout_gravity="center_vertical"
+            android:paddingLeft="8dp"
+            android:paddingRight="8dp"
+            android:src="@drawable/huo_sdk_ic_weixin"
+            android:visibility="gone" />
+
+        <ImageView
+            android:id="@+id/huo_sdk_iv_loginWb"
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:paddingLeft="8dp"
+            android:paddingRight="8dp"
+            android:layout_gravity="center_vertical"
+            android:src="@drawable/huo_sdk_ic_weibo"
+            android:visibility="gone"
+            />
     </LinearLayout>
-
-
 </RelativeLayout>

@@ -1,0 +1,189 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/tysdkn_login_root"
+    android:layout_width="350dp"
+    android:layout_height="wrap_content"
+    android:layout_gravity="center"
+    android:background="@drawable/tysdkn_edit_two_bg"
+    android:focusable="true"
+    android:focusableInTouchMode="true"
+    android:orientation="vertical"
+    android:paddingBottom="10dp"
+    android:paddingLeft="18dp"
+    android:paddingRight="18dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="10dp"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:layout_width="0dp"
+            android:layout_height="30dp"
+            android:layout_marginTop="10dp"
+            android:layout_weight="1.0"
+            android:src="@drawable/tysdkn_logo_l"/>
+
+        <View
+            android:layout_marginTop="10dp"
+            android:layout_width="1dp"
+            android:layout_height="30dp"
+            android:background="#d8d8d8"/>
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="40dp"
+            android:layout_marginTop="5dp"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="用户登录"
+            android:textColor="#4c6791"
+            android:textSize="18dp"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="90dp"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:id="@+id/tysdkn_input_account_root"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:background="@drawable/tysdkn_edit_two_bg"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="11dp"
+                android:layout_marginLeft="16dp"
+                android:layout_marginTop="11dp"
+                android:src="@drawable/tysdkn_phone"/>
+
+            <EditText
+                android:id="@+id/tysdkn_login_username"
+                android:layout_width="0dp"
+                android:layout_height="40dp"
+                android:layout_weight="1"
+                android:background="@null"
+                android:hint="请输入手机号/用户名"
+                android:paddingLeft="5dp"
+                android:paddingRight="30dp"
+                android:selectAllOnFocus="true"
+                android:singleLine="true"
+                android:textColor="#000000"
+                android:textColorHint="#c8c8c8"
+                android:textSize="14dp"/>
+
+            <ImageView
+                android:id="@+id/tysdkn_login_username_s"
+                android:layout_width="wrap_content"
+                android:layout_height="40dp"
+                android:focusable="true"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp"
+                android:scaleType="center"
+                android:src="@drawable/tysdkn_xs_login_up"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_marginBottom="10dp"
+            android:layout_marginRight="1dp"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/tysdkn_edit_two_bg"
+            android:orientation="horizontal">
+
+            <ImageView
+
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="11dp"
+                android:layout_marginLeft="13dp"
+                android:layout_marginTop="11dp"
+                android:src="@drawable/tysdkn_login_password"/>
+
+            <EditText
+                android:id="@+id/tysdkn_login_pass"
+                android:layout_width="0dp"
+                android:layout_height="40dp"
+                android:layout_weight="1"
+                android:background="@null"
+                android:hint="请输入游戏密码"
+                android:inputType="textPassword"
+                android:maxLines="1"
+                android:paddingLeft="5dp"
+                android:selectAllOnFocus="true"
+                android:textColor="#818181"
+                android:textColorHint="#c8c8c8"
+                android:textSize="14sp"/>
+
+
+            <ImageView
+                android:id="@+id/tysdkn_login_pass_show"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:paddingRight="10dp"
+                android:src="@drawable/tysdkn_yanjing"/>
+        </LinearLayout>
+
+    </LinearLayout>
+
+
+    <TextView
+        android:id="@+id/tysdkn_login_commit"
+        android:layout_width="match_parent"
+        android:layout_height="38dp"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/tysdkn_login_in"
+        android:gravity="center"
+        android:text="登录"
+        android:textColor="#ffffff"
+        android:textSize="18dp"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+
+        android:gravity="center"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/tysdkn_login_zc"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingBottom="10dp"
+            android:paddingRight="10dp"
+            android:paddingTop="10dp"
+            android:text="快速注册"
+            android:textColor="#4BC1FF"
+            android:textSize="12sp"/>
+
+        <View
+            android:layout_width="1dp"
+            android:layout_height="12dp"
+            android:background="#4BC1FF"
+            android:paddingTop="15dp"/>
+
+        <TextView
+            android:id="@+id/tysdkn_login_wj"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="#ffffff"
+            android:paddingBottom="10dp"
+            android:paddingLeft="10dp"
+            android:paddingTop="10dp"
+            android:text="忘记密码?"
+            android:textColor="#4BC1FF"
+            android:textSize="12sp"/>
+
+    </LinearLayout>
+
+</LinearLayout>
+ 
+

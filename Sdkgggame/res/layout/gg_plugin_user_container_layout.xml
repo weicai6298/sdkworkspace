@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/gg_plugin_control_center_shape"
+    android:orientation="vertical">
+    <!--小把手界面 的变化-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:id="@+id/header_icon"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:layout_margin="10dp"
+            android:scaleType="fitXY"
+            android:src="@drawable/gg_plugin_header_avatar" />
+
+        <TextView
+            android:id="@+id/user_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:text="固执君"
+            android:textColor="#ffffff"
+            android:textSize="13sp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:id="@+id/user_name_container"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:paddingBottom="8dp"
+            android:paddingLeft="44dp"
+            android:paddingRight="22dp"
+            android:paddingTop="11dp">
+
+            <ImageView
+                android:id="@+id/user_icon"
+                android:layout_width="23dp"
+                android:layout_height="23dp"
+                android:layout_gravity="center_horizontal"
+                android:src="@drawable/gg_plugin_account_user" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:text="@string/str_user_account" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/user_msg_container"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:paddingBottom="8dp"
+            android:paddingLeft="22dp"
+            android:paddingRight="44dp"
+            android:paddingTop="11dp">
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal">
+
+                <ImageView
+                    android:id="@+id/msg_icon"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/gg_plugin_account_msg" />
+
+                <ImageView
+                    android:id="@+id/red_point"
+                    android:layout_width="23dp"
+                    android:layout_height="23dp"
+                    android:layout_alignRight="@+id/msg_icon"
+                    android:layout_alignTop="@+id/msg_icon"
+                    android:src="@drawable/gg_plugin_menu_red_point"
+                    android:visibility="gone" />
+            </RelativeLayout>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:text="消息" />
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>

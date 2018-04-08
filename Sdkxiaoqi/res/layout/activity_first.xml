@@ -1,0 +1,38 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/LinearLayout1"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#00FFFF"
+    tools:context=".FirstActivity" >
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="100dip"
+        android:textSize="20sp"
+        android:gravity="center_horizontal"
+        android:layout_marginTop="10dip"
+        android:text="游戏的第一个界面" />
+    
+    <Button 
+        android:id="@+id/firstactivity_btn"
+        android:layout_width="300dip"
+        android:layout_height="100dip"
+        android:background="@drawable/x7_btn_bg"
+        android:text="去登陆"
+        android:gravity="center"
+        android:textSize="20sp"
+        android:layout_gravity="center"
+        />
+    <TextView
+        android:layout_width="300dp" 
+        android:layout_marginTop="10dp"
+        android:layout_height="wrap_content"
+        android:textSize="13sp"
+        android:textColor="#dc143c"
+        android:layout_gravity="center_horizontal"
+        android:text="测试账户：x7demo   密码：123456"
+        />
+
+</LinearLayout>

@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical" >
+
+    <include
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        layout="@layout/snailpay_title_layout" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" >
+
+        <com.snail.pay.sdk.v.CustemNavTabView
+            android:id="@+id/snailpay_tab_layout_CustemNavTabView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+        <ScrollView
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_above="@+id/snailpay_bottom_tab_layout"
+            android:layout_below="@+id/snailpay_tab_layout_CustemNavTabView"
+            android:layout_marginTop="8dp" >
+
+            <LinearLayout
+                android:id="@+id/sanilpay_layout_main"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp"
+                android:visibility="gone" >
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:paddingBottom="16dp"
+                    android:paddingTop="16dp" >
+
+                    <TextView
+                        android:id="@+id/snailpay_sms_text_gridlab"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:textColor="#9b9b9b" />
+
+                    <View
+                        android:layout_width="fill_parent"
+                        android:layout_height="1dp"
+                        android:background="#e0e0e0" />
+                </LinearLayout>
+
+                <RelativeLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content" >
+
+                    <TextView
+                        android:id="@+id/snailpay_text_message"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:padding="8dp"
+                        android:textColor="#ff8448"
+                        android:textSize="14sp" />
+
+                    <com.snail.pay.sdk.v.CardGridView
+                        android:id="@+id/snailpay_grid_view"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/snailpay_text_message"
+                        android:gravity="center"
+                        android:horizontalSpacing="6dp"
+                        android:listSelector="@android:color/transparent"
+                        android:numColumns="3"
+                        android:padding="24dp"
+                        android:verticalSpacing="24dp" >
+                    </com.snail.pay.sdk.v.CardGridView>
+                </RelativeLayout>
+
+                <TextView
+                    android:id="@+id/snailpay_text_remark"
+                    android:layout_width="300dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginTop="12dp"
+                    android:textColor="#949494"
+                    android:textSize="10sp" />
+            </LinearLayout>
+        </ScrollView>
+
+        <include
+            android:id="@+id/snailpay_bottom_tab_layout"
+            android:layout_width="match_parent"
+            android:layout_height="68dp"
+            android:layout_alignParentBottom="true"
+            layout="@layout/snailpay_bottom_layout_for_game" />
+    </RelativeLayout>
+
+</LinearLayout>

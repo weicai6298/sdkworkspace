@@ -9,19 +9,19 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
-        android:background="@drawable/zq_sdk_shape_white_bg_radius"
+        android:background="#00ffffff"
         android:orientation="vertical">
-
 
         <FrameLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content">
+            android:layout_height="wrap_content"
+            android:visibility="gone">
 
             <FrameLayout
                 android:id="@+id/fl_title_1"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:visibility="visible">
+                android:visibility="gone">
 
                 <include layout="@layout/zq_sdk_cy_layout_web_title" />
             </FrameLayout>
@@ -85,6 +85,7 @@
         </FrameLayout>
 
         <ProgressBar
+            android:visibility="gone"
             android:id="@+id/cy_pb_load_page"
             style="?android:attr/progressBarStyleHorizontal"
             android:layout_width="match_parent"
@@ -99,6 +100,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:scrollbars="none"
+                android:background="#00ffffff"
                 android:visibility="visible" />
 
             <FrameLayout

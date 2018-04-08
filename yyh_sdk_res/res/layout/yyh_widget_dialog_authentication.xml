@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/yyh_corner_white_bg"
+    android:paddingLeft="26dp"
+    android:paddingRight="26dp"
+    tools:background="#33ff0000">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="35dp"
+                android:layout_marginTop="35dp"
+                android:text="@string/yyh_title_authentication"
+                android:textColor="@color/yyh_black"
+                android:textSize="18dp"
+                tools:ignore="SpUsage" />
+
+            <EditText
+                android:id="@+id/yyh_edit_authenticationDialog_phone"
+                android:layout_width="match_parent"
+                android:layout_height="44dp"
+                android:background="@drawable/yyh_edittext_bg"
+                android:hint="请输入手机号"
+                android:inputType="phone"
+                android:maxLength="11"
+                android:maxLines="1"
+                android:textSize="14dp"
+                tools:ignore="HardcodedText,SpUsage" />
+
+            <com.appchina.usersdk.CaptchaEditText
+                android:id="@+id/yyh_edit_authenticationDialog_captcha"
+                android:layout_width="match_parent"
+                android:layout_height="44dp" />
+
+            <com.appchina.usersdk.YYHVoiceCaptchaView
+                android:id="@+id/yyh_edit_authenticationDialog_voiceCaptcha"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="8dp"
+                android:layout_marginTop="8dp" />
+
+            <EditText
+                android:id="@+id/yyh_edit_authenticationDialog_name"
+                android:layout_width="match_parent"
+                android:layout_height="44dp"
+                android:background="@drawable/yyh_edittext_bg"
+                android:hint="请输入真实姓名"
+                android:maxLines="1"
+                android:textSize="14dp"
+                tools:ignore="HardcodedText,SpUsage" />
+
+            <EditText
+                android:id="@+id/yyh_edit_authenticationDialog_idcard"
+                android:layout_width="match_parent"
+                android:layout_height="44dp"
+                android:background="@drawable/yyh_edittext_bg"
+                android:hint="请输入身份证号"
+                android:maxLength="18"
+                android:maxLines="1"
+                android:textSize="14dp"
+                tools:ignore="HardcodedText,SpUsage" />
+
+            <Button
+                android:id="@+id/yyh_button_authenticationDialog_submit"
+                android:layout_width="match_parent"
+                android:layout_height="44dp"
+                android:layout_marginTop="30dp"
+                android:background="@drawable/yyh_btn_blue_bg"
+                android:text="@string/yyh_authentication_submit"
+                android:textColor="@color/yyh_white"
+                android:textSize="14dp"
+                tools:ignore="SpUsage" />
+
+            <TextView
+                android:id="@+id/yyh_text_authenticationDialog_tips"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="16dp"
+                android:text="@string/yyh_authentication_remind"
+                android:textColor="@color/yyh_gray_dark"
+                android:textSize="10dp"
+                tools:ignore="HardcodedText,SpUsage" />
+        </LinearLayout>
+    </ScrollView>
+
+    <ImageView
+        android:id="@+id/yyh_image_authenticationDialog_close"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="right"
+        android:src="@drawable/yyh_activity_close"
+        tools:ignore="ContentDescription,RtlHardcoded" />
+</FrameLayout>

@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/rank_bg_color"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:id="@+id/part_1"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@color/title_background" >
+
+        <LinearLayout
+            android:id="@+id/back_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="50dp"
+            android:background="@drawable/snail_back_layout_bg"
+            android:focusable="true"
+            android:focusableInTouchMode="false"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:paddingRight="13dp" >
+
+            <View
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:background="@drawable/snail_back_bg" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/snail_register"
+                android:textColor="@color/white"
+                android:textSize="20sp" />
+        </LinearLayout>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/part_3"
+        android:layout_width="match_parent"
+        android:layout_height="2dp" >
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/reg_content"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/part_3"
+        android:orientation="vertical"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        android:paddingTop="35dp" >
+
+        <EditText
+            android:id="@+id/account_input"
+            style="@style/snail_style_textview_round_top_h"
+            android:layout_marginTop="40dp"
+            android:ems="10"
+            android:hint="@string/snail_input_account"
+            android:inputType="textEmailAddress"
+            android:maxLength="25"/>
+		<View 
+		    android:layout_width="match_parent"
+		    android:layout_height="1px"
+		    android:background="@color/cut_off_rule"/>
+        <EditText
+            android:id="@+id/password_input"
+            style="@style/snail_style_textview_rectangle_h"
+            android:ems="10"
+            android:hint="@string/snail_input_password"
+            android:inputType="textPassword"/>
+		<View 
+		    android:layout_width="match_parent"
+		    android:layout_height="1px"
+		    android:background="@color/cut_off_rule"/>
+        <EditText
+            android:id="@+id/repassword_input"
+            style="@style/snail_style_textview_round_bottom_h"
+            android:ems="10"
+            android:hint="@string/snail_input_repassword"
+            android:inputType="textPassword"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="20dp"
+            android:text="@string/snail_pass_format"
+            android:textColor="@color/editor_tip_color"
+            android:textSize="12sp" />
+
+        <Button
+            android:id="@+id/register_button"
+            style="@style/snail_style_button_green_h"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="16dp"
+            android:text="@string/snail_register"/>
+    </LinearLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_below="@id/reg_content"
+        android:layout_marginTop="15dp"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp" >
+
+        <TextView
+            android:id="@+id/autoreg_tip"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:text="@string/snail_quick_registertip"
+            android:textColor="@color/editor_tip_color"
+            android:textSize="14sp" />
+
+        <Button
+            android:id="@+id/autoRegister_button"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_below="@id/autoreg_tip"
+            android:layout_centerInParent="true"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/common_orange_btn_selector"
+            android:text="@string/snail_quick_login"
+            android:textColor="@color/white"
+            android:textSize="14sp" />
+    </RelativeLayout>
+
+</RelativeLayout>

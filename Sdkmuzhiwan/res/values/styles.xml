@@ -1,0 +1,14 @@
+<resources>
+
+    <!-- Base application theme. -->
+
+    <style name="AppBaseTheme" parent="android:Theme.Light"></style>
+    <style name="AppSplash" parent="AppBaseTheme">
+        <!-- 设置启动背景透明 -->
+        <item name="android:windowIsTranslucent">true</item>
+        <!-- 设置启动不要 Title -->
+        <item name="android:windowNoTitle">true</item>
+    </style >
+    <style name="AppNoTitle" parent="android:Theme.Light.NoTitleBar"></style>
+
+</resources>

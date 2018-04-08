@@ -18,56 +18,45 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center_horizontal"
-            android:padding="12dp"
-            android:text="提示"
-            android:textColor="#333333"
-            android:textSize="16sp" />
+            android:padding="16dp"
+            android:textStyle="bold"
+            android:text="发现新版本"
+            android:textColor="#ff8f19"
+            android:textSize="18sp" />
 
-        <View
-            android:layout_width="match_parent"
-            android:layout_height="1dp"
-            android:background="#EBEBEB" />
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center_horizontal"
-            android:padding="24dp"
+            android:paddingLeft="34dp"
+            android:paddingRight="34dp"
+            android:lineSpacingExtra="8dp"
             android:textColor="#666666"
-            android:text="发现新版本，是否更新？" />
+            android:textSize="15sp"
+            android:text="              本次更新需重新下载游戏，请点击更新开始下载。" />
 
-        <View
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:textColor="#a0a0a0"
+            android:padding="15dp"
+            android:textSize="13sp"
+            android:text="（建议在WiFi环境下载）" />
+
+        <TextView
+            android:id="@+id/tvUpdate"
+            android:layout_marginLeft="44dp"
+            android:layout_marginRight="44dp"
+            android:layout_marginBottom="18dp"
+            android:text="更新"
+            android:textSize="17sp"
+            android:gravity="center"
+            android:textColor="#ffffff"
+            android:background="@drawable/zq_sdk_shape_bg_radius_6dp_btn_update"
             android:layout_width="match_parent"
-            android:layout_height="1dp"
-            android:background="#EBEBEB" />
+            android:layout_height="40dp" />
 
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="42dp"
-            android:orientation="horizontal">
-
-            <Button
-                android:id="@+id/btn_cancel"
-                android:layout_width="0dp"
-                android:layout_height="match_parent"
-                android:layout_weight="1"
-                android:textColor="#1B1B1B"
-                android:background="@drawable/zq_sdk_shape_white_bg_radius_lb"
-                android:text="取消" />
-
-            <View
-                android:layout_width="1dp"
-                android:layout_height="match_parent"
-                android:background="#EBEBEB" />
-
-            <Button
-                android:id="@+id/btn_confirm"
-                android:layout_width="0dp"
-                android:layout_height="match_parent"
-                android:layout_weight="1"
-                android:textColor="#1B1B1B"
-                android:background="@drawable/zq_sdk_shape_white_bg_radius_rb"
-                android:text="确定" />
-        </LinearLayout>
     </LinearLayout>
 </LinearLayout>

@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/rank_bg_color"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@color/title_background" >
+
+        <LinearLayout
+            android:id="@+id/back_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="50dp"
+            android:background="@drawable/snail_back_layout_bg"
+            android:clickable="true"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:paddingRight="13dp" 
+            android:focusable="true"
+            android:focusableInTouchMode="false">
+
+            <View
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:background="@drawable/snail_back_bg" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/snail_userc_contact"
+                android:textColor="@color/white"
+                android:textSize="20sp" />
+        </LinearLayout>
+    </RelativeLayout>
+
+    <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="center_horizontal"
+            android:fadingEdge="none"
+            android:scrollbars="none">
+	    <LinearLayout
+	        android:layout_width="match_parent"
+	        android:layout_height="wrap_content"
+	        android:layout_marginLeft="20dp"
+			android:layout_marginRight="20dp"
+	        android:orientation="vertical"
+	        android:background="@color/rank_bg_color">
+		    <EditText
+				android:id="@+id/snail_userc_contact_editTxt1"
+				style="@style/snail_style_textview_round"
+				android:layout_width="match_parent"
+				android:layout_height="80dp"
+				android:layout_marginTop="10dp"
+				android:hint="@string/snail_userc_contact_edit_tips1"
+				android:gravity="top"
+				android:maxLength="500"/>
+		
+		    <EditText  
+				android:id="@+id/snail_userc_contact_editTxt2"   
+				style="@style/snail_style_textview_round_h" 
+				android:layout_marginTop="10dp"
+				android:hint="@string/snail_userc_contact_edit_tips2"
+				android:inputType="number"/>  
+			<Button
+                android:id="@+id/snail_userc_contact_submit"
+                style="@style/snail_style_button_green_h"
+                android:layout_marginTop="10dp"
+                android:text="@string/snail_submit" />
+			
+			<LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginBottom="10dp"
+                    android:gravity="center_horizontal"
+                    android:orientation="horizontal" >
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:text="@string/snail_userc_contact_txt_tips1"
+                        android:textColor="@color/editor_tip_color"
+                        android:textSize="14sp" />
+
+                    <Button
+                        android:id="@+id/snail_userc_contact_callbtn"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:background="@drawable/snail_graybg_btn_selector"
+                        android:text="@string/snail_userc_contact_txt_tips2"
+                        android:textColor="@color/green"
+                        android:textSize="14sp" />
+                </LinearLayout>
+			
+		</LinearLayout>
+	</ScrollView>
+</LinearLayout>

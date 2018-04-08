@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_alignParentBottom="true"
+    android:layout_centerHorizontal="true"
+    android:orientation="vertical">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/second_img"
+        android:layout_gravity="center_horizontal"
+        android:paddingBottom="6dp"
+        android:text="@string/dcn_init_message_failed"
+        android:textColor="#ccc"
+        android:textSize="12sp" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="20dp"
+        android:layout_marginTop="10dp">
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_centerHorizontal="true">
+            <TextView
+                android:id="@+id/dcn_splash_tv_retry_reserve"
+                android:layout_width="100dp"
+                android:layout_height="32dp"
+                android:gravity="center"
+                android:background="@drawable/dcn_selector_btn_gray"
+                android:layout_gravity="center_horizontal"
+                android:text="@string/dcn_splash_retry"
+                android:textColor="#aaa"
+                android:textSize="14sp" />
+
+            <View
+                android:layout_width="30dp"
+                android:layout_height="1dp"/>
+
+            <TextView
+                android:id="@+id/dcn_splash_tv_try_main"
+                android:layout_width="100dp"
+                android:layout_height="32dp"
+                android:gravity="center"
+                android:background="@drawable/dcn_selector_btn_gray"
+                android:text="@string/dcn_splash_MainLine"
+                android:textColor="#aaa"
+                android:textSize="14sp" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/dcn_splash_kefuL"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="25dp">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="25dp"
+                android:src="@drawable/dcn_kefu"/>
+            <TextView
+                android:id="@+id/dcn_splash_tv_feedbackL"
+                android:layout_gravity="center_vertical"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:text="@string/dcn_splash_feedback"
+                android:textColor="#aaa"
+                android:textSize="14sp" />
+        </LinearLayout>
+
+    </RelativeLayout>
+
+
+    <LinearLayout
+        android:id="@+id/dcn_splash_kefuP"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginBottom="40dp">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="25dp"
+            android:src="@drawable/dcn_kefu"/>
+        <TextView
+            android:id="@+id/dcn_splash_tv_feedbackP"
+            android:layout_gravity="center_vertical"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:text="@string/dcn_splash_feedback"
+            android:textColor="#aaa"
+            android:textSize="14sp" />
+    </LinearLayout>
+</LinearLayout>

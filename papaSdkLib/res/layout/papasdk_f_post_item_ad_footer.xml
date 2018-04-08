@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:orientation="vertical"
+              android:layout_width="fill_parent"
+              android:layout_height="wrap_content">
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                  android:orientation="horizontal"
+                  android:layout_width="fill_parent"
+                  android:layout_height="wrap_content"
+                  android:background="@android:color/white"
+                  android:paddingLeft="@dimen/mg_forum_post_item_padding"
+                  android:paddingRight="@dimen/mg_forum_post_item_padding">
+        <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:layout_gravity="right|center_vertical"
+                android:gravity="center_vertical|right"
+                android:paddingBottom="10dp"
+                android:paddingTop="10dp">
+            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                      android:text="官方"
+                      android:id="@+id/title"
+                      android:paddingBottom="2dp"
+                      android:textColor="@android:color/white"
+                      android:paddingLeft="4dp"
+                      android:paddingRight="4dp"
+                      android:paddingTop="2dp"
+                      android:textSize="12dp"
+                      android:layout_marginLeft="8dp"
+                      android:background="#7f000000"
+            />
+        </LinearLayout>
+    </LinearLayout>
+
+
+    <View android:layout_width="match_parent" android:layout_height="6dp" android:id="@+id/post_footer_divider"
+          android:visibility="gone"/>
+</LinearLayout>

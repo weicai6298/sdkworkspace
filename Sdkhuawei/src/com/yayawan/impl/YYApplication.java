@@ -1,6 +1,7 @@
 package com.yayawan.impl;
 
 
+
 import com.huawei.android.hms.agent.HMSAgent;
 
 import android.app.Application;
@@ -12,8 +13,7 @@ public class YYApplication extends Application {
 	@Override
 	public void onCreate() {
 		super.onCreate();
-		
-		HMSAgent.init(this);
+//		HMSAgent.init(this);
 		YaYawanconstants.applicationInit(getApplicationContext());
 	}
 }

@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_gravity="center"
+    android:background="@color/ipay_transparent_75"
+    android:gravity="center">
+
+    <RelativeLayout
+        android:id="@+id/ipay_virtual_pay_area"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:background="@drawable/ipay_dialog_bg"
+        android:layout_margin="@dimen/ipay_margin_30"
+        android:paddingBottom="@dimen/ipay_margin_5">
+
+        <LinearLayout
+            android:id="@+id/ll_left_back"
+            android:layout_width="@dimen/ipay_title_mini_h"
+            android:layout_height="@dimen/ipay_title_mini_h"
+            android:gravity="center"
+            android:background="@drawable/ipay_btn_bg_left_back"
+            android:orientation="horizontal" >
+
+            <ImageView
+                android:id="@+id/iv_left_button_back"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:contentDescription="@null"
+                android:scaleType="fitXY"
+                android:src="@drawable/ipay_dialog_close"
+                android:visibility="visible" />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/tv_middle_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:textSize="@dimen/ipay_text_size_15"
+            android:textColor="@color/ipay_color_value_6"
+            android:layout_marginTop="@dimen/ipay_margin_20"
+            android:gravity="center"/>
+
+        <TextView
+            android:id="@+id/tv_price_aipay"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:textColor="@color/ipay_color_value_6"
+            android:layout_below="@id/tv_middle_title"
+            android:layout_marginTop="@dimen/ipay_margin_30"
+            android:textSize="@dimen/ipay_text_size_18"/>
+
+        <TextView
+            android:id="@+id/tv_balance"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:textColor="@color/ipay_color_value_5"
+            android:layout_below="@id/tv_price_aipay"
+            android:layout_marginTop="@dimen/ipay_margin_10"
+            android:textSize="@dimen/ipay_text_size_13"/>
+
+        <TextView
+            android:id="@+id/tv_submit_btn"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/ipay_height_43"
+            android:layout_marginTop="@dimen/ipay_margin_30"
+            android:layout_marginLeft="@dimen/ipay_margin_5"
+            android:layout_marginRight="@dimen/ipay_margin_5"
+            android:background="@drawable/ipay_common_btn_bg_color"
+            android:gravity="center"
+            android:text="@string/ipay_ensure_pay"
+            android:textColor="@color/ipay_color_value_1"
+            android:textSize="@dimen/ipay_text_size_15"
+            android:layout_below="@id/tv_balance"
+            android:visibility="visible" />
+
+    </RelativeLayout>
+</RelativeLayout>

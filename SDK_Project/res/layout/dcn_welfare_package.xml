@@ -1,0 +1,302 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:dl="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:layout_marginTop="8dp"
+              android:background="@color/dcn_white"
+              android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="35dp">
+
+        <TextView
+            android:id="@+id/dcn_welfare_package_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:drawableLeft="@drawable/dcn_welfare_package_title"
+            android:drawablePadding="5dp"
+            android:text="@string/dcn_welfare_package"
+            android:textColor="#333333"
+            android:textSize="14sp"/>
+
+        <TextView
+            android:id="@+id/dcn_welfare_package_more"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="15dp"
+            android:drawableRight="@drawable/dcn_welfare_more"
+            android:text="@string/dcn_welfare_package_more"
+            android:textColor="#999999"
+            android:textSize="10sp"/>
+
+    </RelativeLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:background="#f0f0f0"/>
+
+    <ImageView
+        android:id="@+id/dcn_welfare_package_no_gift"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="15dp"
+        android:background="@drawable/dcn_welfare_no_gift"
+        android:visibility="gone"/>
+
+    <LinearLayout
+        android:id="@+id/dcn_welfare_package_container"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:visibility="visible">
+
+        <LinearLayout
+            android:id="@+id/dcn_welfare_package_view1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="15dp"
+            android:layout_marginTop="12dp"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:id="@+id/dcn_welfare_package_title1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_toLeftOf="@+id/dcn_welfare_package_fun1"
+                    android:ellipsize="end"
+                    android:maxLines="1"
+                    android:textColor="#262627"
+                    android:textSize="14sp"/>
+
+                <TextView
+                    android:id="@+id/dcn_welfare_package_subtitle1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_below="@+id/dcn_welfare_package_title1"
+                    android:layout_marginTop="7dp"
+                    android:layout_toLeftOf="@+id/dcn_welfare_package_fun1"
+                    android:singleLine="true"
+                    android:textSize="10sp"
+                    android:textColor="#8F9091"
+                    android:visibility="gone"/>
+
+                <LinearLayout
+                    android:id="@+id/dcn_welfare_package_left_view1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/dcn_welfare_package_title1"
+                    android:layout_marginTop="7dp"
+                    android:orientation="horizontal"
+                    android:visibility="gone">
+
+                    <TextView
+                        android:id="@+id/dcn_welfare_package_left_title1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="#8F9091"
+                        android:textSize="10sp"/>
+
+                    <com.downjoy.widget.GiftProgressBar
+                        android:id="@+id/dcn_welfare_package_left_progress1"
+                        style="@style/dcn_progressBarHorizontal_gift"
+                        android:layout_width="100dp"
+                        android:layout_height="4dp"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginLeft="10dip"
+                        android:layout_weight="1"
+                        android:max="100"
+                        dl:dependency="@+id/progressbar_percent"/>
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/dcn_welfare_package_fun1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="24dp"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:background="@drawable/dcn_shape_package_btn"
+                    android:gravity="center"
+                    android:paddingLeft="15dp"
+                    android:paddingRight="15dp"
+                    android:textColor="@color/dcn_white"
+                    android:textSize="14sp"/>
+
+            </RelativeLayout>
+
+            <TextView
+                android:id="@+id/dcn_welfare_package_content1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:ellipsize="end"
+                android:maxLines="2"
+                android:textColor="#8F9091"
+                android:textSize="10sp"/>
+
+            <TextView
+                android:id="@+id/dcn_welfare_package_use1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:ellipsize="end"
+                android:maxLines="2"
+                android:text=""
+                android:textColor="#8F9091"
+                android:textSize="10sp"
+                android:visibility="gone"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/dcn_welfare_package_view2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="15dp"
+            android:orientation="vertical">
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:layout_marginTop="12dp"
+                android:background="#f0f0f0"/>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="18dp">
+
+                <TextView
+                    android:id="@+id/dcn_welfare_package_title2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_toLeftOf="@+id/dcn_welfare_package_fun2"
+                    android:ellipsize="end"
+                    android:maxLines="1"
+                    android:textColor="#262627"
+                    android:textSize="14sp"/>
+
+                <TextView
+                    android:id="@+id/dcn_welfare_package_subtitle2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_below="@+id/dcn_welfare_package_title2"
+                    android:layout_marginTop="7dp"
+                    android:layout_toLeftOf="@+id/dcn_welfare_package_fun2"
+                    android:singleLine="true"
+                    android:textColor="#8F9091"
+                    android:textSize="10sp"
+                    android:visibility="gone"/>
+
+                <LinearLayout
+                    android:id="@+id/dcn_welfare_package_left_view2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/dcn_welfare_package_title2"
+                    android:layout_marginTop="7dp"
+                    android:orientation="horizontal"
+                    android:visibility="gone">
+
+                    <TextView
+                        android:id="@+id/dcn_welfare_package_left_title2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="#8F9091"
+                        android:textSize="10sp"/>
+
+                    <com.downjoy.widget.GiftProgressBar
+                        android:id="@+id/dcn_welfare_package_left_progress2"
+                        style="@style/dcn_progressBarHorizontal_gift"
+                        android:layout_width="100dp"
+                        android:layout_height="4dp"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginLeft="10dip"
+                        android:layout_weight="1"
+                        android:max="100"
+                        dl:dependency="@+id/progressbar_percent"/>
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/dcn_welfare_package_fun2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="24dp"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:background="@drawable/dcn_shape_package_btn"
+                    android:gravity="center"
+                    android:paddingLeft="15dp"
+                    android:paddingRight="15dp"
+                    android:textColor="@color/dcn_white"
+                    android:textSize="14sp"/>
+
+            </RelativeLayout>
+
+            <TextView
+                android:id="@+id/dcn_welfare_package_content2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="7dp"
+                android:ellipsize="end"
+                android:maxLines="2"
+                android:textColor="#8F9091"
+                android:textSize="10sp"/>
+
+            <TextView
+                android:id="@+id/dcn_welfare_package_use2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:ellipsize="end"
+                android:maxLines="2"
+                android:text=""
+                android:textColor="#8F9091"
+                android:textSize="10sp"
+                android:visibility="gone"/>
+        </LinearLayout>
+
+    </LinearLayout>
+
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
+        android:layout_marginTop="18dp"
+        android:background="#f0f0f0"/>
+
+    <TextView
+        android:id="@+id/dcn_welfare_package_customer"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginBottom="10dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/dcn_shape_welfare_package_btn"
+        android:paddingBottom="10dp"
+        android:paddingLeft="20dp"
+        android:paddingRight="20dp"
+        android:paddingTop="10dp"
+        android:text="@string/dcn_welfare_package_customer"
+        android:textColor="#ffa700"
+        android:textSize="12sp"/>
+
+</LinearLayout>

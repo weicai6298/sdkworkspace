@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/tysdkn_pay_tyb_right_layout"
+    android:layout_width="wrap_content"
+    android:layout_height="match_parent"
+    android:gravity="center"
+    android:orientation="horizontal"
+    >
+
+    <View
+        android:layout_width="0.5dp"
+        android:layout_height="200dp"
+        android:background="#dcdcdc"/>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:paddingLeft="20dp"
+        android:paddingRight="20dp">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="16dp"
+            android:layout_marginTop="20dp"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:id="@+id/tysdkn_pay_tyb_right_zfb"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <RelativeLayout
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    >
+
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginRight="8dp"
+                        android:layout_marginTop="8dp"
+                        android:src="@drawable/tysdkn_zfb"/>
+
+                    <ImageView
+                        android:id="@+id/tysdkn_pay_tyb_right_zfb_s"
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:visibility="invisible"
+                        tools:visibility="visible"
+                        android:layout_alignParentRight="true"
+                        android:src="@drawable/tysdkn_selete"/>
+                </RelativeLayout>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="15dp"
+                    android:paddingRight="4dp"
+                    android:text="支付宝"
+                    android:textColor="#111111"
+                    android:textSize="14sp"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/tysdkn_pay_tyb_right_yue"
+
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:orientation="vertical"
+
+                android:paddingRight="20dp">
+
+                <RelativeLayout
+                    android:layout_width="50dp"
+                    android:layout_height="50dp">
+
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginRight="8dp"
+                        android:layout_marginTop="8dp"
+                        android:src="@drawable/tysdkn_yue"/>
+
+                    <ImageView
+                        android:id="@+id/tysdkn_pay_tyb_right_yue_s"
+                        android:visibility="invisible"
+                        tools:visibility="visible"
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:layout_alignParentRight="true"
+                        android:src="@drawable/tysdkn_selete"/>
+                </RelativeLayout>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="15dp"
+                    android:paddingRight="4dp"
+                    android:text="余额"
+                    android:textColor="#111111"
+                    android:textSize="14sp"/>
+            </LinearLayout>
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/tysdkn_pay_tyb_right_pay"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:background="#FF009CEE"
+            android:gravity="center"
+            android:maxLines="1"
+            android:paddingBottom="10dp"
+            android:paddingTop="10dp"
+            android:text="去支付"
+            android:textColor="#ffffff"
+            android:textSize="14sp"/>
+      <LinearLayout
+          android:id="@+id/tysdkn_pay_right_wdye"
+          android:layout_width="match_parent"
+          android:visibility="invisible"
+          android:gravity="center"
+          android:layout_marginTop="5dp"
+          android:orientation="horizontal"
+          android:layout_height="wrap_content">
+          <TextView
+              android:layout_width="wrap_content"
+              android:text="我的余额: "
+              android:layout_height="wrap_content"/>
+          <TextView
+              android:id="@+id/tysdkn_pay_right_wdye_tv"
+              android:layout_width="wrap_content"
+              android:text="99.9"
+              android:textColor="#F4340E"
+              android:layout_height="wrap_content"/>
+          <TextView
+              android:layout_width="wrap_content"
+              android:text="元"
+              android:textColor="#F4340E"
+              android:layout_height="wrap_content"/>
+      </LinearLayout>
+    </LinearLayout>
+
+</LinearLayout>

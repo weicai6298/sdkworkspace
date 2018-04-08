@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="sina_game_loadding">加载中...</string>
+    <string name="sina_game_exit">退出游戏</string>
+    <string name="sina_game_exit_confirm">确认退出游戏吗?</string>
+    <string name="sina_game_exit_button_exit">离开游戏</string>
+    <string name="sina_game_exit_button_cancel">回到游戏</string>
+</resources>

@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="350dp"
+    android:layout_height="wrap_content"
+    android:layout_gravity="center"
+    android:background="@drawable/tysdkn_edit_two_bg"
+    android:orientation="vertical"
+    >
+
+    <RelativeLayout
+        android:layout_width="350dp"
+        android:layout_height="50dp"
+        android:paddingLeft="18sp"
+        android:paddingRight="18dp">
+
+        <TextView
+            android:id="@+id/tysdkn_dialog_wb_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:textColor="#009DEF"
+            android:textSize="19sp"
+            tools:text="实名认证"/>
+    </RelativeLayout>
+    <com.sdk.tysdk.ui.ProgressWebView
+        android:id="@+id/tysdkn_dialog_wb"
+        android:layout_width="match_parent"
+        android:layout_height="300dp"
+        android:scrollbars="none"/>
+
+</LinearLayout>

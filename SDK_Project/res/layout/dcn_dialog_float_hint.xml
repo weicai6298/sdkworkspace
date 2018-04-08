@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="@dimen/dcn_dialog_common_width"
+    android:layout_height="wrap_content"
+    android:background="@drawable/dcn_float_hint_bg_bottom"
+    android:orientation="vertical">
+
+    <com.downjoy.widget.vollyextend.TopRoundImageView
+        android:layout_width="match_parent"
+        android:layout_height="160dp"
+        android:scaleType="fitXY"
+        android:src="@drawable/dcn_float_hint_dialog" />
+
+
+    <RelativeLayout
+        android:id="@+id/dcn_select_hint_rl"
+        android:layout_width="215dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="15dp"
+        android:background="@drawable/dcn_shape_bg_float_hint_popwindow"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/dcn_select_hint_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="5dp"
+            android:layout_marginLeft="3dp"
+            android:text="select"
+            android:textColor="#333"
+            android:textSize="12sp" />
+
+        <View
+            android:layout_width="10dp"
+            android:layout_height="5dp"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="5dp"
+            android:background="@drawable/dcn_spinner_drop" />
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="@dimen/dcn_dialog_common_width"
+        android:layout_height="wrap_content"
+        android:background="@drawable/dcn_shape_dialog_bg"
+        android:orientation="vertical">
+
+
+        <CheckBox
+            android:id="@+id/dcn_dialog_cb_float_hide"
+            android:layout_width="215dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginBottom="12dp"
+            android:layout_marginTop="12dp"
+            android:button="@drawable/dcn_checkbox_float"
+            android:text="  记住选择并不再提示"
+            android:textColor="#999"
+            android:textSize="9sp" />
+    </LinearLayout>
+
+    <RelativeLayout
+        android:id="@+id/dcn_rl_layout1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="16dp">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/dcn_btn_kown"
+                android:layout_width="97dp"
+                android:layout_height="30dp"
+                android:background="@drawable/dcn_selector_dialog_btn"
+                android:text="隐藏"
+                android:textColor="@color/dcn_orange_common"
+                android:textSize="16sp" />
+
+            <Button
+                android:id="@+id/dcn_cancel_button"
+                android:layout_width="97dp"
+                android:layout_height="30dp"
+                android:layout_marginLeft="20dp"
+                android:background="@drawable/dcn_selector_btn_gray"
+                android:text="@string/dcn_dialog_cancel"
+                android:textColor="#999"
+                android:textSize="16sp" />
+
+        </LinearLayout>
+    </RelativeLayout>
+</LinearLayout>

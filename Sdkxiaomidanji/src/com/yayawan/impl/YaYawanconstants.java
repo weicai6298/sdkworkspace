@@ -283,36 +283,115 @@ public class YaYawanconstants {
 		// }
 		String paycode = "";
 		//捕鱼大世界
-		if (goods.equals("首充特惠礼包")) {
+//		if (goods.equals("首充特惠礼包")) {
+//			paycode = "a1";
+//		} else if (goods.equals("贵族礼包")) {
+//			paycode = "a2";
+//		} else if (goods.equals("金币礼包(6元)")) {
+//			paycode = "a3";
+//		} else if (goods.equals("金币礼包(12元)")) {
+//			paycode = "a4";
+//		} else if (goods.equals("金币礼包(28元)")) {
+//			paycode = "a5";
+//		} else if (goods.equals("金币礼包(50元)")) {
+//			paycode = "a6";
+//		} else if (goods.equals("金币礼包(108元)")) {
+//			paycode = "a7";
+//		} else if (goods.equals("金币礼包(328元)")) {
+//			paycode = "a8";
+//		} else if (goods.equals("金币礼包(618元)")) {
+//			paycode = "a9";
+//		} else if (goods.equals("钻石礼包(6元)")) {
+//			paycode = "a10";
+//		} else if (goods.equals("钻石礼包(12元)")) {
+//			paycode = "a11";
+//		} else if (goods.equals("钻石礼包(28元)")) {
+//			paycode = "a12";
+//		} else if (goods.equals("钻石礼包(50元)")) {
+//			paycode = "a13";
+//		} else if (goods.equals("钻石礼包(108元)")) {
+//			paycode = "a14";
+//		} else if (goods.equals("钻石礼包(328元)")) {
+//			paycode = "a15";
+//		}
+		
+		//全民大富豪
+		if (goods.equals("60金币")) {
 			paycode = "a1";
-		} else if (goods.equals("贵族礼包")) {
+		} else if (goods.equals("300金币")) {
 			paycode = "a2";
-		} else if (goods.equals("金币礼包(6元)")) {
+		} else if (goods.equals("980金币")) {
 			paycode = "a3";
-		} else if (goods.equals("金币礼包(12元)")) {
+		} else if (goods.equals("1980金币")) {
 			paycode = "a4";
-		} else if (goods.equals("金币礼包(28元)")) {
+		} else if (goods.equals("3280金币")) {
 			paycode = "a5";
-		} else if (goods.equals("金币礼包(50元)")) {
+		} else if (goods.equals("6480金币")) {
 			paycode = "a6";
-		} else if (goods.equals("金币礼包(108元)")) {
+		} else if (goods.equals("10金币")) {
 			paycode = "a7";
-		} else if (goods.equals("金币礼包(328元)")) {
+		} else if (goods.equals("30金币")) {
 			paycode = "a8";
-		} else if (goods.equals("金币礼包(618元)")) {
+		} else if (goods.equals("1元礼包")) {
 			paycode = "a9";
-		} else if (goods.equals("钻石礼包(6元)")) {
+		} else if (goods.equals("60金币")) {
 			paycode = "a10";
-		} else if (goods.equals("钻石礼包(12元)")) {
+		} else if (goods.equals("头衔福利礼包")) {
 			paycode = "a11";
-		} else if (goods.equals("钻石礼包(28元)")) {
+		} else if (goods.equals("星级员工礼包")) {
 			paycode = "a12";
-		} else if (goods.equals("钻石礼包(50元)")) {
+		} else if (goods.equals("部门猎聘礼包")) {
 			paycode = "a13";
-		} else if (goods.equals("钻石礼包(108元)")) {
+		} else if (goods.equals("建筑猎聘礼包")) {
 			paycode = "a14";
-		} else if (goods.equals("钻石礼包(328元)")) {
+		} else if (goods.equals("月卡")) {
 			paycode = "a15";
+		}else if (goods.equals("周卡")) {
+			paycode = "a16";
+		}else if (goods.equals("季卡")) {
+			paycode = "a17";
+		}else if (goods.equals("白银月卡")) {
+			paycode = "a18";
+		}else if (goods.equals("黄金月卡")) {
+			paycode = "a19";
+		}else if (goods.equals("铂金月卡")) {
+			paycode = "a20";
+		}else if (goods.equals("至尊月卡")) {
+			paycode = "a21";
+		}else if (goods.equals("新手大礼包")) {
+			paycode = "a22";
+		}else if (goods.equals("创业大礼包")) {
+			paycode = "a23";
+		}else if (goods.equals("企业家大礼包")) {
+			paycode = "a24";
+		}else if (goods.equals("富豪大礼包")) {
+			paycode = "a25";
+		}else if (goods.equals("新手大礼包2")) {
+			paycode = "a26";
+		}else if (goods.equals("创业大礼包2")) {
+			paycode = "a27";
+		}else if (goods.equals("企业家大礼包2")) {
+			paycode = "a28";
+		}else if (goods.equals("富豪大礼包2")) {
+			paycode = "a29";
+		}else if (goods.equals("新手大礼包3")) {
+			paycode = "a30";
+		}else if (goods.equals("创业大礼包3")) {
+			paycode = "a31";
+		}else if (goods.equals("企业家大礼包3")) {
+			paycode = "a32";
+		}else if (goods.equals("富豪大礼包3")) {
+			paycode = "a33";
+		}else if (goods.equals("新手大礼包4")) {
+			paycode = "a34";
+		}else if (goods.equals("创业大礼包4")) {
+			paycode = "a35";
+		}else if (goods.equals("企业家大礼包4")) {
+			paycode = "a36";
+		}else if (goods.equals("富豪大礼包4")) {
+			paycode = "a37";
+		}else if (goods.equals("6元礼包")) {
+			paycode = "a38";
 		}
 		return paycode;
 	}

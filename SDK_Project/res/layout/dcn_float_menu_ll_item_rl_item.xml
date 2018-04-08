@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="80dp"
+    android:layout_height="wrap_content">
+
+    <LinearLayout
+        android:id="@+id/dcn_ll_menu_item"
+        android:layout_width="60dp"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <com.downjoy.android.volley.toolbox.NetworkImageView
+            android:id="@+id/dcn_float_menu_item_iv"
+            android:layout_marginTop="6dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"></com.downjoy.android.volley.toolbox.NetworkImageView>
+
+        <TextView
+            android:id="@+id/dcn_float_menu_item_tx"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_centerHorizontal="true"
+            android:layout_centerInParent="true"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:lines="1"
+            android:textColor="#333"
+            android:textSize="12sp"></TextView>
+    </LinearLayout>
+
+
+    <TextView
+        android:id="@+id/dcn_float_menu_new_msg_iv"
+        android:layout_width="wrap_content"
+        android:layout_height="12dp"
+        android:layout_alignParentTop="true"
+        android:layout_marginLeft="35dp"
+        android:layout_marginTop="5dp"
+        android:background="@drawable/dcn_message_hint_blue"
+        android:gravity="center"
+        android:textColor="@color/dcn_white"
+        android:textSize="8dp"
+        android:visibility="invisible" />
+</RelativeLayout>

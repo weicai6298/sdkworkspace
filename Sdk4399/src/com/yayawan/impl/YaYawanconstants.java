@@ -126,9 +126,15 @@ public class YaYawanconstants {
 	 * @param paramActivity
 	 * @param callback
 	 */
-	public static void exit(Activity paramActivity,
+	public static void exit(final Activity paramActivity,
 			final YYWExitCallback callback) {
 		Yayalog.loger("YaYawanconstantssdk退出");
+		paramActivity.runOnUiThread(new Runnable() {
+			
+			@Override
+			public void run() {
+				// TODO Auto-generated method stub
+				
 
 		mOpeCenter.shouldQuitGame(paramActivity, new OnQuitGameListener() {
 
@@ -142,6 +148,8 @@ public class YaYawanconstants {
 				if(shouldQuit){
 					callback.onExit();
 				}
+			}
+		});
 			}
 		});
 	}

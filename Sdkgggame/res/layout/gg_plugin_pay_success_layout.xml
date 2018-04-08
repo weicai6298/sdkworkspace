@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/c_f5"
+    >
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/gg_plugin_pay_success_icon"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="40dp"
+        />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:textSize="17sp"
+        android:textColor="@color/c_33"
+        android:layout_marginTop="20dp"
+        android:text="@string/str_pay_suc"
+        />
+
+    <TextView
+        android:id="@+id/pay_success_amount"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:textSize="20sp"
+        android:textColor="@color/c_FFA548"
+        android:layout_marginTop="10dp"
+        android:textStyle="bold"
+        />
+    <TextView
+        android:id="@+id/pay_success_retrun_game"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="15sp"
+        android:textColor="@color/c_ff"
+        android:paddingTop="12dp"
+        android:paddingBottom="12dp"
+        android:background="@drawable/gg_plugin_send_code_shape"
+        android:text="@string/str_return_game"
+        android:gravity="center_horizontal"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
+        android:layout_marginTop="30dp"
+        />
+
+</LinearLayout>

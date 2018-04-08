@@ -1,0 +1,554 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="snailpay_citys">
+        <item>西城,东城,崇文,宣武,朝阳,海淀,丰台,石景山,门头沟,房山,通州,顺义,大兴,昌平,平谷,怀柔,密云,延庆</item>
+		<item>青羊,河东,河西,南开,河北,红桥,塘沽,汉沽,大港,东丽,西青,北辰,津南,武清,宝坻,静海,宁河,蓟县,开发区</item>
+		<item>石家庄,秦皇岛,廊坊,保定,邯郸,唐山,邢台,衡水,张家口,承德,沧州,衡水</item>
+		<item>太原,大同,长治,晋中,阳泉,朔州,运城,临汾</item>
+		<item>呼和浩特,赤峰,通辽,锡林郭勒,兴安</item>
+		<item>大连,沈阳,鞍山,抚顺,营口,锦州,丹东,朝阳,辽阳,阜新,铁岭,盘锦,本溪,葫芦岛</item>
+		<item>长春,吉林,四平,辽源,通化,延吉,白城,辽源,松原,临江,珲春</item>
+		<item>哈尔滨,齐齐哈尔,大庆,牡丹江,鹤岗,佳木斯,绥化</item>
+		<item>浦东,杨浦,徐汇,静安,卢湾,黄浦,普陀,闸北,虹口,长宁,宝山,闵行,嘉定,金山,松江,青浦,崇明,奉贤,南汇</item>
+		<item>南京,苏州,无锡,常州,扬州,徐州,南通,镇江,泰州,淮安,连云港,宿迁,盐城,淮阴,沐阳,张家港</item>
+		<item>杭州,金华,宁波,温州,嘉兴,绍兴,丽水,湖州,台州,舟山,衢州</item>
+		<item>合肥,马鞍山,蚌埠,黄山,芜湖,淮南,铜陵,阜阳,宣城,安庆</item>
+		<item>福州,厦门,泉州,漳州,南平,龙岩,莆田,三明,宁德</item>
+		<item>南昌,景德镇,上饶,萍乡,九江,吉安,宜春,鹰潭,新余,赣州</item>
+		<item>青岛,济南,淄博,烟台,泰安,临沂,日照,德州,威海,东营,荷泽,济宁,潍坊,枣庄,聊城</item>
+		<item>郑州,洛阳,开封,平顶山,濮阳,安阳,许昌,南阳,信阳,周口,新乡,焦作,三门峡,商丘</item>
+		<item>武汉,襄樊,孝感,十堰,荆州,黄石,宜昌,黄冈,恩施,鄂州,江汉,随枣,荆沙,咸宁</item>
+		<item>长沙,湘潭,岳阳,株洲,怀化,永州,益阳,张家界,常德,衡阳,湘西,邵阳,娄底,郴州</item>
+		<item>广州,深圳,东莞,佛山,珠海,汕头,韶关,江门,梅州,揭阳,中山,河源,惠州,茂名,湛江,阳江,潮州,云浮,汕尾,潮阳,肇庆,顺德,清远</item>
+		<item>南宁,桂林,柳州,梧州,来宾,贵港,玉林,贺州</item>
+		<item>海口,三亚</item>
+		<item>渝中,大渡口,江北,沙坪坝,九龙坡,南岸,北碚,万盛,双桥,渝北,巴南,万州,涪陵,黔江,长寿</item>
+		<item>成都,达州,南充,乐山,绵阳,德阳,内江,遂宁,宜宾,巴中,自贡,康定,攀枝花</item>
+		<item>贵阳,遵义,安顺,黔西南,都匀</item>
+		<item>昆明,丽江,昭通,玉溪,临沧,文山,红河,楚雄,大理</item>
+		<item>拉萨,林芝,日喀则,昌都</item>
+		<item>西安,咸阳,延安,汉中,榆林,商南,略阳,宜君,麟游,白河</item>
+		<item>兰州,金昌,天水,武威,张掖,平凉,酒泉</item>
+		<item>黄南,海南,西宁,海东,海西,海北,果洛,玉树</item>
+		<item>银川,吴忠</item>
+		<item>乌鲁木齐,哈密,喀什,巴音郭楞,昌吉,伊犁,阿勒泰,克拉玛依,博尔塔拉</item>
+		<item>中西区,湾仔区,东区,南区,九龙-油尖旺区,九龙-深水埗区,九龙-九龙城区,九龙-黄大仙区,九龙-观塘区,新界-北区,新界-大埔区,新界-沙田区,新界-西贡区,新界-荃湾区,新界-屯门区,新界-元朗区,新界-葵青区,新界-离岛区</item>
+		<item>花地玛堂区,圣安多尼堂区,大堂区,望德堂区,风顺堂区,嘉模堂区,圣方济各堂区,路氹城</item>
+    </string-array>
+    <string-array name="snailpay_idtypes">
+        <item>身份证</item>
+        <item>护照</item>
+        <item>军人证</item>
+        <item>台胞证</item>
+    </string-array>
+    <string-array name="snailpay_provinces">
+        <item>北京</item>
+        <item>天津</item>
+        <item>河北</item>
+        <item>山西</item>
+        <item>内蒙古</item>
+        <item>辽宁</item>
+        <item>吉林</item>
+        <item>黑龙江</item>
+        <item>上海</item>
+        <item>江苏</item>
+        <item>浙江</item>
+        <item>安徽</item>
+        <item>福建</item>
+        <item>江西</item>
+        <item>山东</item>
+        <item>河南</item>
+        <item>湖北</item>
+        <item>湖南</item>
+        <item>广东</item>
+        <item>广西</item>
+        <item>海南</item>
+        <item>重庆</item>
+        <item>四川</item>
+        <item>贵州</item>
+        <item>云南</item>
+        <item>西藏</item>
+        <item>陕西</item>
+        <item>甘肃</item>
+        <item>青海</item>
+        <item>宁夏</item>
+        <item>新疆</item>
+        <item>香港</item>
+        <item>澳门</item>
+    </string-array>
+    <color name="B_black">#FF000000</color>
+    <color name="C_white">#FFFFFFFF</color>
+    <color name="mini_button_text_disable">#aaaaaa</color>
+    <color name="mini_button_text_normal">#ffffff</color>
+    <color name="mini_card_defaultuse">#FF9933</color>
+    <color name="mini_card_edit_pop_shadow">#59000000</color>
+    <color name="mini_card_edti_bk">#31373e</color>
+    <color name="mini_cardlimit_money_color">#666666</color>
+    <color name="mini_cardlimit_text_color">#000000</color>
+    <color name="mini_color_gray">#666666</color>
+    <color name="mini_color_light_gray">#999999</color>
+    <color name="mini_error_hint_color">#ffffff</color>
+    <color name="mini_error_input">#FF0000</color>
+    <color name="mini_hint_color">#b2b2b2</color>
+    <color name="mini_input_hint_color">#cccccc</color>
+    <color name="mini_list_bg_color">#bababa</color>
+    <color name="mini_page_bg_color">#ededed</color>
+    <color name="mini_text_black">#000000</color>
+    <color name="mini_text_color_desc">#999999</color>
+    <color name="mini_text_color_gray">#333333</color>
+    <color name="mini_text_link">#2861d7</color>
+    <color name="mini_text_shadow">#fefefe</color>
+    <color name="mini_text_white">#ffffff</color>
+    <color name="mini_win_background">#00000000</color>
+    <color name="msp_combox_list_devider_color">#d8d8d8</color>
+    <color name="msp_dialog_tiltle_blue">#2277BB</color>
+    <color name="msp_hint_color">#b2b2b2</color>
+    <color name="msp_line_color">#cccccc</color>
+    <color name="msp_text_color_gray">#333333</color>
+    <color name="setting_translucent_bg">#e0000000</color>
+    <color name="snailpay_background">#f1f1f1</color>
+    <color name="snailpay_background_tab_pressed">#66000000</color>
+    <color name="snailpay_btn_green_click">#45aa1e</color>
+    <color name="snailpay_btn_green_normal">#4dbd21</color>
+    <color name="snailpay_btn_white_click">#f2f2f2</color>
+    <color name="snailpay_btn_white_normal">#ffffff</color>
+    <color name="snailpay_color_text">#a3a3a3</color>
+    <color name="snailpay_text_green">#FF6DC343</color>
+    <color name="snailpay_title_background">#eb413d</color>
+    <declare-styleable name="labelInput"><attr format="string|reference" name="labelName"/><attr format="reference" name="rightIcon"/><attr format="string|reference" name="miniInputHint"/><attr format="boolean" name="isPassword"/><attr format="integer" name="maxInputLength"/></declare-styleable>
+    <declare-styleable name="tableView"><attr name="tableType"><flag name="normal" value="0x10"/><flag name="top" value="0x11"/><flag name="bottom" value="0x12"/><flag name="center" value="0x13"/></attr><attr name="tableStyle"><flag name="round_corner" value="0x10"/><flag name="list_item" value="0x11"/></attr><attr format="boolean" name="show_arrow"/><attr name="arrow_type"><flag name="arrow_right" value="0x20"/><flag name="arrow_down" value="0x21"/><flag name="arrow_up" value="0x22"/></attr><attr format="string|reference" name="left_text"/><attr format="string|reference" name="left_text_2"/><attr format="reference" name="left_image"/><attr format="dimension|reference" name="left_imageWidth"/><attr format="dimension|reference" name="left_imageHeight"/><attr format="boolean" name="left_largeSize"/><attr format="reference" name="right_image"/><attr format="boolean" name="change_backgroud"/></declare-styleable>
+    <dimen name="item_left_icon_large">32dp</dimen>
+    <dimen name="item_left_icon_small">29dp</dimen>
+    <dimen name="mini_add_card_margin_left">21dp</dimen>
+    <dimen name="mini_element_default_height">44dp</dimen>
+    <dimen name="mini_margin_1">1dp</dimen>
+    <dimen name="mini_margin_10">10dp</dimen>
+    <dimen name="mini_margin_13">13dp</dimen>
+    <dimen name="mini_margin_15">15dp</dimen>
+    <dimen name="mini_margin_19">19dp</dimen>
+    <dimen name="mini_margin_20">20dp</dimen>
+    <dimen name="mini_margin_27">27dp</dimen>
+    <dimen name="mini_margin_3">3dp</dimen>
+    <dimen name="mini_margin_42">42dp</dimen>
+    <dimen name="mini_margin_6">6dp</dimen>
+    <dimen name="mini_margin_bottom">10dp</dimen>
+    <dimen name="mini_margin_default">10dp</dimen>
+    <dimen name="mini_margin_left">14dp</dimen>
+    <dimen name="mini_margin_right">14dp</dimen>
+    <dimen name="mini_margin_textview_13">9dp</dimen>
+    <dimen name="mini_margin_textview_6">3dp</dimen>
+    <dimen name="mini_margin_top">10dp</dimen>
+    <dimen name="mini_text_size_14">14sp</dimen>
+    <dimen name="mini_text_size_large">16sp</dimen>
+    <dimen name="mini_text_size_link">17sp</dimen>
+    <dimen name="mini_text_size_medium">15sp</dimen>
+    <dimen name="mini_text_size_small">13sp</dimen>
+    <dimen name="mini_text_size_x_small">12sp</dimen>
+    <dimen name="mini_text_size_xx_large">20sp</dimen>
+    <dimen name="mini_title_height">47dp</dimen>
+    <dimen name="mini_win_default_height">233dp</dimen>
+    <dimen name="mini_win_default_width">280dp</dimen>
+    <dimen name="msp_dimen_40">40dp</dimen>
+    <dimen name="msp_dimen_input_40">40dp</dimen>
+    <dimen name="msp_font_medium">16sp</dimen>
+    <dimen name="msp_margin_bottom">7dp</dimen>
+    <dimen name="msp_margin_default">7dp</dimen>
+    <dimen name="msp_margin_left">10dp</dimen>
+    <dimen name="msp_margin_right">10dp</dimen>
+    <dimen name="msp_margin_top">7dp</dimen>
+    <dimen name="snailpay_btn_corners">40dp</dimen>
+    <dimen name="snailpay_card_btn_corners">4dp</dimen>
+    <drawable name="mini_list_devider">#bababa</drawable>
+    <drawable name="mini_page_bg_color">#ededed</drawable>
+    <drawable name="mini_web_back_text_default">#333333</drawable>
+    <drawable name="mini_web_back_text_press">#cccccc</drawable>
+    <drawable name="mini_win_background_draw">#00000000</drawable>
+    <string name="alipay_cancel">取消</string>
+    <string name="alipay_cancel_install_alipay">你已取消安装支付宝钱包</string>
+    <string name="alipay_cancel_install_msp">你已取消安装移动快捷支付服务</string>
+    <string name="alipay_confirm_title">提示</string>
+    <string name="alipay_content_description_icon">icon</string>
+    <string name="alipay_download">下载</string>
+    <string name="alipay_download_fail">下载安装包失败</string>
+    <string name="alipay_ensure">确定</string>
+    <string name="alipay_install_alipay">你尚未安装支付宝钱包，请立即安装</string>
+    <string name="alipay_install_msp">你尚未安装支付宝移动快捷支付服务，请立即安装</string>
+    <string name="alipay_processing">加载中</string>
+    <string name="alipay_redo">重试</string>
+    <string name="alipay_refresh">刷新</string>
+    <string name="android_net_connect_error">无法连接服务器</string>
+    <string name="android_net_connect_time_out_error">连接服务器超时</string>
+    <string name="android_net_connecting">正在连接，请稍候。</string>
+    <string name="android_net_error">出错啦</string>
+    <string name="android_net_ok">确定</string>
+    <string name="android_net_out_of_memory">内存不足</string>
+    <string name="android_net_response_error">服务器返回：</string>
+    <string name="cardCancle">取消</string>
+    <string name="cardDefaultuse">默认使用该卡支付</string>
+    <string name="cardUnbing">解除绑定</string>
+    <string name="channel">CommonChannelInfo</string>
+    <string name="confirm_title">提示</string>
+    <string name="mini_agree">同意</string>
+    <string name="mini_app_error">系统繁忙，请稍后再试。</string>
+    <string name="mini_canel_install_msp">你已取消安装移动快捷支付。</string>
+    <string name="mini_canel_install_wallet">你已取消安装支付宝钱包。</string>
+    <string name="mini_car_default_use">默认使用该卡支付</string>
+    <string name="mini_car_limit_phone">调整交易限额，请联系银行客服：</string>
+    <string name="mini_card_no">卡号</string>
+    <string name="mini_card_type">卡类型</string>
+    <string name="mini_countdown_info">秒后重发</string>
+    <string name="mini_date">有效期</string>
+    <string name="mini_date_hint">月份/年份</string>
+    <string name="mini_debug_app_error">程序发生错误！点击确定退出程序。</string>
+    <string name="mini_error_title_default">提示</string>
+    <string name="mini_format_error">格式错误</string>
+    <string name="mini_id_no">证件号</string>
+    <string name="mini_loading">加载中</string>
+    <string name="mini_loading_1">正在安全检测…</string>
+    <string name="mini_net_error">不能连接到网络，是否重试？</string>
+    <string name="mini_no_input">不能为空</string>
+    <string name="mini_num_0">0</string>
+    <string name="mini_num_1">1</string>
+    <string name="mini_num_2">2</string>
+    <string name="mini_num_3">3</string>
+    <string name="mini_num_4">4</string>
+    <string name="mini_num_5">5</string>
+    <string name="mini_num_6">6</string>
+    <string name="mini_num_7">7</string>
+    <string name="mini_num_8">8</string>
+    <string name="mini_num_9">9</string>
+    <string name="mini_page_add_hint">银行卡号</string>
+    <string name="mini_page_add_other_pay"> 其他付款方式</string>
+    <string name="mini_page_add_tips"> 提供支付密码和短信验证的双重保障</string>
+    <string name="mini_page_add_title">添加银行卡</string>
+    <string name="mini_page_input_id_hint">证件号码</string>
+    <string name="mini_page_input_name_hint">持卡人姓名</string>
+    <string name="mini_page_msg_check">信息加密处理，仅用于银行验证</string>
+    <string name="mini_page_msg_choose_type">选择证件类型</string>
+    <string name="mini_page_msg_title">填写银行卡信息</string>
+    <string name="mini_page_name">姓名          </string>
+    <string name="mini_page_next">下一步</string>
+    <string name="mini_password">密码</string>
+    <string name="mini_password_hint">请输入密码</string>
+    <string name="mini_password_safety_input">当前使用密码安全输入法</string>
+    <string name="mini_phone_no">手机号</string>
+    <string name="mini_phone_no_hint">银行预留手机号码</string>
+    <string name="mini_quickpay_protocol">《服务协议》</string>
+    <string name="mini_redo">重试</string>
+    <string name="mini_safe_no">安全码</string>
+    <string name="mini_safe_no_hint">卡背面末三位数字</string>
+    <string name="mini_setting_credit_cards_tips">信用卡</string>
+    <string name="mini_setting_debit_cards_tips">储蓄卡</string>
+    <string name="mini_setting_default_tips">默认使用该卡支付</string>
+    <string name="mini_setting_pay_password">支付密码</string>
+    <string name="mini_setting_view_all_bankcard">查看全部(%1$d张)</string>
+    <string name="mini_sign_0"> ) </string>
+    <string name="mini_sign_1"> ! </string>
+    <string name="mini_sign_2"> \@ </string>
+    <string name="mini_sign_3"> # </string>
+    <string name="mini_sign_4"> $ </string>
+    <string name="mini_sign_5"> % </string>
+    <string name="mini_sign_7">&amp;</string>
+    <string name="mini_sign_8"> * </string>
+    <string name="mini_sign_9"> ( </string>
+    <string name="mini_sign_a"> - </string>
+    <string name="mini_sign_aa">[</string>
+    <string name="mini_sign_ab">]</string>
+    <string name="mini_sign_ac"> _ </string>
+    <string name="mini_sign_ad"> ^ </string>
+    <string name="mini_sign_ae">±</string>
+    <string name="mini_sign_af">’</string>
+    <string name="mini_sign_ag"> \\ </string>
+    <string name="mini_sign_ah"> ` </string>
+    <string name="mini_sign_ai"> \?</string>
+    <string name="mini_sign_aj">123</string>
+    <string name="mini_sign_ak">abc</string>
+    <string name="mini_sign_al">,</string>
+    <string name="mini_sign_am">.</string>
+    <string name="mini_sign_an">确定 </string>
+    <string name="mini_sign_b"> + </string>
+    <string name="mini_sign_c">"</string>
+    <string name="mini_sign_d">\'</string>
+    <string name="mini_sign_e">:</string>
+    <string name="mini_sign_f">;</string>
+    <string name="mini_sign_g">/</string>
+    <string name="mini_sign_h"> \?</string>
+    <string name="mini_sign_i">~</string>
+    <string name="mini_sign_j">|</string>
+    <string name="mini_sign_k">+</string>
+    <string name="mini_sign_l">×</string>
+    <string name="mini_sign_m">÷</string>
+    <string name="mini_sign_n">=</string>
+    <string name="mini_sign_o">&lt;</string>
+    <string name="mini_sign_p">></string>
+    <string name="mini_sign_q">{</string>
+    <string name="mini_sign_r">}</string>
+    <string name="mini_sign_s">∑</string>
+    <string name="mini_sign_t">§</string>
+    <string name="mini_sign_u">‰</string>
+    <string name="mini_sign_v">￥ </string>
+    <string name="mini_sign_w">α</string>
+    <string name="mini_sign_x">β</string>
+    <string name="mini_sign_y">γ</string>
+    <string name="mini_sign_z">℃ </string>
+    <string name="mini_str_a">a</string>
+    <string name="mini_str_b">b</string>
+    <string name="mini_str_c">c</string>
+    <string name="mini_str_d">d</string>
+    <string name="mini_str_e">e</string>
+    <string name="mini_str_f">f</string>
+    <string name="mini_str_g">g</string>
+    <string name="mini_str_h">h</string>
+    <string name="mini_str_i">i</string>
+    <string name="mini_str_j">j</string>
+    <string name="mini_str_k">k</string>
+    <string name="mini_str_l">l</string>
+    <string name="mini_str_m">m</string>
+    <string name="mini_str_mini_checkbox_relativelayout">checkbox_relativelayout</string>
+    <string name="mini_str_mini_layout_relativeLayout">mini_layout_relativeLayout</string>
+    <string name="mini_str_mini_linBlocksConpent">mini_linBlocksConpent</string>
+    <string name="mini_str_mini_root">mini_root</string>
+    <string name="mini_str_mini_ui_input_content">mini_ui_input_content</string>
+    <string name="mini_str_mini_ui_input_layout">mini_ui_input_layout</string>
+    <string name="mini_str_mini_uicomponenet">uicomponenet</string>
+    <string name="mini_str_mini_widget_label_input">mini_widget_label_input</string>
+    <string name="mini_str_minus">-</string>
+    <string name="mini_str_n">n</string>
+    <string name="mini_str_null">xx</string>
+    <string name="mini_str_o">o</string>
+    <string name="mini_str_p">p</string>
+    <string name="mini_str_plus">+</string>
+    <string name="mini_str_q">q</string>
+    <string name="mini_str_r">r</string>
+    <string name="mini_str_s">s</string>
+    <string name="mini_str_t">t</string>
+    <string name="mini_str_title">标题 </string>
+    <string name="mini_str_u">u</string>
+    <string name="mini_str_up_a">A</string>
+    <string name="mini_str_up_b">B</string>
+    <string name="mini_str_up_c">C</string>
+    <string name="mini_str_up_d">D</string>
+    <string name="mini_str_up_e">E</string>
+    <string name="mini_str_up_f">F</string>
+    <string name="mini_str_up_g">G</string>
+    <string name="mini_str_up_h">H</string>
+    <string name="mini_str_up_i">I</string>
+    <string name="mini_str_up_j">J</string>
+    <string name="mini_str_up_k">K</string>
+    <string name="mini_str_up_l">L</string>
+    <string name="mini_str_up_m">M</string>
+    <string name="mini_str_up_n">N</string>
+    <string name="mini_str_up_o">O</string>
+    <string name="mini_str_up_p">P</string>
+    <string name="mini_str_up_q">Q</string>
+    <string name="mini_str_up_r">R</string>
+    <string name="mini_str_up_s">S</string>
+    <string name="mini_str_up_t">T</string>
+    <string name="mini_str_up_u">U</string>
+    <string name="mini_str_up_v">V</string>
+    <string name="mini_str_up_w">W</string>
+    <string name="mini_str_up_x">X</string>
+    <string name="mini_str_up_y">Y</string>
+    <string name="mini_str_up_z">Z</string>
+    <string name="mini_str_v">v</string>
+    <string name="mini_str_w">w</string>
+    <string name="mini_str_x">x</string>
+    <string name="mini_str_y">y</string>
+    <string name="mini_str_z">z</string>
+    <string name="mini_switch">切换</string>
+    <string name="mini_weakpassword_error_same">请不要使用相同的数字</string>
+    <string name="mini_weakpassword_error_serial">请不要使用连续的数字</string>
+    <string name="msp_action_settings">设置</string>
+    <string name="msp_app_name">支付宝快捷支付服务</string>
+    <string name="msp_close">关闭</string>
+    <string name="msp_error_title_default">提示</string>
+    <string name="msp_memo_app_cancel">程序或者数据出现问题。</string>
+    <string name="msp_memo_repeat_pay">同一订单禁止同时多次支付。</string>
+    <string name="msp_memo_server_cancel">系统繁忙，请稍后再试。</string>
+    <string name="msp_memo_user_cancel">操作已经取消。</string>
+    <string name="msp_mini_card_type_text">卡类型</string>
+    <string name="msp_mini_choose_identitify">选择证件类别</string>
+    <string name="msp_mini_read_protocal_title">选择阅读协议</string>
+    <string name="msp_mini_safty_code_info">安全码是打印在信用卡背面签名区的一组数字，一般是后3位或后4位数字</string>
+    <string name="msp_mini_safty_code_title">安全码说明</string>
+    <string name="msp_str_null"/>
+    <string name="msp_xlistview_footer_hint_normal">查看更多</string>
+    <string name="msp_xlistview_header_hint_normal">下拉刷新</string>
+    <string name="msp_xlistview_header_last_time">上次更新时间：</string>
+    <string name="snailpay">您还剩余兔兔币%1$.2f个，是否要花费%2$.2f个购买？</string>
+    <string name="snailpay_back">返回</string>
+    <string name="snailpay_cancel">取消</string>
+    <string name="snailpay_charge_account">%s</string>
+    <string name="snailpay_charge_error_tip">充值卡不支持分次充值,卡实际面额必须和所选的面值一致,否则可能导致充值失败或余额丢失</string>
+    <string name="snailpay_charge_limit_money_tip"><Data> &lt;span color="#949494">请输入充值金额 &lt;font color="#6dc343"> (单笔金额上限为%s元)&lt;/font>&lt;/span> </Data></string>
+    <string name="snailpay_charge_money">充值金额：</string>
+    <string name="snailpay_charge_money_text">充值金额</string>
+    <string name="snailpay_charge_money_text_unit">元</string>
+    <string name="snailpay_charge_money_tip"><Data> &lt;span color="#949494">共:&lt;br/>&lt;font color="#6dc343">¥%s&lt;/font>&lt;/span>  </Data></string>
+    <string name="snailpay_charge_money_tip_for_game">%s</string>
+    <string name="snailpay_charge_no_limit_money_tip"><Data> &lt;span color="#949494">请输入充值金额 &lt;font color="#6dc343"> (单笔金额无上限)&lt;/font>&lt;/span> </Data></string>
+    <string name="snailpay_charge_success">充值成功</string>
+    <string name="snailpay_confirm">购买</string>
+    <string name="snailpay_confirm_charge_money"><Data> &lt;span>&lt;font style="font-size:20px">10&lt;/font>兔兔币&lt;/span>  </Data></string>
+    <string name="snailpay_congras">恭喜您!</string>
+    <string name="snailpay_congras2">订单已提交成功</string>
+    <string name="snailpay_faild">订单提交成功</string>
+    <string name="snailpay_help">7*24小时客服热线：10040 或 0512 — 67621002。</string>
+    <string name="snailpay_input_charge_card_number">请输入%s卡号</string>
+    <string name="snailpay_input_charge_card_password">请输入%s密码</string>
+    <string name="snailpay_next">下一步</string>
+    <string name="snailpay_ok">完成</string>
+    <string name="snailpay_orter_recharge">其他方式充值</string>
+    <string name="snailpay_pay_faild">订单提交成功</string>
+    <string name="snailpay_pay_reminder">温馨提示</string>
+    <string name="snailpay_pay_smscreate">一键发送短信</string>
+    <string name="snailpay_permission_cancel">取消</string>
+    <string name="snailpay_permission_ok">确定</string>
+    <string name="snailpay_permission_setting">设置</string>
+    <string name="snailpay_permission_text">点击“确定”进入授权页面，请允许访问权限，拒绝将无法使用。</string>
+    <string name="snailpay_permission_text2_contacts">在设置-应用-%s-权限中开启通讯录权限，可使用支付功能。</string>
+    <string name="snailpay_permission_text2_phone">在设置-应用-%s-权限中开启电话的权限，以正常支付。</string>
+    <string name="snailpay_permission_text2_storage">在设置-应用-%s-权限中开启存储空间权限，以正常支付。</string>
+    <string name="snailpay_permission_text_contacts">该应用需获取访问通讯录权限，若无该权限，将无法使用支付功能。</string>
+    <string name="snailpay_permission_text_phone">该应用需获取您设备读取手机状态的权限以保存游戏进程。若无该权限，支付无法运行。</string>
+    <string name="snailpay_permission_text_storage">该应用需获取您设备存储的读写权限以保存游戏进程。若无该权限，支付无法运行。</string>
+    <string name="snailpay_phone_backno_text">请输入银行卡号</string>
+    <string name="snailpay_phone_pay_info_bankaddr">开户所在省市</string>
+    <string name="snailpay_phone_pay_info_bankphoneno">银行预留手机号码</string>
+    <string name="snailpay_phone_pay_info_cardname">开户人姓名</string>
+    <string name="snailpay_phone_pay_info_idcardaddr">开户人身份证件地址</string>
+    <string name="snailpay_phone_pay_info_idno">开户人证件号码</string>
+    <string name="snailpay_phone_pay_info_idtype">开户证件类型</string>
+    <string name="snailpay_phone_pay_info_phoneno">受益人Ta的手机号码</string>
+    <string name="snailpay_phone_pay_info_saleaddr">产品销售地</string>
+    <string name="snailpay_phone_pay_info_username">受益人Ta的姓名</string>
+    <string name="snailpay_phone_phone_text">请输入手机号</string>
+    <string name="snailpay_please_input_charge_number">请输入手机充值卡卡号</string>
+    <string name="snailpay_please_input_charge_password">请输入手机充值卡密码</string>
+    <string name="snailpay_please_input_check_code">请输入验证码</string>
+    <string name="snailpay_please_input_snail_card">请输入蜗牛一卡通卡号</string>
+    <string name="snailpay_please_input_snail_password">请输入蜗牛一卡通密码</string>
+    <string name="snailpay_quick_charge_money">快速选择其他金额：</string>
+    <string name="snailpay_recharge">充值</string>
+    <string name="snailpay_recharge_confirm">确认充值</string>
+    <string name="snailpay_reminder">温馨提示</string>
+    <string name="snailpay_select_charge_money">选择充值金额:</string>
+    <string name="snailpay_smscreate">一键发送短信</string>
+    <string name="snailpay_support_phone_card">支持移动、联通、电信充值卡</string>
+    <style name="MspAppBaseTheme" parent="android:Theme.Light.NoTitleBar"/>
+    <style name="MspAppPayTheme" parent="android:Theme.Translucent">
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowFrame">@null</item>
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:windowIsFloating">true</item>
+    </style>
+    <style name="MspAppTheme" parent="MspAppBaseTheme">
+        <item name="android:windowIsFloating">true</item>
+        <item name="android:windowBackground">@android:color/transparent</item>
+    </style>
+    <style name="ProgressDialog" parent="android:Theme.Dialog">
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowBackground">@drawable/msp_dialog_progress_bg</item>
+    </style>
+    <style name="SnailPayActivity">
+        <item name="android:windowFullscreen">false</item>
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:windowFrame">@null</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowIsTranslucent">true</item>
+        <item name="android:windowContentOverlay">@null</item>
+        <item name="android:backgroundDimEnabled">true</item>
+    </style>
+    <style name="TextLarge">
+        <item name="android:textColor">#444444</item>
+        <item name="android:textSize">22sp</item>
+    </style>
+    <style name="TextMedium">
+        <item name="android:textColor">#444444</item>
+        <item name="android:textSize">18sp</item>
+    </style>
+    <style name="TextSmall">
+        <item name="android:textColor">#888888</item>
+        <item name="android:textSize">14sp</item>
+    </style>
+    <style name="alipay_alert_dialog" parent="android:Theme.Dialog">
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowBackground">@drawable/alipay_popup_bg</item>
+    </style>
+    <style name="mini_Dialog" parent="@android:style/Theme.Dialog">
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowIsFloating">true</item>
+        <item name="android:windowBackground">@color/mini_win_background</item>
+    </style>
+    <style name="mini_UITextField">
+        <item name="android:layout_width">fill_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_margin">5dp</item>
+        <item name="android:paddingLeft">@dimen/mini_margin_left</item>
+        <item name="android:paddingRight">@dimen/mini_margin_right</item>
+        <item name="android:background">@drawable/mini_ui_input_bg</item>
+    </style>
+    <style name="mini_progressBar_webview">
+        <item name="android:indeterminateOnly">false</item>
+        <item name="android:progressDrawable">@drawable/mini_progress_bar_webview</item>
+        <item name="android:secondaryProgress">0</item>
+        <item name="android:minHeight">5dip</item>
+        <item name="android:maxHeight">5dip</item>
+    </style>
+    <style name="mini_safty_dialog" parent="@android:style/Theme.Dialog">
+        <item name="android:windowFrame">@null</item>
+        <item name="android:windowIsFloating">true</item>
+        <item name="android:windowIsTranslucent">false</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:backgroundDimEnabled">true</item>
+    </style>
+    <style name="mini_title_text_style">
+        <item name="android:textColor">@color/mini_color_gray</item>
+        <item name="android:textSize">14dp</item>
+        <item name="android:shadowColor">@color/mini_text_white</item>
+        <item name="android:shadowRadius">1.0</item>
+        <item name="android:shadowDy">1.5</item>
+    </style>
+    <style name="snail_pay_dialog_theme" parent="@android:style/Theme.Dialog">
+        <item name="android:windowBackground">@null</item>
+    </style>
+    <style name="snailpay_dialog_style" parent="@android:style/Theme.Dialog">
+       <!--  <item name="android:windowFrame">@null</item>
+        <item name="android:windowIsTranslucent">false</item> -->
+        <item name="android:windowIsFloating">true</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:background">@android:color/white</item>
+        <item name="android:windowBackground">@android:color/white</item>
+        <!-- <item name="android:backgroundDimEnabled">false</item> -->
+    </style>
+    <style name="snailpay_edit_text_style" parent="@android:style/Theme.Light">
+        <item name="android:background">@null</item>
+        <item name="android:textColor">#000000</item>
+        <item name="android:textColorHint">#9b9b9b</item>
+        <item name="android:textSize">14sp</item>
+    </style>
+    <style name="snailpay_item_card_normal">
+        <item name="android:textColor">#000000</item>
+        <item name="android:background">@drawable/snailpay_bg_bottom</item>
+    </style>
+    <style name="snailpay_item_card_select">
+        <item name="android:textColor">#ffffff</item>
+        <item name="android:background">@drawable/snailpay_bg_click</item>
+    </style>
+    <style name="text_20">
+	    <item name="android:textSize">13.3sp</item>
+	</style>
+    <style name="text_24">
+	    <item name="android:textSize">16sp</item>
+	</style>
+    <style name="text_dark_gray_24" parent="text_24">
+        <item name="android:textColor">@color/mini_text_black</item>
+    </style>
+    <style name="text_gray_20" parent="text_20">
+        <item name="android:textColor">@color/mini_color_gray</item>
+    </style>
+    <style name="text_light_gray_20" parent="text_20">
+        <item name="android:textColor">@color/mini_color_light_gray</item>
+    </style>
+</resources>

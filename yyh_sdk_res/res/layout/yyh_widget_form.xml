@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <EditText
+        android:id="@+id/edit_form_oldPhone"
+        android:layout_width="match_parent"
+        android:layout_height="44dp"
+        android:background="@drawable/yyh_edittext_bg"
+        android:hint="请输入原手机号"
+        android:inputType="phone"
+        android:maxLength="11"
+        android:textSize="14dp"
+        tools:ignore="HardcodedText,SpUsage" />
+
+    <EditText
+        android:id="@+id/edit_form_phone"
+        android:layout_width="match_parent"
+        android:layout_height="44dp"
+        android:background="@drawable/yyh_edittext_bg"
+        android:hint="请输入手机号"
+        android:inputType="phone"
+        android:maxLength="11"
+        android:textSize="14dp"
+        tools:ignore="HardcodedText,SpUsage" />
+
+    <EditText
+        android:id="@+id/edit_form_newPhone"
+        android:layout_width="match_parent"
+        android:layout_height="44dp"
+        android:background="@drawable/yyh_edittext_bg"
+        android:hint="请输入新手机号"
+        android:inputType="phone"
+        android:maxLength="11"
+        android:textSize="14dp"
+        tools:ignore="HardcodedText,SpUsage" />
+
+
+    <com.appchina.usersdk.CaptchaEditText
+        android:id="@+id/edit_form_captcha"
+        android:layout_width="match_parent"
+        android:layout_height="44dp"/>
+
+    <EditText
+        android:id="@+id/edit_form_password"
+        android:layout_width="match_parent"
+        android:layout_height="44dp"
+        android:background="@drawable/yyh_edittext_bg"
+        android:hint="请输入密码"
+        android:inputType="textPassword"
+        android:textSize="14dp"
+        tools:ignore="HardcodedText,SpUsage" />
+
+    <EditText
+        android:id="@+id/edit_form_oldPassword"
+        android:layout_width="match_parent"
+        android:layout_height="44dp"
+        android:background="@drawable/yyh_edittext_bg"
+        android:hint="请输入原密码"
+        android:inputType="textPassword"
+        android:textSize="14dp"
+        tools:ignore="HardcodedText,SpUsage" />
+
+    <EditText
+        android:id="@+id/edit_form_newPassword"
+        android:layout_width="match_parent"
+        android:layout_height="44dp"
+        android:background="@drawable/yyh_edittext_bg"
+        android:hint="请输入新密码"
+        android:inputType="textPassword"
+        android:textSize="14dp"
+        tools:ignore="HardcodedText,SpUsage" />
+
+    <com.appchina.usersdk.YYHVoiceCaptchaView
+        android:id="@+id/edit_form_voiceCaptcha"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"/>
+</LinearLayout>
