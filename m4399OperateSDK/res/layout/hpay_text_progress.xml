@@ -4,7 +4,7 @@
     android:layout_height="wrap_content"
     android:gravity="center_vertical"
     android:orientation="horizontal"
-    android:padding="16dp" >
+    android:padding="16dp">
 
     <ProgressBar
         android:id="@+id/alert_progressBar_id"

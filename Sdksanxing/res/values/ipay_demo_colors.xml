@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <color name="ipay_demo_color_white">#ffffff</color>
+    <color name="ipay_demo_color_black">#000000</color>
+    <color name="ipay_color_value_8_2">#f18d0b</color>
+    
+</resources>

@@ -1,0 +1,173 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="confirm_title">提示</string>
+    <string name="ensure">确定</string>
+    <string name="cancel">取消</string>
+    <string name="content_description_icon">icon</string>
+    <string name="refresh">刷新</string>
+    <string name="processing">加载中</string>
+    <string name="download">下载</string>
+    <string name="download_fail">下载安装包失败</string>
+    <string name="redo">重试</string>
+    <string name="pay_cardtype">运营商</string>
+    <string name="pay_cardnum">数值</string>
+    <string name="pay_cardtexttip">为了保障您的利益，请仔细核对您填写的充值金额，确保其与充值卡金额相符，以免造成不必要的损失。在游戏充值过程中产生的余额，系统将以熊猫币返还到玩家账号。</string>
+    <string name="xlistview_header_hint_normal">下拉刷新</string>
+    <string name="xlistview_header_hint_ready">松开刷新数据</string>
+    <string name="xlistview_header_hint_loading">正在加载&#8230;</string>
+    <string name="xlistview_header_last_time">上次更新时间：</string>
+    <string name="xlistview_footer_hint_normal">查看更多</string>
+    <string name="xlistview_footer_hint_ready">松开载入更多</string>
+    <string name="xlistview_over">已到底部</string>
+    <string name="xmw_name">账号</string>
+    <string name="xmw_pass">密码</string>
+    <string name="xmw_passtip">输入密码</string>
+    <string name="xmw_passwith">密码:</string>
+    <string name="xmw_newpasswith">请输入新密码</string>
+    <string name="xmw_fname">用户名/手机号</string>
+    <string name="xmw_phonenum">手机号</string>
+    <string name="xmw_sendverify">获取验证码</string>
+    <string name="xmw_inputverify">输入校验码</string>
+    <string name="xmw_resetpassbut">找回账号</string>
+    <string name="xmw_emailbut">发送邮件</string>
+    <string name="xmw_landnow">登录</string>
+    <string name="xmw_change_now">切换账号</string>
+    <string name="xmw_regisity">账号注册</string>
+    <string name="xmw_try">极速试玩</string>
+    <string name="xmw_forpass">密码找回</string>
+    <string name="xmw_foremail">绑定邮箱</string>
+    <string name="xmw_forbind">绑定手机</string>
+    <string name="xmw_helptitle">联系我们</string>
+    <string name="xmw_helpwap">客服网址：</string>
+    <string name="xmw_helpconup">客服电话：</string>
+    <string name="xmw_helpnum">10000</string>
+    <string name="xmw_helpcondown">立即通话</string>
+    <string name="xmw_helpqq">客服QQ：</string>
+    <string name="xmw_helptencent">321654987</string>
+    <string name="xmw_regisitytip">平台账号注册</string>
+    <string name="xmw_phonetip">输入手机号码</string>
+    <string name="xmw_nametip">输入用户名</string>
+    <string name="xmw_findnametip">输入新的用户名</string>
+    <string name="xmw_findpasstip">输入新密码</string>
+    <string name="xmw_emailtip">输入邮箱地址</string>
+    <string name="xmw_regisit">注册</string>
+    
+    <string name="xmw_loading">读取中</string>
+    <string name="xmw_cardpay">充值卡充值</string>
+    <string name="xmw_oldpasswith">当前密码 </string>
+    <string name="xmw_resetpasss">修改密码</string>
+    <string name="xmw_comproblemsmsg">常见问题</string>
+    <string name="xmw_giftbagmsg">礼包领取</string>
+    <string name="xmw_contactmsg">联系我们</string>
+    <string name="xmw_bbsst">访问论坛</string>
+    <string name="xmw_cardnumwith">卡号:</string>
+    <string name="xmw_payxmbnumtip">请输入金额:</string>
+    <string name="xmw_mobcardnum">充值卡卡号</string>
+    <string name="xmw_mobcardpass">充值卡密码</string>
+    <string name="xmw_payorder">支付订单</string>
+    <string name="xmw_payorderinfo">订单金额：</string>
+    <string name="xmw_payordernum">订单编号</string>
+    <string name="xmw_payorderaccount">支付账号</string>
+    <string name="xmw_payordername">订单名称</string>
+    <string name="xmw_payorderamount">订单金额</string>
+    <string name="xmw_payorderpanda">熊猫币</string>
+    <string name="xmw_pandaless">熊猫币余额</string>
+    <string name="xmw_pandaneed">所需熊猫币</string>
+    <string name="xmw_payordertype">请选择支付方式：</string>
+    <string name="xmw_payordermoney">充值金额</string>
+    <string name="xmw_paygo">立即支付</string>
+    <string name="xmw_getgo">立即获取</string>
+    <string name="xmw_payxmw">立即充值</string>
+    <string name="xmw_tip">温馨提示</string>
+    <string name="xmw_updatast">残忍退出</string>
+    <string name="xmw_nextup">下次再说</string>
+    <string name="xmw_bbsgo">访问论坛</string>
+    <string name="xmw_paypurchaseaccount">付款账号</string>
+    <string name="xmw_paypurchasegame">游戏名称</string>
+    <string name="xmw_paypurchasestate">消费状态</string>
+    <string name="xmw_payorderstate">充值状态</string>
+    <string name="xmw_rmb">元</string>
+    <string name="xmw_plus">+</string>
+    <string name="xmw_payback">(返利)</string>
+    <string name="xmw_choosefind">请选择</string>
+    <string name="xmw_phonefind">通过手机号码找回</string>
+    <string name="xmw_emailfind">通过邮箱找回</string>
+    <string name="xmw_help">联系客服找回</string>
+    <string name="xmw_paycardnum">充值卡面额:</string>
+    <string name="xmw_accountland">用户登录</string>
+    <string name="xmw_accountinfo">用户中心</string>
+    <string name="xmw_nobind">尚未绑定</string>
+    <string name="xmw_email">电子邮箱</string>
+    <string name="xmw_expst">经验值</string>
+    <string name="xmw_ordernotes">充值记录</string>
+    <string name="xmw_exptext">VIP体系</string>
+    <string name="xmw_coinhelptext">熊猫币说明</string>
+    <string name="xmw_orderinfo">充值中心</string>
+    <string name="xmw_purchasenotes">消费记录</string>
+    <string name="xmw_explv">等级</string>
+    <string name="xmw_counttip">提示：1元人民币=10熊猫币</string>
+    <string name="xmw_msgnotes">消息记录</string>
+    <string name="xmw_nomore">今日不再提醒</string>
+    <string name="xmw_msggo">立即查看</string>
+    <string name="xmw_problem">充值过程中如遇任何问题请联系客服</string>
+    <string name="xmw_phonenumber">请输入手机号码</string>
+    <string name="xmw_regist_pwd">请输入密码</string>
+    <string name="xmw_phonecode">请输入短信验证码</string>
+    
+    
+    <string name="xmw_s_login01">手机号码登录</string>
+    <string name="xmw_s_login02">（免注册，立即登录）</string>
+    <string name="xmw_s_login03">请输入手机号</string>
+    <string name="xmw_s_login04">请输入验证码</string>
+    <string name="xmw_s_login05">获取验证码</string>
+    <string name="xmw_s_login06">马上登录</string>
+    <string name="xmw_s_login07">用户名注册</string>
+    <string name="xmw_s_login08">已有账号？马上</string>
+    <string name="xmw_s_login09">登录</string>
+    
+    <string name="xmw_s_regist01">用户名注册</string>
+    <string name="xmw_s_regist02">请输入6位及以上字母或数字组成</string>
+    <string name="xmw_s_regist03">请输入密码</string>
+    <string name="xmw_s_regist04">隐藏密码</string>
+    <string name="xmw_s_regist05">马上注册</string>
+    <string name="xmw_s_regist07">正在注册..</string>
+    <string name="xmw_s_regist06">手机号码登录</string>
+    
+    <string name="xmw_s_find01">忘记密码</string>
+    <string name="xmw_s_find02">请输入手机号</string>
+    <string name="xmw_s_find03">请输入验证码</string>
+    <string name="xmw_s_find04">请输入新密码</string>
+    <string name="xmw_s_find05">获取验证码</string>
+    <string name="xmw_s_find06">显示密码</string>
+    <string name="xmw_s_find07">提交</string>
+    
+    <string name="xmw_s_login_account01">账号登录</string>
+    <string name="xmw_s_login_account02">请输入手机号/用户名</string>
+    <string name="xmw_s_login_account03">请输入密码</string>
+    <string name="xmw_s_login_account04">马上登录</string>
+    <string name="xmw_s_login_account05">快速注册</string>
+    <string name="xmw_s_login_account06">忘记密码?</string>
+    
+    <string name="xmw_s_login_state01">用户</string>
+    <string name="xmw_s_login_state02">欢迎回来</string>
+    <string name="xmw_s_login_state03">切换账号</string>
+    
+     <string name="xmw_s_paygo">立即充值</string>
+     
+     
+     <string name="xmw_c_binphone_01">绑定手机号</string>
+     <string name="xmw_c_binphone_02">请输入手机号码</string>
+     <string name="xmw_c_binphone_03">请输入验证码</string>
+     <string name="xmw_c_binphone_04">获取验证码</string>
+     <string name="xmw_c_binphone_05">完成</string>
+     <string name="xmw_c_binphone_06">温馨提示</string>
+     <string name="xmw_c_binphone_07">1、绑定手机号后可用该手机号直接登录游戏</string>
+     <string name="xmw_c_binphone_08">2、没有绑定手机号的用户找回密码比较麻烦</string>
+     
+     <string name="xmw_c_regist_01">通过用户名注册</string>
+     <string name="xmw_c_regist_02">通过手机号注册</string>
+     <string name="xmw_c_regist_03">注册即表示同意</string>
+     <string name="xmw_c_regist_04">《平台用户协议》</string>
+
+</resources>

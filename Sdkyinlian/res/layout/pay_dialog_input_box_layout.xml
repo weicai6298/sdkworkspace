@@ -1,0 +1,173 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:id="@+id/inputLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical"
+        android:background="@drawable/pay_bg_white_circle"
+        android:orientation="vertical">
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="50dp">
+
+            <ImageView
+                android:id="@+id/payInputLogin"
+                android:layout_width="65dp"
+                android:layout_height="@dimen/size_40dp"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="@dimen/size_10dp"
+                android:background="@mipmap/pay_logo_yinlian" />
+
+            <TextView
+                android:id="@+id/payInputTitle"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:textColor="@color/pay_color_333333"
+                android:textSize="17sp" />
+
+            <FrameLayout
+                android:id="@+id/payInputClose"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_gravity="right">
+
+                <ImageView
+                    android:layout_width="15dp"
+                    android:layout_height="15dp"
+                    android:layout_gravity="center"
+                    android:background="@drawable/pay_btn_close" />
+            </FrameLayout>
+
+        </FrameLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="2px"
+            android:background="@color/pay_color_bbbbbb" />
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:layout_marginLeft="17dp"
+            android:layout_marginRight="17dp">
+
+            <TextView
+                android:id="@+id/payInputOneHint"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="10dp"
+                android:gravity="center_vertical"
+                android:text="@string/phoneNum"
+                android:textColor="@color/pay_color_333333"
+                android:textSize="15sp" />
+
+            <EditText
+                android:id="@+id/payInputOneET"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@null"
+                android:inputType="number"
+                android:lines="1"
+                android:maxLength="11"
+                android:paddingLeft="70dp"
+                android:textColor="@color/pay_color_333333"
+                android:textColorHint="@color/pay_color_bbbbbb"
+                android:textSize="15sp" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_gravity="bottom"
+                android:background="@color/pay_color_bbbbbb" />
+        </FrameLayout>
+
+        <FrameLayout
+            android:id="@+id/payInputCodeLayout"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:layout_marginBottom="17dp"
+            android:layout_marginLeft="17dp"
+            android:layout_marginRight="17dp">
+
+            <TextView
+                android:id="@+id/payInputTwoHint"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="10dp"
+                android:gravity="center_vertical"
+                android:text="@string/verificationCode"
+                android:textColor="@color/pay_color_333333"
+                android:textSize="15sp" />
+
+            <EditText
+                android:id="@+id/payInputTwoET"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@null"
+                android:inputType="number"
+                android:lines="1"
+                android:maxLength="6"
+                android:paddingLeft="70dp"
+                android:paddingRight="110dp"
+                android:textColor="@color/pay_color_333333"
+                android:textColorHint="@color/pay_color_bbbbbb"
+                android:textSize="15sp" />
+
+            <Button
+                android:id="@+id/payBtnInputCode"
+                android:layout_width="100dp"
+                android:layout_height="35dp"
+                android:layout_gravity="right"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/pay_bg_3095fb_circle"
+                android:textColor="@color/pay_color_ffffff"
+                android:textSize="15sp" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_gravity="bottom"
+                android:background="@color/pay_color_bbbbbb" />
+        </FrameLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:layout_marginBottom="10dp"
+            android:layout_marginLeft="17dp"
+            android:layout_marginRight="17dp"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/payBtnInputClose"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_marginRight="17dp"
+                android:layout_weight="1"
+                android:background="@drawable/pay_bg_bbbbbb_circle"
+                android:textColor="@color/pay_color_ffffff"
+                android:textSize="17sp" />
+
+            <Button
+                android:id="@+id/payBtnInputOK"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@drawable/pay_bg_3095fb_circle"
+                android:textColor="@color/pay_color_ffffff"
+                android:textSize="17sp" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <include
+        layout="@layout/progress"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_gravity="center" />
+</FrameLayout>

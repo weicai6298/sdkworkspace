@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <color name="xmw_TextColorBlack">#FF000000</color>
+    <color name="xmw_TextColorWhite">#FFFFFFFF</color>
+    <color name="xmw_TextColorGray">#FF505050</color>
+    <color name="xmw_ToastBgColor">#FF424242</color>
+    <color name="xmw_btnColor">#FFFFFF</color>
+    <color name="xmw_textColorforItemTitle">#FF666666</color>
+    <color name="xmw_secondbtntextColor">#FF496ea3</color>
+    <color name="xmw_textColorforCheckBox">#FF333333</color>
+    <color name="xmw_bgColor">#FFF2F2F2</color>
+    <color name="xmw_downLoadTextNomal">#FF3366CC</color>
+    <color name="xmw_downLoadTextPressed">#FFFFFFFF</color>
+    <color name="xmw_downLoadBackNomal">#FFFFFFFF</color>
+    <color name="xmw_downLoadBackFocus">#FF6698E7</color>
+    <color name="xmw_downLoadBackPressed">#FF3366CC</color>
+    <color name="xmw_dialog_tiltle_blue">#2277BB</color>
+    <color name="xmw_bggray">#ffeeeeee</color>
+    <color name="xmw_huibg">#88999999</color>
+     <color name="xmw_black">#000000</color>
+     <color name="xmw_black_gray">#525252</color>
+</resources>

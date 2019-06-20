@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    
+    
+    
+	<!--     悬浮窗内部按钮的间距 -->
+     <dimen name="ycx_dimen_float_spac_width">15.0dip</dimen>
+     
+     <dimen name="ycx_dimen_login_line_space">16.0dip</dimen>
+     <!-- 普通顶部标题的高度 -->
+    <dimen name="ycx_dimen_title_height">48dp</dimen>
+      <dimen name="ycx_dimen_listview_height">120dp</dimen>
+     <!-- 支付顶部标题的高度 -->
+    <dimen name="ycx_dimen_pay_title_height">40dp</dimen>
+     <!-- 通用按钮高度 -->
+    <dimen name="ycx_dimen_btn_height">45dip</dimen>
+     <!-- 稍大字号，一般用于用户输入 -->
+    <dimen name="ycx_dimen_larger">18sp</dimen>
+      <!-- 大字号，一般用于一级标题 -->
+    <dimen name="ycx_dimen_large">16sp</dimen>
+    <!-- 通用文本编辑框的高度 -->
+    <dimen name="ycx_dimen_editext_height">40dip</dimen>
+    <!-- 中字号，一般用于二级标题 -->
+    <dimen name="ycx_dimen_medium">14sp</dimen>
+    <!-- 小字号，一般用于三级标题，介绍性文字 -->
+    <dimen name="ycx_dimen_small">12sp</dimen>
+    
+</resources>

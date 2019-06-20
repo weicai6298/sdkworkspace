@@ -63,13 +63,19 @@
         <meta-data
             android:name="appid"
             android:value="5a1cd194a40fa3409f000031" />
-        <meta-data
-            android:name="UMENG_APPKEY"
-            android:value="string_appid" />
-        <meta-data
-            android:name="UMENG_CHANNEL"
-            android:value="小米" />
         
+        
+        <activity
+            android:name="com.xiaomi.hy.dj.HyDjActivity"
+            android:exported="false"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar"
+            android:configChanges="orientation|screenSize" />
+        <activity
+            android:name="com.alipay.sdk.app.H5PayActivity"
+            android:configChanges="orientation|keyboardHidden|navigation|screenSize"
+            android:exported="false"
+            android:screenOrientation="behind"
+            android:windowSoftInputMode="adjustResize|stateHidden"></activity>
     </application>
 
 </manifest>

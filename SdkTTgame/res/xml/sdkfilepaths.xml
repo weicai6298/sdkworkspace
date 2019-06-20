@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xml xmlns:android="http://schemas.android.com/apk/res/android">
+    <paths>
+        <root-path path="" name="Download" />
+        <files-path path="" name="Download1" />
+    <!--物理路径相当于Context.getExternalFilesDir(String) + /Download/ -->
+    </paths>
+</xml>

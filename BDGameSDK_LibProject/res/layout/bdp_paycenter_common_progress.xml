@@ -16,16 +16,7 @@
             android:layout_width="25dp"
             android:layout_height="25dp"
             android:layout_marginRight="6dp"
-            android:indeterminateDrawable="@drawable/bdp_progress_loading_xml"
-            android:visibility="gone" />
-
-        <com.baidu.platformsdk.widget.CircleProgressBar
-            android:id="@+id/circle_progressbar"
-            android:layout_width="40dp"
-            android:layout_height="40dp"
-            android:visibility="visible"
-            app:bdp_progress_color="@color/bdp_gray"
-            app:bdp_progress_stoke_width="2dp" />
+            android:indeterminateDrawable="@drawable/bdp_progress_loading_xml" />
 
         <TextView
             android:layout_width="wrap_content"

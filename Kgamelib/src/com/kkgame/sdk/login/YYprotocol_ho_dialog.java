@@ -32,6 +32,7 @@ import android.widget.RelativeLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.kkgame.common.CommonData;
 import com.kkgame.sdk.utils.Basedialogview;
 import com.kkgame.sdk.xml.GetAssetsutils;
 import com.kkgame.sdk.xml.MachineFactory;
@@ -97,58 +98,46 @@ public class YYprotocol_ho_dialog extends Basedialogview {
 		dialog = new Dialog(mActivity);
 
 		dialog.requestWindowFeature(Window.FEATURE_NO_TITLE);
+
 		
-		int ho_height = 650;
-		int ho_with = 750;
-		int po_height = 650;
-		int po_with = 700;
-
-		int height=0;
-		int with=0;
-		// 设置横竖屏
-		String orientation = DeviceUtil.getOrientation(mContext);
-		if (orientation == "") {
-
-		} else if ("landscape".equals(orientation)) {
-			height=ho_height;
-			with=ho_with;
-		} else if ("portrait".equals(orientation)) {
-			height=po_height;
-			with=po_with;
-		}
+		int height = 560;
+		int with = 630;
 
 		baselin = new LinearLayout(mActivity);
 		baselin.setOrientation(LinearLayout.VERTICAL);
 		MachineFactory machineFactory = new MachineFactory(mActivity);
-		machineFactory.MachineView(baselin, with, height, "LinearLayout");
-		baselin.setBackgroundColor(Color.TRANSPARENT);
+		
+		//machineFactory.MachineView(baselin, with, height, "LinearLayout");
+		//baselin.setBackgroundColor(Color.TRANSPARENT);
 		baselin.setGravity(Gravity.CENTER_VERTICAL);
-
+		baselin.setBackgroundDrawable(GetAssetsutils
+				.get9DrawableFromAssetsFile("yaya1_sdkbackground.9.png",mActivity));
 		// 过度中间层
 		LinearLayout ll_content = new LinearLayout(mActivity);
-		machineFactory.MachineView(ll_content, with, height, "LinearLayout",2,25);
-		ll_content.setBackgroundColor(Color.WHITE);
+		machineFactory.MachineView(ll_content, with, height, "LinearLayout");
+		
 		ll_content.setGravity(Gravity.CENTER_HORIZONTAL);
 		ll_content.setOrientation(LinearLayout.VERTICAL);
 
 		// 标题栏
 		RelativeLayout rl_title = new RelativeLayout(mActivity);
-		machineFactory.MachineView(rl_title, MATCH_PARENT, 96, mLinearLayout);
-		rl_title.setBackgroundColor(Color.parseColor("#999999"));
+		machineFactory.MachineView(rl_title,
+				MATCH_PARENT, 78, 0, mLinearLayout, 35, 28, 35, 0, 100);
+		rl_title.setBackgroundColor(Color.parseColor("#ffffff"));
 
 		ll_mPre = new LinearLayout(mActivity);
-		machineFactory.MachineView(ll_mPre, 96, MATCH_PARENT, 0,
+		machineFactory.MachineView(ll_mPre, 46, MATCH_PARENT, 0,
 				mRelativeLayout, 0, 0, 0, 0, RelativeLayout.CENTER_VERTICAL);
 		ll_mPre.setGravity(Gravity_CENTER);
 		ll_mPre.setClickable(true);
 		// 返回上一层的图片
 		iv_mPre = new ImageButton(mActivity);
-		machineFactory.MachineView(iv_mPre, 40, 40, 0, mLinearLayout, 0, 0, 0,
+		machineFactory.MachineView(iv_mPre, 46, 46, 0, mLinearLayout, 0, 0, 0,
 				0, RelativeLayout.CENTER_VERTICAL);
 		iv_mPre.setClickable(false);
 
 		iv_mPre.setBackgroundDrawable(GetAssetsutils.getDrawableFromAssetsFile(
-				"yaya_pre.png", mActivity));
+				"yaya1_pre.png", mActivity));
 		ll_mPre.addView(iv_mPre);
 		// 设置点击事件.点击窗口消失
 		ll_mPre.setOnClickListener(new OnClickListener() {
@@ -158,12 +147,13 @@ public class YYprotocol_ho_dialog extends Basedialogview {
 				dialog.dismiss();
 			}
 		});
+		
 
 		// 注册textview
 		TextView tv_zhuce = new TextView(mActivity);
 		machineFactory.MachineTextView(tv_zhuce, MATCH_PARENT, MATCH_PARENT, 0,
-				"服务协议", 38, mLinearLayout, 0, 0, 0, 0);
-		tv_zhuce.setTextColor(Color.WHITE);
+				"服务协议", 44, mLinearLayout, 0, 0, 0, 0);
+		tv_zhuce.setTextColor(Color.parseColor("#c05011"));
 		tv_zhuce.setGravity(Gravity_CENTER);
 
 		// TODO
@@ -251,57 +241,7 @@ public class YYprotocol_ho_dialog extends Basedialogview {
 		mContent.setVisibility(0);
 		mContent.requestFocus();
 
-		/*
-		 * settings.setSupportZoom(true); // 支持缩放
-		 * settings.setBuiltInZoomControls(true); // 启用内置缩放装置
-		 * settings.setJavaScriptEnabled(true); // 启用JS脚本
-		 * settings.setCacheMode(WebSettings.LOAD_CACHE_ELSE_NETWORK);//
-		 * 关闭webview中缓存
-		 * 
-		 * wv_mWebview.addJavascriptInterface(new Handle(), "handler");
-		 * 
-		 * wv_mWebview.setWebViewClient(new WebViewClient() {
-		 * 
-		 * @Override public void onPageStarted(WebView view, String url, Bitmap
-		 * favicon) { // System.out.println(1 + "这是错误代码++++++++++++++++");
-		 * 
-		 * wv_mWebview.setVisibility(View.GONE);
-		 * pb_mLoading.setVisibility(View.VISIBLE);
-		 * bt_mReload.setVisibility(View.GONE); super.onPageStarted(view, url,
-		 * favicon); }
-		 * 
-		 * @Override public void onPageFinished(WebView view, String url) {
-		 * wv_mWebview.setVisibility(View.VISIBLE);
-		 * 
-		 * pb_mLoading.setVisibility(View.GONE);
-		 * bt_mReload.setVisibility(View.GONE);
-		 * 
-		 * if (View.GONE == bt_mReload.getVisibility()) { wv_mWebview
-		 * .loadUrl("javascript:window.handler.show(document.body.innerHTML);");
-		 * 
-		 * }
-		 * 
-		 * // super.onPageFinished(view, url);
-		 * 
-		 * }
-		 * 
-		 * @Override public void onReceivedError(WebView view, int errorCode,
-		 * String description, String failingUrl) {
-		 * 
-		 * }
-		 * 
-		 * @Override public void onReceivedHttpAuthRequest(WebView view,
-		 * HttpAuthHandler handler, String host, String realm) {
-		 * 
-		 * super.onReceivedHttpAuthRequest(view, handler, host, realm); }
-		 * 
-		 * @Override public boolean shouldOverrideUrlLoading(WebView view,
-		 * String url) {
-		 * 
-		 * return super.shouldOverrideUrlLoading(view, url); }
-		 * 
-		 * });
-		 */
+	
 		// wv_mWeiboview.setc
 		// 点击后退按钮,让WebView后退一页(也可以覆写Activity的onKeyDown方法)
 		wv_mWebview.setOnKeyListener(new OnKeyListener() {
@@ -402,7 +342,7 @@ public class YYprotocol_ho_dialog extends Basedialogview {
 			}
 
 		});
-		mContent.loadUrl("http://www.yayawan.com/wap/agreement");// 加载协议页面
+		mContent.loadUrl(CommonData.YONGHUXIEYI);// 加载协议页面
 
 	}
 }

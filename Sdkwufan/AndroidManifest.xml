@@ -58,218 +58,211 @@
         
          <meta-data
             android:name="callback"
-            android:value="https://api.sdk.75757.com/pay/notify/357498976/" />
+            android:value="https://api.sdk.75757.com/pay/notify/712663145/" />
          
          <meta-data
             android:name="gamename"
             android:value="我的便利店" />
 		
         
-        <!-- 登录界面可动态修改横屏或者竖屏 -->
-        <activity android:name="com.papa91.pay.pa.activity.PALoginActivity"
-                  android:screenOrientation="sensorLandscape"
-                  android:theme="@android:style/Theme.Translucent.NoTitleBar.Fullscreen"
-                  android:configChanges="orientation|keyboard|keyboardHidden|navigation|screenSize"
-                  >
+       <!-- 以下为啪啪sdk所需要的activity 以及service -->
 
-        </activity>
-        <!-- 支付界面可动态修改横屏或者竖屏 -->
+
+         <activity
+            android:name="com.unionpay.uppay.PayActivity"
+            android:configChanges="orientation|keyboardHidden"
+            android:excludeFromRecents="true"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustResize" />
+
+
         <activity
-                android:name="com.papa91.pay.pa.activity.PaayActivity"
-                android:screenOrientation="sensorLandscape"
-                android:theme="@android:style/Theme.Light.NoTitleBar.Fullscreen"
-                android:configChanges="orientation|keyboard|keyboardHidden|navigation|screenSize"
-                android:label="@string/app_name">
-        </activity>
-        <!-- 通知界面可动态修改横屏或者竖屏 -->
-        <activity android:name="com.papa91.pay.pa.activity.PANoticeDialogActivity"
-                  android:screenOrientation="sensor"
-                  android:hardwareAccelerated="false"
-                  android:theme="@style/MyDialog"
-                  android:configChanges="orientation|keyboard|keyboardHidden|navigation|screenSize">
-        </activity>
-         <!--  2.3 新增-->
-		  <!-- 广告界面可动态修改横屏或者竖屏 -->
-        <activity android:name="com.papa91.pay.pa.activity.AdvertActivity"
+            android:name="com.papa91.pay.pa.activity.MGMainActivity"
+            android:configChanges="orientation|keyboard|keyboardHidden|navigation|screenSize"
+            android:hardwareAccelerated="false"
+            android:screenOrientation="portrait"
+            android:theme="@style/NoTitleNoAnimation"></activity>
+
+        <activity
+            android:name="com.papa91.pay.pa.activity.PANoticeDialogActivity"
+            android:configChanges="orientation|keyboard|keyboardHidden|navigation|screenSize"
+            android:hardwareAccelerated="false"
             android:screenOrientation="sensor"
-            android:theme="@style/MyDialog2"
-            android:configChanges="orientation|keyboard|keyboardHidden|navigation|screenSize">
-        </activity>
-
-		<!-- 点击浮标出来的界面不可调整横竖屏 -->
-        <activity android:name="com.papa91.pay.pa.activity.MGMainActivity"
-                  android:screenOrientation="portrait"
-                  android:hardwareAccelerated="false"
-                  android:theme="@style/NoTitleNoAnimation"
-                  android:configChanges="orientation|keyboard|keyboardHidden|navigation|screenSize">
-        </activity>
-        <activity android:name="com.papa91.pay.pa.activity.ForumProfileFavoritesActivity"
-                  android:screenOrientation="portrait"
-                  android:hardwareAccelerated="false"
-                  android:theme="@style/NoTitleNoAnimation"
-                  android:launchMode="singleTop"
-                  android:configChanges="orientation|keyboard|keyboardHidden|navigation|screenSize"/>
-
-        <activity android:name="com.papa91.pay.pa.activity.ForumProfileMessageActivity"
-                  android:screenOrientation="portrait"
-                  android:hardwareAccelerated="false"
-                  android:theme="@style/NoTitleNoAnimation"
-                  android:launchMode="singleTop"
-                  android:configChanges="orientation|keyboard|keyboardHidden|navigation|screenSize"/>
-
-        <activity android:name="com.papa91.pay.pa.activity.ForumMyPostsActivity"
-                  android:screenOrientation="portrait"
-                  android:hardwareAccelerated="false"
-                  android:theme="@style/NoTitleNoAnimation"
-                  android:launchMode="singleTop"
-                  android:configChanges="orientation|keyboard|keyboardHidden|navigation|screenSize"/>
-
-        <activity android:name="com.papa91.pay.pa.activity.ForumPostsActivity"
-                  android:screenOrientation="portrait"
-                  android:hardwareAccelerated="false"
-                  android:theme="@style/NoTitleNoAnimation"
-                  android:launchMode="singleTop"
-                  android:configChanges="orientation|keyboard|keyboardHidden|navigation|screenSize"/>
-
-        <activity android:name="com.papa91.pay.pa.activity.ForumProfileMessageReplyActivity"
-                  android:screenOrientation="portrait"
-                  android:hardwareAccelerated="false"
-                  android:theme="@style/NoTitleNoAnimation"
-                  android:launchMode="singleTop"
-                  android:configChanges="orientation|keyboard|keyboardHidden|navigation|screenSize"/>
-
-        <activity android:name="com.papa91.pay.widget.album.MyAlbumActivity"
-                  android:screenOrientation="portrait"
-                  android:hardwareAccelerated="false"
-                  android:theme="@style/NoTitleNoAnimation"
-                  android:launchMode="singleTop"
-                  android:configChanges="orientation|keyboard|keyboardHidden|navigation|screenSize"/>
-
-        <activity android:name="com.papa91.pay.pa.activity.OemListActivity"
-                  android:screenOrientation="portrait"
-                  android:hardwareAccelerated="false"
-                  android:theme="@style/NoTitleNoAnimation"
-                  android:launchMode="singleTop"
-                  android:configChanges="orientation|keyboard|keyboardHidden|navigation|screenSize"/>
-
-        <activity android:name="com.papa91.pay.pa.activity.OemDetailActivity"
-                  android:screenOrientation="portrait"
-                  android:hardwareAccelerated="false"
-                  android:theme="@style/NoTitleNoAnimation"
-                  android:launchMode="singleTop"
-                  android:configChanges="orientation|keyboard|keyboardHidden|navigation|screenSize"/>
-
-        <activity android:name="com.papa91.pay.widget.photoviewer.ImagePagerActivity"
-                  android:hardwareAccelerated="false"
-                  android:theme="@style/NoTitleNoAnimation"
-                  android:launchMode="singleTop"
-                  android:configChanges="orientation|keyboard|keyboardHidden|navigation|screenSize"/>
-
-        <activity android:name="com.papa91.pay.pa.activity.SharePostsActivity"
-                  android:hardwareAccelerated="false"
-                  android:theme="@style/NoTitleNoAnimation"
-                  android:launchMode="singleTop"
-                  android:configChanges="orientation|keyboard|keyboardHidden|navigation|screenSize"/>
-
-        <activity android:name="com.papa91.pay.pa.activity.ShareWebActivity"
-                  android:hardwareAccelerated="false"
-                  android:theme="@style/NoTitleNoAnimation"
-                  android:launchMode="singleTop"
-                  android:configChanges="orientation|keyboard|keyboardHidden|navigation|screenSize"/>
-		<activity
-                android:name="com.unionpay.uppay.PayActivity"
-                android:configChanges="orientation|keyboardHidden|screenSize"
-                android:excludeFromRecents="true"
-                android:label="@string/app_name"
-                android:screenOrientation="portrait"/>
-    <!-- 微信支付更改界面 -->
-		<activity
-                android:name="com.zwxpay.android.h5_library.WebViewActivity"
-                android:screenOrientation="portrait" />
-	<!--注意：WeChatNotityActivity  单词本来就是错的不要修改-->
-        <activity
-                android:name="com.heepay.plugin.activity.WeChatNotityActivity"
-                android:configChanges="orientation|keyboardHidden|screenSize"
-                android:screenOrientation="behind"
-                android:theme="@android:style/Theme.NoDisplay" />
-        
-		<activity
-                android:theme="@android:style/Theme.Translucent.NoTitleBar"
-                android:name="com.switfpass.pay.activity.QQWapPayWebView"
-				android:configChanges="keyboardHidden|orientation|screenSize"
-                android:screenOrientation="portrait"/>
+            android:theme="@style/MyDialog"></activity>
+      <activity
+            android:name="com.papa91.pay.pa.activity.OemDetailActivity"
+            android:configChanges="orientation|keyboard|keyboardHidden|navigation|screenSize"
+            android:hardwareAccelerated="false"
+            android:launchMode="singleTop"
+            android:screenOrientation="behind"
+            android:theme="@style/NoTitleNoAnimation" />
 
         <activity
-                android:name="com.mokredit.payment.MktPayment"
-                android:configChanges="orientation|keyboardHidden|screenLayout|screenSize"
-                android:excludeFromRecents="true"
-                android:label="@string/app_name">
-        </activity>
+            android:name="com.papa91.pay.pa.activity.AdvertActivity"
+            android:configChanges="orientation|keyboard|keyboardHidden|navigation|screenSize"
+            android:hardwareAccelerated="false"
+            android:screenOrientation="sensor"
+            android:theme="@style/MyDialog2"></activity>
+
+
+        <activity
+            android:name="com.papa91.pay.widget.album.MyAlbumActivity"
+            android:configChanges="orientation|keyboard|keyboardHidden|navigation|screenSize"
+            android:hardwareAccelerated="false"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait"
+            android:theme="@style/NoTitleNoAnimation" />
+
+        <activity
+            android:name="com.papa91.pay.widget.photoviewer.ImagePagerActivity"
+            android:configChanges="orientation|keyboard|keyboardHidden|navigation|screenSize"
+            android:hardwareAccelerated="false"
+            android:launchMode="singleTop"
+            android:theme="@style/NoTitleNoAnimation" />
+
+        <activity
+            android:name="com.papa91.pay.pa.activity.SharePostsActivity"
+            android:configChanges="orientation|keyboard|keyboardHidden|navigation|screenSize"
+            android:hardwareAccelerated="false"
+            android:launchMode="singleTop"
+            android:theme="@style/NoTitleNoAnimation" />
+
+        <activity
+            android:name="com.papa91.pay.pa.activity.ShareWebActivity"
+            android:configChanges="orientation|keyboard|keyboardHidden|navigation|screenSize"
+            android:hardwareAccelerated="false"
+            android:launchMode="singleTop"
+            android:screenOrientation="behind"
+            android:theme="@style/NoTitleNoAnimation" />
+
+        <activity
+            android:name="com.papa91.pay.pa.activity.PaayActivity"
+            android:configChanges="orientation|keyboard|keyboardHidden|navigation|screenSize"
+            android:label="@string/papaName"
+            android:launchMode="singleTask"
+            android:screenOrientation="behind"
+            android:theme="@android:style/Theme.Light.NoTitleBar.Fullscreen"></activity>
+
+
+        <activity
+            android:name="com.heepay.plugin.activity.WeChatNotityActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:screenOrientation="behind"
+             android:theme="@style/ActivityNotTransparent" />
+
+        <activity
+            android:name="com.mokredit.payment.MktPayment"
+            android:configChanges="orientation|keyboardHidden|screenLayout|screenSize"
+            android:excludeFromRecents="true"
+            android:label="@string/papaName"></activity>
         <!-- 支付宝-->
         <activity
-                android:name="com.alipay.sdk.app.H5PayActivity"
-                android:configChanges="orientation|keyboardHidden|navigation|screenSize"
-                android:exported="false"
-                android:screenOrientation="behind"
-                android:windowSoftInputMode="adjustResize|stateHidden">
-        </activity>
+            android:name="com.alipay.sdk.app.H5PayActivity"
+            android:configChanges="orientation|keyboardHidden|navigation|screenSize"
+            android:exported="false"
+            android:screenOrientation="behind"
+            android:windowSoftInputMode="adjustResize|stateHidden"></activity>
         <activity
-                android:name="com.alipay.sdk.auth.AuthActivity"
-                android:configChanges="orientation|keyboardHidden|navigation"
-                android:exported="false"
-                android:screenOrientation="behind">
-        </activity>
-
-
+            android:name="com.alipay.sdk.auth.AuthActivity"
+            android:configChanges="orientation|keyboardHidden|navigation"
+            android:exported="false"
+            android:screenOrientation="behind"></activity>
 
         <activity
-                android:name="com.mob.tools.MobUIShell"
-                android:theme="@android:style/Theme.Translucent.NoTitleBar"
-                android:configChanges="keyboardHidden|orientation|screenSize"
-                android:windowSoftInputMode="stateHidden|adjustResize">
-            <meta-data
-                    android:name="Adapter"
-                    android:value="com.join.mgps.adapter.ShareSdkAdapter"/>
-            <intent-filter>
-                <data android:scheme="db-7janx53ilz11gbs"/>
-                <action android:name="android.intent.action.VIEW"/>
-
-                <category android:name="android.intent.category.BROWSABLE"/>
-                <category android:name="android.intent.category.DEFAULT"/>
-            </intent-filter>
-            <intent-filter>
-                <data android:scheme="tencent100371282"/>
-                <action android:name="android.intent.action.VIEW"/>
-
-                <category android:name="android.intent.category.DEFAULT"/>
-                <category android:name="android.intent.category.BROWSABLE"/>
-            </intent-filter>
-        </activity>
+            android:name="com.papa91.pay.pa.activity.PALoginActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:label="sajdasdsa"
+            android:screenOrientation="behind"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar.Fullscreen"></activity>
 
 
-        <service android:name="com.papa91.pay.pa.service.FloatWindowService"/>
-		<!--  2.1.1 新增-->
+        <service android:name="com.papa91.pay.pa.service.FloatWindowService" />
+        <!--  2.1.1 新增-->
         <receiver android:name="com.papa91.pay.pa.PapaBootRecver">
             <intent-filter>
                 <action android:name="android.intent.action.DOWNLOAD_COMPLETE"></action>
             </intent-filter>
         </receiver>
-<!--  2.7.2 新增-->
 
-<activity
-    		android:name="com.unionpay.UPPayWapActivity"
-		android:configChanges="orientation|keyboardHidden"
-    		android:screenOrientation="portrait"
-    		android:windowSoftInputMode="adjustResize"/>
-	<uses-library android:name="org.simalliance.openmobileapi" android:required="false"/>
-		
+        <activity
+            android:name="com.switfpass.pay.activity.QQWapPayWebView"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+        <!-- 3.0.5 新增-->
+        <provider
+            android:name="com.papa91.pay.utils.WuFunFileProvider"
+            android:authorities="string_package.fileprovider"
+            android:exported="false"
+            android:grantUriPermissions="true">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/wufunfile_paths" />
+        </provider>
+     
+        <uses-library
+            android:name="org.simalliance.openmobileapi"
+            android:required="false" />
+
+        <activity
+            android:name="com.unionpay.UPPayWapActivity"
+            android:configChanges="orientation|keyboardHidden"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustResize" />
+
+
+        <!-- 微支付SDK界面 -->
+        <!-- 显示网页界面 -->
+        <activity
+            android:name="com.iapppay.sdk.main.WebActivity"
+            android:configChanges="screenSize|orientation|keyboard|navigation|layoutDirection"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+        <activity
+            android:name="com.iapppay.ui.activity.PersonCenterActivity"
+            android:configChanges="screenSize|orientation|keyboard|navigation|layoutDirection"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+
+        <!-- 收银台-普通 -->
+        <activity
+            android:name="com.iapppay.ui.activity.PayHubActivity"
+            android:configChanges="screenSize|orientation|keyboard|navigation|layoutDirection"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+
+        <!-- 选择充值金额界面 -->
+        <activity
+            android:name="com.iapppay.ui.activity.SelectAmountActivity"
+            android:configChanges="screenSize|orientation|keyboard|navigation|layoutDirection"
+            android:launchMode="singleTask"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+        <activity
+            android:name="com.iapppay.ui.activity.ChargeActivity"
+            android:configChanges="screenSize|orientation|keyboard|navigation|layoutDirection"
+            android:launchMode="singleTask"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+        <!-- 游戏卡和话费卡界面 -->
+        <activity
+            android:name="com.iapppay.ui.card.GamepayActivity"
+            android:configChanges="screenSize|orientation|keyboard|navigation|layoutDirection"
+            android:launchMode="singleTask"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+
         <!-- 以上为啪啪sdk所需要的activity 以及service -->
-        
-        
+
         <!-- 以下为啪啪分配的appkey和privatekey -->
-        <meta-data android:name="PA_APP_KEY" android:value="16001357"/>
-        <meta-data android:name="PA_APP_PRIVATE_KEY" android:value="54b1335e3a4e15dd"/>
- 		<!-- 以上为啪啪分配的appkey和privatekey -->
+        <!--<meta-data-->
+            <!--android:name="PA_APP_KEY"-->
+            <!--android:value="20160127" />-->
+        <!--<meta-data-->
+            <!--android:name="PA_APP_PRIVATE_KEY"-->
+            <!--android:value="720b1254d80d89e3" />  -->
+        <meta-data
+            android:name="PA_APP_KEY"
+            android:value="20160128" />
+        <meta-data
+            android:name="PA_APP_PRIVATE_KEY"
+            android:value="b8ffdb1cdc63d52a" />
+        <!-- 以上为啪啪分配的appkey和privatekey -->
         
     </application>
 

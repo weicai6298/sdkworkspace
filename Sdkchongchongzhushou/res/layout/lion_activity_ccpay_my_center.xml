@@ -11,7 +11,7 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:orientation="vertical"
-        android:paddingBottom="20.0dip">
+        android:paddingBottom="17.0dip">
 
         <include layout="@layout/lion_layout_notice_down_ccplay"/>
 
@@ -42,7 +42,7 @@
         <com.lion.ccpay.view.item.UserUpdatePhoneView
             android:id="@+id/lion_activity_ccpay_my_center_phone"
             style="@style/lion_style_user_center"
-            android:background="@drawable/lion_common_frame_two_selector"
+            android:background="@drawable/lion_common_frame_bottom_selector"
             android:drawableLeft="@drawable/lion_icon_phone"
             android:text="@string/lion_text_user_center_phone"/>
 
@@ -54,6 +54,13 @@
             android:drawableLeft="@drawable/lion_icon_password"
             android:drawableRight="@null"
             android:text="@string/lion_text_user_center_update_pwd"/>
+
+        <com.lion.ccpay.view.item.UserItemView
+            android:id="@+id/lion_activity_ccpay_my_center_apply_delete"
+            style="@style/lion_style_user_center"
+            android:background="@drawable/lion_common_frame_bottom_selector"
+            android:drawableLeft="@drawable/lion_icon_apply_delete"
+            android:text="@string/lion_text_user_apply_delete"/>
 
         <LinearLayout
             android:id="@+id/lion_activity_ccpay_my_center_other"
@@ -91,5 +98,19 @@
                 android:textColor="@color/lion_common_basic_red"
                 android:textSize="14.0sp"/>
         </RelativeLayout>
+        <View
+            android:layout_width="1dip"
+            android:layout_height="0dip"
+            android:layout_weight="1"
+            />
+        <TextView
+            android:id="@+id/lion_activity_ccpay_my_center_version"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:textSize="12dip"
+            android:textColor="@color/lion_common_gray_deep"
+            android:text="V1.7.1"
+            />
     </LinearLayout>
 </ScrollView>

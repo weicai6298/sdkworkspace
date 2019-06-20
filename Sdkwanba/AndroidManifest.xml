@@ -1,0 +1,191 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.yayawan.sdktemplate"
+    android:versionCode="1"
+    android:versionName="1.0" >
+
+    <uses-sdk
+        android:minSdkVersion="13"
+        android:targetSdkVersion="19" />
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW" />
+    <uses-permission android:name="android.permission.GET_TASKS" />
+    <uses-permission android:name="android.permission.CHANGE_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.READ_LOGS" />
+
+    <application
+        android:name="com.yayawan.impl.YYApplication"
+        android:allowBackup="true"
+        android:theme="@android:style/Theme.NoTitleBar.Fullscreen" >
+        <activity
+            android:name="com.yayawan.sdktemplate.MainActivity"
+            android:configChanges="keyboardHidden|navigation|orientation|screenSize"
+            android:label="app_name"
+            android:screenOrientation="portrait" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <!-- 手游互联配置 -->
+        <meta-data
+            android:name="app_id"
+            android:value="kk4054722596" />
+        <meta-data
+            android:name="isLandscape"
+            android:value="false" /> 
+
+        <!-- 渠道配置 -->
+
+        <meta-data
+            android:name="wb_appid"
+            android:value="2j5gycm3dvswc8c" />
+
+        <activity
+            android:name="com.alipay.sdk.app.H5PayActivity"
+            android:configChanges="orientation|keyboardHidden|navigation"
+            android:exported="false"
+            android:screenOrientation="behind" />
+        <activity
+            android:name="com.alipay.sdk.auth.AuthActivity"
+            android:configChanges="orientation|keyboardHidden|navigation"
+            android:exported="false" 
+            android:screenOrientation="behind" />
+        <activity
+            android:name="com.yiqiwanba.wansdk.user.LoginActivity"
+            android:screenOrientation="behind"
+            android:theme="@style/WanDialogStyle" />
+        <activity
+            android:name="com.yiqiwanba.wansdk.user.SignUpByMobileActivity"
+            android:screenOrientation="behind"
+            android:theme="@style/WanDialogStyle" />
+        <activity
+            android:name="com.yiqiwanba.wansdk.user.SignUpByMobileWithIDActivity"
+            android:screenOrientation="behind"
+            android:theme="@style/WanDialogLargeStyle" />
+        <activity
+            android:name="com.yiqiwanba.wansdk.user.SignUpByUsernameActivity"
+            android:screenOrientation="behind"
+            android:theme="@style/WanDialogStyle" />
+        <activity
+            android:name="com.yiqiwanba.wansdk.user.SignUpByUsernameWithIDActivity"
+            android:screenOrientation="behind"
+            android:theme="@style/WanDialogLargeStyle" />
+        <activity
+            android:name="com.yiqiwanba.wansdk.user.RetrievePasswordActivity"
+            android:screenOrientation="behind"
+            android:theme="@style/WanDialogStyle" />
+        <activity
+            android:name="com.yiqiwanba.wansdk.user.LoginingActivity"
+            android:screenOrientation="behind"
+            android:theme="@style/WanDialogStyle" />
+        <activity
+            android:name="com.yiqiwanba.wansdk.user.SubAccountListActivity"
+            android:screenOrientation="behind"
+            android:theme="@style/WanDialogStyle" />
+        <activity
+            android:name="com.yiqiwanba.wansdk.mine.MineActivity"
+            android:screenOrientation="behind"
+            android:theme="@android:style/Theme.Holo.Light.NoActionBar" />
+        <activity
+            android:name="com.yiqiwanba.wansdk.mine.ContactActivity"
+            android:screenOrientation="behind"
+            android:theme="@android:style/Theme.Holo.Light.NoActionBar" />
+        <activity
+            android:name="com.yiqiwanba.wansdk.mine.ConsumeRecordActivity"
+            android:screenOrientation="behind"
+            android:theme="@android:style/Theme.Holo.Light.NoActionBar" />
+        <activity
+            android:name="com.yiqiwanba.wansdk.finance.PayCenterActivity"
+            android:screenOrientation="behind"
+            android:theme="@android:style/Theme.Holo.Light.NoActionBar" />
+        <activity
+            android:name="com.yiqiwanba.wansdk.finance.WanCoinTopUpActivity"
+            android:screenOrientation="behind"
+            android:theme="@android:style/Theme.Holo.Light.NoActionBar"
+            android:windowSoftInputMode="stateHidden" />
+        <activity
+            android:name="com.yiqiwanba.wansdk.mine.SetMobileActivity"
+            android:screenOrientation="behind"
+            android:theme="@android:style/Theme.Holo.Light.NoActionBar" />
+        <activity
+            android:name="com.yiqiwanba.wansdk.mine.VerifyOldMobileActivity"
+            android:screenOrientation="behind"
+            android:theme="@android:style/Theme.Holo.Light.NoActionBar" />
+        <activity
+            android:name="com.yiqiwanba.wansdk.mine.SetPasswordActivity"
+            android:screenOrientation="behind"
+            android:theme="@android:style/Theme.Holo.Light.NoActionBar" />
+        <activity
+            android:name="com.yiqiwanba.wansdk.mine.SettedMobileActivity"
+            android:screenOrientation="behind"
+            android:theme="@android:style/Theme.Holo.Light.NoActionBar" />
+        <activity
+            android:name="com.yiqiwanba.wansdk.mine.ResetMobileActivity"
+            android:screenOrientation="behind"
+            android:theme="@android:style/Theme.Holo.Light.NoActionBar" />
+        <activity
+            android:name="com.yiqiwanba.wansdk.mine.IdentityAuthenticationActivity"
+            android:screenOrientation="behind"
+            android:theme="@android:style/Theme.Holo.Light.NoActionBar" />
+        <activity
+            android:name="com.yiqiwanba.wansdk.mine.MySubAccountActivity"
+            android:screenOrientation="behind"
+            android:theme="@android:style/Theme.Holo.Light.NoActionBar" />
+        <activity
+            android:name="com.yiqiwanba.wansdk.mine.MyWanCardActivity"
+            android:screenOrientation="behind"
+            android:theme="@android:style/Theme.Holo.Light.NoActionBar" />
+        <activity
+            android:name="com.yiqiwanba.wansdk.user.SignUpByTouristActivity"
+            android:screenOrientation="behind"
+            android:theme="@android:style/Theme.Holo.Light.NoActionBar" />
+        <activity
+            android:name="com.yiqiwanba.wansdk.user.UserAgreementActivity"
+            android:screenOrientation="behind"
+            android:theme="@android:style/Theme.Holo.Light.NoActionBar" />
+        <activity
+            android:name="com.yiqiwanba.wansdk.mine.ConfirmDialog"
+            android:screenOrientation="behind"
+            android:theme="@style/WanDialogStyle" />
+        <activity
+            android:name="com.yiqiwanba.wansdk.mine.EditSubAccountRemarkDialog"
+            android:screenOrientation="behind"
+            android:theme="@style/WanDialogStyle" />
+        <activity
+            android:name="com.yiqiwanba.wansdk.web.WebActivity"
+            android:screenOrientation="behind"
+            android:theme="@android:style/Theme.Holo.Light.NoActionBar" />
+        <activity
+            android:name="com.yiqiwanba.wansdk.update.UpdateActivity"
+            android:screenOrientation="behind"
+            android:theme="@style/WanDialogStyle" />
+        <activity
+            android:name="com.yiqiwanba.wansdk.floatwindow.FloatActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:launchMode="standard"
+            android:theme="@style/WanFloatActivity"
+            android:windowSoftInputMode="stateHidden|stateAlwaysHidden" />
+​    
+        <provider
+            android:name="android.support.v4.content.FileProvider"
+            android:authorities="string_package.fileProvider"
+            android:exported="false"
+            android:grantUriPermissions="true" >
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/file_paths" />
+        </provider>
+
+    </application>
+
+</manifest>

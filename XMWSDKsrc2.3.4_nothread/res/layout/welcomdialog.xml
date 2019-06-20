@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/dialog_view"
+    android:layout_width="240dp"
+    android:layout_height="40dp"
+    android:background="@drawable/beijingkuang"
+    android:gravity="center"
+    android:orientation="horizontal"
+    android:padding="10dp" >
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingLeft="5dp"
+        android:text="用户"
+        android:textColor="#a4a4a4" />
+
+    <TextView
+        android:id="@+id/uesr_numeber"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="aa99186"
+        android:textColor="#cccccc" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="      正在登录中..."
+        android:textColor="#a4a4a4" />
+
+    <TextView
+        android:id="@+id/peng_change"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingLeft="30dp"
+        android:text="切换账号"
+        android:textColor="#eb5e02" />
+
+</LinearLayout>

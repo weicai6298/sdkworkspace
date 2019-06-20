@@ -34,13 +34,13 @@ import com.kkgame.sdk.login.ViewConstants;
 import com.kkgame.sdk.utils.DialogUtil;
 import com.kkgame.sdk.utils.ToastUtil;
 import com.kkgame.sdk.utils.Util;
-import com.kkgame.sdk.xml.Alipay_paymentxml;
+import com.kkgame.sdk.xml.Bluep_paymentxml;
 import com.kkgame.sdkmain.AgentApp;
 import com.kkgame.sdkmain.KgameSdk;
 
 public class Payment_jf extends BaseView implements KgameSdkPaymentCallback {
 
-	private Alipay_paymentxml mThisview;
+	private Bluep_paymentxml mThisview;
 	private PayResult mFirstResult;
 	private KgameSdkPaymentCallback mPaymentCallback;
 	private KgameSdkCallback mCallback;
@@ -107,7 +107,7 @@ public class Payment_jf extends BaseView implements KgameSdkPaymentCallback {
 
 	@Override
 	public View initRootview() {
-		mThisview = new Alipay_paymentxml(mActivity);
+		mThisview = new Bluep_paymentxml(mActivity);
 		return mThisview.initViewxml();
 	}
 

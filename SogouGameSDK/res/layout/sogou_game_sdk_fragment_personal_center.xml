@@ -43,6 +43,7 @@
                     android:text="" />
 
                 <ImageView
+                    android:id="@+id/sogou_game_sdk_personal_camera_iv"
                     android:layout_width="20dp"
                     android:layout_height="20dp"
                     android:layout_alignBottom="@+id/sogou_game_sdk_personal_center_head_ion_iv"
@@ -59,7 +60,7 @@
                     android:background="@drawable/sogou_game_sdk_personal_center_switch_account_selecter"
                     android:clickable="true"
                     android:gravity="center_vertical"
-                    android:text="切换账号"
+                    android:text="切换帐号"
                     android:textColor="@color/sogou_game_sdk_color_888888"
                     android:textSize="11.7sp" />
             </RelativeLayout>
@@ -328,11 +329,11 @@
                 android:id="@+id/sogou_game_sdk_personal_center_list_user_auth_line"
                 android:layout_width="match_parent"
                 android:layout_height="1px"
-                android:layout_below="@id/sogou_game_sdk_personal_center_bind_phone"
+                android:layout_below="@id/sogou_game_sdk_personal_center_user_auth"
                 android:layout_marginLeft="20dp"
                 android:layout_marginRight="20dp"
                 android:background="@color/sogou_game_sdk_color_dddddd"
-                android:visibility="gone" />
+                android:visibility="visible" />
 
             <RelativeLayout
                 android:id="@+id/sogou_game_sdk_personal_center_change_pwd"
@@ -343,7 +344,7 @@
                 android:layout_marginLeft="20dp"
                 android:layout_marginRight="20dp"
                 android:layout_marginTop="10dp"
-                android:visibility="gone" >
+                android:visibility="visible" >
 
                 <ImageView
                     android:id="@+id/sogou_game_sdk_personal_center_change_pwd_icon_iv"
@@ -375,7 +376,7 @@
                 android:id="@+id/sogou_game_sdk_personal_center_list_line4"
                 android:layout_width="match_parent"
                 android:layout_height="1px"
-                android:layout_below="@id/sogou_game_sdk_personal_center_user_auth"
+                android:layout_below="@id/sogou_game_sdk_personal_center_change_pwd"
                 android:layout_marginLeft="20dp"
                 android:layout_marginRight="20dp"
                 android:background="@color/sogou_game_sdk_color_dddddd" />
@@ -475,6 +476,14 @@
                     android:layout_centerVertical="true"
                     android:maxHeight="10dp" />
             </RelativeLayout>
+            <View
+                android:id="@+id/sogou_game_sdk_personal_center_list_line6"
+                android:layout_width="match_parent"
+                android:layout_height="1px"
+                android:layout_below="@id/sogou_game_sdk_personal_center_auto_signin"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:background="@color/sogou_game_sdk_color_dddddd" />
         </RelativeLayout>
     </ScrollView>
 

@@ -143,6 +143,7 @@
     <string name="account_register_meitu_message">注册美图帐号，即可登录所有美图产品</string>
     <string name="account_register_message">服务协议</string>
     <string name="account_register_message_header">注册表示同意 帐号规则 和 隐私政策</string>
+    <string name="account_register_message_header_confirm">请先同意 帐号规则 和 隐私政策</string>
     <string name="account_register_reload">换个手机号重新注册</string>
     <string name="account_register_send_phone">发送手机验证码</string>
     <string name="account_register_text">立即注册</string>
@@ -152,7 +153,7 @@
     <string name="account_sms_privacy">隐私政策</string>
     <string name="account_sms_send_code">发送短信验证码</string>
     <string name="account_sms_tips">我们将发送验证码短信到这个手机号码：\n%1$s %2$s</string>
-    <string name="account_sms_verify_tips">温馨提示：未注册美图帐号的手机号，登录时将自动注册，且代表您已同意 帐号规则 和 隐私政策</string>
+    <string name="account_sms_verify_tips">登录即表示同意 帐号规则 和 隐私政策</string>
     <string name="account_tip_permission_camera">请先开启摄像头权限再回来拍摄</string>
     <string name="account_tip_permission_sd">请先开启存储权限</string>
     <string name="account_title_complaint">申诉留言</string>
@@ -185,7 +186,7 @@
     <string name="gamecenter_pay_cancel_btn_txt">取消</string>
     <string name="gamecenter_pay_install_btn_txt">安装（无需下载）</string>
     <string name="gamecenter_pay_install_failure">安装失败</string>
-    <string name="gamecenter_pay_install_message">您尚未安装\"美图支付\"服务，安装后可使用充值支付服务，并确保支付安全。如果取消则无法支付。</string>
+    <string name="gamecenter_pay_install_message">您尚未安装最新版\"美图支付\"服务，安装后可使用充值支付服务，并确保支付安全。如果取消则无法支付。</string>
     <string name="gamecenter_pay_payparams_error_toast">订单创建失败，请稍后重试</string>
     <string name="gamecenter_pay_visit_external_storage_fail">安装（无需下载）</string>
     <string name="gamecenter_user_authenticate_request_error">认证失败</string>
@@ -195,17 +196,20 @@
     <string name="gamecenter_user_has_been_authenticated">已认证</string>
     <string name="gamecenter_user_not_authenticated">未认证</string>
     <style name="AccountCommonDialog" parent="@android:style/Theme.Dialog">
-        <!--边框-->
+        
         <item name="android:windowFrame">@null</item>
-        <!--是否浮现在activity之上-->
+        
         <item name="android:windowIsFloating">true</item>
-        <!--无标题-->
+        
         <item name="android:windowNoTitle">true</item>
-        <!--背景-->
+        
         <item name="android:windowBackground">@android:color/transparent</item>
-        <!--模糊-->
+        
         <item name="android:backgroundDimEnabled">true</item>
         <item name="android:backgroundDimAmount">0.5</item>
+    </style>
+    <style name="CheckAccountStateDialogStyle" parent="Common.NormalDialogTheme">
+        <item name="android:windowBackground">@android:color/transparent</item>
     </style>
     <style name="Common.NormalDialogTheme" parent="android:Theme.DeviceDefault.Light.Dialog">
         <item name="android:windowBackground">@drawable/common_dialog_window_background</item>
@@ -230,19 +234,23 @@
         <item name="android:activityCloseEnterAnimation">@anim/oepnaccount_fade_in_300</item>
         <item name="android:activityCloseExitAnimation">@anim/openaccount_slide_right_out</item>
     </style>
+    <style name="WelcomeDialogStyle" parent="android:Animation.Dialog">
+        <item name="android:windowEnterAnimation">@anim/gamecenter_welcome_dialog_window_anim_in</item>
+        <item name="android:windowExitAnimation">@anim/gamecenter_welcome_dialog_window_anim_out</item>
+    </style>
     <style name="openaccount_bottom_dialog_anim" parent="android:Animation">
         <item name="android:windowEnterAnimation">@anim/openaccount_dialog_bottom_slide_in</item>
         <item name="android:windowExitAnimation">@anim/openaccount_dialog_bottom_slide_out</item>
     </style>
     <style name="openaccount_common_dialog" parent="@android:style/Theme.Dialog">
         <item name="android:windowFrame">@null</item>
-        <!-- 边框 -->
+        
         <item name="android:windowIsFloating">true</item>
-        <!-- 是否浮现在activity之上 -->
+        
         <item name="android:windowNoTitle">true</item>
-        <!-- 无标题 -->
+        
         <item name="android:windowBackground">@android:color/transparent</item>
-        <!-- 模糊 -->
-        <!--<item name="android:backgroundDimEnabled">false</item> -->
+        
+        
     </style>
 </resources>

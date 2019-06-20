@@ -29,6 +29,7 @@
                 android:text="请稍候..."
                 android:id="@+id/textView"
                 android:layout_marginTop="10dp"
+            android:textSize="10sp"
                 android:textColor="@android:color/white"
                 android:visibility="gone"
                 />

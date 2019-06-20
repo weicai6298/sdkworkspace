@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.yayawan.sdktemplate"
+    android:versionCode="1"
+    android:versionName="1.0" >
+
+    <uses-sdk
+        android:minSdkVersion="8"
+        android:targetSdkVersion="19" />
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW" />
+    <uses-permission android:name="android.permission.GET_TASKS" />
+    <uses-permission android:name="android.permission.CHANGE_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE" />
+    <uses-permission android:name="android.permission.NFC" />
+
+    <application
+        android:name="com.yayawan.impl.YYApplication"
+        android:allowBackup="true"
+        android:theme="@android:style/Theme.NoTitleBar.Fullscreen" >
+        <activity
+            android:name="com.yayawan.sdktemplate.MainActivity"
+            android:configChanges="keyboardHidden|navigation|orientation|screenSize"
+            android:screenOrientation="portrait"
+            android:label="app_name" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <!-- 手游互联配置 -->
+        <meta-data
+            android:name="app_id"
+            android:value="kk1711822114" />
+        <meta-data
+            android:name="isLandscape"
+            android:value="true" />
+       
+        
+        <meta-data
+            android:name="goodsname"
+            android:value="元宝" />
+        <meta-data
+            android:name="gamename"
+            android:value="凡人慕仙" />
+        
+        <!--sdk相关 activity开始 -->
+        <activity 
+            android:configChanges="orientation|keyboard|keyboardHidden|navigation|screenSize" 
+            android:name="com.yuecheng.sdk.view.BindPhoneFirstActivity"
+            android:screenOrientation="behind"
+            android:theme="@android:style/Theme.NoTitleBar.Fullscreen"/>
+        <activity 
+            android:configChanges="orientation|keyboard|keyboardHidden|navigation|screenSize" 
+            android:name="com.yuecheng.sdk.view.BindPhoneSecondActivity"
+            android:screenOrientation="behind"
+            android:theme="@android:style/Theme.NoTitleBar.Fullscreen"/>
+        <activity 
+	       android:configChanges="orientation|keyboard|keyboardHidden|navigation|screenSize" 
+	       android:name="com.yuecheng.sdk.view.GiftActivity"
+	       android:screenOrientation="behind"
+	       android:theme="@android:style/Theme.NoTitleBar.Fullscreen"/>
+        <activity 
+	       android:configChanges="orientation|keyboard|keyboardHidden|navigation|screenSize" 
+	       android:name="com.yuecheng.sdk.view.BoutiqueActivity"
+	       android:screenOrientation="behind"
+	       android:launchMode="singleTask"
+	       android:theme="@android:style/Theme.NoTitleBar.Fullscreen"/>
+        <activity 
+            android:configChanges="orientation|keyboard|keyboardHidden|navigation|screenSize" 
+            android:name="com.yuecheng.sdk.view.DialogActivity"
+            android:theme="@style/ycx_style_Theme.Transparent"
+            android:screenOrientation="behind"
+            />
+       
+        <activity 
+            android:configChanges="orientation|keyboard|keyboardHidden|navigation|screenSize" 
+            android:name="com.yuecheng.sdk.view.NoticeActivity"
+            android:theme="@android:style/Theme.NoTitleBar.Fullscreen"
+            android:screenOrientation="behind"
+            />
+        <activity 
+            android:configChanges="orientation|keyboard|keyboardHidden|navigation|screenSize" 
+            android:name="com.yuecheng.sdk.view.WebViewActivity"
+            android:theme="@android:style/Theme.NoTitleBar.Fullscreen"
+            android:screenOrientation="behind"
+            />
+        
+        <activity 
+            android:configChanges="orientation|keyboard|keyboardHidden|navigation|screenSize" 
+            android:name="com.yuecheng.sdk.view.RetrievePwdActivity"
+            android:screenOrientation="behind"
+            android:theme="@android:style/Theme.NoTitleBar.Fullscreen"
+            />
+         <activity 
+            android:configChanges="orientation|keyboard|keyboardHidden|navigation|screenSize" 
+            android:name="com.yuecheng.sdk.view.UserCenterActivity"
+            android:screenOrientation="behind"
+            android:theme="@android:style/Theme.NoTitleBar.Fullscreen"
+            />
+         <activity 
+            android:configChanges="orientation|keyboard|keyboardHidden|navigation|screenSize" 
+            android:name="com.yuecheng.sdk.view.TanZiPayActivity"
+            android:screenOrientation="behind"
+            android:theme="@android:style/Theme.NoTitleBar.Fullscreen"
+            />
+         <activity 
+            android:configChanges="orientation|keyboard|keyboardHidden|navigation|screenSize" 
+            android:name="com.yuecheng.sdk.view.UNBindPhoneActivity"
+            android:screenOrientation="behind"
+            android:theme="@android:style/Theme.NoTitleBar.Fullscreen"
+            />
+         <activity 
+            android:configChanges="orientation|keyboard|keyboardHidden|navigation|screenSize" 
+            android:name="com.yuecheng.sdk.view.ReceivePwdActivity"
+            android:screenOrientation="behind"
+            android:theme="@android:style/Theme.NoTitleBar.Fullscreen"
+            />
+         <!--sdk相关 activity结束 -->
+         <!-- sdk pay begin -->
+           <activity 
+            android:name="com.switfpass.pay.activity.QQWapPayWebView"              
+            android:screenOrientation="behind"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar"/>
+        <activity
+            android:name="com.alipay.sdk.app.H5PayActivity"
+            android:configChanges="orientation|keyboardHidden|navigation"
+            android:exported="false"
+            android:screenOrientation="behind"
+            android:windowSoftInputMode="adjustResize|stateHidden" >
+        </activity>
+        <activity android:name="com.unionpay.uppay.PayActivity"/>
+        <!-- sdk pay start -->
+         <service android:name="com.yuecheng.sdk.service.FxService"/>
+         <service android:name="com.yuecheng.sdk.down.DownloadFileService"/>
+	    
+	     <activity 
+            android:configChanges="orientation|keyboard|keyboardHidden|navigation|screenSize" 
+            android:name="com.onenine.game.lib.util.WebViewActivity"
+            android:theme="@android:style/Theme.NoTitleBar.Fullscreen"
+            android:screenOrientation="behind"/>
+	    <!-- ycx_gameid的值由我方运营提供 其他channelId aid pid ycx_channeltype的值固定，不要修改 -->
+         <meta-data android:name="ycx_gameid" android:value="80" />
+         <meta-data android:name="ycx_channeltype" android:value="19sdk"/>
+         <meta-data android:name="ycx_channelid" android:value="1" />
+         <meta-data android:name="ycx_aid" android:value="1" />
+         <meta-data android:name="ycx_pid" android:value="0" />
+    </application>
+
+</manifest>

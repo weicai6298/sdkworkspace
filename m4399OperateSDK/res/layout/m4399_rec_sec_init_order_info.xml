@@ -3,33 +3,34 @@
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:gravity="center_vertical"
+    android:orientation="horizontal"
     android:paddingLeft="15dp"
-    android:paddingRight="15dp"
-    android:orientation="horizontal">
+    android:paddingRight="15dp">
 
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/m4399_rec_amount_payment"
-        android:textSize="14sp"
-        android:textColor="#333333"
         android:layout_marginRight="@dimen/m4399_rec_label_margin"
-        />
+        android:text="@string/m4399_rec_amount_payment"
+        android:textColor="#333333"
+        android:textSize="14sp" />
+
     <TextView
         android:id="@+id/sum"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:text="10"
         android:textColor="@color/m4399_rec_color_yellow"
         android:textSize="25sp"
-        android:textStyle="bold"
-        android:text="10" />
+        android:textStyle="bold" />
+
     <TextView
         android:id="@+id/unit"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="2dp"
         android:layout_marginLeft="5dp"
+        android:layout_marginTop="2dp"
         android:text="@string/m4399_rec_unit_yuan"
         android:textColor="#666666"
         android:textSize="14sp" />
@@ -50,7 +51,6 @@
         android:textColor="#666666"
         android:textSize="14sp"
         android:visibility="visible" />
-
 
 
     <TextView

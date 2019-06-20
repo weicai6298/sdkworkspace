@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<shape xmlns:android="http://schemas.android.com/apk/res/android" android:shape="rectangle">
+    <corners android:radius="@dimen/ipay_height_2"/>
+    <solid android:color="@color/ipay_color_value_ff_ea_ea"></solid>
+    <stroke android:width="@dimen/ipay_height_1" android:color="@color/ipay_color_value_ff_48_48"/>
+</shape>

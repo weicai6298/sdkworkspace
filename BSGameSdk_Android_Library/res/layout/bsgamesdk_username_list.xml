@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/bsgamesdk_id_username_ll"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:orientation="vertical" 
+    android:background="@drawable/bsgamesdk_bg_launch"
+    >
+    <ListView 
+        android:id="@+id/bsgamesdk_id_username_list"
+        android:layout_width="match_parent"
+    	android:layout_height="match_parent"
+        android:divider="@drawable/bsgamesdk_bg_input"
+        android:dividerHeight="1dp"
+        android:scrollbarStyle="insideOverlay" 
+        android:descendantFocusability="blocksDescendants"
+        >
+    </ListView>
+
+</FrameLayout>

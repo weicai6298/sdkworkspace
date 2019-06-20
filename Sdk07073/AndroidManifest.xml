@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.yayawan.sdktemplate"
+    android:versionCode="1"
+    android:versionName="1.0" >
+
+    <uses-sdk
+        android:minSdkVersion="8"
+        android:targetSdkVersion="21" />
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW" />
+    <uses-permission android:name="android.permission.GET_TASKS" />
+    
+    <uses-permission android:name="android.permission.READ_LOGS" />
+
+    <application
+        android:name="com.yayawan.impl.YYApplication"
+        android:allowBackup="true"
+        android:icon="@drawable/hide"
+        android:theme="@android:style/Theme.NoTitleBar.Fullscreen" >
+        <activity
+            android:name="com.yayawan.sdktemplate.MainActivity"
+            android:configChanges="keyboardHidden|navigation|orientation|screenSize"
+            android:label="app_name" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <!-- 手游互联配置 -->
+        <meta-data
+            android:name="app_id"
+            android:value="kk2231036569" />
+        <meta-data
+            android:name="isLandscape"
+            android:value="true" />
+        
+        
+        <!-- 渠道配置 -->
+        <meta-data
+            android:name="GAMEKEY"
+            android:value="0d6e54c587f7f63f5af2dfd49a344265" />
+        <meta-data
+            android:name="APPID"
+            android:value="string10619" />
+        
+        <!-- 横竖屏设置为sersorLandscape，为sersorPortrait -->
+        <activity
+            android:name="com.leshan.sdk.WebViewActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:screenOrientation="sensorLandscape"
+            android:theme="@android:style/Theme.Light.NoTitleBar.Fullscreen" />
+        <activity
+            android:name="com.leshan.sdk.MenuActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:screenOrientation="sensorLandscape"
+            android:theme="@android:style/Theme.Light.NoTitleBar.Fullscreen" />
+        
+        <provider
+            android:name="android.support.v4.content.FileProvider"
+            android:authorities="com.leshan.sdk.fileprovider"
+            android:exported="false"
+            android:grantUriPermissions="true">
+           <!--元数据-->
+           <meta-data
+        	android:name="android.support.FILE_PROVIDER_PATHS"
+        	android:resource="@xml/file_path" />
+    </provider>
+        
+    </application>
+
+</manifest>

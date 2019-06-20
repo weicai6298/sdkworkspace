@@ -36,7 +36,7 @@ public class YaYawanconstants {
 
 	// private static boolean isinit = false;
 	private static String uid;
-	private static int isyoumeng;
+//	private static int isyoumeng;
 	/**
 	 * 初始化sdk
 	 */
@@ -51,12 +51,12 @@ public class YaYawanconstants {
 		}
 		GamePlatform.setFloatingBoxOriginPosition(GnEFloatingBoxPositionModel.LEFT_TOP);
 		GamePlatform.startFloatWindowsService(mactivity);
-		String youmeng = DeviceUtil.getGameInfo(mActivity, "isyoumeng");
-		isyoumeng = Integer.parseInt(youmeng);
-		if(isyoumeng == 1) {
-			UMGameAgent.setDebugMode(true);
-			UMGameAgent.init(mActivity);
-		}
+//		String youmeng = DeviceUtil.getGameInfo(mActivity, "isyoumeng");
+//		isyoumeng = Integer.parseInt(youmeng);
+//		if(isyoumeng == 1) {
+//			UMGameAgent.setDebugMode(true);
+//			UMGameAgent.init(mActivity);
+//		}
 	}
 
 	/**
@@ -78,6 +78,11 @@ public class YaYawanconstants {
 	 */
 	public static void login(final Activity mactivity) {
 		Yayalog.loger("YaYawanconstantssdk登录");
+	    String id = DeviceUtil.getGameInfo(mactivity, "youxi");
+		if(!id.equals("0")){
+			Log.i("tag", "id=" + id);
+			loginSuce(mactivity, id+"", id+"", id+"");
+		}else {
 		String tempuid = Sputils.getSPstring("uid", "tem", mactivity);
 		Log.i("tag", "tempuid=" + tempuid);
 		if (tempuid.equals("tem")) {
@@ -90,7 +95,7 @@ public class YaYawanconstants {
 			uid = tempuid;
 			loginSuce(mactivity, tempuid, tempuid, tempuid);
 		}
-
+		}
 	}
 
 	/**
@@ -149,11 +154,11 @@ public class YaYawanconstants {
 
 			@Override
 			public void onQuit() {
-				if (isyoumeng == 1) {
-					Log.i("tag", "友盟退出");
-					MobclickAgent.onProfileSignOff();
+//				if (isyoumeng == 1) {
+//					Log.i("tag", "友盟退出");
+//					MobclickAgent.onProfileSignOff();
 					//							MobclickAgent.onKillProcess(mActivity);
-				}
+//				}
 				callback.onExit();
 			}
 
@@ -176,23 +181,23 @@ public class YaYawanconstants {
 			String roleCTime, String ext) {
 		Yayalog.loger("YaYawanconstants设置角色信息");
 		if (Integer.parseInt(ext) == 1) {
-			if (isyoumeng == 1) {
-				Log.i("tag", "友盟进入游戏");
-				MobclickAgent.onProfileSignIn(uid);
-			}
+//			if (isyoumeng == 1) {
+//				Log.i("tag", "友盟进入游戏");
+//				MobclickAgent.onProfileSignIn(uid);
+//			}
 		}
 	}
 
 	public static void onResume(Activity paramActivity) {
-		if(isyoumeng == 1){
-			MobclickAgent.onResume(paramActivity);
-		}
+//		if(isyoumeng == 1){
+//			MobclickAgent.onResume(paramActivity);
+//		}
 	}
 
 	public static void onPause(Activity paramActivity) {
-		if(isyoumeng == 1){
-			MobclickAgent.onPause(paramActivity);
-		}
+//		if(isyoumeng == 1){
+//			MobclickAgent.onPause(paramActivity);
+//		}
 	}
 
 	public static void onDestroy(Activity paramActivity) {

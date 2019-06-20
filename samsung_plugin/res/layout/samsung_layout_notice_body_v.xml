@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/samsung_notice_margin_3"
+    android:orientation="vertical">
+
+    <HorizontalScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:scrollbars="none"
+        android:background="@color/samsung_notice_color_value_2_4">
+        <LinearLayout
+            android:id="@+id/dialog_notice_list"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal">
+
+        </LinearLayout>
+
+    </HorizontalScrollView>
+
+    <ProgressBar
+        android:id="@+id/webview_progress"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/samsung_notice_margin_2"
+        android:max="100"
+        style="?android:attr/progressBarStyleHorizontal"
+        android:progressDrawable="@drawable/samsung_notice_progress_bg"
+        android:visibility="gone"/>
+
+    <WebView
+        android:id="@+id/dialog_webview"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:paddingRight="@dimen/samsung_notice_margin_4"
+        android:scrollbarThumbVertical="@drawable/samsung_notice_scrollbar"/>
+
+</LinearLayout>

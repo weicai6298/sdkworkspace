@@ -20,7 +20,7 @@
         android:layout_marginBottom="30dp"
         android:layout_gravity="center_horizontal"
         android:singleLine="true"
-        android:text="账号 15210584318 正在登录..."
+        android:text="帐号 15210584318 正在登录..."
         android:textColor="@color/sogou_game_sdk_white"
         android:textSize="13sp" />
 </LinearLayout>

@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="pyw_sdk_type">3</string>
-   
-    <string name="pyw_login_account_hint">请输入账号</string>
+    <string name="app_name">PengyouwanSDK</string>
+    <string name="pyw_login_account_hint">请输入帐号</string>
     <string name="pyw_login_psw_hint">请输入密码</string>
     <string name="pyw_regex_code">0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ</string>
     <string name="pyw_login_forgetpsw_tips">忘记密码?点击这里找回</string>
@@ -14,7 +14,7 @@
     <string name="pyw_service_phone_num">4000709394</string>
     <string name="pyw_service_phone">客服热线:400–0709–394</string>
     <string name="pyw_usercenter">个人中心</string>
-    <string name="pyw_usercenter_switchaccount">切换账户</string>
+    <string name="pyw_usercenter_switchaccount">切换帐户</string>
     <string name="pyw_usercenter_voucher">代金券</string>
     <string name="pyw_usercenter_safe">安全</string>
     <string name="pyw_next_step">下一步</string>
@@ -36,7 +36,7 @@
     <string name="pyw_accountRetrieve_inputPhone_hint">请输入绑定的手机号</string>
     <string name="pyw_accountRetrieve_inputCode_hint">验证码</string>
     <string name="pyw_accountRetrieve_getCode">获取验证码</string>
-    <string name="pyw_bind_phone_tips">手机号可用来找回密码和防止账号被盗</string>
+    <string name="pyw_bind_phone_tips">手机号可用来找回密码和防止帐号被盗</string>
     <string name="pyw_bindphone_tips_first">绑定手机支付更安全，享受更贴心服务</string>
     <!-- 登录密码重置 -->
     <string name="pyw_resetlogin_old">请输入原有登录密码   (6–12位)</string>
@@ -66,9 +66,9 @@
 
     <!-- 代金券列表title -->
     <string name="pyw_my_voucher_title">我的代金券</string>
-    <string name="pyw_reset_pwd_title">设置新的账号密码</string>
-    <string name="pyw_reset_txt_title">您的账号为：</string>
+    <string name="pyw_reset_pwd_title">设置新的帐号密码</string>
+    <string name="pyw_reset_txt_title">您的帐号为：</string>
     <string name="pyw_net_exception_tip">网络异常,请重试</string>
-    <string name="pyw_phone_bind_result_title">该手机号没有绑定账户</string>
+    <string name="pyw_phone_bind_result_title">该手机号没有绑定帐户</string>
 
 </resources>

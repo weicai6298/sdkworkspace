@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/yxf_sdk_bg_tran"
+    android:gravity="center">
+
+    <RelativeLayout
+        android:layout_width="263.33dp"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:background="@drawable/yxf_bg_in_edt_whi_yel"
+        android:orientation="vertical"
+        android:paddingBottom="26.67dp">
+
+        <TextView
+            android:id="@+id/tv_tip_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="26.67dp"
+            android:text="游戏更新"
+            android:textColor="@color/yxf_sdk_gray_title"
+            android:textSize="17.33sp" />
+
+        <TextView
+            android:id="@+id/tv_tip_content"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tv_tip_title"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="20dp"
+            android:text="发现新版本，是否马上更新？"
+            android:textColor="@color/yxf_sdk_gray_result"
+            android:textSize="14.67sp" />
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tv_tip_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="24dp">
+
+            <Button
+                android:id="@+id/btn_no"
+                android:layout_width="93.33dp"
+                android:layout_height="40dp"
+                android:background="@drawable/yxf_bt_in_gray_shallow"
+                android:text="取消"
+                android:textColor="@color/yxf_sdk_gray_title"
+                android:textSize="16sp" />
+
+            <Button
+                android:id="@+id/btn_yes"
+                android:layout_width="93.33dp"
+                android:layout_height="40dp"
+                android:layout_toRightOf="@+id/btn_no"
+                android:layout_marginLeft="16.67dp"
+                android:background="@drawable/yxf_lin_shape_red"
+                android:text="立即更新"
+                android:textColor="@color/yxf_sdk_gray_title"
+                android:textSize="16sp" />
+
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+</LinearLayout>

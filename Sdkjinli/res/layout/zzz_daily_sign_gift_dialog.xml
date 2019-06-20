@@ -1,17 +1,18 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout
-    android:id="@+id/zzz_daily_sign_dialog_content"
     xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/zzz_daily_sign_dialog_content"
     android:layout_width="@dimen/zzz_daily_gift_dialog_width"
-    android:layout_height="@dimen/zzz_daily_gift_dialog_height"
-    android:layout_centerInParent="true">
+    android:layout_height="wrap_content"
+    android:layout_centerInParent="true"
+    android:paddingBottom="@dimen/zzz_daily_gift_dialog_icon_margin">
 
     <ImageView
         android:id="@+id/zzz_gift_icon"
         android:layout_width="@dimen/zzz_daily_gift_dialog_icon_size"
         android:layout_height="@dimen/zzz_daily_gift_dialog_icon_size"
-        android:layout_marginLeft="@dimen/zzz_daily_gift_dialog_icon_margin"
-        android:layout_marginTop="@dimen/zzz_daily_gift_dialog_icon_margin"/>
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="@dimen/zzz_daily_gift_dialog_icon_margin"/>
 
     <TextView
         android:id="@+id/zzz_gift_title"
@@ -35,7 +36,17 @@
         android:layout_marginRight="@dimen/zzz_daily_gift_dialog_desc_margin_right"
         android:layout_marginTop="@dimen/zzz_daily_gift_dialog_desc_margin_top"
         android:ellipsize="end"
-        android:lines="2"
+        android:maxLines="2"
         android:textColor="@color/zzz_white"
         android:textSize="@dimen/zzz_daily_gift_dialog_desc_text_size"/>
+
+    <TextView
+        android:id="@+id/zzz_daily_sign_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/zzz_gift_title"
+        android:layout_below="@+id/zzz_gift_desc"
+        android:layout_marginTop="@dimen/zzz_daily_gift_dialog_desc_margin_top"
+        android:background="@drawable/zzz_dialy_sign_btn"
+        android:visibility="gone"/>
 </RelativeLayout>

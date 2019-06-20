@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    style="@style/bsgamesdk_toast" >
+
+    <ImageView
+        android:id="@+id/bsgamesdk_id_toastImg"
+        style="@style/bsgamesdk_iconwarn" 
+        android:visibility="gone"
+        />
+
+    <TextView
+        android:id="@+id/bsgamesdk_id_toastText"
+        style="@style/bsgamesdk_text.middle"
+        android:layout_gravity="center_vertical"
+        android:textColor="@color/bsgamesdk_white" />
+
+</LinearLayout>

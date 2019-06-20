@@ -47,6 +47,7 @@ public class ChargerImpl implements YYWCharger {
 
 	String orderId = null;
 	String privatekey = null;
+//	String publickey = null;
 
 	public void createOrder(final Activity paramActivity) {
 		progress(paramActivity);
@@ -88,7 +89,9 @@ public class ChargerImpl implements YYWCharger {
 								JSONObject data = obj.getJSONObject("data");
 								orderId = data.optString("id");
 								privatekey = data.optString("privatekey");
+//								publickey = data.optString("publickey");
 								Log.i("tag","privatekey="+privatekey);
+//								Log.i("tag","publickey="+publickey);
 
 								new Handler(Looper.getMainLooper())
 										.post(new Runnable() {
@@ -112,6 +115,7 @@ public class ChargerImpl implements YYWCharger {
 	private void pay_run(final Activity paramActivity) {
 
 		YaYawanconstants.pay(paramActivity, orderId,privatekey);
+//		YaYawanconstants.pay(paramActivity, orderId,privatekey,publickey);
 
 	}
 

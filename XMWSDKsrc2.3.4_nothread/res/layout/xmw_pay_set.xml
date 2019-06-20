@@ -1,0 +1,529 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/ll_pay_set"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:visibility="gone" >
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fillViewport="true"
+        android:scrollbars="none" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" >
+
+            <LinearLayout
+                android:id="@+id/ll_pay_set_first"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical" >
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/appWhite"
+                    android:gravity="center"
+                    android:orientation="horizontal" >
+
+                    <RelativeLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1" >
+
+                        <TextView
+                            android:id="@+id/tv_mm_text"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:padding="10dp"
+                            android:text="小额免密支付"
+                            android:textColor="@color/appBlack" />
+
+                        <TextView
+                            android:id="@+id/tv_mm_coin"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:layout_marginLeft="-5dp"
+                            android:layout_toRightOf="@id/tv_mm_text"
+                            android:text="(额度：)"
+                            android:textColor="@color/xmw_c_black2"
+                            android:textSize="12sp" />
+                    </RelativeLayout>
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="10dp"
+                        android:background="@drawable/shape_toggle_button_bg"
+                        android:orientation="horizontal"
+                        android:padding="1dp" >
+
+                        <com.xmwsdk.view.SlideSwitch
+                            android:id="@+id/switch_btn"
+                            android:layout_width="40dp"
+                            android:layout_height="25dp" />
+                    </LinearLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/ll_set"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/appWhite"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal" >
+
+                    <TextView
+                        android:id="@+id/tv_zf_text"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:padding="10dp"
+                        android:text="设置支付密码"
+                        android:textColor="@color/appBlack" />
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="10dp"
+                        android:background="@drawable/xmw_ic_next" />
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/tv_set_info"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    android:padding="10dp"
+                    android:text="*请先设置支付密码再进行熊猫币支付操作"
+                    android:textColor="@color/red_text"
+                    android:visibility="gone" />
+
+                <LinearLayout
+                    android:id="@+id/ll_update_user"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/appWhite"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    android:visibility="gone" >
+
+                    <TextView
+                        android:id="@+id/tv_update_user"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:padding="10dp"
+                        android:text="升级正式账号"
+                        android:textColor="@color/appBlack" />
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="10dp"
+                        android:background="@drawable/xmw_ic_next" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/ll_psw_set"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:orientation="vertical"
+                android:visibility="gone" >
+
+                <TextView
+                    android:id="@+id/tv_psw_des"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="25dp"
+                    android:text="请输入6位数支付密码"
+                    android:textColor="@color/xmw_c_black2" />
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="30dp"
+                    android:layout_marginRight="30dp"
+                    android:layout_marginTop="25dp" >
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:orientation="horizontal"
+                        android:weightSum="6" >
+
+                        <TextView
+                            android:id="@+id/tv_1"
+                            android:layout_width="0dp"
+                            android:layout_height="40dp"
+                            android:layout_weight="1"
+                            android:background="@drawable/xmw_tv_psw_normal"
+                            android:gravity="center"
+                            android:inputType="number"
+                            android:lines="1"
+                            android:maxLines="1" />
+
+                        <TextView
+                            android:id="@+id/tv_2"
+                            android:layout_width="0dp"
+                            android:layout_height="40dp"
+                            android:layout_weight="1"
+                            android:background="@drawable/xmw_tv_psw_normal"
+                            android:gravity="center"
+                            android:inputType="number"
+                            android:lines="1"
+                            android:maxLines="1" />
+
+                        <TextView
+                            android:id="@+id/tv_3"
+                            android:layout_width="0dp"
+                            android:layout_height="40dp"
+                            android:layout_weight="1"
+                            android:background="@drawable/xmw_tv_psw_normal"
+                            android:gravity="center"
+                            android:inputType="number"
+                            android:lines="1"
+                            android:maxLines="1" />
+
+                        <TextView
+                            android:id="@+id/tv_4"
+                            android:layout_width="0dp"
+                            android:layout_height="40dp"
+                            android:layout_weight="1"
+                            android:background="@drawable/xmw_tv_psw_normal"
+                            android:gravity="center"
+                            android:inputType="number"
+                            android:lines="1"
+                            android:maxLines="1" />
+
+                        <TextView
+                            android:id="@+id/tv_5"
+                            android:layout_width="0dp"
+                            android:layout_height="40dp"
+                            android:layout_weight="1"
+                            android:background="@drawable/xmw_tv_psw_normal"
+                            android:gravity="center"
+                            android:inputType="number"
+                            android:lines="1"
+                            android:maxLines="1" />
+
+                        <TextView
+                            android:id="@+id/tv_6"
+                            android:layout_width="0dp"
+                            android:layout_height="40dp"
+                            android:layout_weight="1"
+                            android:background="@drawable/xmw_tv_psw_normal"
+                            android:gravity="center"
+                            android:inputType="number"
+                            android:lines="1"
+                            android:maxLines="1" />
+                    </LinearLayout>
+
+                    <EditText
+                        android:id="@+id/editHide"
+                        android:layout_width="match_parent"
+                        android:layout_height="40dp"
+                        android:layout_centerInParent="true"
+                        android:layout_weight="1"
+                        android:background="#00000000"
+                        android:cursorVisible="false"
+                        android:ems="10"
+                        android:imeOptions="flagNoExtractUi"
+                        android:inputType="number"
+                        android:maxLength="6"
+                        android:textColor="#00000000" />
+
+                    <TextView
+                        android:id="@+id/tv_connect_kf"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_below="@id/editHide"
+                        android:layout_marginTop="10dp"
+                        android:text="忘记密码?"
+                        android:textColor="#07C6FF" />
+                </RelativeLayout>
+
+                <LinearLayout
+                    android:id="@+id/ll_repeat_psw"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:orientation="vertical"
+                    android:visibility="gone" >
+
+                    <TextView
+                        android:id="@+id/tv_psw_des_2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="25dp"
+                        android:text="请再次输入6位数新支付密码"
+                        android:textColor="@color/xmw_c_black2" />
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="30dp"
+                        android:layout_marginRight="30dp"
+                        android:layout_marginTop="25dp" >
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:orientation="horizontal"
+                            android:weightSum="6" >
+
+                            <TextView
+                                android:id="@+id/tv_11"
+                                android:layout_width="0dp"
+                                android:layout_height="40dp"
+                                android:layout_weight="1"
+                                android:background="@drawable/xmw_tv_psw_normal"
+                                android:gravity="center"
+                                android:inputType="number"
+                                android:lines="1"
+                                android:maxLines="1" />
+
+                            <TextView
+                                android:id="@+id/tv_12"
+                                android:layout_width="0dp"
+                                android:layout_height="40dp"
+                                android:layout_weight="1"
+                                android:background="@drawable/xmw_tv_psw_normal"
+                                android:gravity="center"
+                                android:inputType="number"
+                                android:lines="1"
+                                android:maxLines="1" />
+
+                            <TextView
+                                android:id="@+id/tv_13"
+                                android:layout_width="0dp"
+                                android:layout_height="40dp"
+                                android:layout_weight="1"
+                                android:background="@drawable/xmw_tv_psw_normal"
+                                android:gravity="center"
+                                android:inputType="number"
+                                android:lines="1"
+                                android:maxLines="1" />
+
+                            <TextView
+                                android:id="@+id/tv_14"
+                                android:layout_width="0dp"
+                                android:layout_height="40dp"
+                                android:layout_weight="1"
+                                android:background="@drawable/xmw_tv_psw_normal"
+                                android:gravity="center"
+                                android:inputType="number"
+                                android:lines="1"
+                                android:maxLines="1" />
+
+                            <TextView
+                                android:id="@+id/tv_15"
+                                android:layout_width="0dp"
+                                android:layout_height="40dp"
+                                android:layout_weight="1"
+                                android:background="@drawable/xmw_tv_psw_normal"
+                                android:gravity="center"
+                                android:inputType="number"
+                                android:lines="1"
+                                android:maxLines="1" />
+
+                            <TextView
+                                android:id="@+id/tv_16"
+                                android:layout_width="0dp"
+                                android:layout_height="40dp"
+                                android:layout_weight="1"
+                                android:background="@drawable/xmw_tv_psw_normal"
+                                android:gravity="center"
+                                android:inputType="number"
+                                android:lines="1"
+                                android:maxLines="1" />
+                        </LinearLayout>
+
+                        <EditText
+                            android:id="@+id/editHide1"
+                            android:layout_width="match_parent"
+                            android:layout_height="40dp"
+                            android:layout_centerInParent="true"
+                            android:layout_weight="1"
+                            android:background="#00000000"
+                            android:cursorVisible="false"
+                            android:ems="10"
+                            android:imeOptions="flagNoExtractUi"
+                            android:inputType="number"
+                            android:maxLength="6"
+                            android:textColor="#00000000" />
+                    </RelativeLayout>
+                </LinearLayout>
+
+                <RelativeLayout
+                    android:id="@+id/rl_next"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="15dp"
+                    android:layout_marginLeft="30dp"
+                    android:layout_marginRight="30dp"
+                    android:layout_marginTop="40dp"
+                    android:background="@drawable/xmw_light_button2" >
+
+                    <TextView
+                        android:id="@+id/tv_next"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:gravity="center"
+                        android:padding="10dp"
+                        android:text="下一步"
+                        android:textColor="@color/appBlack"
+                        android:textSize="15sp" />
+                </RelativeLayout>
+            </LinearLayout>
+            
+            <!-- 修改支付密码 -->
+            <LinearLayout
+                android:id="@+id/ll_change_pay_password"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:visibility="gone" >
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:paddingLeft="18dp"
+                    android:paddingRight="18dp" >
+
+                    <com.xmwsdk.view.XmwEditText
+                        android:id="@+id/find_pay_password"
+                        android:layout_width="match_parent"
+                        android:layout_height="38dp"
+                        android:layout_marginTop="18dp"
+                        android:background="@drawable/xmw_corner_white_gray"
+                        android:hint="请输入登录密码"
+                        android:inputType="text"
+                        android:maxLength="11"
+                        android:paddingLeft="3dp"
+                        android:textColor="@color/appBlack"
+                        android:textColorHint="@color/con_black"
+                        android:textSize="16sp" />
+                </LinearLayout>
+                
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:paddingLeft="18dp"
+                    android:paddingRight="18dp" >
+
+                    <com.xmwsdk.view.XmwEditText
+                        android:id="@+id/new_pay_password"
+                        android:layout_width="match_parent"
+                        android:layout_height="38dp"
+                        android:layout_marginTop="18dp"
+                        android:background="@drawable/xmw_corner_white_gray"
+                        android:hint="请输入新的支付密码"
+                        android:inputType="number"
+                        android:maxLength="11"
+                        android:paddingLeft="3dp"
+                        android:textColor="@color/appBlack"
+                        android:textColorHint="@color/con_black"
+                        android:textSize="16sp" />
+                </LinearLayout>
+
+                <RelativeLayout
+                    android:id="@+id/change_success_btn"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="15dp"
+                    android:layout_marginLeft="18dp"
+                    android:layout_marginRight="18dp"
+                    android:layout_marginTop="15dp"
+                    android:background="@drawable/xmw_light_button2" >
+
+                    <TextView
+                        android:id="@+id/tv_change_success"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:gravity="center"
+                        android:padding="10dp"
+                        android:text="确定"
+                        android:textColor="@color/appBlack"
+                        android:textSize="15sp" />
+                </RelativeLayout>
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+
+    <LinearLayout
+        android:id="@+id/ll_pay_kf"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/appWhite"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:visibility="gone" >
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="130dp" >
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:gravity="center_horizontal"
+                android:orientation="vertical" >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="游戏过程遇到任何问题请联系"
+                    android:textColor="@color/appBlack"
+                    android:textSize="14sp" />
+
+                <TextView
+                    android:id="@+id/xmw_helptencentnum"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    android:text="QQ:"
+                    android:textColor="@color/appBlack"
+                    android:textSize="14sp" />
+            </LinearLayout>
+        </RelativeLayout>
+
+        <LinearLayout
+            android:id="@+id/xmwhelp_back"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" >
+
+            <TextView
+                android:id="@+id/tv_xmwhelp_back"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="15dp"
+                android:layout_marginLeft="18dp"
+                android:layout_marginRight="18dp"
+                android:background="@drawable/xmw_light_button"
+                android:gravity="center"
+                android:padding="10dp"
+                android:text="确定"
+                android:textColor="@color/appBlack"
+                android:textSize="14sp" />
+        </LinearLayout>
+    </LinearLayout>
+
+</RelativeLayout>

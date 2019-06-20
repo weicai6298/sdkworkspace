@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:custom="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/bsgamesdk_id_welcome_container"
+    android:layout_width="match_parent"
+    android:layout_height="50dp"
+    android:background="#ffffff"
+    android:gravity="center"
+    android:orientation="horizontal" >
+        <com.bsgamesdk.android.widget.RoundImageViewByXfermode
+            android:id="@+id/bsgamesdk_id_welcome_avatar"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_marginLeft="15dp"
+            android:layout_gravity="center_vertical"
+            android:src="@drawable/bsgamesdk_bg_head"
+            custom:bsgamesdk_roundImageView_borderRadius="10dp"
+            custom:bsgamesdk_roundImageView_type="round"
+          />
+
+        <TextView
+            style="?attr/bsgamesdk_info_text_style"
+            android:gravity="center"
+            android:layout_marginLeft="8dp"
+            android:layout_gravity="center_vertical"
+            android:text="@string/bsgamesdk_welcome_wel" />
+
+         <TextView
+            android:id="@+id/bsgamesdk_id_welcome_name"
+            style="?attr/bsgamesdk_info_name_style"
+            android:gravity="center"
+             android:text="@string/bsgamesdk_welcome_default_name"
+            android:layout_gravity="center_vertical"
+            />
+
+        <View
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1" />
+
+        <com.bsgamesdk.android.widget.DrawableCenterTextView
+            android:id="@+id/bsgamesdk_id_welcome_change"
+            android:gravity="center"
+            android:layout_gravity="center_vertical"
+            style="?attr/bsgamesdk_welcome_change_style"
+           	android:layout_marginRight="8dp"
+            android:text="@string/bsgamesdk_welcome_change" />
+</LinearLayout>

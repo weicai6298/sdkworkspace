@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<resources>
+
+    <color name="button_focus_color">#525252</color>
+    <color name="text_focus_color">#d3d3d3</color>
+</resources>
+
+<!--  -->

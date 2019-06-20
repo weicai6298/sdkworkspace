@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    package="com.yayawan.sdktemplate.baidu"
+    package="com.yayawan.sdktemplate"
     android:versionCode="1"
     android:versionName="1.0" >
 
@@ -76,25 +76,28 @@
         <!-- 手游互联配置 -->
         <meta-data
             android:name="app_id"
-            android:value="kk2270685829" />
+            android:value="kk916301649" />
         <meta-data
             android:name="isLandscape"
-            android:value="true" />
+            android:value="false" />
 
         <!-- ↓↓↓ SDK ↓↓↓ -->
         <!-- 0-百度 1-多酷 2-91 -->
         <meta-data
             android:name="BD_appid"
-            android:value="string11059758" />
+            android:value="string15378033" />
         <meta-data
             android:name="BD_appkey"
-            android:value="4cIjhq4h2Uq470D5CcGUSHi9" />
+            android:value="1HX2tCDNamGQ2kTYD4khUwdi" />
+        <!-- ↓↓↓ SDK ↓↓↓ -->
+        <!-- 0-百度 1-多酷 2-91 -->
+
         <meta-data
             android:name="BDPlatformType"
             android:value="0" />
         <meta-data
             android:name="BDGameVersion"
-            android:value="4.0.4" />
+            android:value="4.1.1" />
 
         <activity
             android:name="com.baidu.gamesdk.impl.CallBackActivity"
@@ -174,6 +177,12 @@
             android:theme="@style/bdp_dialog_style_fullscreen"
             android:windowSoftInputMode="adjustPan" />
         <activity
+            android:name="com.baidu.platformsdk.SapiWebActivityNew"
+            android:configChanges="orientation|navigation|screenSize|keyboard|keyboardHidden"
+            android:exported="false"
+            android:theme="@style/PassportSdkTheme"
+            android:windowSoftInputMode="adjustPan" />
+        <activity
             android:name="com.baidu.platformsdk.SapiLoginProxyActivity"
             android:configChanges="orientation|navigation|screenSize|keyboard|keyboardHidden"
             android:exported="false"
@@ -225,15 +234,6 @@
             android:exported="false" />
 
         <!-- ↑↑↑ SDK ↑↑↑ -->
-
-
-        <!-- ↓↓↓ passport ↓↓↓ -->
-        <activity
-            android:name="com.baidu.sapi2.utils.LoginProtectAcitivity"
-            android:screenOrientation="behind"
-            android:theme="@style/bdp_SapiTheme"
-            android:windowSoftInputMode="adjustPan" />
-        <!-- ↑↑↑ passport ↑↑↑ -->
 
 
         <!-- ↓↓↓ 支付宝插件 ↓↓↓ -->
@@ -409,6 +409,15 @@
             android:authorities="string_package"
             android:exported="false" />
         <!-- ↑↑↑ 多酷SDK ↑↑↑ -->
+
+
+        <!-- ↓↓↓ mat ↓↓↓ com.baidu.bdgamesdk.demo 需要将包名替换为游戏自己包名 -->
+        <provider
+            android:name="com.tencent.mid.api.MidProvider"
+            android:authorities="string_package.TENCENT.MID.V3"
+            android:exported="true" >
+        </provider>
+        <!-- ↑↑↑ mat ↑↑↑ -->
 
     </application>
 

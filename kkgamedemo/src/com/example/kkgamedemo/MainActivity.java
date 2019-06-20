@@ -131,28 +131,28 @@ public class MainActivity extends Activity {
 		});
 		mLinearLayout.addView(versionButton, new LinearLayout.LayoutParams(
 				LayoutParams.MATCH_PARENT, LayoutParams.WRAP_CONTENT));
-
+		
 		Button logoutButton = new Button(this);
 		logoutButton.setText("注销账号");
 		logoutButton.setOnClickListener(new OnClickListener() {
-
+			
 			@Override
 			public void onClick(View v) {
 				Logout();
-
+				
 			}
-
+			
 		});
 		mLinearLayout.addView(logoutButton, new LinearLayout.LayoutParams(
 				LayoutParams.MATCH_PARENT, LayoutParams.WRAP_CONTENT));
-
+		
 		tv_view = new TextView(this);
 		// logoutButton.setText("注销账号");
 		mLinearLayout.addView(tv_view, new LinearLayout.LayoutParams(
 				LayoutParams.MATCH_PARENT, LayoutParams.WRAP_CONTENT));
-
+		
 		setContentView(mLinearLayout);
-
+		
 	}
 
 	public void Demologin() {

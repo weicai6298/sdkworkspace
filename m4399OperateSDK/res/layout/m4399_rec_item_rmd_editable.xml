@@ -12,8 +12,8 @@
         android:background="@drawable/m4399_rec_edittext_bg"
         android:gravity="center"
         android:hint="@string/m4399_rec_other_sum"
-        android:maxLength="5"
         android:inputType="numberDecimal"
+        android:maxLength="5"
         android:textColor="#333333"
         android:textColorHint="#999999"
         android:textSize="@dimen/font_normal" />

@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources xmlns:android="http://schemas.android.com/apk/res/android">
-        <style name="m4399BaseDialogStyle" parent="@android:style/Theme.Dialog">
+
+    <style name="m4399BaseDialogStyle" parent="@android:style/Theme.Dialog">
         <item name="android:windowBackground">@drawable/m4399_ope_dialog_main_bg</item>
         <item name="android:windowIsTranslucent">true</item>
         <item name="android:windowNoTitle">true</item>
@@ -8,7 +9,7 @@
         <item name="android:backgroundDimEnabled">true</item>
         <item name="android:windowFrame">@null</item>
     </style>
-    
+
     <style name="m4399WhiteDialogStyle" parent="m4399BaseDialogStyle">
         <item name="android:windowBackground">@android:color/white</item>
     </style>
@@ -29,7 +30,7 @@
     <style name="m4399GreetingDialogStyle" parent="@style/m4399BaseDialogStyle">
         <item name="android:backgroundDimEnabled">false</item>
     </style>
-    
+
     <style name="m4399RecordEditorBtnStyle">
         <item name="android:layout_width">match_parent</item>
         <item name="android:layout_height">wrap_content</item>
@@ -39,5 +40,5 @@
         <item name="android:textSize">18sp</item>
         <item name="android:background">@drawable/m4399_rec_record_editer_btn_bg</item>
     </style>
-   
+
 </resources>

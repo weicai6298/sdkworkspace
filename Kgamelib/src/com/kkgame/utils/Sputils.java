@@ -22,7 +22,7 @@ public class Sputils {
 				Context.MODE_PRIVATE);
 
 		ed = sp.edit();
-		ed.putString(key, value);
+		ed.putString("dd"+key, value);
 		boolean flag = ed.commit();
 		return flag;
 	}
@@ -33,7 +33,7 @@ public class Sputils {
 
 		ed = sp.edit();
 
-		ed.putInt(key, value);
+		ed.putInt("dd"+key, value);
 		boolean flag = ed.commit();
 		return flag;
 	}
@@ -43,7 +43,7 @@ public class Sputils {
 				Context.MODE_PRIVATE);
 
 		ed = sp.edit();
-		int k = sp.getInt(key, defValue);
+		int k = sp.getInt("dd"+key, defValue);
 		return k;
 	}
 
@@ -53,7 +53,7 @@ public class Sputils {
 				Context.MODE_PRIVATE);
 
 		ed = sp.edit();
-		String k = sp.getString(key, defValue);
+		String k = sp.getString("dd"+key, defValue);
 		return k;
 	}
 

@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <FrameLayout
+        android:layout_width="100dp"
+        android:layout_height="@dimen/dp_40"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="@dimen/size_10dp">
+
+        <ImageView
+            android:id="@+id/payMULILogo"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_gravity="center"
+            android:background="@color/pay_color_e9e9e9" />
+
+        <ImageView
+            android:id="@+id/payMULIHint"
+            android:layout_width="@dimen/size_15dp"
+            android:layout_height="@dimen/size_15dp"
+            android:layout_gravity="right"
+            android:visibility="gone"
+            android:layout_marginRight="@dimen/size_15dp"
+            android:background="@drawable/pay_circle_f73d3b" />
+    </FrameLayout>
+
+
+    <TextView
+        android:id="@+id/payMULIName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginBottom="@dimen/size_15dp"
+        android:layout_marginTop="@dimen/size_5dp"
+        android:text="个人信息"
+        android:textSize="@dimen/size_15sp" />
+</LinearLayout>

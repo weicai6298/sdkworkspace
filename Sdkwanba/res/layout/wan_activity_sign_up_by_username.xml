@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_sign_up_by_username"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.yiqiwanba.wansdk.user.SignUpByUsernameActivity">
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="300dp"
+        android:background="@drawable/wan_dialog_bg"
+        android:paddingLeft="24dp"
+        android:paddingRight="24dp"
+        android:paddingTop="10dp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <ImageButton
+                android:id="@+id/backButton"
+                android:background="@null"
+                android:layout_gravity="center_vertical"
+                android:src="@drawable/wan_btn_back_00"
+                android:layout_width="40dp"
+                android:layout_height="40dp" />
+
+            <TextView
+                android:text="账户注册"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/titleTextView"
+                android:layout_weight="1"
+                android:textAlignment="center"
+                android:textSize="18sp"
+                android:textColor="@color/wan_main"
+                android:layout_centerInParent="true" />
+
+        </RelativeLayout>
+
+        <EditText
+            android:id="@+id/usernameEditText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="14dp"
+            android:background="@drawable/wan_edit_text_bg_00"
+            android:drawableLeft="@drawable/wan_icon_head"
+            android:drawablePadding="8dp"
+            android:ems="10"
+            android:hint="您的手机号或QQ号"
+            android:inputType="textPersonName"
+            android:textColor="@color/wan_steel"
+            android:textSize="14sp" />
+
+        <TextView
+            android:id="@+id/usernameHintTextView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="8dp"
+            android:layout_marginTop="10dp"
+            android:text="为了防止遗忘，请填您的手机号或QQ号!"
+            android:textColor="#999999"
+            android:textSize="11sp" />
+
+        <EditText
+            android:id="@+id/passwordEditText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:background="@drawable/wan_edit_text_bg_00"
+            android:drawableLeft="@drawable/wan_icon_lock"
+            android:drawablePadding="8dp"
+            android:ems="10"
+            android:hint="请输入密码"
+            android:inputType="textPassword"
+            android:textColor="@color/wan_steel"
+            android:textSize="14sp" />
+
+        <Button
+            android:id="@+id/signUpButton"
+            android:layout_width="match_parent"
+            android:layout_height="39dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginBottom="8dp"
+            android:background="@drawable/wan_button_bg_00"
+            android:text="注册"
+            android:textColor="@android:color/white"
+            android:textSize="16sp" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="20dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/textView8"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="注册即表示同意"
+                android:textColor="@color/wan_jumbo"
+                android:textSize="12sp" />
+
+            <TextView
+                android:id="@+id/userTermsTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="《一起玩吧用户协议》"
+                android:textColor="@color/wan_dodger_blue"
+                android:textSize="12sp" />
+        </LinearLayout>
+    </LinearLayout>
+</RelativeLayout>

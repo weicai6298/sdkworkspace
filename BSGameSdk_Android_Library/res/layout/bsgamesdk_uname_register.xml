@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+    
+    <com.bsgamesdk.android.widget.APScrollView
+        android:id="@+id/bsgamesdk_register_ScrollView_uname"
+        android:layout_width="fill_parent"
+        android:layout_height="0dip"
+        android:layout_weight="100"
+        android:fillViewport="true"
+         >
+
+        <LinearLayout
+            android:id="@+id/bsgamesdk_id_regInputLayout_uname"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingBottom="2dp"
+            android:paddingLeft="10dp"
+            android:paddingRight="5dp"
+            android:paddingTop="10dp" >
+
+            <RelativeLayout
+                android:id="@+id/bsgamesdk_register_usernameLayout_uname"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"
+                android:paddingRight="5dp" >
+
+                <EditText
+                    android:id="@+id/bsgamesdk_edit_username_reg_uname"
+                    style="?attr/bsgamesdk_basic_editText_style"
+                    android:completionHint="@string/bsgamesdk_username_hit"
+                    android:hint="@string/bsgamesdk_username_hit"
+                    android:imeOptions="actionNext"
+                    android:inputType="textPersonName"
+                    android:maxLength="32"
+                    android:paddingRight="30dp" >
+                </EditText>
+
+                <ImageButton
+                    android:id="@+id/bsgamesdk_register_usernameDel_uname"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="8.0dp"
+                    android:background="@null"
+                    android:contentDescription="@string/bsgamesdk_delbtn"
+                    android:src="@drawable/bsgamesdk_pic_del"
+                    android:visibility="gone" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/bsgamesdk_register_passwordLayout_uname"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"
+                android:paddingRight="5dp" >
+
+                <EditText
+                    android:id="@+id/bsgamesdk_edit_password_reg_uname"
+                    style="?attr/bsgamesdk_basic_editText_style"
+                    android:hint="@string/bsgamesdk_password_hit_16"
+                    android:imeOptions="actionDone"
+                    android:inputType="textPassword"
+                    android:maxLength="32"/>
+            </RelativeLayout>
+
+            <com.bsgamesdk.android.widget.CheckBoxAgreeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/bsgamesdk_id_checkboxAgreeLayout_register_uname"
+                />
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="1dp"
+                android:paddingRight="5dp" >
+
+                <Button
+                    android:id="@+id/bsgamesdk_Submit_reg_uname"
+                    style="?attr/bsgamesdk_confirm_button_style"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:layout_margin="10dp"
+                    android:text="@string/bsgamesdk_reg_and_login" />
+            </LinearLayout>
+        </LinearLayout>
+    </com.bsgamesdk.android.widget.APScrollView>
+
+</LinearLayout>

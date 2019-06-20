@@ -21,29 +21,28 @@
             />
 
         <EditText
-            style="@style/m4399RecInputAreaStyle"
             android:id="@+id/serial"
+            style="@style/m4399RecInputAreaStyle"
             android:hint="@string/m4399_rec_input_card_serial"
-            android:imeOptions="actionNext"/>
+            android:imeOptions="actionNext" />
 
 
     </LinearLayout>
 
     <LinearLayout
-        android:layout_marginTop="6dp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_marginTop="6dp"
         android:orientation="horizontal">
 
         <TextView
             style="@style/m4399RecLabelTv"
             android:layout_marginRight="26dp"
-            android:text="充值卡密码"
-            />
+            android:text="充值卡密码" />
 
         <EditText
-            style="@style/m4399RecInputAreaStyle"
             android:id="@+id/passwd"
+            style="@style/m4399RecInputAreaStyle"
             android:hint="@string/m4399_rec_input_card_psword" />
     </LinearLayout>
 </LinearLayout>

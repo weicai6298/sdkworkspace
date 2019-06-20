@@ -7,17 +7,12 @@ import android.content.Intent;
 import android.util.Log;
 import android.widget.Toast;
 
-import com.gionee.gamesdk.floatwindow.GameOrder;
 import com.gionee.gamesdk.floatwindow.GamePayCallBack;
 import com.gionee.gamesdk.floatwindow.GamePayManager;
 import com.gionee.gamesdk.floatwindow.GamePlatform;
-import com.gionee.gamesdk.floatwindow.QuitGameCallback;
 import com.gionee.gamesdk.floatwindow.GamePlatform.LoginListener;
-import com.gionee.gameservice.account.AccountInfo;
+import com.gionee.gameservice.ui.QuitGameCallback;
 import com.gionee.gsp.GnEFloatingBoxPositionModel;
-import com.kkgame.sdk.bean.User;
-import com.kkgame.sdk.callback.KgameSdkCallback;
-import com.kkgame.sdkmain.KgameSdk;
 import com.kkgame.utils.DeviceUtil;
 import com.kkgame.utils.Handle;
 import com.kkgame.utils.JSONUtil;
@@ -77,9 +72,13 @@ public class YaYawanconstants {
 	 * 
 	 * @param mactivity
 	 */
-	public static void pay(Activity mactivity, String morderid ,String orderstring) {
+	public static void pay(final Activity mactivity, String morderid ,final String orderstring) {
 		Yayalog.loger("YaYawanconstantssdk支付");
 //		String privateKey = "" + DeviceUtil.getGameInfo(application, "privateKey");
+//		mActivity.runOnUiThread(new Runnable() {
+//			
+//			@Override
+//			public void run() {
 		GamePayManager.getInstance().pay(mactivity, orderstring , new GamePayCallBack() {
 			
 			@Override
@@ -108,6 +107,8 @@ public class YaYawanconstants {
 				
 			}
 		});
+//					}
+//				});
 	}
 
 

@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/yxf_sdk_bg_tran">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+    <LinearLayout
+        android:id="@+id/rl_login_register"
+        android:layout_width="246.67dp"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:background="@drawable/yxf_bt_in_bg_whi"
+        android:orientation="vertical"
+        android:padding="23.33dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="语音验证码"
+            android:layout_gravity="center_horizontal"
+            android:textColor="@color/yxf_sdk_green_result"
+            android:textSize="14.67sp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="我们将会以电话形式告知您验证码，您可能会接到0571等开头的来电，请放心接听"
+            android:lineSpacingExtra="3dp"
+            android:layout_marginTop="16.67dp"
+            android:layout_gravity="center_horizontal"
+            android:textColor="@color/yxf_sdk_gray_result"
+            android:textSize="12sp" />
+
+        <RelativeLayout
+            android:id="@+id/rl_login_in"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:layout_gravity="center_horizontal">
+
+            <Button
+                android:id="@+id/btn_no"
+                android:layout_width="90dp"
+                android:layout_height="36dp"
+                android:background="@drawable/yxf_bt_in_gray_voice"
+                android:text="取消"
+                android:layout_alignParentLeft="true"
+                android:textColor="@color/yxf_sdk_gray_title"
+                android:textSize="12sp" />
+
+            <Button
+                android:id="@+id/btn_yes"
+                android:layout_width="90dp"
+                android:layout_height="36dp"
+                android:layout_alignParentRight="true"
+                android:background="@drawable/yxf_bt_in_yel_voice"
+                android:text="接听"
+                android:textColor="@color/yxf_sdk_gray_title"
+                android:textSize="12sp" />
+        </RelativeLayout>
+
+    </LinearLayout>
+
+    </RelativeLayout>
+
+</LinearLayout>

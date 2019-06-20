@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/common_bg"
+    android:orientation="vertical">
+
+    <include layout="@layout/ug_title_bar"/>
+
+    <ListView
+        android:id="@+id/ug_list_view"
+        android:divider="@null"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_margin="10dp"
+        android:background="@drawable/ug_gray_white_bg"/>
+
+    <LinearLayout
+        android:id="@+id/ug_no_result_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="gone"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:background="@color/common_bg">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ug_ic_nogame"/>
+
+        <TextView
+            android:id="@+id/ug_no_result_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:text="抱歉，暂无内容"
+            android:textColor="@color/text_lv2"
+            android:textSize="@dimen/text_normal"/>
+    </LinearLayout>
+
+</LinearLayout>

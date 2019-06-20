@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+       xmlns:android="http://schemas.android.com/apk/res/android"
+       android:id="@+id/ycx_layout_alipay"
+       android:layout_width="match_parent"
+       android:layout_height="wrap_content"
+       android:background="@color/ycx_color_transparent"
+       android:gravity="center_vertical"
+       android:orientation="horizontal"
+       android:clickable="false"
+       android:minHeight="@dimen/ycx_dimen_pay_title_height"
+       android:paddingLeft="15dp" >
+
+            <ImageView
+                android:id="@+id/ycx_iv_icon_item"
+                style="@style/YCX.Safe.Image"
+                android:layout_width="38dp"
+                android:layout_height="38dp"
+                />
+
+            <TextView
+                android:id="@+id/ycx_tv_name_item"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/ycx_string_zfb"
+                android:textColor="@color/ycx_color_gray_light"
+                android:textSize="@dimen/ycx_dimen_large" />
+            
+            <ImageView
+                android:id="@+id/ycx_iv_check_item" 
+                android:layout_width="0dp"
+                android:layout_height="20dp"
+                android:layout_weight="1"
+                android:src="@drawable/ycx_img_pay_nocheck"
+                android:scaleType="fitEnd"
+                android:layout_marginRight="15dp"
+                android:layout_gravity="center_vertical"
+                />
+            <TextView
+                android:id="@+id/ycx_tv_paytype_item"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/ycx_string_zfb"
+                android:visibility="gone" />
+</LinearLayout>
+    

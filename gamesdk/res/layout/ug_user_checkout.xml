@@ -1,0 +1,684 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/common_bg">
+
+    <include
+        android:id="@+id/include"
+        layout="@layout/ug_title_bar" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:layout_alignParentBottom="true"
+        android:background="@color/white">
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1px"
+            android:background="@color/divide_line" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:weightSum="2">
+
+            <LinearLayout
+                android:id="@+id/ug_view_need_pay"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="0.9"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="还需支付:"
+                    android:textColor="@color/text_lv2"
+                    android:textSize="@dimen/text_normal" />
+
+                <TextView
+                    android:id="@+id/ug_tv_final_money"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="￥15.00"
+                    android:textColor="@color/pink"
+                    android:textSize="@dimen/text_big" />
+
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/ug_tv_go_pay"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1.1"
+                android:background="@color/pink"
+                android:clickable="true"
+                android:gravity="center"
+                android:text="立即支付"
+                android:textColor="@color/white"
+                android:textSize="@dimen/text_big" />
+
+        </LinearLayout>
+
+    </RelativeLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/include"
+        android:layout_marginBottom="45dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <!-- 商品信息 -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="54dp"
+                    android:background="@color/white"
+                    android:orientation="vertical">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:paddingLeft="18dp"
+                        android:paddingRight="18dp">
+
+                        <TextView
+                            android:id="@+id/ug_tv_pay_title"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentLeft="true"
+                            android:gravity="center_vertical"
+                            android:textColor="@color/text_lv1"
+                            android:textSize="@dimen/text_normal"
+                            tools:text="充值商品标题" />
+
+                        <TextView
+                            android:id="@+id/ug_tv_time"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentRight="true"
+                            android:gravity="center_vertical"
+                            android:textColor="@color/text_lv2"
+                            android:textSize="@dimen/text_normal"
+                            tools:text="当前系统时间" />
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="3dp"
+                        android:paddingLeft="18dp"
+                        android:paddingRight="18dp">
+
+                        <TextView
+                            android:id="@+id/ug_tv_money"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentLeft="true"
+                            android:gravity="center"
+                            android:textColor="@color/pink"
+                            android:textSize="@dimen/text_normal"
+                            tools:text="商品价格" />
+
+                        <LinearLayout
+                            android:id="@+id/ug_view_discount_one"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:layout_marginLeft="5dp"
+                            android:layout_toRightOf="@id/ug_tv_money"
+                            android:background="@drawable/ug_ic_discount"
+                            android:gravity="center_vertical"
+                            android:orientation="horizontal"
+                            android:padding="3dp"
+                            android:visibility="gone">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="手游猪"
+                                android:textColor="@color/pink"
+                                android:textSize="@dimen/text_smaller" />
+
+                            <TextView
+                                android:id="@+id/ug_tv_discount"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="6dp"
+                                android:textColor="@color/pink"
+                                android:textSize="@dimen/text_smaller" />
+                        </LinearLayout>
+
+                    </RelativeLayout>
+
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1px"
+                    android:background="@color/divide_line" />
+
+                <RelativeLayout
+                    android:id="@+id/ug_view_discount_two"
+                    android:layout_width="match_parent"
+                    android:layout_height="30dp"
+                    android:background="#feece8"
+                    android:visibility="gone">
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:paddingLeft="18dp"
+                        android:src="@drawable/ug_ic_pig_small" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="42dp"
+                        android:text="此商品为手游猪特价商品，请放心购买"
+                        android:textColor="@color/pink"
+                        android:textSize="@dimen/text_small" />
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1px"
+                        android:layout_alignParentBottom="true"
+                        android:background="@color/divide_line" />
+                </RelativeLayout>
+
+            </LinearLayout>
+
+            <!-- 优惠券部分 -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:orientation="vertical">
+
+                <!-- 选择游戏专属优惠券 -->
+                <RelativeLayout
+                    android:id="@+id/ug_bt_choose_coupon"
+                    android:layout_width="match_parent"
+                    android:layout_height="45dp"
+                    android:background="@color/white"
+                    android:visibility="gone">
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1px"
+                        android:layout_alignParentTop="true"
+                        android:background="@color/divide_line" />
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1px"
+                        android:layout_alignParentBottom="true"
+                        android:background="@color/divide_line" />
+
+                    <ImageView
+                        android:layout_width="25dp"
+                        android:layout_height="25dp"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="18dp"
+                        android:src="@drawable/ug_ic_coupon" />
+
+                    <TextView
+                        android:id="@+id/ug_tv_choose_coupon_title"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentLeft="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="50dp"
+                        android:layout_marginRight="8dp"
+                        android:layout_toLeftOf="@+id/ug_tv_choose_coupon_number"
+                        android:gravity="center_vertical"
+                        android:maxLines="2"
+                        android:ellipsize="end"
+                        android:text="请选择优惠券"
+                        android:textColor="@color/text_lv1"
+                        android:textSize="@dimen/text_normal" />
+
+                    <TextView
+                        android:id="@+id/ug_tv_choose_coupon_number"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginRight="36dp"
+                        android:gravity="center_vertical"
+                        android:maxLines="1"
+                        android:textColor="@color/pink"
+                        android:textSize="@dimen/text_normal"
+                        tools:text="5张" />
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginRight="18dp"
+                        android:src="@drawable/ug_ic_go" />
+
+                    <View
+                        android:id="@+id/ug_view_coupon_mask"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="#a0FFFFFF"
+                        android:visibility="gone"/>
+
+                </RelativeLayout>
+                <!-- 选择首充3元优惠券 -->
+                <RelativeLayout
+                    android:id="@+id/ug_view_first_recharge"
+                    android:layout_width="match_parent"
+                    android:layout_height="45dp"
+                    android:background="@color/white"
+                    android:visibility="gone">
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1px"
+                        android:layout_alignParentBottom="true"
+                        android:background="@color/divide_line" />
+
+                    <ImageView
+                        android:layout_width="25dp"
+                        android:layout_height="25dp"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="18dp"
+                        android:src="@drawable/ug_ic_coupon2" />
+
+                    <TextView
+                        android:id="@+id/ug_tv_first_recharge_title"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="50dp"
+                        android:gravity="center_vertical"
+                        tools:text="首充优惠券3元"
+                        android:textColor="@color/text_lv1"
+                        android:textSize="@dimen/text_normal" />
+
+
+                    <ToggleButton
+                        android:id="@+id/ug_toggle_first_recharge"
+                        android:layout_width="40dp"
+                        android:layout_height="20dp"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:layout_gravity="center"
+                        android:background="@android:color/transparent"
+                        android:button="@drawable/ug_toggle_btn"
+                        android:checked="true"
+                        android:textOff=""
+                        android:textOn="" />
+                    <View
+                        android:id="@+id/ug_view_first_recharge_mask"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="#a0FFFFFF"
+                        android:visibility="gone" />
+                </RelativeLayout>
+
+                <!--选择平台币，可选-->
+                <RelativeLayout
+                    android:id="@+id/ug_view_use_u_coin"
+                    android:layout_width="match_parent"
+                    android:layout_height="45dp"
+                    android:background="@color/white"
+                    android:visibility="gone">
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1px"
+                        android:layout_alignParentBottom="true"
+                        android:background="@color/divide_line" />
+
+                    <ImageView
+                        android:layout_width="25dp"
+                        android:layout_height="25dp"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="18dp"
+                        android:src="@drawable/ug_ic_u_bi" />
+
+                    <TextView
+                        android:id="@+id/ug_tv_use_u_coin_title"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="50dp"
+                        android:gravity="center_vertical"
+                        android:text="请选择使用金币"
+                        android:textColor="@color/text_lv1"
+                        android:textSize="@dimen/text_normal" />
+
+
+                    <FrameLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true">
+
+                        <ToggleButton
+                            android:id="@+id/ug_toggle_use_u_coin"
+                            android:layout_width="40dp"
+                            android:layout_height="20dp"
+                            android:background="@android:color/transparent"
+                            android:button="@drawable/ug_toggle_btn"
+                            android:checked="true"
+                            android:textOff=""
+                            android:textOn=""
+                            android:visibility="visible" />
+
+                        <CheckBox
+                            android:id="@+id/ug_check_use_u_coin"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentRight="true"
+                            android:layout_centerVertical="true"
+                            android:background="@drawable/ug_check_box_pay"
+                            android:button="@null"
+                            android:paddingRight="18dp"
+                            android:visibility="gone" />
+
+                    </FrameLayout>
+                    <View
+                        android:id="@+id/ug_view_u_coin_mask"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="#a0FFFFFF"
+                        android:visibility="gone" />
+                </RelativeLayout>
+
+                <!-- 选择余额(不足以支付,可选) -->
+                <RelativeLayout
+                    android:id="@+id/ug_view_use_money"
+                    android:layout_width="match_parent"
+                    android:layout_height="45dp"
+                    android:background="@color/white"
+                    android:visibility="gone">
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1px"
+                        android:layout_alignParentBottom="true"
+                        android:background="@color/divide_line" />
+
+                    <ImageView
+                        android:layout_width="25dp"
+                        android:layout_height="25dp"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="18dp"
+                        android:src="@drawable/ug_ic_qb" />
+
+                    <TextView
+                        android:id="@+id/ug_tv_use_money"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentLeft="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="50dp"
+                        android:layout_marginRight="8dp"
+                        android:layout_toLeftOf="@+id/ug_fl_money_check"
+                        android:ellipsize="none"
+                        android:gravity="center_vertical"
+                        android:maxLines="2"
+                        android:text="使用余额支付"
+                        android:textColor="@color/text_lv1"
+                        android:textSize="@dimen/text_normal" />
+
+                    <FrameLayout
+                        android:id="@+id/ug_fl_money_check"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true">
+
+                        <ToggleButton
+                            android:id="@+id/ug_toggle_use_money"
+                            android:layout_width="40dp"
+                            android:layout_height="20dp"
+                            android:background="@android:color/transparent"
+                            android:button="@drawable/ug_toggle_btn"
+                            android:checked="true"
+                            android:textOff=""
+                            android:textOn=""
+                            android:visibility="visible" />
+
+                        <CheckBox
+                            android:id="@+id/ug_check_use_money"
+                            android:layout_width="20dp"
+                            android:layout_height="20dp"
+                            android:layout_alignParentRight="true"
+                            android:layout_centerVertical="true"
+                            android:background="@drawable/ug_check_box_pay"
+                            android:button="@null"
+                            android:paddingRight="18dp"
+                            android:visibility="gone" />
+
+                    </FrameLayout>
+                    <View
+                        android:id="@+id/ug_view_balance_mask"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="#a0FFFFFF"
+                        android:visibility="gone" />
+                </RelativeLayout>
+
+                <!--手机号验证区-->
+                <LinearLayout
+                    android:id="@+id/ug_view_verify_phone"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:visibility="gone">
+
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="45dp"
+                        android:background="@color/white">
+
+                        <EditText
+                            android:id="@+id/ug_edt_verify_phone"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_centerVertical="true"
+                            android:layout_marginLeft="18dp"
+                            android:background="@null"
+                            android:hint="请输入您的手机号码验证身份"
+                            android:inputType="phone"
+                            android:textColorHint="@color/text_hint"
+                            android:textSize="@dimen/text_normal" />
+
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="1px"
+                            android:layout_alignParentBottom="true"
+                            android:background="@color/divide_line" />
+
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="45dp"
+                        android:background="@color/white">
+
+                        <EditText
+                            android:id="@+id/ug_edt_verify_code"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_centerVertical="true"
+                            android:layout_marginLeft="18dp"
+                            android:background="@null"
+                            android:inputType="number"
+                            android:hint="请输入您的手机验证码"
+                            android:textColorHint="@color/text_hint"
+                            android:textSize="@dimen/text_normal" />
+
+                        <Button
+                            android:id="@+id/ug_bt_verify_code"
+                            android:layout_width="wrap_content"
+                            android:layout_height="30dp"
+                            android:layout_alignParentRight="true"
+                            android:layout_centerVertical="true"
+                            android:layout_marginRight="20dp"
+                            android:background="@drawable/ug_button_blue_hollow_normal"
+                            android:paddingLeft="5dp"
+                            android:paddingRight="5dp"
+                            android:text="获取短信验证码"
+                            android:textColor="@color/blue"
+                            android:textSize="@dimen/text_normal" />
+
+                    </RelativeLayout>
+
+                </LinearLayout>
+
+                <!-- 选择充值方式1 余额足以支付,三种支付方式任选 隐藏选择充值方式2-->
+                <RelativeLayout
+                    android:id="@+id/ug_view_tip1"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:visibility="visible">
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1px"
+                        android:layout_alignParentBottom="true"
+                        android:background="@color/divide_line" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="18dp"
+                        android:gravity="center_vertical"
+                        android:text="选择支付方式"
+                        android:textColor="@color/text_lv1"
+                        android:textSize="@dimen/text_normal" />
+
+                </RelativeLayout>
+
+            </LinearLayout>
+
+            <!-- 微信支付宝-->
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/white"
+                    android:orientation="vertical">
+
+
+                    <RelativeLayout
+                        android:id="@+id/ug_bt_ali_pay"
+                        android:layout_width="match_parent"
+                        android:layout_height="44dp"
+                        android:paddingLeft="18dp"
+                        android:paddingRight="18dp">
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:src="@drawable/ug_ic_ali" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:layout_marginLeft="39dp"
+                            android:text="支付宝支付"
+                            android:textColor="@color/text_lv1"
+                            android:textSize="@dimen/text_normal" />
+
+
+                        <CheckBox
+                            android:id="@+id/ug_check_ali_pay"
+                            android:layout_width="20dp"
+                            android:layout_height="20dp"
+                            android:layout_alignParentRight="true"
+                            android:layout_centerVertical="true"
+                            android:background="@drawable/ug_check_box_pay"
+                            android:button="@null" />
+                    </RelativeLayout>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1px"
+                        android:background="@color/divide_line" />
+
+                    <RelativeLayout
+                        android:id="@+id/ug_bt_wx_pay"
+                        android:layout_width="match_parent"
+                        android:layout_height="44dp"
+                        android:paddingLeft="18dp"
+                        android:paddingRight="18dp">
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:src="@drawable/ug_ic_wex" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:layout_marginLeft="39dp"
+                            android:text="微信支付"
+                            android:textColor="@color/text_lv1"
+                            android:textSize="@dimen/text_normal" />
+
+                        <CheckBox
+                            android:id="@+id/ug_check_wx_pay"
+                            android:layout_width="20dp"
+                            android:layout_height="20dp"
+                            android:layout_alignParentRight="true"
+                            android:layout_centerVertical="true"
+                            android:background="@drawable/ug_check_box_pay"
+                            android:button="@null" />
+                    </RelativeLayout>
+                </LinearLayout>
+
+                <View
+                    android:id="@+id/ug_view_pay_mask"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="#a0FFFFFF"
+                    android:visibility="gone" />
+
+            </FrameLayout>
+
+
+        </LinearLayout>
+
+    </ScrollView>
+
+
+</RelativeLayout>

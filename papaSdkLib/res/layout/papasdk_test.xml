@@ -2,8 +2,7 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
               android:orientation="vertical"
               android:layout_width="match_parent"
-              android:layout_height="match_parent"
-        >
+              android:layout_height="match_parent">
 
     <ScrollView
             android:layout_width="match_parent"
@@ -27,8 +26,6 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:id="@+id/pamoney"
-                    android:textColor="@color/black"
-                    android:textColorHint="@color/gray"
                     android:hint="充值金额单位为元精确到分如“1.02”"
                     />
 
@@ -71,7 +68,30 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="结果："
-                    android:textColor="@color/black"
+                    />
+
+            <Button
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="加载本地测试h5"
+                    android:id="@+id/loadTestHtml" />
+            <Button
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="游戏触发网页弹窗"
+                    android:id="@+id/showWebAdDialog"
+                    />
+            <Button
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="个人中心"
+                    android:id="@+id/userCenter"
+                    />
+            <Button
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="实名结果"
+                    android:id="@+id/reallName"
                     />
         </LinearLayout>
     </ScrollView>

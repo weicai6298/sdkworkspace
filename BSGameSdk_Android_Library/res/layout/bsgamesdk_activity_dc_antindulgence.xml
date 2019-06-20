@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <include
+        layout="@layout/bsgamesdk_dc_themeone_antindulgence"
+        android:id="@+id/bsgamesdk_dc_themeone"
+        android:visibility="gone"/>
+
+    <include
+        layout="@layout/bsgamesdk_dc_themetwo_antindulgence"
+        android:id="@+id/bsgamesdk_dc_themetwo"
+        android:visibility="gone"/>
+
+
+</LinearLayout>

@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="300dp"
+    android:layout_height="230dp"
+    android:layout_gravity="center"
+    android:background="@drawable/tysdkn_center_frag_bg"
+    android:gravity="center"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:id="@+id/tysdkn_logout_iv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="9dp"
+            android:layout_marginTop="9dp"
+            android:src="@drawable/tysdkn_logo"/>
+
+        <TextView
+            android:id="@+id/tysdkn_logout_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignTop="@+id/tysdkn_logout_iv"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="4dp"
+            android:layout_toRightOf="@+id/tysdkn_logout_iv"
+            android:gravity="center_vertical"
+            android:text="天宇游戏"
+            android:textColor="#4c6791"/>
+
+        <ImageView
+            android:id="@+id/tysdkn_logout_close"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/tysdkn_logout_tv"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="10dp"
+            android:src="@drawable/tysdkn_close"/>
+    </RelativeLayout>
+
+    <com.sdk.tysdk.ui.view.SlideShowView
+        android:id="@+id/tysdk_logout_banner"
+        android:layout_width="match_parent"
+        android:layout_height="78dp"
+        android:layout_gravity="center"
+        android:layout_marginBottom="10dp"
+        android:layout_marginLeft="9dp"
+        android:layout_marginRight="9dp"
+        android:layout_marginTop="9dp"
+        android:background="#FFFFFF"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="10dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/tysdkn_logout_gife"
+            android:layout_width="0dp"
+            android:layout_height="35dp"
+            android:layout_marginRight="5dp"
+            android:layout_weight="1"
+            android:background="@drawable/tysdkn_typay_bg_out_o"
+            android:gravity="center"
+            android:text="礼包"
+            android:textColor="#FFFFFF"
+            android:textSize="18sp"/>
+
+        <TextView
+            android:id="@+id/tysdkn_logout_commni"
+            android:layout_width="0dp"
+            android:layout_height="35dp"
+            android:layout_marginLeft="5dp"
+            android:layout_weight="1"
+            android:background="@drawable/tysdkn_typay_bg_out_b"
+            android:gravity="center"
+            android:text="社区"
+            android:textColor="#FFFFFF"
+            android:textSize="18sp"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/tysdkn_logout_logout"
+            android:layout_width="0dp"
+            android:layout_height="35dp"
+            android:layout_marginBottom="15dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_weight="1"
+            android:background="@drawable/tysdkn_userout_buty"
+            android:gravity="center"
+            android:text="立即退出"
+            android:textColor="#ffffff"
+            android:textSize="18dp"/>
+    </LinearLayout>
+</LinearLayout>

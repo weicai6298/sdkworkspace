@@ -257,7 +257,7 @@
             android:layout_height="40dp"
             android:layout_below="@id/sogou_game_sdk_main_dialog_head_more_tv"
             android:layout_marginTop="25dp"
-            android:visibility="gone">
+            android:visibility="visible">
 
             <com.sogou.wan.common.NetworkImageView
                 android:id="@+id/sogou_game_sdk_main_dialog_head_rl_iv1"
@@ -268,17 +268,18 @@
 
             <TextView
                 android:id="@+id/sogou_game_sdk_main_dialog_head_rl_name_tv1"
-                android:layout_width="wrap_content"
+                android:layout_width="@dimen/headGameTitle"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="10dp"
                 android:layout_toRightOf="@id/sogou_game_sdk_main_dialog_head_rl_iv1"
                 android:text="《诛仙》新服开测活动"
+                android:singleLine="true"
                 android:textColor="@color/sogou_game_sdk_color_111111"
                 android:textSize="14.5sp" />
 
             <TextView
                 android:id="@+id/sogou_game_sdk_main_dialog_head_rl_des_tv1"
-                android:layout_width="160dp"
+                android:layout_width="@dimen/headGameDes"
                 android:layout_height="wrap_content"
                 android:layout_alignParentBottom="true"
                 android:layout_marginLeft="10dp"
@@ -326,17 +327,18 @@
 
             <TextView
                 android:id="@+id/sogou_game_sdk_main_dialog_head_rl_name_tv2"
-                android:layout_width="wrap_content"
+                android:layout_width="@dimen/headGameTitle"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="10dp"
                 android:layout_toRightOf="@id/sogou_game_sdk_main_dialog_head_rl_iv2"
                 android:text="《诛仙》新服开测活动"
+                android:singleLine="true"
                 android:textColor="@color/sogou_game_sdk_color_111111"
                 android:textSize="14.5sp" />
 
             <TextView
                 android:id="@+id/sogou_game_sdk_main_dialog_head_rl_des_tv2"
-                android:layout_width="160dp"
+                android:layout_width="@dimen/headGameDes"
                 android:layout_height="wrap_content"
                 android:layout_alignParentBottom="true"
                 android:layout_marginLeft="10dp"
@@ -384,7 +386,7 @@
 
             <TextView
                 android:id="@+id/sogou_game_sdk_main_dialog_head_rl_name_tv3"
-                android:layout_width="wrap_content"
+                android:layout_width="@dimen/headGameTitle"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="10dp"
                 android:layout_toRightOf="@id/sogou_game_sdk_main_dialog_head_rl_iv3"
@@ -394,7 +396,7 @@
 
             <TextView
                 android:id="@+id/sogou_game_sdk_main_dialog_head_rl_des_tv3"
-                android:layout_width="160dp"
+                android:layout_width="@dimen/headGameDes"
                 android:layout_height="wrap_content"
                 android:layout_alignParentBottom="true"
                 android:layout_marginLeft="10dp"

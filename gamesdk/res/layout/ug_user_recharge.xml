@@ -1,0 +1,274 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/common_bg"
+    android:orientation="vertical">
+
+    <include layout="@layout/ug_title_bar" />
+
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="12dp"
+                android:text="选择充值金额"
+                android:textColor="@color/text_lv1"
+                android:textSize="@dimen/text_normal" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1px"
+                android:background="@color/divide_line" />
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:orientation="horizontal"
+                android:padding="10dp"
+                android:weightSum="3">
+
+                <Button
+                    android:id="@+id/ug_bt_5"
+                    android:layout_width="match_parent"
+                    android:layout_height="45dp"
+                    android:layout_margin="5dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/ug_edt_bg_corners"
+                    android:gravity="center"
+                    android:text="5元"
+                    android:textColor="@color/text_lv1"
+                    android:textSize="@dimen/text_big" />
+
+                <Button
+                    android:id="@+id/ug_bt_10"
+                    android:layout_width="match_parent"
+                    android:layout_height="45dp"
+                    android:layout_margin="5dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/ug_edt_bg_corners"
+                    android:gravity="center"
+                    android:text="10元"
+                    android:textColor="@color/text_lv1"
+                    android:textSize="@dimen/text_big" />
+
+                <Button
+                    android:id="@+id/ug_bt_50"
+                    android:layout_width="match_parent"
+                    android:layout_height="45dp"
+                    android:layout_margin="5dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/ug_edt_bg_corners"
+                    android:gravity="center"
+                    android:text="50元"
+                    android:textColor="@color/text_lv1"
+                    android:textSize="@dimen/text_big" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:orientation="horizontal"
+                android:paddingBottom="10dp"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp"
+                android:weightSum="3">
+
+                <Button
+                    android:id="@+id/ug_bt_100"
+                    android:layout_width="match_parent"
+                    android:layout_height="45dp"
+                    android:layout_margin="5dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/ug_edt_bg_corners"
+                    android:gravity="center"
+                    android:text="100元"
+                    android:textColor="@color/text_lv1"
+                    android:textSize="@dimen/text_big" />
+
+                <Button
+                    android:id="@+id/ug_bt_500"
+                    android:layout_width="match_parent"
+                    android:layout_height="45dp"
+                    android:layout_margin="5dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/ug_edt_bg_corners"
+                    android:gravity="center"
+                    android:text="500元"
+                    android:textColor="@color/text_lv1"
+                    android:textSize="@dimen/text_big" />
+
+                <Button
+                    android:id="@+id/ug_bt_1000"
+                    android:layout_width="match_parent"
+                    android:layout_height="45dp"
+                    android:layout_margin="5dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/ug_edt_bg_corners"
+                    android:gravity="center"
+                    android:text="1000元"
+                    android:textColor="@color/text_lv1"
+                    android:textSize="@dimen/text_big" />
+
+            </LinearLayout>
+
+
+            <RelativeLayout
+                android:id="@+id/ug_bt_xh"
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:layout_marginTop="10dp"
+                android:background="@color/white">
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1px"
+                    android:layout_alignParentTop="true"
+                    android:background="@color/divide_line" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1px"
+                    android:layout_alignParentBottom="true"
+                    android:background="@color/divide_line" />
+
+
+                <EditText
+                    android:id="@+id/ug_edt_money"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_centerVertical="true"
+                    android:background="@null"
+                    android:digits="0,1,2,3,4,5,6,7,8,9,."
+                    android:gravity="center_vertical"
+                    android:hint="或输入自定义金额(元)"
+                    android:maxLength="8"
+                    android:maxLines="1"
+                    android:paddingLeft="12dp"
+                    android:textColor="@color/text_lv1"
+                    android:textColorHint="@color/text_hint"
+                    android:textSize="@dimen/text_normal" />
+
+
+            </RelativeLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:background="@color/white"
+                android:orientation="vertical">
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1px"
+                    android:background="@color/divide_line" />
+
+
+                <RelativeLayout
+                    android:id="@+id/ug_bt_wx_pay"
+                    android:layout_width="match_parent"
+                    android:layout_height="44dp"
+                    android:paddingLeft="18dp"
+                    android:paddingRight="18dp">
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:src="@drawable/ug_ic_wex" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="39dp"
+                        android:text="微信支付"
+                        android:textColor="@color/text_lv1"
+                        android:textSize="@dimen/text_normal" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginRight="30dp"
+                        android:text="手续费2%"
+                        android:textColor="@color/text_lv2"
+                        android:textSize="@dimen/text_small"
+                        android:visibility="gone" />
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:src="@drawable/ug_ic_go" />
+                </RelativeLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1px"
+                    android:background="@color/divide_line" />
+
+                <RelativeLayout
+                    android:id="@+id/ug_bt_ali_pay"
+                    android:layout_width="match_parent"
+                    android:layout_height="44dp"
+                    android:paddingLeft="18dp"
+                    android:paddingRight="18dp">
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:src="@drawable/ug_ic_ali" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="39dp"
+                        android:text="支付宝支付"
+                        android:textColor="@color/text_lv1"
+                        android:textSize="@dimen/text_normal" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginRight="30dp"
+                        android:text="手续费1%"
+                        android:textColor="@color/text_lv2"
+                        android:textSize="@dimen/text_small"
+                        android:visibility="gone" />
+
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:src="@drawable/ug_ic_go" />
+                </RelativeLayout>
+            </LinearLayout>
+        </LinearLayout>
+
+    </ScrollView>
+
+</LinearLayout>

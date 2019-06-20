@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:orientation="vertical"
+              android:layout_width="match_parent"
+              android:gravity="center"
+              android:layout_height="match_parent">
+    <Button
+        android:id="@+id/btn_notice_demo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="30dp"
+        android:layout_marginTop="30dp"
+        android:textSize="16dp"
+        android:textColor="@color/ipay_demo_color_black"
+        android:text="进入公告演示Demo" />
+
+    <Button
+        android:id="@+id/btn_pay_demo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="30dp"
+        android:textSize="16dp"
+        android:layout_marginTop="30dp"
+        android:textColor="@color/ipay_demo_color_black"
+        android:text="进入微支付演示demo" />
+</LinearLayout>

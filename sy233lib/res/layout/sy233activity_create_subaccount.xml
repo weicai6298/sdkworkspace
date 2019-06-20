@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+             android:layout_width="match_parent"
+             android:layout_height="wrap_content"
+             android:orientation="vertical"
+             android:paddingBottom="10dp"
+             android:paddingLeft="20dp"
+             android:paddingRight="20dp"
+             android:paddingTop="10dp"
+
+    >
+
+    <LinearLayout
+        android:id="@+id/popu_contentview"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:background="@drawable/sy233popup_bg"
+        android:fitsSystemWindows="true"
+        android:gravity="center_horizontal"
+        android:orientation="vertical">
+
+        <include layout="@layout/sy233activity_header"/>
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:scrollbars="none">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingRight="15dp"
+                android:paddingLeft="15dp"
+                android:background="@drawable/sy233popup_bottom_bg"
+                android:orientation="vertical"
+                android:paddingBottom="35dp"
+                >
+
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="36dp"
+                    android:layout_marginTop="15dp"
+                    android:background="@drawable/sy233charge_info_bg"
+                    android:gravity="center_vertical"
+                    android:padding="5dp">
+
+
+                    <ImageButton
+                        android:visibility="gone"
+                        android:id="@+id/ib_clean"
+                        android:layout_width="28dp"
+                        android:layout_height="28dp"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:background="@mipmap/sy233clean"/>
+
+                    <EditText
+                        android:textSize="16sp"
+                        android:id="@+id/et_name"
+                        style="@style/sy233register_edit"
+                        android:layout_alignParentTop="true"
+                        android:layout_centerHorizontal="true"
+                        android:layout_toLeftOf="@+id/ib_clean"
+                        android:layout_toRightOf="@+id/temp"
+                        android:hint="@string/sy233name_hnit"
+                        android:inputType="text"
+                        android:maxLength="6"/>
+
+                </RelativeLayout>
+
+                <Button
+                    android:id="@+id/bt_commit"
+                    android:layout_width="match_parent"
+                    android:layout_height="35dp"
+                    android:layout_marginTop="15dp"
+                    android:background="@drawable/sy233bt_detail_down_bg"
+                    android:text="@string/sy233create"
+                    android:textColor="@android:color/white"
+                    android:textSize="18dp"/>
+
+
+            </LinearLayout>
+        </ScrollView>
+    </LinearLayout>
+</FrameLayout>
+

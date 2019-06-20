@@ -1,75 +1,69 @@
 package com.yayawan.proxy;
 
 import java.io.File;
-import java.io.IOException;
-import org.json.JSONArray;
-import org.json.JSONException;
-import org.json.JSONObject;
-import android.R.color;
-import android.app.Activity;
-import android.graphics.Color;
-import android.os.Environment;
-import android.view.View;
-import android.view.View.OnClickListener;
-import android.widget.Button;
-import android.widget.FrameLayout;
-import android.widget.LinearLayout;
-import android.widget.TextView;
-import android.widget.Toast;
-import android.widget.LinearLayout.LayoutParams;
+import java.util.List;
 
-import com.kkgame.sdk.db.SDBHelper;
-import com.kkgame.utils.DeviceUtil;
+
+import android.app.Activity;
+import android.content.Context;
+import android.content.pm.PackageInfo;
+import android.content.pm.PackageManager;
+import android.os.Environment;
+
+
+
 import com.kkgame.utils.FileIOUtils;
 import com.kkgame.utils.FileUtils;
-import com.yayawan.main.YYWMain;
+import com.kkgame.utils.Yayalog;
+
+
+
+
 
 public class GameApitest {
 
 	public static GameApitest mGameapitest;
 	public static Activity mActivity;
+	public static Context mContext;
 
 	public static String TestFilePath = "test";
-	public static String Rootpath = SDBHelper.Rootpath;
+
 	public static String DB_DIRPATH = Environment.getExternalStorageDirectory()
 			.getPath()
 			+ File.separator
-			+ Rootpath
+			+ "GameTest"
 			+ File.separator
-			+ TestFilePath + File.separator + "test.log";
+			+ TestFilePath + ".txt";
 
-	// DB_DIR
-
-	public static String DB_DIR = Environment.getExternalStorageDirectory()
-			.getPath()
-			+ File.separator
-			+ Rootpath
-			+ File.separator
-			+ TestFilePath;
-	static {
-
-		if (Environment.getExternalStorageState().equals(
-				Environment.MEDIA_MOUNTED)) {
-			DB_DIR = Environment.getExternalStorageDirectory().getPath()
-					+ File.separator + Rootpath + File.separator + TestFilePath;
+	public static GameApitest getGameApitestInstants(Context mcontext) {
+		mContext=mcontext;
+		if (mGameapitest != null) {
+			return mGameapitest;
 		} else {
-			DB_DIR = Environment.getRootDirectory().getPath() + File.separator
-					+ Rootpath + File.separator + TestFilePath;
-		}
-
-		File dbFolder = new File(DB_DIR);
-		if (!dbFolder.exists()) {
-			dbFolder.mkdirs();
+			mGameapitest = new GameApitest();
+			return mGameapitest;
 		}
 	}
 
 	public static GameApitest getGameApitestInstants(Activity mactivity) {
+		
 		if (mGameapitest != null) {
-			mActivity = mactivity;
+				return mGameapitest;
+		} else {
+			mGameapitest = new GameApitest();
+
+			return mGameapitest;
+		}
+	}
+
+	public static GameApitest getGameApitestInstants() {
+		
+		if (mGameapitest != null) {
+			// mActivity = mactivity;
 
 			return mGameapitest;
 		} else {
-			mActivity = mactivity;
+			// mActivity = mactivity;
 
 			mGameapitest = new GameApitest();
 
@@ -77,144 +71,109 @@ public class GameApitest {
 		}
 	}
 
-	String temp = "自检步骤\r\n 1.打开游戏，闪屏，登陆游戏\r\n 2.点击小助手，点击切换账号 \r\n (sdk会回调登陆中onLogout方法)\r\n 3.点击支付， 关闭支付\r\n 4.点击游戏内自带切换账号按钮 \r\n 5.按返回键，弹出退出框，点击取消\r\n";
+	public static String tempstring = "";
 
 	/**
 	 * 
 	 * @param type
 	 */
 	public void sendTest(String type) {
-		System.out.println("+++++++++++++++++++++++++++++++++++++++++++++++"
-				+ type);
-		if (mActivity != null) {
-			if (DeviceUtil.isDebug(mActivity)) {
-				if (!applicationisinit) {
-					Toast.makeText(
-							mActivity,
-							"===========================\r\n警告：application未接入成功\r\n=======================",
-							0).show();
-				}
-			}
+
+		
+		Yayalog.loger("中间件："+type);
+		if (!YYcontants.ISDEBUG) {
+			return;
 		}
+		
+		if (type.contains("Application")) {
+			
+			
+			File file = new File(DB_DIRPATH);
+			file.delete();
+		}
+		if (tempstring.contains(type)) {
+			return;
+		}
+		tempstring = tempstring + "—temp-" + type;
 
-		if (YYcontants.ISDEBUG) {
+		File file = new File(DB_DIRPATH);
 
+		if (file.exists()) {
+			FileIOUtils.writeFileFromString(DB_DIRPATH, type + "\r\n", true);
+
+		} else {
 			try {
-				File file = new File(DB_DIRPATH);
-				if (!FileUtils.isFileExists(DB_DIRPATH)) {
-					file.createNewFile();
-				}
-				if (type.contains("Application")) {
-					file.delete();
-					file.createNewFile();
-				}
-
-				if (type.equals("onCreate")) {
-					addButton();
-				}
-			} catch (IOException e) {
+				Yayalog.loger(file.getAbsolutePath());
+				FileUtils.createOrExistsFile(DB_DIRPATH);
+				//file.createNewFile();
+				FileIOUtils
+						.writeFileFromString(DB_DIRPATH, type + "\r\n", true);
+				Yayalog.loger("创建了测试文件");
+			} catch (Exception e) {
 				// TODO Auto-generated catch block
 				e.printStackTrace();
 			}
-			if (temp.contains(type)) {
-				return;
-			}
-			temp = temp + "-" + type + "\r\n";
-
-			FileIOUtils.writeFileFromString(DB_DIRPATH, type, true);
-			if (textView != null) {
-				textView.setText(temp);
-			}
 		}
-
-	}
-
-	private void addButton() {
-
-		textView = new TextView(mActivity);
-		textView.setText("自检窗口");
-		textView.setBackgroundColor(Color.RED);
-		textView.setTextColor(Color.WHITE);
-		textView.setVisibility(View.GONE);
-
-		android.widget.FrameLayout.LayoutParams layoutParams3 = new FrameLayout.LayoutParams(
-				500, 600);
-		layoutParams3.setMargins(300, 100, 10, 10);
-		textView.setLayoutParams(layoutParams3);
-
-		// TODO Auto-generated method stub
-		Button showcheckButton = new Button(mActivity);
-		showcheckButton.setText("显示自检窗口");
-		showcheckButton.setBackgroundColor(Color.RED);
-		showcheckButton.setTextColor(Color.WHITE);
-		showcheckButton.setOnClickListener(new OnClickListener() {
-
-			@Override
-			public void onClick(View v) {
-				// anim(mLinearLayout);
-				textView.setVisibility(View.VISIBLE);
-			}
-		});
-
-		android.widget.FrameLayout.LayoutParams layoutParams = new FrameLayout.LayoutParams(
-				200, LayoutParams.WRAP_CONTENT);
-		layoutParams.setMargins(50, 250, 10, 10);
-		showcheckButton.setLayoutParams(layoutParams);
-
-		Button dissmisscheckButton = new Button(mActivity);
-		dissmisscheckButton.setText("关闭自检窗口");
-		dissmisscheckButton.setBackgroundColor(Color.RED);
-		dissmisscheckButton.setTextColor(Color.WHITE);
-		dissmisscheckButton.setOnClickListener(new OnClickListener() {
-
-			@Override
-			public void onClick(View v) {
-				// anim(mLinearLayout);
-				textView.setVisibility(View.GONE);
-			}
-		});
-		android.widget.FrameLayout.LayoutParams layoutParams1 = new FrameLayout.LayoutParams(
-				200, LayoutParams.WRAP_CONTENT);
-		layoutParams1.setMargins(50, 450, 10, 10);
-		dissmisscheckButton.setLayoutParams(layoutParams1);
-
-		FrameLayout decorView = (FrameLayout) mActivity.getWindow()
-				.getDecorView();
-		decorView.addView(showcheckButton);
-		decorView.addView(dissmisscheckButton);
-		decorView.addView(textView);
 
 	}
 
 	public void sendTest(String type, String value) {
 
-		if (mActivity != null) {
-			if (DeviceUtil.isDebug(mActivity)) {
-				if (!applicationisinit) {
-					Toast.makeText(
-							mActivity,
-							"===========================\r\n警告：application未接入成功\r\n=======================",
-							0).show();
-				}
-			}
-		}
-
 		if (YYcontants.ISDEBUG) {
-			if (!FileUtils.isFileExists(DB_DIRPATH)) {
-				File file = new File(DB_DIRPATH);
+			File file = new File(DB_DIRPATH);
+
+			if (file.exists()) {
+				FileIOUtils
+						.writeFileFromString(DB_DIRPATH, type + "\r\n", true);
+
 			}
-			FileIOUtils.writeFileFromString(DB_DIRPATH, type + ":" + value
-					+ "\r\n", true);
 		}
 
 	}
-
-	public static boolean applicationisinit = false;
-	private TextView textView;
-
-	public static void initOnapplication(YYWApplication yywApplication) {
-		// TODO Auto-generated method stub
-		applicationisinit = true;
+	
+	public static void sendTest2(final Activity mactivity){
+	
+		
 	}
+	
+    /**
+     * [获取应用程序版本名称信息]
+     * @param context
+     * @return 当前应用的版本名称
+     */
+    public static synchronized String getPackageName(Context context) {
+        try {
+            PackageManager packageManager = context.getPackageManager();
+            PackageInfo packageInfo = packageManager.getPackageInfo(
+                    context.getPackageName(), 0);
+            return packageInfo.packageName;
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+        return null;
+    }
+    /**
+     * 过滤自定义的App和已下载的App
+     * @param packageManager
+     * @return
+     */
+    public static boolean isContentYaboxApp(PackageManager packageManager) {
+     
+        try {
+            List<PackageInfo> packageInfos = packageManager.getInstalledPackages(0);
+            for (int i = 0; i < packageInfos.size(); i++) {
+                PackageInfo packageInfo = packageInfos.get(i);
+                //过滤指定的app
+                String tempPackageName=packageInfo.packageName;
+               if (tempPackageName.contains("qihoo360.mobilesafe")) {
+				return true;
+			}
+            }
+           
+        } catch (Exception e) {
+           e.printStackTrace();
+        }
+        return false;
+    }
 
 }

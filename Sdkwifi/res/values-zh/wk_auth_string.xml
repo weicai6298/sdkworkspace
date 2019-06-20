@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="auth_download_url">http://static.51y5.net/apk/wifikey-official-release.apk</string>
+    <string name="auth_download_running">开始下载</string>
+    <string name="auth_download_network">您现在处于移动数据网络下，是否继续下载？</string>
+    <string name="auth_alert_title">温馨提示</string>
+    <string name="auth_alert_uninstalled">使用授权登录需安装新版WiFi万能钥匙</string>
+    <string name="auth_alert_msgs">您的WiFi万能钥匙版本较低，暂不支持授权登录，请更新至WiFi万能钥匙最新版本</string>
+    <string name="auth_pay_uninstalled">使用支付功能需下载WiFi万能钥匙\n更多优惠，更加安全</string>
+    <string name="auth_pay_installed">使用支付功能需安装新版WiFi万能钥匙</string>
+    <string name="auth_alert_posbtn">&#160;免费更新至最新版本&#160;</string>
+    <string name="auth_pay_posbtn">&#160;免费下载最新版本&#160;</string>
+    <string name="auth_file_notexist">文件不存在</string>
+    <string name="auth_file_downloading">正在下载</string>
+    <string name="auth_failed_network">网络异常，登录失败</string>
+    <string name="auth_ssl_title">安全提示</string>
+    <string name="auth_ssl_msg">该网站的安全证书有问题，是否继续访问？</string>
+    <string name="auth_ssl_continue">继续</string>
+    <string name="auth_ssl_cancel">取消</string>
+    <string name="auth_download_fail">下载失败</string>
+    <string name="auth_install_fail">安装失败</string>
+    <string name="auth_browser_load_error_notice">网络异常，点击重新加载试试~</string>
+    <string name="auth_browser_load_error_refresh">"重新加载"</string>
+</resources>

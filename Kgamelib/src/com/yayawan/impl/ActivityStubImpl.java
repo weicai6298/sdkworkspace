@@ -1,7 +1,10 @@
 package com.yayawan.impl;
 
 import android.app.Activity;
+import android.content.Context;
 import android.content.Intent;
+import android.content.res.Configuration;
+import android.util.Log;
 
 import com.kkgame.sdkmain.KgameSdk;
 import com.kkgame.utils.Handle;
@@ -18,13 +21,22 @@ public class ActivityStubImpl implements YYWActivityStub {
 
 	}
 
+	//启动activity  的oncreate
+	public void launcherOncreate(Activity paramActivity){
+			
+	}
+
+	//启动activity  的onNewIntent
+	public void launcherOnNewIntent(Intent intent){
+			
+	}
+	
 	@Override
 	public void onCreate(Activity paramActivity) {
 		// TODO Auto-generated method stub
 		Yayalog.loger("oncreate");
-		Handle.active_handler(paramActivity);
 		KgameSdk.initSdk(paramActivity);
-
+		Handle.active_handler(paramActivity);
 	}
 
 	@Override
@@ -39,7 +51,7 @@ public class ActivityStubImpl implements YYWActivityStub {
 	public void onPause(Activity paramActivity) {
 
 		
-
+		KgameSdk.stop(paramActivity);
 		Yayalog.loger("onpause");
 	}
 
@@ -52,7 +64,6 @@ public class ActivityStubImpl implements YYWActivityStub {
 	@Override
 	public void onStop(Activity paramActivity) {
 		// TODO Auto-generated method stub
-		KgameSdk.stop(paramActivity);
 		Yayalog.loger("onstop");
 	}
 
@@ -72,8 +83,6 @@ public class ActivityStubImpl implements YYWActivityStub {
 	public void onActivityResult(Activity paramActivity, int paramInt1,
 			int paramInt2, Intent paramIntent) {
 		// TODO Auto-generated method stub
-		
-		
 
 	}
 
@@ -97,7 +106,42 @@ public class ActivityStubImpl implements YYWActivityStub {
 	@Override
 	public void onStart(Activity paramActivity) {
 		// TODO Auto-generated method stub
+		Yayalog.loger("onStart");
+	}
 
+	@Override
+	public void launchActivityOnCreate(Activity paramActivity) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void launchActivityonOnNewIntent(Intent paramIntent) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void onRequestPermissionsResult(int requestCode,
+			String[] permissions, int[] grantResults) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void onBackPressed() {
+		// TODO Auto-generated method stub
+		Yayalog.loger("onBackPressed");
+	}
+
+	@Override
+	public void attachBaseContext(Context newBase) {
+		Yayalog.loger("attachBaseContext");
+	}
+
+	@Override
+	public void onConfigurationChanged() {
+		Yayalog.loger("onConfigurationChanged");
 	};
 
 }

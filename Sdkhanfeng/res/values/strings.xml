@@ -1,0 +1,64 @@
+<resources>
+    <string name="app_name">hfSDK</string>
+
+    <string name="phone_number">请输入用户名/手机号</string>
+    <string name="password">请输入登录密码</string>
+    <string name="login">登&#160;录</string>
+    
+    <string name="write_phone_number">请填写手机号码</string>
+    <string name="next">下一步</string>
+    <string name="user_name_register">用户名注册</string>
+    <string name="phone_vcode_desc_text">获取验证码</string>
+    <string name="phone_vcode_new_passwoed_hint">请填写密码(只能包含数字或字母)</string>
+    <string name="register">注&#160;册</string>
+    <string name="pay">支 付</string>
+    <string name="find_pwd_fail">无法找回密码？</string>
+
+
+    <string name="phone_uid_edtx_hint">请填写手机号</string>
+    <string name="phone_vcode_input_hint">请填写4位验证码</string>
+    <string name="registered_immediately">立即注册</string>
+
+    <string name="username_registered">用户名注册</string>
+    <string name="username_register_account_hint">请输入4至12位账号</string>
+    <string name="username_pwd_confirm_hint">请再次输入密码</string>
+    <string name="username_password_hint">请填写密码(只能包含数字或字母)</string>
+    <string name="phone_fast_register">手机快速注册</string>
+
+    <string name="register_agreement_text">注册即同意《服务条款》</string>
+    <string name="find_pwd_fail_desc">无法找回密码，请联系客服</string>
+    <string name="connect_customer_service">联系客服</string>
+    <string name="find_pwd">找回密码</string>
+    <string name="sure">确定</string>
+    <string name="input_new_pwd">请输入新密码</string>
+
+    <string name="forget_pwd">忘记密码？</string>
+    <string name="select_xiao_hao">选择小号</string>
+    <string name="welcome_back">&#160;&#044;&#160;欢迎回来</string>
+    <string name="logout">注&#160;销</string>
+    <string name="select_account_enter_game">选择小号进入游戏</string>
+    <string name="add_account">添加</string>
+    <string name="add_account_desc">可创建10个小号，创建后不可修改或删除</string>
+    <string name="add_new_account">添加小号</string>
+    <string name="about_xh">关于小号</string>
+    <string name="input_account_hint">请输入用户昵称</string>
+    <string name="cancel">取消</string>
+    <string name="enter_game">进入游戏</string>
+    <string name="xh_question_know">我知道了</string>
+    <string name="xh_question_desc">解决同区服玩多个角色需要重复创建账号的问题\n\n同时也避免账号过多不易记住</string>
+
+    <string name="pay_message">购买信息</string>
+    <string name="buy_props">购买道具</string>
+    <string name="props_original_price">道具原价</string>
+    <string name="still_need_to_pay">还需支付</string>
+    <string name="platform_money">平台币</string>
+    <string name="vouchers">优&#160;&#160;惠&#160;&#160;卷</string>
+    <string name="pay_way">支付方式</string>
+    <string name="discount_price">应付金额</string>
+
+    <string name="pay_center">支付中心</string>
+    <string name="wechat_pay">微信支付</string>
+    <string name="alipay_pay">支付宝支付</string>
+    <string name="unionpay_pay">银联支付</string>
+    <string name="pay_immediately">支 付</string>
+</resources>

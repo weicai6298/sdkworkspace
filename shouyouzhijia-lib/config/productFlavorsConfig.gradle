@@ -1,0 +1,14 @@
+android {
+	 productFlavors {
+	 	 "portrait_SDK" {
+	 	 	 applicationId "com.game.sdk.yiyou291"
+	 	 	 versionCode 1
+	 	 	 resValue( "string", "app_name", "BT手游之家竖屏版" )
+	 	 }
+	 	 "landscape_SDK" {
+	 	 	 applicationId "com.game.sdk.yiyou291landscape"
+	 	 	 versionCode 1
+	 	 	 resValue( "string", "app_name", "BT手游之家横屏版" )
+	 	 }
+	 }
+}

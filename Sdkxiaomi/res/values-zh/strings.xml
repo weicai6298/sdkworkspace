@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    
+    <string name="button_text_login">登录</string>
+    <string name="button_text_purchase">购买</string>
+    <string name="cancel">取消</string>
+    <string name="demo_btn_ok">确认</string>
+    <string name="demo_choess_money">请选择充值金额</string>
+    <string name="demo_input_amount">请输入充值金额</string>
+    <string name="demo_islogin">正在执行，不要重复操作</string>
+    <string name="demo_pay_amount_1fen">银子1两(0.01米币)</string>
+    <string name="demo_pay_amount_6yuan">银子60两(6米币)</string>
+    <string name="demo_pay_amount_12yuan">银子120两(12米币)</string>
+
+    <string name="demo_pay_amount_1fen_1">1幸运币(0.01米币)</string>
+    <string name="demo_pay_amount_6yuan_1">开通所有关卡(6米币)</string>
+    <string name="demo_pay_amount_12yuan_1">购买装备(12米币)</string>
+
+    <string name="demo_mibi_to_rmb">1米币=1元,单次数量不能大于9999,金额不得大于20000</string>
+    <string name="demo_pay_amount_100yuan">100元(100米币)</string>
+    <string name="demo_pay_amount_10yuan">10元(10米币)</string>
+    <string name="demo_pay_amount_1yuan">1元(1米币)</string>
+    <string name="demo_pay_amount_500yuan">500元(500米币)</string>
+    <string name="demo_pay_amount_50yuan">50元(50米币)</string>
+    <string name="demo_pay_amount_5yuan">5元(5米币)</string>
+    <string name="demo_payment_cancel">取消购买</string>
+    <string name="demo_payment_failed">购买失败</string>
+    <string name="demo_payment_please_login">您还没有登录，请先登录</string>
+    <string name="demo_payment_success">购买成功</string>
+    <string name="demo_tip"><Data><![CDATA[<font>当前为</font><font color="#FF0000">%s</font><font>模式</font>]]></Data></string>
+    <string name="demo_tip1"><Data><![CDATA[<font>当前：</font><font color="#FF0000">%s</font>]]></Data></string>
+    <string name="demo_tip_text">在正式环境中一定要注明米币和人民币的关系</string>
+    <string name="hello_world">此Demo为应用内支付流程演示</string>
+    <string name="in_app_friends">正在玩游戏的好友</string>
+    <string name="login_success">登录成功</string>
+    <string name="login_failed">登录失败</string>
+    <string name="not_login">还未登录</string>
+    <string name="already_login">已经登录了</string>
+    <string name="screen_h">当前：横屏</string>
+    <string name="screen_v">当前：竖屏</string>
+    <string name="consumable_prop_title">购买可消耗商品(可重复购买)</string>
+    <string name="non_expendable_props_title">购买不可消耗商品</string>
+    <string name="non_expendable_props_des">此类商品一个账号只能购买一次</string>
+    <string name="demo_already_purchased">您已经购买过，无需购买</string>
+    <string name="change_screen">更改屏幕方向</string>
+    <string name="change_debug_mode">更改调试环境</string>
+    <string name="demo_title">此为应用内支付流程演示</string>
+    <string name="login_mi">登录小米账户</string>
+    <string name="billing_code_con">按计费代码（购买可消耗商品）</string>
+    <string name="billing_code_non">按计费代码（购买不可消耗商品）</string>
+    <string name="pay_by_amount">按金额支付</string>
+    <string name="change_account">切换账号</string>
+    <string name="social_relevance">社交相关</string>
+    <string name="check_sys_account">检查系统是否登录小米帐户</string>
+    <string name="exit">退出</string>
+    <string name="settings">设置</string>
+</resources>

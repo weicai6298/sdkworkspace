@@ -2,7 +2,7 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="250dp"
     android:layout_height="wrap_content"
-    android:background="@drawable/m4399_ope_common_alertdialog_bg"
+    android:background="@drawable/m4399_ope_common_alert_dialog_bg"
     android:orientation="vertical">
 
 
@@ -21,8 +21,8 @@
             android:layout_height="wrap_content">
 
             <EditText
-                style="@style/m4399RecInputAreaStyle"
                 android:id="@+id/id_edittext"
+                style="@style/m4399RecInputAreaStyle"
                 android:layout_width="115dp"
                 android:layout_height="40dp"
                 android:ems="10"
@@ -58,6 +58,7 @@
 
     </LinearLayout>
 
-    <View style="@style/m4399PerfectLine"/>
+    <View style="@style/m4399PerfectLine" />
+
     <include layout="@layout/m4399_ope_common_dialog_foot" />
 </LinearLayout>

@@ -33,7 +33,6 @@ public class AnimationImpl implements YYWAnimation {
 
 	@Override
 	public void anim(final Activity paramActivity) {
-		// TODO Auto-generated method stub
 		// Toast.makeText(paramActivity, "播放动画", Toast.LENGTH_SHORT).show();
 		System.err.println("播放动画");
 
@@ -117,22 +116,19 @@ class LogoWindow {
 
 		InputStream istr = null;
 		try {
-
 			if(DeviceUtil.isLandscape(con)){
 				istr = assetManager.open("heng.png");
 			}else{
 				istr = assetManager.open("shu.png");
 			}
-
 		} catch (IOException e) {
-			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
 		Bitmap bitmap = BitmapFactory.decodeStream(istr);
 
 		iv.setBackgroundColor(Color.parseColor("#f7faf1"));
 		iv.setImageBitmap(bitmap);
-		iv.setScaleType(ScaleType.CENTER);
+		iv.setScaleType(ScaleType.CENTER_CROP);
 		rootview.addView(iv);
 
 		mHandler.sendEmptyMessageDelayed(1, 3000L);

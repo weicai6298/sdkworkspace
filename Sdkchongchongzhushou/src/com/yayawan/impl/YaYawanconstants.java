@@ -12,15 +12,18 @@ import com.kkgame.utils.Handle;
 import com.kkgame.utils.JSONUtil;
 import com.yayawan.callback.YYWExitCallback;
 import com.yayawan.domain.YYWUser;
-import com.lion.ccpay.sdk.CCApplicationUtils;
+import com.lion.ccpay.bean.PlayUserInfo;
 import com.lion.ccpay.sdk.CCPaySdk;
 import com.lion.ccsdk.SdkExitAppListener;
 import com.lion.ccsdk.SdkLoginListener;
 import com.lion.ccsdk.SdkLogoutListener;
 import com.lion.ccsdk.SdkPayListener;
 import com.lion.ccsdk.SdkUser;
+import com.nostra13.universalimageloader.core.ImageLoader;
+import com.nostra13.universalimageloader.core.ImageLoaderConfiguration;
 import com.yayawan.main.Kgame;
 import com.yayawan.main.YYWMain;
+import com.yayawan.sdktemplate.MainActivity;
 
 
 public class YaYawanconstants {
@@ -33,6 +36,13 @@ public class YaYawanconstants {
 	private static boolean isinit=false;
 
 	private static boolean islogin=false;
+	
+	private static String roleid = "123";
+	private static String rolename  = "123";
+	private static String rolelevel = "123";
+	private static String zoneid = "123";
+	private static String zonename = "123";
+	private static String rolectime = "123";
 	/**
 	 * 初始化sdk
 	 */
@@ -40,7 +50,7 @@ public class YaYawanconstants {
 		mActivity = mactivity;
 		Yayalog.loger("YaYawanconstants初始化sdk");
 		Log.i("tag","Activity初始化");
-		
+		CCPaySdk.getInstance().init(mactivity);
 		
 		CCPaySdk.getInstance().onCreate(mActivity);
 		initCCPaySdkLoginOut();
@@ -52,16 +62,12 @@ public class YaYawanconstants {
 	 * application初始化
 	 */
 	public static void applicationInit(Context applicationContext) {
-		// TODO Auto-generated method stub
 		Log.i("tag","application初始化结束");
 		String APP_ID= ""+DeviceUtil.getGameInfo(applicationContext, "APP_ID");
 		Log.i("tag","APP_ID="+APP_ID);
         DeviceUtil.appid = APP_ID.substring(2, APP_ID.length());
         DeviceUtil.gameid = APP_ID.substring(2, APP_ID.length());
         Log.i("tag","gameid="+DeviceUtil.gameid);
-        CCApplicationUtils.getInstance().init(applicationContext);
-		CCApplicationUtils.getInstance().setRPath(applicationContext, applicationContext.getPackageName());
-		CCPaySdk.getInstance().initApplication((Application) applicationContext);
 	}
 
 	/**
@@ -78,9 +84,6 @@ public class YaYawanconstants {
 					String uid = user.uid;
 					String username = user.userName;
 					String token = user.token;
-					Log.i("tag","uid="+uid);
-					Log.i("tag","username="+username);
-					Log.i("tag","token="+token);
 					loginSuce(mactivity, uid, username, token);
 					islogin = true;
 				}
@@ -93,7 +96,6 @@ public class YaYawanconstants {
 				public void onLoginCancel() {
 					ToastUtils.showLongToast(mactivity, "登录取消~");
 					loginFail();
-					Log.i("tag","abc");
 				}
 			});
 		}else{
@@ -109,10 +111,9 @@ public class YaYawanconstants {
 	public static void pay(Activity mactivity, String morderid) {
 
 		Yayalog.loger("YaYawanconstantssdk支付");
-		Log.i("tag","morderid="+morderid);
-		Log.i("tag","YYWMain.mOrder.goods="+YYWMain.mOrder.goods);
-		Log.i("tag","YYWMain.mOrder.money/100="+YYWMain.mOrder.money/100);
-		CCPaySdk.getInstance().pay(mactivity, morderid, YYWMain.mOrder.goods, YYWMain.mOrder.money/100+"","", new SdkPayListener() {
+		 PlayUserInfo playUserInfo = getPlayUserInfo(PlayUserInfo.TYPE_ENTER_GAME);
+		 Log.i("tag","playUserInfo = " + playUserInfo);
+		CCPaySdk.getInstance().pay4OLGame(mactivity, morderid,"", YYWMain.mOrder.goods, YYWMain.mOrder.money/100+"","", playUserInfo, new SdkPayListener() {
 			
 			 @Override
 	            public void onPayResult(int status, String tn, String money) {
@@ -120,27 +121,23 @@ public class YaYawanconstants {
 	                switch (status) {
 	                   case SdkPayListener.CODE_SUCCESS://支付成功
 	                      text = "支付成功\n";
-	                      Log.i("tag","支付成功");
 	                      paySuce();
-	                      Log.i("tag","支付成功1");
+	                      Log.i("tag","支付成功");
 	                      break;
 	                   case SdkPayListener.CODE_FAIL://支付失败
 	                      text = "支付失败\n";
 	                      Log.i("tag","支付失败");
 	                      payFail();
-	                      Log.i("tag","支付失败1");
 	                      break;
 	                   case SdkPayListener.CODE_CANCEL://支付取消
 	                      text = "支付取消\n";
-	                      Log.i("tag","支付失败");
+	                      Log.i("tag","支付取消");
 	                      payFail();
-	                      Log.i("tag","支付失败1");
 	                      break;
 	                   case SdkPayListener.CODE_UNKNOWN://支付结果未知
 	                      text = "支付结果未知\n";
-	                      Log.i("tag","支付失败");
+	                      Log.i("tag","支付结果未知");
 	                      payFail();
-	                      Log.i("tag","支付失败1");
 	                      break;
 	                }
 //	                ToastUtils.showLongToast(mActivity, text + "status:" + status + "\ntn:" + tn + "\nmoney:" + money);
@@ -157,7 +154,7 @@ public class YaYawanconstants {
 	public static void exit(Activity paramActivity,
 			final YYWExitCallback callback) {
 		Yayalog.loger("YaYawanconstantssdk退出");
-			CCPaySdk.getInstance().exitApp(paramActivity, new SdkExitAppListener() {
+			CCPaySdk.getInstance().exitApp(paramActivity, true , new SdkExitAppListener() {
 				@Override
 				public void onExitApp() {
 					CCPaySdk.getInstance().killApp(mActivity);
@@ -176,6 +173,21 @@ public class YaYawanconstants {
 	public static void setData(Activity paramActivity, String roleId, String roleName,String roleLevel, String zoneId, String zoneName, String roleCTime,String ext){
 		// TODO Auto-generated method stub
 		Yayalog.loger("YaYawanconstants设置角色信息");
+		roleid = roleId;
+		rolename =roleName;
+		rolelevel =roleLevel;
+		zoneid = zoneId;
+		zonename = zoneName;
+		rolectime = roleCTime;
+		//1为角色登陆成功  2为角色创建  3为角色升级
+		if (Integer.parseInt(ext) == 1){
+//该方法将调用的时机分为几种类型：    1：选择服务器    2：创建角色    3：进入游戏    4：等级提升    5：退出游戏
+			CCPaySdk.getInstance().submitExtraData(getPlayUserInfo(PlayUserInfo.TYPE_ENTER_GAME));
+		}else if(Integer.parseInt(ext) == 2){
+			CCPaySdk.getInstance().submitExtraData(getPlayUserInfo(PlayUserInfo.TYPE_CREATE_ROLE));
+		}else if(Integer.parseInt(ext) == 3){
+			CCPaySdk.getInstance().submitExtraData(getPlayUserInfo(PlayUserInfo.TYPE_LEVEL_UP));
+		}
 	}
 	public static void onResume(Activity paramActivity) {
 		// TODO Auto-generated method stub
@@ -315,6 +327,25 @@ public class YaYawanconstants {
 	    }
 
 
-
+	 //该方法将调用的时机分为几种类型：    1：选择服务器    2：创建角色    3：进入游戏    4：等级提升    5：退出游戏
+	    public static PlayUserInfo getPlayUserInfo(int type) {
+		   PlayUserInfo playUserInfo = new PlayUserInfo();
+		   playUserInfo.setDataType(type);
+		   
+		   playUserInfo.setServerID(Integer.parseInt(zoneid));
+		   playUserInfo.setServerName(zonename);
+		   
+		   if (PlayUserInfo.TYPE_SELECT_SERVER != type) {
+			  playUserInfo.setMoneyNum(500);
+			  playUserInfo.setRoleCreateTime(Long.parseLong(rolectime));
+			  playUserInfo.setRoleGender(1);
+			  playUserInfo.setRoleID(roleid);
+			  playUserInfo.setRoleLevel(Integer.parseInt(rolelevel));
+//			  playUserInfo.setRoleLevelUpTime(1498115418);
+			  playUserInfo.setRoleName(rolename);
+//			  playUserInfo.setVip("");
+		   }
+		   return playUserInfo;
+	    }
 
 }

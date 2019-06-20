@@ -68,7 +68,7 @@ public class Weibologinxml_po extends Basexml implements Layoutxml {
 		
 		tv_zhuce = new TextView(mContext);
 		machineFactory.MachineTextView(tv_zhuce, MATCH_PARENT, MATCH_PARENT, 0,
-				"微博登录", 38, mLinearLayout, 0, 0, 0, 0);
+				"登录", 38, mLinearLayout, 0, 0, 0, 0);
 		tv_zhuce.setTextColor(Color.WHITE);
 		tv_zhuce.setGravity(Gravity_CENTER);
 

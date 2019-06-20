@@ -4,40 +4,16 @@
     android:layout_height="wrap_content"
     android:orientation="vertical">
 
-    <include layout="@layout/m4399_rec_money_product"/>
+    <include layout="@layout/m4399_rec_money_product" />
+
+    <include layout="@layout/m4399_rec_account_info" />
+
+    <include layout="@layout/m4399_rec_sec_coupon" />
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:gravity="center_vertical"
-        android:orientation="horizontal"
-        android:paddingBottom="8dp"
-        android:paddingTop="15dp">
-
-
-        <TextView
-            style="@style/m4399RecLabelTv"
-            android:text="充值账号"
-
-            />
-
-        <TextView
-            android:id="@+id/rec_account"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:textColor="#666666"
-            android:textSize="14sp" />
-
-    </LinearLayout>
-
-    <include layout="@layout/m4399_rec_sec_coupon"/>
-
-
-
-    <LinearLayout
         android:layout_marginBottom="30dp"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
         android:gravity="center_vertical"
         android:orientation="horizontal">
 
@@ -50,27 +26,29 @@
 
         <LinearLayout
             android:id="@+id/choose_channel_view"
-            android:gravity="center_vertical"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:gravity="center_vertical"
             android:orientation="horizontal">
 
             <ImageView
-                android:visibility="gone"
                 android:id="@+id/main_channel_icon"
                 android:layout_width="18dp"
                 android:layout_height="18dp"
                 android:layout_marginRight="5dp"
-                android:src="@drawable/m4399_rec_alipay_mini" />
+                android:src="@drawable/m4399_rec_alipay_mini"
+                android:visibility="gone" />
+
             <TextView
                 android:id="@+id/main_channel"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:paddingTop="8dp"
                 android:paddingBottom="8dp"
+                android:paddingTop="8dp"
                 android:text="请选择充值方式"
                 android:textColor="@color/m4399_rec_color_blue_33bdfc"
                 android:textSize="14sp" />
+
             <ImageView
                 android:layout_width="15dp"
                 android:layout_height="15dp"
@@ -81,7 +59,6 @@
                 android:src="@drawable/m4399_rec_coupon_goto_tips" />
 
         </LinearLayout>
-
 
 
     </LinearLayout>

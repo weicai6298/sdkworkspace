@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:orientation="vertical"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:background="@color/activity_background">
+
+    <include layout="@layout/yhsdk_layout_title"/>
+
+    <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:overScrollMode="never"
+            android:scrollbars="none">
+
+        <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+            <LinearLayout
+                    android:layout_width="@dimen/win_width"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/yhsdk_edit_background"
+                    android:layout_marginTop="20dp"
+                    android:layout_gravity="center_horizontal"
+                    android:orientation="vertical">
+
+                <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="50dp"
+                        android:orientation="horizontal">
+
+                    <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:src="@drawable/yhsdk_phone"
+                            android:layout_gravity="center_vertical"
+                            android:layout_marginLeft="10dp"/>
+
+                    <EditText
+                            android:id="@+id/et_find_pwd_number"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_marginLeft="10dp"
+                            android:layout_weight="8"
+                            android:hint="@string/phone_uid_edtx_hint"
+                            android:textSize="15sp"
+                            android:textColor="#333333"
+                            android:gravity="center_vertical"
+                            android:textColorHint="@color/edit_text_color_hint"
+                            android:background="@null"/>
+                </LinearLayout>
+
+                <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="10dp"
+                        android:background="#eeeeee"/>
+
+                <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="50dp"
+                        android:orientation="horizontal">
+
+                    <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:src="@drawable/yhsdk_phone_vcode"
+                            android:layout_gravity="center_vertical"
+                            android:layout_marginLeft="10dp"/>
+
+                    <EditText
+                            android:id="@+id/et_find_pwd_vcode"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_marginLeft="10dp"
+                            android:layout_weight="8"
+                            android:hint="@string/phone_vcode_input_hint"
+                            android:gravity="center_vertical"
+                            android:textSize="15sp"
+                            android:textColorHint="@color/edit_text_color_hint"
+                            android:textColor="#333333"
+                            android:background="@null"/>
+
+                    <TextView
+                            android:id="@+id/tv_find_pwd_get_vcode"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/phone_vcode_desc_text"
+                            android:textColor="@android:color/white"
+                            android:layout_marginRight="10dp"
+                            android:gravity="center_vertical"
+                            android:padding="5dp"
+                            android:textSize="16sp"
+                            android:background="@drawable/yhsdk_btn_blue_bg"/>
+                </LinearLayout>
+
+                <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="10dp"
+                        android:background="#eeeeee"/>
+
+                <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="50dp"
+                        android:orientation="horizontal">
+
+                    <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:src="@drawable/yhsdk_lock"
+                            android:layout_gravity="center_vertical"
+                            android:layout_marginLeft="12dp"/>
+
+                    <EditText
+                            android:id="@+id/et_find_pwd_password"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_marginLeft="10dp"
+                            android:layout_weight="8"
+                            android:hint="@string/input_new_pwd"
+                            android:gravity="center_vertical"
+                            android:textColorHint="@color/edit_text_color_hint"
+                            android:maxLines="1"
+                            android:textSize="15sp"
+                            android:ellipsize="end"
+                            android:textColor="#333333"
+                            android:background="@null"/>
+
+                    <ImageView
+                            android:id="@+id/img_find_pwd_hide"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_vertical"
+                            android:layout_marginRight="10dp"
+                            android:layout_weight="1"
+                            android:src="@drawable/yhsdk_pwd_hide"/>
+                </LinearLayout>
+            </LinearLayout>
+
+            <Button
+                    android:id="@+id/btn_find_pwd"
+                    android:layout_width="@dimen/win_width"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:paddingTop="8dp"
+                    android:paddingBottom="8dp"
+                    android:textColor="@android:color/white"
+                    android:textSize="18sp"
+                    android:text="@string/sure"
+                    android:background="@drawable/yhsdk_btn_blue_bg"/>
+        </LinearLayout>
+
+    </ScrollView>
+
+
+</LinearLayout>

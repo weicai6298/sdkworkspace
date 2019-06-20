@@ -1,14 +1,13 @@
-<?xml version="1.0" encoding="utf-8"?>
-<!-- 个人中心 操作列表项 by.zhengxu -->
+<?xml version="1.0" encoding="utf-8"?><!-- 个人中心 操作列表项 by.zhengxu -->
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="50dp"
     android:background="@drawable/m4399_ope_usercenter_action_item_bg"
     android:orientation="horizontal"
-    android:paddingTop="10dp"
     android:paddingBottom="10dp"
     android:paddingLeft="12dp"
-    android:paddingRight="10dp" >
+    android:paddingRight="10dp"
+    android:paddingTop="10dp">
 
     <ImageView
         android:id="@+id/usercenter_action_item_image"
@@ -44,12 +43,12 @@
         android:id="@+id/usercenter_action_item_content"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
         android:layout_centerVertical="true"
         android:layout_marginLeft="10dp"
         android:layout_marginRight="12dp"
         android:layout_toLeftOf="@+id/usercenter_action_item_red_dot"
         android:layout_toRightOf="@+id/usercenter_action_item_title"
-        android:layout_alignParentRight="true"
         android:gravity="right"
         android:singleLine="true"
         android:textColor="@color/m4399_ope_usercenter_orange"

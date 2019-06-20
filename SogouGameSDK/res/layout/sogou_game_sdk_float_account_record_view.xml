@@ -69,7 +69,7 @@
                 android:layout_alignParentRight="true"
                 android:layout_marginLeft="11dp"
                 android:layout_marginTop="12dp"
-                android:text="请设置您的账户安全"
+                android:text="请设置您的帐户安全"
                 android:textColor="@color/sogou_game_sdk_color_ff6a00"
                 android:textSize="13sp" />
         </RelativeLayout>

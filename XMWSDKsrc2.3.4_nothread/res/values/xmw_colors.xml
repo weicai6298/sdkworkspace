@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<resources>
+
+    <color name="appBlack_old">#ff000000</color>
+    <color name="appBlack">#333333</color>
+    <color name="appWhite">#ffffffff</color>
+    <color name="appGreen">#78e421</color>
+    <color name="name_black">#ff222222</color>
+    <color name="con_black">#ff999999</color>
+    <color name="con_blackt">#ff808080</color>
+    <color name="luc_back">#00000000</color>
+    <color name="con_textblack">#ff555555</color>
+    <color name="con_line">#FFcdcdcd</color>
+    <color name="con_back">#FFf8f8f8</color>
+    <color name="con_rudeback">#bb808080</color>
+    <color name="red_text">#ffff5555</color>
+    <color name="progressyellow">#fffa9135</color>
+    <color name="con_backd">#ffe9eaea</color>
+    <color name="con_blue">#ff0062a7</color>
+    <color name="con_green">#ff358e00</color>
+    <color name="con_red">#ffdf3939</color>
+    <color name="con_cheng">#fffc8901</color>
+    <color name="con_chenghong">#fe6826</color>
+    <color name="appDarkGrey">#949393</color>
+    <color name="xmw_yellow">#fa730c</color>
+     <color name="xmw_s_black">#000000</color>
+    <color name="xmw_s_black_text">#656565</color>
+    <color name="xmw_s_white">#ffffff</color>
+    <color name="xmw_s_white_alpha">#b0ffffff</color>
+    <color name="xmw_s_orange">#FF6600</color>
+    <color name="xmw_s_orange_2">#FFEFE5</color>
+    <color name="xmw_s_orange_3">#ffa200</color>
+    <color name="xmw_s_gray_text">#cdcdcd</color>
+    <color name="xmw_s_gray_text_common">#909090</color>
+    <color name="xmw_s_gray2_text_common">#989898</color>
+    
+    <!-- 灰色分割线 -->
+    <color name="cut_line_gray">#c9c9c9</color>
+    
+    <!-- xmw主题颜色 -->
+    <color name="xmw_theme_color">#ffdc46</color>
+    <color name="xmw_getyzcode_blue">#4FBCF5</color>
+    <color name="xmw_divider">#D9D7CE</color>
+    <color name="xmw_text_black">#333333</color>
+    <color name="xmw_text_blue">#4FBCF5</color>
+    <color name="xmw_c_textcolor_gray">#AEAA9A</color>
+    <color name="xmw_text_gray">#D9D7CE</color>
+    <color name="xmw_exit_btn_gray">#cfcfcf</color>
+    <color name="xmw_exit_bg">#f5f5f5</color>
+    <color name="xmw_welcome_bg">#f3f3f3</color>
+    
+    <color name="xmw_pay_green">#78e421</color>
+    
+    <color name="xmw_c_black">#333333</color>
+	<color name="xmw_c_black2">#666666</color>
+	<color name="xmw_c_black3">#999999</color>
+	<color name="common_hint">#cdcdcd</color>
+	<!--  灰色分割线  -->
+	<color name="cut_line_gray_new">#ececec</color>
+
+</resources>

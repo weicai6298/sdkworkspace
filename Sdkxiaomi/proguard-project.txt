@@ -18,3 +18,9 @@
 #-keepclassmembers class fqcn.of.javascript.interface.for.webview {
 #   public *;
 #}
+-keep class com.xiaomi.*** {*;}
+-keep class com.wali.*** {*;}
+-keep class com.google.zxing.** {*;}
+-keep class com.tencent.*** {*;}
+-keep class com.umeng.***{*;}
+-keep class miui.net.***{*;}

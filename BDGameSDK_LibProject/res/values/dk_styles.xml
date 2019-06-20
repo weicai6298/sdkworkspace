@@ -1,5 +1,5 @@
 <resources xmlns:android="http://schemas.android.com/apk/res/android">
-    
+
     <style name="dk_theme_nobackground" parent="android:style/Theme.NoTitleBar.Fullscreen">
         <item name="android:windowIsTranslucent">true</item>
         <item name="android:windowBackground">@color/dk_transparent</item>
@@ -19,7 +19,7 @@
     </style>
 
     <style name="dk_dialog_style_notice" parent="dk_dialog_style">
-        <item name="android:windowBackground">@null</item>
+        <item name="android:windowBackground">@color/dk_transparent</item>
     </style>
 
     <style name="dk_theme_nobackground_noanimation" parent="dk_theme_nobackground">
@@ -27,7 +27,7 @@
     </style>
 
     <style name="dk_styledindicators" parent="dk_theme_nobackground_noanimation">
-        <item name="bdp_vpiIconPageIndicatorStyle">@style/dk_customtabpageindicator</item>
+        <item name="dk_vpiTabPageIndicatorStyle">@style/dk_customtabpageindicator</item>
     </style>
 
     <style name="dk_customtabpageindicator" parent="dk_widget_tabpageindicator">
@@ -263,6 +263,19 @@
     <style name="dk_textappearance_tabpageindicator" parent="dk_widget">
         <item name="android:textStyle">bold</item>
         <item name="android:textColor">@color/dk_vpi_dark_theme</item>
+    </style>
+
+    <!-- The style of custom dialog -->
+    <style name="dk_payment_dialog_style" parent="@android:Theme.Dialog">
+        <item name="android:windowFrame">@null</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowIsFloating">true</item>
+        <item name="android:windowContentOverlay">@null</item>
+        <item name="android:windowBackground">@drawable/dk_bg_dialog</item>
+    </style>
+
+    <style name="dk_payment_dialog_style_new" parent="dk_payment_dialog_style">
+        <item name="android:windowBackground">@color/dk_transparent</item>
     </style>
 
 </resources>

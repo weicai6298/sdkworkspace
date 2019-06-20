@@ -2,8 +2,9 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="84dp"
-    android:gravity="center_vertical"
-    android:background="@drawable/m4399_ope_coupon_bg">
+    android:background="@drawable/m4399_ope_coupon_bg"
+    android:gravity="center_vertical">
+
     <LinearLayout
         android:id="@+id/coupon_ammount_la"
         android:layout_width="@dimen/m4399_ope_coupon_green_width"
@@ -24,9 +25,9 @@
             android:textSize="30sp" />
 
         <TextView
-            android:layout_marginTop="4dp"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
             android:text="@string/m4399_ope_yuan"
             android:textColor="#FFFFFF"
             android:textSize="@dimen/m4399_ope_unit_size" />
@@ -35,10 +36,10 @@
 
 
     <LinearLayout
-        android:layout_centerVertical="true"
-        android:layout_marginTop="5dp"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_marginTop="5dp"
         android:orientation="vertical"
         android:paddingLeft="15dp">
 
@@ -73,28 +74,28 @@
     </LinearLayout>
 
     <ImageView
-        android:visibility="gone"
         android:id="@+id/coupon_corner_icon"
         android:layout_width="@dimen/m4399_ope_coupon_icon_size"
-        android:layout_height="@dimen/m4399_ope_coupon_icon_size"/>
+        android:layout_height="@dimen/m4399_ope_coupon_icon_size"
+        android:visibility="gone" />
 
     <RelativeLayout
-        android:visibility="gone"
         android:id="@+id/coupon_get_mask"
-        android:background="#80000000"
         android:layout_width="match_parent"
         android:layout_height="113dp"
+        android:background="#80000000"
         android:gravity="center"
-        >
+        android:visibility="gone">
+
         <TextView
             android:id="@+id/coupon_get_tv"
             android:layout_width="124dp"
             android:layout_height="58dp"
             android:background="@drawable/m4399_ope_get_coupon_bg"
+            android:gravity="center"
             android:text="立即领取"
-            android:textSize="18sp"
             android:textColor="@color/m4399_ope_usercenter_white"
-            android:gravity="center"/>
+            android:textSize="18sp" />
 
 
     </RelativeLayout>

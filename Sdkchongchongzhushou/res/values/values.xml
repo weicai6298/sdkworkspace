@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+    <attr format="dimension" name="lion_plugin_attr"/>
     <color name="lion_common_basic_bg">#FFF4F5F7</color>
     <color name="lion_common_basic_red">#FFD33D3E</color>
     <color name="lion_common_basic_red_pre">#80D33D3E</color>
@@ -87,6 +88,7 @@
     <string formatted="false" name="lion_dlg_login_ing_notice">用户%s登录中…</string>
     <string name="lion_dlg_login_notice">将用您的手机发送一条短信进行验证</string>
     <string name="lion_dlg_login_notice_2">已为您获取到账号</string>
+    <string name="lion_dlg_login_notice_by_user">将为您自动生成账号与密码</string>
     <string name="lion_dlg_logout_game">退出游戏</string>
     <string name="lion_dlg_logout_game_2">暂不退出</string>
     <string name="lion_dlg_next_step">下一步</string>
@@ -259,7 +261,9 @@
     <string name="lion_text_user_anti_addict_system_notice_card">身份证号</string>
     <string name="lion_text_user_anti_addict_system_notice_icon">身份证照片</string>
     <string name="lion_text_user_anti_addict_system_notice_name">真实姓名</string>
+    <string name="lion_text_user_apply_delete">账号注销/删除</string>
     <string name="lion_text_user_auth_notice">根据国家规定，游戏用户需实名认证~</string>
+    <string name="lion_text_user_cancel_account_tip"><Data>&lt;font color="#d33d3e">注销提交审核后，将先冻结账户15天&lt;/font>（15天确认期，防止非法分子假冒他人账户注销），15天审核通过后进行删号操作。&lt;br>若有其他疑问，请联系虫虫QQ客服：2802586192</Data></string>
     <string name="lion_text_user_center">个人中心</string>
     <string name="lion_text_user_center_account">帐号</string>
     <string name="lion_text_user_center_balance">余额</string>
@@ -444,6 +448,19 @@
         <item name="android:textSize">14.0sp</item>
         <item name="android:drawableBottom">@drawable/lion_common_line_transparent_2_red_selector
         </item>
+    </style>
+    <style name="lion_input">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">40dp</item>
+        <item name="android:gravity">center|left</item>
+        <item name="android:singleLine">true</item>
+        <item name="android:drawablePadding">6.7dip</item>
+        <item name="android:textColor">@color/lion_common_black</item>
+        <item name="android:textColorHint">@color/lion_common_text_gray</item>
+        <item name="android:textSize">15dp</item>
+        <item name="android:paddingLeft">15dp</item>
+        <item name="android:maxLength">20</item>
+        <item name="android:background">@drawable/lion_common_white_frame_nor</item>
     </style>
     <style name="lion_layout_floating_item">
         <item name="android:layout_width">wrap_content</item>

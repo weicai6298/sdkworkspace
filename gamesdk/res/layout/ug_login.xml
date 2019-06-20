@@ -1,0 +1,262 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:id="@+id/parent_view">
+
+    <RelativeLayout
+        android:id="@+id/ug_login_auto_content"
+        android:layout_width="180dp"
+        android:layout_height="42dp"
+        android:layout_centerHorizontal="true"
+        android:layout_gravity="center_horizontal|top"
+        android:layout_marginTop="30dp"
+        android:background="@drawable/ug_auto_login_bg"
+        android:visibility="gone">
+
+        <ImageView
+            android:id="@+id/ug_user_face"
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="5dp"
+            android:src="@drawable/ug_ic_syz"/>
+
+        <ImageView
+            android:id="@+id/ug_user_change"
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="5dp"
+            android:src="@drawable/ug_ic_auto_login_right"/>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="8dp"
+            android:layout_toRightOf="@+id/ug_user_face"
+            android:layout_toLeftOf="@id/ug_user_change"
+            android:gravity="left|center"
+            android:orientation="vertical"
+            android:paddingBottom="8dp"
+            android:paddingTop="8dp"
+            android:weightSum="1">
+
+            <TextView
+                android:id="@+id/ug_tv_account"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.5"
+                android:gravity="center_vertical"
+                android:maxLines="1"
+                android:ellipsize="end"
+                android:textColor="@color/text_lv1"
+                android:textSize="@dimen/text_normal"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.5"
+                android:gravity="center_vertical"
+                android:text="正在登录..."
+                android:textColor="@color/text_lv2"
+                android:textSize="@dimen/text_small"/>
+        </LinearLayout>
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/ug_login_content"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/ug_dialog_white_bg"
+        android:orientation="vertical"
+        android:visibility="visible"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="43dp"
+            android:background="@drawable/ug_title_grey"
+            >
+
+            <ImageButton
+                android:id="@+id/ug_bt_title_left"
+                android:layout_centerVertical="true"
+                android:layout_width="44dp"
+                android:layout_height="44dp"
+                android:background="@null"
+                android:src="@drawable/ug_ic_back_black"/>
+
+            <TextView
+                android:id="@+id/ug_super_bt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:text="手游猪登录"
+                android:textColor="@color/text_lv1"
+                android:textSize="@dimen/text_bigger"
+                />
+        </RelativeLayout>
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            >
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:orientation="vertical"
+                android:paddingLeft="48dp"
+                android:paddingRight="48dp"
+                >
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:layout_marginTop="10dp">
+
+                    <EditText
+                        android:id="@+id/ug_edt_account"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@drawable/ug_edt_bg_corners"
+                        android:drawableLeft="@drawable/ug_ic_edt_account"
+                        android:drawablePadding="5dp"
+                        android:hint="请输入用户名"
+                        android:singleLine="true"
+                        android:imeOptions="flagNoExtractUi"
+                        android:paddingLeft="5dp"
+                        android:paddingRight="35dp"
+                        android:textColor="@color/text_lv1"
+                        android:textColorHint="@color/text_hint"
+                        android:textSize="@dimen/text_normal"
+                        />
+
+                    <ImageButton
+                        android:id="@+id/ug_bt_down"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:layout_toLeftOf="@id/ug_edt_account"
+                        android:src="@drawable/ug_ic_down"
+                        android:background="@null"
+                        android:minWidth="40dp"
+                        android:minHeight="40dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"/>
+                </RelativeLayout>
+
+
+                <EditText
+                    android:id="@+id/ug_edt_password"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:layout_marginTop="10dp"
+                    android:background="@drawable/ug_edt_bg_corners"
+                    android:drawableLeft="@drawable/ug_ic_edt_password"
+                    android:drawablePadding="5dp"
+                    android:ems="10"
+                    android:hint="请输入(6到20位)密码"
+                    android:imeOptions="flagNoExtractUi"
+                    android:inputType="textPassword"
+                    android:paddingLeft="5dp"
+                    android:paddingRight="5dp"
+                    android:textColor="@color/text_lv1"
+                    android:textColorHint="@color/text_hint"
+                    android:textCursorDrawable="@null"
+                    android:textSize="@dimen/text_normal"
+                    >
+                </EditText>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="28dp"
+                    android:layout_marginTop="6dp"
+                    >
+
+                    <ToggleButton
+                        android:id="@+id/ug_toggle_bt"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="center_horizontal"
+                        android:background="@android:color/transparent"
+                        android:button="@drawable/ug_toggle_btn"
+                        android:checked="false"
+                        android:textColor="@color/text_lv2"
+                        android:textOff="自动登录"
+                        android:textOn="自动登录"
+                        android:textSize="@dimen/text_small"/>
+
+                    <TextView
+                        android:id="@+id/ug_tv_reset_password"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:text="忘记密码"
+                        android:textColor="@color/text_lv2"
+                        android:textSize="@dimen/text_small"
+                        />
+                </RelativeLayout>
+
+                <Button
+                    android:id="@+id/ug_bt_next"
+                    style="?android:attr/borderlessButtonStyle"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:layout_marginTop="6dp"
+                    android:background="@drawable/ug_button_blue_normal"
+                    android:text="立即登录"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/text_bigger"
+                    />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="15dp"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    android:weightSum="1"
+                    >
+
+                    <Button
+                        android:id="@+id/ug_bt_register_tel"
+                        style="?android:attr/borderlessButtonStyle"
+                        android:layout_width="match_parent"
+                        android:layout_height="40dp"
+                        android:layout_gravity="center"
+                        android:layout_marginRight="5dp"
+                        android:layout_weight="0.5"
+                        android:background="@color/white"
+                        android:drawableLeft="@drawable/ug_ic_phone"
+                        android:drawablePadding="1dp"
+                        android:gravity="center"
+                        android:text="手机号注册"
+                        android:textColor="@color/text_lv1"
+                        android:textSize="@dimen/text_normal"/>
+
+                    <Button
+                        android:id="@+id/ug_bt_register_syz"
+                        style="?android:attr/borderlessButtonStyle"
+                        android:layout_width="match_parent"
+                        android:layout_height="40dp"
+                        android:layout_weight="0.5"
+                        android:background="@color/white"
+                        android:drawableLeft="@drawable/ug_ic_syz"
+                        android:text="手游猪账号注册"
+                        android:textColor="@color/text_lv1"
+                        android:textSize="@dimen/text_normal"
+                        />
+                </LinearLayout>
+            </LinearLayout>
+        </ScrollView>
+
+    </LinearLayout>
+</RelativeLayout>

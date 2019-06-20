@@ -17,8 +17,7 @@
     <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
     <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW" />
     <uses-permission android:name="android.permission.GET_TASKS" />
-    
-    <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW"/>
+    <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW" />
     <uses-permission android:name="android.permission.SYSTEM_OVERLAY_WINDOW" />
     <uses-permission android:name="android.permission.READ_PHONE_STATE" />
     <uses-permission android:name="android.permission.INTERNET" />
@@ -27,52 +26,45 @@
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
     <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
     <uses-permission android:name="android.permission.CHANGE_NETWORK_STATE" />
-    
-    
 
     <application
         android:name="com.yayawan.impl.YYApplication"
         android:allowBackup="true"
-        
         android:theme="@android:style/Theme.NoTitleBar.Fullscreen" >
         <activity
             android:name="com.yayawan.sdktemplate.MainActivity"
-            android:screenOrientation="landscape"
-            android:label="app_name" >
+            android:label="app_name"
+            android:screenOrientation="landscape" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-      
-        
-      	<!-- 手游互联配置 -->
-     	<meta-data
+
+        <!-- 手游互联配置 -->
+        <meta-data
             android:name="app_id"
             android:value="kk150855726" />
         <meta-data
             android:name="isLandscape"
             android:value="true" />
-    
-        
-        
-        <!--七果sdk配置开始 -->
-        <activity android:name="com.kding.core.plugin.QiGuoActivity"
-                  android:screenOrientation="behind"
-                  android:configChanges="keyboardHidden|orientation|screenSize"
-                  android:theme="@android:style/Theme.Translucent.NoTitleBar"/>     
-        <!--七果sdk配置结束 -->
-        
-		<meta-data
+
+        <!-- 七果sdk配置开始 -->
+        <activity
+            android:name="com.kding.core.plugin.QiGuoActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:screenOrientation="behind"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+        <!-- 七果sdk配置结束 -->
+
+        <meta-data
             android:name="qiguoappid"
             android:value="20170801-BFYXmyjh" />
-		
-		<meta-data
+        <meta-data
             android:name="gid"
             android:value="string16049" />
-
-       	<meta-data
+        <meta-data
             android:name="gamename"
             android:value="乱斗三国志" />
     </application>

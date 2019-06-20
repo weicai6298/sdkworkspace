@@ -141,7 +141,7 @@ public class Help_dissmiss_dialog extends Basedialogview {
 //		machineFactory.MachineView(ll_textline, 0, MATCH_PARENT, 1,
 //				mLinearLayout);
 //		ll_textline.setGravity(Gravity.CENTER_VERTICAL);
-
+//
 //		tv_message1 = new TextView(mActivity);
 //		machineFactory.MachineTextView(tv_message1, WRAP_CONTENT, WRAP_CONTENT,
 //				0, "长按3秒小助手隐藏,摇一摇会重新出现哦.", tv_textsize, mLinearLayout, 10, 0, 0,
@@ -153,9 +153,10 @@ public class Help_dissmiss_dialog extends Basedialogview {
 //				0, "", tv_textsize, mLinearLayout, 0, 0, 0, 0);
 //		tv_userid.setTextColor(Color.parseColor("#ec7600"));
 
+		// TODO
 //		ll_textline.addView(tv_message1);
 //		ll_textline.addView(tv_userid);
-
+//
 //		bt_change = new Button(mActivity);
 //		machineFactory.MachineButton(bt_change, bt_with, 80, 0, "不再提示",
 //				bt_textsize, mLinearLayout, 0, 0, 10, 0);
@@ -164,6 +165,7 @@ public class Help_dissmiss_dialog extends Basedialogview {
 //		bt_change.setTextColor(Color.WHITE);
 		
 
+		// TODO
 //		ll_content.addView(ll_textline);
 //		ll_content.addView(bt_change);
 

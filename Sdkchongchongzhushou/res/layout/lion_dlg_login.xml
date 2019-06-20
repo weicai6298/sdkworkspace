@@ -95,6 +95,7 @@
             </LinearLayout>
 
             <TextView
+                android:id="@+id/lion_dlg_login_notice"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_below="@id/lion_dlg_login_pwd_layout"

@@ -61,7 +61,7 @@
         <!-- 手游互联配置 -->
         <meta-data
             android:name="app_id"
-            android:value="kk442409724" />
+            android:value="kk4187937215" />
         <meta-data
             android:name="isLandscape"
             android:value="true" />
@@ -124,13 +124,13 @@
             android:value="a8c788b5be10f59330a92d45976b6bf9" />
         <meta-data
             android:name="HS_APPID"
-            android:value="363157" />
+            android:value="7459" />
         <meta-data
             android:name="HS_CLIENTID"
-            android:value="820" />
+            android:value="1480" />
         <meta-data
             android:name="HS_CLIENTKEY"
-            android:value="6be1924d13cf8e2a173922349e6e9afe" />
+            android:value="f7edca2a360fd7f6f114d7a7d390554f" />
         <meta-data
             android:name="gamemoneyname"
             android:value="元宝" />

@@ -10,14 +10,10 @@ import org.apache.http.client.methods.HttpPost;
 import org.apache.http.impl.client.DefaultHttpClient;
 import org.apache.http.message.BasicNameValuePair;
 import org.apache.http.protocol.HTTP;
-
-import android.annotation.SuppressLint;
-import android.annotation.TargetApi;
-import android.app.ActionBar;
 import android.app.Activity;
 import android.content.Context;
 import android.content.Intent;
-import android.os.Build;
+import android.content.pm.LauncherApps.Callback;
 import android.util.Log;
 import android.widget.Toast;
 import com.kkgame.sdk.bean.User;
@@ -26,18 +22,26 @@ import com.kkgame.sdkmain.KgameSdk;
 import com.kkgame.utils.DeviceUtil;
 import com.kkgame.utils.Handle;
 import com.kkgame.utils.JSONUtil;
+import com.vivo.unionsdk.open.VivoAccountCallback;
+import com.vivo.unionsdk.open.VivoExitCallback;
+import com.vivo.unionsdk.open.VivoPayCallback;
+import com.vivo.unionsdk.open.VivoPayInfo;
+import com.vivo.unionsdk.open.VivoRoleInfo;
+import com.vivo.unionsdk.open.VivoUnionSDK;
 import com.yayawan.callback.YYWExitCallback;
 import com.yayawan.domain.YYWUser;
 import com.yayawan.main.YYWMain;
 
+@SuppressWarnings("deprecation")
 public class YaYawanconstants {
-
-	//	private static HashMap<String, String> mGoodsid;
 
 	private static Activity mActivity;
 
 	private static boolean isinit = false;
-	
+
+	private static String APPID;
+
+	private static String uid;
 
 	/**
 	 * 初始化sdk
@@ -45,14 +49,17 @@ public class YaYawanconstants {
 	public static void inintsdk(Activity mactivity) {
 		mActivity = mactivity;
 		Yayalog.loger("YaYawanconstants初始化sdk");
+		APPID = ""+DeviceUtil.getGameInfo(mactivity, "vivo_appid");
+		VivoUnionSDK.initSdk(mactivity, APPID, false);
 		isinit = true ;
+		logincallback(mactivity);
 	}
 
 	/**
 	 * application初始化
 	 */
 	public static void applicationInit(Context applicationContext) {
-	
+		
 	}
 
 	/**
@@ -61,7 +68,7 @@ public class YaYawanconstants {
 	public static void login(final Activity mactivity) {
 		Yayalog.loger("YaYawanconstantssdk登录");
 		if(isinit){
-			
+			VivoUnionSDK.login(mactivity);
 		}else{
 			inintsdk(mactivity);
 		}
@@ -71,53 +78,76 @@ public class YaYawanconstants {
 	 * 支付
 	 * @param mactivity
 	 */
-	public static void pay(Activity mactivity, String morderid) {
+	public static void pay(Activity mactivity, String morderid, String assessKey, String order_id) {
 		Yayalog.loger("YaYawanconstantssdk支付");
-		
+		VivoPayInfo payinfo = new VivoPayInfo(YYWMain.mOrder.goods,YYWMain.mOrder.goods, YYWMain.mOrder.money+"", assessKey, APPID, order_id, uid);
+		VivoUnionSDK.pay(mactivity, payinfo, mVivoPayCallback);
 	}
+	
+	private static VivoPayCallback mVivoPayCallback = new VivoPayCallback() {
+        //客户端返回的支付结果不可靠，请以服务器端最终的支付结果为准；
+        public void onVivoPayResult(String transNo, boolean isSucc, String errorCode) {
+        	Log.i("tag","transNo="+transNo);
+        	Log.i("tag","isSucc="+isSucc);
+        	Log.i("tag","errorCode="+errorCode);
+            if (isSucc) {
+            	Log.i("tag", "支付成功");
+				paySuce();
+				Log.i("tag", "支付成功1");
+//                Toast.makeText(MainActivity.this, "支付成功", Toast.LENGTH_SHORT).show();
+            } else {
+            	Log.i("tag", "支付失败1");
+				payFail();
+				Log.i("tag", "支付失败1");
+//                Toast.makeText(MainActivity.this, "支付失败", Toast.LENGTH_SHORT).show();
+            }
+        };
+    };
 
 	/**
 	 * 退出
-	 * 
 	 * @param paramActivity
 	 * @param callback
 	 */
-	public static void exit(Activity paramActivity,
-			final YYWExitCallback callback) {
+	public static void exit(final Activity paramActivity,final YYWExitCallback callback) {
 		Yayalog.loger("YaYawanconstantssdk退出");
-
-		KgameSdk.Exitgame(paramActivity, new KgameSdkCallback() {
-
+paramActivity.runOnUiThread(new Runnable() {
+	
+	@Override
+	public void run() {
+		VivoUnionSDK.exit(paramActivity, new VivoExitCallback() {
+			
 			@Override
-			public void onSuccess(User arg0, int arg1) {
+			public void onExitConfirm() {
 				callback.onExit();
 			}
-
+			
 			@Override
-			public void onLogout() {
-
-			}
-
-			@Override
-			public void onError(int arg0) {
-
-			}
-
-			@Override
-			public void onCancel() {
-
+			public void onExitCancel() {
+				
 			}
 		});
 	}
+});
+	}
 
-	/**
+	/** 
 	 * 设置角色信息
-	 * 
 	 */
 	public static void setData(Activity paramActivity, String roleId, String roleName,String roleLevel, String zoneId, String zoneName, String roleCTime,String ext){
 		Yayalog.loger("YaYawanconstants设置角色信息");
 		//角色创建时间
-//		HttpPost(roleId,roleName,roleLevel,zoneId,zoneName,roleCTime);
+		//		HttpPost(roleId,roleName,roleLevel,zoneId,zoneName,roleCTime);
+
+		//1为角色登陆成功  2为角色创建  3为角色升级
+		
+		if(Integer.parseInt(ext) == 1){
+			VivoUnionSDK.reportRoleInfo(new VivoRoleInfo(roleId, roleLevel, roleName, zoneId, zoneName));
+		}else if(Integer.parseInt(ext) == 2){
+			
+		}else if(Integer.parseInt(ext) == 3){
+			
+		}
 	}
 
 	public static void onResume(Activity paramActivity) {
@@ -132,8 +162,7 @@ public class YaYawanconstants {
 
 	}
 
-	public static void onActivityResult(Activity paramActivity, int paramInt1,
-			int paramInt2, Intent paramIntent) {
+	public static void onActivityResult(Activity paramActivity, int paramInt1,int paramInt2, Intent paramIntent) {
 
 	}
 
@@ -168,8 +197,7 @@ public class YaYawanconstants {
 	 * @param session
 	 *            token验证码
 	 */
-	public static void loginSuce(Activity mactivity, String uid,
-			String username, String session) {
+	public static void loginSuce(Activity mactivity, String uid,String username, String session) {
 
 		YYWMain.mUser = new YYWUser();
 
@@ -182,7 +210,7 @@ public class YaYawanconstants {
 					+ uid + "";
 		}
 
-		// YYWMain.mUser.nick = data.getNickName();
+//		 YYWMain.mUser.nick = data.getNickName();
 		YYWMain.mUser.token = JSONUtil.formatToken(mactivity, session,
 				YYWMain.mUser.userName);
 
@@ -200,7 +228,6 @@ public class YaYawanconstants {
 	public static void loginOut() {
 		if (YYWMain.mUserCallBack != null) {
 			YYWMain.mUserCallBack.onLogout(null);
-
 		}
 	}
 	/**
@@ -250,6 +277,7 @@ public class YaYawanconstants {
 	 * 请求上报角色信息
 	 * 
 	 */
+	@SuppressWarnings("unused")
 	private static void HttpPost(final String roleId, final String roleName,final String roleLevel, final String zoneId, final String zoneName, final String roleCTime) {
 		new Thread(new Runnable() {
 
@@ -271,21 +299,12 @@ public class YaYawanconstants {
 						httpPost.setEntity(new UrlEncodedFormEntity(params,
 								HTTP.UTF_8));
 						HttpResponse httpResponse = new DefaultHttpClient()
-								.execute(httpPost);
+						.execute(httpPost);
 						Log.i("tag",
 								"httpResponse.getStatusLine().getStatusCode()="
 										+ httpResponse.getStatusLine()
-												.getStatusCode());
+										.getStatusCode());
 						if (httpResponse.getStatusLine().getStatusCode() == 200) {
-//							String re = EntityUtils.toString(httpResponse
-//									.getEntity());
-//							Log.i("tag", "re=" + re);
-//							JSONObject js = new JSONObject(re);
-//							Log.i("tag", "js=" + js);
-//							uid = js.getString("uid");
-//							Log.i("tag", "uid=" + uid);
-//							Log.i("tag", "token=" + token);
-//							loginSuce(mActivity, uid, uid, token);
 							Toast("角色上报成功");
 						}
 
@@ -300,4 +319,34 @@ public class YaYawanconstants {
 		}).start();
 	}
 
+
+	private static void logincallback(final Activity mactivity){
+		VivoUnionSDK.registerAccountCallback(mactivity, new VivoAccountCallback() {
+			
+			@Override
+			public void onVivoAccountLogout(int arg0) {
+				mActivity.runOnUiThread(new Runnable() {
+					public void run() {
+						loginOut();
+					}
+				});
+			}
+			
+			@Override
+			public void onVivoAccountLoginCancel() {
+				loginFail();
+				Toast("登录取消");
+			}
+			
+			@Override
+			public void onVivoAccountLogin(String username, String openid, String authtoken) {
+				Log.i("tag", "openid = " +openid);
+				Log.i("tag", "username = " +username);
+				Log.i("tag", "authtoken = " +authtoken);
+				uid = openid;
+				loginSuce(mactivity, openid, username, authtoken);
+				Toast("登录成功");
+			}
+		});
+	}
 }

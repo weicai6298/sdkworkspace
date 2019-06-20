@@ -11,6 +11,7 @@
         android:layout_height="@dimen/zzz_title_height"
         android:layout_marginLeft="@dimen/zzz_second_title_back_marginLeft"
         android:drawableLeft="@drawable/zzz_back_src_light"
+        android:layout_marginRight="@dimen/zzz_title_height"
         android:drawablePadding="@dimen/zzz_second_title_back_marginRight"
         android:ellipsize="end"
         android:gravity="center_vertical"
@@ -19,4 +20,13 @@
         android:textColor="@color/zzz_title_text_color"
         android:textSize="@dimen/zzz_title_textsize"/>
 
+    <View
+        android:id="@+id/zzz_title_close"
+        android:layout_width="@dimen/zzz_title_close_height"
+        android:layout_height="@dimen/zzz_title_close_height"
+        android:layout_centerVertical="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="@dimen/zzz_second_title_back_marginLeft"
+        android:background="@drawable/zzz_common_title_close"
+        android:visibility="gone"/>
 </RelativeLayout>

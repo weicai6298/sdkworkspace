@@ -11,60 +11,68 @@
         android:id="@+id/ll_cash_coupon"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="vertical"
-        android:background="@drawable/ipay_cash_coupon_bg"
         android:layout_alignParentBottom="true"
         android:layout_marginLeft="@dimen/ipay_margin_10"
         android:layout_marginRight="@dimen/ipay_margin_10"
-        android:layout_marginTop="@dimen/ipay_height_150">
+        android:layout_marginTop="@dimen/ipay_height_150"
+        android:background="@drawable/ipay_cash_coupon_bg"
+        android:orientation="vertical">
+
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="@dimen/ipay_height_40"
-            android:orientation="horizontal"
             android:gravity="center"
+            android:orientation="horizontal"
             >
+
             <LinearLayout
                 android:id="@+id/img_cash_coupon_close"
                 android:layout_width="@dimen/ipay_height_40"
                 android:layout_height="@dimen/ipay_height_40"
                 android:gravity="center"
                 >
+
                 <ImageView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:src="@drawable/ipay_dialog_close"
                     />
             </LinearLayout>
+
             <TextView
                 android:id="@+id/tv_cash_coupon_title"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:textSize="@dimen/ipay_text_size_15"
-                android:textColor="@color/ipay_color_value_6"
                 android:gravity="center"
+                android:textColor="@color/ipay_color_value_6"
+                android:textSize="@dimen/ipay_text_size_15"
                 />
+
             <TextView
                 android:id="@+id/tv_cash_coupon_showall"
                 android:layout_width="@dimen/ipay_height_40"
                 android:layout_height="wrap_content"
+                android:layout_marginRight="@dimen/ipay_margin_15"
                 android:text=""
                 android:textColor="@color/ipay_color_value_7"
                 android:textSize="@dimen/ipay_text_size_13"
-                android:layout_marginRight="@dimen/ipay_margin_15"
                 />
         </LinearLayout>
+
         <View
             android:layout_width="match_parent"
             android:layout_height="0.5dp"
             android:background="@color/ipay_color_value_3_1"></View>
+
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="@dimen/ipay_height_27"
-            android:layout_marginRight="@dimen/ipay_margin_10"
             android:layout_marginLeft="@dimen/ipay_margin_10"
+            android:layout_marginRight="@dimen/ipay_margin_10"
             android:gravity="center_vertical"
             >
+
             <TextView
                 android:id="@+id/tv_cash_coupon_selected_amount"
                 android:layout_width="wrap_content"
@@ -73,92 +81,107 @@
                 android:textColor="@color/ipay_color_value_4"
                 android:textSize="@dimen/ipay_text_size_11"
                 />
+
             <TextView
                 android:id="@+id/tv_cash_coupon_production"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:textSize="@dimen/ipay_text_size_11"
                 android:textColor="@color/ipay_color_value_5"
+                android:textSize="@dimen/ipay_text_size_11"
                 />
         </LinearLayout>
+
         <View
             android:layout_width="match_parent"
             android:layout_height="0.5dp"
             android:background="@color/ipay_color_value_3_1"></View>
+
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:background="@color/ipay_color_value_2">
+
             <RelativeLayout
                 android:id="@+id/re_no_use_cash"
                 android:layout_width="match_parent"
                 android:layout_height="@dimen/ipay_height_45"
                 android:layout_margin="@dimen/ipay_margin_10"
-                android:background="@color/ipay_color_value_1"
-                android:gravity="center_vertical">
+                android:background="@color/ipay_color_value_1">
+
                 <TextView
                     android:id="@+id/tv_cash"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="@dimen/ipay_margin_10"
                     android:textColor="@color/ipay_color_value_7"
-                    android:textSize="@dimen/ipay_text_size_12"
-                    android:layout_marginLeft="@dimen/ipay_margin_10"/>
+                    android:textSize="@dimen/ipay_text_size_12"/>
+
                 <CheckBox
                     android:id="@+id/ipay_check"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_alignParentRight="true"
-                    android:clickable="false"
+                    android:layout_centerVertical="true"
                     android:layout_marginRight="@dimen/ipay_margin_15"
                     android:button="@drawable/ipay_checkbox_button_bg"
+                    android:clickable="false"
                     />
             </RelativeLayout>
         </LinearLayout>
+
         <com.samsung.refreshtoload.SwipeToLoadLayout
             android:id="@+id/layout_pullrefresh"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:paddingRight="@dimen/ipay_margin_10"
-            android:paddingLeft="@dimen/ipay_margin_10"
             android:background="@color/ipay_color_value_2"
+            android:paddingLeft="@dimen/ipay_margin_10"
+            android:paddingRight="@dimen/ipay_margin_10"
             >
-           <include android:id="@id/swipe_refresh_header" layout="@layout/ipay_layout_refresh_header"/>
+
+            <include
+                android:id="@id/swipe_refresh_header"
+                layout="@layout/ipay_layout_refresh_header"/>
+
             <ListView
                 android:id="@id/swipe_target"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:background="@color/ipay_color_value_2"
-                android:dividerHeight="0dp"
                 android:divider="#000000"
+                android:dividerHeight="0dp"
                 android:listSelector="@android:color/transparent"
                 android:scrollbars="none">
             </ListView>
+
             <include
                 android:id="@id/swipe_load_more_footer"
                 layout="@layout/ipay_layout_loadmore_footer"
                 android:visibility="gone"/>
         </com.samsung.refreshtoload.SwipeToLoadLayout>
     </LinearLayout>
+
     <View
         android:layout_width="match_parent"
         android:layout_height="4dp"
-        android:background="@drawable/ipay_ui_shadow_up"
         android:layout_above="@id/tv_cash_coupon_ok"
+        android:background="@drawable/ipay_ui_shadow_up"
         />
+
     <TextView
         android:id="@+id/tv_cash_coupon_ok"
         android:layout_width="match_parent"
         android:layout_height="@dimen/ipay_height_39"
-        android:background="@drawable/ipay_common_btn_top_circle_corner_bg"
         android:layout_alignBottom="@id/ll_cash_coupon"
+        android:layout_marginLeft="@dimen/ipay_margin_10"
+        android:layout_marginRight="@dimen/ipay_margin_10"
+        android:background="@drawable/ipay_common_btn_top_circle_corner_bg"
+        android:clickable="true"
+        android:focusable="true"
+        android:gravity="center"
         android:text="@string/ipay_ensure"
         android:textColor="@color/ipay_color_value_1"
         android:textSize="@dimen/ipay_text_size_15"
-        android:gravity="center"
-        android:layout_marginLeft="@dimen/ipay_margin_10"
-        android:layout_marginRight="@dimen/ipay_margin_10"
-        android:clickable="true"
-        android:focusable="true"
         />
 
 </RelativeLayout>

@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/bsgamesdk_touristMainLayout"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:gravity="center"
+    android:orientation="vertical"
+    android:background="?attr/bsgamesdk_main_background" >
+    
+    <include
+        android:id="@+id/bsgamesdk_titleLayout"
+        layout="@layout/bsgamesdk_title" 
+        android:visibility="gone"/>
+
+    <include
+        android:id="@+id/bsgamesdk_areaLayout"
+        layout="@layout/bsgamesdk_area"
+        android:visibility="gone" />
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:background="@color/bsgamesdk_transparent"
+        android:gravity="center"
+        android:orientation="vertical" >
+
+        <include 
+            android:id="@+id/bsgamesdk_touristWelLayout"
+            layout="@layout/bsgamesdk_tourist_wel" 
+            android:visibility="gone"
+            />
+
+        <include
+            android:id="@+id/bsgamesdk_touristBindLayout"
+            layout="@layout/bsgamesdk_tourist_bind"
+            android:visibility="gone" />
+        
+        <include
+            android:id="@+id/bsgamesdk_touristCaptchaLayout"
+            layout="@layout/bsgamesdk_captcha"
+            android:visibility="gone" />
+
+        <include
+            android:id="@+id/bsgamesdk_touristPayLayout"
+            layout="@layout/bsgamesdk_tourist_pay"
+            android:visibility="gone"
+            />
+
+        <include
+            android:id="@+id/bsgamesdk_touristAuthLayout"
+            layout="@layout/bsgamesdk_authentication"
+            android:visibility="gone"
+            />
+
+        <include
+            android:id="@+id/bsgamesdk_antiIndulgenceLayout"
+            layout="@layout/bsgamesdk_antiindulgence_tip"
+            android:visibility="gone"
+            />
+    </LinearLayout>
+  
+</LinearLayout>

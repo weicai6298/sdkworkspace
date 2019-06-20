@@ -41,26 +41,25 @@ public class YaYawanconstants {
 	public static void inintsdk(Activity mactivity) {
 		mActivity = mactivity;
 		Yayalog.loger("YaYawanconstants初始化sdk");
-		String AppID = ""+DeviceUtil.getGameInfo(mactivity, "AppID");
-		Log.i("tag","AppID="+AppID);
-		String AppKey = ""+DeviceUtil.getGameInfo(mactivity, "AppKey");
-		Log.i("tag","AppKey="+AppKey);
-		appInfo = new MiAppInfo();
-		appInfo.setAppId( AppID );
-		appInfo.setAppKey( AppKey );
-		appInfo.setAppType(MiAppType.online);
-		appInfo.setOrientation( DeviceUtil.isLandscape(mactivity)?ScreenOrientation.horizontal:ScreenOrientation.vertical ); //横竖屏
-		MiCommplatform.Init( mactivity, appInfo );
-		isinit = true;
-//		login(mactivity);
-		Log.i("tag","初始化结束");
 	}
 
 	/**
 	 * application初始化
 	 */
 	public static void applicationInit(Context applicationContext) {
-		
+		String AppID = ""+DeviceUtil.getGameInfo(applicationContext, "AppID");
+		Log.i("tag","AppID="+AppID);
+		String AppKey = ""+DeviceUtil.getGameInfo(applicationContext, "AppKey");
+		Log.i("tag","AppKey="+AppKey);
+		appInfo = new MiAppInfo();
+		appInfo.setAppId(AppID);
+		appInfo.setAppKey(AppKey);
+		appInfo.setAppType(MiAppType.online);
+//		appInfo.setOrientation( DeviceUtil.isLandscape(mactivity)?ScreenOrientation.horizontal:ScreenOrientation.vertical ); //横竖屏
+		MiCommplatform.Init(applicationContext, appInfo );
+		isinit = true;
+//		login(mactivity);
+		Log.i("tag","初始化结束");
 	}
 
 	static OnLoginProcessListener logincall = new OnLoginProcessListener() {
@@ -106,9 +105,8 @@ public class YaYawanconstants {
 	 */
 	public static void login(final Activity mactivity) {
 		Yayalog.loger("YaYawanconstantssdk登录");
-
 		if(isinit){
-			MiCommplatform.getInstance().miLogin(mActivity, logincall);
+					MiCommplatform.getInstance().miLogin(mActivity, logincall);
 		}else{
 			inintsdk(mactivity);
 		}

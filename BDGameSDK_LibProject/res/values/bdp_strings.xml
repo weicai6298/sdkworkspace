@@ -1,12 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-    <!--
-    string name="app_name">OpenGameSdk</string>
-    <string name="action_settings">Settings</string>
-    <string name="hello_world">Hello world!</string
-    -->
-
     <string name="bdp_image">Image</string>
     <string name="bdp_ok">确定</string>
     <string name="bdp_next">下一步</string>
@@ -18,7 +12,7 @@
     <string name="bdp_customer_support">客服：</string>
     <string name="bdp_customer_support_phone">10101866</string>
     <string name="bdp_verify_code_null">验证码不能为空</string>
-    <string name="bdp_success">成功</string>
+    <string name="bdp_success">操作成功</string>
     <string name="bdp_fail">失败</string>
     <string name="bdp_yes">是</string>
     <string name="bdp_no">否</string>
@@ -38,8 +32,8 @@
     <string name="bdp_dialog_accountforbidden_desc">详情请致电百度游戏客服</string>
     <string name="bdp_account_login_title_baidu_long">百度账号登录</string>
     <string name="bdp_account_login_title_baidu">百度登录</string>
-    <string name="bdp_account_login_title_91">91登录</string>
-    <string name="bdp_account_login_title_dk">多酷登录</string>
+    <string name="bdp_account_login_title_91">91账号登录</string>
+    <string name="bdp_account_login_title_dk">多酷账号登录</string>
     <string name="bdp_account_title_back">&lt;返回</string>
     <string name="bdp_account_login_hint_account_baidu">手机号/邮箱/用户名</string>
     <string name="bdp_account_login_hint_account_91">手机号/邮箱/通行证</string>
@@ -54,11 +48,12 @@
     <string name="bdp_account_login_type_confirm_phone">手机号</string>
     <string name="bdp_account_login_type_confirm_username">用户名</string>
     <string name="bdp_account_login_welcome">欢迎回来%1$s</string>
+    <string name="bdp_account_login_welcome_guest">欢迎回来,游客%1$s</string>
     <string name="bdp_account_one_key_register">手机一键注册</string>
-    <string name="bdp_account_fast_play">快速试玩</string>
+    <string name="bdp_account_fast_play">账号注册</string>
     <string name="bdp_account_guest_beyond_quota">今日试玩账号已分配完，注册账号也很快哟~</string>
-    <string name="bdp_account_username_register">用户名注册 &gt;</string>
-    <string name="bdp_account_other_login">用其他账号登录</string>
+    <string name="bdp_account_username_register">账号注册</string>
+    <string name="bdp_account_other_login">其他登录方式</string>
     <string name="bdp_account_other_login_91">91账号\u3000</string>
     <string name="bdp_account_other_login_dk">多酷账号</string>
     <string name="bdp_account_customer_service">客服:</string>
@@ -81,6 +76,7 @@
     <string name="bdp_account_autologin_type_baidu">百度账号</string>
     <string name="bdp_account_autologin_type_91">91账号</string>
     <string name="bdp_account_autologin_type_dk">多酷账号</string>
+    <string name="bdp_account_autologin_type_guest">游客账号</string>
     <string name="bdp_account_autologin_fail">自动登录失败</string>
     <string name="bdp_account_third_no_bind_title">业务调整通知</string>
     <string name="bdp_account_third_no_bind_tip">尊敬的用户：\n\n\t您好，由于业务调整，91游戏已经关闭了第三方账号的新用户登录服务，由此给您带来的不便，我们深感抱歉！</string>
@@ -196,7 +192,7 @@
     <string name="bdp_sdk_pay_error_4">无效的支付价格与兑换比率</string>
     <string name="bdp_sdk_pay_error_5">无效的支付订单编号</string>
     <string name="bdp_sdk_pay_error_6">订单异常，请重新支付</string>
-    <string name="bdp_passport_login">登录</string>
+    <string name="bdp_passport_login">进入游戏</string>
     <string name="bdp_passport_logut">登出</string>
     <string name="bdp_passport_register">注册成功</string>
     <string name="bdp_passport_pay">支付成功</string>
@@ -246,7 +242,7 @@
     <string name="bdp_amazing_loading">努力加载中…</string>
     <string name="bdp_amazing_loading_fail">获取失败，请点击重试……</string>
     <string name="bdp_amazing_loading_no_more_page">已经到底啦</string>
-    <string name="bdp_sso_login_title">百度账号授权登录</string>
+    <string name="bdp_sso_login_title">账号授权登录</string>
     <string name="bdp_sso_login_loading">正在授权中…</string>
     <string name="bdp_sso_login_fail">授权失败</string>
 
@@ -496,12 +492,12 @@
     <string name="bdp_paycenter_voucher_expire">(%1$s到期)</string>
     <string name="bdp_paycenter_use_baidu_bean">使用百度币</string>
     <string name="bdp_paycenter_pay_amount">支付：%1$s元</string>
-    <string name="bdp_paycenter_kudian_pay_tips">确认要使用%1$s元酷点支付？超出金额部分将自动作废。</string>
-    <string name="bdp_paycenter_voucher_pay_tips">确认要使用%1$s元代金券支付？超出金额部分将自动作废。</string>
-    <string name="bdp_paycenter_balance_voucher_pay_tips">本次使用余额代金券%1$s元，剩余%2$s元可下次使用。</string>
-    <string name="bdp_paycenter_balance_kudian_pay_tips">本次使用余额酷点%1$s元，剩余%2$s元可下次使用。</string>
-    <string name="bdp_paycenter_balance_voucher_pay_tips_1">确认使用余额%1$s元代金券支付，超出金额将作废。</string>
-    <string name="bdp_paycenter_balance_kudian_pay_tips_1">确认使用余额%1$s元酷点支付，超出金额将作废。</string>
+    <string name="bdp_paycenter_kudian_pay_tips">确认使用%1$s酷点支付？</string>
+    <string name="bdp_paycenter_voucher_pay_tips">确认使用%1$s元代金券支付？未用余额将自动作废。</string>
+    <string name="bdp_paycenter_balance_voucher_pay_tips">本次使用%1$s元代金券支付，剩余%2$s元可下次再用。</string>
+    <string name="bdp_paycenter_balance_kudian_pay_tips">本次使用%1$s酷点支付，剩余%2$s酷点可下次再用。</string>
+    <string name="bdp_paycenter_balance_voucher_pay_tips_1">确认使用%1$s元代金券支付，未用余额将自动作废。</string>
+    <string name="bdp_paycenter_balance_kudian_pay_tips_1">确认使用余额%1$s酷点支付？</string>
     <string name="bdp_alipay_install_fail">支付宝插件安装失败</string>
     <string name="bdp_paycenter_channel_check_fail">支付渠道信息验证失败!!</string>
     <string name="bdp_realname_auth_under_age">您未满18周岁</string>
@@ -521,5 +517,38 @@
     <string name="bdp_hint_modify_pass">请到百度首页登录并修改密码</string>
     <string name="bdp_hint_bind_mobile">请到百度首页登录并绑定手机</string>
     <string name="bdp_hint_rebind_mobile">请到百度首页登录并换绑手机</string>
+
+    <!-- 4.1 account_modify -->
+    <string name="bdp_account_user_login">账号登录</string>
+    <string name="bdp_account_guest_login">游客登录</string>
+    <string name="bdp_account_login_by_phone_baidu">手机号登录</string>
+    <string name="bdp_account_login_by_phone_dk">手机号登录</string>
+    <string name="bdp_account_reg_by_phone_baidu">百度账号注册</string>
+    <string name="bdp_account_reg_by_phone_dk">手机号注册</string>
+    <string name="bdp_account_reg_by_username_dk">多酷账号注册</string>
+    <string name="bdp_account_select_login_type">请选择登录方式</string>
+    <string name="bdp_account_upgrade">立即绑定</string>
+    <string name="bdp_account_upgrade_now">立即升级</string>
+    <string name="bdp_account_bind_dk_phone">绑定手机号</string>
+    <string name="bdp_account_bind_bd_phone">绑定手机号</string>
+    <string name="bdp_account_bind_dk_account">绑定多酷账号</string>
+    <string name="bdp_account_bind_bd_account">绑定百度账号</string>
+    <string name="bdp_account_reg_and_bind">注册并绑定</string>
+    <string name="bdp_account_reg_user_name">使用多酷账号</string>
+    <string name="bdp_account_reg_user_use_bd">使用百度账号</string>
+    <string name="bdp_account_reg_user_use_dkphone">使用多酷手机号</string>
+    <string name="bdp_account_upgrade_login_hint">当前为游客账号，请尽快升级</string>
+    <string name="bdp_account_upgrade_float_hint">当前为游客账号，请升级后查看</string>
+    <string name="bdp_account_upgrade_pay_hint">当前为游客账号，请升级后支付</string>
+    <string name="bdp_account_enter_game">进入游戏</string>
+    <string name="bdp_account_guest">游客</string>
+    <string name="bdp_account_bind_fail">绑定失败</string>
+    <string name="bdp_account_change_account_bind">换个账号绑定</string>
+    <string name="bdp_account_use_account_login">使用账号登录</string>
+    <string name="bdp_account_bind_success">您的账号已升级完毕</string>
+    <string name="bdp_account_auto_logining">自动登录中&#8230;</string>
+    <string name="bdp_account_enter_pay">进入支付页面&#8230;</string>
+    <string name="bdp_account_pass_login">授权登录</string>
+    <string name="bdp_account_go_and_register">前往注册</string>
 
 </resources>

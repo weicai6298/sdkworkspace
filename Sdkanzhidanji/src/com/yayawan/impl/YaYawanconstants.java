@@ -19,6 +19,8 @@ import android.app.Activity;
 import android.content.Context;
 import android.content.Intent;
 import android.util.Log;
+import android.widget.Toast;
+
 import com.anzhi.sdk.middle.single.manage.AnzhiSingleSDK;
 import com.anzhi.sdk.middle.single.manage.CPInfo;
 import com.anzhi.sdk.middle.single.manage.SingleGameCallBack;
@@ -26,6 +28,12 @@ import com.anzhi.sdk.middle.single.util.MD5;
 import com.kkgame.utils.DeviceUtil;
 import com.kkgame.utils.Handle;
 import com.kkgame.utils.JSONUtil;
+import com.lidroid.jxutils.HttpUtils;
+import com.lidroid.jxutils.exception.HttpException;
+import com.lidroid.jxutils.http.RequestParams;
+import com.lidroid.jxutils.http.ResponseInfo;
+import com.lidroid.jxutils.http.callback.RequestCallBack;
+import com.lidroid.jxutils.http.client.HttpRequest.HttpMethod;
 import com.yayawan.callback.YYWExitCallback;
 import com.yayawan.domain.YYWUser;
 import com.yayawan.main.YYWMain;
@@ -46,6 +54,8 @@ public class YaYawanconstants {
 	private static String AppSecret;
 
 	private static JSONObject gameInfoJson;
+	
+	private static YYWExitCallback exitcallback;
 	/**
 	 * 初始化sdk
 	 */
@@ -106,67 +116,41 @@ public class YaYawanconstants {
 					JSONObject json = new JSONObject(result);
 					if (json.optInt("code") == 200) { // 登录成功
 						gameInfoJson = new JSONObject();
-						try {
-							//                            gameInfoJson.put(GAMEAREAID, "服务区编号");
-							//                            gameInfoJson.put(GAME_AREA, "服务区1");
-							//                            gameInfoJson.put(GAME_LEVEL, "99级");
-							//                            gameInfoJson.put(ROLE_ID, "123");
-							//                            gameInfoJson.put(USER_ROLE, "xy");
-							Log.i("tag","gameInfoJson="+gameInfoJson.toString());
-							Log.i("tag","json="+json);
-							//                        	String tempuid = Sputils.getSPstring("uid", "tem", mActivity);
-							//                        	if (tempuid.equals("tem")) {
-							//                        	String uidtemp=System.currentTimeMillis()+"kk";
-							//                			String uid=uidtemp.substring(4, uidtemp.length())+new Random().nextInt(10);
-							//                			Sputils.putSPstring("uid", uid, mActivity);
 							String cptoken =json.getString("cptoken");
 							String request_url =json.getString("requestUrl");
 							String deviceid =json.getString("deviceId");
-							Log.i("tag","cptoken="+cptoken);
-							Log.i("tag","request_url="+request_url);
-							Log.i("tag","deviceid="+request_url);
-							HttpPost httpPost = new HttpPost("https://api.sdk.75757.com/data/get_uid/");
-//							Log.i("tag","httpPost="+httpPost);
-							 List<NameValuePair> params = new ArrayList<NameValuePair>(); 
-						        params.add(new BasicNameValuePair("app_id", DeviceUtil.getAppid(mActivity))); 
-						        params.add(new BasicNameValuePair("cptoken", cptoken)); 
-						        params.add(new BasicNameValuePair("request_url", request_url));
-						        params.add(new BasicNameValuePair("deviceid", deviceid));
-						        
-						        Log.i("tag","params="+params);
-						        try { 
-						            // 设置httpPost请求参数 
-						        	Log.i("tag","httpPost1");
-//						        	HttpClient hc = new DefaultHttpClient();
-						            httpPost.setEntity(new UrlEncodedFormEntity(params, HTTP.UTF_8)); 
-						            Log.i("tag","httpPost2");
-//						            HttpGet hg = new HttpGet("http://gameapi.weisuiyu.com/");
-						            HttpResponse httpResponse = new DefaultHttpClient().execute(httpPost); 
-						            Log.i("tag","httpPost3");
-						            Log.i("tag","httpResponse.getStatusLine().getStatusCode()="+httpResponse.getStatusLine().getStatusCode());
-						            if(httpResponse.getStatusLine().getStatusCode() == 200){
-						            	String re = EntityUtils.toString(httpResponse.getEntity());
-						            	Log.i("tag","re="+re);
-						            	JSONObject js = new JSONObject(re);
-						            	Log.i("tag","js="+js);
-						            	String uid = js.getString("uid");
-						            	Log.i("tag","uid="+uid);
-						            	loginSuce(mActivity, uid, uid, uid);
-						            	
-						            }
-						        }catch(ClientProtocolException e){
-						        	e.printStackTrace();
-						        }
+							
+							HttpUtils httpUtil = new HttpUtils();
+							String url = "https://api.sdk.75757.com/data/get_uid/";
+							RequestParams requestParams = new RequestParams();
+							requestParams.addBodyParameter("app_id",DeviceUtil.getAppid(mActivity));
+							requestParams.addBodyParameter("cptoken", cptoken);
+							requestParams.addBodyParameter("request_url", request_url);
+							requestParams.addBodyParameter("deviceid", deviceid);
+							httpUtil.send(HttpMethod.POST, url, requestParams,
+									new RequestCallBack<String>() {
 
-						}catch (Exception e) {
+										@Override
+										public void onFailure(HttpException arg0, String arg1) {
+											// TODO Auto-generated method stub
+											Yayalog.loger("请求失败"+arg1.toString());
+										}
 
-						}
-						//                        midManage.subGameInfo(gameInfoJson.toString());
-						//                        mHandler.post(new Runnable() {
-						//                            public void run() {
-						//                                btn_login.setVisibility(View.GONE);
-						//                            }
-						//                        });
+										@Override
+										public void onSuccess(ResponseInfo<String> arg0) {
+											// TODO Auto-generated method stub
+											try {
+												Yayalog.loger("请求成功"+arg0.result);
+												JSONObject obj = new JSONObject(arg0.result);
+												String uid = obj.getString("uid");
+												Yayalog.loger("uid ="+uid);
+												loginSuce(mActivity, uid, uid, uid);
+												Toast("登录成功");
+											} catch (JSONException e) {
+												e.printStackTrace();
+											}
+										}
+									});
 					}
 				} catch (JSONException e) {
 				}
@@ -179,23 +163,16 @@ public class YaYawanconstants {
 				JSONObject JS = null;
 				try {
 					JS = new JSONObject(result);
-					Log.i("tag", "paystatus+JS=: " + JS);
 					String paystatus = JS.getString("payStatus");
-					Log.i("tag", "paystatus: " + paystatus);
 					if(paystatus.equals("1")){
-						Log.i("tag", "支付成功");
 						paySuce();
-						Log.i("tag", "支付成功1");
 					}else if(paystatus.equals("3")){
-						Log.i("tag", "支付失败1");
 						payFail();
-						Log.i("tag", "支付失败1");
 					}
 				} catch (JSONException e2) {
 					// TODO Auto-generated catch block
 					e2.printStackTrace();
 				}
-				Log.i("tag",  "json+result: " + JS);
 //				if(pays){}
 				paySuce();
 				//                mHandler.post(new Runnable() {
@@ -207,26 +184,26 @@ public class YaYawanconstants {
 				break;
 				
 			case SingleGameCallBack.SDK_TYPE_CANCEL_PAY:
-				Log.i("tag", "支付取消1");
 				payFail();
-				Log.i("tag", "支付取消1");
 				
 				break;
 
 			case SingleGameCallBack.SDK_TYPE_EXIT_GAME: // 退出游戏操作
+//				exitcallback.onExit();
 				mActivity.finish();
+				System.exit(0);
 				//            	fs(mActivity, callback);
-				if (result != null) {
-					try {
-						JSONObject json = new JSONObject(result);
-						boolean killSelf = json.optBoolean("killSelf");
-						if (killSelf) { // 是否为完全退出，如果为true需要游戏方以杀进程方式退出
-							System.exit(0);
-						}
-					} catch (JSONException e) {
-						e.printStackTrace();
-					}
-				}
+//				if (result != null) {
+//					try {
+//						JSONObject json = new JSONObject(result);
+//						boolean killSelf = json.optBoolean("killSelf");
+//						if (killSelf) { // 是否为完全退出，如果为true需要游戏方以杀进程方式退出
+//							System.exit(0);
+//						}
+//					} catch (JSONException e) {
+//						e.printStackTrace();
+//					}
+//				}
 				break;
 			case SingleGameCallBack.SDK_TYPE_CANCEL_EXIT_GAME: // 取消退出游戏操作
 				break;
@@ -310,6 +287,7 @@ public class YaYawanconstants {
 			
 			@Override
 			public void run() {
+				exitcallback = callback;
 				midManage.exitGame(mActivity);
 			}
 		});
@@ -463,7 +441,15 @@ public class YaYawanconstants {
 
 
 
+	public static void Toast(final String msg){
+		mActivity.runOnUiThread(new Runnable() {
 
+			@Override
+			public void run() {
+				Toast.makeText(mActivity, msg, Toast.LENGTH_SHORT).show();	
+			}
+		});
+	}
 
 
 }

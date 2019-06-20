@@ -13,7 +13,6 @@ import android.content.pm.PackageManager.NameNotFoundException;
 import android.net.Uri;
 import android.os.Environment;
 import android.text.TextUtils;
-import android.util.Log;
 import android.view.View;
 import android.view.View.OnClickListener;
 
@@ -148,7 +147,10 @@ public class JFupdateUtils {
 		JSONObject jsonObject2 = new JSONObject(ret);
 
 		err_code = jsonObject2.optInt("err_code");
-
+		String err_msg=jsonObject2.optString("err_msg");
+		if (err_msg.equals("无此类数据")) {
+			return;
+		}
 		JSONObject jsonObject = jsonObject2.getJSONObject("data");
 
 		create_time = (String) (jsonObject.isNull("create_time") ? ""

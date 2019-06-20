@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/yxf_sdk_bg_tran"
+    android:gravity="center">
+
+    <RelativeLayout
+        android:layout_width="263.33dp"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:background="@drawable/yxf_bg_in_edt_whi_yel"
+        android:orientation="vertical"
+        android:paddingBottom="24.33dp">
+
+        <TextView
+            android:id="@+id/tv_tip_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="19dp"
+            android:text="游戏更新中，请稍后..."
+            android:textColor="@color/yxf_sdk_gray_title"
+            android:textSize="14.67sp" />
+
+        <TextView
+            android:id="@+id/tv_tip_content"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tv_tip_title"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="9.33dp"
+            android:text="50%"
+            android:textColor="@color/yxf_sdk_gray_title"
+            android:textStyle="bold"
+            android:textSize="17.33sp" />
+
+        <ProgressBar
+            android:id="@+id/progressBar"
+            android:layout_width="233.33dp"
+            android:layout_height="10dp"
+            android:layout_below="@+id/tv_tip_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="8dp"
+            style="@android:style/Widget.Holo.ProgressBar.Horizontal"
+            android:max="100"
+            android:progress="50"
+            android:progressDrawable="@drawable/yxf_progress_downing"
+            />
+
+    </RelativeLayout>
+
+</LinearLayout>

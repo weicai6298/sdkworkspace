@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/common_bg"
+    android:orientation="vertical">
+
+    <include layout="@layout/ug_title_bar"/>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            android:orientation="vertical"
+            android:paddingTop="15dp"
+            android:background="@color/white"
+            >
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ug_ic_success"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:text="注册成功"
+                android:textColor="@color/green"
+                android:textSize="@dimen/text_bigger"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:text="为了您的账号安全,建议您绑定您的手机"
+                android:textColor="@color/text_lv2"
+                android:textSize="@dimen/text_normal"/>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/divide_line"
+                android:layout_marginTop="15dp"/>
+
+
+        </LinearLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="69dp"
+            android:layout_alignParentBottom="true"
+            android:background="@color/white">
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/divide_line"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal"
+                android:weightSum="1"
+                android:layout_marginLeft="48dp"
+                android:layout_marginRight="48dp"
+                android:gravity="center_vertical">
+
+                <Button
+                    android:id="@+id/ug_bt_next"
+                    android:layout_width="match_parent"
+                    android:layout_height="42dp"
+                    android:layout_centerInParent="true"
+                    android:layout_marginRight="8dp"
+                    android:layout_weight="0.5"
+                    android:background="@drawable/ug_button_blue_normal"
+                    android:text="立即绑定"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/text_big"
+                    />
+
+                <Button
+                    android:id="@+id/ug_bt_back"
+                    android:layout_width="match_parent"
+                    android:layout_height="42dp"
+                    android:layout_centerInParent="true"
+                    android:layout_marginLeft="8dp"
+                    android:layout_weight="0.5"
+                    android:background="@drawable/ug_button_blue_hollow_normal"
+                    android:text="我知道了"
+                    android:textColor="@color/blue"
+                    android:textSize="@dimen/text_big"
+                    />
+            </LinearLayout>
+
+
+        </RelativeLayout>
+
+
+    </RelativeLayout>
+
+</LinearLayout>

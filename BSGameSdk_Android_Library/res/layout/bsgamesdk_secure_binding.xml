@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:paddingLeft="30dp"
+              android:paddingRight="30dp"
+              android:orientation="vertical">
+
+    <TextView
+        android:textColor="#FF333333"
+        android:layout_marginTop="16dp"
+        style="?attr/bsgamesdk_info_text_style"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/bsgamesdk_text_tip_secure_binding_top"
+        android:textSize="12sp"/>
+
+    <Button
+        android:id="@+id/bagamesdk_binding_mail"
+        style="?attr/bsgamesdk_confirm_button_style"
+        android:layout_width="match_parent"
+        android:layout_height="36dp"
+        android:layout_marginTop="10dp"
+        android:textSize="12sp"
+        android:text="@string/bsgamesdk_binding_mail"/>
+    <Button
+        android:textSize="12sp"
+        android:id="@+id/bagamesdk_binding_phone"
+        style="?attr/bsgamesdk_confirm_button_style"
+        android:layout_width="match_parent"
+        android:layout_height="36dp"
+        android:layout_marginTop="10dp"
+        android:text="@string/bsgamesdk_binding_phone"/>
+    <TextView
+        android:textColor="#FF333333"
+        android:layout_marginBottom="22dp"
+        android:layout_marginTop="10dp"
+        style="?attr/bsgamesdk_info_text_style"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/bsgamesdk_text_tip_secure_binding_bottom"
+        android:textSize="12sp"/>
+</LinearLayout>

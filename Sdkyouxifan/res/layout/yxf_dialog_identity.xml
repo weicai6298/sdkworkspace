@@ -1,0 +1,185 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:id="@+id/rl_login_register"
+        android:layout_width="306.67dp"
+        android:layout_height="wrap_content"
+        android:minHeight="306.67dp"
+        android:layout_centerInParent="true"
+        android:visibility="visible">
+
+<!--        <View
+            android:id="@+id/view_whi1"
+            android:layout_width="200dp"
+            android:layout_height="0.1dp"
+            android:layout_centerHorizontal="true"
+            android:background="@drawable/yxf_lin_shape_whi"></View>-->
+
+        <RelativeLayout
+            android:id="@+id/rl_login_register_in"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+
+            android:background="@drawable/yxf_bt_in_bg_whi">
+
+            <RelativeLayout
+                android:id="@+id/rl_in_title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="13.33dp"
+                android:layout_marginRight="13.33dp">
+
+                <ImageView
+                    android:id="@+id/iv_finish"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:padding="8dp"
+                    android:layout_marginTop="13.33dp"
+                    android:src="@drawable/yxf_black_cha" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:layout_gravity="left"
+                    android:layout_marginTop="33.33dp"
+                    android:text="实名认证"
+                    android:textColor="@color/yxf_sdk_gray_title"
+                    android:textSize="17.33sp" />
+
+            </RelativeLayout>
+
+            <LinearLayout
+                android:id="@+id/ll_title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/rl_in_title"
+                android:layout_marginLeft="26.67dp"
+                android:layout_marginRight="26.67dp"
+                android:layout_marginTop="20.67dp"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="left"
+                    android:text="根据国家规定，游戏用户需要进行实名认证，请输入姓名和身份证完成认证"
+                    android:textColor="@color/yxf_sdk_gray_result"
+                    android:textSize="12sp" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/ll_login_frame"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/ll_title"
+                android:layout_marginLeft="26.67dp"
+                android:layout_marginRight="26.67dp"
+                android:layout_marginTop="13.33dp"
+                android:orientation="vertical">
+
+                <RelativeLayout
+                    android:id="@+id/rl_username"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/yxf_bt_in_edt_whi">
+
+                    <EditText
+                        android:id="@+id/username_edt"
+                        android:layout_width="fill_parent"
+                        android:layout_height="40dp"
+                        android:background="@null"
+                        android:paddingLeft="10.67dp"
+                        android:paddingRight="10.67dp"
+                        android:singleLine="true"
+                        android:maxLength="10"
+                        android:hint="请输入真实姓名"
+                        android:textColor="@color/yxf_sdk_black"
+                        android:textColorHint="@color/yxf_sdk_gray"
+                        android:textSize="12sp" />
+
+                </RelativeLayout>
+
+                <LinearLayout
+                    android:id="@+id/rl_pwd"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:background="@drawable/yxf_bt_in_edt_whi"
+                    android:gravity="center"
+                    android:orientation="horizontal">
+
+                    <EditText
+                        android:id="@+id/identity_edt"
+                        android:layout_width="match_parent"
+                        android:layout_height="40dp"
+                        android:background="@null"
+                        android:paddingLeft="10.67dp"
+                        android:paddingRight="10.67dp"
+                        android:singleLine="true"
+                        android:hint="请输入身份证"
+                        android:textColor="@color/yxf_sdk_black"
+                        android:textColorHint="@color/yxf_sdk_gray"
+                        android:textSize="12sp" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/ll_login_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/ll_login_frame"
+                android:layout_centerHorizontal="true"
+                android:layout_gravity="center"
+                android:layout_marginLeft="26.67dp"
+                android:layout_marginRight="26.67dp"
+                android:layout_marginTop="12.67dp"
+                android:paddingBottom="39dp"
+                android:orientation="vertical">
+
+       <!--         <View
+                    android:id="@+id/login_line1"
+                    android:layout_width="200dp"
+                    android:layout_height="0.1dp"
+                    android:layout_gravity="center_horizontal"
+                    android:background="@drawable/yxf_lin_shape_yel"
+                    android:visibility="invisible"></View>-->
+
+                <Button
+                    android:id="@+id/btn_login"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:background="@drawable/yxf_bt_in_gray"
+                    android:text="提交"
+                    android:textColor="@color/yxf_sdk_white"
+                    android:textSize="14.67sp" />
+
+   <!--             <View
+                    android:id="@+id/login_line2"
+                    android:layout_width="200dp"
+                    android:layout_height="0.1dp"
+                    android:layout_gravity="center_horizontal"
+                    android:background="@drawable/yxf_lin_shape_yel"
+                    android:visibility="invisible"></View>-->
+
+            </LinearLayout>
+
+        </RelativeLayout>
+
+<!--        <View
+            android:layout_width="200dp"
+            android:layout_height="0.1dp"
+            android:layout_below="@+id/rl_login_register_in"
+            android:layout_centerHorizontal="true"
+            android:background="@drawable/yxf_lin_shape_whi"></View>-->
+
+    </RelativeLayout>
+
+</RelativeLayout>

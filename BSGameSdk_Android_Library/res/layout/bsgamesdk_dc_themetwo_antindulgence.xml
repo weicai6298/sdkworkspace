@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="310dp"
+                android:layout_height="300dp"
+                android:paddingLeft="30dp"
+                android:background="?attr/bsgamesdk_dc_themetwo_main_background"
+                android:paddingRight="30dp">
+    <include layout="@layout/bsgamesdk_dc_themetwo_title"/>
+    <ScrollView
+        android:overScrollMode="never"
+        android:layout_marginTop="50dp"
+        android:layout_marginBottom="75dp"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true"
+        android:scrollbars="none">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+            <TextView
+                android:gravity="center"
+                android:id="@+id/bsgamesdk_dc_themetwo_anti_firsttext"
+                android:lineSpacingExtra="5dp"
+                style="?attr/bsgamesdk_dc_themetwo_info_text_style"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@color/bsgamesdk_dc_btn_color"
+                android:textSize="14sp"/>
+            <TextView
+                android:id="@+id/bsgamesdk_dc_themetwo_anti_secondtext"
+                android:lineSpacingExtra="5dp"
+                android:gravity="center"
+                style="?attr/bsgamesdk_dc_themetwo_info_text_style"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:textColor="@color/bsgamesdk_dc_btn_color"
+                android:textSize="14sp"/>
+
+        </LinearLayout>
+    </ScrollView>
+
+    <Button
+        android:id="@+id/bagamesdk_dc_themetwo_anti_submit"
+        style="?attr/bsgamesdk_dc_themetwo_confirm_button_style"
+        android:layout_width="match_parent"
+        android:layout_alignParentBottom="true"
+        android:layout_height="36dp"
+        android:layout_marginBottom="18dp"
+        android:text="@string/bsgamesdk_dc_anti_bottom"
+        android:textSize="12sp"/>
+
+</RelativeLayout>

@@ -1,0 +1,179 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".MainActivity" >
+
+     <LinearLayout 
+	    android:layout_width="wrap_content"
+	    android:orientation="vertical"
+	    android:id="@+id/btn_ceshi"
+	    android:layout_gravity="center"
+	    android:layout_height="wrap_content">
+	       <LinearLayout 
+		        android:layout_height="wrap_content"
+		        android:background="@color/ycx_color_white"
+		        android:layout_gravity="center_vertical"
+		        android:layout_width="match_parent">
+		        <TextView 
+			        style="@style/ycx_style_tv"
+			        android:text="aid:"/>
+		        <EditText 
+				  	android:layout_width="100dip"
+				  	android:layout_height="wrap_content"
+				  	android:textColor="@color/ycx_color_black"
+				  	android:id="@+id/et_aid"
+				  	android:inputType="number"
+			        />  
+			</LinearLayout>
+			<LinearLayout 
+		        android:layout_height="wrap_content"
+		        android:background="@color/ycx_color_white"
+		        android:layout_gravity="center_vertical"
+		        android:layout_width="match_parent">
+		        <TextView 
+			        style="@style/ycx_style_tv"
+			        android:text="pid:"/>
+		        <EditText 
+				  	android:layout_width="100dip"
+				  	android:layout_height="wrap_content"
+				  	android:textColor="@color/ycx_color_black"
+				  	android:id="@+id/et_pid"
+				  	android:inputType="number"
+			        />  
+			</LinearLayout>
+			<LinearLayout 
+		        android:layout_height="wrap_content"
+		        android:background="@color/ycx_color_white"
+		        android:layout_gravity="center_vertical"
+		        android:layout_width="match_parent">
+		        <TextView 
+			        style="@style/ycx_style_tv"
+			        android:text="gameid:"/>
+		        <EditText 
+				  	android:layout_width="100dip"
+				  	android:layout_height="wrap_content"
+				  	android:textColor="@color/ycx_color_black"
+				  	android:id="@+id/et_gameid"
+				  	android:inputType="number"
+			        />  
+			</LinearLayout>
+			<LinearLayout 
+		        android:layout_height="wrap_content"
+		        android:background="@color/ycx_color_white"
+		        android:layout_gravity="center_vertical"
+		        android:layout_width="match_parent">
+		        <TextView 
+			        style="@style/ycx_style_tv"
+			        android:text="channelid:"/>
+		        <EditText 
+				  	android:layout_width="100dip"
+				  	android:layout_height="wrap_content"
+				  	android:textColor="@color/ycx_color_black"
+				  	android:id="@+id/et_channelid"
+				  	android:inputType="number"
+			        />  
+			</LinearLayout>
+			<LinearLayout 
+		        android:layout_height="wrap_content"
+		        android:background="@color/ycx_color_white"
+		        android:layout_gravity="center_vertical"
+		        android:layout_width="match_parent">
+		        <TextView 
+			        style="@style/ycx_style_tv"
+			        android:text="设备id:"/>
+		        <EditText 
+				  	android:layout_width="100dip"
+				  	android:layout_height="wrap_content"
+				  	android:textColor="@color/ycx_color_black"
+				  	android:id="@+id/et_sbid"
+			        />  
+			</LinearLayout>
+			 <LinearLayout 
+			    android:layout_width="wrap_content"
+			    android:layout_gravity="center"
+			    android:layout_height="wrap_content">
+				<Button 
+				    android:id="@+id/btn_set"
+				    android:layout_height="wrap_content"
+				    android:layout_width="200dip"
+				    android:text="设置参数"/>
+	 		</LinearLayout>
+	 </LinearLayout>
+    
+    
+     
+    <LinearLayout 
+	    android:layout_width="wrap_content"
+	    android:layout_height="wrap_content"
+	   >
+	   <Button
+	        android:id="@+id/btn_init"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:layout_marginRight="36dp"
+	        android:text="初始化" />
+	   <Button
+	        android:id="@+id/btn_sp"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:layout_marginRight="36dp"
+	        android:text="闪屏" />
+	    <Button
+	        android:id="@+id/btn_login"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:layout_marginRight="36dp"
+	        android:text="登录" />
+		<Button
+	        android:id="@+id/btn_pay"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:layout_marginRight="36dp"
+	        android:text="支付" />
+		<Button
+	        android:id="@+id/btn_exit"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:layout_marginRight="36dp"
+	        android:text="退出" />
+		
+		<Button
+	        android:id="@+id/btn_js"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:layout_marginRight="36dp"
+	        android:text="计时" />
+	</LinearLayout>
+	
+	<LinearLayout 
+	    android:layout_width="wrap_content"
+	    android:layout_height="wrap_content"
+	   >
+	    <Button
+	        android:id="@+id/btn_createRole"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:layout_marginRight="36dp"
+	        android:text="创建角色" />
+		<Button
+	        android:id="@+id/btn_into"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:layout_marginRight="36dp"
+	        android:text="进入游戏" />
+		<Button
+	        android:id="@+id/btn_change"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:layout_marginRight="36dp"
+	        android:text="等级升级" />
+		<Button
+	        android:id="@+id/btn_exitSub"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:layout_marginRight="36dp"
+	        android:text="退出游戏" />
+	</LinearLayout>
+</LinearLayout>

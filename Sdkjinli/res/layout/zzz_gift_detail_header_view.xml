@@ -35,7 +35,6 @@
             android:layout_alignParentRight="true"
             android:layout_marginTop="@dimen/zzz_giftgrap_margin_top"
             android:background="@drawable/zzz_shap_corner_btn"
-            android:focusable="false"
             android:textColor="@color/zzz_green_text_color"
             android:textSize="@dimen/zzz_gift_grab_key_text_size"/>
 

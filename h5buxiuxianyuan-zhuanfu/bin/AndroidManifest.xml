@@ -90,6 +90,9 @@
         <meta-data
             android:name="isLandscape"
             android:value="false" />
+        <meta-data
+            android:name="isdebug"
+            android:value="false" />
     </application>
 
 </manifest>

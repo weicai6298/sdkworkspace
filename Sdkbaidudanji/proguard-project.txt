@@ -18,3 +18,181 @@
 #-keepclassmembers class fqcn.of.javascript.interface.for.webview {
 #   public *;
 #}
+
+
+
+-dontshrink
+-dontoptimize
+-keepattributes Exceptionss,InnerClasses,Signature,Deprecated,Signature,*Annotation*
+-dontpreverify
+-verbose
+-dontwarn android.net.http.**,android.annotation.**
+-dontwarn android.support.v4.**    
+-ignorewarnings
+
+-keep class **.R$* {
+    <fields>;
+    <methods>;
+}
+
+
+-keep class com.duoku.** {*; }
+-keep class com.baidu.** { *; }
+
+-keep class com.tencent.stat.**{*;}
+-keep class com.tencent.mid.**{*;}
+
+-dontwarn okhttp3.**
+-keep class okhttp3.**{*;}
+
+-dontwarn okio.**
+-keep class okio.**{*;}
+
+-keep class android.annotation.** {
+    <fields>;
+    <methods>;
+}
+
+-keep class org.json.** {
+    <fields>;
+    <methods>;
+}
+
+-keep class com.secneo.** {
+	<fields>;
+	<methods>;
+}
+
+-keep class com.unicom.dcLoader.** {
+    <fields>;
+    <methods>;
+}
+
+-keep public class * extends android.app.Activity
+-keep public class * extends android.app.Application
+-keep public class * extends android.app.Service
+-keep public class * extends android.content.BroadcastReceiver
+-keep public class * extends android.content.ContentProvider
+-keep public class * extends android.app.backup.BackupAgentHelper
+-keep public class * extends android.preference.Preference
+
+-keep class android.support.v4.** { *; }  
+-keep interface android.support.v4.app.** { *; }  
+-keep public class * extends android.support.v4.**  
+-keep public class * extends android.app.Fragment
+
+-keep public class com.android.vending.licensing.ILicensingService
+
+-keep class * extends android.os.Parcelable {
+    public static final android.os.Parcelable$Creator *;
+}
+
+-keepclasseswithmembers class * {
+    public <init>(android.content.Context,android.util.AttributeSet);
+}
+
+-keepclasseswithmembers class * {
+    public <init>(android.content.Context,android.util.AttributeSet,int);
+}
+
+-keepclassmembers class * extends android.app.Activity {
+    public void *(android.view.View);
+}
+
+-keep class com.qy.** {
+    <fields>;
+    <methods>;
+}
+
+-keep class com.ccit.** {
+    <fields>;
+    <methods>;
+}
+
+-keep class ccit.** {
+    <fields>;
+    <methods>;
+}
+
+-keep class mm.purchasesdk.**
+-keep class mm.purchasesdk.** {*;}
+
+-keep class com.secneo.mmb.**
+-keep class com.secneo.mmb.** {*;}
+-keep class com.chinaMobile.**
+-keep class com.chinaMobile.** {*;}
+
+-keep class com.cmcc.**
+-keep class com.cmcc.** {*;}
+
+-keep class cn.cmgame.*
+-keep class cn.cmgame.** {
+    <fields>;
+    <methods>;
+}
+
+-keep class com.ccit.mmwlan.**
+-keep class com.ccit.mmwlan.** {
+    <fields>;
+    <methods>;
+}
+
+-keep class com.baidu.platformsdk.wxpay.**
+-keep class com.baidu.platformsdk.wxpay.** {
+    <fields>;
+    <methods>;
+}
+
+-keep class com.daomeng.**
+-keep class com.daomeng.** {
+    <fields>;
+    <methods>;
+}
+
+-keep class com.ipaynow.**
+-keep class com.ipaynow.** {
+    <fields>;
+    <methods>;
+}
+
+-keep class com.unicom.**
+-keep class com.unicom.** {
+    <fields>;
+    <methods>;
+}
+
+-keep class com.alipay.**
+-keep class com.alipay.** {
+    <fields>;
+    <methods>;
+}
+-keep class com.ta.utdid2.** { *;}
+-keep class com.ut.device.** { *;}
+
+-keepclassmembers enum  * {
+    public static **[] values();
+    public static ** valueOf(java.lang.String);
+}
+
+# Keep names - Native method names. Keep all native class/method names.
+-keepclasseswithmembers,allowshrinking class * {
+    native <methods>;
+}
+
+-keep public class com.tendcloud.tenddata.** { public protected *;}
+-keep public class * extends android.os.IInterface
+-keep public class com.alipay.android.app.IAlixPay
+-keepclasseswithmembernames class * { native <methods>;}
+-keepclasseswithmembernames class * {
+	public <init>(android.content.Context, android.util.AttributeSet);
+}
+-keepclasseswithmembernames class * {
+    public <init>(android.content.Context, android.util.AttributeSet, int);
+}
+-keepclassmembers enum * {
+    public static **[] values();
+    public static ** valueOf(java.lang.String);
+}
+-keepclassmembers class * implements android.os.Parcelable {
+    public static final android.os.Parcelable$Creator *;
+}

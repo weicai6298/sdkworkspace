@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/fail_load_layout"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:visibility="gone">
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:text="@string/data_failure_top"
+            android:textColor="@color/pay_color_666666"
+            android:textSize="@dimen/size_17sp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="@dimen/size_17dp"
+            android:text="@string/data_failure_bottom"
+            android:textColor="@color/pay_color_666666"
+            android:textSize="@dimen/size_15sp" />
+
+        <Button
+            android:id="@+id/btn_anew"
+            android:layout_width="@dimen/size_112dp"
+            android:layout_height="@dimen/size_33dp"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="@dimen/size_66dp"
+            android:background="@drawable/pay_bg_3095fb_circle"
+            android:gravity="center"
+            android:text="@string/anew_load"
+            android:textColor="@color/pay_color_ffffff"
+            android:textSize="@dimen/size_15sp" />
+    </LinearLayout>
+</RelativeLayout>

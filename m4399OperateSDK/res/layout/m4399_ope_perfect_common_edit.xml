@@ -17,25 +17,27 @@
 
         <EditText
             android:id="@+id/content_edit"
-            style="@style/m4399PerfectTextCenter"/>
+            style="@style/m4399PerfectTextCenter" />
 
         <cn.m4399.operate.ui.widget.LimitEditText
-            android:visibility="gone"
             android:id="@+id/content_edit_second"
-            style="@style/m4399PerfectTextCenter"/>
+            style="@style/m4399PerfectTextCenter"
+            android:visibility="gone" />
+
         <TextView
             android:id="@+id/content_tv"
-            android:visibility="gone"
-            style="@style/m4399PerfectTextCenter"/>
+            style="@style/m4399PerfectTextCenter"
+            android:visibility="gone" />
+
         <RelativeLayout
             android:id="@+id/delete"
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
+            android:gravity="center"
             android:paddingLeft="20dp"
-            android:paddingRight="20dp"
-            android:gravity="center">
-            <ImageView
-                style="@style/m4399PerfectDel" />
+            android:paddingRight="20dp">
+
+            <ImageView style="@style/m4399PerfectDel" />
         </RelativeLayout>
 
     </LinearLayout>

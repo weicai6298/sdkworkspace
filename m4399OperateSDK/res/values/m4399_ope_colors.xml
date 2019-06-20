@@ -10,7 +10,7 @@
     <color name="m4399_ope_usercenter_grey_light">#FFAAAAAA</color>
     <color name="m4399_ope_usercenter_brown">#FF8F5005</color>
     <color name="m4399_ope_usercenter_nav_bar_bg">#FFFF9515</color>
-	<color name="m4399_ope_transparent">#00000000</color>
+    <color name="m4399_ope_transparent">#00000000</color>
 
     <!-- 绑定手机 -->
     <color name="m4399_ope_sure_ban_txt">#999999</color>
@@ -48,10 +48,8 @@
     <color name="m4399_ope_perfect_bg">#EEEEEE</color>
 
 
-
     <color name="m4399_ope_ball_tv_in">#ff9515</color>
     <color name="m4399_ope_right_content_color">#42000000</color>
-
 
 
     <!--smoothProgressbar-->

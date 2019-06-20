@@ -18,3 +18,21 @@
 #-keepclassmembers class fqcn.of.javascript.interface.for.webview {
 #   public *;
 #}
+
+
+-keep class * implements android.os.Parcelable {
+    public static final android.os.Parcelable$Creator *;
+  }
+-keepclassmembers class * implements android.os.Parcelable {
+     static ** CREATOR;
+ }
+-keep public class * implements java.io.Serializable{*;}
+-keep class com.meitu.library.gamecenter.MTOnlineGameSDK{ public <methods>;}
+-keep class com.meitu.library.gamecenter.ResultCode{*;}
+-keep class com.meitu.library.gamecenter.callback.ISDKResponse{*;}
+-keep class com.meitu.library.gamecenter.callback.IExitGameCallback{*;}
+-keep class com.meitu.library.gamecenter.MTOnlineGameSDKConfig{*;}
+
+# 需要添加R名字保留，否则可能导致界面异常
+-keep class **.R
+-keep class **.R$*

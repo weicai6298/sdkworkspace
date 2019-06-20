@@ -1,0 +1,44 @@
+<resources>
+
+    <!-- 基本颜色 -->
+    <color name="cgx_common_white">#ffffffff</color>
+    <color name="cgx_common_black">#ff000000</color>
+    <color name="cgx_common_red">#f32525</color>
+    <color name="cgx_common_green">#ff00ff00</color>
+    <color name="cgx_common_blue">#ff0000ff</color>
+    <color name="cgx_common_blue_lighter">#249EF4</color>
+    <color name="cgx_common_orange">#fd9526</color>
+    <color name="cgx_common_blue_deep">#259EF7</color>
+    <color name="cgx_common_green_light">#26B134</color>
+    <color name="cgx_common_red_light">#A10000</color>
+    <color name="cgx_common_blue_kugou">#249EF6</color>
+
+    <!-- 通用颜色 -->
+    <color name="cgx_common_hint_color">#999999</color>
+    <color name="cgx_common_background">#fafafa</color>
+    <color name="cgx_common_gray_normal">#efbbbbbb</color>
+    <color name="cgx_common_gray_pressed">#b0bbbbbb</color>
+    <!-- 透明颜色 -->
+    <color name="cgx_common_transparent">#00000000</color>
+    <!-- 半透明颜色 -->
+    <color name="cgx_common_translucence">#e0000000</color>
+    <color name="cgx_common_translucence_lighter">#50000000</color>
+    <!-- 按钮点击后的颜色 -->
+    <color name="cgx_common_btn_pressed">#ffdddddd</color>
+    <!-- 分割线颜色 -->
+    <color name="cgx_common_divider">#ffdddddd</color>
+    <!-- 对话框顶部线条颜色 -->
+    <color name="cgx_dialog_top_line">#C20000</color>
+    <!-- 背景色（深色） -->
+    <color name="cgx_common_background_dark">#ffaaaaaa</color>
+    <!-- 字体，灰色（深色） -->
+    <color name="cgx_common_gray_darker">#ff333333</color>
+    <!-- 字体，灰色（浅色）-->
+    <color name="cgx_common_gray_lighter">#ff666666</color>
+    <!-- 字体，灰色（最浅色）-->
+    <color name="cgx_common_gray_more_lighter">#ffF7F7F7</color>
+    <!-- 标题栏按钮点击色 -->
+    <color name="cgx_titlebar_btn_pressed">#10AFDD</color>
+    
+    <color name="cgx_common_blue_light">#3ECAFF</color>
+</resources>

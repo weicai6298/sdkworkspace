@@ -1,0 +1,258 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fadeScrollbars="false"
+    android:fillViewport="true"
+    android:overScrollMode="never">
+
+    <LinearLayout
+        android:id="@+id/pay_page"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/hlx_bg_dialog"
+        android:baselineAligned="true"
+        android:orientation="vertical">
+
+
+        <RelativeLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/hlx_bg_dialog_upcorner">
+
+            <ImageView
+                android:id="@+id/back"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_centerVertical="true"
+                android:padding="10dp"
+                android:src="@drawable/hlx_btn_back" />
+
+            <TextView
+                android:id="@+id/tv_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:clickable="false"
+                android:gravity="center"
+                android:paddingBottom="12dp"
+                android:paddingTop="12dp"
+                android:text="充值中心"
+                android:textColor="#52ae38"
+                android:textSize="@dimen/dialog_title_text_fnt" />
+
+            <ImageView
+                android:id="@+id/cancel"
+                android:src="@drawable/hlx_btn_cancel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:padding="10dp"
+                android:layout_alignParentRight="true"
+                />
+
+        </RelativeLayout>
+
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:background="#dddddd"
+            />
+
+
+    <ViewSwitcher
+            android:id="@+id/sw_pay"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+
+        <LinearLayout
+                android:id="@+id/ly_view1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:paddingBottom="10dp"
+                >
+            <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:padding="18dp"
+                    >
+
+                <TextView
+                        android:id="@+id/tv_subject"
+                        android:layout_width="0dp"
+                        android:layout_weight="2"
+                        android:layout_height="wrap_content"
+                        android:text="葫芦侠游戏支付测试项目"
+                        android:textColor="#343434"
+                        android:textSize="16sp"
+                        android:textStyle="bold"
+                        android:singleLine="true"
+                        />
+                <TextView
+                        android:id="@+id/tv_amount"
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:layout_height="wrap_content"
+                        android:gravity="right"
+                        android:text="¥0.01"
+                        android:textColor="#ff7c00"
+                        android:textSize="13sp"
+                        android:textStyle="bold"
+                        />
+
+            </LinearLayout>
+            <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="#dedfe0"
+                    />
+
+
+            <LinearLayout
+                    android:id="@+id/ly_pay_way"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:background="@drawable/hlx_bg_white_gray"
+                    >
+
+                <TextView
+                        android:id="@+id/tv_pay_way"
+                        android:layout_width="match_parent"
+                        android:layout_weight="2"
+                        android:layout_height="wrap_content"
+                        android:text="支付宝"
+                        android:textColor="#41AD3D"
+                        android:textSize="14sp"
+                        android:paddingLeft="25dp"
+                        android:paddingRight="25dp"
+                        android:paddingTop="18dp"
+                        android:paddingBottom="18dp"
+                        android:drawableRight="@drawable/hlx_btn_next"
+                        />
+
+
+
+            </LinearLayout>
+            <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="#dedfe0"
+                    />
+
+            <TextView
+                    android:id="@+id/tv_pay"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="30dp"
+                    android:layout_marginRight="30dp"
+                    android:layout_marginTop="40dp"
+                    android:paddingTop="8dp"
+                    android:paddingBottom="8dp"
+                    android:layout_centerInParent="true"
+                    android:text="支付"
+                    android:gravity="center"
+                    android:textColor="@android:color/white"
+                    android:background="@drawable/hlx_btn_green_selector"
+                    android:textSize="16sp"/>
+        </LinearLayout>
+
+
+        <ScrollView android:layout_width="match_parent"
+                    android:layout_height="wrap_content" >
+
+        <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                >
+            <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="选择充值方式"
+                    android:textColor="#343434"
+                    android:textSize="16sp"
+                    android:textStyle="bold"
+                    android:padding="18dp"
+                    android:clickable="false"
+                    />
+            <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="#dedfe0"
+                    />
+
+            <ListView
+                android:id="@+id/channellist"
+                android:layout_width="match_parent"
+                android:layout_height="180dp"
+                android:divider="@null"
+                android:scrollbarThumbVertical="@drawable/hlx_scrollbar_vertical_thumb" >
+            </ListView>
+        </LinearLayout>
+        </ScrollView>
+
+    </ViewSwitcher>
+
+    <!--<TextView-->
+    <!--android:id="@+id/tv_ali"-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:paddingTop="15dp"-->
+    <!--android:paddingBottom="15dp"-->
+    <!--android:layout_centerVertical="true"-->
+    <!--android:gravity="center"-->
+    <!--android:text="支付宝"-->
+    <!--android:textColor="@color/color_gray_green"-->
+    <!--android:textSize="14sp"-->
+    <!--android:background="@drawable/bg_white_gray"/>-->
+
+
+    <!--<TextView-->
+    <!--android:id="@+id/tv_wechat"-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:paddingTop="15dp"-->
+    <!--android:paddingBottom="15dp"-->
+    <!--android:layout_centerVertical="true"-->
+    <!--android:gravity="center"-->
+    <!--android:text="微信"-->
+    <!--android:textColor="@color/color_gray_green"-->
+    <!--android:textSize="14sp"-->
+    <!--android:background="@drawable/bg_white_gray"/>-->
+
+
+    <!--<TextView-->
+    <!--android:id="@+id/tv_qq"-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:paddingTop="15dp"-->
+    <!--android:paddingBottom="15dp"-->
+    <!--android:layout_centerVertical="true"-->
+    <!--android:gravity="center"-->
+    <!--android:text="QQ"-->
+    <!--android:textColor="@color/color_gray_green"-->
+    <!--android:textSize="14sp"-->
+    <!--android:background="@drawable/bg_white_gray"/>-->
+
+    <!--<TextView-->
+    <!--android:id="@+id/tv_bank"-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:paddingTop="15dp"-->
+    <!--android:paddingBottom="15dp"-->
+    <!--android:layout_centerVertical="true"-->
+    <!--android:gravity="center"-->
+    <!--android:text="银联"-->
+    <!--android:textColor="@color/color_gray_green"-->
+    <!--android:textSize="14sp"-->
+    <!--android:background="@drawable/bg_white_gray"/>-->
+
+
+</LinearLayout>
+</ScrollView>

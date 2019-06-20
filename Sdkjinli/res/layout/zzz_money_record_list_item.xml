@@ -17,7 +17,7 @@
         style="@style/zzz_MoneyListItemTextViewStyle"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="@dimen/zzz_record_item_num_margin_top"
+        android:layout_marginTop="@dimen/zzz_record_item_time_margin_top"
         android:layout_alignParentBottom="true"
         android:layout_below="@id/zzz_record_item_num"
         android:layout_marginLeft="@dimen/zzz_record_item_num_margin_left"

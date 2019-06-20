@@ -1,0 +1,257 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:background="@color/common_bg"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <include layout="@layout/ug_title_bar"/>
+
+    <ScrollView
+        android:layout_below="@id/ug_title_bar"
+        android:layout_width="match_parent"
+        android:layout_marginBottom="64dp"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:id="@+id/ug_gift_bag_detail_title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:padding="10dp">
+
+                <ImageButton
+                    android:id="@+id/ug_gift_bag_detail_icon"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:layout_centerVertical="true"
+                    android:background="@null"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/ug_ic_face" />
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="16dp"
+                    android:layout_toRightOf="@+id/ug_gift_bag_detail_icon">
+
+                    <TextView
+                        android:id="@+id/ug_gift_bag_detail_name"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:ellipsize="end"
+                        android:lines="1"
+                        android:text="不良人2"
+                        android:textColor="@color/text_lv1"
+                        android:textSize="@dimen/text_big" />
+
+                    <TextView
+                        android:id="@+id/ug_gift_bag_date"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/ug_gift_bag_detail_name"
+                        android:ellipsize="end"
+                        android:lines="1"
+                        android:text="剩余：5000个 / 过期日期：2017-06-06"
+                        android:textColor="@color/orange_1"
+                        android:textSize="@dimen/text_small" />
+                </RelativeLayout>
+            </RelativeLayout>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:background="@color/common_bg"
+                android:orientation="vertical"
+                android:padding="10dp">
+
+                <LinearLayout
+                    android:id="@+id/ug_gift_bag_code"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="10dp"
+                    android:background="@color/white"
+                    android:gravity="center_horizontal"
+                    android:orientation="vertical"
+                    android:paddingBottom="10dp"
+                    android:paddingTop="10dp">
+
+                    <TextView
+                        android:id="@+id/ug_gift_bag_detail_name_code"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:ellipsize="end"
+                        android:lines="1"
+                        android:text="[不良人2]情人节礼包"
+                        android:textColor="@color/text_lv1"
+                        android:textSize="@dimen/text_big" />
+
+                    <TextView
+                        android:id="@+id/ug_gift_bag_detail_code"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="13dp"
+                        android:text="sss"
+                        android:textColor="@color/orange_1"
+                        android:textSize="@dimen/text_biggermore" />
+
+                    <Button
+                        android:id="@+id/ug_gift_bag_copy_code"
+                        android:layout_width="150dp"
+                        android:layout_height="25dp"
+                        android:layout_marginTop="13dp"
+                        android:background="@drawable/ug_gift_solid_pink"
+                        android:paddingLeft="10dp"
+                        android:paddingRight="10dp"
+                        android:text="复制兑换码"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/text_normal" />
+
+                    <TextView
+                        android:id="@+id/ug_getcode_time"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:text="领取时间：2017-04-12 15:22:36"
+                        android:textColor="@color/text_lv2"
+                        android:textSize="@dimen/text_small" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/white"
+                    android:orientation="vertical"
+                    android:padding="10dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="10dp"
+                        android:text="礼包内容："
+                        android:textColor="@color/text_lv1" />
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1px"
+                        android:background="@color/common_line" />
+
+                    <TextView
+                        android:id="@+id/ug_gift_bag_detail_msg"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="10dp"
+                        android:layout_marginTop="10dp"
+                        android:text="钻石*20\n金币*10000\n精铁*520"
+                        android:textColor="@color/text_lv1" />
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1px"
+                        android:background="@color/common_line" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="10dp"
+                        android:layout_marginTop="10dp"
+                        android:text="温馨提示：同类型礼包兑换码，每个角色可使用一次"
+                        android:textColor="@color/text_lv1"
+                        android:textSize="@dimen/text_normal" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:background="@color/white"
+                    android:orientation="vertical"
+                    android:padding="10dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="10dp"
+                        android:text="使用方法："
+                        android:textColor="@color/text_lv1" />
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1px"
+                        android:background="@color/common_line" />
+
+                    <TextView
+                        android:id="@+id/ug_gift_bag_detail_how_use"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:text="输入激活码"
+                        android:textColor="@color/text_lv1" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:background="@color/white"
+                    android:orientation="vertical"
+                    android:padding="10dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="10dp"
+                        android:text="使用范围："
+                        android:textColor="@color/text_lv1" />
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1px"
+                        android:background="@color/common_line" />
+
+                    <TextView
+                        android:id="@+id/ug_gift_bag_detail_area"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:text="全服通用"
+                        android:textColor="@color/text_lv1" />
+                </LinearLayout>
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+    </ScrollView>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="64dp"
+        android:layout_alignParentBottom="true"
+        android:background="@color/white">
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1px"
+            android:background="@color/divide_line" />
+
+        <Button
+            android:id="@+id/ug_gift_bag_detail_bt"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_centerInParent="true"
+            android:layout_margin="10dp"
+            android:background="@drawable/ug_button_blue_normal"
+            android:text="立即添加"
+            android:textColor="@color/white" />
+
+    </RelativeLayout>
+
+</RelativeLayout>

@@ -36,7 +36,7 @@
                 android:layout_marginTop="10dp"
                 android:background="@drawable/sogou_game_sdk_input_background"
                 android:hint="请输入真实姓名"
-                android:imeOptions="actionNext"
+                android:imeOptions="actionNext|flagNoExtractUi"
                 android:nextFocusForward="@+id/sogou_game_sdk_document_number_et"
                 android:paddingLeft="7dp"
                 android:textSize="15sp" />
@@ -88,7 +88,7 @@
                 android:layout_marginTop="10dp"
                 android:background="@drawable/sogou_game_sdk_input_background"
                 android:hint="请输入证件号码"
-                android:imeOptions="actionNext"
+                android:imeOptions="actionNext|flagNoExtractUi"
                 android:nextFocusForward="@+id/sogou_game_sdk_phone_number_et"
                 android:paddingLeft="7dp"
                 android:textSize="15sp" />
@@ -109,6 +109,7 @@
                 android:background="@drawable/sogou_game_sdk_input_background"
                 android:hint="请输入手机号码"
                 android:inputType="number"
+                android:imeOptions="flagNoExtractUi"
                 android:paddingLeft="7dp"
                 android:textSize="15sp" />
 

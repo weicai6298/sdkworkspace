@@ -77,7 +77,7 @@
     <string name="gn_account_register_no_simcard_1">did not detect the SIM card, please install the SIM card after register</string>
     <string name="gn_account_Amigo_hui_yuan_zhu_ce">amigo member registration</string>
     <string name="gn_account_is_registering_wait">is registered, please wait</string>
-    <string name="gn_account_one_key_register_send_sms">a registration key \n will be sent a validation message</string>
+    <string name="gn_account_one_key_register_send_sms">a registration key\nwill be sent a validation message</string>
     <string name="gn_account_login_amigo_account">login amigo account</string>
     <string name="gn_account_more">other login</string>
     <string name="gn_account_change_account">switch account</string>

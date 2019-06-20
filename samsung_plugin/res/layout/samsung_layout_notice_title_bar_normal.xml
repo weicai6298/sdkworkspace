@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/welcome_page"
+    android:layout_width="fill_parent"
+    android:layout_height="@dimen/samsung_notice_height_48"
+    android:background="@color/samsung_notice_color_value_7">
+
+    <ImageView
+        android:id="@+id/activity_title_bar_left"
+        android:layout_width="@dimen/samsung_notice_height_48"
+        android:layout_height="match_parent"
+        android:layout_alignParentLeft="true"
+        android:layout_centerVertical="true"
+        android:contentDescription="@null"
+        android:scaleType="center"
+        android:src="@drawable/samsung_notice_back"
+        android:visibility="visible" />
+
+    <ImageView
+        android:id="@+id/activity_title_bar_close"
+        android:layout_width="@dimen/samsung_notice_height_38"
+        android:layout_height="match_parent"
+        android:layout_toRightOf="@id/activity_title_bar_left"
+        android:layout_centerVertical="true"
+        android:contentDescription="@null"
+        android:src="@drawable/samsung_notice_activity_title_close"
+        android:padding="@dimen/samsung_notice_margin_10"
+        android:scaleType="center"
+        android:visibility="gone" />
+
+    <TextView
+        android:id="@+id/activity_title_bar_middle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:textColor="@color/samsung_notice_color_value_1"
+        android:singleLine="true"
+        android:ellipsize="end"
+        android:maxLength="10"
+        android:layout_marginLeft="@dimen/samsung_notice_margin_5"
+        android:layout_marginRight="@dimen/samsung_notice_margin_5"
+        android:textSize="@dimen/samsung_notice_text_size_18"
+        android:visibility="visible" />
+
+</RelativeLayout>

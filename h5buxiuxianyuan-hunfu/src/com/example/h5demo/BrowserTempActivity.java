@@ -17,6 +17,7 @@ import android.view.KeyEvent;
 import android.view.View;
 import android.view.ViewGroup;
 import android.view.Window;
+import android.view.View.OnClickListener;
 import android.webkit.CookieManager;
 import android.webkit.CookieSyncManager;
 import android.webkit.JsPromptResult;
@@ -25,11 +26,12 @@ import android.webkit.WebSettings;
 import android.webkit.WebSettings.LayoutAlgorithm;
 import android.webkit.WebView;
 import android.webkit.WebViewClient;
+import android.widget.Button;
 import android.widget.FrameLayout;
 import android.widget.ProgressBar;
 import android.widget.RelativeLayout;
 import com.example.h5demo.ScreenListener.ScreenStateListener;
-import com.tencent.tmgp.xlj.R;
+import com.syhl.xmsy.R;
 import com.yayawan.callback.YYWAnimCallBack;
 import com.yayawan.callback.YYWExitCallback;
 import com.yayawan.main.Kgame;
@@ -51,7 +53,7 @@ public class BrowserTempActivity extends Activity {
 	
 //	private static final String mHomeUrl = "http://h5cqllyx.jiulingwan.com/webserver/07073/android/index.html"; //测试
 //	private static final String mHomeUrl = "http://123.207.36.17/game_android/"; //测试服
-	private static final String mHomeUrl = "http://jlsjfu.07073.com/jlsjandroid_hun/"; //专服
+	private static final String mHomeUrl = "https://jlsjfu.07073.com/jlsjandroid_hun/"; //专服
 	
 	//支付回调地址：https://s2bxxy.szhlsg.com:24003/pay/bfan.html
 	private static final String TAG = "SdkDemo";
@@ -65,6 +67,7 @@ public class BrowserTempActivity extends Activity {
 	private URL mIntentUrl;
 	private Timer mTimer;
 	private static  Activity mActivity;
+	private static Button bt1;
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -109,6 +112,16 @@ public class BrowserTempActivity extends Activity {
 		Kgame.getInstance().onCreate(this);
 
 		rl_webview = (RelativeLayout) findViewById(R.id.rl_webview);
+		
+		bt1 = (Button) findViewById(R.id.bt1);
+		bt1.setVisibility(View.GONE);
+		bt1.setOnClickListener(new OnClickListener() {
+			
+			@Override
+			public void onClick(View v) {
+				mWebView.loadUrl(mHomeUrl);
+			}
+		});
 
 		rl_webview.setVisibility(View.VISIBLE);
 		ScreenListener();
@@ -150,8 +163,6 @@ public class BrowserTempActivity extends Activity {
 			View myNormalView;
 			CustomViewCallback callback;
 
-			// /////////////////////////////////////////////////////////
-			//
 			/**
 			 * 全屏播放配置
 			 */
@@ -182,6 +193,18 @@ public class BrowserTempActivity extends Activity {
 				}
 			}
 			
+			@Override 
+			public void onReceivedTitle(WebView view, String title) { 
+				super.onReceivedTitle(view, title); 
+				if (title.equals("网页无法打开")||title.equals("404 Not Found")) { 
+//				view.stopLoading(); 
+//				webView.loadUrl("file:///android_asset/index.html"); //加载本地页面 
+					mWebView.stopLoading();
+					bt1.setVisibility(View.VISIBLE);
+				}else {
+					bt1.setVisibility(View.GONE);
+				}
+			}
 		});
 
 		WebSettings webSetting = mWebView.getSettings();

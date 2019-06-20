@@ -42,7 +42,12 @@ public class ChargerImpl implements YYWCharger {
 
 				        KgameSdk.payment(paramActivity, order2, false,new KgameSdkPaymentCallback() {
 
-				            @Override
+				            /**
+							 * 
+							 */
+							private static final long serialVersionUID = 1L;
+
+							@Override
 				            public void onCancel() {
 				                if (YYWMain.mPayCallBack != null) {
 				                    YYWMain.mPayCallBack.onPayCancel("cancel", "");

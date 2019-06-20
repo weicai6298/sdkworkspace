@@ -16,6 +16,7 @@ import android.graphics.drawable.BitmapDrawable;
 import android.os.Handler;
 import android.os.Looper;
 import android.text.TextUtils;
+import android.util.Log;
 import android.view.Gravity;
 import android.view.View;
 import android.view.View.OnClickListener;
@@ -74,8 +75,13 @@ public class LoginImpl implements YYWLoginer {
 						// TODO Auto-generated method stub
 						//YSDKCallback.loginSuce(paramActivity, Myconstants.openId, Myconstants.nickname, Myconstants.accessToken);
 						if (DeviceUtil.getGameInfo(paramActivity, "NO_USERNAME").equals("yes")) {
+							Log.i("tag", "NO_USERNAME-openid"+paramUser.getOpenid());
+							Log.i("tag", "NO_USERNAME-token ="+paramUser.getAccessToken());
 							loginSuce(paramActivity, paramUser.getOpenid(),  paramUser.getOpenid(),paramUser.getAccessToken());
 						}else {
+							Log.i("tag", "openid ="+paramUser.getOpenid());
+							Log.i("tag", "name ="+paramUser.getNickName());
+							Log.i("tag", "token ="+paramUser.getAccessToken());
 							loginSuce(paramActivity, paramUser.getOpenid(),  paramUser.getNickName(),paramUser.getAccessToken());
 						}
 						
@@ -86,6 +92,7 @@ public class LoginImpl implements YYWLoginer {
 					public void onError(int paramInt) {
 						// TODO Auto-generated method stub
 						loginFail();
+						Log.i("tag","登录失败 = " +paramInt);
 					}
 				});
 			/*	if (Sputils.getSPstring("logout", "no", mActivity).equals("yes")) {
@@ -154,6 +161,7 @@ public class LoginImpl implements YYWLoginer {
 				Myconstants.platform="wx";
 				Myconstants.mpayinfo.opentype = "wx";
 				dialog.dismiss();
+				
 			}
 		});
 
@@ -218,6 +226,7 @@ public class LoginImpl implements YYWLoginer {
 		dialog.setOnCancelListener(new OnCancelListener() {
 
 			public void onCancel(DialogInterface dialog) {
+				Log.i("tag","登录失败1");
 				// TODO Auto-generated method stub
 				if (YYWMain.mUserCallBack != null) {
 					YYWMain.mUserCallBack.onLoginFailed(null, null);

@@ -1,7 +1,50 @@
 <resources>
 
-    <string name="title_activity_main">MainActivity</string>
-    <string name="action_settings">Settings</string>
-    <string name="hello_world">Hello world!</string>
-
+    <string name="app_name">单机SDK3.0.1</string>
+    <string name="count_of_golded">金币数</string>
+    <string name="stage1">关卡1</string>
+    <string name="stage2">关卡2</string>
+    <string name="demo_non_props_1">人物卡牌-1元</string>
+    <string name="demo_non_props_2">人物卡牌-2元</string>
+    <string name="not_purchased">未激活</string>
+    <string name="purchased">已激活</string>
+    <string name="enter_hall">进入商城</string>
+    <string name="mall">商城道具</string>
+    <string name="do_payment">购买血瓶</string>
+    <string name="golden_to_pay">金币</string>
+    <string name="dk_payment_error_amount">输入金额不正确！</string>
+    <string name="dk_payment_canceled">支付取消!</string>
+    <string name="dk_payment_closed">关闭支付中心!</string>
+    <string name="dk_start_game">开始游戏</string>
+    <string name="dk_non_props_title">人物专栏</string>
+    <string name="demo_recharge_title">购买记录</string>
+    <string name="demo_record_title">道具名称</string>
+    <string name="demo_record_number">已购买数量</string>
+    <string name="dk_props_title">消费品专栏</string>
+    <string name="demo_txt_daoju1">匕首-1元</string>
+    <string name="demo_txt_daoju2">符咒-2元</string>
+    <string name="demo_txt_daoju3">戒指-4元</string>
+    <string name="demo_txt_daoju4">头盔-6元</string>
+    <string name="demo_txt_daoju5">魔瓶-10元</string>
+    <string name="demo_txt_daoju6">血瓶-15元</string>
+    <string name="demo_txt_daoju7">盾牌-20元</string>
+    <string name="demo_txt_daoju8">钻石-30元</string>
+    <string name="demo_txt_daoju9">支付宝-1元</string>
+    <string name="demo_txt_daoju10">微信-1元</string>
+    <string name="demo_txt_daoju11">短信-1元</string>
+    
+	<string name="demo_txt_game_not_open">此功能暂时不开放</string>
+    <string name="dk_match">进入争霸赛</string>
+	<string name="dk_module_pay">支付专区</string>
+	<string name="dk_module_competition">争霸赛专区</string>
+	<string name="dk_select_type_title">请选择游戏类型</string>
+	<string name="dk_type_nonchess">单场次类游戏</string>
+	<string name="dk_type_chess">多场次类游戏</string>
+	<string name="dk_type_specific_cp">针对CP自行统计排名的情况</string>
+	<string name="dk_start_game1">开始游戏</string>
+	<string name="dk_view_rank">查看排名</string>
+	<string name="dk_view_nicknames">查看昵称数组</string>
+	<string name="dk_account_module">账号管理</string>
+	<string name="dk_view_account">查看账号</string>
+	<string name="dk_loading_data">正在加载数据，请稍候...</string>
 </resources>

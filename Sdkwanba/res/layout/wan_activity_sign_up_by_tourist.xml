@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/wan_activity_set_mobile"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/wan_background"
+    tools:context="com.yiqiwanba.wansdk.user.SignUpByTouristActivity">
+
+    <RelativeLayout
+        android:id="@+id/topRelativeLayout"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:background="@android:color/black">
+
+        <ImageButton
+            android:id="@+id/backButton"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:background="@null"
+            android:src="@drawable/wan_btn_back_01" />
+
+        <TextView
+            android:id="@+id/textView2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:text="绑定手机号"
+            android:textColor="@android:color/white"
+            android:textSize="18sp" />
+    </RelativeLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/topRelativeLayout"
+        android:background="@color/wan_background">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            android:orientation="vertical"
+            android:padding="16dp">
+
+            <TextView
+                android:id="@+id/tipTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="16dp"
+                android:text="当前您的身份是游客，请先绑定手机号"
+                android:textColor="#999999"
+                android:textSize="12sp" />
+
+            <EditText
+                android:id="@+id/mobileEditText"
+                android:layout_width="240dp"
+                android:layout_height="35dp"
+                android:background="@drawable/wan_edit_text_bg_00"
+                android:drawableLeft="@drawable/wan_icon_head"
+                android:drawablePadding="8dp"
+                android:ems="10"
+                android:hint="请输入手机号码"
+                android:inputType="phone"
+                android:textSize="14sp" />
+
+            <LinearLayout
+                android:layout_width="240dp"
+                android:layout_height="35dp"
+                android:layout_marginTop="10dp"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <EditText
+                    android:id="@+id/verificationCodeEditText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@drawable/wan_edit_text_bg_00"
+                    android:hint="请输入验证码"
+                    android:inputType="number"
+                    android:textSize="14sp" />
+
+                <Button
+                    android:id="@+id/verificationCodeButton"
+                    android:layout_width="wrap_content"
+                    android:layout_height="35dp"
+                    android:layout_marginLeft="8dp"
+                    android:background="@drawable/wan_button_bg_00"
+                    android:paddingLeft="8dp"
+                    android:paddingRight="8dp"
+                    android:text="发送验证码"
+                    android:textColor="@android:color/white"
+                    android:textSize="14sp" />
+
+            </LinearLayout>
+
+            <EditText
+                android:id="@+id/passwordEditText"
+                android:layout_width="240dp"
+                android:layout_height="35dp"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/wan_edit_text_bg_00"
+                android:drawableLeft="@drawable/wan_icon_lock"
+                android:drawablePadding="8dp"
+                android:ems="10"
+                android:hint="请输入密码"
+                android:inputType="textPassword"
+                android:textColor="@color/wan_steel"
+                android:textSize="14sp" />
+
+            <Button
+                android:id="@+id/signUpButton"
+                android:layout_width="240dp"
+                android:layout_height="35dp"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="18dp"
+                android:background="@drawable/wan_button_bg_00"
+                android:text="绑定"
+                android:textColor="@android:color/white"
+                android:textSize="14sp" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="20dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/textView"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="绑定即表示同意"
+                    android:textColor="@color/wan_jumbo"
+                    android:textSize="12sp" />
+
+                <TextView
+                    android:id="@+id/userTermsTextView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="《一起玩吧用户协议》"
+                    android:textColor="@color/wan_dodger_blue"
+                    android:textSize="12sp" />
+            </LinearLayout>
+
+        </LinearLayout>
+    </ScrollView>
+
+</RelativeLayout>

@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/sy233default_select_bg">
+
+    <FrameLayout
+        android:id="@+id/fl_bg"
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:background="@drawable/sy233sub_account_select"
+        android:orientation="vertical"
+        >
+
+        <ImageView
+            android:id="@+id/iv_account_state"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:src="@mipmap/sy233selling"
+            android:visibility="visible"/>
+
+        <TextView
+            android:maxLines="1"
+            android:id="@+id/tv_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="小号1"
+            android:textColor="@color/sy233colorPrimaryDark"
+            android:textSize="16sp"
+            android:visibility="visible"/>
+
+        <LinearLayout
+            android:id="@+id/ll_add"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:orientation="vertical"
+            android:visibility="gone">
+
+            <ImageView
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_gravity="center"
+                android:src="@mipmap/sy233add"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text="创建小号"
+                android:textColor="@color/sy233colorPrimaryDark"
+                android:textSize="15sp"/>
+        </LinearLayout>
+    </FrameLayout>
+</RelativeLayout>
+

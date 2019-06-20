@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <include
+        android:id="@+id/head"
+        layout="@layout/sogou_game_sdk_dialog_head" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/sogou_game_sdk_dialog_common_bottom"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <RadioGroup
+                android:id="@+id/sogo_game_sdk_login_radio_group"
+                android:layout_width="240dp"
+                android:layout_height="40dp"
+                android:layout_centerInParent="true"
+                android:background="@color/gamecat_white"
+                android:orientation="horizontal">
+
+                <RadioButton
+                    android:id="@+id/sogou_game_sdk_account_login_btn"
+                    android:layout_width="0dp"
+                    android:layout_height="40dp"
+                    android:layout_weight="1"
+                    android:button="@null"
+                    android:checked="true"
+                    android:text="帐号登录"
+                    android:textColor="@drawable/sogo_game_sdk_selector_text_black_orange"
+                    android:textSize="15sp" />
+
+                <RadioButton
+                    android:id="@+id/sogou_game_sdk_phone_login_btn"
+                    android:layout_width="0dp"
+                    android:layout_height="40dp"
+                    android:layout_weight="1"
+                    android:button="@null"
+                    android:gravity="end"
+                    android:text="手机登录"
+                    android:textColor="@drawable/sogo_game_sdk_selector_text_black_orange"
+                    android:textSize="15sp" />
+            </RadioGroup>
+
+            <TextView
+                android:id="@+id/sogo_game_sdk_free_register_img"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:paddingBottom="3dp"
+                android:layout_toRightOf="@id/sogo_game_sdk_login_radio_group"
+                android:background="@drawable/sogo_game_sdk_free_registration"
+                android:gravity="center"
+                android:text="免注册"
+                android:textColor="@color/sogou_game_sdk_color_ff8a00"
+                android:textSize="9sp" />
+        </RelativeLayout>
+
+        <android.support.v4.view.ViewPager
+            android:id="@+id/sogo_game_sdk_login_viewpager"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:overScrollMode="never" />
+    </LinearLayout>
+
+</LinearLayout>

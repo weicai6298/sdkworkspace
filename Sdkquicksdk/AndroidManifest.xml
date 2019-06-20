@@ -17,40 +17,40 @@
     <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
     <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW" />
     <uses-permission android:name="android.permission.GET_TASKS" />
-    
-     <uses-permission android:name="android.permission.BLUETOOTH" />
+    <uses-permission android:name="android.permission.BLUETOOTH" />
     <uses-permission android:name="android.permission.BLUETOOTH_ADMIN" />
 
     <application
         android:name="com.yayawan.impl.YYApplication"
         android:allowBackup="true"
         android:theme="@android:style/Theme.NoTitleBar.Fullscreen" >
+        <activity android:name="com.example.h5demo.BrowserTempActivity" >
+        </activity>
         <activity
-            android:name="com.yayawan.sdktemplate.MainActivity"
-            android:label="app_name" >
+            android:name="com.yayawan.impl.SplashActivity"
+            android:configChanges="keyboardHidden|navigation|orientation|screenSize"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.NoTitleBar.Fullscreen" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-      
-        
-      <!-- 手游互联配置 -->
-     	 <meta-data
+
+        <!-- 手游互联配置 -->
+        <meta-data
             android:name="app_id"
-            android:value="kk78087134" />
+            android:value="kk2315060614" />
         <meta-data
             android:name="isLandscape"
             android:value="true" />
-     	 <meta-data
+        <meta-data
             android:name="productCode"
-            android:value="string88049844578484520615487574815873" />
-     	 <meta-data
+            android:value="string46728786876571024782229662507242" />
+        <meta-data
             android:name="productKey"
-            android:value="string82414864" />
-    
+            android:value="string82479237" />
     </application>
 
 </manifest>
-

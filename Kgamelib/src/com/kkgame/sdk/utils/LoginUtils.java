@@ -2,6 +2,7 @@ package com.kkgame.sdk.utils;
 
 import java.math.BigInteger;
 
+import org.apache.http.HttpEntity;
 import org.json.JSONException;
 import org.json.JSONObject;
 
@@ -10,8 +11,10 @@ import android.app.Activity;
 import android.content.Context;
 import android.os.Handler;
 import android.os.Message;
+import android.text.TextUtils;
 import android.widget.Toast;
 
+import com.yayawan.main.YYWMain;
 import com.kkgame.sdk.bean.User;
 import com.kkgame.sdk.callback.KgameSdkUserCallback;
 import com.kkgame.sdk.db.UserDao;
@@ -21,6 +24,7 @@ import com.kkgame.sdk.login.ViewConstants;
 import com.kkgame.sdkmain.AgentApp;
 import com.kkgame.sdkmain.KgameSdk;
 import com.kkgame.utils.DeviceUtil;
+import com.kkgame.utils.Sputils;
 import com.kkgame.utils.Yayalog;
 import com.lidroid.jxutils.HttpUtils;
 import com.lidroid.jxutils.exception.HttpException;
@@ -106,6 +110,8 @@ public class LoginUtils {
 		rps.addBodyParameter("username", mUsername);
 		rps.addBodyParameter("password", mPassword);
 		HttpUtils httpUtils = new HttpUtils();
+		
+		
 		httpUtils.send(HttpMethod.POST, ViewConstants.loginurl, rps,
 				new RequestCallBack<String>() {
 
@@ -126,23 +132,30 @@ public class LoginUtils {
 						Yayalog.loger("登陆结果" + result.result);
 						User user = parserLoginResult(result.result);
 						if (user == null) {
-							startlogin();
 							mUserCallback.onError(1);
-							return;
 						}
 						AgentApp.mUser = user;
 
-						UserDao.getInstance(mActivity).writeUser(
-								AgentApp.mUser.userName,
-								AgentApp.mUser.password, AgentApp.mUser.secret);
+						try {
+							UserDao.getInstance(mActivity).writeUser(
+									AgentApp.mUser.userName,
+									AgentApp.mUser.password, AgentApp.mUser.secret);
+							AgentApp.mUser.password = "";
+							AgentApp.mUser.secret = "";
+							//Yayalog.loger("登陆结果" + AgentApp.mUser.toString());
 
-						AgentApp.mUser.password = "";
-						AgentApp.mUser.secret = "";
-						//Yayalog.loger("登陆结果" + AgentApp.mUser.toString());
+							Login_success_dialog login_success_dialog = new Login_success_dialog(
+									mActivity);
+							login_success_dialog.dialogShow();
+						} catch (Exception e) {
+							// TODO Auto-generated catch block
+							Sputils.putSPint("ischanageacount", 0,
+									ViewConstants.mMainActivity);
+							mUserCallback.onError(1);
+							//mUserCallback.onLogout();
+						}
 
-						Login_success_dialog login_success_dialog = new Login_success_dialog(
-								mActivity);
-						login_success_dialog.dialogShow();
+						
 					}
 
 				});
@@ -161,7 +174,12 @@ public class LoginUtils {
 			}
 			JSONObject datas = jsonObject.getJSONObject("data");
 			User user = new User();
+			//System.out.println("+++++++++++++++"+datas.optString("uid"));
 			// user.setPhone(datas.optString("mobile"));
+			if (TextUtils.isEmpty(datas.optString("uid"))) {
+				
+				return null;
+			}
 			user.setUserName(datas.optString("username"));
 			user.setToken(datas.optString("token"));
 			user.setPassword(mPassword);
@@ -188,16 +206,7 @@ public class LoginUtils {
 		if (LOGINTYPE != STARTLOGIN) {
 			Utilsjf.creDialogpro(mActivity, "正在玩命登录...");
 		}
-		/*
-		 * new Thread() {
-		 * 
-		 * @Override public void run() { try {
-		 * 
-		 * User user = ObtainData.register(mContext, mName, mPassword); Message
-		 * message = new Message(); message.obj = user; message.what = REGISTER;
-		 * mHandler.sendMessage(message); } catch (Exception e) {
-		 * mHandler.sendEmptyMessage(ERROR); e.printStackTrace(); } } }.start();
-		 */
+		
 
 	}
 

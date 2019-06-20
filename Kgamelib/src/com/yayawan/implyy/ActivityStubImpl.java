@@ -1,6 +1,7 @@
 package com.yayawan.implyy;
 
 import android.app.Activity;
+import android.content.Context;
 import android.content.Intent;
 
 import com.kkgame.sdkmain.KgameSdk;
@@ -95,6 +96,44 @@ public class ActivityStubImpl implements YYWActivityStub {
 	public void onStart(Activity paramActivity) {
 		// TODO Auto-generated method stub
 
-	};
+	}
+
+	@Override
+	public void launchActivityOnCreate(Activity paramActivity) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void launchActivityonOnNewIntent(Intent paramIntent) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void onRequestPermissionsResult(int requestCode,
+			String[] permissions, int[] grantResults) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void onBackPressed() {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void attachBaseContext(Context newBase) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void onConfigurationChanged() {
+		// TODO Auto-generated method stub
+		
+	}
+
 
 }

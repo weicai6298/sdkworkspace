@@ -4,7 +4,6 @@ import com.yayawan.impl.YYApplication;
 import com.yayawan.proxy.GameApitest;
 import com.yayawan.proxy.YYcontants;
 
-import android.app.Activity;
 import android.util.Log;
 
 public class Yayalog {
@@ -16,7 +15,7 @@ public class Yayalog {
 		
 		//DeviceUtil.isDebug(paramContext)
 		if (canlog) {
-			Log.e("Yayalog", msg);
+			Log.e("yayawanYayalog", msg);
 		}
 			
 		
@@ -33,14 +32,9 @@ public class Yayalog {
 		
 	}
 	
-	public static void  logerlife(String msg,Activity paramActivity){
+	public static void  logerlife(String msg){
 		
 		//DeviceUtil.isDebug(paramContext)
-		if (YYcontants.ISDEBUG) {
-			Log.d("Yayaloglife", msg);
-			GameApitest.getGameApitestInstants(paramActivity).sendTest(msg);
-		}
-			
 		
 		
 	}

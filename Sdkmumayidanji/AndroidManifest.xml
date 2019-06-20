@@ -95,7 +95,7 @@
 
         <meta-data
             android:name="SDK-VERSION"
-            android:value="3.4.5" />
+            android:value="3.4.9" />
         <meta-data
             android:name="MMY-PID"
             android:value="KEY-8YCe1DwnvyQ" />

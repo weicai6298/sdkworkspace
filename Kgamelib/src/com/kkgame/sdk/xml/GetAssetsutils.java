@@ -20,6 +20,7 @@ import com.kkgame.utils.DeviceUtil;
 public class GetAssetsutils {
 
 	private static int widthPx;
+	private static Drawable patchy;
 
 	/**
 	 * 从资源文件中获取图片并且根据屏幕大小进行1080适配
@@ -81,20 +82,22 @@ public class GetAssetsutils {
 	public static Drawable get9DrawableFromAssetsFile(String fileName,
 			Context mconContext) {
 		InputStream stream = null;
+		NinePatchDrawable patchy = null;
 		try {
 			stream = mconContext.getAssets().open("yayaassets/"+fileName);
-		} catch (IOException e1) {
-			e1.printStackTrace();
-		}
+		
 
 		Bitmap bitmap = BitmapFactory.decodeStream(stream);
 		byte[] chunk = bitmap.getNinePatchChunk();
 		boolean bResult = NinePatch.isNinePatchChunk(chunk);
-		
-		NinePatchDrawable patchy = null;
-		try {
+		if (bResult) {
+			//System.out.println(fileName+"是.9图片");
 			patchy = new NinePatchDrawable(bitmap, chunk,
 					new Rect(), null);
+		}else{
+			System.out.println(fileName+"不是.9图片");
+		}
+		
 		} catch (Exception e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();

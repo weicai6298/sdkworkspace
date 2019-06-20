@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="sy233colorPrimary">#20c2cc</color>
+    <color name="sy233colorPrimaryDark">#20c2cc</color>
+    <color name="sy233colorAccent">#FF4081</color>
+
+    <color name="sy233dimgray">#ff696969</color>
+    <color name="sy233lighter_gray">#ffd3d3d3</color>
+    <color name="sy233bg">#FFEDEDED</color>
+    <color name="sy233alpha_bg">#B4000000</color>
+    <color name="sy233title_bd">#edefee</color>
+
+    <color name="sy233bt_sure_bg">#edefee</color>
+    <color name="sy233bt_enable">#71d6dc</color>
+
+    <color name="sy233line">#FFE3E3E3</color>
+    <!--textColor-->
+    <color name="sy233black">#303030</color>
+    <color name="sy233white">#ffffff</color>
+    <color name="sy233blacktextcolor">#545454</color>
+    <color name="sy233graytextcolor">#848484</color>
+    <color name="sy233hintextcolor">#bebebe</color>
+    <color name="sy233gift_time_color">#ea704d</color>
+    <color name="sy233blance_color">#e62b00</color>
+    <color name="sy233coupon_disable_color">#868686</color>
+    <color name="sy233purple">#586997</color>
+    <color name="sy233discount_color">#e77966</color>
+
+
+    <color name="sy233defualt_select">#eaeaea</color>
+
+    <color name="sy233background_tab_pressed">#ededed</color>
+    <color name="sy233grey">#aaaaaa</color>
+</resources>

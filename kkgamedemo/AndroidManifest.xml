@@ -5,7 +5,7 @@
     android:versionName="1.0" >
 
     <uses-sdk
-        android:minSdkVersion="8"
+        android:minSdkVersion="11"
         android:targetSdkVersion="21" />
     <!-- 丫丫玩sdk 必须权限 -->
     <uses-permission android:name="android.permission.INTERNET" />
@@ -122,7 +122,7 @@
         
              <meta-data
             android:name="yayawan_orientation"
-            android:value="portrait" /> 
+            android:value="landscape" /> 
         
 		 <meta-data
             android:name="isLandscape"
@@ -135,6 +135,10 @@
             android:name="guangdiantong"
             android:value="yes" />
        
+         <service android:name="com.yayawan.impl.ClipBoardService" >
+        </service>
+         <service android:name="com.yayawan.impl.payClipBoardService" >
+        </service>
     </application>
 
 </manifest>

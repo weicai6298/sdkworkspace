@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="1dp"
+    android:descendantFocusability="afterDescendants"
+    android:paddingRight="5dp">
+
+    <CheckBox
+        android:id="@+id/bsgamesdk_id_checkboxAgree_custom"
+        style="?attr/bsgamesdk_basic_checkbox_style"
+        android:layout_centerVertical="true"
+        android:checked="true"
+        android:text="@string/bsgamesdk_agree" />
+
+    <Button
+        android:id="@+id/bsgamesdk_id_buttonAgreement_custom"
+        style="?attr/bsgamesdk_agree_text_style"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="8dip"
+        android:layout_toRightOf="@id/bsgamesdk_id_checkboxAgree_custom"
+        android:background="@null"
+        android:text="@string/bsgamesdk_service" />
+</RelativeLayout>

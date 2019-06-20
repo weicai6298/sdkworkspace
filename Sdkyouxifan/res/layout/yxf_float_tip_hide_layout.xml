@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:id="@+id/rl_out_hide_tip">
+
+    <RelativeLayout
+        android:id="@+id/rl_in_hide_tip"
+        android:layout_width="match_parent"
+        android:layout_height="90dp"
+        android:background="@drawable/yxf_lin_shape_tra">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:padding="10dp"
+            android:text="拖拽到此处隐藏悬浮球"
+            android:textColor="@color/yxf_sdk_white"
+            android:textSize="16sp" />
+
+    </RelativeLayout>
+
+</RelativeLayout>

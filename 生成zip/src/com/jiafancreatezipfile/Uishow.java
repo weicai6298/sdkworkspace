@@ -19,7 +19,6 @@ public class Uishow extends JFrame {
 
 	// 创建按钮
 	public Uishow() {
-		
 		tx_sdkworkspace = new JTextField(20);
 		tx_sdkpath = new JTextField(20);
 		tx_japktoolpath = new JTextField(20);

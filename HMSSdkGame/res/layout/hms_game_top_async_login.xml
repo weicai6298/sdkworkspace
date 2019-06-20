@@ -27,7 +27,7 @@
 	        <ImageView 
 	            android:layout_width="32dp"
 	            android:layout_height="32dp"
-	            android:src="@drawable/hms_game_icon"/>
+	            android:src="@drawable/c_buoycircle_icon"/>
 	        
 	        <TextView 
 	            android:id="@+id/top_notice_text"

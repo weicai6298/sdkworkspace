@@ -2,20 +2,9 @@ package com.yayawan.proxy;
 
 import org.json.JSONException;
 import org.json.JSONObject;
-
 import android.app.Activity;
+import android.content.Context;
 import android.content.Intent;
-
-import com.kkgame.sdk.login.ViewConstants;
-import com.kkgame.sdk.other.JFnoticeUtils;
-import com.kkgame.sdk.other.JFupdateUtils;
-import com.kkgame.sdkmain.KgameSdk;
-import com.kkgame.utils.DeviceUtil;
-import com.kkgame.utils.GameTestUtils;
-import com.kkgame.utils.Handle;
-import com.kkgame.utils.JSONUtil;
-import com.kkgame.utils.Sputils;
-import com.kkgame.utils.Yayalog;
 import com.yayawan.callback.YYWAnimCallBack;
 import com.yayawan.callback.YYWExitCallback;
 import com.yayawan.callback.YYWLoginHandleCallback;
@@ -31,6 +20,22 @@ import com.yayawan.impl.LoginImpl;
 import com.yayawan.impl.UserManagerImpl;
 import com.yayawan.implyy.ChargerImplyylianhe;
 import com.yayawan.main.YYWMain;
+import com.kkgame.sdk.login.ViewConstants;
+import com.kkgame.sdk.other.JFnoticeUtils;
+import com.kkgame.sdk.other.JFupdateUtils;
+import com.kkgame.sdk.pay.GreenblueP;
+import com.kkgame.sdkmain.KgameSdk;
+import com.kkgame.utils.DeviceUtil;
+import com.kkgame.utils.Handle;
+import com.kkgame.utils.JSONUtil;
+import com.kkgame.utils.Sputils;
+import com.kkgame.utils.Yayalog;
+import com.lidroid.jxutils.HttpUtils;
+import com.lidroid.jxutils.exception.HttpException;
+import com.lidroid.jxutils.http.RequestParams;
+import com.lidroid.jxutils.http.ResponseInfo;
+import com.lidroid.jxutils.http.callback.RequestCallBack;
+import com.lidroid.jxutils.http.client.HttpRequest.HttpMethod;
 
 public class CommonGameProxy implements YYWGameProxy {
 
@@ -94,11 +99,9 @@ public class CommonGameProxy implements YYWGameProxy {
 	public void login(final Activity paramActivity,
 			final YYWUserCallBack userCallBack) {
 		mActivity = paramActivity;
-		
-		GameApitest.getGameApitestInstants(paramActivity).sendTest("login");
 		// YYWMain.mUserCallBack=userCallBack;
-		Yayalog.logerlife("login",paramActivity);
-		Yayalog.loger("commmonGameproxylogin");
+		// 检测是否调用类
+		GameApitest.getGameApitestInstants(paramActivity).sendTest("login");
 		
 		if (ViewConstants.ISKGAME) {
 			Yayalog.loger("Kgamelogin");
@@ -150,7 +153,9 @@ public class CommonGameProxy implements YYWGameProxy {
 											yywUser = new YYWUser();
 											yywUser.uid = kgameuid;
 											yywUser.userName = kgameusername;
+											//丫丫玩平台的token
 											yywUser.yywtoken = kgametoken;
+											//给研发的token
 											yywUser.token = JSONUtil
 													.formatToken(paramActivity,
 															paramUser.token,
@@ -161,18 +166,22 @@ public class CommonGameProxy implements YYWGameProxy {
 											Yayalog.loger("yywUser.uid："+yywUser.uid);
 											// 拼接渠道的user，当调用渠道的支付，一定使用到渠道的YYWMain.mUser.uid
 											YYWMain.mUser.uid = paramUser.uid;
-											
+											//渠道的username
 											YYWMain.mUser.userName = paramUser.userName;
+											//丫丫玩的uid
 											YYWMain.mUser.yywuid = yywUser.uid;
 											
 											Yayalog.loger("YYWMain.mUser.yywuid："+YYWMain.mUser.yywuid);
 											YYWMain.mUser.yywusername = yywUser.userName;
+											
 											YYWMain.mUser.yywtoken = yywUser.yywtoken;
 											Yayalog.loger("+++++++++++++token"
 													+ YYWMain.mUser.token);
 											Yayalog.loger("+++++++++++++联合渠道登陆："
 													+ YYWMain.mUser.toString());
-
+											
+											
+											
 											mActivity
 													.runOnUiThread(new Runnable() {
 
@@ -227,12 +236,12 @@ public class CommonGameProxy implements YYWGameProxy {
 	@Override
 	public void logout(Activity paramActivity, YYWUserCallBack userCallBack) {
 		YYWMain.mUserCallBack = userCallBack;
-		Yayalog.logerlife("logout",paramActivity);
+		GameApitest.getGameApitestInstants(paramActivity).sendTest("logout");
 		//this.mLogin.relogin(paramActivity, userCallBack, "relogin");
 	}
 
 	public void logout(Activity paramActivity) {
-		Yayalog.logerlife("logout",paramActivity);
+		GameApitest.getGameApitestInstants(paramActivity).sendTest("logout");
 		this.mUserManager.logout(paramActivity, null, null);
 	}
 
@@ -240,22 +249,90 @@ public class CommonGameProxy implements YYWGameProxy {
 	public void charge(Activity paramActivity, YYWOrder order,
 			YYWPayCallBack payCallBack) {
 		YYWMain.mPayCallBack = payCallBack;
-		Yayalog.logerlife("charge",paramActivity);
+		//Yayalog.logerlife("charge");
 		YYWMain.mOrder = order;
 		this.mCharger.charge(paramActivity, order, payCallBack);
 	}
 
 	@Override
-	public void pay(Activity paramActivity, YYWOrder order,
+	public void pay(final Activity paramActivity, YYWOrder order,
 			YYWPayCallBack payCallBack) {
-		Yayalog.logerlife("pay",paramActivity);
+		GameApitest.getGameApitestInstants(paramActivity).sendTest("pay");
 		YYWMain.mPayCallBack = payCallBack;
 		YYWMain.mOrder = order;
 
+		if (ViewConstants.ISKGAME) {
+			gotoPay(paramActivity, 0);
+			Yayalog.logerlife("ISKGAMEpay");
+			return;
+		} 
+		//判断是否小米渠道
+				if (DeviceUtil.isXiaomi(paramActivity)) {
+					//判断是否选择过小米支付
+					if (GreenblueP.isselectxiaomipay) {
+						this.mCharger = new ChargerImpl();
+						this.mCharger.pay(paramActivity, order, payCallBack);
+						return;
+					}
+				}
+		
 		int login_type = Sputils.getSPint("login_type", 0, paramActivity);
 		int login_pay_level = Sputils.getSPint("login_pay_level", 0,
 				paramActivity);
-		Yayalog.loger("CommonGameProxy：login_pay_level:" + "" + login_pay_level);
+		Yayalog.loger("CommonGameProxy：login_pay_level:" + "" + login_pay_level+"CommonGameProxy：login_type"+login_type+":::templevel:"+templevel);
+		
+		HttpUtils httpUtils = new HttpUtils();
+		RequestParams requestParams = new RequestParams();
+		requestParams.addBodyParameter("app_id", DeviceUtil.getAppid(paramActivity));
+		requestParams.addBodyParameter("uid", YYWMain.mUser.yywuid);
+		requestParams.addBodyParameter("token", YYWMain.mUser.yywtoken);
+		requestParams.addBodyParameter("app_ver", DeviceUtil.getVersionCode(paramActivity));
+		requestParams.addBodyParameter("role_level", templevel+"");
+		System.out.println("app_id"+DeviceUtil.getAppid(paramActivity));
+		System.out.println("uid"+YYWMain.mUser.yywuid);
+		System.out.println("app_ver"+DeviceUtil.getVersionCode(paramActivity));
+		System.out.println("token"+YYWMain.mUser.yywtoken);
+		System.out.println("role_level"+templevel);
+		httpUtils.send(HttpMethod.POST, ViewConstants.paytype,requestParams, new RequestCallBack<String>() {
+
+			@Override
+			public void onFailure(HttpException arg0, String result) {
+				// TODO Auto-generated method stub
+				System.out.println("支付请求失败："+result);
+				YYWMain.mPayCallBack.onPayFailed("1", "");
+			}
+
+			@Override
+			public void onSuccess(ResponseInfo<String> result) {
+				// TODO Auto-generated method stub
+				System.out.println("支付请求成功："+result.result);
+				try {
+					JSONObject jsonObject = new JSONObject(result.result);
+					int optInt = jsonObject.optInt("err_code");
+					if (optInt==0) {
+						JSONObject data=jsonObject.getJSONObject("data");
+						int toggleint =data.optInt("toggle");
+						gotoPay(paramActivity, toggleint);
+					}else {
+						gotoPay(paramActivity, 0);
+						
+					}
+					
+				} catch (JSONException e) {
+					// TODO Auto-generated catch block
+					YYWMain.mPayCallBack.onPayFailed("1", "");
+					e.printStackTrace();
+				}
+				
+			}
+		});
+		
+
+		
+	}
+
+	
+	public void gotoPay(Activity paramActivity,int login_type){
 		switch (login_type) {
 		case 0:
 			Yayalog.loger("CommonGameProxy:" + "kgame支付");
@@ -265,16 +342,11 @@ public class CommonGameProxy implements YYWGameProxy {
 
 		case 1:
 
-			if (compareLevel(templevel + "", login_pay_level + "")) {
-				Yayalog.loger("CommonGameProxy1:" + "kgamelianhe支付");
-				this.mCharger = new ChargerImplyylianhe();
-				this.mCharger.pay(paramActivity, YYWMain.mOrder,
-						YYWMain.mPayCallBack);
-			} else {
-				Yayalog.loger("CommonGameProxy1:" + "kgame支付");
-				this.mCharger.pay(paramActivity, YYWMain.mOrder,
-						YYWMain.mPayCallBack);
-			}
+			Yayalog.loger("CommonGameProxy1:" + "kgamelianhe支付");
+			this.mCharger = new ChargerImplyylianhe();
+			this.mCharger.pay(paramActivity, YYWMain.mOrder,
+					YYWMain.mPayCallBack);
+			
 			break;
 		case 2:
 
@@ -283,15 +355,10 @@ public class CommonGameProxy implements YYWGameProxy {
 		default:
 			break;
 		}
-
-		// 获取配置文件的参数，指定切换支付的支付方式
-		// this.mCharger.pay(paramActivity, YYWMain.mOrder,
-		// YYWMain.mPayCallBack);
 	}
-
 	@Override
 	public void manager(Activity paramActivity) {
-		Yayalog.logerlife("manager",paramActivity);
+		Yayalog.logerlife("manager");
 		this.mUserManager.manager(paramActivity);
 
 	}
@@ -299,14 +366,14 @@ public class CommonGameProxy implements YYWGameProxy {
 	@Override
 	public void exit(final Activity paramActivity,
 			final YYWExitCallback exitCallBack) {
-		Yayalog.logerlife("exit",paramActivity);
+		GameApitest.getGameApitestInstants(paramActivity).sendTest("exit");
 		YYWMain.mExitCallback = exitCallBack;
 		this.mUserManager.exit(paramActivity, exitCallBack);
 	}
 
 	@Override
 	public void anim(Activity paramActivity, YYWAnimCallBack animCallback) {
-		Yayalog.logerlife("anim",paramActivity);
+		GameApitest.getGameApitestInstants(paramActivity).sendTest("anim");
 		YYWMain.mAnimCallBack = animCallback;
 		this.mAnimation.anim(paramActivity);
 
@@ -316,7 +383,8 @@ public class CommonGameProxy implements YYWGameProxy {
 	public void setRoleData(Activity paramActivity, String roleId,
 			String roleName, String roleLevel, String zoneId, String zoneName) {
 		// TODO Auto-generated method stub
-
+		GameApitest.getGameApitestInstants(paramActivity).sendTest(
+				"setRoleData");
 		YYWMain.mRole = new YYWRole(roleId, roleName, roleLevel, zoneId,
 				zoneName);
 		// 设置临时的角色等级。用作支付时候判断是否切换支付
@@ -328,16 +396,14 @@ public class CommonGameProxy implements YYWGameProxy {
 	public void setData(Activity paramActivity, String roleId, String roleName,
 			String roleLevel, String zoneId, String zoneName, String roleCTime,
 			String ext) {
-		Yayalog.loger("调用了commongameproxy中setData");
+		
 		
 		// 设置临时的角色等级。用作支付时候判断是否切换支付
 		templevel = Integer.parseInt(roleLevel);
 		YYWMain.mRole = new YYWRole(roleId, roleName, roleLevel, zoneId,
 				zoneName, roleCTime, ext);
-		Yayalog.logerlife("setData"+ext+":"+YYWMain.mRole.toString(),paramActivity);
-		//Yayalog.loger("调用了commongameproxy中setData:"+YYWMain.mRole.toString());
-		//Yayalog.logerlife("anim:"+YYWMain.mRole.toString());
-
+		GameApitest.getGameApitestInstants(paramActivity).sendTest("setData"+ext+":"+YYWMain.mRole.toString());
+		KgameSdk.setRoleData(paramActivity, roleId, roleName, roleLevel, zoneId, zoneName,YYWMain.mUser.yywtoken,YYWMain.mUser.yywuid);
 		this.mUserManager.setData(paramActivity, roleId, roleName, roleLevel,
 				zoneId, zoneName, roleCTime, ext);
 
@@ -350,19 +416,24 @@ public class CommonGameProxy implements YYWGameProxy {
 
 	boolean newactive = true;
 
-	private int loca_login_type;
 
+	
 	@Override
 	public void onCreate(final Activity paramActivity) {
 		// 进行检查更新
-		
-		GameTestUtils.setData();
+		YYcontants.ISDEBUG=DeviceUtil.isDebug(paramActivity);
+		try {
+			GameApitest.sendTest2(paramActivity);
+		} catch (Exception e) {
+			// TODO: handle exception
+		}
+	
 		
 		mActivity = paramActivity;
 		Yayalog.setCanlog(DeviceUtil.isDebug(paramActivity));//设置是否打log
 		System.out.println("是否可以打印yayalog："+Yayalog.canlog);
 		
-		Yayalog.logerlife("onCreate：",paramActivity);
+		
 		
 		// 获取公告
 		new JFnoticeUtils().getNotice(paramActivity);
@@ -371,19 +442,19 @@ public class CommonGameProxy implements YYWGameProxy {
 
 		mStub.onCreate(paramActivity);
 		
-
+		GameApitest.getGameApitestInstants(paramActivity).sendTest("onCreate");
 	}
 
 	@Override
 	public void onStop(Activity paramActivity) {
-		Yayalog.logerlife("onStop:",paramActivity);
+		GameApitest.getGameApitestInstants(paramActivity).sendTest("onStop");
 		this.mStub.onStop(paramActivity);
 		
 	}
 
 	@Override
 	public void onResume(Activity paramActivity) {
-		Yayalog.logerlife("onResume:",paramActivity);
+		GameApitest.getGameApitestInstants(paramActivity).sendTest("onResume");
 
 		this.mStub.onResume(paramActivity);
 
@@ -391,8 +462,8 @@ public class CommonGameProxy implements YYWGameProxy {
 
 	@Override
 	public void onPause(Activity paramActivity) {
-		
-		Yayalog.logerlife("onPause:",paramActivity);
+	
+		GameApitest.getGameApitestInstants(paramActivity).sendTest("onPause");
 
 
 		this.mStub.onPause(paramActivity);
@@ -401,27 +472,28 @@ public class CommonGameProxy implements YYWGameProxy {
 
 	@Override
 	public void onRestart(Activity paramActivity) {
-		Yayalog.logerlife("onRestart:",paramActivity);
+		GameApitest.getGameApitestInstants(paramActivity).sendTest("onRestart");
 
 		this.mStub.onRestart(paramActivity);
 	}
 
 	@Override
 	public void onDestroy(Activity paramActivity) {
-		Yayalog.logerlife("onDestroy:",paramActivity);
+		GameApitest.getGameApitestInstants(paramActivity).sendTest("onDestroy");
 		this.mStub.onDestroy(paramActivity);
 	}
 
 	@Override
 	public void applicationDestroy(Activity paramActivity) {
-		Yayalog.logerlife("applicationDestroy:",paramActivity);
+		Yayalog.logerlife("applicationDestroy:");
 		this.mStub.applicationDestroy(paramActivity);
 	}
 
 	@Override
 	public void onActivityResult(Activity paramActivity, int paramInt1,
 			int paramInt2, Intent paramIntent) {
-		Yayalog.logerlife("onActivityResult:",paramActivity);
+		GameApitest.getGameApitestInstants(paramActivity).sendTest(
+				"onActivityResult");
 		this.mStub.onActivityResult(paramActivity, paramInt1, paramInt2,
 				paramIntent);
 
@@ -430,20 +502,27 @@ public class CommonGameProxy implements YYWGameProxy {
 	@Override
 	public void onNewIntent(Intent paramIntent) {
 		if (mActivity != null) {
+			GameApitest.getGameApitestInstants(mActivity).sendTest(
+					"onNewIntent");
 		}
-		Yayalog.logerlife("onNewIntent:",mActivity);
+
 		this.mStub.onNewIntent(paramIntent);
 	}
 
 	@Override
 	public void initSdk(Activity paramActivity) {
-		Yayalog.logerlife("initSdk:",paramActivity);
+		GameApitest.getGameApitestInstants(paramActivity).sendTest("initSdk");
 		// TODO Auto-generated method stub
 		// Class.forName("ActivityStubImpl").
 		// 为了兼容老sdk判断是否有初始化方法再执行
 		this.mStub.initSdk(paramActivity);
 	}
 
+	public void onStart(Activity paramActivity) {
+		GameApitest.getGameApitestInstants(paramActivity).sendTest("onStart");
+		// TODO Auto-generated method stub
+		this.mStub.onStart(paramActivity);
+	}
 	/**
 	 * 判断本地的等级与线上设定的等级谁大
 	 * 
@@ -473,4 +552,44 @@ public class CommonGameProxy implements YYWGameProxy {
 		return false;
 	}
 
+	
+	public void launchActivityOnCreate(Activity paramActivity) {
+		// TODO Auto-generated method stub
+		GameApitest.getGameApitestInstants(paramActivity).sendTest("launchActivityOnCreate");
+		this.mStub.launchActivityOnCreate(paramActivity);
+	}
+
+	
+	public void launchActivityonOnNewIntent(Intent paramIntent) {
+		// TODO Auto-generated method stub
+		GameApitest.getGameApitestInstants().sendTest("launchActivityonOnNewIntent");
+		this.mStub.launchActivityonOnNewIntent(paramIntent);
+	}
+
+
+	public void onRequestPermissionsResult(int requestCode,
+			String[] permissions, int[] grantResults) {
+		// TODO Auto-generated method stub
+		GameApitest.getGameApitestInstants().sendTest("onRequestPermissionsResult");
+		this.mStub.onRequestPermissionsResult(requestCode,permissions,grantResults);
+	}
+
+	/**
+	 * 新增
+	 */
+	public void onBackPressed() {
+		// TODO Auto-generated method stub
+		GameApitest.getGameApitestInstants().sendTest("onBackPressed");
+		this.mStub.onBackPressed();
+	}
+	public void attachBaseContext(Context newBase) {
+		// TODO Auto-generated method stub
+		GameApitest.getGameApitestInstants().sendTest("attachBaseContext");
+		this.mStub.attachBaseContext(newBase);
+	}
+	public void onConfigurationChanged() {
+		// TODO Auto-generated method stub
+		GameApitest.getGameApitestInstants().sendTest("onConfigurationChanged");
+		this.mStub.onConfigurationChanged();
+	}
 }

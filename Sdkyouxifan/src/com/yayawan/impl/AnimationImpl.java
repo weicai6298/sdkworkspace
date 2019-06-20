@@ -116,9 +116,9 @@ class LogoWindow {
 		try {
 
 			if (	DeviceUtil.isLandscape(con)) {
-				istr = assetManager.open("yxf_heng.png");
+				istr = assetManager.open("heng.png");
 			}else {
-				istr = assetManager.open("yxf_shu.png");
+				istr = assetManager.open("shu.png");
 			}
 		
 			
@@ -131,7 +131,7 @@ class LogoWindow {
 
 		iv.setBackgroundColor(Color.parseColor("#f7faf1"));
 		iv.setImageBitmap(bitmap);
-		iv.setScaleType(ScaleType.CENTER);
+		iv.setScaleType(ScaleType.CENTER_CROP);
 		rootview.addView(iv);
 
 		mHandler.sendEmptyMessageDelayed(1, 3000L);

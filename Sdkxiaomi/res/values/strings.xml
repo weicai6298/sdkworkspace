@@ -1,7 +1,66 @@
-<resources>
+<?xml version="1.0" encoding="utf-8"?>
 
-    <string name="title_activity_main">MainActivity</string>
-    <string name="action_settings">Settings</string>
-    <string name="hello_world">Hello world!</string>
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+     <!-- for demo start-->
+    
+    <string name="hello_world">This application for In-App Purchase process demo</string>
+    <string name="button_text_login">Login</string>
+    <string name="button_text_purchase">Buy</string>
+    <string name="demo_tip"><Data><![CDATA[<font>Now is</font><font color="#FF0000">%s</font><font>mode</font>]]></Data></string>
+    <string name="demo_tip1"><Data><![CDATA[<font>Now：</font><font color="#FF0000">%s</font>]]></Data></string>
+    <string name="update_me" translatable="false">UPDATE ME</string>
+    <string name="useheart" translatable="false">USEHEART</string>
+    <string name="check_value" translatable="false">Check Value</string>
+    <string name="ok" translatable="false">OK</string>
+    <string name="cancel">Cancel</string>
+    <string name="in_app_friends">Friends are playing games</string>
+    <string name="out_app_friends" translatable="false">friend not using this app</string>
+    <string name="should_send_message" translatable="false">Send message like below?</string>
+    
+    <string name="demo_islogin">Executing, do not repeat operation</string>
+    <string name="demo_choess_money">Please select the amount of recharge</string>
+    <string name="demo_pay_amount_1fen">1 GOLD(0.01Mi Credit)</string>
+    <string name="demo_pay_amount_6yuan">60 GOLD(6Mi Credits)</string>
+    <string name="demo_pay_amount_12yuan">120 GOLD(12Mi Credits)</string>
+    <string name="demo_pay_amount_1fen_1">1 LUCKY COIN(0.01 Mi Credit)</string>
+    <string name="demo_pay_amount_6yuan_1">Open all levels(6 Mi Credit)</string>
+    <string name="demo_pay_amount_12yuan_1">Equipment(12 Mi Credit)</string>
 
+     <string name="demo_pay_amount_1yuan">1yuan(1Mi Credit)</string>
+    <string name="demo_pay_amount_5yuan">5yuan(5Mi Credits)</string>
+    <string name="demo_pay_amount_10yuan">10yuan(10Mi Credits)</string>
+    <string name="demo_pay_amount_50yuan">50yuan(50Mi Credits)</string>
+    <string name="demo_pay_amount_100yuan">100yuan(100Mi Credits)</string>
+    <string name="demo_pay_amount_500yuan">500yuan(500Mi Credits)</string>
+    <string name="demo_input_amount">Please enter the amount of recharge</string>
+    <string name="demo_mibi_to_rmb">1米币=1元（1 Mi Credit=RMB 1yuan）</string>
+    <string name="demo_btn_ok">Confirm</string>
+    <string name="demo_tip_text">In the formal environment must indicate the relationship between Mi Credit(米币) and RMB（人民币）</string>
+    <string name="demo_payment_success">Purchase success</string>
+    <string name="demo_payment_cancel">Purchase cancel</string>
+    <string name="demo_payment_failed">Purchase failure</string>
+    <string name="demo_payment_please_login">You are not logged in, please login first</string>
+    <string name="login_success">Login success</string>
+    <string name="login_failed">Login failed</string>
+    <string name="already_login">Has Logged</string>
+    <string name="not_login">Not Logged In</string>
+    <string name="screen_h">screen:horizontal</string>
+    <string name="screen_v">screen:vertical</string>
+    <string name="consumable_prop_title">Purchase consumable props(can repeat)</string>
+    <string name="non_expendable_props_title">Purchase non-expendable props</string>
+    <string name="non_expendable_props_des">One such props can only be purchased once</string>
+    <string name="demo_already_purchased">You have purchased, no need to buy</string>
+    <string name="change_screen">change the screen orientation</string>
+    <string name="change_debug_mode">change debug mode</string>
+    <string name="demo_title">This is the application of internal payment process demo</string>
+    <string name="login_mi">Login Mi account</string>
+    <string name="billing_code_con">By billing code(Purchase of consumables props)</string>
+    <string name="billing_code_non">By billing code(Purchase of non - expendable props)</string>
+    <string name="pay_by_amount">Payment by amount</string>
+    <string name="change_account">Change account</string>
+    <string name="social_relevance">Social relevance</string>
+    <string name="check_sys_account">Check whether the system login mi account</string>
+    <string name="exit">Exit</string>
+    <string name="settings">settings</string>
+    <!-- for demo end-->
 </resources>

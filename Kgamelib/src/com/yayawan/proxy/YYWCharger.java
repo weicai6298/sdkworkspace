@@ -4,7 +4,6 @@ import com.yayawan.callback.YYWPayCallBack;
 import com.yayawan.domain.YYWOrder;
 
 import android.app.Activity;
-import android.content.Context;
 
 public interface YYWCharger {
 

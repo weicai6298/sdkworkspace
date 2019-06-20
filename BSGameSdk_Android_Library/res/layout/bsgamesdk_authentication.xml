@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.bsgamesdk.android.widget.APScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="0dip"
+    android:layout_weight="100"
+    android:fillViewport="true"
+    >
+
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingBottom="10dp"
+    android:paddingLeft="10dp"
+    android:paddingRight="10dp"
+    android:orientation="vertical">
+
+    <include
+        android:id="@+id/auth_successLayout"
+        layout="@layout/bsgamesdk_auth_success"
+        android:visibility="gone" />
+
+    <LinearLayout
+        android:id="@+id/auth_submitLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:paddingTop="5dp">
+
+        <com.bsgamesdk.android.widget.AlignTextView
+            style="?attr/bsgamesdk_info_text_style"
+            android:text="@string/bsgamesdk_authentication_tip"
+            android:layout_marginBottom="10dp"
+            android:textSize="12sp"/>
+
+        <RelativeLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            >
+
+            <EditText
+                android:id="@+id/bsgamesdk_edit_authentication_name"
+                style="?attr/bsgamesdk_basic_editText_style"
+                android:maxLength="20"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/bsgamesdk_hint_authentication_name"
+                android:textSize="16sp" />
+
+            <ImageButton
+                android:id="@+id/bsgamesdk_authentication_nameDel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="8.0dp"
+                android:background="@null"
+                android:contentDescription="@string/bsgamesdk_delbtn"
+                android:src="@drawable/bsgamesdk_pic_del"
+                android:visibility="gone" />
+        </RelativeLayout>
+
+        <TextView
+            style="?attr/bsgamesdk_basic_text_style"
+            android:layout_width="match_parent"
+            android:layout_marginBottom="8dp"
+            android:layout_marginTop="3dp"
+            android:paddingLeft="8dp"
+            android:text="@string/bsgamesdk_example_authentication_name" />
+
+        <RelativeLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            >
+
+            <EditText
+                android:id="@+id/bsgamesdk_edit_authentication_id_number"
+                style="?attr/bsgamesdk_basic_editText_style"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/bsgamesdk_hint_authentication_ID_number"
+                android:maxLength="25"
+                android:maxLines="1"
+                android:textSize="16sp" />
+
+            <ImageButton
+                android:id="@+id/bsgamesdk_authentication_id_numberDel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="8.0dp"
+                android:background="@null"
+                android:contentDescription="@string/bsgamesdk_delbtn"
+                android:src="@drawable/bsgamesdk_pic_del"
+                android:visibility="gone" />
+        </RelativeLayout>
+
+        <TextView
+            style="?attr/bsgamesdk_basic_text_style"
+            android:layout_width="match_parent"
+            android:layout_marginTop="3dp"
+            android:layout_marginBottom="12dp"
+            android:paddingLeft="8dp"
+            android:text="@string/bsgamesdk_example_authentication_ID_number" />
+
+        <Button
+            android:id="@+id/bsgamesdk_authentication_submit"
+            style="?attr/bsgamesdk_confirm_button_style"
+            android:layout_width="match_parent"
+            android:text="@string/bsgamesdk_text_authentication_submit" />
+    </LinearLayout>
+</LinearLayout>
+
+</com.bsgamesdk.android.widget.APScrollView>

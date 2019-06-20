@@ -1,14 +1,12 @@
-<?xml version="1.0" encoding="utf-8"?>
-<!-- 登录Activity布局 by.zhengxu -->
+<?xml version="1.0" encoding="utf-8"?><!-- 登录Activity布局 by.zhengxu -->
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical" 
-    android:background="@color/m4399_ope_usercenter_white">
+    android:background="@color/m4399_ope_usercenter_white"
+    android:orientation="vertical">
 
-    <fragment
-        android:id="@+id/login_webview"
-        android:name="cn.m4399.operate.ui.fragment.CustomWebFragment"
+    <FrameLayout
+        android:id="@+id/framelayout"
         android:layout_width="match_parent"
         android:layout_height="match_parent" />
 

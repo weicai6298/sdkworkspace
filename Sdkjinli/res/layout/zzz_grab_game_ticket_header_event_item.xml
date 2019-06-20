@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingLeft="@dimen/zzz_grab_game_ticket_header_margin_horizon"
+    android:paddingRight="@dimen/zzz_grab_game_ticket_header_margin_horizon"
+    android:paddingTop="@dimen/zzz_grab_game_ticket_header_margin_top"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <include
+            android:id="@+id/zzz_event_item_day_1"
+            layout="@layout/zzz_grab_game_ticket_header_day_item"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:visibility="gone" />
+
+        <include
+            android:id="@+id/zzz_event_item_day_2"
+            layout="@layout/zzz_grab_game_ticket_header_day_item"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/zzz_grab_header_item_margin_left"
+            android:visibility="gone" />
+
+        <include
+            android:id="@+id/zzz_event_item_day_3"
+            layout="@layout/zzz_grab_game_ticket_header_day_item"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/zzz_grab_header_item_margin_left"
+            android:visibility="gone" />
+
+        <include
+            android:id="@+id/zzz_event_item_day_4"
+            layout="@layout/zzz_grab_game_ticket_header_day_item"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/zzz_grab_header_item_margin_left"
+            android:visibility="gone" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/zzz_event_item_line_2">
+
+        <include
+            android:id="@+id/zzz_event_item_day_5"
+            layout="@layout/zzz_grab_game_ticket_header_day_item"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:visibility="gone" />
+
+        <include
+            android:id="@+id/zzz_event_item_day_6"
+            layout="@layout/zzz_grab_game_ticket_header_day_item"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/zzz_grab_header_item_margin_left"
+            android:visibility="gone" />
+
+        <include
+            android:id="@+id/zzz_event_item_day_7"
+            layout="@layout/zzz_grab_game_ticket_header_day_item"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/zzz_grab_header_item_margin_left"
+            android:visibility="gone" />
+
+        <include
+            android:id="@+id/zzz_event_item_day_8"
+            layout="@layout/zzz_grab_game_ticket_header_day_item"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/zzz_grab_header_item_margin_left"
+            android:visibility="gone" />
+
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:layout_alignParentBottom="true"
+        android:layout_below="@+id/zzz_event_item_line_2"
+        android:layout_marginTop="@dimen/zzz_grab_seperate_line_margin_top"
+        android:background="@color/zzz_seperate_line_color"/>
+
+</LinearLayout>

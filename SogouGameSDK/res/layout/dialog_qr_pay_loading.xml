@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:id="@+id/loading_qr_container"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:visibility="gone">
+    <ProgressBar
+        android:id="@+id/more_loading_bar"
+        android:layout_width="16dp"
+        android:layout_height="16dp"
+        android:indeterminateDrawable="@anim/sogou_game_sdk_progress_more"
+        android:layout_marginLeft="118.5dp"
+        android:layout_marginTop="51dp"
+        android:layout_marginBottom="48dp"
+        />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="51dp"
+        android:layout_marginLeft="10dp"
+        android:textSize="12sp"
+        android:textColor="@color/sogou_game_sdk_color_adadad"
+        android:text="加载中..."
+        android:layout_toRightOf="@+id/more_loading_bar"
+        />
+
+</RelativeLayout>

@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="260dp"
+    android:layout_height="wrap_content"
+    android:gravity="center"
+    android:orientation="vertical" >
+
+    <ImageView
+        android:id="@+id/bsgamesdk_captcha_img"
+        android:layout_width="150dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="12dp"
+        android:layout_marginBottom="10dp"
+        />
+
+    <EditText
+        style="?attr/bsgamesdk_basic_editText_style"
+        android:id="@+id/bsgamesdk_captcha_edit"
+        android:completionHint="@string/bsgamesdk_username"
+        android:hint="@string/bsgamesdk_captcha_hit"
+        android:imeOptions="actionDone"
+        android:inputType="textPersonName"
+        android:maxLength="32"
+        android:paddingRight="30dp" >
+    </EditText>
+
+    <Button
+        style="?attr/bsgamesdk_confirm_button_style"
+        android:id="@+id/bsgamesdk_captcha_login"
+        android:layout_width="240dp"
+        android:layout_height="36dp"
+        android:layout_marginTop="10dp"
+        android:text="@string/bsgamesdk_reg_and_login" />
+
+</LinearLayout>

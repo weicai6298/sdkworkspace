@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/size_0dp"
+            android:layout_weight="1" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/pay_color_f2f2f2"
+            android:orientation="vertical">
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="50dp">
+
+                <TextView
+                    android:id="@+id/pay_title"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:textColor="@color/pay_color_333333"
+                    android:text="请输入支付密码"
+                    android:textSize="17sp" />
+
+                <FrameLayout
+                    android:id="@+id/pay_close"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:layout_gravity="left">
+
+                    <ImageView
+                        android:layout_width="15dp"
+                        android:layout_height="15dp"
+                        android:layout_gravity="center"
+                        android:background="@drawable/pay_btn_close" />
+                </FrameLayout>
+
+            </FrameLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="2px"
+                android:background="@color/pay_color_bbbbbb" />
+
+
+            <pay.winner.cn.paylibrary.utils.view.PawFrame
+                android:id="@+id/pay_pf"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/size_17dp"
+                android:layout_marginRight="@dimen/size_17dp"
+                android:layout_marginTop="@dimen/size_17dp" />
+
+            <TextView
+                android:id="@+id/payHint"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/size_17dp"
+                android:layout_marginRight="@dimen/size_17dp"
+                android:paddingTop="@dimen/size_5dp"
+                android:text="@string/PayHintOne"
+                android:textColor="@color/pay_color_3095fb"
+                android:textSize="@dimen/size_15sp"
+                android:visibility="invisible" />
+
+            <TextView
+                android:id="@+id/payForgetPaw"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="right"
+                android:layout_marginBottom="@dimen/size_40dp"
+                android:paddingRight="@dimen/size_17dp"
+                android:text="@string/forgetPassword"
+                android:textColor="@color/pay_color_3095fb"
+                android:textSize="@dimen/size_17sp" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/size_1dp"
+                android:background="#a9a9a9" />
+
+            <pay.winner.cn.paylibrary.utils.view.PawKeyboardView
+                android:id="@+id/pay_pkv"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#a9a9a9"
+                android:focusable="true"
+                android:focusableInTouchMode="true"
+                android:keyBackground="@drawable/pay_paw_key_bg"
+                android:keyTextColor="#000000"
+                android:shadowColor="#50000000"
+                android:shadowRadius="0" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <include
+        layout="@layout/progress"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_gravity="center" />
+</FrameLayout>
+

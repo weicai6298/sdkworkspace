@@ -1,0 +1,266 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:orientation="vertical"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:background="@color/activity_background">
+
+    <include layout="@layout/yhsdk_layout_title"/>
+
+    <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/activity_background"
+            android:overScrollMode="never"
+            android:scrollbars="none">
+
+        <LinearLayout
+                android:layout_width="@dimen/win_width"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="21dp"
+                android:layout_marginLeft="30dp"
+                android:layout_marginRight="30dp"
+                android:layout_gravity="center_horizontal"
+                android:orientation="vertical">
+
+            <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="15sp"
+                    android:textColor="#383838"
+                    android:layout_gravity="left"
+                    android:text="@string/pay_message"/>
+
+            <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="21dp">
+
+                <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="15sp"
+                        android:textColor="#8c8c8c"
+                        android:layout_marginBottom="11dp"
+                        android:layout_alignParentLeft="true"
+                        android:text="@string/buy_props"/>
+
+                <TextView
+                        android:id="@+id/tv_buy_props"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="11dp"
+                        android:textColor="#8c8c8c"
+                        android:textSize="15sp"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        />
+
+                <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:layout_alignParentBottom="true"
+                        android:background="#dfdfdf"/>
+
+            </RelativeLayout>
+
+
+            <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="18dp"
+                    >
+
+                <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="11dp"
+                        android:textColor="#8c8c8c"
+                        android:textSize="15sp"
+                        android:layout_centerVertical="true"
+                        android:layout_alignParentLeft="true"
+                        android:text="@string/props_original_price"/>
+
+                <TextView
+                        android:id="@+id/tv_props_original_price"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginBottom="11dp"
+                        android:textColor="#8c8c8c"
+                        android:textSize="15sp"/>
+
+                <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:layout_alignParentBottom="true"
+                        android:background="#dfdfdf"/>
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                    android:id="@+id/rl_discount_content"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="18dp"
+                    >
+
+                <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="11dp"
+                        android:textColor="#8c8c8c"
+                        android:textSize="15sp"
+                        android:layout_centerVertical="true"
+                        android:layout_alignParentLeft="true"
+                        android:text="@string/discount_price"/>
+
+                <TextView
+                        android:id="@+id/tv_discount_money"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_toLeftOf="@+id/tv_discount"
+                        android:layout_marginBottom="11dp"
+                        android:textColor="#8c8c8c"
+                        android:textSize="15sp"/>
+
+                <TextView
+                        android:id="@+id/tv_discount"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginBottom="11dp"
+                        android:textColor="#ff0000"
+                        android:textSize="15sp"/>
+
+                <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:layout_alignParentBottom="true"
+                        android:background="#dfdfdf"/>
+            </RelativeLayout>
+
+            <RelativeLayout
+                    android:id="@+id/rl_vouchers_content"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="18dp"
+                    >
+
+                <TextView
+                        android:id="@+id/tv_vouchers_name"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="11dp"
+                        android:textColor="#8c8c8c"
+                        android:textSize="15sp"
+                        android:layout_centerVertical="true"
+                        android:layout_alignParentLeft="true"
+                        android:text="@string/vouchers"/>
+
+                <TextView
+                        android:id="@+id/tv_vouchers_number"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_toRightOf="@+id/tv_vouchers_name"
+                        android:layout_marginLeft="10dp"
+                        android:layout_centerVertical="true"
+                        android:text="(0张可用)"
+                        android:textColor="#ff0000"
+                        android:textSize="10sp"/>
+
+                <TextView
+                        android:id="@+id/tv_vouchers"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:text="未使用"
+                        android:layout_marginBottom="11dp"
+                        android:textColor="#8c8c8c"
+                        android:textSize="15sp"/>
+
+                <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:layout_alignParentBottom="true"
+                        android:background="#0099ff"/>
+            </RelativeLayout>
+
+            <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="18dp"
+                    >
+
+                <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="11dp"
+                        android:textColor="#8c8c8c"
+                        android:textSize="15sp"
+                        android:layout_centerVertical="true"
+                        android:layout_alignParentLeft="true"
+                        android:text="@string/still_need_to_pay"/>
+
+                <TextView
+                        android:id="@+id/tv_need_to_pay"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginBottom="11dp"
+                        android:textColor="#ff0000"
+                        android:textSize="15sp"/>
+
+                <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:layout_alignParentBottom="true"
+                        android:background="#dfdfdf"/>
+
+            </RelativeLayout>
+
+
+            <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="15sp"
+                    android:textColor="#383838"
+                    android:layout_marginTop="37dp"
+                    android:layout_gravity="left"
+                    android:text="@string/pay_way"/>
+
+            <ListView
+                    android:id="@+id/lv_pay_type"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:overScrollMode="never"
+                    android:divider="@android:color/transparent"
+                    android:dividerHeight="5dp"
+                    android:scrollbars="none"
+                    android:layout_marginTop="15dp">
+            </ListView>
+
+            <TextView
+                    android:id="@+id/yhsdk_pay"
+                    android:layout_width="match_parent"
+                    android:layout_height="35dp"
+                    android:layout_marginTop="20dp"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:layout_marginBottom="57dp"
+                    android:textColor="@android:color/white"
+                    android:textSize="15sp"
+                    android:text="@string/pay"
+                    android:background="@drawable/yhsdk_btn_blue_bg"/>
+        </LinearLayout>
+
+    </ScrollView>
+
+
+</LinearLayout>

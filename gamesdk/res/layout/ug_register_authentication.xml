@@ -1,0 +1,175 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:background="#80000000"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:id="@+id/parent_view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+        <LinearLayout
+            android:id="@+id/ug_content_view"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/ug_dialog_white_bg"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="65dp"
+                android:background="@drawable/ug_title_pink"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/ug_authentication"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="根据文化部《网络游戏管理暂行办法》"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/text_normal" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:text="请您进行实名认证"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/text_normal" />
+
+
+            </LinearLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <ImageView
+                    android:id="@+id/ug_user_au"
+                    android:layout_width="20dp"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="40dp"
+                    android:background="@drawable/ug_ic_noauthentication"
+                    android:layout_height="20dp" />
+
+                <LinearLayout
+                    android:id="@+id/ug_user_parent"
+                    android:layout_width="match_parent"
+                    android:layout_below="@id/ug_user_au"
+                    android:layout_marginTop="10dp"
+                    android:orientation="horizontal"
+                    android:gravity="center"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:id="@+id/ug_center_tv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="@dimen/text_big"
+                        android:textColor="@color/text_lv2"
+                        android:text="当前 :"/>
+
+                    <TextView
+                        android:id="@+id/ug_user_autv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="未认证"
+                        android:layout_marginLeft="5dp"
+                        android:textSize="@dimen/text_big"
+                        android:textColor="@color/text_lv2"/>
+
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/ug_bt_auagain"
+                    android:layout_width="55dp"
+                    android:layout_height="20dp"
+                    android:layout_centerHorizontal="true"
+                    android:gravity="center"
+                    android:background="@drawable/ug_buttton_go_au"
+                    android:layout_marginTop="10dp"
+                    android:layout_below="@id/ug_user_parent"
+                    android:textColor="@color/text_augo"
+                    android:textSize="@dimen/text_big"
+                    android:text="刷新"/>
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1px"
+                        android:background="@color/divide_line" />
+
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="50dp"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal"
+                        android:weightSum="1">
+
+
+                        <LinearLayout
+                            android:id="@+id/ug_user_noauthentication"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_weight="0.5"
+                            android:gravity="center"
+                            android:orientation="horizontal">
+
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:gravity="center_vertical"
+                                android:text="取消"
+                                android:textColor="@color/text_lv2"
+                                android:textSize="@dimen/text_big" />
+                        </LinearLayout>
+
+
+                        <View
+                            android:layout_width="1px"
+                            android:layout_height="25dp"
+                            android:layout_marginLeft="1dp"
+                            android:layout_marginRight="1dp"
+                            android:background="@color/divide_line" />
+
+
+                        <LinearLayout
+                            android:id="@+id/ug_user_goauthentication"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_weight="0.5"
+                            android:gravity="center"
+                            android:orientation="horizontal">
+
+
+                            <TextView
+                                android:id="@+id/ug_user_utv"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:gravity="center_vertical"
+                                android:text="去认证"
+                                android:textColor="@color/text_augo"
+                                android:textSize="@dimen/text_big" />
+                        </LinearLayout>
+                    </LinearLayout>
+
+                </LinearLayout>
+            </RelativeLayout>
+
+        </LinearLayout>
+    </RelativeLayout>
+
+
+</RelativeLayout>

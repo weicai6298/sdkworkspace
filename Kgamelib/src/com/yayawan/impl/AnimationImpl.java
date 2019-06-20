@@ -25,13 +25,13 @@ import android.widget.LinearLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.kkgame.sdk.xml.GetAssetsutils;
 import com.kkgame.utils.DeviceUtil;
 import com.yayawan.main.YYWMain;
 import com.yayawan.proxy.YYWAnimation;
 
 public class AnimationImpl implements YYWAnimation {
 
-	@Override
 	public void anim(final Activity paramActivity) {
 		// TODO Auto-generated method stub
 		// Toast.makeText(paramActivity, "播放动画", Toast.LENGTH_SHORT).show();
@@ -48,7 +48,6 @@ public class AnimationImpl implements YYWAnimation {
 
 		new Handler(Looper.getMainLooper()).post(new Runnable() {
 
-			@Override
 			public void run() {
 				new LogoWindow(paramActivity);
 
@@ -59,7 +58,18 @@ public class AnimationImpl implements YYWAnimation {
 
 }
 
-
+/*
+ * class logoAnimation extends Activity{
+ * 
+ * @Override public void onCreate(Bundle savedInstanceState) {
+ * super.onCreate(savedInstanceState);
+ * 
+ * setContentView(this.getResources().getIdentifier("logo_start", "layout",
+ * getPackageName())); }
+ * 
+ * 
+ * }
+ */
 
 class LogoWindow {
 	private WindowManager wm;

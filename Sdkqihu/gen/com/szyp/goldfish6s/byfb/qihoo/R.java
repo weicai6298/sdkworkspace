@@ -24,9 +24,10 @@ public final class R {
         public static final int bg_exit_game=0x7f020000;
         public static final int btn_cancel=0x7f020001;
         public static final int btn_ok=0x7f020002;
-        public static final int qihoo360_a_bg=0x7f020003;
-        public static final int qihoo360_a_orange_icon=0x7f020004;
-        public static final int qihoo360_a_upglide=0x7f020005;
+        public static final int icon=0x7f020003;
+        public static final int qihoo360_a_bg=0x7f020004;
+        public static final int qihoo360_a_orange_icon=0x7f020005;
+        public static final int qihoo360_a_upglide=0x7f020006;
     }
     public static final class id {
         public static final int FrameLayout1=0x7f080004;

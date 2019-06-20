@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:id="@android:id/background">
+        <shape>
+            <corners android:radius="2dp" />
+            <solid android:color="@color/samsung_notice_color_value_1"/>
+        </shape>
+    </item>
+    <item android:id="@android:id/progress">
+        <clip>
+            <shape>
+                <corners android:radius="2dp" />
+
+                <gradient
+                    android:centerColor="@color/samsung_notice_color_value_7"
+                    android:endColor="@color/samsung_notice_color_value_7_1"
+                    android:startColor="@color/samsung_notice_color_value_6_2" />
+            </shape>
+        </clip>
+    </item>
+</layer-list>

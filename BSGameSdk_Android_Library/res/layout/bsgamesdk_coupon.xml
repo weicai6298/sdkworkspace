@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <com.bsgamesdk.android.widget.APScrollView
+        android:id="@+id/bsgamesdk_activate_ScrollView"
+        android:layout_width="match_parent"
+        android:layout_height="0dip"
+        android:layout_weight="100"
+        android:fillViewport="true" >
+
+        <LinearLayout
+            android:id="@+id/bsgamesdk_id_couponLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingBottom="2dp"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            android:paddingTop="2dp" >
+
+            <LinearLayout
+                android:id="@+id/bsgamesdk_id_couponReLayout"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"
+                android:background="#FFF9E6"
+                android:orientation="vertical"
+                android:paddingLeft="5dp"
+                android:paddingRight="5dp" >
+
+                <TextView
+                    android:id="@+id/bsgamesdk_textview_coupon_title"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:gravity="center"
+                    android:text="@string/bsgamesdk_coupon_title"
+                    android:textColor="@color/bsgamesdk_TextColorGray"
+                    android:textSize="20dp" />
+
+                <TextView
+                    android:id="@+id/bsgamesdk_textview_coupon_title2"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:text="@string/bsgamesdk_coupon_title2"
+                    android:textColor="@color/bsgamesdk_TextColorGray"
+                    android:textSize="16dp" />
+
+                <TextView
+                    android:id="@+id/bsgamesdk_textview_coupon_item"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="@string/bsgamesdk_coupon_itemname"
+                    android:textColor="#C8192A"
+                    android:textSize="20dp" />
+
+                <TextView
+                    android:id="@+id/bsgamesdk_textview_coupon_title3"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/bsgamesdk_coupon_title3"
+                    android:textColor="@color/bsgamesdk_TextColorGray"
+                    android:textSize="16dp" />
+
+                <TextView
+                    android:id="@+id/bsgamesdk_textview_coupon_time"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/bsgamesdk_coupon_time"
+                    android:textColor="#C8192A"
+                    android:textSize="16dp" />
+
+                <TextView
+                    android:id="@+id/bsgamesdk_textview_coupon_title4"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="10dp"
+                    android:text="@string/bsgamesdk_coupon_title4"
+                    android:textColor="@color/bsgamesdk_TextColorGray"
+                    android:textSize="16dp" />
+            </LinearLayout>
+
+            <Button
+                android:id="@+id/bsgamesdk_button_coupon"
+                style="?attr/bsgamesdk_confirm_button_style"
+                android:layout_width="fill_parent"
+                android:layout_height="40dp"
+                android:text="@string/bsgamesdk_accept_coupon" />
+        </LinearLayout>
+    </com.bsgamesdk.android.widget.APScrollView>
+
+</LinearLayout>

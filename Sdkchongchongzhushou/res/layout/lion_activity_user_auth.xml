@@ -3,7 +3,6 @@
               android:layout_width="match_parent"
               android:layout_height="wrap_content"
               android:orientation="vertical">
-
     <com.lion.ccpay.widget.SingleOrderLayout
         style="@style/lion_style_user_auth"
         android:layout_width="match_parent"
@@ -14,5 +13,4 @@
 
         <include layout="@layout/lion_layout_user_anti_addict_system_content"/>
     </com.lion.ccpay.widget.SingleOrderLayout>
-
 </LinearLayout>

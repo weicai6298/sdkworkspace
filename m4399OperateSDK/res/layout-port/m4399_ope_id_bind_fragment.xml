@@ -3,11 +3,10 @@
     style="@style/m4399BindPhonePageStyle"
     android:layout_width="@dimen/m4399_ope_page_width"
     android:layout_height="wrap_content"
+    android:paddingBottom="@dimen/m4399_ope_bind_padding_top"
     android:paddingLeft="@dimen/m4399_ope_bind_padding_left"
     android:paddingRight="@dimen/m4399_ope_bind_padding_left"
-    android:paddingTop="@dimen/m4399_ope_bind_padding_top"
-    android:paddingBottom="@dimen/m4399_ope_bind_padding_top"
-    >
+    android:paddingTop="@dimen/m4399_ope_bind_padding_top">
 
     <LinearLayout
         android:layout_width="wrap_content"
@@ -27,14 +26,14 @@
             android:layout_height="wrap_content"
             android:text="@string/m4399_ope_bind_id_msg_end"
             android:textColor="#666666"
-            android:textSize="14sp"/>
+            android:textSize="14sp" />
 
     </LinearLayout>
 
     <LinearLayout
-        android:background="@drawable/m4399_ope_bind_input_bg"
         android:layout_width="match_parent"
         android:layout_height="@dimen/m4399_ope_bind_input_button_height"
+        android:background="@drawable/m4399_ope_bind_input_bg"
         android:gravity="center_vertical"
         android:orientation="horizontal">
 
@@ -45,16 +44,16 @@
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="1"
-            android:hint="@string/m4399_ope_bind_realname_hint"/>
+            android:hint="@string/m4399_ope_bind_realname_hint" />
 
         <RelativeLayout
-            android:visibility="gone"
             android:id="@+id/id_bind_del_realname"
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
             android:gravity="center"
             android:paddingLeft="8dp"
-            android:paddingRight="8dp">
+            android:paddingRight="8dp"
+            android:visibility="gone">
 
             <ImageView style="@style/m4399PerfectDel" />
         </RelativeLayout>
@@ -62,10 +61,10 @@
     </LinearLayout>
 
     <LinearLayout
-        android:background="@drawable/m4399_ope_bind_input_bg"
         android:layout_width="match_parent"
         android:layout_height="@dimen/m4399_ope_bind_input_button_height"
         android:layout_marginTop="@dimen/m4399_ope_bind_input_margin"
+        android:background="@drawable/m4399_ope_bind_input_bg"
         android:gravity="center_vertical"
         android:orientation="horizontal">
 
@@ -77,16 +76,16 @@
             android:layout_height="match_parent"
             android:layout_weight="1"
             android:digits="0123456789X"
-            android:hint="@string/m4399_ope_bind_id_series_hint"/>
+            android:hint="@string/m4399_ope_bind_id_series_hint" />
 
         <RelativeLayout
-            android:visibility="gone"
             android:id="@+id/id_bind_del_identify"
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
             android:gravity="center"
             android:paddingLeft="8dp"
-            android:paddingRight="8dp">
+            android:paddingRight="8dp"
+            android:visibility="gone">
 
             <ImageView style="@style/m4399PerfectDel" />
         </RelativeLayout>
@@ -95,19 +94,19 @@
 
     <LinearLayout
         android:layout_width="wrap_content"
-        android:gravity="center_vertical"
         android:layout_height="wrap_content"
         android:layout_marginTop="10dp"
+        android:gravity="center_vertical"
         android:orientation="horizontal">
 
         <TextView
-            android:textIsSelectable="true"
-            android:layout_marginLeft="@dimen/m4399_ope_bind_label_margin"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/m4399_ope_bind_label_margin"
+            android:text="@string/m4399_ope_bind_id_example"
             android:textColor="@color/m4399_ope_bind_hint"
-            android:textSize="@dimen/m4399_ope_bind_label_font_size"
-            android:text="@string/m4399_ope_bind_id_example"/>
+            android:textIsSelectable="true"
+            android:textSize="@dimen/m4399_ope_bind_label_font_size" />
 
     </LinearLayout>
 
@@ -131,7 +130,7 @@
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_marginLeft="@dimen/m4399_ope_bind_input_margin_left"
-            android:layout_weight="1"/>
+            android:layout_weight="1" />
 
 
     </LinearLayout>

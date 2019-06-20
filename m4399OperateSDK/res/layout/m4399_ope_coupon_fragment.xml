@@ -19,17 +19,17 @@
             android:layout_height="wrap_content"
             android:orientation="vertical">
 
-       <!--     <include
-                android:id="@+id/coupon_delay"
-                layout="@layout/m4399_ope_coupon_item" />
--->
+            <!--     <include
+                     android:id="@+id/coupon_delay"
+                     layout="@layout/m4399_ope_coupon_item" />
+     -->
             <LinearLayout
                 android:id="@+id/coupon_content"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="vertical">
+
                 <cn.m4399.operate.ui.widget.ListView4ScrollView
-                    android:paddingTop="6dp"
                     android:id="@+id/coupon_lv"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
@@ -39,6 +39,7 @@
                     android:listSelector="@android:color/transparent"
                     android:paddingLeft="@dimen/m4399_ope_coupon_padding"
                     android:paddingRight="@dimen/m4399_ope_coupon_padding"
+                    android:paddingTop="6dp"
                     android:scrollbars="none" />
 
                 <include

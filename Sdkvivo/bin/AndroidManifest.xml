@@ -17,16 +17,17 @@
     <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
     <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW" />
     <uses-permission android:name="android.permission.GET_TASKS" />
-    
     <uses-permission android:name="vivo.game.permission.OPEN_JUMP_INTENTS" />
-     <uses-permission android:name="android.permission.CHANGE_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.CHANGE_NETWORK_STATE" />
     <uses-permission android:name="android.permission.GET_ACCOUNTS" />
     <uses-permission android:name="android.permission.RECEIVE_SMS" />
     <uses-permission android:name="android.permission.SEND_SMS" />
     <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
     <uses-permission android:name="com.bbk.account.permission.READ_ACCOUNTINFO" />
-    
     <uses-permission android:name="android.permission.USE_CREDENTIALS" />
+    
+    <!-- 新增权限 -->
+    <uses-permission android:name="android.permission.REQUEST_INSTALL_PACKAGES"/>
 
     <application
         android:name="com.yayawan.impl.YYApplication"
@@ -41,121 +42,40 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-      
-        
-      <!-- 手游互联配置 -->
-     	 <meta-data
+
+        <!-- 手游互联配置 -->
+        <meta-data
             android:name="app_id"
             android:value="kk3026495154" />
         <meta-data
             android:name="isLandscape"
             android:value="true" />
+
         
-          <!-- 1有友盟  0没有 -->
         <meta-data
-            android:name="isyoumeng"
-            android:value="string1" />
-        <meta-data
-            android:name="appid"
-            android:value="5a1cd194a40fa3409f000031" />
-        <meta-data
-            android:name="UMENG_APPKEY"
-            android:value="string_appid" />
-        <meta-data
-            android:name="UMENG_CHANNEL"
-            android:value="vivo" />
-        
-         <meta-data
-       		android:name="APPID"
-        	android:value="cb6f56429da5d872aad6c0f070b8cf77" />
-         
-         <meta-data
-       		android:name="APPKEY"
-        	android:value="53798fbedc96c6b6c8ac194b2f867e65" />
-         
-         <meta-data
-		android:name="APP_MONITOR_APPID"
-		android:value="b1002c" />
-         
-    	<meta-data
-        	android:name="vivo_union_sdk"
-        	android:value="2.2.41" />
-        
-        <!-- sdk start -->
-        <!-- vivo支付的Activity -->
-        <activity
-            android:name="com.vivo.unionsdk.ui.UnionActivity"
-            android:configChanges="orientation|keyboardHidden|navigation|screenSize"
-            android:theme="@android:style/Theme.Dialog" >
-            <intent-filter>
-                <action android:name="android.intent.action.VIEW" />
+            android:name="APPID"
+            android:value="cb6f56429da5d872aad6c0f070b8cf77" />
+       
+       <meta-data
+		android:name="vivo_union_sdk"
+		android:value="4.2.4.0" />
 
-                <category android:name="android.intent.category.DEFAULT" />
-                <category android:name="android.intent.category.BROWSABLE" />
-
-                <data
-                    android:host="union.vivo.com"
-                    android:path="/openjump"
-                    android:scheme="vivounion" />
-            </intent-filter>
-        </activity>
-
-
-
-        <!-- 微信支付回调Activity -->
-        <activity
-            android:name="com.yayawan.sdktemplate.wxapi.WXPayEntryActivity"
-            android:exported="true"
-            android:launchMode="singleTop"
-            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
-
-        <!-- QQ钱包支付回调Activity,data属性中的scheme需要替换为qwallet+包名 -->
-        <activity
-            android:name="com.vivo.sdkplugin.payment.qqpay.VivoQQPayResultActivity"
-            android:exported="true"
-            android:launchMode="singleTop"
-            android:theme="@android:style/Theme.Translucent.NoTitleBar" >
-            <intent-filter>
-                <action android:name="android.intent.action.VIEW" />
-                <category android:name="android.intent.category.BROWSABLE" />
-                <category android:name="android.intent.category.DEFAULT" />
-                <data android:scheme="qwalletstring_package" />
-            </intent-filter>
-        </activity>
-
-        <!-- 银联支付的Activity -->
-        <activity
-            android:name="com.unionpay.uppay.PayActivity"
-            android:configChanges="orientation|keyboardHidden"
-            android:excludeFromRecents="true"
-            android:screenOrientation="behind"
-            android:windowSoftInputMode="adjustResize" />
-
-        <activity
-            android:name="com.unionpay.UPPayWapActivity"
-            android:configChanges="orientation|keyboardHidden"
-            android:screenOrientation="behind"
-            android:windowSoftInputMode="adjustResize"/>
-
-        <uses-library android:name="org.simalliance.openmobileapi" android:required="false"/>
-
-        <!-- 支付宝支付的Activity -->
-        <activity
-            android:name="com.alipay.sdk.app.H5PayActivity"
-            android:configChanges="orientation|keyboardHidden|navigation"
-            android:exported="false"
-            android:screenOrientation="behind"
-            android:windowSoftInputMode="adjustResize|stateHidden" >
-        </activity>
-        <!-- 支付宝支付的Activity -->
-        <activity
-            android:name="com.alipay.sdk.auth.AuthActivity"
-            android:configChanges="orientation|keyboardHidden|navigation"
-            android:exported="false"
-            android:screenOrientation="behind" >
-        </activity>
-    
+       <!-- vivo sdk componets start -->
+	<!--vivo sdk的Activity-->
+	<activity android:name="com.vivo.unionsdk.ui.UnionActivity"
+			  android:configChanges="orientation|keyboardHidden|navigation|screenSize"
+			  android:theme="@android:style/Theme.Dialog">
+		<intent-filter>
+			<action android:name="android.intent.action.VIEW"/>
+			<category android:name="android.intent.category.DEFAULT"/>
+			<category android:name="android.intent.category.BROWSABLE"/>
+			<data
+				android:scheme="vivounion"
+				android:host="union.vivo.com"
+				android:path="/openjump"/>
+		</intent-filter>
+	</activity>
+	<!-- vivo sdk componets end -->
     </application>
 
 </manifest>
-

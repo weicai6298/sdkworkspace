@@ -1,0 +1,10 @@
+<resources>
+
+    <color name="transparent">#00000000</color>
+    <color name="btn_green_up">#00CC99</color>
+    <color name="btn_green_down">#99FFCD</color>
+    <color name="holo_color_pressed">#5533b5e5</color>
+    <color name="holo_color">#33b5e5</color>
+    <color name="demo_background">#EBEBEB</color> 
+
+</resources>

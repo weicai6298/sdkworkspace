@@ -2,12 +2,18 @@ package com.kkgame.sdk.utils;
 
 import java.lang.reflect.Field;
 
+import javax.crypto.spec.IvParameterSpec;
+
 import android.app.Activity;
 import android.content.Context;
+import android.graphics.Color;
 import android.graphics.PixelFormat;
+import android.graphics.Point;
+import android.opengl.Visibility;
 import android.os.Handler;
 import android.os.Message;
 import android.util.DisplayMetrics;
+import android.util.Log;
 import android.view.MotionEvent;
 import android.view.View;
 import android.view.View.OnTouchListener;
@@ -15,14 +21,18 @@ import android.view.ViewGroup;
 import android.view.WindowManager;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
+import android.widget.LinearLayout.LayoutParams;
+import android.widget.RelativeLayout;
 
 import com.kkgame.sdk.login.Help_dissmiss_dialog;
+import com.kkgame.sdk.login.SmallHelpActivity;
 import com.kkgame.sdk.utils.ShakeListener.OnShakeListener;
 import com.kkgame.sdk.xml.DisplayUtils;
 import com.kkgame.sdk.xml.GetAssetsutils;
 import com.kkgame.sdkmain.KgameSdk;
 import com.kkgame.utils.DeviceUtil;
 import com.kkgame.utils.Yayalog;
+
 
 /**
  * 
@@ -37,7 +47,10 @@ public class LogoWindow {
 	public boolean isadd = false;
 
 	static Activity mactivity;
-	private int screenHeigh;
+	private static int screenHeigh;
+	private static int up_x;
+	private static int event_getRawY;
+	private static int event_getY;
 
 	private static LogoWindow mLogowindow;
 
@@ -63,18 +76,33 @@ public class LogoWindow {
 
 	}
 
-	private static Handler mhandler = new Handler() {
+	public static Handler mhandler = new Handler() {
 		@Override
 		public void dispatchMessage(Message msg) {
 			// TODO Auto-generated method stub
 			super.dispatchMessage(msg);
 			switch (msg.what) {
 			case 1:
-				if (myview != null && params.x == 0) {
-					myview.setImageBitmap(GetAssetsutils
-							.getImageFromAssetsFile("yaya_yylogotouming.png",
+				if (myviewicon != null && params.x == 0) {
+					//半透明隐藏图标
+					myviewicon.setImageBitmap(GetAssetsutils
+							.getImageFromAssetsFile("yaya1_acountmanagericon.png",
 									mactivity));
 				}
+			case 2:
+//				Log.i("tag","up_x ="+up_x);
+//				Log.i("tag","SmallHelpActivity.isclose ="+SmallHelpActivity.isclose);
+//				if(up_x < phonePoint.x/2 || SmallHelpActivity.isclose == 1){
+					//半透明隐藏图标
+					myviewicon.setImageBitmap(GetAssetsutils
+							.getImageFromAssetsFile("yaya1_acountmanagericontouming.png",
+									mactivity));
+//				}else{
+//					//半透明隐藏图标
+//					myviewicon.setImageBitmap(GetAssetsutils
+//							.getImageFromAssetsFile("yaya1_acountmanagericontoumingright.png",
+//									mactivity));
+//				}
 			case 521:
 				// createView();
 				Yayalog.loger("我在接到了消息：hasWindowFocus"
@@ -102,7 +130,11 @@ public class LogoWindow {
 	private boolean ishelpshow = false;
 
 	private ShakeListener shakeListener;
-	private static ImageView myview;
+	private static ImageView myviewiconmanager;
+	private static ImageView myviewicon;
+	private static RelativeLayout myview;
+	
+	public static Point phonePoint;
 
 	private void createView() {
 
@@ -111,21 +143,58 @@ public class LogoWindow {
 
 		mactivity.getWindowManager().getDefaultDisplay().getMetrics(dm);
 
+		phonePoint = getHeightAndWidth(mactivity);
+		
 		screenHeigh = dm.heightPixels;
 		wm = ((WindowManager) mactivity.getSystemService("window"));
 		if (myview == null) {
 
-			myview = new ImageView(mactivity);
+			 myview = new RelativeLayout(mactivity);
+			 LayoutParams layoutParams = new LinearLayout.LayoutParams(-2,
+						machSize(100));
+			 layoutParams.setMargins(0, 0, 0, 0);
+			 myview.setLayoutParams(layoutParams);
+			
+			myviewicon = new ImageView(mactivity);
 			// 创建时设置view的正常参数
 			// myview.setX(-machSize(0));
 			// myview.setRotation(0);
 			// myview.setAlpha(225);
-			myview.setLayoutParams(new LinearLayout.LayoutParams(machSize(100),
+			
+			//小助手icon
+			
+			myviewicon.setLayoutParams(new RelativeLayout.LayoutParams(-2,
 					machSize(100)));
 
-			myview.setImageBitmap(GetAssetsutils.getImageFromAssetsFile(
-					"yaya_yylogo.png", mactivity));
+			myviewicon.setImageBitmap(GetAssetsutils.getImageFromAssetsFile(
+					"yaya1_acountmanagericon.png", mactivity));
+			
+			//开局就隐藏
+			new Handler().postDelayed(new Runnable() {
+				
+				@Override
+				public void run() {
+					myviewicon.setImageBitmap(GetAssetsutils.getImageFromAssetsFile(
+							"yaya1_acountmanagericontouming.png", mactivity));
+				}
+			}, 1000);
+			
+			//整个小助手
+			myviewiconmanager = new ImageView(mactivity);
+			// 创建时设置view的正常参数
+			// myview.setX(-machSize(0));
+			// myview.setRotation(0);
+			// myview.setAlpha(225);
+			myviewiconmanager.setLayoutParams(new LinearLayout.LayoutParams(machSize(346),
+					machSize(100)));
 
+			myviewiconmanager.setImageBitmap(GetAssetsutils.getImageFromAssetsFile(
+					"yaya1_acountmanager.png", mactivity));
+			
+			//myview.addView(myviewiconmanager);
+			myview.addView(myviewicon);
+			
+			
 			myview.setOnTouchListener(new OnTouchListener() {
 
 				float x;
@@ -156,17 +225,10 @@ public class LogoWindow {
 						mdownTempY = event.getRawY();
 
 						ontouchtime = System.currentTimeMillis();
-						// wm.removeView(myview);
+						
 
-						// myview.setX(0);
-						// myview.setRotation(0);
-						// myview.setAlpha(225);
-						// updateViewPosition();
-						// wm.addView(myview, params);
-						// Yayalog.loger("我的图像的x"+myview.getX());
-
-						myview.setImageBitmap(GetAssetsutils
-								.getImageFromAssetsFile("yaya_yylogo.png",
+						myviewicon.setImageBitmap(GetAssetsutils
+								.getImageFromAssetsFile("yaya1_acountmanagericon.png",
 										mactivity));
 						break;
 
@@ -179,17 +241,18 @@ public class LogoWindow {
 						int distance_y = (int) event.getRawY()
 								- (int) mdownTempY;
 
+						
 						if (Math.abs(distance_x) > 40
 								&& Math.abs(distance_y) > 40) {
 
 							if (!ishelpshow) {
 
-								new Help_dissmiss_dialog(mactivity)
-										.dialogShow();
+//								new Help_dissmiss_dialog(mactivity).dialogShow();
 
 								ishelpshow = true;
 
 							}
+							
 
 							// YayaWan.stop(mActivity);
 							// return false;
@@ -197,27 +260,35 @@ public class LogoWindow {
 						break;
 
 					case MotionEvent.ACTION_UP: // 捕获手指触摸离开动作
-
+						
+						up_x = (int)event.getRawX();
+						event_getRawY = (int)event.getRawY();
+						event_getY = (int)event.getY();
+						
 						distance_x = (int) event.getRawX() - (int) mdownTempX;
 						distance_y = (int) event.getRawY() - (int) mdownTempY;
-						if (Math.abs(distance_x) <= 20
-								&& Math.abs(distance_y) <= 20) {
+						if (Math.abs(distance_x) <= 40
+								&& Math.abs(distance_y) <= 40) {
 
 							if ((System.currentTimeMillis() - ontouchtime) > 1500) {
-								// YayaWan.stop(mactivity);
+//								 KgameSdk.stop(mactivity);
 								// 这里关闭了永久隐藏
-
+								
 							} else {
-								onClick();
+								int tempx=(int) event.getX();
+								Yayalog.loger("打开账户");
+								onClick(1);
+						
 							}
 
-							// YayaWan.stop(mActivity);
-							// return false;
+							
 						} else {
-							if (event.getRawX() < machSize(150)) {
+							if (event.getRawX() < phonePoint.x/2) {
 								updateViewPosition1();
+							}else{
+								updateViewPosition2();
 							}
-							// updateViewPosition1();
+							
 						}
 						ishelpshow = false;
 						break;
@@ -237,22 +308,53 @@ public class LogoWindow {
 
 				private void updateViewPosition1() {
 
-					params.x = -30;
+					params.x = 0;
 
 					params.y = (int) (screenHeigh - y - mTouchY);
-
 					// myview.setX(-machSize(30));
 					// myview.setRotation(50);
 					// myview.setAlpha(100);
-
+					Yayalog.loger("我要更新ui去隐藏了" +
+							"");
 					wm.updateViewLayout(myview, params);
-					myview.setImageBitmap(GetAssetsutils
-							.getImageFromAssetsFile("yaya_yylogotouming.png",
-									mactivity));
+					//myview.setBackgroundColor(Color.GRAY);
+					//半透明隐藏图标
+					new Handler().postDelayed(new Runnable() {
+						
+						@Override
+						public void run() {
+							myviewicon.setImageBitmap(GetAssetsutils
+									.getImageFromAssetsFile("yaya1_acountmanagericontouming.png",
+											mactivity));
+						}
+					}, 500);
+					myviewiconmanager.setVisibility(View.GONE);
 					// myview.startAnimation(alphaAnimation);
 
 				}
 
+				private void updateViewPosition2() {
+
+					params.x = (int)phonePoint.x;
+
+					params.y = (int) (screenHeigh - y - mTouchY);
+
+					Yayalog.loger("我要更新ui去隐藏了" +
+							"");
+					wm.updateViewLayout(myview, params);
+					//半透明隐藏图标
+					new Handler().postDelayed(new Runnable() {
+						
+						@Override
+						public void run() {
+							myviewicon.setImageBitmap(GetAssetsutils
+									.getImageFromAssetsFile("yaya1_acountmanagericontoumingright.png",
+											mactivity));
+						}
+					}, 500);
+					myviewiconmanager.setVisibility(View.GONE);
+
+				}
 			});
 
 		}
@@ -284,10 +386,17 @@ public class LogoWindow {
 			public void onShake() {
 				// TODO Auto-generated method stub
 				Yayalog.loger("再要");
-				// YayaWan.init(mactivity);
+				 KgameSdk.init(mactivity);
 			}
 		});
 
+	}
+
+	private Point getHeightAndWidth(Activity activity) {
+			int width = activity.getWindowManager().getDefaultDisplay().getWidth();
+			int height = activity.getWindowManager().getDefaultDisplay().getHeight();
+			Point size = new Point(width,height);
+			return size;
 	}
 
 	// 添加
@@ -297,12 +406,12 @@ public class LogoWindow {
 		hasview = true;
 	}
 
-	private void onClick() {
+	private void onClick(int i) {
 		// TODO Auto-generated method stub
 		// if (id == ResourceUtil.getId(mContext, "iv_floating_icon")) {
 		// YayaWan.stop(mactivity);
 		// 打开选择窗口
-		 KgameSdk.accountManager(mactivity);
+		 KgameSdk.accountManager(mactivity,i);
 	}
 
 	public void start() {
@@ -310,7 +419,6 @@ public class LogoWindow {
 		Yayalog.loger("开始监听暂停");
 		shakeListener.stop();
 		// System.out.println("1");
-		
 		
 		mhandler.sendEmptyMessageAtTime(521, 1500);
 
@@ -326,6 +434,7 @@ public class LogoWindow {
 
 			Yayalog.loger("暂停监听开始mLogowindow = null");
 
+			SmallHelpActivity.isclose =1;
 			wm.removeView(myview);
 			mLogowindow = null;
 			hasview = false;
@@ -339,7 +448,7 @@ public class LogoWindow {
 	 * @param size
 	 * @return
 	 */
-	private int machSize(int size) {
+	private static int machSize(int size) {
 
 		int dealWihtSize = DisplayUtils.dealWihtSize(size, mactivity);
 
@@ -380,4 +489,6 @@ public class LogoWindow {
 			return 75;
 		}
 	}
+	
+	
 }

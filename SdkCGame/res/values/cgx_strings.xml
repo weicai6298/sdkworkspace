@@ -1,0 +1,15 @@
+<resources>
+
+    <string name="cgx_dialog_ensure">确定</string>
+    <string name="cgx_dialog_cancel">取消</string>
+    <string name="cgx_warm_hint_1">温馨提示</string>
+    <string name="cgx_comfirm_dialog_title">提示</string>
+    <string name="cgx_username">账号:</string>
+    <string name="cgx_password">密码:</string>
+    <string name="cgx_input_username">请输入用户名</string>
+    <string name="cgx_input_password">请输入密码</string>
+    <string name="cgx_goto_register"><u>注册新账号</u></string>
+    <string name="cgx_goto_login"><u>我有账号</u></string>
+    <string name="cgx_use_test_account"><u>使用sdktest账号</u></string>
+    <string name="cgx_pay_title">本次支付</string>
+</resources>

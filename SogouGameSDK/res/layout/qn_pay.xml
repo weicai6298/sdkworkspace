@@ -27,7 +27,7 @@
             android:layout_height="wrap_content"
             android:layout_alignParentTop="true"
             android:layout_centerHorizontal="true"
-            android:text="账户充值"
+            android:text="帐户充值"
             android:textSize="20sp" />
     </RelativeLayout>
 
@@ -38,7 +38,7 @@
         android:layout_marginTop="10dp"
         android:textSize="10sp"
         android:id="@+id/qn_pay_username"
-        android:text="账户名称"
+        android:text="帐户名称"
         android:textColor="#FFA500"
         android:layout_alignParentRight="true"/>
 

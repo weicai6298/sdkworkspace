@@ -1,0 +1,6 @@
+<resources>
+  <string name="error_entity_null">下载实体不能为空</string>
+  <string name="error_download_url_null">下载链接不能为空</string>
+  <string name="error_download_path_null">存储地址不能为空</string>
+  <string name="error_file_name_null">文件名不能为空</string>
+</resources>

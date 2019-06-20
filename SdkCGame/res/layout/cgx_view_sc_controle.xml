@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center"
+    android:orientation="vertical"
+    android:padding="20dip" >
+
+    <TextView
+        android:id="@+id/cgx_float_view_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:textColor="@color/cgx_common_red"
+        android:textSize="13sp" />
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dip"
+        android:gravity="center"
+        android:orientation="horizontal" >
+
+        <LinearLayout
+            android:id="@+id/cgx_layout_sc_down"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/cgx_selector_floatview_button_border"
+            android:gravity="center"
+            android:minHeight="35dip"
+            android:minWidth="60dip"
+            android:orientation="vertical"
+            android:padding="5dip" >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="—"
+                android:textColor="@color/cgx_common_red"
+                android:textSize="15sp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="减速"
+                android:textColor="@color/cgx_common_red"
+                android:textSize="13sp" />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/cgx_float_view_text"
+            android:layout_width="0dip"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="#D3351A"
+            android:gravity="center"
+            android:minWidth="150dip"
+            android:padding="8dip"
+            android:text="X1"
+            android:textColor="@color/cgx_common_white"
+            android:textSize="13sp" />
+
+        <LinearLayout
+            android:id="@+id/cgx_layout_sc_up"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/cgx_selector_floatview_button_border"
+            android:gravity="center"
+            android:minHeight="35dip"
+            android:minWidth="60dip"
+            android:orientation="vertical"
+            android:padding="5dip" >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="+"
+                android:textColor="@color/cgx_common_red"
+                android:textSize="13sp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="加速"
+                android:textColor="@color/cgx_common_red"
+                android:textSize="13sp" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/cgx_float_view_button3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="25dip"
+        android:background="@drawable/cgx_selector_floatview_button"
+        android:minHeight="40dip"
+        android:minWidth="100dip"
+        android:padding="5dip"
+        android:text="开始加速"
+        android:textColor="@color/cgx_common_white"
+        android:textSize="15sp" />
+
+</LinearLayout>

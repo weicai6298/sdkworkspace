@@ -1,30 +1,41 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/gamecenter_pb_container"
     android:layout_width="wrap_content"
     android:layout_height="wrap_content"
     android:gravity="center_vertical"
+    android:background="@android:color/transparent"
     android:orientation="horizontal">
 
-    <ProgressBar
-        android:id="@+id/gamecenter_pb"
-        android:layout_width="24dp"
-        android:layout_height="24dp"
-        android:layout_marginBottom="14dp"
-        android:layout_marginLeft="41dp"
-        android:layout_marginRight="9dp"
-        android:layout_marginTop="14dp"
-        android:indeterminate="false"
-        android:indeterminateBehavior="repeat"
-        android:indeterminateDrawable="@drawable/loadinganimation" />
-
-    <TextView
-        android:id="@+id/gamecenter_message_tv"
-        android:layout_width="125dp"
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_gravity="center_vertical"
-        android:layout_marginRight="41dp"
-        android:paddingBottom="0dp"
-        android:paddingTop="0dp"
-        android:textColor="@color/gamecenter_color_E6000000"
-        android:textSize="15dp" />
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:background="@drawable/common_dialog_window_background"
+        android:layout_margin="1dp">
+
+        <ProgressBar
+            android:id="@+id/gamecenter_pb"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:layout_marginBottom="14dp"
+            android:layout_marginLeft="41dp"
+            android:layout_marginRight="9dp"
+            android:layout_marginTop="14dp"
+            android:indeterminate="false"
+            android:indeterminateBehavior="repeat"
+            android:indeterminateDrawable="@drawable/loadinganimation" />
+
+        <TextView
+            android:id="@+id/gamecenter_message_tv"
+            android:layout_width="125dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginRight="41dp"
+            android:paddingBottom="0dp"
+            android:paddingTop="0dp"
+            android:textColor="@color/gamecenter_color_E6000000"
+            android:textSize="15dp" />
+    </LinearLayout>
 </LinearLayout>

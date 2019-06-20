@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="73dp">
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1px"
+            android:layout_alignParentBottom="true"
+            android:background="@color/divide_line" />
+
+        <View
+            android:id="@+id/ug_message_item_read"
+            android:layout_width="2dp"
+            android:layout_height="match_parent"
+            android:background="@color/pink" />
+
+        <RelativeLayout
+            android:layout_width="50dp"
+            android:layout_height="match_parent"
+            android:layout_alignParentRight="true">
+
+            <ImageView
+                android:id="@+id/ug_message_item_go"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:src="@drawable/ug_ic_go" />
+
+            <CheckBox
+                android:id="@+id/ug_message_item_cb"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:visibility="gone" />
+        </RelativeLayout>
+
+
+        <RelativeLayout
+            android:id="@+id/ug_layout_icon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_centerVertical="true">
+
+            <ImageView
+                android:id="@+id/ug_message_item_icon"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:src="@drawable/ug_message_gift" />
+
+            <ImageView
+                android:id="@+id/ug_message_item_hint"
+                android:layout_width="5dp"
+                android:layout_height="5dp"
+                android:src="@drawable/ug_red_img"
+                android:layout_toRightOf="@id/ug_message_item_icon"/>
+        </RelativeLayout>
+
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="10dp"
+            android:layout_toRightOf="@+id/ug_layout_icon"
+            android:layout_marginRight="50dp"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/ug_message_item_title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="aa"
+                android:textColor="@color/text_lv1"
+                android:textSize="@dimen/text_normal" />
+
+            <TextView
+                android:id="@+id/ug_message_item_desc"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="7dp"
+                android:ellipsize="end"
+                android:singleLine="true"
+                android:text="ss"
+                android:textColor="@color/text_lv2"
+                android:textSize="@dimen/text_normal" />
+
+        </LinearLayout>
+
+    </RelativeLayout>
+</LinearLayout>

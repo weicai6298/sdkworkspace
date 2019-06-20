@@ -14,9 +14,9 @@ import android.view.WindowManager;
 import com.kkgame.sdk.pay.Payment_jf;
 import com.kkgame.sdk.pay.Yayapaymain_jf;
 import com.kkgame.sdk.pay.Yinlian;
-import com.kkgame.sdk.smallhelp.Personal_dialog_ho;
 import com.kkgame.utils.DeviceUtil;
 import com.kkgame.utils.Yayalog;
+
 
 
 /**
@@ -30,7 +30,7 @@ public class BaseLogin_Activity extends Activity {
 	private final int WEIBOLOGIN = 4;
 	protected Context mContext = this;
 	protected BaseView mBaseview;
-	private Personal_dialog_ho personal_dialog_ho;
+	
 	private int type;
 
 	@Override
@@ -42,6 +42,9 @@ public class BaseLogin_Activity extends Activity {
 		getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN,
 				WindowManager.LayoutParams.FLAG_FULLSCREEN);
 
+		//设置点击空白处不关闭计费界面
+		setFinishOnTouchOutside(false);
+		
 		// 设置横竖屏
 		String orientation = DeviceUtil.getOrientation(mContext);
 
@@ -86,10 +89,7 @@ public class BaseLogin_Activity extends Activity {
 			setContentView(mBaseview.getView());
 			break;
 		
-		case ViewConstants.ACCOUNTMANAGER:
-			personal_dialog_ho = new Personal_dialog_ho(this);
-			personal_dialog_ho.dialogShow();
-			break;
+		
 
 		default:
 			break;
@@ -139,9 +139,7 @@ public class BaseLogin_Activity extends Activity {
 		if (mBaseview != null) {
 			mBaseview.onResume();
 		}
-		if (personal_dialog_ho != null) {
-			personal_dialog_ho.onResume();
-		}
+		
 		super.onResume();
 	}
 

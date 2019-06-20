@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout 
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_height="wrap_content"
+    android:gravity="center"
+    android:layout_width="wrap_content">
+    <!-- 50dip -->
+	<LinearLayout 
+	    android:layout_width="fill_parent"
+	    android:layout_height="50dip"
+	    android:gravity="center"
+	    android:background="@color/ycx_color_background"
+	    android:orientation="horizontal" >
+	   
+		<ProgressBar  
+            android:id="@+id/ycx_pb"
+			style="@style/ycx_style_loading_anim"
+			android:visibility="gone"/>
+	    <TextView
+	        android:id="@+id/ycx_tv_loading_message"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:text="@string/ycx_string_loading" 
+	        android:textColor="@color/ycx_color_gray_light"
+	        android:textSize="14.0sp"/>
+	</LinearLayout>
+	<!-- <WebView
+	        android:id="@+id/ycx_webView"
+	        android:layout_width="match_parent"
+	        android:layout_height="match_parent" /> -->
+	<Button 
+	    android:id="@+id/ycx_btn_change"
+	    android:layout_width="75dip"
+	    android:layout_height="35dip"
+	    android:textColor="@color/ycx_color_white"
+	    android:text="切换账号"
+	    android:layout_marginRight="20dip"
+	    android:layout_gravity="right|center_vertical"
+	    android:background="@drawable/ycx_btn_bule_selector"/>
+</FrameLayout>

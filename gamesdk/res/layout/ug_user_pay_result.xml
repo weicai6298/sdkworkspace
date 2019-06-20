@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/common_bg"
+    android:orientation="vertical">
+
+    <include layout="@layout/ug_title_bar"/>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="130dp"
+            android:background="@color/white"
+            >
+
+            <ImageView
+                android:id="@+id/ug_iv_status"
+                android:layout_marginTop="22dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"/>
+            <TextView
+                android:id="@+id/ug_tv_status"
+                android:layout_marginTop="9dp"
+                android:layout_below="@id/ug_iv_status"
+                android:textSize="@dimen/text_bigger"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"/>
+            <View
+                android:layout_alignParentBottom="true"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/divide_line"/>
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/ug_bottom_parent"
+            android:layout_width="match_parent"
+            android:layout_height="69dp"
+            android:layout_alignParentBottom="true"
+            android:background="@color/white">
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/divide_line"/>
+
+            <Button
+                android:id="@+id/ug_bt_next"
+                android:layout_width="match_parent"
+                android:layout_height="42dp"
+                android:layout_centerInParent="true"
+                android:layout_marginLeft="48dp"
+                android:layout_marginRight="48dp"
+                android:background="@drawable/ug_button_blue_normal"
+                android:text="返回游戏"
+                android:textColor="@color/white"
+                android:textSize="@dimen/text_big"
+                />
+
+        </RelativeLayout>
+
+
+    </RelativeLayout>
+</LinearLayout>

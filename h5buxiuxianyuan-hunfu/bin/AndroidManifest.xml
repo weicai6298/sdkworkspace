@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.tencent.tmgp.xlj"
+    package="com.syhl.xmsy"
     android:versionCode="1"
     android:versionName="1" >
 
@@ -89,6 +89,9 @@
             android:value="portrait" />
         <meta-data
             android:name="isLandscape"
+            android:value="false" />
+        <meta-data
+            android:name="isdebug"
             android:value="false" />
     </application>
 

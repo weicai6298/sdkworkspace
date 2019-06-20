@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:orientation="vertical"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:background="@color/activity_background">
+
+    <include layout="@layout/yhsdk_layout_title"/>
+
+    <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scrollbars="none"
+            android:overScrollMode="never"
+            >
+
+        <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+            <EditText
+                    android:id="@+id/et_login_user"
+                    android:layout_width="@dimen/win_width"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="43dp"
+                    android:hint="@string/phone_number"
+                    style="@style/EditTextStyle"/>
+
+            <EditText
+                    android:id="@+id/et_login_password"
+                    android:layout_width="@dimen/win_width"
+                    android:layout_height="wrap_content"
+                    android:hint="@string/password"
+                    android:inputType="textPassword"
+                    android:layout_marginTop="26dp"
+                    style="@style/EditTextStyle"/>
+
+            <TextView
+                    android:id="@+id/tv_login"
+                    android:layout_width="@dimen/win_width"
+                    android:layout_height="35dp"
+                    android:layout_marginTop="38dp"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:textColor="@android:color/white"
+                    android:textSize="15sp"
+                    android:text="@string/login"
+                    android:background="@drawable/yhsdk_btn_blue_bg"/>
+
+            <RelativeLayout
+                    android:layout_width="@dimen/win_width"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginBottom="10dp"
+                    android:layout_marginTop="23dp">
+
+                <TextView
+                        android:id="@+id/tv_fast_registered"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="15sp"
+                        android:textColor="#0099ff"
+                        android:layout_centerVertical="true"
+                        android:layout_alignParentLeft="true"
+                        android:text="快速注册"/>
+
+                <TextView
+                        android:id="@+id/tv_forget_password"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="15sp"
+                        android:textColor="#676767"
+                        android:layout_centerVertical="true"
+                        android:layout_alignParentRight="true"
+                        android:text="@string/forget_pwd"/>
+            </RelativeLayout>
+
+        </LinearLayout>
+
+    </ScrollView>
+
+
+</LinearLayout>

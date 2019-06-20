@@ -285,7 +285,7 @@ public class Otherpaydialog extends Basedialogview implements
 
 		ll_mMoney
 				.setBackgroundDrawable(GetAssetsutils
-						.get9DrawableFromAssetsFile("yaya_biankuang2.9.png",
+						.get9DrawableFromAssetsFile("yaya1_biankuan.9.png",
 								mActivity));
 		ll_mMoney.setClickable(true);
 		ll_mMoney.setGravity(Gravity.CENTER);

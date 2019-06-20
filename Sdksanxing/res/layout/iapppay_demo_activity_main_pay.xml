@@ -1,0 +1,130 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:background="@color/ipay_demo_color_white">
+
+    <LinearLayout
+        android:id="@+id/ll_appuserid"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="15dp"
+        android:orientation="vertical" >
+
+        <LinearLayout
+            android:id="@+id/appuserid"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal" >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:textSize="14dp"
+                android:layout_height="wrap_content"
+                android:textColor="@color/ipay_demo_color_black"
+                android:text="输入appUserID" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="#ff0000"
+                android:textSize="14dp"
+                android:layout_marginRight="15dp"
+                android:text="*"/>
+
+            <EditText
+                android:id="@+id/appuseridEdit"
+                android:text="samsung"
+                android:textSize="18dp"
+                android:layout_width="100dp"
+                android:layout_height="wrap_content" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/acid"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal" >
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:textSize="14dp"
+                android:layout_marginRight="15dp"
+                android:textColor="@color/ipay_demo_color_black"
+                android:text="输入Acid" />
+
+            <EditText
+                android:id="@+id/acidEdit"
+                android:layout_width="100dp"
+                android:textSize="18dp"
+                android:layout_height="wrap_content" />
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:orientation="vertical" >
+
+        <TextView
+            android:id="@+id/textView1"
+            android:textColor="@color/ipay_demo_color_black"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="15dp"
+            android:textSize="18dp"
+            android:text="请选择您的应用类型(横版/竖版)"
+            android:textAppearance="?android:attr/textAppearanceLarge" />
+
+        <RadioGroup
+            android:id="@+id/orderBy"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="18dp"
+            android:orientation="vertical" >
+
+            <RadioButton
+                android:id="@+id/orderBy1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:checked="true"
+                android:textSize="16dp"
+                android:textColor="@color/ipay_demo_color_black"
+                android:text="竖版应用" />
+
+            <RadioButton
+                android:id="@+id/orderBy2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/ipay_demo_color_black"
+                android:textSize="16dp"
+                android:text="横版应用" />
+
+            <RadioButton
+                android:id="@+id/orderBy3"
+                android:textSize="16dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/ipay_demo_color_black"
+                android:text="横向可翻转应用" />
+        </RadioGroup>
+
+        <Button
+            android:id="@+id/button1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="30dp"
+            android:layout_marginLeft="42dp"
+            android:textSize="16dp"
+            android:layout_marginTop="30dp"
+            android:textColor="@color/ipay_demo_color_black"
+            android:text="进入微支付演示demo" />
+    </LinearLayout>
+
+</RelativeLayout>

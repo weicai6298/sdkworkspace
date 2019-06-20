@@ -28,8 +28,7 @@ public class UserManagerImpl implements YYWUserManager {
 	}
 
 	@Override
-	public void setUserListener(Activity paramActivity,
-			YYWUserManagerCallBack paramXMUserListener) {
+	public void setUserListener(Activity paramActivity, YYWUserManagerCallBack paramXMUserListener) {
 
 	}
 

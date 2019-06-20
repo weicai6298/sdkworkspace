@@ -1,0 +1,209 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/pay_color_ffffff">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="50dp">
+
+            <TextView
+                android:id="@+id/PayDODtitle"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:textColor="@color/pay_color_333333"
+                android:textSize="17sp" />
+
+            <FrameLayout
+                android:id="@+id/payOrderDetailClose"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_gravity="left">
+
+                <ImageView
+                    android:id="@+id/payDClose"
+                    android:layout_width="15dp"
+                    android:layout_height="15dp"
+                    android:layout_gravity="center"
+                    android:background="@drawable/pay_btn_close" />
+
+                <ImageView
+                    android:id="@+id/payDBack"
+                    android:layout_width="10dp"
+                    android:layout_height="15dp"
+                    android:layout_gravity="center"
+                    android:background="@drawable/pay_return"
+                    android:visibility="gone" />
+            </FrameLayout>
+
+            <TextView
+                android:id="@+id/PayDODSwitchAccount"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_gravity="right"
+                android:gravity="center"
+                android:paddingLeft="@dimen/dp_10"
+                android:paddingRight="@dimen/size_10dp"
+                android:text="@string/SwitchAccount"
+                android:textColor="@color/pay_color_333333"
+                android:textSize="15sp"
+                android:visibility="invisible" />
+
+            <TextView
+                android:id="@+id/payOrderDetailOKTV"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="right|center_vertical"
+                android:layout_marginRight="@dimen/size_10dp"
+                android:background="@drawable/pay_bg_3095fb_circle"
+                android:gravity="center"
+                android:paddingBottom="@dimen/size_5dp"
+                android:paddingLeft="@dimen/dp_10"
+                android:paddingRight="@dimen/size_10dp"
+                android:paddingTop="@dimen/size_5dp"
+                android:text="@string/confirmPayment"
+                android:textColor="@color/pay_color_ffffff"
+                android:textSize="15sp"
+                android:visibility="gone" />
+        </FrameLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="2px"
+            android:background="@color/pay_color_bbbbbb" />
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:id="@+id/selectPayLayout"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:visibility="gone">
+
+
+                <LinearLayout
+                    android:id="@+id/ApplePayItem"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/size_60dp"
+                    android:layout_marginLeft="@dimen/size_10dp"
+                    android:layout_marginRight="@dimen/size_10dp"
+                    android:layout_marginTop="@dimen/size_30dp"
+                    android:background="@drawable/pay_apple_pay_bg"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:layout_width="@dimen/dp_40"
+                        android:layout_height="@dimen/dp_40"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginLeft="@dimen/size_15dp"
+                        android:background="@mipmap/pay_apple_pay_logo" />
+
+                    <TextView
+                        android:layout_width="@dimen/size_0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginLeft="@dimen/size_15dp"
+                        android:layout_marginRight="@dimen/size_15dp"
+                        android:layout_weight="1"
+                        android:text="@string/CloudPay"
+                        android:textColor="@color/pay_color_ffffff"
+                        android:textSize="@dimen/size_14sp"
+                        android:textStyle="bold" />
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginRight="@dimen/size_15dp"
+                        android:background="@mipmap/pay_bold_arrows" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/BankCardItem"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/size_60dp"
+                    android:layout_marginLeft="@dimen/size_10dp"
+                    android:layout_marginRight="@dimen/size_10dp"
+                    android:layout_marginTop="@dimen/size_30dp"
+                    android:background="@drawable/pay_bank_card_bg"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:layout_width="@dimen/size_50dp"
+                        android:layout_height="@dimen/size_35dp"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginLeft="@dimen/size_10dp"
+                        android:background="@mipmap/pay_bank_card_logo" />
+
+                    <TextView
+                        android:layout_width="@dimen/size_0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginLeft="@dimen/size_10dp"
+                        android:layout_marginRight="@dimen/size_15dp"
+                        android:layout_weight="1"
+                        android:text="@string/BankCardPay"
+                        android:textColor="@color/pay_color_ffffff"
+                        android:textSize="@dimen/size_14sp"
+                        android:textStyle="bold" />
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginRight="@dimen/size_15dp"
+                        android:background="@mipmap/pay_bold_arrows" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/pdod_layout"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <ListView
+                    android:id="@+id/payOrderDetailRV"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/size_0dp"
+                    android:layout_weight="1"
+                    android:divider="@color/pay_color_ffffff"
+                    android:dividerHeight="@dimen/size_0dp"
+                    android:listSelector="@android:color/transparent" />
+
+                <Button
+                    android:id="@+id/payOrderDetailOK"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/size_50dp"
+                    android:layout_margin="@dimen/size_17dp"
+                    android:background="@drawable/pay_bg_3095fb_circle"
+                    android:text="@string/confirmPayment"
+                    android:textColor="@color/pay_color_ffffff"
+                    android:textSize="17sp"
+                    android:visibility="gone" />
+            </LinearLayout>
+        </FrameLayout>
+    </LinearLayout>
+
+    <include
+        layout="@layout/progress"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_gravity="center" />
+
+    <include
+        layout="@layout/fail_load"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center" />
+</FrameLayout>

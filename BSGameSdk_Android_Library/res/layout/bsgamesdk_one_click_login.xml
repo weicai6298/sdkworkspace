@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <com.bsgamesdk.android.widget.APScrollView
+        android:id="@+id/bsgamesdk_one_click_login_ScrollView"
+        android:layout_width="280dp"
+        android:layout_height="0dip"
+        android:layout_weight="100"
+        android:fillViewport="true" >
+
+        <LinearLayout
+            android:id="@+id/bsgamesdk_id_oneClickloginLayout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:orientation="vertical"
+            android:paddingBottom="5dp"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            android:paddingTop="5dp" >
+
+            <TextView
+                android:id="@+id/bsgamesdk_textview_oneClickLogin_Info"
+                style="?attr/bsgamesdk_info_text_style"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:text="@string/bsgamesdk_login_oneClickInfo" />
+
+            <Button
+                android:id="@+id/bsgamesdk_button_oneClickLogin"
+                android:layout_width="240dp"
+                android:layout_height="36dp"
+                android:layout_marginTop="10dp"
+                style="?attr/bsgamesdk_confirm_button_style"
+                android:text="@string/bsgamesdk_login_oneClick" />
+
+            <TextView
+                android:id="@+id/bsgamesdk_textview_oneClickLogin_switchUser"
+                style="?attr/bsgamesdk_text_image_style"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:layout_gravity="center_horizontal"
+                android:text="@string/bsgamesdk_login_switchUser" />
+        </LinearLayout>
+    </com.bsgamesdk.android.widget.APScrollView>
+
+</LinearLayout>

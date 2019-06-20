@@ -1,0 +1,196 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/ppc_view"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#a0000000"
+    android:gravity="center"
+    android:orientation="vertical"
+    android:visibility="gone" >
+
+    <LinearLayout
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:background="@drawable/xmw_corner_login_bg"
+        android:orientation="vertical" >
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:background="@drawable/xmw_corner_title" >
+
+            <LinearLayout
+                android:id="@+id/ppc_back"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:orientation="horizontal" >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginLeft="12dp"
+                    android:layout_marginRight="12dp"
+                    android:background="@drawable/xmw_ic_back"
+                    android:visibility="visible" />
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:text="充值卡充值"
+                android:textColor="@color/appBlack"
+                android:textSize="18sp" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="38dp"
+            android:layout_marginTop="10dp"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:paddingLeft="15dp" >
+
+            <TextView
+                android:id="@+id/Texta"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="8dp"
+                android:text="@string/xmw_paycardnum"
+                android:textColor="@color/xmw_s_black_text"
+                android:textSize="13sp" />
+
+            <LinearLayout
+                android:id="@+id/card_choose"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentTop="true"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="15dp"
+                android:layout_toRightOf="@+id/Texta"
+                android:background="@drawable/xmw_corner_white_gray"
+                android:orientation="horizontal" >
+
+                <TextView
+                    android:id="@+id/card_st"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:textColor="@color/appDarkGrey"
+                    android:textSize="14sp" />
+
+                <ImageView
+                    android:id="@+id/carddrop_but"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginRight="10dp"
+                    android:src="@drawable/xmw_new_dropdown" />
+            </LinearLayout>
+        </RelativeLayout>
+
+        <!-- 用户名 -->
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="44dp"
+            android:layout_marginTop="15dp"
+            android:focusable="true"
+            android:focusableInTouchMode="true"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:paddingLeft="15dp"
+            android:paddingRight="10dp" >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:text="@string/xmw_cardnumwith"
+                android:textColor="@color/xmw_s_black_text"
+                android:textSize="13sp" />
+
+            <com.xmwsdk.view.XmwEditText
+                android:id="@+id/ppc_cardnum"
+                android:layout_width="fill_parent"
+                android:layout_height="35dp"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp"
+                android:background="@drawable/xmw_corner_white_gray"
+                android:hint="@string/xmw_mobcardnum"
+                android:inputType="number"
+                android:maxLength="20"
+                android:paddingLeft="10dp"
+                android:textColor="@color/appDarkGrey"
+                android:textColorHint="@color/appDarkGrey"
+                android:textSize="13sp" />
+        </LinearLayout>
+
+        <!-- 密码 -->
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="44dp"
+            android:layout_marginTop="10dp"
+            android:focusable="true"
+            android:focusableInTouchMode="true"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:paddingLeft="15dp"
+            android:paddingRight="10dp" >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:text="@string/xmw_passwith"
+                android:textColor="@color/xmw_s_black_text"
+                android:textSize="13sp" />
+
+            <com.xmwsdk.view.XmwEditText
+                android:id="@+id/ppc_password"
+                android:layout_width="fill_parent"
+                android:layout_height="35dp"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp"
+                android:background="@drawable/xmw_corner_white_gray"
+                android:hint="@string/xmw_mobcardpass"
+                android:inputType="number"
+                android:maxLength="20"
+                android:paddingLeft="10dp"
+                android:textColor="@color/appDarkGrey"
+                android:textColorHint="@color/appDarkGrey"
+                android:textSize="13sp" />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/tv_pay_cardtexttip"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="5dp"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="8dp"
+            android:layout_marginTop="5dp"
+            android:textColor="@color/red_text"
+            android:textSize="12sp" />
+
+        <Button
+            android:id="@+id/ppc_ok"
+            android:layout_width="match_parent"
+            android:layout_height="38dp"
+            android:layout_marginBottom="10dp"
+            android:layout_marginLeft="18dp"
+            android:layout_marginRight="18dp"
+            android:background="@drawable/xmw_light_button"
+            android:gravity="center"
+            android:text="确定"
+            android:textColor="@color/appBlack"
+            android:textSize="15sp" />
+    </LinearLayout>
+
+</LinearLayout>

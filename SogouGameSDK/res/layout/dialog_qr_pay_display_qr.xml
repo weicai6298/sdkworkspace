@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/load_qr_code_succ_view"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:visibility="gone">
+
+    <TextView
+        android:id="@+id/qr_code_countdown_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="10dp"
+        android:text="@string/qr_code_ali_countdown"
+        android:textColor="@color/sogou_game_sdk_color_ff6a00"
+        android:textSize="12sp"
+        />
+    <ImageView
+        android:id="@+id/qr_code_alipay_iv"
+        android:layout_width="85dp"
+        android:layout_height="85dp"
+        android:layout_below="@+id/qr_code_countdown_tv"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="8dp"
+        />
+</RelativeLayout>

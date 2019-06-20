@@ -154,19 +154,16 @@ public class MainActivity extends Activity {
 	            @Override
 	            public void onPaySuccess(YYWUser arg0, YYWOrder arg1, Object arg2) {
 	            	Toast.makeText(MainActivity.this, "充值成功回调", Toast.LENGTH_SHORT).show();
-	            	 Log.i("tag", "GameProxy-支付成功");
 	            }
 
 	            @Override
 	            public void onPayFailed(String arg0, Object arg1) {
 	                System.out.println("支付失败");
-	                Log.i("tag", "GameProxy-支付失败");
 	            }
 
 	            @Override
 	            public void onPayCancel(String arg0, Object arg1) {
 	                System.out.println("支付退出");
-	                Log.i("tag", "GameProxy-支付失败1");
 	            }
 	        });
 	 }

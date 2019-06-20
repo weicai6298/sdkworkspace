@@ -173,7 +173,7 @@ public class Utilsjf {
 				android.widget.RelativeLayout.LayoutParams.WRAP_CONTENT);
 
 		dialog.getWindow().setBackgroundDrawable(new BitmapDrawable());
-		dialog.show();
+//		dialog.show();
 	}
 
 	public static void safePaydialog(final Activity mActivity, String message) {

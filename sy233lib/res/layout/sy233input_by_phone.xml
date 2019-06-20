@@ -1,0 +1,222 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+             android:layout_width="match_parent"
+             android:layout_height="wrap_content"
+             android:orientation="vertical"
+             android:paddingBottom="10dp"
+             android:paddingLeft="20dp"
+             android:paddingRight="20dp"
+             android:paddingTop="10dp"
+
+    >
+
+    <LinearLayout
+        android:id="@+id/popu_contentview"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:background="@drawable/sy233popup_bg"
+        android:fitsSystemWindows="true"
+        android:gravity="center_horizontal"
+        android:orientation="vertical">
+
+        <include layout="@layout/sy233activity_header"/>
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:scrollbars="none">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/sy233popup_bottom_bg"
+                android:orientation="vertical"
+                android:paddingBottom="15dp"
+                android:paddingLeft="15dp"
+                android:paddingRight="15dp"
+                >
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="36dp"
+                    android:layout_marginTop="10dp"
+                    android:background="@drawable/sy233charge_info_bg"
+                    android:gravity="center_vertical"
+                    android:padding="5dp">
+
+
+                    <ImageButton
+                        android:id="@+id/ib_clean"
+                        android:layout_width="28dp"
+                        android:layout_height="28dp"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:background="@mipmap/sy233clean"
+                        android:visibility="visible"/>
+
+                    <ImageView
+                        android:id="@+id/temp"
+                        android:layout_width="22dp"
+                        android:layout_height="22dp"
+                        android:layout_centerVertical="true"
+                        android:src="@mipmap/sy233phone"/>
+
+                    <EditText
+                        android:id="@+id/ed_phone"
+                        style="@style/sy233register_edit"
+                        android:layout_alignParentTop="true"
+                        android:layout_centerHorizontal="true"
+                        android:layout_toLeftOf="@id/ib_clean"
+                        android:layout_toRightOf="@+id/temp"
+                        android:hint="绑定手机号"
+                        android:inputType="phone"
+                        android:maxLength="11"
+                        android:textSize="15sp"/>
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="36dp"
+                    android:layout_marginTop="10dp"
+                    android:background="@drawable/sy233charge_info_bg"
+                    android:gravity="center_vertical"
+                    android:padding="5dp">
+
+                    <ImageView
+                        android:id="@+id/temp2"
+                        android:layout_width="22dp"
+                        android:layout_height="22dp"
+                        android:layout_centerVertical="true"
+                        android:src="@mipmap/sy233left_security"/>
+
+                    <TextView
+                        android:id="@+id/bt_msgcode"
+                        android:layout_width="wrap_content"
+                        android:layout_height="30dp"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:gravity="center"
+                        android:text="获取验证码"
+                        android:textColor="@color/sy233colorPrimaryDark"
+                        android:textSize="14dp"/>
+
+                    <View
+                        android:layout_width="1px"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="3dp"
+                        android:layout_marginRight="3dp"
+                        android:layout_toLeftOf="@+id/bt_msgcode"
+                        android:background="#FFDCDCDC"/>
+
+                    <EditText
+                        android:id="@+id/ed_msgcode"
+                        style="@style/sy233register_edit"
+                        android:layout_toLeftOf="@id/bt_msgcode"
+                        android:layout_toRightOf="@+id/temp2"
+                        android:hint="@string/sy233input_sure_msgcode"
+                        android:inputType="number"
+                        android:maxLength="6"
+                        android:textSize="15sp"
+                        />
+                    <!--android:paddingLeft="23dp"-->
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/sy233ll_pwd_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="36dp"
+                    android:layout_marginTop="10dp"
+                    android:background="@drawable/sy233charge_info_bg"
+                    android:gravity="center_vertical"
+                    android:padding="5dp">
+                    <CheckBox
+                        android:padding="10dp"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:id="@+id/ib_pwd_show"
+                        android:layout_width="30dp"
+                        android:layout_height="22dp"
+                        android:button="@null"
+                        android:checked="false"
+                        android:background="@drawable/sy233pwd_hide_bg"/>
+
+                    <ImageView
+                        android:id="@+id/temp3"
+                        android:layout_width="22dp"
+                        android:layout_height="22dp"
+                        android:layout_centerVertical="true"
+                        android:src="@mipmap/sy233left_pwd"/>
+
+                    <EditText
+                        android:textSize="15sp"
+                        android:id="@+id/ed_pwd"
+                        style="@style/sy233register_edit"
+                        android:layout_alignParentTop="true"
+                        android:layout_centerHorizontal="true"
+                        android:layout_toLeftOf="@id/ib_pwd_show"
+                        android:layout_toRightOf="@+id/temp3"
+
+                        android:hint="请输入6-16位登录密码"
+                        android:inputType="textVisiblePassword"
+                        android:maxLength="16"/>
+
+                </RelativeLayout>
+                <Button
+                    android:id="@+id/bt_commit"
+                    android:layout_width="match_parent"
+                    android:layout_height="35dp"
+                    android:layout_marginTop="15dp"
+                    android:background="@drawable/sy233bt_detail_down_bg"
+                    android:text="绑定"
+                    android:textColor="@android:color/white"
+                    android:textSize="18dp"/>
+
+                <FrameLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp">
+
+                    <TextView
+                        android:visibility="gone"
+                        android:id="@+id/bt_regster_by_username"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="用户名注册"
+                        android:textColor="@color/sy233colorPrimary"
+                        android:textSize="15sp"/>
+
+                    <LinearLayout
+                        android:layout_gravity="right"
+                        android:id="@+id/sy233ll_clause"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_vertical|right"
+                        android:orientation="horizontal"
+                        android:visibility="gone">
+
+                        <TextView
+                            android:id="@+id/tv_bind_alert"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/sy233register_alert"
+                            android:textColor="@color/sy233graytextcolor"
+                            android:textSize="12dp"/>
+
+                        <TextView
+                            android:id="@+id/tv_agreement"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/sy233customer_prot"
+                            android:textColor="@color/sy233colorPrimary"
+                            android:textSize="12dp"/>
+                    </LinearLayout>
+                </FrameLayout>
+
+            </LinearLayout>
+        </ScrollView>
+    </LinearLayout>
+</FrameLayout>
+

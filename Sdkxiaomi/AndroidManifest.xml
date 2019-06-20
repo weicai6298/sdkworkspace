@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    package="com.hulian.mystore.mi"
+    package="com.yayawan.sdktemplate"
     android:versionCode="1"
     android:versionName="1.0" >
 
@@ -9,18 +9,32 @@
         android:minSdkVersion="8"
         android:targetSdkVersion="19" />
 
-    <uses-permission android:name="android.permission.INTERNET" />
-    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
-    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
-    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
-    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
-    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
     <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW" />
     <uses-permission android:name="android.permission.GET_TASKS" />
-    <uses-permission android:name="com.xiaomi.sdk.permission.PAYMENT" />
      <uses-permission android:name="android.permission.GET_ACCOUNTS" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <uses-permission android:name="com.xiaomi.permission.AUTH_SERVICE" />
+    <uses-permission android:name="android.permission.REQUEST_INSTALL_PACKAGES" />
+    <!--定位权限-->
+    <!-- 这个权限用于进行网络定位-->
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION"/>
+    <!-- 这个权限用于访问GPS定位-->
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION"/>
+
+    <!--获取Mac地址的时候用到-->
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE"/>
+    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE"/>
     
 
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="com.xiaomi.sdk.permission.PAYMENT" />
+    
+    
     <application
         android:name="com.yayawan.impl.YYApplication"
         android:allowBackup="true"
@@ -46,15 +60,61 @@
         
         <meta-data
             android:name="AppID"
-            android:value="string2882303761517681802" />
+            android:value="string2882303761517817339" />
         
         <meta-data
             android:name="AppKey"
-            android:value="string5521768171802" />
+            android:value="string5531781765339" />
         
         <meta-data
             android:name="AppSecret"
-            android:value="F2qXOmPcnkeL+al5KVo7LQ==" />
+            android:value="xqny51OI51pFH7LfGSblPQ==" />
+        
+        
+       <!-- Xiaomi SDK Need -->
+        <meta-data
+            android:name="MiLinkGroupAppID"
+            android:value="@integer/MiLinkGroupAppID" >
+        </meta-data>
+        <activity
+            android:name="com.xiaomi.gamecenter.sdk.ui.MiActivity"
+            android:configChanges="orientation|screenSize"
+            android:screenOrientation="behind"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar" >
+        </activity>
+        <activity
+            android:name="com.xiaomi.gamecenter.sdk.ui.PayListActivity"
+            android:configChanges="orientation|screenSize"
+            android:exported="true"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+        <activity
+            android:name="com.xiaomi.hy.dj.HyDjActivity"
+            android:configChanges="orientation|screenSize"
+            android:exported="true"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+        <activity
+            android:name="com.alipay.sdk.app.H5PayActivity"
+            android:configChanges="orientation|keyboardHidden|navigation|screenSize"
+            android:exported="false"
+            android:screenOrientation="behind"
+            android:windowSoftInputMode="adjustResize|stateHidden" />
+        <!--不支持${applicationId}的请替换为包名-->
+        <service
+            android:name="com.xiaomi.gamecenter.push.GamePushService"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="string_package.MI_GAME_PUSH"/>
+            </intent-filter>
+        </service>
+
+        <receiver android:name="com.xiaomi.gamecenter.push.OnClickReceiver"
+                  android:exported="true">
+            <intent-filter>
+                <action android:name="com.xiaomi.hy.push.client.ONCLICK"/>
+            </intent-filter>
+        </receiver>
+        
+        <!-- Xiaomi SDK Need End-->
         
     </application>
 

@@ -52,7 +52,7 @@
                 android:layout_marginLeft="50dp"
                 android:gravity="center"
                 android:text="@string/dk_user_back_hot"
-                android:textColor="#cfcfcf"
+                android:textColor="#e5006a"
                 android:textSize="16sp" />
 
             <ImageView
@@ -93,7 +93,7 @@
             android:layout_marginRight="50dp"
             android:gravity="center"
             android:text="@string/dk_user_back_exit"
-            android:textColor="#e5006a"
+            android:textColor="#cfcfcf"
             android:textSize="16sp" />
     </RelativeLayout>
 

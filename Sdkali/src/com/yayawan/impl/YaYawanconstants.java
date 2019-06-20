@@ -2,7 +2,6 @@ package com.yayawan.impl;
 
 import java.util.ArrayList;
 import java.util.List;
-
 import org.apache.http.HttpResponse;
 import org.apache.http.NameValuePair;
 import org.apache.http.client.ClientProtocolException;
@@ -12,8 +11,10 @@ import org.apache.http.impl.client.DefaultHttpClient;
 import org.apache.http.message.BasicNameValuePair;
 import org.apache.http.protocol.HTTP;
 import org.apache.http.util.EntityUtils;
+import org.json.JSONException;
 import org.json.JSONObject;
 
+import android.R.string;
 import android.app.Activity;
 import android.app.AlertDialog;
 import android.content.Context;
@@ -25,21 +26,27 @@ import android.text.TextUtils;
 import android.util.Log;
 import android.widget.Toast;
 import cn.uc.gamesdk.UCGameSdk;
-import cn.uc.gamesdk.even.SDKEventKey;
-import cn.uc.gamesdk.even.SDKEventReceiver;
-import cn.uc.gamesdk.even.Subscribe;
-import cn.uc.gamesdk.exception.AliLackActivityException;
-import cn.uc.gamesdk.exception.AliNotInitException;
-import cn.uc.gamesdk.open.GameParamInfo;
-import cn.uc.gamesdk.open.OrderInfo;
-import cn.uc.gamesdk.open.UCOrientation;
-import cn.uc.gamesdk.param.SDKParamKey;
-import cn.uc.gamesdk.param.SDKParams;
+import cn.gundam.sdk.shell.even.SDKEventKey;
+import cn.gundam.sdk.shell.even.SDKEventReceiver;
+import cn.gundam.sdk.shell.even.Subscribe;
+import cn.gundam.sdk.shell.exception.AliLackActivityException;
+import cn.gundam.sdk.shell.exception.AliNotInitException;
+import cn.gundam.sdk.shell.open.ParamInfo;
+import cn.gundam.sdk.shell.open.OrderInfo;
+import cn.gundam.sdk.shell.open.UCOrientation;
+import cn.gundam.sdk.shell.param.SDKParamKey;
+import cn.gundam.sdk.shell.param.SDKParams;
+
+import com.kkgame.sdk.login.ViewConstants;
 import com.kkgame.utils.DeviceUtil;
 import com.kkgame.utils.Handle;
 import com.kkgame.utils.JSONUtil;
-import com.umeng.analytics.MobclickAgent;
-import com.umeng.analytics.game.UMGameAgent;
+import com.lidroid.jxutils.HttpUtils;
+import com.lidroid.jxutils.exception.HttpException;
+import com.lidroid.jxutils.http.RequestParams;
+import com.lidroid.jxutils.http.ResponseInfo;
+import com.lidroid.jxutils.http.callback.RequestCallBack;
+import com.lidroid.jxutils.http.client.HttpRequest.HttpMethod;
 import com.yayawan.callback.YYWExitCallback;
 import com.yayawan.domain.YYWUser;
 import com.yayawan.main.YYWMain;
@@ -51,6 +58,7 @@ public class YaYawanconstants {
 	private static Activity mActivity;
 
 	private static boolean isinit = false;
+	
 
 	private static Handler handler;
 
@@ -59,10 +67,11 @@ public class YaYawanconstants {
 	public static String uid;
 	private static String bufanuid;
 	private static String bufantoken;
+	
+//	private static int islogin = 0;
 
 //	private static String sign;
 
-	private static int isyoumeng;
 
 	private static YYWExitCallback ExitCallback;
 
@@ -73,9 +82,10 @@ public class YaYawanconstants {
 	/**
 	 * 初始化sdk
 	 */
-	public static void inintsdk(Activity mactivity) {
+	public static void inintsdk(Activity mactivity){
 		mActivity = mactivity;
 		Yayalog.loger("YaYawanconstants初始化sdk");
+		
 		if ((mActivity.getIntent().getFlags() & Intent.FLAG_ACTIVITY_BROUGHT_TO_FRONT) != 0) {
 			// Log.i(TAG, "onCreate with flag FLAG_ACTIVITY_BROUGHT_TO_FRONT");
 			mRepeatCreate = true;
@@ -88,14 +98,7 @@ public class YaYawanconstants {
 		handler = new Handler(Looper.getMainLooper());
 		UCGameSdk.defaultSdk().registerSDKEventReceiver(receiver);
 
-		String youmeng = DeviceUtil.getGameInfo(mActivity, "isyoumeng");
-		isyoumeng = Integer.parseInt(youmeng);
-		if (isyoumeng == 1) {
-			UMGameAgent.setDebugMode(true);
-			UMGameAgent.init(mActivity);
-		}
 
-		isinit = true;
 	}
 
 	/**
@@ -110,6 +113,9 @@ public class YaYawanconstants {
 	 */
 	public static void login(final Activity mactivity) {
 		Yayalog.loger("YaYawanconstantssdk登录");
+		Log.i("tag","isinit = " +isinit);
+//		Log.i("tag","islogin = " +islogin);
+//		if (isinit && islogin == 0) {
 		if (isinit) {
 			try {
 				UCGameSdk.defaultSdk().login(mactivity, null);
@@ -182,21 +188,19 @@ public class YaYawanconstants {
 			String roleName, String roleLevel, String zoneId, String zoneName,
 			String roleCTime, String ext) {
 		Yayalog.loger("YaYawanconstants设置角色信息");
+		Log.i("tag", "登陆成功roleCTime = "+ roleCTime);
 		SDKParams sdkParams = new SDKParams();
 		sdkParams.put(SDKParamKey.STRING_ROLE_ID, roleId);
 		sdkParams.put(SDKParamKey.STRING_ROLE_NAME, roleName);
-		sdkParams.put(SDKParamKey.LONG_ROLE_LEVEL, roleLevel);
-		sdkParams.put(SDKParamKey.LONG_ROLE_CTIME, roleCTime);
+		sdkParams.put(SDKParamKey.LONG_ROLE_LEVEL, Long.parseLong(roleLevel));
+		sdkParams.put(SDKParamKey.LONG_ROLE_CTIME, Long.parseLong(roleCTime));
 		sdkParams.put(SDKParamKey.STRING_ZONE_ID, zoneId);
 		sdkParams.put(SDKParamKey.STRING_ZONE_NAME, zoneName);
 		// 1为角色登陆成功 2为角色创建 3为角色升级。
 		if (Integer.parseInt(ext) == 1) {
-			if (isyoumeng == 1) {
-				Log.i("tag", "友盟进入游戏");
-				MobclickAgent.onProfileSignIn(uid);
-			}
 			try {
 				UCGameSdk.defaultSdk().submitRoleData(paramActivity, sdkParams);
+				Log.i("tag", "登陆成功sdkParams = "+ sdkParams);
 				Log.i("tag", "登陆成功,数据已提交,查看数据是否正确，请到开放平台接入联调工具查看");
 			} catch (AliNotInitException e) {
 				e.printStackTrace();
@@ -206,6 +210,7 @@ public class YaYawanconstants {
 		} else if (Integer.parseInt(ext) == 2) {
 			try {
 				UCGameSdk.defaultSdk().submitRoleData(paramActivity, sdkParams);
+				Log.i("tag", "角色创建sdkParams = "+ sdkParams);
 				Log.i("tag", "角色创建,数据已提交,查看数据是否正确，请到开放平台接入联调工具查看");
 			} catch (AliNotInitException e) {
 				e.printStackTrace();
@@ -215,6 +220,7 @@ public class YaYawanconstants {
 		} else if (Integer.parseInt(ext) == 3) {
 			try {
 				UCGameSdk.defaultSdk().submitRoleData(paramActivity, sdkParams);
+				Log.i("tag", "角色升级sdkParams = "+ sdkParams);
 				Log.i("tag", "角色升级,数据已提交,查看数据是否正确，请到开放平台接入联调工具查看");
 			} catch (AliNotInitException e) {
 				e.printStackTrace();
@@ -229,18 +235,12 @@ public class YaYawanconstants {
 			Log.i("tag", "onResume is repeat activity!");
 			return;
 		}
-		if (isyoumeng == 1) {
-			MobclickAgent.onResume(paramActivity);
-		}
 	}
 
 	public static void onPause(Activity paramActivity) {
 		if (mRepeatCreate) {
 			Log.i("tag", "AppActivity:onPause is repeat activity!");
 			return;
-		}
-		if (isyoumeng == 1) {
-			MobclickAgent.onPause(paramActivity);
 		}
 	}
 
@@ -419,9 +419,10 @@ public class YaYawanconstants {
 
 				@Override
 				public void run() {
-					// startGame();
 					isinit = true;
-//					login(mActivity);
+//					if(islogin == 0){
+//						login(mActivity);
+//					}
 				}
 			});
 		}
@@ -510,8 +511,10 @@ public class YaYawanconstants {
 			// MobclickAgent.onProfileSignOff();
 			// MobclickAgent.onKillProcess(mActivity);
 			// }
-			// mActivity.finish();
-			ExitCallback.onExit();
+//			 islogin = 0;
+			 mActivity.finish();
+			 System.exit(0);
+//			ExitCallback.onExit();
 		}
 
 		@Subscribe(event = SDKEventKey.ON_EXIT_CANCELED)
@@ -548,7 +551,7 @@ public class YaYawanconstants {
 
 
 	private static void ucSdkInit(String pullUpInfo) {
-		GameParamInfo gameParamInfo = new GameParamInfo();
+		ParamInfo gameParamInfo = new ParamInfo();
 		// gameParamInfo.setCpId(UCSdkConfig.cpId);已废用
 		int gameid = Integer.parseInt(""
 				+ DeviceUtil.getGameInfo(mActivity, "gameId"));
@@ -583,51 +586,36 @@ public class YaYawanconstants {
 	 */
 	private static void HttpPost(final String sid) {
 		token = sid;
-		new Thread(new Runnable() {
+		HttpUtils httpUtil = new HttpUtils();
+		String url = "https://api.sdk.75757.com/data/get_uid/";
+		RequestParams requestParams = new RequestParams();
+		requestParams.addBodyParameter("app_id",DeviceUtil.getAppid(mActivity));
+		requestParams.addBodyParameter("sid", sid);
+		httpUtil.send(HttpMethod.POST, url,requestParams,
+				new RequestCallBack<String>() {
 
-			@Override
-			public void run() {
-				try {
-					HttpPost httpPost = new HttpPost(
-							"https://api.sdk.75757.com/data/get_uid/");
-					List<NameValuePair> params = new ArrayList<NameValuePair>();
-					params.add(new BasicNameValuePair("app_id", DeviceUtil
-							.getAppid(mActivity)));
-					params.add(new BasicNameValuePair("sid", sid));
-
-					Log.i("tag", "params=" + params);
-					try {
-						// 设置httpPost请求参数
-						httpPost.setEntity(new UrlEncodedFormEntity(params,
-								HTTP.UTF_8));
-						HttpResponse httpResponse = new DefaultHttpClient()
-								.execute(httpPost);
-						Log.i("tag",
-								"httpResponse.getStatusLine().getStatusCode()="
-										+ httpResponse.getStatusLine()
-												.getStatusCode());
-						if (httpResponse.getStatusLine().getStatusCode() == 200) {
-							String re = EntityUtils.toString(httpResponse
-									.getEntity());
-							Log.i("tag", "re=" + re);
-							JSONObject js = new JSONObject(re);
-							Log.i("tag", "js=" + js);
-							uid = js.getString("uid");
-							Log.i("tag", "uid=" + uid);
-							Log.i("tag", "token=" + token);
-							loginSuce(mActivity, uid, uid, token);
-							Toast("登录成功");
-						}
-
-					} catch (ClientProtocolException e) {
-						e.printStackTrace();
+					@Override
+					public void onFailure(HttpException arg0, String arg1) {
+						// TODO Auto-generated method stub
+						Yayalog.loger("请求失败"+arg1.toString());
 					}
 
-				} catch (Exception e) {
-					e.printStackTrace();
-				}
-			}
-		}).start();
+					@Override
+					public void onSuccess(ResponseInfo<String> arg0) {
+						// TODO Auto-generated method stub
+						try {
+							Yayalog.loger("请求成功"+arg0.result);
+							JSONObject obj = new JSONObject(arg0.result);
+							uid = obj.getString("uid");
+							Yayalog.loger("uid ="+uid);
+							loginSuce(mActivity, uid, uid, sid);
+//							islogin = 1;
+							Toast("登录成功");
+						} catch (JSONException e) {
+							e.printStackTrace();
+						}
+					}
+				});
 	}
 
 	/**
@@ -642,41 +630,86 @@ public class YaYawanconstants {
 	 */
 	public static void HttpPost(final String uid, final String token,
 			final String orderid) {
-		new Thread(new Runnable() {
-			@Override
-			public void run() {
-				try {
-					bufanuid = YYWMain.mUser.yywuid;
-					bufantoken = YYWMain.mUser.yywtoken;
-					HttpPost httpPost = new HttpPost(
-							"https://api.sdk.75757.com/pay/order_status/");
-					List<NameValuePair> params = new ArrayList<NameValuePair>();
-					params.add(new BasicNameValuePair("app_id", DeviceUtil
-							.getAppid(mActivity)));
-					params.add(new BasicNameValuePair("uid", bufanuid));
-					params.add(new BasicNameValuePair("token", bufantoken));
-					params.add(new BasicNameValuePair("billid", orderid));
+//		new Thread(new Runnable() {
+//			@Override
+//			public void run() {
+//				try {
+//					bufanuid = YYWMain.mUser.yywuid;
+//					bufantoken = YYWMain.mUser.yywtoken;
+//					HttpPost httpPost = new HttpPost(
+//							"https://api.sdk.75757.com/pay/order_status/");
+//					List<NameValuePair> params = new ArrayList<NameValuePair>();
+//					params.add(new BasicNameValuePair("app_id", DeviceUtil
+//							.getAppid(mActivity)));
+//					params.add(new BasicNameValuePair("uid", bufanuid));
+//					params.add(new BasicNameValuePair("token", bufantoken));
+//					params.add(new BasicNameValuePair("billid", orderid));
+//
+//					Log.i("tag", "params=" + params);
+//					try {
+//						// 设置httpPost请求参数
+//						httpPost.setEntity(new UrlEncodedFormEntity(params,
+//								HTTP.UTF_8));
+//						HttpResponse httpResponse = new DefaultHttpClient()
+//								.execute(httpPost);
+//						Log.i("tag",
+//								"httpResponse.getStatusLine().getStatusCode()="
+//										+ httpResponse.getStatusLine()
+//												.getStatusCode());
+//						if (httpResponse.getStatusLine().getStatusCode() == 200) {
+//							String re = EntityUtils.toString(httpResponse
+//									.getEntity());
+//							Log.i("tag", "re=" + re);
+//							JSONObject js = new JSONObject(re);
+//							Log.i("tag", "js=" + js);
+//							paystatus = js.getString("status");
+////							int paystatus = js.getInt("status");
+//							Log.i("tag", "paystatus支付=" + paystatus);
+//							if ((paystatus.equals("2")) || (paystatus.equals("3"))) {
+//								paySuce();
+//								Log.i("tag", "支付成功");
+//								Toast("支付成功");
+//							} else {
+//								payFail();
+//								Toast("支付失败");
+//								Log.i("tag", "支付失败");
+//							}
+//
+//						}
+//					} catch (ClientProtocolException e) {
+//						e.printStackTrace();
+//					}
+//				} catch (Exception e) {
+//					e.printStackTrace();
+//				}
+//			}
+//		}).start();
+		bufanuid = YYWMain.mUser.yywuid;
+		bufantoken = YYWMain.mUser.yywtoken;
+		HttpUtils httpUtil = new HttpUtils();
+		String url = "https://api.sdk.75757.com/pay/order_status/";
+		RequestParams requestParams = new RequestParams();
+		requestParams.addBodyParameter("app_id",DeviceUtil.getAppid(mActivity));
+		requestParams.addBodyParameter("uid", bufanuid);
+		requestParams.addBodyParameter("token", bufantoken);
+		requestParams.addBodyParameter("billid", orderid);
+		httpUtil.send(HttpMethod.POST, url,requestParams,
+				new RequestCallBack<String>() {
 
-					Log.i("tag", "params=" + params);
-					try {
-						// 设置httpPost请求参数
-						httpPost.setEntity(new UrlEncodedFormEntity(params,
-								HTTP.UTF_8));
-						HttpResponse httpResponse = new DefaultHttpClient()
-								.execute(httpPost);
-						Log.i("tag",
-								"httpResponse.getStatusLine().getStatusCode()="
-										+ httpResponse.getStatusLine()
-												.getStatusCode());
-						if (httpResponse.getStatusLine().getStatusCode() == 200) {
-							String re = EntityUtils.toString(httpResponse
-									.getEntity());
-							Log.i("tag", "re=" + re);
-							JSONObject js = new JSONObject(re);
-							Log.i("tag", "js=" + js);
-							paystatus = js.getString("status");
-//							int paystatus = js.getInt("status");
-							Log.i("tag", "paystatus支付=" + paystatus);
+					@Override
+					public void onFailure(HttpException arg0, String arg1) {
+						// TODO Auto-generated method stub
+						Yayalog.loger("请求失败"+arg1.toString());
+					}
+
+					@Override
+					public void onSuccess(ResponseInfo<String> arg0) {
+						// TODO Auto-generated method stub
+						try {
+							Yayalog.loger("请求成功"+arg0.result);
+							JSONObject obj = new JSONObject(arg0.result);
+							paystatus = obj.getString("status");
+							Yayalog.loger("status ="+paystatus);
 							if ((paystatus.equals("2")) || (paystatus.equals("3"))) {
 								paySuce();
 								Log.i("tag", "支付成功");
@@ -686,16 +719,11 @@ public class YaYawanconstants {
 								Toast("支付失败");
 								Log.i("tag", "支付失败");
 							}
-
+						} catch (JSONException e) {
+							e.printStackTrace();
 						}
-					} catch (ClientProtocolException e) {
-						e.printStackTrace();
 					}
-				} catch (Exception e) {
-					e.printStackTrace();
-				}
-			}
-		}).start();
+				});
 	}
 
 

@@ -1,0 +1,14 @@
+android {
+	 productFlavors {
+	 	 "portrait_SDK" {
+	 	 	 applicationId "com.game.sdk.zhiaiportrait"
+	 	 	 versionCode 7
+	 	 	 resValue( "string", "app_name", "挚爱demo竖屏版" )
+	 	 }
+	 	 "landscape_SDK" {
+	 	 	 applicationId "com.game.sdk.zhiailandscape"
+	 	 	 versionCode 7
+	 	 	 resValue( "string", "app_name", "挚爱demo横屏版" )
+	 	 }
+	 }
+}

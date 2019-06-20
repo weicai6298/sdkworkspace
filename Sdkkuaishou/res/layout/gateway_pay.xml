@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/gateway_pay_activity"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/transparent">
+
+    <include
+        android:id="@+id/cashier_desk"
+        layout="@layout/gateway_cashier_desk" />
+
+    <include layout="@layout/gateway_pay_loading" />
+
+
+    <ImageView
+        android:id="@+id/close"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignRight="@id/cashier_desk"
+        android:layout_alignTop="@id/cashier_desk"
+        android:layout_marginRight="-20dp"
+        android:layout_marginTop="-20dp"
+        android:scaleType="fitCenter"
+        android:src="@drawable/kwai_global_pop_close"
+        android:visibility="gone"
+        />
+
+
+</RelativeLayout>

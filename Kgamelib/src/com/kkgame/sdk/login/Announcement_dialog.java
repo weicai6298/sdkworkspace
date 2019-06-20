@@ -55,8 +55,8 @@ public class Announcement_dialog extends Basedialogview {
 		dialog.requestWindowFeature(Window.FEATURE_NO_TITLE);
 
 		int ho_height = 650;
-		int ho_with = 750;
-		int po_height = 850;
+		int ho_with = 650;
+		int po_height = 650;
 		int po_with = 650;
 
 		int height = 0;
@@ -79,13 +79,13 @@ public class Announcement_dialog extends Basedialogview {
 		baselin.setOrientation(LinearLayout.VERTICAL);
 		MachineFactory machineFactory = new MachineFactory(mActivity);
 		machineFactory.MachineView(baselin, with, height, "LinearLayout");
-		baselin.setBackgroundColor(Color.TRANSPARENT);
+		baselin.setBackgroundColor(Color.BLUE);
 		baselin.setGravity(Gravity.CENTER_VERTICAL);
 
 		// 中间内容
 		LinearLayout ll_content = new LinearLayout(mContext);
 		machineFactory.MachineView(ll_content, with, height, mLinearLayout, 2,
-				25);
+				0);
 		ll_content.setBackgroundColor(Color.WHITE);
 		ll_content.setGravity(Gravity.CENTER_HORIZONTAL);
 		ll_content.setOrientation(LinearLayout.VERTICAL);
@@ -139,10 +139,10 @@ public class Announcement_dialog extends Basedialogview {
 		// 帮助的列表内容
 		lv_helpcontent = new WebView(mActivity);
 		machineFactory.MachineView(lv_helpcontent, MATCH_PARENT, MATCH_PARENT,
-				0, mLinearLayout, 20, 0, 20, 10, 100);
+				0, mLinearLayout, 0, 0, 0, 0, 100);
 		
 
-		ll_content.addView(rl_title);
+		//ll_content.addView(rl_title);
 		ll_content.addView(lv_helpcontent);
 		ll_content.addView(pb_mPb);
 
@@ -174,7 +174,7 @@ public class Announcement_dialog extends Basedialogview {
 	private void initlogic() {
 		
 		WebSettings settings = lv_helpcontent.getSettings();
-		settings.setSupportZoom(true); // 支持缩放
+		settings.setSupportZoom(false); // 支持缩放
 		settings.setBuiltInZoomControls(false); // 启用内置缩放装置
 		settings.setJavaScriptEnabled(true); // 启用JS脚本
 		settings.setCacheMode(WebSettings.LOAD_NO_CACHE);// 关闭webview中缓存
@@ -183,6 +183,7 @@ public class Announcement_dialog extends Basedialogview {
 		Yayalog.loger("ni..."+html);
 		//lv_helpcontent.loadUrl("http://danjiyou.duapp.com/Home/Blog/index");
 		settings.setDefaultTextEncodingName("utf-8"); //设置文本编码
+		lv_helpcontent.setVerticalScrollBarEnabled(false);
 		lv_helpcontent.loadData(html, "text/html; charset=UTF-8", null);
 	}
 	

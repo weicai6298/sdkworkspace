@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="pay_color_ffffff">#ffffff</color>
+    <color name="pay_color_333333">#333333</color>
+    <color name="pay_color_bbbbbb">#bbbbbb</color>
+    <color name="pay_color_3095fb">#3095fb</color>
+    <color name="pay_color_f2f2f2">#f2f2f2</color>
+    <color name="pay_color_e9e9e9">#e9e9e9</color>
+    <color name="pay_color_fafafa">#fafafa</color>
+    <color name="pay_color_666666">#666666</color>
+    <color name="pay_color_e0e0e0">#e0e0e0</color>
+    <color name="pay_color_c7cacf">#c7cacf</color>
+    <color name="translucent_background">#90000000</color>
+    <color name="pay_color_919191">#919191</color>
+    <color name="pay_color_ff9642">#ff9642</color>
+    <color name="pay_color_2576ad">#2576ad</color>
+    <color name="pay_color_008bea">#008bea</color>
+    <color name="pay_color_f73d3b">#f73d3b</color>
+    <color name="pay_color_e4012e">#e4012e</color>
+    <color name="pay_color_ffff00">#ffff00</color>
+</resources>

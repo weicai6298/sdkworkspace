@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_logining"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    tools:context="com.yiqiwanba.wansdk.user.LoginingActivity">
+
+    <RelativeLayout
+        android:layout_width="170dp"
+        android:background="@drawable/wan_logining_dialog_bg"
+        android:layout_height="48dp"
+        android:padding="5dp">
+
+        <ImageView
+            android:layout_width="38dp"
+            android:layout_height="38dp"
+            android:id="@+id/statusImageView"
+            android:layout_gravity="center_vertical"
+            android:src="@drawable/wan_icon_logining" />
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@+id/statusImageView"
+            android:layout_toEndOf="@+id/statusImageView"
+            android:gravity="center_horizontal"
+            android:layout_marginLeft="12dp"
+            android:layout_marginRight="18dp"
+            android:layout_centerVertical="true">
+
+            <TextView
+                android:id="@+id/usernameTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="15999999999" />
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:id="@+id/loginingView">
+
+                <ProgressBar
+                    style="@android:style/Widget.Holo.Light.ProgressBar.Inverse"
+                    android:id="@+id/progressBar4"
+                    android:indeterminate="true"
+                    android:layout_height="20dp"
+                    android:layout_width="20dp" />
+
+                <TextView
+                    android:text="正在登陆游戏..."
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/textView23"
+                    android:textSize="10sp"
+                    android:textColor="@color/wan_jumbo"
+                    android:layout_marginLeft="3dp" />
+            </LinearLayout>
+
+            <TextView
+                android:text="登陆成功"
+                android:layout_width="wrap_content"
+                android:layout_height="20dp"
+                android:id="@+id/loginedView"
+                android:gravity="center_vertical"
+                android:textSize="10sp"
+                android:textColor="@color/wan_dodger_blue"
+                android:visibility="gone" />
+
+        </LinearLayout>
+
+    </RelativeLayout>
+</RelativeLayout>

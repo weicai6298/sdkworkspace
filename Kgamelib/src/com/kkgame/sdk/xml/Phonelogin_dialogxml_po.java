@@ -26,10 +26,10 @@ import com.kkgame.sdk.bean.User;
 import com.kkgame.sdk.callback.KgameSdkUserCallback;
 import com.kkgame.sdk.db.UserDao;
 import com.kkgame.sdk.utils.AuthNumReceiver;
-import com.kkgame.sdk.utils.AuthNumReceiver.MessageListener;
 import com.kkgame.sdk.utils.Basedialogview;
 import com.kkgame.sdk.utils.CodeCountDown;
 import com.kkgame.sdk.utils.DialogUtil;
+import com.kkgame.sdk.utils.AuthNumReceiver.MessageListener;
 import com.kkgame.sdkmain.AgentApp;
 import com.kkgame.sdkmain.KgameSdk;
 
@@ -205,7 +205,7 @@ public class Phonelogin_dialogxml_po extends Basedialogview {
 		machineFactory.MachineEditText(et_mPhone, 360, MATCH_PARENT, 0,
 				"请输入手机号", 32, mLinearLayout, 0, 0, 0, 0);
 		et_mPhone.setBackgroundDrawable(GetAssetsutils
-				.get9DrawableFromAssetsFile("yaya_biankuang2.9.png", mContext));
+				.get9DrawableFromAssetsFile("yaya1_biankuan.9.png", mContext));
 		et_mPhone.setPadding(machSize(20), 0, 0, 0);
 
 		// 获取验证码按钮
@@ -225,7 +225,7 @@ public class Phonelogin_dialogxml_po extends Basedialogview {
 		machineFactory.MachineEditText(et_mSecurity, MATCH_PARENT, 96, 0,
 				"请输入验证码", 32, mLinearLayout, 0, 20, 0, 0);
 		et_mSecurity.setBackgroundDrawable(GetAssetsutils
-				.get9DrawableFromAssetsFile("yaya_biankuang2.9.png", mActivity));
+				.get9DrawableFromAssetsFile("yaya1_biankuan.9.png", mActivity));
 		et_mSecurity.setPadding(machSize(20), 0, 0, 0);
 
 		// 确定按钮

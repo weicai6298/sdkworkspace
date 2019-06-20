@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/ll_root1"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/transparent"
+    android:gravity="center"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:id="@+id/ll_root"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/xmw_corner_login_bg"
+        android:orientation="vertical" >
+
+        <RelativeLayout
+            android:id="@+id/rl_find_psw_title"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:background="@drawable/xmw_corner_title" >
+
+            <ImageView
+                android:id="@+id/tv_back"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="12dp"
+                android:padding="10dp"
+                android:src="@drawable/xmw_ic_back" />
+
+            <TextView
+                android:id="@+id/tv_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:text="标题"
+                android:textColor="@color/appBlack"
+                android:textSize="@dimen/xmw_c_title" />
+
+            <ImageView
+                android:id="@+id/tv_close"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerInParent="true"
+                android:layout_marginRight="10dp"
+                android:padding="10dp"
+                android:src="@drawable/xmw_ic_close" />
+        </RelativeLayout>
+
+        <LinearLayout
+            android:id="@+id/ll_content"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:orientation="vertical" >
+
+            <!-- kefu UI -->
+
+            <include layout="@layout/xmw_kf" />
+            <!-- change phone/password UI -->
+            <include layout="@layout/xmw_change_phone" />
+            
+            <!-- reset/password UI -->
+            <include layout="@layout/xmw_reset_loginpwd" />
+            <!-- bill UI -->
+
+            <include layout="@layout/xmw_bill" />
+            <!-- payset UI -->
+
+            <include layout="@layout/xmw_pay_set" />
+            <!-- wb UI -->
+
+            <include layout="@layout/xmw_wb" />
+            <!-- zx  or gg UI -->
+
+            <include layout="@layout/xmw_pull_list" />
+        </LinearLayout>
+    </LinearLayout>
+
+</LinearLayout>

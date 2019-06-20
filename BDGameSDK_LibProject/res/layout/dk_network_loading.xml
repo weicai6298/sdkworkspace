@@ -13,13 +13,12 @@
         android:gravity="center_horizontal"
         android:orientation="vertical" >
 
-           <com.baidu.platformsdk.widget.CircleProgressBar
-            android:id="@+id/circle_progressbar"
+        <ProgressBar
+            android:id="@+id/dk_loadingImageView"
             android:layout_width="60dp"
             android:layout_height="60dp"
-            android:visibility="visible"
-            app:bdp_progress_color="@color/bdp_gray"
-            app:bdp_progress_stoke_width="2dp" />
+            android:indeterminate="false"
+            android:indeterminateDrawable="@drawable/dk_loading_progress" />
 
         <TextView
             android:layout_width="wrap_content"

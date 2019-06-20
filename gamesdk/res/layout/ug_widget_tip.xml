@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	xmlns:tools="http://schemas.android.com/tools"
+	android:layout_width="match_parent"
+	android:layout_height="wrap_content"
+	android:background="@drawable/ug_shape_tip"
+	android:orientation="horizontal"
+	android:paddingBottom="5dp"
+	android:paddingLeft="10dp"
+	android:paddingRight="10dp"
+	android:paddingTop="5dp">
+	
+	<ImageView
+		android:layout_width="22.5dp"
+		android:layout_height="22dp"
+		android:layout_gravity="center_vertical"
+		android:scaleType="fitCenter"
+		android:src="@drawable/ug_tip_trumpet" />
+	
+	<com.uu898.gamesdk.widget.MarqueeTextView
+		android:id="@+id/ug_tv_tip"
+		android:layout_width="0dp"
+		android:layout_height="wrap_content"
+		android:layout_gravity="center"
+		android:layout_marginLeft="5dp"
+		android:layout_marginRight="5dp"
+		android:layout_weight="1"
+		android:ellipsize="marquee"
+		android:focusable="true"
+		android:focusableInTouchMode="true"
+		android:gravity="center_vertical"
+		android:includeFontPadding="false"
+		android:marqueeRepeatLimit="marquee_forever"
+		android:singleLine="true"
+		android:textColor="@color/white"
+		android:textSize="@dimen/text_big"
+		tools:text="您有优惠券可以领取，点击查看详情，或者到个人中心自行查看···" />
+	
+	<ImageView
+		android:id="@+id/ug_close_tip"
+		android:layout_width="12dp"
+		android:layout_height="12dp"
+		android:layout_gravity="center_vertical"
+		android:scaleType="fitCenter"
+		android:src="@drawable/ug_tip_close" />
+</LinearLayout>

@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="310dp"
+    android:layout_height="300dp"
+    android:background="?attr/bsgamesdk_main_background"
+    android:gravity="center"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:id="@+id/bsgamesdk_license_title_bar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:background="@color/bsgamesdk_transparent">
+
+        <ImageView
+            android:id="@+id/bsgamesdk_title_close"
+            android:src="@drawable/bsgamesdk_license_close"
+            android:padding="5dp"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentRight="true"
+            android:contentDescription="@string/bsgamesdk_logo" />
+
+        <LinearLayout
+            android:layout_marginTop="15dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:gravity="center">
+
+            <TextView
+                android:id="@+id/bsgamesdk_title_content"
+                style="?attr/bsgamesdk_title_text_style"
+                android:layout_marginLeft="10dp"
+                android:text="@string/bsgamesdk_user_license" />
+        </LinearLayout>
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/bsgamesdk_license_bottom"
+        android:layout_below="@+id/bsgamesdk_license_title_bar"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/bsgamesdk_license_root_shape"
+        android:paddingLeft="3dp"
+        android:paddingRight="3dp">
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/bsgamesdk_license_content"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:lineSpacingExtra="4dp"
+                android:scrollbars="vertical" />
+        </ScrollView>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/bsgamesdk_license_bottom"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="10dp"
+        android:gravity="center_horizontal"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/bsgamesdk_license_disagree"
+            android:layout_width="80dp"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="20dp"
+            android:background="@drawable/bsgamesdk_license_disagree_backgroud"
+            android:padding="8dp"
+            android:text="@string/bsgamesdk_user_license_disagree"
+            android:textColor="#99a2aa" />
+
+        <Button
+            android:id="@+id/bsgamesdk_license_agree"
+            android:layout_width="80dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:background="@drawable/bsgamesdk_license_agree_backgroud"
+            android:padding="8dp"
+            android:text="@string/bsgamesdk_user_license_agree"
+            android:textColor="@color/alipay_TextColorWhite" />
+    </LinearLayout>
+
+
+</RelativeLayout>

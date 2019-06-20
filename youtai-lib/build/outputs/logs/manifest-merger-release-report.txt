@@ -1,0 +1,231 @@
+-- Merging decision tree log ---
+manifest
+ADDED from F:\Mine\HuoSdkLib\AndroidManifest.xml:3:1-119:12
+INJECTED from F:\Mine\HuoSdkLib\AndroidManifest.xml:3:1-119:12
+INJECTED from F:\Mine\HuoSdkLib\AndroidManifest.xml:3:1-119:12
+	package
+		ADDED from F:\Mine\HuoSdkLib\AndroidManifest.xml:5:5-27
+		INJECTED from F:\Mine\HuoSdkLib\AndroidManifest.xml
+		INJECTED from F:\Mine\HuoSdkLib\AndroidManifest.xml
+	xmlns:tools
+		ADDED from F:\Mine\HuoSdkLib\AndroidManifest.xml:4:5-51
+	xmlns:android
+		ADDED from F:\Mine\HuoSdkLib\AndroidManifest.xml:3:11-69
+uses-permission#android.permission.INTERNET
+ADDED from F:\Mine\HuoSdkLib\AndroidManifest.xml:7:5-67
+	android:name
+		ADDED from F:\Mine\HuoSdkLib\AndroidManifest.xml:7:22-64
+uses-permission#android.permission.ACCESS_NETWORK_STATE
+ADDED from F:\Mine\HuoSdkLib\AndroidManifest.xml:8:5-79
+	android:name
+		ADDED from F:\Mine\HuoSdkLib\AndroidManifest.xml:8:22-76
+uses-permission#android.permission.CHANGE_NETWORK_STATE
+ADDED from F:\Mine\HuoSdkLib\AndroidManifest.xml:9:5-79
+	android:name
+		ADDED from F:\Mine\HuoSdkLib\AndroidManifest.xml:9:22-76
+uses-permission#android.permission.READ_PHONE_STATE
+ADDED from F:\Mine\HuoSdkLib\AndroidManifest.xml:10:5-75
+	android:name
+		ADDED from F:\Mine\HuoSdkLib\AndroidManifest.xml:10:22-72
+uses-permission#org.simalliance.openmobileapi.SMARTCARD
+ADDED from F:\Mine\HuoSdkLib\AndroidManifest.xml:11:5-79
+	android:name
+		ADDED from F:\Mine\HuoSdkLib\AndroidManifest.xml:11:22-76
+uses-permission#android.permission.NFC
+ADDED from F:\Mine\HuoSdkLib\AndroidManifest.xml:12:5-62
+	android:name
+		ADDED from F:\Mine\HuoSdkLib\AndroidManifest.xml:12:22-59
+uses-feature#android.hardware.nfc.hce
+ADDED from F:\Mine\HuoSdkLib\AndroidManifest.xml:14:5-61
+	android:name
+		ADDED from F:\Mine\HuoSdkLib\AndroidManifest.xml:14:19-58
+uses-permission#android.permission.SEND_SMS
+ADDED from F:\Mine\HuoSdkLib\AndroidManifest.xml:16:5-67
+	android:name
+		ADDED from F:\Mine\HuoSdkLib\AndroidManifest.xml:16:22-64
+uses-permission#android.permission.VIBRATE
+ADDED from F:\Mine\HuoSdkLib\AndroidManifest.xml:17:5-66
+	android:name
+		ADDED from F:\Mine\HuoSdkLib\AndroidManifest.xml:17:22-63
+uses-permission#android.webkit.permission.PLUGIN
+ADDED from F:\Mine\HuoSdkLib\AndroidManifest.xml:18:5-72
+	android:name
+		ADDED from F:\Mine\HuoSdkLib\AndroidManifest.xml:18:22-69
+uses-permission#android.permission.WRITE_SETTINGS
+ADDED from F:\Mine\HuoSdkLib\AndroidManifest.xml:19:5-73
+	android:name
+		ADDED from F:\Mine\HuoSdkLib\AndroidManifest.xml:19:22-70
+uses-permission#android.permission.CHANGE_WIFI_STATE
+ADDED from F:\Mine\HuoSdkLib\AndroidManifest.xml:20:5-76
+	android:name
+		ADDED from F:\Mine\HuoSdkLib\AndroidManifest.xml:20:22-73
+uses-permission#android.permission.WAKE_LOCK
+ADDED from F:\Mine\HuoSdkLib\AndroidManifest.xml:21:5-68
+	android:name
+		ADDED from F:\Mine\HuoSdkLib\AndroidManifest.xml:21:22-65
+uses-permission#android.permission.CALL_PHONE
+ADDED from F:\Mine\HuoSdkLib\AndroidManifest.xml:22:5-69
+	android:name
+		ADDED from F:\Mine\HuoSdkLib\AndroidManifest.xml:22:22-66
+uses-permission#android.permission.SYSTEM_ALERT_WINDOW
+ADDED from F:\Mine\HuoSdkLib\AndroidManifest.xml:23:5-78
+	android:name
+		ADDED from F:\Mine\HuoSdkLib\AndroidManifest.xml:23:22-75
+uses-permission#android.permission.GET_TASKS
+ADDED from F:\Mine\HuoSdkLib\AndroidManifest.xml:24:5-68
+	android:name
+		ADDED from F:\Mine\HuoSdkLib\AndroidManifest.xml:24:22-65
+uses-permission#android.permission.MOUNT_UNMOUNT_FILESYSTEMS
+ADDED from F:\Mine\HuoSdkLib\AndroidManifest.xml:26:5-84
+	android:name
+		ADDED from F:\Mine\HuoSdkLib\AndroidManifest.xml:26:22-81
+uses-permission#android.permission.ACCESS_WIFI_STATE
+ADDED from F:\Mine\HuoSdkLib\AndroidManifest.xml:27:5-76
+	android:name
+		ADDED from F:\Mine\HuoSdkLib\AndroidManifest.xml:27:22-73
+uses-permission#android.permission.ACCESS_FINE_LOCATION
+ADDED from F:\Mine\HuoSdkLib\AndroidManifest.xml:28:5-79
+	android:name
+		ADDED from F:\Mine\HuoSdkLib\AndroidManifest.xml:28:22-76
+uses-permission#android.permission.ACCESS_COARSE_LOCATION
+ADDED from F:\Mine\HuoSdkLib\AndroidManifest.xml:29:5-81
+	android:name
+		ADDED from F:\Mine\HuoSdkLib\AndroidManifest.xml:29:22-78
+uses-permission#android.permission.WRITE_EXTERNAL_STORAGE
+ADDED from F:\Mine\HuoSdkLib\AndroidManifest.xml:30:5-81
+	android:name
+		ADDED from F:\Mine\HuoSdkLib\AndroidManifest.xml:30:22-78
+uses-feature#android.hardware.camera
+ADDED from F:\Mine\HuoSdkLib\AndroidManifest.xml:32:5-60
+	android:name
+		ADDED from F:\Mine\HuoSdkLib\AndroidManifest.xml:32:19-57
+uses-permission#android.permission.CAMERA
+ADDED from F:\Mine\HuoSdkLib\AndroidManifest.xml:34:5-65
+	android:name
+		ADDED from F:\Mine\HuoSdkLib\AndroidManifest.xml:34:22-62
+uses-permission#android.hardware.camera.autofocus
+ADDED from F:\Mine\HuoSdkLib\AndroidManifest.xml:35:5-73
+	android:name
+		ADDED from F:\Mine\HuoSdkLib\AndroidManifest.xml:35:22-70
+uses-permission#android.permission.RECEIVE_SMS
+ADDED from F:\Mine\HuoSdkLib\AndroidManifest.xml:37:5-70
+	android:name
+		ADDED from F:\Mine\HuoSdkLib\AndroidManifest.xml:37:22-67
+uses-permission#android.permission.READ_SMS
+ADDED from F:\Mine\HuoSdkLib\AndroidManifest.xml:38:5-67
+	android:name
+		ADDED from F:\Mine\HuoSdkLib\AndroidManifest.xml:38:22-64
+uses-permission#android.permission.RECORD_VIDEO
+ADDED from F:\Mine\HuoSdkLib\AndroidManifest.xml:40:5-71
+	android:name
+		ADDED from F:\Mine\HuoSdkLib\AndroidManifest.xml:40:22-68
+uses-permission#android.permission.INTERACT_ACROSS_USERS_FULL
+ADDED from F:\Mine\HuoSdkLib\AndroidManifest.xml:41:5-85
+	android:name
+		ADDED from F:\Mine\HuoSdkLib\AndroidManifest.xml:41:22-82
+uses-permission#android.permission.READ_EXTERNAL_STORAGE
+ADDED from F:\Mine\HuoSdkLib\AndroidManifest.xml:42:5-80
+	android:name
+		ADDED from F:\Mine\HuoSdkLib\AndroidManifest.xml:42:22-77
+uses-permission#com.android.launcher.permission.INSTALL_SHORTCUT
+ADDED from F:\Mine\HuoSdkLib\AndroidManifest.xml:43:5-88
+	android:name
+		ADDED from F:\Mine\HuoSdkLib\AndroidManifest.xml:43:22-85
+uses-permission#com.android.permission.WRITE_APN_SETTINGS
+ADDED from F:\Mine\HuoSdkLib\AndroidManifest.xml:44:5-81
+	android:name
+		ADDED from F:\Mine\HuoSdkLib\AndroidManifest.xml:44:22-78
+application
+ADDED from F:\Mine\HuoSdkLib\AndroidManifest.xml:46:5-118:19
+activity#com.game.sdk.ui.WebPayActivity
+ADDED from F:\Mine\HuoSdkLib\AndroidManifest.xml:48:9-54:70
+	android:screenOrientation
+		ADDED from F:\Mine\HuoSdkLib\AndroidManifest.xml:52:13-47
+	android:launchMode
+		ADDED from F:\Mine\HuoSdkLib\AndroidManifest.xml:51:13-44
+	android:windowSoftInputMode
+		ADDED from F:\Mine\HuoSdkLib\AndroidManifest.xml:54:13-67
+	android:configChanges
+		ADDED from F:\Mine\HuoSdkLib\AndroidManifest.xml:50:13-85
+	android:theme
+		ADDED from F:\Mine\HuoSdkLib\AndroidManifest.xml:53:13-71
+	android:name
+		ADDED from F:\Mine\HuoSdkLib\AndroidManifest.xml:49:13-58
+activity#com.game.sdk.ui.FloatWebActivity
+ADDED from F:\Mine\HuoSdkLib\AndroidManifest.xml:56:9-61:70
+	android:screenOrientation
+		ADDED from F:\Mine\HuoSdkLib\AndroidManifest.xml:59:13-47
+	android:windowSoftInputMode
+		ADDED from F:\Mine\HuoSdkLib\AndroidManifest.xml:61:13-67
+	android:configChanges
+		ADDED from F:\Mine\HuoSdkLib\AndroidManifest.xml:58:13-85
+	android:theme
+		ADDED from F:\Mine\HuoSdkLib\AndroidManifest.xml:60:13-71
+	android:name
+		ADDED from F:\Mine\HuoSdkLib\AndroidManifest.xml:57:13-60
+activity#com.game.sdk.ui.HuoLoginActivity
+ADDED from F:\Mine\HuoSdkLib\AndroidManifest.xml:63:9-69:70
+	android:screenOrientation
+		ADDED from F:\Mine\HuoSdkLib\AndroidManifest.xml:67:13-47
+	android:launchMode
+		ADDED from F:\Mine\HuoSdkLib\AndroidManifest.xml:66:13-44
+	android:windowSoftInputMode
+		ADDED from F:\Mine\HuoSdkLib\AndroidManifest.xml:69:13-67
+	android:configChanges
+		ADDED from F:\Mine\HuoSdkLib\AndroidManifest.xml:65:13-85
+	android:theme
+		ADDED from F:\Mine\HuoSdkLib\AndroidManifest.xml:68:13-83
+	android:name
+		ADDED from F:\Mine\HuoSdkLib\AndroidManifest.xml:64:13-60
+activity#com.game.sdk.ui.WebViewActivity
+ADDED from F:\Mine\HuoSdkLib\AndroidManifest.xml:71:9-75:70
+	android:screenOrientation
+		ADDED from F:\Mine\HuoSdkLib\AndroidManifest.xml:74:13-47
+	android:windowSoftInputMode
+		ADDED from F:\Mine\HuoSdkLib\AndroidManifest.xml:75:13-67
+	android:configChanges
+		ADDED from F:\Mine\HuoSdkLib\AndroidManifest.xml:73:13-85
+	android:name
+		ADDED from F:\Mine\HuoSdkLib\AndroidManifest.xml:72:13-59
+service#com.game.sdk.HuosdkService
+ADDED from F:\Mine\HuoSdkLib\AndroidManifest.xml:77:9-62
+	android:name
+		ADDED from F:\Mine\HuoSdkLib\AndroidManifest.xml:77:18-59
+activity#com.game.applicaionid.wxapi.WXEntryActivity
+ADDED from F:\Mine\HuoSdkLib\AndroidManifest.xml:98:9-104:75
+	android:screenOrientation
+		ADDED from F:\Mine\HuoSdkLib\AndroidManifest.xml:103:13-49
+	android:label
+		ADDED from F:\Mine\HuoSdkLib\AndroidManifest.xml:102:13-54
+	android:exported
+		ADDED from F:\Mine\HuoSdkLib\AndroidManifest.xml:101:13-36
+	android:configChanges
+		ADDED from F:\Mine\HuoSdkLib\AndroidManifest.xml:100:13-74
+	android:theme
+		ADDED from F:\Mine\HuoSdkLib\AndroidManifest.xml:104:13-72
+	android:name
+		ADDED from F:\Mine\HuoSdkLib\AndroidManifest.xml:99:13-71
+activity#com.alipay.sdk.app.H5PayActivity
+ADDED from F:\Mine\HuoSdkLib\AndroidManifest.xml:105:9-111:70
+	android:screenOrientation
+		ADDED from F:\Mine\HuoSdkLib\AndroidManifest.xml:109:13-47
+	android:windowSoftInputMode
+		ADDED from F:\Mine\HuoSdkLib\AndroidManifest.xml:111:13-67
+	android:exported
+		ADDED from F:\Mine\HuoSdkLib\AndroidManifest.xml:108:13-37
+	android:configChanges
+		ADDED from F:\Mine\HuoSdkLib\AndroidManifest.xml:107:13-74
+	android:theme
+		ADDED from F:\Mine\HuoSdkLib\AndroidManifest.xml:110:13-71
+	android:name
+		ADDED from F:\Mine\HuoSdkLib\AndroidManifest.xml:106:13-60
+activity#com.switfpass.pay.activity.QQWapPayWebView
+ADDED from F:\Mine\HuoSdkLib\AndroidManifest.xml:112:9-116:86
+	android:screenOrientation
+		ADDED from F:\Mine\HuoSdkLib\AndroidManifest.xml:115:13-49
+	android:configChanges
+		ADDED from F:\Mine\HuoSdkLib\AndroidManifest.xml:114:13-85
+	android:theme
+		ADDED from F:\Mine\HuoSdkLib\AndroidManifest.xml:116:13-83
+	android:name
+		ADDED from F:\Mine\HuoSdkLib\AndroidManifest.xml:113:13-70

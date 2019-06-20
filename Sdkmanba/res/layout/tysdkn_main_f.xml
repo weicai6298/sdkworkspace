@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#00000000"
+    android:orientation="vertical"
+    >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#ffffff"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:id="@+id/tysdkn_main_f_close"
+                android:layout_width="18dp"
+                android:layout_height="18dp"
+                android:layout_centerVertical="true"
+                android:layout_margin="10dp"
+                android:src="@drawable/tysdkn_close"/>
+
+            <LinearLayout
+                android:id="@+id/tysdkn_main_f_d_root"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:gravity="center_horizontal"
+                android:orientation="vertical"
+                android:paddingRight="15dp"
+                android:visibility="invisible">
+
+                <com.sdk.tysdk.ui.anim.GifView
+                    android:id="@+id/tysdkn_main_f_gif"
+                    android:layout_width="13dp"
+                    android:layout_height="21dp"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="下载APP"
+                    android:textColor="#111111"
+                    android:textSize="12sp"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/tysdkn_main_f_name_e_root"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:layout_marginBottom="20dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/tysdkn_main_f_name_tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:textColor="#ff333333"
+                    android:textSize="20sp"
+                    tools:text="丹彤妙春LOL"/>
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginLeft="10dp"
+                    android:src="@drawable/tysdkn_name_e"/>
+            </LinearLayout>
+
+        </RelativeLayout>
+
+
+        <!--竖版布局-->
+        <include layout="@layout/tysdkn_main_top_layout"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30dp"
+            android:orientation="horizontal">
+
+            <GridView
+                android:id="@+id/tysdkn_main_f_gl"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:numColumns="4"
+                android:scrollbars="none"
+                android:verticalSpacing="18dp"/>
+            <!--横版布局-->
+            <include layout="@layout/tysdkn_main_right_layout"/>
+
+        </LinearLayout>
+
+    </LinearLayout>
+</LinearLayout>

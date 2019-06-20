@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="20dp"
+    >
+
+    <LinearLayout
+        android:id="@+id/popu_contentview"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:background="@drawable/sy233popup_bg"
+        android:fitsSystemWindows="true"
+        android:gravity="center_horizontal"
+        android:orientation="vertical">
+
+        <include layout="@layout/sy233activity_header"/>
+
+
+
+        <astuetz.PagerSlidingTabStrip
+            android:background="@color/sy233white"
+            android:id="@+id/pagertab_strip"
+            android:layout_width="match_parent"
+            android:layout_height="36dp"
+            app:pstsDividerColor="@android:color/transparent"
+            app:pstsIndicatorHeight="2dp"
+            app:pstsShouldExpand="true"
+            app:pstsTextAllCaps="false"
+            app:pstsTabBackground="@drawable/sy233default_select_bg"
+            app:pstsIndicatorColor="@color/sy233colorPrimary"
+            />
+
+        <android.support.v4.view.ViewPager
+            android:id="@+id/viewpager"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@color/sy233bg"
+            android:layout_gravity="center"/>
+
+    </LinearLayout>
+</FrameLayout>
+

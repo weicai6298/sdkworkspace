@@ -37,9 +37,9 @@
         layout="@layout/m4399_rec_sec_mcard_serial_psword_area"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/m4399_rec_gridview_vspacing"
         android:layout_marginLeft="@dimen/m4399_rec_paddingLeft"
         android:layout_marginRight="@dimen/m4399_rec_paddingLeft"
-        android:layout_marginBottom="@dimen/m4399_rec_gridview_vspacing"
         android:layout_marginTop="@dimen/m4399_rec_gridview_vspacing" />
 
     <LinearLayout
@@ -53,8 +53,8 @@
         <include
             layout="@layout/m4399_rec_sec_mvcenter_separator"
             android:layout_width="fill_parent"
-            android:layout_marginBottom="@dimen/spacing_normal"
-            android:layout_height="1dp" />
+            android:layout_height="1dp"
+            android:layout_marginBottom="@dimen/spacing_normal" />
 
         <include
             layout="@layout/m4399_rec_sec_single_btn_area"

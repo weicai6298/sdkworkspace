@@ -1,0 +1,211 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/pay_color_f2f2f2">
+
+    <ListView
+        android:id="@+id/PayKACListView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_margin="@dimen/size_5dp"
+        android:divider="@color/pay_color_f2f2f2"
+        android:dividerHeight="@dimen/size_3dp"
+        android:listSelector="@android:color/transparent"
+        android:scrollbars="none" />
+
+    <LinearLayout
+        android:id="@+id/payKACWeb"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/pay_color_ffffff"
+        android:orientation="vertical"
+        android:visibility="gone">
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/size_40dp"
+            android:background="@color/pay_color_008bea">
+
+            <TextView
+                android:id="@+id/payKACTitle"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="@dimen/size_50dp"
+                android:layout_marginRight="@dimen/size_50dp"
+                android:ellipsize="end"
+                android:gravity="center"
+                android:maxLines="1"
+                android:textColor="@color/pay_color_ffffff"
+                android:textSize="@dimen/size_15sp" />
+
+            <FrameLayout
+                android:id="@+id/payKACClose"
+                android:layout_width="@dimen/size_40dp"
+                android:layout_height="@dimen/size_40dp">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:background="@drawable/pay_btn_close" />
+            </FrameLayout>
+        </FrameLayout>
+
+        <WebView
+            android:id="@+id/payKACWebView"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/size_0dp"
+            android:layout_weight="1" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/payKACDetails"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/pay_color_ffffff"
+        android:orientation="vertical"
+        android:visibility="gone">
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/size_40dp"
+            android:background="@color/pay_color_008bea">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="@dimen/size_50dp"
+                android:layout_marginRight="@dimen/size_50dp"
+                android:ellipsize="end"
+                android:gravity="center"
+                android:maxLines="1"
+                android:text="@string/KAC"
+                android:textColor="@color/pay_color_ffffff"
+                android:textSize="@dimen/size_15sp" />
+
+            <FrameLayout
+                android:id="@+id/payKACDClose"
+                android:layout_width="@dimen/size_40dp"
+                android:layout_height="@dimen/size_40dp">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:background="@drawable/pay_btn_close" />
+            </FrameLayout>
+        </FrameLayout>
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/size_10dp"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/payKACDTitle"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:ellipsize="end"
+                    android:maxLines="1"
+                    android:textColor="@color/pay_color_333333"
+                    android:textSize="@dimen/size_15sp" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/size_5dp"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:text="@string/receiveTime"
+                        android:textColor="@color/pay_color_919191"
+                        android:textSize="@dimen/size_15sp" />
+
+                    <TextView
+                        android:id="@+id/payKACDRTime"
+                        android:layout_width="@dimen/size_0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:ellipsize="end"
+                        android:gravity="center_vertical"
+                        android:maxLines="2"
+                        android:textColor="@color/pay_color_919191"
+                        android:textSize="@dimen/size_15sp" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/size_5dp"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:text="@string/potLife"
+                        android:textColor="@color/pay_color_919191"
+                        android:textSize="@dimen/size_15sp" />
+
+                    <TextView
+                        android:id="@+id/payKACDPTime"
+                        android:layout_width="@dimen/size_0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:ellipsize="end"
+                        android:gravity="center_vertical"
+                        android:maxLines="2"
+                        android:textColor="@color/pay_color_919191"
+                        android:textSize="@dimen/size_15sp" />
+                </LinearLayout>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/size_15dp"
+                    android:ellipsize="end"
+                    android:maxLines="1"
+                    android:text="@string/ContainsItems"
+                    android:textColor="@color/pay_color_333333"
+                    android:textSize="@dimen/size_15sp" />
+
+                <TextView
+                    android:id="@+id/payKACD"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/size_5dp"
+                    android:textColor="@color/pay_color_919191"
+                    android:textSize="@dimen/size_15sp" />
+            </LinearLayout>
+        </ScrollView>
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/noKAC"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:text="@string/noKAC"
+        android:textColor="@color/pay_color_333333"
+        android:textSize="@dimen/size_15sp"
+        android:visibility="gone" />
+
+    <include
+        layout="@layout/progress"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_gravity="center" />
+
+    <include
+        layout="@layout/fail_load"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center" />
+</FrameLayout>

@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#ffffff"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="35dp"
+        android:layout_height="35dp"
+        android:layout_gravity="center">
+
+        <ImageView
+            android:id="@+id/tysdkn_main_f_item_iv"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_centerInParent="true"
+            tools:src="@drawable/tysdkn_m_1"/>
+
+        <ImageView
+            android:id="@+id/tysdkn_main_f_item_red"
+            android:layout_width="10dp"
+            android:layout_height="10dp"
+            android:layout_alignParentRight="true"
+            android:src="@drawable/tysdkn_red_p"
+            android:visibility="gone"
+            tools:visibility="visible"/>
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/tysdkn_main_f_item_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="6dp"
+        android:ellipsize="end"
+        android:maxLines="1"
+        android:textColor="#111111"
+        android:textSize="14sp"
+        tools:text="消息"/>
+</LinearLayout>

@@ -12,6 +12,7 @@ import org.apache.http.impl.client.DefaultHttpClient;
 import org.apache.http.message.BasicNameValuePair;
 import org.apache.http.protocol.HTTP;
 import org.apache.http.util.EntityUtils;
+import org.json.JSONException;
 import org.json.JSONObject;
 import android.Manifest;
 import android.annotation.SuppressLint;
@@ -40,6 +41,12 @@ import com.kkgame.sdkmain.KgameSdk;
 import com.kkgame.utils.DeviceUtil;
 import com.kkgame.utils.Handle;
 import com.kkgame.utils.JSONUtil;
+import com.lidroid.jxutils.HttpUtils;
+import com.lidroid.jxutils.exception.HttpException;
+import com.lidroid.jxutils.http.RequestParams;
+import com.lidroid.jxutils.http.ResponseInfo;
+import com.lidroid.jxutils.http.callback.RequestCallBack;
+import com.lidroid.jxutils.http.client.HttpRequest.HttpMethod;
 import com.muzhiwan.sdk.common.utils.CallbackCode;
 import com.muzhiwan.sdk.core.MzwSdkController;
 import com.muzhiwan.sdk.core.callback.MzwInitCallback;
@@ -136,7 +143,6 @@ public class YaYawanconstants {
 				public void onResult(int code, String msg) {
 					Log.i("tag","msg = "+msg);
 					if(code == 1){
-						Toast("登录成功");
 						HttpPost(msg);
 					}else if(code == 0){
 						Toast("登录失败");
@@ -480,50 +486,34 @@ paramActivity.runOnUiThread(new Runnable() {
 	 */
 	private static void HttpPost(final String sid) {
 		token = sid;
-		new Thread(new Runnable() {
+		HttpUtils httpUtil = new HttpUtils();
+		String url = "https://api.sdk.75757.com/data/get_uid/";
+		RequestParams requestParams = new RequestParams();
+		requestParams.addBodyParameter("app_id",DeviceUtil.getAppid(mActivity));
+		requestParams.addBodyParameter("code", sid);
+		httpUtil.send(HttpMethod.POST, url, requestParams,
+				new RequestCallBack<String>() {
 
-			@Override
-			public void run() {
-				try {
-					HttpPost httpPost = new HttpPost(
-							"https://api.sdk.75757.com/data/get_uid/");
-					List<NameValuePair> params = new ArrayList<NameValuePair>();
-					params.add(new BasicNameValuePair("app_id", DeviceUtil
-							.getAppid(mActivity)));
-					params.add(new BasicNameValuePair("code", sid));
-
-					Log.i("tag", "params=" + params);
-					try {
-						// 设置httpPost请求参数
-						httpPost.setEntity(new UrlEncodedFormEntity(params,
-								HTTP.UTF_8));
-						HttpResponse httpResponse = new DefaultHttpClient()
-								.execute(httpPost);
-						Log.i("tag",
-								"httpResponse.getStatusLine().getStatusCode()="
-										+ httpResponse.getStatusLine()
-												.getStatusCode());
-						if (httpResponse.getStatusLine().getStatusCode() == 200) {
-							String re = EntityUtils.toString(httpResponse
-									.getEntity());
-							Log.i("tag", "re=" + re);
-							JSONObject js = new JSONObject(re);
-							Log.i("tag", "js=" + js);
-							uid = js.getString("uid");
-							Log.i("tag", "uid=" + uid);
-							Log.i("tag", "token=" + token);
-							loginSuce(mActivity, uid, uid, token);
-							Toast("登录成功");
-						}
-
-					} catch (ClientProtocolException e) {
-						e.printStackTrace();
+					@Override
+					public void onFailure(HttpException arg0, String arg1) {
+						// TODO Auto-generated method stub
+						Yayalog.loger("请求失败"+arg1.toString());
 					}
 
-				} catch (Exception e) {
-					e.printStackTrace();
-				}
-			}
-		}).start();
+					@Override
+					public void onSuccess(ResponseInfo<String> arg0) {
+						// TODO Auto-generated method stub
+						try {
+							Yayalog.loger("请求成功"+arg0.result);
+							JSONObject obj = new JSONObject(arg0.result);
+							uid = obj.getString("uid");
+							Yayalog.loger("uid ="+uid);
+							loginSuce(mActivity, uid, uid, token);
+							Toast("登录成功");
+						} catch (JSONException e) {
+							e.printStackTrace();
+						}
+					}
+				});
 	}
 }

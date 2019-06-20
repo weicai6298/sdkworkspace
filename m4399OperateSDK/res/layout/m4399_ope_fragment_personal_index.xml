@@ -1,15 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    >
-
+    android:layout_height="match_parent">
 
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:background="#EEEEEE"
+        android:background="#ececec"
         android:focusableInTouchMode="true"
         android:orientation="vertical">
 
@@ -26,7 +24,7 @@
             android:indeterminate="false"
             android:progress="0" />
 
-        <ScrollView
+        <android.support.v4.widget.NestedScrollView
             android:id="@+id/scrollView1"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -38,7 +36,10 @@
                 android:layout_height="wrap_content"
                 android:orientation="vertical">
                 <!--账号信息、消息、礼包、官网-->
-                <include layout="@layout/m4399_ope_index_base_info" />
+                <cn.m4399.operate.ui.widget.HeadInfoView
+                    android:id="@+id/head_info_view"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
 
                 <View
                     android:layout_width="match_parent"
@@ -56,15 +57,27 @@
                     android:numColumns="@integer/m4399_ope_index_item_gv_number" />
 
                 <!--游戏动态-->
-                <include layout="@layout/m4399_ope_index_game_dynamic"
+                <include
                     android:id="@+id/index_dynamic"
+                    layout="@layout/m4399_ope_index_game_dynamic"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="1dp"/>
+                    android:layout_marginTop="1dp" />
+
+
+
+                <!--游戏圈-->
+                <cn.m4399.operate.ui.widget.GameCircleView
+                    android:layout_marginTop="1dp"
+                    android:id="@+id/circle_view"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                </cn.m4399.operate.ui.widget.GameCircleView>
 
                 <!--游戏视频-->
                 <RelativeLayout
-                    android:id="@+id/index_vedio_re"
+                    android:id="@+id/index_video_re"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="1dp"
@@ -79,12 +92,11 @@
                         android:layout_height="wrap_content"
                         android:layout_marginBottom="14dp"
                         android:layout_marginTop="14dp"
-                        android:text="@string/m4399_ope_game_vedios"
-                        android:textColor="#dd000000"
-                        android:textSize="14sp" />
+                        android:text="@string/m4399_ope_game_videos"
+                        style="@style/m4399IndexLabelTvStyle" />
 
                     <LinearLayout
-                        android:id="@+id/index_more_vedio"
+                        android:id="@+id/index_more_video"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_alignParentRight="true"
@@ -97,7 +109,7 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_marginRight="8dp"
-                            android:text="@string/m4399_ope_index_more_vedios"
+                            android:text="@string/m4399_ope_index_more_videos"
                             android:textColor="#89000000"
                             android:textSize="13sp" />
 
@@ -108,13 +120,13 @@
                     </LinearLayout>
 
                     <cn.m4399.operate.ui.widget.GridView4ScrollView
-                        android:id="@+id/index_vedio_gv"
+                        android:id="@+id/index_video_gv"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:layout_below="@id/index_more_vedio"
+                        android:layout_below="@id/index_more_video"
                         android:horizontalSpacing="8dp"
                         android:listSelector="@null"
-                        android:numColumns="@integer/m4399_ope_index_item_vedio_gv_number">
+                        android:numColumns="@integer/m4399_ope_index_item_video_gv_number">
 
 
                     </cn.m4399.operate.ui.widget.GridView4ScrollView>
@@ -122,7 +134,6 @@
                 </RelativeLayout>
                 <!--猜你喜欢-->
                 <RelativeLayout
-                    android:visibility="gone"
                     android:id="@+id/index_game_re"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
@@ -130,7 +141,8 @@
                     android:background="@color/m4399_ope_usercenter_white"
                     android:paddingBottom="18dp"
                     android:paddingLeft="@dimen/m4399_ope_index_margin"
-                    android:paddingRight="@dimen/m4399_ope_index_margin">
+                    android:paddingRight="@dimen/m4399_ope_index_margin"
+                    android:visibility="gone">
 
                     <TextView
                         android:id="@+id/index_guess_ulike"
@@ -140,8 +152,7 @@
                         android:layout_marginRight="8dp"
                         android:layout_marginTop="14dp"
                         android:text="@string/m4399_ope_guess_ulike"
-                        android:textColor="#dd000000"
-                        android:textSize="14sp" />
+                        style="@style/m4399IndexLabelTvStyle" />
 
                     <TextView
                         android:id="@+id/index_recommend_reason_tv"
@@ -197,9 +208,10 @@
             </LinearLayout>
 
 
-        </ScrollView>
+        </android.support.v4.widget.NestedScrollView>
 
     </LinearLayout>
+
     <ImageView
         android:id="@+id/index_share"
         android:layout_width="44dp"
@@ -207,5 +219,5 @@
         android:layout_alignParentBottom="true"
         android:layout_alignParentRight="true"
         android:layout_margin="12dp"
-        android:src="@drawable/m4399_ope_share"/>
+        android:src="@drawable/m4399_ope_share" />
 </RelativeLayout>

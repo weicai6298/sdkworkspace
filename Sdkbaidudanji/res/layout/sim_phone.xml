@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout 
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical"
+    android:background="@android:color/white">
+    <TextView 
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text="【联通】"
+        android:textColor="@color/feihong"
+        android:textSize="20sp"
+        android:paddingLeft="5dp"/>
+    <ListView 
+	    android:id="@+id/simListView"
+	    android:layout_width="fill_parent"
+	    android:layout_height="wrap_content"
+	    android:cacheColorHint="#00000000"
+	    android:drawSelectorOnTop="false"/>
+    <TextView 
+        android:id="@+id/txtAreaTip"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:textColor="@color/feihong"
+        android:textSize="18sp"
+        android:gravity="center"/>
+    <Button 
+        android:id="@+id/btnCU"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="进入联通"
+        android:visibility="gone"
+        android:textColor="@android:color/black"
+        android:textSize="18sp"
+        android:background="@drawable/btn_tip_click_bg"
+        android:gravity="center"/>
+    <TextView 
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:text="【移动、电信】"
+        android:textColor="@color/feihong"
+        android:textSize="20sp"
+        android:paddingLeft="5dp"/>
+    <Button 
+        android:id="@+id/btnNormal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="正常进入"
+        android:textColor="@android:color/black"
+        android:textSize="18sp"
+        android:background="@drawable/btn_tip_click_bg"
+        android:gravity="center"/>
+</LinearLayout>
+
+

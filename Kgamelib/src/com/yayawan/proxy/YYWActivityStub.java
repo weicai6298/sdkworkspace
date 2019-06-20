@@ -1,11 +1,14 @@
 package com.yayawan.proxy;
 
 import android.app.Activity;
+import android.content.Context;
 import android.content.Intent;
+
 
 public interface YYWActivityStub {
 
     public abstract void applicationInit(Activity paramActivity);
+    
 
     public abstract void onCreate(Activity paramActivity);
     
@@ -24,7 +27,15 @@ public interface YYWActivityStub {
     public abstract void applicationDestroy(Activity paramActivity);
 
     public abstract void onActivityResult(Activity paramActivity, int paramInt1, int paramInt2, Intent paramIntent);
-
     public abstract void onNewIntent(Intent paramIntent);
     public abstract void initSdk(Activity paramActivity);
+   
+    public abstract void launchActivityOnCreate(Activity paramActivity);
+    public abstract void launchActivityonOnNewIntent(Intent paramIntent);
+    public abstract void onRequestPermissionsResult(int requestCode, String[] permissions, int[] grantResults);
+
+    
+    public abstract void onBackPressed();
+    public abstract void attachBaseContext(Context newBase);
+    public abstract void onConfigurationChanged();
 }

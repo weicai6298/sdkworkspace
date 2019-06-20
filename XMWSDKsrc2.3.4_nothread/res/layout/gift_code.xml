@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/ll_gift"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/appWhite"
+    android:gravity="center_horizontal"
+    android:orientation="vertical" 
+    android:layout_marginBottom="5dp">
+
+    <TextView
+        android:id="@+id/tv_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:drawableLeft="@drawable/xmw_ic_success"
+        android:drawablePadding="10dp"
+        android:text="淘号成功"
+        android:textColor="@color/xmw_c_black"
+        android:textSize="20sp" 
+        android:textStyle="bold"
+        android:layout_marginTop="30dp"/>
+
+    <TextView
+        android:id="@+id/tv_content"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="恭喜您成功领取到游戏礼包，礼包请在游戏中使用，如有疑问请随时联系客服" 
+        android:textColor="@color/xmw_c_black"
+        android:textSize="16sp"
+        android:maxWidth="350dp"
+        android:layout_marginTop="15dp"
+        android:layout_marginBottom="15dp"
+        android:layout_marginLeft="30dp"
+        android:layout_marginRight="30dp"/>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="35dp"
+        android:orientation="horizontal"
+        android:gravity="center">
+
+	    <TextView
+	        android:id="@+id/tv_code"
+	        android:layout_width="200dp"
+	        android:layout_height="wrap_content"
+	        android:background="@drawable/xmw_c_corner_gray_new"
+	        android:padding="10dp"
+	        android:text="12345678901234567"
+	        android:textColor="@color/xmw_c_black2"/>
+	    <Button 
+            android:id="@+id/btn_copy"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:text="复制"
+            android:textSize="15sp"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            android:paddingTop="5dp"
+            android:paddingBottom="5dp"
+            android:textColor="@color/appWhite"
+            android:background="@drawable/xmw_corner_blue"/>
+    </LinearLayout>
+
+    <RelativeLayout
+        android:id="@+id/tv_change"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/xmw_light_button" 
+        android:layout_marginTop="20dp">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:gravity="center"
+            android:paddingLeft="30dp"
+            android:paddingRight="30dp"
+            android:paddingTop="10dp"
+            android:paddingBottom="10dp"
+            android:text="再淘一次"
+            android:textColor="@color/appBlack"
+            android:textSize="@dimen/xmw_c_title" />
+    </RelativeLayout>
+
+</LinearLayout>

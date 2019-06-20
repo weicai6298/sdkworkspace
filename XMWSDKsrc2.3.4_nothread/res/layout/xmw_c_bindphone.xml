@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/bindphone_view"
+    android:layout_width="300dp"
+    android:layout_height="wrap_content"
+    android:layout_gravity="center"
+    android:background="@drawable/xmw_corner_login_bg"
+    android:gravity="center"
+    android:orientation="vertical"
+    android:visibility="gone" >
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@color/xmw_theme_color" >
+
+        <LinearLayout
+            android:id="@+id/xmw_bind_back"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:orientation="horizontal" >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="12dp"
+                android:background="@drawable/xmw_ic_back" />
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="@string/xmw_c_binphone_01"
+            android:textColor="@color/appBlack"
+            android:textSize="20sp" />
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:paddingLeft="18dp"
+        android:paddingRight="18dp" >
+
+        <com.xmwsdk.view.XmwEditText
+            android:id="@+id/xmw_bind_et1"
+            android:layout_width="match_parent"
+            android:layout_height="38dp"
+            android:layout_marginTop="18dp"
+            android:background="@drawable/xmw_corner_white_gray"
+            android:hint="@string/xmw_c_binphone_02"
+            android:inputType="number"
+            android:maxLength="11"
+            android:paddingLeft="3dp"
+            android:textColor="@color/appWhite"
+            android:textColorHint="@color/con_black"
+            android:textSize="16sp"
+            android:visibility="visible" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:orientation="horizontal" >
+
+            <com.xmwsdk.view.XmwEditText
+                android:id="@+id/xmw_bind_et2"
+                android:layout_width="0dp"
+                android:layout_height="38dp"
+                android:layout_marginRight="9dp"
+                android:layout_weight="1"
+                android:background="@drawable/xmw_corner_white_gray"
+                android:hint="@string/xmw_c_binphone_03"
+                android:inputType="number"
+                android:maxLength="11"
+                android:paddingLeft="3dp"
+                android:textColor="@color/appWhite"
+                android:textColorHint="@color/con_black"
+                android:textSize="16sp" />
+
+            <Button
+                android:id="@+id/xmw_bind_getcode"
+                android:layout_width="91dp"
+                android:layout_height="42dp"
+                android:background="@drawable/xmw_corner_blue"
+                android:gravity="center"
+                android:text="@string/xmw_c_binphone_04"
+                android:textColor="@color/appWhite"
+                android:textSize="15sp" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <RelativeLayout
+        android:id="@+id/xmw_bind_btn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="15dp"
+        android:layout_marginLeft="18dp"
+        android:layout_marginRight="18dp"
+        android:layout_marginTop="15dp"
+        android:background="@drawable/xmw_light_button" >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:gravity="center"
+            android:padding="10dp"
+            android:text="@string/xmw_c_binphone_05"
+            android:textColor="@color/appBlack"
+            android:textSize="15sp" />
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="5dp"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
+        android:layout_marginTop="10dp"
+        android:gravity="center_vertical"
+        android:orientation="horizontal" >
+
+        <View
+            android:layout_width="0dp"
+            android:layout_height="1dp"
+            android:layout_weight="1"
+            android:background="@drawable/xmw_common_divider" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/xmw_c_binphone_06"
+            android:textColor="@color/appDarkGrey"
+            android:textSize="12sp" />
+
+        <View
+            android:layout_width="0dp"
+            android:layout_height="1dp"
+            android:layout_weight="1"
+            android:background="@drawable/xmw_common_divider" />
+    </LinearLayout>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="3dp"
+        android:text="@string/xmw_c_binphone_07"
+        android:textColor="@color/appDarkGrey"
+        android:textSize="12sp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="10dp"
+        android:text="@string/xmw_c_binphone_08"
+        android:textColor="@color/appDarkGrey"
+        android:textSize="12sp" />
+
+</LinearLayout>

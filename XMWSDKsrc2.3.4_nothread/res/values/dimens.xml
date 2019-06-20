@@ -1,0 +1,27 @@
+<resources>
+
+    <!-- Default screen margins, per the Android Design guidelines. -->
+    <dimen name="xmw_activity_horizontal_margin">16dp</dimen>
+    <dimen name="xmw_activity_vertical_margin">16dp</dimen>
+    <dimen name="xmw_tv_text_size">16.0sp</dimen>
+    <dimen name="xmw_btn_text_size">18.0sp</dimen>
+    <dimen name="xmw_title_text_size">20.0sp</dimen>
+    <dimen name="xmw_warning_text_size">22.0sp</dimen>
+    <dimen name="xmw_terms_title_size">22.0sp</dimen>
+    <dimen name="xmw_back_margin_left">10.0dip</dimen>
+    <dimen name="xmw_layout_margin">20.0dip</dimen>
+    
+    <dimen name="xmw_text_size_16">10.7sp</dimen>
+    <dimen name="xmw_text_size_18">12sp</dimen>
+    <dimen name="xmw_text_size_20">13.3sp</dimen>
+    <dimen name="xmw_text_size_22">14.7sp</dimen>
+    <dimen name="xmw_text_size_24">16sp</dimen>
+    <dimen name="xmw_text_size_26">17.3sp</dimen>
+    <dimen name="xmw_text_size_28">18.6sp</dimen>
+    <dimen name="xmw_text_size_30">20sp</dimen>
+    <dimen name="xmw_text_size_32">24sp</dimen>
+    
+    <dimen name="xmw_c_title">17.5sp</dimen>
+    <dimen name="xmw_c_content">13sp</dimen>
+    <dimen name="xmw_c_button">15sp</dimen>
+</resources>

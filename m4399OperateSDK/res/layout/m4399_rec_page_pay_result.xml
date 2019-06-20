@@ -2,7 +2,7 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     style="@style/m4399RecPageStyle"
     android:layout_width="match_parent"
-    android:layout_height="match_parent" >
+    android:layout_height="match_parent">
 
 
     <cn.m4399.recharge.ui.widget.RechargeNavBarView
@@ -11,81 +11,88 @@
         android:layout_height="@dimen/m4399_rec_title_height" />
 
     <LinearLayout
-        android:layout_centerInParent="true"
-        android:orientation="vertical"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content">
-
-
-
-
-    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginLeft="30dp"
-        android:layout_marginRight="30dp"
-        android:gravity="center_horizontal|bottom"
-        android:orientation="vertical" >
+        android:layout_below="@id/nav"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:orientation="vertical">
 
-        <ImageView
-            android:id="@+id/pay_result_img"
-            android:layout_width="50dp"
-            android:layout_height="50dp"/>
+        <include layout="@layout/m4399_rec_page_pay_result_top" />
 
-        <TextView
-            android:id="@+id/pay_result"
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginBottom="20dp"
+            android:layout_marginTop="20dp"
+            android:background="#e6e6e6" />
+
+
+        <LinearLayout
+            android:id="@+id/pay_result_product"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="14dp"
-            android:gravity="center"
-            android:lineSpacingExtra="2dp"
-            android:lineSpacingMultiplier="1"
-            android:textColor="#36c100"
-            android:textSize="16sp" />
-    </LinearLayout>
+            android:layout_marginBottom="10dp"
+            android:orientation="horizontal">
 
-    <TextView
-        android:visibility="gone"
-        android:id="@+id/warm_tip"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginLeft="@dimen/m4399_rec_paddingLeft"
-        android:layout_marginRight="@dimen/m4399_rec_paddingLeft"
-        android:layout_marginTop="8dp"
-        android:gravity="center"
-        android:text="@string/m4399_rec_result_on_process"
-        android:textColor="#999999"
-        android:textSize="13sp" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="物品名："
+                android:textColor="#999999"
+                android:textSize="14sp" />
 
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:layout_marginLeft="@dimen/m4399_rec_paddingLeft"
-        android:layout_marginRight="@dimen/m4399_rec_paddingLeft"
-        android:layout_marginTop="4dp"
-        android:layout_weight="3.5"
-        android:gravity="center_horizontal|top"
-        android:orientation="horizontal" >
+            <TextView
+                android:id="@+id/product_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="圣诞特惠大礼包~！"
+                android:textColor="#666666"
+                android:textSize="14sp" />
 
-        <include
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/pay_result_order_num"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            layout="@layout/m4399_rec_result_order_area" />
-    </LinearLayout>
+            android:layout_marginBottom="10dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="订单号："
+                android:textColor="#999999"
+                android:textSize="14sp" />
+
+            <TextView
+                android:id="@+id/pay_eorder"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="123464"
+                android:textColor="#666666"
+                android:textSize="14sp" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/pay_result_warm"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+
+            <TextView
+                android:id="@+id/warm_tip"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/m4399_rec_result_on_process"
+                android:textColor="#bbbbbb"
+                android:textSize="13sp" />
+        </LinearLayout>
     </LinearLayout>
 
-    <Button
-        android:layout_alignParentBottom="true"
-        android:id="@+id/close_btn"
-        style="?android:attr/buttonStyle"
-        android:layout_width="fill_parent"
-        android:layout_height="@dimen/m4399_rec_sum_btns_eara_height"
-        android:background="@drawable/m4399_rec_right_btn_bg"
-        android:text="@string/m4399_rec_ins_close"
-        android:textColor="@color/m4399_rec_color_white"
-        android:layout_marginLeft="@dimen/m4399_rec_page_margin"
-        android:layout_marginRight="@dimen/m4399_rec_page_margin"
-        android:layout_marginBottom="5dp"
-        android:textSize="18sp" />
+    <include layout="@layout/m4399_rec_common_bottom_help" />
 
 </RelativeLayout>

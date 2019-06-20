@@ -1,189 +1,174 @@
 <?xml version="1.0" encoding="utf-8"?>
 
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-              android:orientation="vertical"
-              android:layout_width="match_parent"
-              android:layout_height="wrap_content"
-              android:padding="@dimen/dp52"
-        >
+    android:id="@+id/ll_show"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="@dimen/dp52">
 
     <RelativeLayout
-            android:layout_width="fill_parent"
-            android:layout_height="@dimen/dp117"
-            android:gravity="center_vertical"
-            android:background="@drawable/papasdk_papalogin_editback"
-            >
+        android:layout_width="fill_parent"
+        android:layout_height="@dimen/dp117"
+        android:background="@drawable/papasdk_papalogin_editback"
+        android:gravity="center_vertical">
 
         <AutoCompleteTextView
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:id="@+id/username"
-                android:paddingLeft="@dimen/dp150"
-                android:textSize="@dimen/sp40"
-                android:textColorHint="#c4c4c4"
-                android:hint="悟饭账号/手机账号/昵称"
-                android:textColor="#3c3c3c"
-                android:layout_centerVertical="true"
-                android:gravity="center_vertical"
-                android:background="#00000000"
-                android:singleLine="true"
-                android:imeOptions="actionNext"
-                android:dropDownSelector="#ffffff"
-                android:enabled="false"
-                />
+            android:id="@+id/username"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_centerVertical="true"
+            android:background="#00000000"
+            android:dropDownSelector="#ffffff"
+            android:enabled="false"
+            android:gravity="center_vertical"
+            android:hint="悟饭账号/手机账号/昵称"
+            android:imeOptions="actionNext"
+            android:paddingLeft="@dimen/dp150"
+            android:singleLine="true"
+            android:textColor="#3c3c3c"
+            android:textColorHint="#c4c4c4"
+            android:textSize="@dimen/sp40" />
 
         <ImageView
-                android:layout_width="@dimen/dp57"
-                android:layout_height="wrap_content"
-                android:id="@+id/userIcon"
-                android:src="@drawable/papasdk_papalogin_tourist_icon"
-                android:layout_centerVertical="true"
-                android:layout_marginLeft="@dimen/dp36"
-                />
+            android:id="@+id/userIcon"
+            android:layout_width="@dimen/dp57"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/dp36"
+            android:src="@drawable/papasdk_papalogin_tourist_icon" />
 
         <TextView
-                android:layout_width="@dimen/dp1"
-                android:layout_height="@dimen/dp52"
-                android:text="New Text"
-                android:id="@+id/textView"
-                android:background="#c4c4c4"
-                android:layout_toRightOf="@+id/userIcon"
-                android:layout_alignWithParentIfMissing="false"
-                android:layout_centerVertical="true"
-                android:layout_marginLeft="@dimen/dp36"
-                />
+            android:id="@+id/textView"
+            android:layout_width="@dimen/dp1"
+            android:layout_height="@dimen/dp52"
+            android:layout_alignWithParentIfMissing="false"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/dp36"
+            android:layout_toRightOf="@+id/userIcon"
+            android:background="#c4c4c4"
+            android:text="New Text" />
 
         <ImageView
-                android:layout_width="wrap_content"
-                android:layout_height="match_parent"
-                android:id="@+id/moreUser"
-                android:layout_centerVertical="true"
-                android:layout_alignParentRight="true"
-                android:padding="@dimen/dp37"
-                android:src="@drawable/papasdk_more_user_butn"
+            android:id="@+id/moreUser"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:padding="@dimen/dp37"
+            android:src="@drawable/papasdk_more_user_butn"
 
-                />
+            />
 
     </RelativeLayout>
 
-   <!-- <RelativeLayout
-            android:layout_width="fill_parent"
-            android:layout_height="@dimen/dp117"
-            android:layout_marginTop="@dimen/dp57"
-            android:gravity="center_vertical"
-            android:background="@drawable/papalogin_editback"
-            android:id="@+id/relativeLayout"
-            >
+    <!-- <RelativeLayout
+             android:layout_width="fill_parent"
+             android:layout_height="@dimen/dp117"
+             android:layout_marginTop="@dimen/dp57"
+             android:gravity="center_vertical"
+             android:background="@drawable/papalogin_editback"
+             android:id="@+id/relativeLayout"
+             >
 
-        <EditText
-                android:layout_width="@dimen/dp750"
-                android:layout_height="match_parent"
-                android:id="@+id/passEdit"
-                android:paddingLeft="@dimen/dp150"
-                android:textSize="@dimen/sp40"
-                android:textColorHint="#c4c4c4"
-                android:hint="请输入密码"
-                android:textColor="#3c3c3c"
-                android:layout_centerVertical="true"
-                android:background="#00000000"
-                android:gravity="center_vertical"
-                android:inputType="textPassword"
-                android:singleLine="true"
-                android:imeOptions="actionDone"
-                android:maxLength="16"
-                />
+         <EditText
+                 android:layout_width="@dimen/dp750"
+                 android:layout_height="match_parent"
+                 android:id="@+id/passEdit"
+                 android:paddingLeft="@dimen/dp150"
+                 android:textSize="@dimen/sp40"
+                 android:textColorHint="#c4c4c4"
+                 android:hint="请输入密码"
+                 android:textColor="#3c3c3c"
+                 android:layout_centerVertical="true"
+                 android:background="#00000000"
+                 android:gravity="center_vertical"
+                 android:inputType="textPassword"
+                 android:singleLine="true"
+                 android:imeOptions="actionDone"
+                 android:maxLength="16"
+                 />
 
-        <ImageView
-                android:layout_width="@dimen/dp57"
-                android:layout_height="wrap_content"
-                android:id="@+id/imageView"
-                android:src="@drawable/papalogin_passicon"
-                android:layout_centerVertical="true"
-                android:layout_marginLeft="@dimen/dp36"
-                />
+         <ImageView
+                 android:layout_width="@dimen/dp57"
+                 android:layout_height="wrap_content"
+                 android:id="@+id/imageView"
+                 android:src="@drawable/papalogin_passicon"
+                 android:layout_centerVertical="true"
+                 android:layout_marginLeft="@dimen/dp36"
+                 />
 
-        <TextView
-                android:layout_width="@dimen/dp1"
-                android:layout_height="@dimen/dp52"
-                android:text="New Text"
-                android:id="@+id/textView2"
-                android:background="#c4c4c4"
-                android:layout_toRightOf="@+id/imageView"
-                android:layout_alignWithParentIfMissing="false"
-                android:layout_centerVertical="true"
-                android:layout_marginLeft="@dimen/dp36"
-                />
+         <TextView
+                 android:layout_width="@dimen/dp1"
+                 android:layout_height="@dimen/dp52"
+                 android:text="New Text"
+                 android:id="@+id/textView2"
+                 android:background="#c4c4c4"
+                 android:layout_toRightOf="@+id/imageView"
+                 android:layout_alignWithParentIfMissing="false"
+                 android:layout_centerVertical="true"
+                 android:layout_marginLeft="@dimen/dp36"
+                 />
 
-        <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="match_parent"
-                android:id="@+id/forgetPass"
-                android:layout_centerVertical="true"
-                android:layout_alignParentRight="true"
-                android:padding="@dimen/dp25"
-                android:src="@drawable/more_user_butn"
-                android:text="忘记密码？"
-                android:textColor="#f9a435"
-                android:gravity="center_vertical"
+         <TextView
+                 android:layout_width="wrap_content"
+                 android:layout_height="match_parent"
+                 android:id="@+id/forgetPass"
+                 android:layout_centerVertical="true"
+                 android:layout_alignParentRight="true"
+                 android:padding="@dimen/dp25"
+                 android:src="@drawable/more_user_butn"
+                 android:text="忘记密码？"
+                 android:textColor="#f9a435"
+                 android:gravity="center_vertical"
 
-                />
-    </RelativeLayout>-->
+                 />
+     </RelativeLayout>-->
 
     <LinearLayout
-            android:orientation="horizontal"
-            android:layout_width="fill_parent"
-            android:layout_height="@dimen/dp117"
-            android:layout_marginTop="@dimen/dp57"
-            >
-
+        android:layout_width="fill_parent"
+        android:layout_height="@dimen/dp117"
+        android:layout_marginTop="@dimen/dp57"
+        android:orientation="horizontal">
 
 
         <Button
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="进入游戏"
-                android:id="@+id/login"
-                android:layout_weight="1"
-                android:background="@drawable/papasdk_papalogin_redbutn_seleter"
-                android:textColor="@android:color/white"
-                android:textSize="@dimen/sp46"
-                />
+            android:id="@+id/login"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@drawable/papasdk_papalogin_redbutn_seleter"
+            android:text="进入游戏"
+            android:textColor="@android:color/white"
+            android:textSize="@dimen/sp46" />
     </LinearLayout>
 
     <LinearLayout
-            android:orientation="horizontal"
-            android:layout_width="fill_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="@dimen/dp57"
-            android:id="@+id/zz"
-            >
+        android:id="@+id/zz"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dp57"
+        android:orientation="horizontal">
 
-        <FrameLayout android:layout_width="wrap_content" android:layout_height="wrap_content"
-                      android:orientation="horizontal"
-                      android:layout_weight="1"
-                      android:gravity="center_vertical"
-                >
+        <FrameLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
 
             <Button
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:id="@+id/textView3"
-                    android:background="@drawable/papasdk_papalogin_type_bg"
-                    android:layout_gravity="right"
-                    /><!--#616161-->
-
-
+                android:id="@+id/textView3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="right"
+                android:background="@drawable/papasdk_papalogin_type_bg" /><!--#616161-->
 
 
         </FrameLayout>
 
 
-
-
-
     </LinearLayout>
-
-
 
 
 </LinearLayout>

@@ -10,12 +10,14 @@
     <color name="sogou_game_sdk_login_title_font_bg">#353535</color>
     <color name="sogou_game_sdk_pay_left_side_font_color_s">#FFFFFF</color>
     <color name="sogou_game_sdk_pay_left_side_font_color_d">#5c5c5c</color>
+    <color name="sogo_game_sdk_phone_register_captcha_color_c5c5c5">#c5c5c5</color>
     <color name="sogou_game_sdk_pay_left_side_bg_color">#F0F0F0</color>
     <color name="sogou_game_sdk_pay_left_side_bg_s">#c3322c</color>
     <color name="sogou_game_sdk_pay_left_side_bg">#f2f2f2</color>
     <color name="sogou_game_sdk_pay_record_main_font">#696969</color>
     <color name="sogou_game_sdk_pay_links_feedback_red_color">#C13127</color>
     <color name="sogou_game_sdk_reg_select_tabs_font_color">#D43327</color>
+    <color name="sogo_game_sdk_phone_login_error">#ff0000</color>
     <color name="sogou_game_sdk_reg_unselect_tabs_font_color">#828282</color>
     <color name="sogou_game_sdk_main_background_color">#ECECEC</color>
     <color name="sogou_game_sdk_font_red">#D11301</color>
@@ -49,6 +51,8 @@
     <color name="sogou_game_sdk_color_555555">#555555</color>
     <color name="sogou_game_sdk_color_bbbbbb">#bbbbbb</color>
     <color name="sogou_game_sdk_color_eeeeee">#eeeeee</color>
+    <color name="sogou_game_sdk_color_e9e9e9">#e9e9e9</color>
+    <color name="sogou_game_sdk_color_adadad">#adadad</color>
 
     <color name="sogou_game_sdk_color_df913c">#DF913C</color>
 
@@ -79,4 +83,5 @@
     
     <color name="sogou_game_sdk_download_progress">#6ee761</color>
     <color name="sogou_game_sdk_download_indeterminate">#eeeeee</color>
+    <color name="sogo_game_sdk_phone_login_succ_mess">#bfbfbf</color>
 </resources>

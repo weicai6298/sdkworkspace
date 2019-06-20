@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/cashier_desk"
+    android:layout_width="280dp"
+    android:layout_height="wrap_content"
+    android:layout_centerInParent="true"
+    android:background="@drawable/kwai_pay_bg"
+    android:clickable="true"
+    android:visibility="gone">
+
+    <TextView
+        android:id="@+id/subject"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="16dp"
+        android:gravity="center"
+        android:singleLine="true"
+        android:textColor="#1A1839"
+        android:textSize="16sp" />
+
+    <TextView
+        android:id="@+id/money"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/subject"
+        android:layout_centerHorizontal="true"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="9dp"
+        android:singleLine="true"
+        android:textColor="#FF9000"
+        android:textSize="36sp" />
+
+
+    <LinearLayout
+        android:id="@+id/provider_container"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/money"
+        android:layout_marginTop="27.5dp"
+        android:orientation="vertical" />
+
+
+    <TextView
+        android:id="@+id/pay_btn"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_below="@id/provider_container"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginTop="16dp"
+        android:background="@drawable/kwai_pay_btn_background"
+        android:gravity="center"
+        android:text="@string/gateway_pay"
+        android:textColor="@drawable/kwai_pay_text_background"
+        android:textSize="16sp" />
+
+    <View
+        android:layout_width="wrap_content"
+        android:layout_height="20dp"
+        android:layout_below="@id/pay_btn"></View>
+
+</RelativeLayout>

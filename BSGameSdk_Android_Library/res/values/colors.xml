@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <color name="bsgamesdk_transparent">#00000000</color>
+    <color name="bsgamesdk_main_bg">#ff1f1f23</color>
+    <color name="bsgamesdk_text_color">#ffc1c1c1</color>
+    <color name="bsgamesdk_text_title_color">#ff23aee5</color>
+    <color name="bsgamesdk_text_info_color">#ff7e7e7e</color>
+    <color name="bsgamesdk_text_name_color">#ff414141</color>
+    <color name="bsgamesdk_ToastTextColorWhite">#ffffffff</color>
+    <color name="bsgamesdk_white">#ffffffff</color>
+    <color name="bsgamesdk_ToastBgColor">#ff424242</color>
+    <color name="bsgamesdk_thin_color">#ff999999</color>
+    <color name="bsgamesdk_btn_color">#ff333333</color>
+    <color name="bsgamesdk_trans_color">#90000000</color>
+    <color name="bsgamesdk_title_bar">#ff3c444e</color>
+    <color name="bsgamesdk_service_text_color">#c4e22e</color>
+    <color name="bsgamesdk_gray">#ff808080</color>
+    <color name="bsgamesdk_screen_bg_color">#ffeaeaea</color>
+    <color name="bsgamesdk_custom_dialog_bg">#ff202125</color>
+    <color name="bsgamesdk_test_color">#ff0EA913</color>
+    <color name="bsgamesdk_text_agree_color">#ff979797</color>
+    <color name="bsgamesdk_text_reg_color">#ff23ade5</color>
+
+     <color name="bsgamesdk_dc_transparent">#00000000</color>
+    <color name="bsgamesdk_dc_thin_color">#ff999999</color>
+    <color name="bsgamesdk_dc_text_anti_color">#CC000000</color>
+    <color name="bsgamesdk_dc_themeone_text_title_color">#ffce7590</color>
+    <color name="bsgamesdk_dc_text_color">#ffcccccc</color>
+    <color name="bsgamesdk_dc_btn_color">#ff333333</color>
+    <color name="bsgamesdk_dc_text_title_color">#ff23aee5</color>
+    <color name="bsgamesdk_dc_text_info_color">#ff7e7e7e</color>
+    <color name="bsgamesdk_dc_main_bg">#ff1f1f23</color>
+</resources>

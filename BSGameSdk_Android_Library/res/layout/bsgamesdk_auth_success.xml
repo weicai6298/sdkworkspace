@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingTop="20dp"
+    android:orientation="vertical">
+<TextView
+    style="?attr/bsgamesdk_info_text_style"
+    android:textSize="16sp"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:text="@string/bsgamesdk_authentication_success"/>
+
+    <Button
+        android:id="@+id/bagamesdk_auth_success_comfirm"
+        android:layout_marginTop="50dp"
+        style="?attr/bsgamesdk_confirm_button_style"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/bsgamesdk_determine"/>
+</LinearLayout>

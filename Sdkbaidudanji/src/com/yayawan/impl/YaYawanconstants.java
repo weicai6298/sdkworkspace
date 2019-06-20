@@ -55,7 +55,6 @@ public class YaYawanconstants {
 
 			@Override
 			public void onResponse(String paramString) {
-				// TODO Auto-generated method stub
 				Log.d("GameMainActivity", paramString);
 				try {
 					JSONObject jsonObject = new JSONObject(paramString);
@@ -71,7 +70,6 @@ public class YaYawanconstants {
 						initAds();
 					}
 				} catch (Exception e) {
-					// TODO: handle exception
 				}
 			}
 
@@ -99,6 +97,7 @@ public class YaYawanconstants {
 			@Override
 			public void onResponse(String paramString) {
 				Log.d("GameMainActivity","bggameInit success");
+				Log.i("tag","bggameInit success");
 			}
 		});
 	}
@@ -107,8 +106,6 @@ public class YaYawanconstants {
 	 * application初始化
 	 */
 	public static void applicationInit(Context applicationContext) {
-		// TODO Auto-generated method stub
-		//		DKPlatform.getInstance().invokeBDInitApplication(mActivity);
 	}
 
 	/**
@@ -317,7 +314,7 @@ public class YaYawanconstants {
 					paySuce();
 					code = "";
 					Log.i("tag","支付成功1");
-					//					Toast.makeText(mActivity, "道具购买成功!\n金额:"+mOrderPrice+"元", Toast.LENGTH_LONG).show();
+//										Toast.makeText(mActivity, "道具购买成功!\n金额:"+mOrderPrice+"元", Toast.LENGTH_LONG).show();
 
 					DemoRecordData data = new DemoRecordData(mOrderProductId, mOrderPrice, propsType, String.valueOf(mNum));
 					DemoDBDao.getInstance(mActivity).updateRechargeRecord(data);
@@ -328,7 +325,7 @@ public class YaYawanconstants {
 					code = "";
 					Log.i("tag","支付失败1");
 
-					//					Toast.makeText(mActivity, "用户透传数据不合法", Toast.LENGTH_LONG).show();
+//										Toast.makeText(mActivity, "用户透传数据不合法", Toast.LENGTH_LONG).show();
 
 				}else if(mStatusCode == DkErrorCode.BDG_RECHARGE_ACTIVITY_CLOSED){
 
@@ -337,7 +334,7 @@ public class YaYawanconstants {
 					payFail();
 					code = "";
 					Log.i("tag","支付失败1");
-					//					Toast.makeText(mActivity, "玩家关闭支付中心", Toast.LENGTH_LONG).show();
+//										Toast.makeText(mActivity, "玩家关闭支付中心", Toast.LENGTH_LONG).show();
 
 				}else if(mStatusCode == DkErrorCode.BDG_RECHARGE_FAIL){ 
 					if(jsonObject.has(DkProtocolKeys.BD_ORDER_ID)){			
@@ -348,7 +345,7 @@ public class YaYawanconstants {
 					payFail();
 					code = "";
 					Log.i("tag","支付失败1");
-					//					Toast.makeText(mActivity, "购买失败", Toast.LENGTH_LONG).show();
+//										Toast.makeText(mActivity, "购买失败", Toast.LENGTH_LONG).show();
 
 				} else if(mStatusCode == DkErrorCode.BDG_RECHARGE_EXCEPTION){ 
 
@@ -357,7 +354,7 @@ public class YaYawanconstants {
 					payFail();
 					code = "";
 					Log.i("tag","支付失败1");
-					//					Toast.makeText(mActivity, "购买出现异常", Toast.LENGTH_LONG).show();
+//										Toast.makeText(mActivity, "购买出现异常", Toast.LENGTH_LONG).show();
 
 				} else if(mStatusCode == DkErrorCode.BDG_RECHARGE_CANCEL){ 
 
@@ -366,14 +363,14 @@ public class YaYawanconstants {
 					payFail();
 					code = "";
 					Log.i("tag","支付失败1");
-					//					Toast.makeText(mActivity, "玩家取消支付", Toast.LENGTH_LONG).show();
+//										Toast.makeText(mActivity, "玩家取消支付", Toast.LENGTH_LONG).show();
 
 				} else {
 					Log.i("tag","支付失败");
 					payFail();
 					code = "";
 					Log.i("tag","支付失败1");
-					//					Toast.makeText(mActivity, "未知情况", Toast.LENGTH_LONG).show();
+//										Toast.makeText(mActivity, "未知情况", Toast.LENGTH_LONG).show();
 
 				}
 
@@ -655,6 +652,67 @@ public class YaYawanconstants {
 		else if(goods.equals("首充礼包")){
 			paycode = "43262";
 		}
+		else if(goods.equals("新手礼包")){
+			paycode = "48320";
+		}
+		else if(goods.equals("加油礼包")){
+			paycode = "48321";
+		}
+		else if(goods.equals("进取礼包")){
+			paycode = "48322";
+		}
+		else if(goods.equals("超值礼包")){
+			paycode = "48323";
+		}
+		
+		
+		//天天玩捕鱼
+//		if(goods.equals("2万金币")){
+//			paycode = "46179";
+//		}else if(goods.equals("5万金币")){
+//			paycode = "46180";
+//		}else if(goods.equals("10万金币")){
+//			paycode = "46181";
+//		}else if(goods.equals("21万金币")){
+//			paycode = "46182";
+//		}else if(goods.equals("56万金币")){
+//			paycode = "46183";
+//		}else if(goods.equals("118万金币")){
+//			paycode = "46184";
+//		}else if(goods.equals("248万金币")){
+//			paycode = "46186";
+//		}
+//		else if(goods.equals("660万金币")){
+//			paycode = "46188";
+//		}
+//		else if(goods.equals("1400万金币")){
+//			paycode = "46190";
+//		}
+//		else if(goods.equals("6元礼包")){
+//			paycode = "46194";
+//		}
+//		else if(goods.equals("12元礼包")){
+//			paycode = "46197";
+//		}
+//		else if(goods.equals("25元礼包")){
+//			paycode = "46199";
+//		}
+//		else if(goods.equals("50元礼包")){
+//			paycode = "46201";
+//		}
+//		else if(goods.equals("98元礼包")){
+//			paycode = "46202";
+//		}
+//		else if(goods.equals("198元礼包")){
+//			paycode = "46204";
+//		}
+//		else if(goods.equals("328元礼包")){
+//			paycode = "46206";
+//		}
+//		else if(goods.equals("648元礼包")){
+//			paycode = "46208";
+//		}
+	
 		return paycode;
 	}
 

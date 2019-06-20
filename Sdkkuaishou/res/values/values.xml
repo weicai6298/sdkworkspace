@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="gateway_alipay">支付宝支付</string>
+    <string name="gateway_kwai">快币支付</string>
+    <string name="gateway_pay">确认支付</string>
+    <string name="gateway_pay_loading">加载中...</string>
+    <string name="gateway_title">选择付款方式</string>
+    <string name="gateway_wechat">微信支付</string>
+    <style name="Kwai.Theme.CustomTranslucent" parent="android:style/Theme.Translucent">
+
+        <item name="android:backgroundDimEnabled">true</item>
+
+        <item name="android:backgroundDimAmount">0.5</item>
+
+        <item name="android:windowNoTitle">true</item>
+
+        <item name="android:background">@android:color/transparent</item>
+
+    </style>
+    <style name="Kwai.Theme.GatewayNativePayDialog" parent="@android:style/Theme.Dialog">
+        <item name="android:windowFrame">@null</item>
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:windowContentOverlay">@null</item>
+        <item name="android:windowIsTranslucent">true</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowFullscreen">true</item>
+    </style>
+    <style name="Kwai.Theme.GatewayPayProgressDialog" parent="@android:style/Theme.Dialog">
+        <item name="android:windowFrame">@null</item>
+        <item name="android:windowBackground">@drawable/kwai_pay_loading_background</item>
+        <item name="android:layout_gravity">center</item>
+        <item name="android:gravity">center</item>
+        <item name="android:windowIsTranslucent">true</item>
+        <item name="android:windowNoTitle">true</item>
+    </style>
+    <style name="Theme"/>
+    <style name="Theme.GatewayPaySlideOut">
+        <item name="android:windowEnterAnimation">@null</item>
+        <item name="android:windowExitAnimation">@anim/kwai_pay_slide_out_to_bottom</item>
+    </style>
+</resources>

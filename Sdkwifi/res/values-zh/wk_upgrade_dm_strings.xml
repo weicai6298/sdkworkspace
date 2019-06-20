@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="wk_dm_download_pause_file">暂停</string>
+    <string name="wk_dm_download_continu_file">继续</string>
+    <string name="wk_dm_download_apk_file_notfound">文件不存在</string>
+    <string name="wk_dm_download_apk_file_select_all">全选</string>
+    <string name="wk_dm_download_delete_file">确定删除选中下载？</string>
+    <string name="wk_dm_download_wk_upgrade_dialog_warm_prompt">温馨提示</string>
+    <string name="wk_dm_download_cancel_list">取消</string>
+    <string name="wk_dm_download_edit_list">编辑</string>
+    <string name="wk_dm_download_complete_notification">下载完成</string>
+    <string name="wk_dm_download_running_file">正在下载</string>
+    <string name="wk_dm_download_file_manager">下载管理</string>
+    <string name="wk_dm_download_file_delete">删除</string>
+    <string name="wk_dm_download_file_again">重试</string>
+    <string name="wk_dm_download_waiting_file">等待</string>
+    <string name="wk_dm_download_paused_file">暂停中</string>
+    <string name="wk_dm_download_waited_file">等待中</string>
+    <string name="wk_dm_download_failed">下载失败，请稍后重试</string>
+    <string name="wk_dm_download_failed_storage">下载失败，存储空间不足或SD卡异常</string>
+    <string name="wk_dm_download_alert_network">您现在处于移动数据网络下，是否继续下载？</string>
+    <string name="wk_dm_download_newwork_failed">网络异常，无法下载</string>
+    <string name="wk_dm_download_operation_frequent">请不要频繁操作</string>
+    <string name="wk_dm_download_resume_download">当前已切换wifi网络，恢复 %1$s 个应用下载</string>
+    <string name="wk_dm_download_filesize_unknown">文件大小未知</string>
+    <string name="wk_dm_download_failed_network">网络异常，请稍后重试</string>
+    <string name="wk_dm_downloading">正在下载%1$s个应用</string>
+    <string name="wk_dm_download_waiting">预约下载（WiFi网络自动下载）</string>
+
+</resources>

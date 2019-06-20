@@ -90,7 +90,7 @@ public class ResetPasswordxml_po extends Basexml implements Layoutxml {
 		machineFactory.MachineEditText(et_mPhone, 400, MATCH_PARENT, 0,
 				"请输入手机号", 32, mLinearLayout, 0, 0, 0, 0);
 		et_mPhone.setBackgroundDrawable(GetAssetsutils
-				.get9DrawableFromAssetsFile("yaya_biankuang2.9.png", mContext));
+				.get9DrawableFromAssetsFile("yaya1_biankuan.9.png", mContext));
 		et_mPhone.setPadding(machSize(20), 0, 0, 0);
 
 		// 获取验证码按钮
@@ -110,7 +110,7 @@ public class ResetPasswordxml_po extends Basexml implements Layoutxml {
 		machineFactory.MachineEditText(et_mSecurity, MATCH_PARENT, 96, 0,
 				"请输入验证码", 32, mLinearLayout, 0, 20, 0, 0);
 		et_mSecurity.setBackgroundDrawable(GetAssetsutils
-				.get9DrawableFromAssetsFile("yaya_biankuang2.9.png", mContext));
+				.get9DrawableFromAssetsFile("yaya1_biankuan.9.png", mContext));
 		et_mSecurity.setPadding(machSize(20), 0, 0, 0);
 
 		// 验证码输入框
@@ -118,7 +118,7 @@ public class ResetPasswordxml_po extends Basexml implements Layoutxml {
 		machineFactory.MachineEditText(et_mNewpassword, MATCH_PARENT, 96, 0,
 				"请输入密码", 32, mLinearLayout, 0, 20, 0, 0);
 		et_mNewpassword.setBackgroundDrawable(GetAssetsutils
-				.get9DrawableFromAssetsFile("yaya_biankuang2.9.png", mContext));
+				.get9DrawableFromAssetsFile("yaya1_biankuan.9.png", mContext));
 		et_mNewpassword.setPadding(machSize(20), 0, 0, 0);
 
 		// 确定按钮

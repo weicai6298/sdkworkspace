@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+    android:background="@drawable/sy233default_select_bg">
+    <LinearLayout
+
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:id="@+id/sy233ll_coupon"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:gravity="center"
+            android:background="@mipmap/sy233coupon_left_enable"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_marginLeft="-10dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/sy233tv_cash"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="￥"
+                    android:textColor="@color/sy233white"
+                    android:textSize="13sp"
+                    android:visibility="visible"/>
+
+                <TextView
+                    android:id="@+id/sy233tv_coupon"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="5"
+                    android:textColor="@color/sy233white"
+                    android:textSize="25sp"
+                    android:textStyle="bold"/>
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/sy233tv_price_limit"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center|bottom"
+                android:layout_marginTop="8dp"
+                android:text="满50元可用"
+                android:textColor="@color/sy233white"
+                android:textSize="13sp"/>
+        </LinearLayout>
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+        
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center_vertical"
+            android:orientation="vertical"
+            android:background="@mipmap/sy233coupon_right_disable"
+            android:paddingRight="10dp"
+            android:paddingLeft="10dp">
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_marginTop="1dp"
+                    android:id="@+id/sy233tv_type"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/sy233coupon_type"
+                    android:paddingLeft="4dp"
+                    android:paddingRight="4dp"
+                    android:paddingTop="2dp"
+                    android:paddingBottom="2dp"
+                    android:text="折扣券"
+                    android:textColor="@color/sy233white"
+                    android:textSize="10sp"
+                    />
+
+                <TextView
+                    android:id="@+id/sy233tv_title"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:ellipsize="end"
+                    android:lineSpacingExtra="4dp"
+                    android:maxLines="2"
+                    android:minHeight="40dp"
+                    android:text="                 "
+                    android:textColor="@color/sy233blacktextcolor"
+                    android:textSize="14sp"/>
+            </FrameLayout>
+
+            <TextView
+                android:id="@+id/sy233tv_expire_date"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="2dp"
+                android:ellipsize="end"
+                android:lineSpacingExtra="2dp"
+                android:maxLines="1"
+                android:text=""
+                android:textColor="@color/sy233graytextcolor"
+                android:textSize="12sp"/>
+
+            <View
+                android:id="@+id/sy233line"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginTop="2dp"
+                android:background="@color/sy233bg"/>
+
+            <FrameLayout
+                android:layout_marginTop="2dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" android:orientation="horizontal">
+
+                <TextView
+                    android:layout_gravity="center_vertical"
+                    android:id="@+id/sy233tv_game_limit"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+
+                    android:ellipsize="end"
+                    android:lineSpacingExtra="4dp"
+                    android:maxLines="1"
+                    android:text="谷剑奇谭专用"
+                    android:textColor="@color/sy233graytextcolor"
+                    android:textSize="12sp"/>
+                <CheckBox
+                    android:focusable="false"
+                    android:clickable="false"
+                    android:longClickable="false"
+                    android:enabled="false"
+                    android:id="@+id/sy233cb_select_coupon"
+                    android:visibility="invisible"
+                    android:layout_gravity="center_vertical|right"
+                    android:button="@drawable/sy233cb_select_bg"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+            </FrameLayout>
+
+        </LinearLayout>
+            <ImageView
+                android:visibility="gone"
+                android:id="@+id/iv_state"
+                android:src="@mipmap/sy233used_tip"
+                android:layout_marginRight="10dp"
+                android:layout_marginBottom="10dp"
+                android:layout_gravity="right|bottom"
+                android:layout_width="44dp"
+                android:layout_height="44dp"/>
+        </FrameLayout>
+    </LinearLayout>
+</RelativeLayout>

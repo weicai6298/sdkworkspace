@@ -4,38 +4,33 @@ import java.io.File;
 
 import android.os.Environment;
 
+import com.kkgame.sdk.login.ViewConstants;
+
 /**
  * 外部数据库,
  */
 public class SDBHelper {
-	
-	public static String Rootpath="QianGuoUserData";
 
+	
+	public static String Rootpath=ViewConstants.dbpath;
+	
     public static String DB_DIR = Environment.getExternalStorageDirectory()
             .getPath()
             + File.separator
-            + "GameUserData"
+            + Rootpath
             + File.separator
-            + SDBHelper.class.getPackage().getName();
+            + "com.yayawan.sdk.account.db";
     static {
-//        while (!Environment.getExternalStorageState().equals(
-//                Environment.MEDIA_MOUNTED)) {
-//            try {
-//                Thread.sleep(500);
-//            } catch (InterruptedException e) {
-//                e.printStackTrace();
-//                break;
-//            }
-//        }
+
         if (Environment.getExternalStorageState().equals(
                 Environment.MEDIA_MOUNTED)) {
             DB_DIR = Environment.getExternalStorageDirectory().getPath()
-                    + File.separator + "GameUserData" + File.separator
-                    + SDBHelper.class.getPackage().getName();
+                    + File.separator + Rootpath + File.separator
+                    + "com.yayawan.sdk.account.db";
         } else {
             DB_DIR = Environment.getRootDirectory().getPath() + File.separator
-                    + "GameUserData" + File.separator
-                    + SDBHelper.class.getPackage().getName();
+                    + Rootpath + File.separator
+                    + "com.yayawan.sdk.account.db";
         }
 
         File dbFolder = new File(DB_DIR);

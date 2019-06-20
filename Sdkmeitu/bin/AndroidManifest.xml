@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    package="com.hulian.mystore.meitu"
+    package="com.yayawan.sdktemplate"
     android:versionCode="1"
     android:versionName="1.0" >
 
@@ -17,7 +17,6 @@
     <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
     <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW" />
     <uses-permission android:name="android.permission.GET_TASKS" />
-    
     <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
 
     <application
@@ -56,19 +55,22 @@
             android:configChanges="orientation|keyboardHidden|screenSize"
             android:screenOrientation="behind"
             android:theme="@style/OpenAccount.Theme.ColorF7F7F7"
-            android:windowSoftInputMode="stateHidden|adjustPan" /> <!-- 手机注册 -->
+            android:windowSoftInputMode="stateHidden|adjustPan" />
+        <!-- 手机注册 -->
         <activity
             android:name="com.meitu.library.openaccount.activity.OpenAccountRegisterActivity"
             android:configChanges="orientation|keyboardHidden|screenSize"
             android:screenOrientation="behind"
             android:theme="@style/OpenAccount.Theme.WHITE"
-            android:windowSoftInputMode="stateHidden|adjustPan" /> <!-- 忘记密码页面 -->
+            android:windowSoftInputMode="stateHidden|adjustPan" />
+        <!-- 忘记密码页面 -->
         <activity
             android:name="com.meitu.library.openaccount.activity.OpenAccountForgetActivity"
             android:configChanges="orientation|keyboardHidden|screenSize"
             android:screenOrientation="behind"
             android:theme="@style/OpenAccount.Theme.WHITE"
-            android:windowSoftInputMode="stateHidden|adjustPan" /> <!-- 手机短信快速登录页面 -->
+            android:windowSoftInputMode="stateHidden|adjustPan" /> 
+        <!-- 手机短信快速登录页面 -->
         <activity
             android:name="com.meitu.library.openaccount.activity.OpenAccountSMSActivity"
             android:configChanges="orientation|keyboardHidden|screenSize"

@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:custom="http://schemas.android.com/apk/res-auto"
+    android:layout_width="300dp"
+    android:layout_height="wrap_content"
+    android:background="?attr/bsgamesdk_main_background"
+    android:orientation="vertical">
+
+    <include
+        android:id="@+id/bsgamesdk_titleLayout"
+        layout="@layout/bsgamesdk_title" />
+
+    <TextView
+        style="@style/bsgamesdk_textView_basic"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="30dp"
+        android:textColor="@color/bsgamesdk_custom_dialog_bg"
+        android:text="@string/bsgamesdk_exit_tv_content" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="10dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="25dp"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/bsgamesdk_id_gameout_comfirm"
+            style="?attr/bsgamesdk_confirm_button_style"
+            android:layout_width="0dp"
+            android:layout_height="36dp"
+            android:layout_weight="1"
+            android:text="@string/bsgamesdk_exit_btn_comfirm" />
+
+        <Button
+            android:id="@+id/bsgamesdk_id_gameout_cancel"
+            style="?attr/bsgamesdk_reg_button_style"
+            android:layout_width="0dp"
+            android:layout_height="36dp"
+            android:layout_marginLeft="10dp"
+            android:layout_weight="1"
+            android:text="@string/bsgamesdk_exit_btn_cancel" />
+    </LinearLayout>
+</LinearLayout>

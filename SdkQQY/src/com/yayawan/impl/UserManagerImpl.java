@@ -15,6 +15,7 @@ import com.kkgame.utils.Yayalog;
 import com.tencent.ysdk.api.YSDKApi;
 import com.yayawan.callback.YYWExitCallback;
 import com.yayawan.callback.YYWUserManagerCallBack;
+import com.yayawan.main.YYWMain;
 import com.yayawan.proxy.YYWUserManager;
 
 
@@ -112,8 +113,11 @@ public class UserManagerImpl implements YYWUserManager {
 									public void run() {
 										// TODO Auto-generated method stub
 										dialog.dismiss();
-										activitiy.finish();
+//										activitiy.finish();
 										//callback.onExit();
+										if (YYWMain.mUserCallBack != null) {
+											YYWMain.mUserCallBack.onLogout(null);
+										}
 										
 									}
 								});

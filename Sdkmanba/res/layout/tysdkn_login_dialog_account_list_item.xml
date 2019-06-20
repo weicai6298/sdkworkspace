@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="50dp"
+    android:orientation="horizontal"
+    tools:background="#ffffff"
+    >
+
+    <TextView
+        android:id="@+id/tysdkn_login_dialog_account_list_item_account"
+        android:layout_width="0dp"
+        android:layout_height="50dp"
+        android:layout_weight="1"
+        android:gravity="center_vertical"
+        android:textColor="#555"
+        android:textSize="18sp"
+        tools:text="123456"/>
+
+    <ImageView
+        android:id="@+id/tysdkn_login_dialog_account_list_item_delete"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical"
+        android:padding="10dp"
+        android:src="@drawable/tysdkn_delete"/>
+</LinearLayout>
+ 
+

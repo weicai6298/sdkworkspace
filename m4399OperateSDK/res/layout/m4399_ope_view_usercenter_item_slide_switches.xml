@@ -1,5 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
-<!-- 个人中心 操作列表项 by.zhengxu -->
+<?xml version="1.0" encoding="utf-8"?><!-- 个人中心 操作列表项 by.zhengxu -->
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="50dp"
@@ -8,7 +7,7 @@
     android:paddingBottom="10dp"
     android:paddingLeft="12dp"
     android:paddingRight="10dp"
-    android:paddingTop="10dp" >
+    android:paddingTop="10dp">
 
     <ImageView
         android:id="@+id/usercenter_action_item_image"
@@ -25,7 +24,7 @@
         android:layout_centerVertical="true"
         android:layout_marginRight="15dp"
         android:layout_toRightOf="@+id/usercenter_action_item_image"
-        android:gravity="center_vertical" >
+        android:gravity="center_vertical">
 
         <TextView
             android:id="@+id/usercenter_action_item_title"
@@ -33,15 +32,15 @@
             android:layout_height="wrap_content"
             android:textColor="@color/m4399_ope_usercenter_black"
             android:textSize="16sp" />
-<!-- 
-        <TextView
-            android:id="@+id/usercenter_action_item_warning"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_below="@id/usercenter_action_item_title"
-            android:text="@string/m4399_ope_pop_close_warning"
-            android:textColor="@color/m4399_ope_dialog_text_grey"
-            android:textSize="8sp" /> -->
+        <!--
+                <TextView
+                    android:id="@+id/usercenter_action_item_warning"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/usercenter_action_item_title"
+                    android:text="@string/m4399_ope_pop_close_warning"
+                    android:textColor="@color/m4399_ope_dialog_text_grey"
+                    android:textSize="8sp" /> -->
     </RelativeLayout>
 
     <TextView

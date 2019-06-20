@@ -1,0 +1,101 @@
+<resources xmlns:android="http://schemas.android.com/apk/res/android">
+
+<!--     自动登录加载动画 -->
+ <style name="ycx_style_loading_anim" parent="@android:style/Widget.ProgressBar.Small">
+	<item name="android:indeterminateDrawable">@anim/ycx_anim_loading</item>
+	<item name="android:layout_width">21dip</item> 
+	<item name="android:layout_height">21dip</item>
+	<item name="android:layout_gravity">center_vertical</item>
+ </style>
+<!--  自定义dialog的title样式 -->
+ <style name="ycx_style_dialog_title">
+  <item name="android:textSize">18.0dip</item> 
+  <item name="android:textColor">@color/ycx_color_black</item> 
+  <item name="android:gravity">center</item> 
+  <item name="android:layout_width">wrap_content</item> 
+  <item name="android:layout_height">40.0dip</item> 
+  </style>
+  
+<!--   悬浮窗每个标签的字体样式 -->
+  <style name="ycx_style_float_label" >
+  <item name="android:textSize">12.0dip</item> 
+  <item name="android:textColor">#ffffffff</item>
+  <item name="android:layout_width">wrap_content</item> 
+  <item name="android:layout_height">wrap_content</item>
+  <item name="android:layout_marginTop">2dip</item> 
+  </style>
+  
+	<!--   自定义dialog样式 -->
+  <style name="ycx_style_Dialog" parent="android:style/Theme.Dialog">
+	  <item name="android:background">#00000000</item> 
+	  <item name="android:windowBackground">@android:color/transparent</item> 
+	  <item name="android:windowNoTitle">true</item> 
+	  <item name="android:windowFullscreen">true</item> 
+	  <item name="android:windowIsFloating">true</item> 
+  </style>
+  <!--  透明activity -->
+ <style name="ycx_style_Theme" parent="android:Theme">
+     <item name="android:windowNoTitle">true</item>
+     
+ </style>   
+ <style name="ycx_style_Theme.Transparent">
+        <item name="android:windowIsTranslucent">true</item>
+        <item name="android:windowAnimationStyle">@android:style/Animation.Translucent</item>
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:colorForeground">#ffffffff</item>
+  </style>
+<!--     精品游戏评分级别 -->
+     <style name="ycx_style_ratingbar" parent="@android:style/Widget.RatingBar">
+        <item name="android:gravity">right</item>
+        <item name="android:paddingTop">2dip</item>
+         <item name="android:progressDrawable">@drawable/ycx_selector_jp_score</item>
+        <item name="android:minHeight">16dip</item>
+        <item name="android:maxHeight">24dip</item>
+        <item name="android:isIndicator">true</item>
+    </style>
+
+<!--      个人中心页面 右边部分-->	  	
+     	<style name="ycx_style_tv">
+		  <item name="android:textSize">14.0dip</item> 
+		  <item name="android:textColor">#ff666666</item>
+		  <item name="android:layout_height">32dip</item>
+		  <item name="android:layout_width">100dip</item>
+		  <item name="android:ellipsize">end</item>
+		  <item name="android:gravity">right|center_vertical</item>
+		  <item name="android:singleLine">true</item>
+		  <item name="android:paddingRight">12.0dip</item> 
+		</style>
+<!--      登录注册  账号与密码的编辑样式-->	  	
+     	<style name="ycx_style_et">
+		  <item name="android:textSize">14.0dip</item> 
+		  <item name="android:textColor">#ff666666</item>
+		  <item name="android:layout_height">32dip</item>
+		  <item name="android:layout_width">190dip</item>
+		  <item name="android:ellipsize">end</item>
+		  <item name="android:gravity">left|center</item>
+		  <item name="android:singleLine">true</item>
+		</style>
+<!-- 		下载进度条 -->
+     	<style name="ycx_style_progressbar" parent="android:Widget.ProgressBar.Horizontal">
+		<item name="android:indeterminateOnly">false</item>
+		<item name="android:progressDrawable">@drawable/ycx_down_progress</item>
+		<item name="android:minHeight">5dip</item>
+		<item name="android:maxHeight">5dip</item>
+	</style>
+<!-- 	自定义checkbox 登录注册-->
+	<style name="ycx_style_checkBox" parent="@android:style/Widget.CompoundButton.CheckBox">
+	    <item name="android:button">@drawable/ycx_selector_checkbox</item>
+	    <item name="android:paddingLeft">25.0dip</item>
+	  	<item name="android:maxHeight">20.0dip</item>
+	</style>
+	 <style name="YCX" />
+	 <style name="YCX.Safe" />
+	 <style name="YCX."></style>
+ <!-- 	自定义image 支付-->
+	<style name="YCX.Safe.Image">
+        <item name="android:layout_width">30dp</item>
+        <item name="android:layout_height">30dp</item>
+        <item name="android:padding">5dp</item>
+    </style>
+</resources>

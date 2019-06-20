@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/user_view"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="#00ffffff"
+    android:gravity="center"
+    android:visibility="visible" >
+
+    <!-- 登录框弹出框布局 -->
+
+    <include layout="@layout/autologin_view" />
+
+    <!-- 用户登录布局 -->
+
+    <include layout="@layout/xmw_c_login_layout" />
+    
+    <include layout="@layout/xmw_c_login_layout2" />
+
+    <!-- 用户注册布局 -->
+
+    <include layout="@layout/xmw_c_register_layout" />
+
+    <include layout="@layout/xmw_c_register_phone" />
+
+    <!-- 账号找回1布局 -->
+
+    <include layout="@layout/xmw_c_findlayout" />
+
+    <!-- 账号找回方式布局 -->
+
+    <include layout="@layout/xmw_c_findtypelayout" />
+
+    <!-- 帮助布局 -->
+    <include layout="@layout/xmw_c_login_help" />
+    
+</RelativeLayout>

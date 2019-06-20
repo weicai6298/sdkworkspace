@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="260dp"
+    android:layout_height="wrap_content"
+    android:background="@color/bsgamesdk_dc_transparent">
+
+    <ImageButton
+        android:id="@+id/bsgamesdk_dc_themetwo_title_back"
+        style="?attr/bsgamesdk_dc_themetwo_back_button_style"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_centerVertical="true"
+        android:visibility="gone" />
+
+    <ImageButton
+        android:id="@+id/bsgamesdk_dc_themetwo_title_close"
+        style="?attr/bsgamesdk_dc_themetwo_close_button_style"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:layout_marginRight="8dp"
+        android:visibility="invisible" />
+
+    <LinearLayout
+        android:layout_marginTop="16dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:gravity="center" >
+
+        <ImageView
+            android:id="@+id/bsgamesdk_dc_themetwo_title_logo"
+            style="?attr/bsgamesdk_dc_themetwo_title_logo_style"/>
+
+        <TextView
+            android:id="@+id/bsgamesdk_dc_themetwo_title_content"
+            style="?attr/bsgamesdk_dc_themetwo_title_text_style"
+            android:layout_marginLeft="10dp" />
+    </LinearLayout>
+    
+</RelativeLayout>

@@ -38,28 +38,29 @@
             android:layout_weight="1"
             android:layout_marginRight="13dp">
 
-            <LinearLayout
+            <RelativeLayout
                 android:id="@+id/sogou_game_sdk_main_dialog_head_tip1"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:orientation="vertical" >
+                 >
 
                 <com.sogou.gamecenter.sdk.views.CircleNetworkImage
                     android:id="@+id/sogou_game_sdk_main_dialog_head_iv1"
                     android:layout_width="50dp"
                     android:layout_height="50dp"
-                    android:layout_gravity="center_horizontal">
+                    android:layout_centerHorizontal="true">
                 </com.sogou.gamecenter.sdk.views.CircleNetworkImage>
 
                 <TextView
+                    android:layout_below="@+id/sogou_game_sdk_main_dialog_head_iv1"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_gravity="center_horizontal"
+                    android:layout_centerHorizontal="true"
                     android:layout_marginTop="10dp"
                     android:text="个人中心"
                     android:textColor="@color/sogou_game_sdk_color_111111"
-                    android:textSize="13sp" />
-            </LinearLayout>
+                    android:textSize="@dimen/btnTextSize" />
+            </RelativeLayout>
 
             <ImageView
                 android:id="@+id/sogou_game_sdk_news_iv"
@@ -72,134 +73,139 @@
                 android:visibility="gone" />
         </RelativeLayout>
 
-        <LinearLayout
+        <RelativeLayout
             android:id="@+id/sogou_game_sdk_main_dialog_head_tip2"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginLeft="13dp"
             android:layout_marginRight="13dp"
             android:layout_weight="1"
-            android:orientation="vertical" >
+             >
 
             <com.sogou.gamecenter.sdk.views.CircleNetworkImage
                 android:id="@+id/sogou_game_sdk_main_dialog_head_iv2"
                 android:layout_width="50dp"
                 android:layout_height="50dp"
-                android:layout_gravity="center_horizontal" >
+                android:layout_centerHorizontal="true" >
             </com.sogou.gamecenter.sdk.views.CircleNetworkImage>
 
             <TextView
+                android:layout_below="@+id/sogou_game_sdk_main_dialog_head_iv2"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_gravity="center_horizontal"
+                android:layout_centerHorizontal="true"
                 android:layout_marginTop="10dp"
                 android:text="福利大厅"
                 android:textColor="@color/sogou_game_sdk_color_111111"
-                android:textSize="13sp" />
-        </LinearLayout>
+                android:textSize="@dimen/btnTextSize" />
+        </RelativeLayout>
 
-        <LinearLayout
+        <RelativeLayout
             android:id="@+id/sogou_game_sdk_main_dialog_head_tip3"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginLeft="13dp"
             android:layout_marginRight="13dp"
             android:layout_weight="1"
-            android:orientation="vertical" >
+             >
 
             <com.sogou.gamecenter.sdk.views.CircleNetworkImage
                 android:id="@+id/sogou_game_sdk_main_dialog_head_iv3"
                 android:layout_width="50dp"
                 android:layout_height="50dp"
-                android:layout_gravity="center_horizontal" >
+                android:layout_centerHorizontal="true" >
             </com.sogou.gamecenter.sdk.views.CircleNetworkImage>
 
             <TextView
+                android:layout_below="@+id/sogou_game_sdk_main_dialog_head_iv3"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_gravity="center_horizontal"
+                android:layout_centerHorizontal="true"
                 android:layout_marginTop="10dp"
                 android:text="客服中心"
                 android:textColor="@color/sogou_game_sdk_color_111111"
-                android:textSize="13sp" />
-        </LinearLayout>
+                android:textSize="@dimen/btnTextSize" />
+        </RelativeLayout>
 
-        <LinearLayout
+        <RelativeLayout
             android:id="@+id/sogou_game_sdk_main_dialog_head_tip4"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginLeft="13dp"
             android:layout_marginRight="13dp"
             android:layout_weight="1"
-            android:orientation="vertical" >
+             >
 
             <com.sogou.gamecenter.sdk.views.CircleNetworkImage
                 android:id="@+id/sogou_game_sdk_main_dialog_head_iv4"
                 android:layout_width="50dp"
                 android:layout_height="50dp"
-                android:layout_gravity="center_horizontal" >
+                android:layout_centerHorizontal="true" >
             </com.sogou.gamecenter.sdk.views.CircleNetworkImage>
 
             <TextView
+                android:layout_below="@+id/sogou_game_sdk_main_dialog_head_iv4"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_gravity="center_horizontal"
+                android:layout_centerHorizontal="true"
                 android:layout_marginTop="10dp"
                 android:text="活动大厅"
                 android:textColor="@color/sogou_game_sdk_color_111111"
-                android:textSize="13sp" />
-        </LinearLayout>
+                android:textSize="@dimen/btnTextSize" />
+        </RelativeLayout>
 
-        <LinearLayout
+        <RelativeLayout
             android:id="@+id/sogou_game_sdk_main_dialog_head_tip5"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginLeft="13dp"
             android:layout_marginRight="13dp"
             android:layout_weight="1"
-            android:orientation="vertical" >
+             >
 
             <com.sogou.gamecenter.sdk.views.CircleNetworkImage
                 android:id="@+id/sogou_game_sdk_main_dialog_head_iv5"
                 android:layout_width="50dp"
                 android:layout_height="50dp"
-                android:layout_gravity="center_horizontal" >
+                android:layout_centerHorizontal="true" >
             </com.sogou.gamecenter.sdk.views.CircleNetworkImage>
 
             <TextView
+                android:layout_below="@+id/sogou_game_sdk_main_dialog_head_iv5"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_gravity="center_horizontal"
+                android:layout_centerHorizontal="true"
                 android:layout_marginTop="10dp"
                 android:text="情报站"
                 android:textColor="@color/sogou_game_sdk_color_111111"
-                android:textSize="13sp" />
-        </LinearLayout>
+                android:textSize="@dimen/btnTextSize" />
+        </RelativeLayout>
 
-        <LinearLayout
+        <RelativeLayout
             android:id="@+id/sogou_game_sdk_main_dialog_head_tip6"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginLeft="13dp"
             android:layout_weight="1"
-            android:orientation="vertical" >
+             >
 
             <com.sogou.gamecenter.sdk.views.CircleNetworkImage
                 android:id="@+id/sogou_game_sdk_main_dialog_head_iv6"
                 android:layout_width="50dp"
                 android:layout_height="50dp"
-                android:layout_gravity="center_horizontal" >
+                android:layout_centerHorizontal="true" >
             </com.sogou.gamecenter.sdk.views.CircleNetworkImage>
 
             <TextView
+                android:layout_below="@+id/sogou_game_sdk_main_dialog_head_iv6"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_gravity="center_horizontal"
+                android:layout_centerHorizontal="true"
                 android:layout_marginTop="10dp"
                 android:text="新游力荐"
                 android:textColor="@color/sogou_game_sdk_color_111111"
-                android:textSize="13sp" />
-        </LinearLayout>
+                android:textSize="@dimen/btnTextSize" />
+        </RelativeLayout>
     </LinearLayout>
 
     <View
@@ -263,7 +269,7 @@
             android:layout_height="40dp"
             android:layout_below="@id/sogou_game_sdk_main_dialog_head_more_tv"
             android:layout_marginTop="25dp"
-            android:visibility="gone">
+            android:visibility="visible">
 
             <com.sogou.wan.common.NetworkImageView
                 android:id="@+id/sogou_game_sdk_main_dialog_head_rl_iv1"
@@ -274,8 +280,9 @@
 
             <TextView
                 android:id="@+id/sogou_game_sdk_main_dialog_head_rl_name_tv1"
-                android:layout_width="wrap_content"
+                android:layout_width="@dimen/headGameTitle"
                 android:layout_height="wrap_content"
+                android:singleLine="true"
                 android:layout_marginLeft="10dp"
                 android:layout_toRightOf="@id/sogou_game_sdk_main_dialog_head_rl_iv1"
                 android:text="《诛仙》新服开测活动"
@@ -284,7 +291,7 @@
 
             <TextView
                 android:id="@+id/sogou_game_sdk_main_dialog_head_rl_des_tv1"
-                android:layout_width="160dp"
+                android:layout_width="@dimen/headGameDes"
                 android:layout_height="wrap_content"
                 android:layout_alignParentBottom="true"
                 android:layout_marginLeft="10dp"
@@ -332,8 +339,9 @@
 
             <TextView
                 android:id="@+id/sogou_game_sdk_main_dialog_head_rl_name_tv2"
-                android:layout_width="wrap_content"
+                android:layout_width="@dimen/headGameTitle"
                 android:layout_height="wrap_content"
+                android:singleLine="true"
                 android:layout_marginLeft="10dp"
                 android:layout_toRightOf="@id/sogou_game_sdk_main_dialog_head_rl_iv2"
                 android:text="《诛仙》新服开测活动"
@@ -342,7 +350,7 @@
 
             <TextView
                 android:id="@+id/sogou_game_sdk_main_dialog_head_rl_des_tv2"
-                android:layout_width="160dp"
+                android:layout_width="@dimen/headGameTitle"
                 android:layout_height="wrap_content"
                 android:layout_alignParentBottom="true"
                 android:layout_marginLeft="10dp"
@@ -390,8 +398,9 @@
 
             <TextView
                 android:id="@+id/sogou_game_sdk_main_dialog_head_rl_name_tv3"
-                android:layout_width="wrap_content"
+                android:layout_width="@dimen/headGameTitle"
                 android:layout_height="wrap_content"
+                android:singleLine="true"
                 android:layout_marginLeft="10dp"
                 android:layout_toRightOf="@id/sogou_game_sdk_main_dialog_head_rl_iv3"
                 android:text="《诛仙》新服开测活动"
@@ -400,7 +409,7 @@
 
             <TextView
                 android:id="@+id/sogou_game_sdk_main_dialog_head_rl_des_tv3"
-                android:layout_width="160dp"
+                android:layout_width="@dimen/headGameDes"
                 android:layout_height="wrap_content"
                 android:layout_alignParentBottom="true"
                 android:layout_marginLeft="10dp"

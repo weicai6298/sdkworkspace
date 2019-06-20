@@ -1,7 +1,0 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
-<resources>
-    <!--<string name="app_name">Demo测试</string>-->
-
-	<!-- Class name of game entry -->
-    <string name="g_class_name">com.duoku.platform.demo.single.GameMainActivity</string>
-</resources>

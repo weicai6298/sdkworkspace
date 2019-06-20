@@ -360,4 +360,9 @@
 
     <!-- JinDong pay-->
     <string name="m4399_rec_rec_jdpay">京东支付</string>
+
+    <string name="m4399_rec_rec_pay_onprocess">订单处理中</string>
+    <string name="m4399_rec_without_communication_fee">(不含通信费)</string>
+    <string name="m4399_rec_card_denomination">充值卡面额</string>
+    <string name="m4399_rec_recharge_account">充值账号</string>
 </resources>

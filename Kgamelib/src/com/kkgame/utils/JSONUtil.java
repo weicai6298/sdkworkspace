@@ -79,8 +79,7 @@ public class JSONUtil {
 
 		String encode = "";
 		try {
-			encode = URLEncoder.encode(
-					Base64.encode(jsonObject.toString().getBytes()), "UTF-8");
+			encode = URLEncoder.encode(Base64.encode(jsonObject.toString().getBytes()), "UTF-8");
 		} catch (UnsupportedEncodingException e) {
 			e.printStackTrace();
 		}

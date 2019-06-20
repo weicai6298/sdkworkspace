@@ -89,7 +89,7 @@ public class ChargerImpl implements YYWCharger {
 		requestParams.addBodyParameter("product_id", "a2");
 		requestParams.addBodyParameter("product_per_price", "" + YYWMain.mOrder.money/100);
 		requestParams.addBodyParameter("product_subject", YYWMain.mOrder.goods);
-		requestParams.addBodyParameter("product_unit", YYWMain.mOrder.goods);
+		requestParams.addBodyParameter("product_unit", DeviceUtil.getGameInfo(paramActivity, "goodsname"));
 		requestParams.addBodyParameter("total_price", "" + YYWMain.mOrder.money/100);
 		requestParams.addBodyParameter("user_info", "");
 		String create_time = System.currentTimeMillis()%1000+"";

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+	<!-- 灰色（稍深色） -->
+    <color name="fuse19_color_gray_light">#646464</color>
+     <!-- 基本颜色 -->
+    <color name="fuse19_color_white">#ffffffff</color>
+    <!-- 	dialog的title颜色 -->
+	<color name="fuse19_color_black">#000000</color>
+	<color name="fuse19_color_orange">#FFA500</color>
+</resources>

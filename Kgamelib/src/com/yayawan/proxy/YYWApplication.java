@@ -1,6 +1,6 @@
 package com.yayawan.proxy;
 
-import com.kkgame.utils.DeviceUtil;
+
 
 import android.app.Application;
 import android.content.Context;
@@ -14,10 +14,11 @@ public class YYWApplication extends Application {
 	public void onCreate() {
 		// TODO Auto-generated method stub
 		super.onCreate();
-		GameApitest.initOnapplication(this);
+		//GameApitest.initOnapplication(this);
 		mContext = getApplicationContext();
+		GameApitest.getGameApitestInstants().sendTest(getPackageName()+"Application.oncreate");
 		// System.out.println("YYApplication");
-		YYcontants.ISDEBUG=DeviceUtil.isDebug(getApplicationContext());
+		
 	}
 
 	public static Context getmContext() {

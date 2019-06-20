@@ -64,7 +64,7 @@
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="11dp"
                     android:layout_marginRight="11dp"
-                    android:text="*请输入正确的账号"
+                    android:text="*请输入正确的帐号"
                     android:textColor="@color/gamecat_color_f74c31"
                     android:textSize="10dp"
 

@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+<!--     notice style -->
+    <color name="ycx_color_red">#ED1C24</color>
+	<!-- 	dialog的title颜色 -->
+	<color name="ycx_color_black">#000000</color>
+	
+	<color name="ycx_color_gray">#808080</color>
+	<color name="ycx_color_orange">#FFA500</color>
+	<color name="ycx_color_graywhite">#F5F5F5</color>
+    <!-- 	actvity的顶部title颜色 -->
+    <color name="ycx_color_title_bg">#ed9847</color>
+    <!--     浅蓝色 -->
+    <color name="ycx_color_lightblue">#6ad1c6</color>
+    <!--     浅灰色 -->
+    <color name="ycx_color_lightgray">#C7C7C7</color>
+    
+	<!-- activity通用背景色:浅灰色 -->
+    <color name="ycx_color_background">#EAEAEA</color>
+    <!-- 灰色（稍深色） -->
+    <color name="ycx_color_gray_light">#646464</color>
+    <!-- 基本颜色 -->
+    <color name="ycx_color_white">#ffffffff</color>
+     <!-- 字体，灰色（深色） -->
+    <color name="ycx_color_gray_darker">#FF3F3F3F</color>
+     <!-- 字体，灰色（橙褐色）金额颜色 -->
+    <color name="ycx_pay_money">#FFBD90</color>
+    <!-- 通用按钮点击色:灰色 -->
+    <color name="ycx_color_item_pressed">#eaeff3</color>
+     <!-- 白色按钮的点击色 -->
+    <color name="ycx_btn_white_pressed">#F0F0F0</color>
+     <!-- 透明颜色 -->
+    <color name="ycx_color_transparent">#00000000</color>
+    <!-- 字体，灰色（浅色） -->
+    <color name="ycx_color_gray_lighter">#ffababab</color>
+    <!-- 分割线颜色 -->
+    <color name="ycx_color_item_divider">#C7C7C7</color>
+	<!--     编辑框hint颜色 -->
+    <color name="ycx_color_hint_color">#C7C7C7</color>
+	<!--     右按钮 浅蓝色 -->
+    <color name="ycx_color_blue_pressed">#6ad1c6</color>
+    <color name="ycx_color_blue_normal">#29c3b3</color>
+    <!--     左按钮 浅绿色 -->
+    <color name="ycx_color_green_pressed">#6ad1c6</color>
+    <color name="ycx_color_green_normal">#29c3b3</color>
+</resources>

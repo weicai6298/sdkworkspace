@@ -4,7 +4,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/m4399_rec_page_bg"
-    android:orientation="vertical" >
+    android:orientation="vertical">
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -15,13 +15,15 @@
         <RelativeLayout
             android:layout_width="140dp"
             android:layout_height="match_parent"
-            android:background="@drawable/m4399_rec_mvcenter_title_bg"
-            android:layout_marginRight="@dimen/m4399_rec_paddingLeft">
+            android:layout_marginRight="@dimen/m4399_rec_paddingLeft"
+            android:background="@drawable/m4399_rec_mvcenter_title_bg">
+
             <ImageView
                 android:id="@+id/hpay_dy_iv_back"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:background="@drawable/m4399_rec_return_btn_bg"/>
+                android:background="@drawable/m4399_rec_return_btn_bg" />
+
             <ImageView
                 android:id="@+id/iv_left_arrow"
                 android:layout_width="wrap_content"
@@ -30,18 +32,18 @@
                 android:layout_centerVertical="true"
                 android:layout_marginLeft="@dimen/m4399_rec_paddingLeft"
                 android:scaleType="fitCenter"
-                android:src="@drawable/m4399_rec_left_arrow"/>
+                android:src="@drawable/m4399_rec_left_arrow" />
 
             <TextView
-                android:layout_marginLeft="10dp"
                 android:id="@+id/hpay_dy_tv_title"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_toRightOf="@id/iv_left_arrow"
                 android:layout_centerVertical="true"
+                android:layout_marginLeft="10dp"
+                android:layout_toRightOf="@id/iv_left_arrow"
                 android:text="@string/m4399_rec_sms_pay"
                 android:textColor="#FFFFFF"
-                android:textSize="20sp"/>
+                android:textSize="20sp" />
 
 
         </RelativeLayout>
@@ -56,20 +58,20 @@
         android:layout_weight="1"
         android:fadingEdge="none"
         android:fillViewport="true"
-        android:scrollbars="none" >
+        android:scrollbars="none">
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="vertical"
-            android:visibility="visible" >
+            android:visibility="visible">
 
             <LinearLayout
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="12dip"
                 android:gravity="center_vertical|left"
-                android:orientation="horizontal" >
+                android:orientation="horizontal">
 
                 <TextView
                     android:id="@+id/hpay_dy_tv_goods"
@@ -94,9 +96,9 @@
             <LinearLayout
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
-                android:gravity="center_vertical|left"
                 android:layout_marginTop="8dip"
-                android:orientation="horizontal" >
+                android:gravity="center_vertical|left"
+                android:orientation="horizontal">
 
                 <TextView
                     android:id="@+id/hpay_dy_tv_payprice"
@@ -128,29 +130,30 @@
                     android:textColor="#666666"
                     android:textSize="14sp" />
             </LinearLayout>
+
             <LinearLayout
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="8dip"
                 android:gravity="center_vertical|left"
-                android:orientation="horizontal" >
+                android:orientation="horizontal">
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:gravity="center_vertical|left"
-                    android:textColor="#333333"
                     android:text="@string/m4399_rec_corp_name"
+                    android:textColor="#333333"
                     android:textSize="14sp" />
 
                 <TextView
-                    android:text="@string/m4399_rec_corp_namecontents"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="5dip"
                     android:ellipsize="end"
                     android:gravity="center_vertical|left"
                     android:singleLine="true"
+                    android:text="@string/m4399_rec_corp_namecontents"
                     android:textColor="#666666"
                     android:textSize="14sp" />
             </LinearLayout>
@@ -161,42 +164,41 @@
                 android:layout_marginBottom="4dip"
                 android:layout_marginTop="12dip"
                 android:gravity="center_vertical"
-                android:orientation="horizontal" >
+                android:orientation="horizontal">
 
                 <EditText
-                    android:background="@drawable/m4399_ope_bind_input_bg"
                     android:id="@+id/hpay_dy_et_inputphone"
                     android:layout_width="0px"
                     android:layout_height="match_parent"
                     android:layout_weight="1"
+                    android:background="@drawable/m4399_ope_bind_input_bg"
                     android:imeOptions="actionDone"
                     android:inputType="phone"
                     android:maxLength="11"
                     android:paddingLeft="10dip"
                     android:textColor="#111111"
-                    android:textSize="14sp" >
-                </EditText>
+                    android:textSize="14sp"></EditText>
 
 
                 <Button
-                    android:layout_marginLeft="-2dp"
                     android:id="@+id/hpay_dy_btn_getyzm"
                     android:layout_width="wrap_content"
                     android:layout_height="match_parent"
+                    android:layout_marginLeft="-2dp"
                     android:background="@drawable/m4399_rec_right_btn_bg"
-                    android:textColor="@color/m4399_rec_color_white"
                     android:gravity="center"
                     android:paddingLeft="@dimen/m4399_rec_liantong_cfm_captcha_padding"
                     android:paddingRight="@dimen/m4399_rec_liantong_cfm_captcha_padding"
+                    android:textColor="@color/m4399_rec_color_white"
                     android:textSize="15sp" />
             </LinearLayout>
 
             <EditText
-                android:background="@drawable/m4399_ope_bind_input_bg"
                 android:id="@+id/hpay_dy_et_yzm"
                 android:layout_width="match_parent"
                 android:layout_height="42dp"
                 android:layout_marginTop="4dip"
+                android:background="@drawable/m4399_ope_bind_input_bg"
                 android:imeOptions="actionDone"
                 android:inputType="number"
                 android:maxLength="6"
@@ -214,14 +216,14 @@
                 android:textColor="#FD0808" />
 
             <LinearLayout
-                android:visibility="gone"
                 android:layout_width="match_parent"
                 android:layout_height="0dp"
                 android:layout_marginBottom="@dimen/m4399_rec_single_btn_marginBottom"
                 android:layout_marginTop="@dimen/m4399_rec_single_btn_marginBottom"
                 android:layout_weight="1.0"
                 android:gravity="bottom"
-                android:orientation="vertical" >
+                android:orientation="vertical"
+                android:visibility="gone">
 
                 <Button
                     android:layout_width="match_parent"
@@ -241,14 +243,15 @@
             </LinearLayout>
         </LinearLayout>
     </ScrollView>
+
     <LinearLayout
-        android:layout_alignParentBottom="true"
         android:id="@+id/go_pay_view"
-        android:layout_marginLeft="@dimen/m4399_rec_page_margin"
-        android:layout_marginRight="@dimen/m4399_rec_page_margin"
-        android:layout_marginBottom="5dp"
         android:layout_width="fill_parent"
         android:layout_height="@dimen/m4399_rec_sum_btns_eara_height"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="5dp"
+        android:layout_marginLeft="@dimen/m4399_rec_page_margin"
+        android:layout_marginRight="@dimen/m4399_rec_page_margin"
         android:background="@color/m4399_rec_color_white">
 
         <Button
@@ -264,15 +267,15 @@
     </LinearLayout>
 
     <!--底部去掉-->
-   <LinearLayout
-       android:visibility="gone"
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="@dimen/m4399_rec_foot_height"
         android:background="@drawable/m4399_rec_mvcenter_foot_bg"
         android:gravity="center"
         android:orientation="horizontal"
         android:paddingLeft="@dimen/m4399_rec_paddingLeft"
-        android:paddingRight="@dimen/m4399_rec_paddingLeft" >
+        android:paddingRight="@dimen/m4399_rec_paddingLeft"
+        android:visibility="gone">
 
         <ImageView
             android:id="@+id/hpay_dy_iv_help"

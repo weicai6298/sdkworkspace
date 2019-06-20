@@ -28,7 +28,7 @@ import android.widget.Toast;
 import com.yayawan.main.YYWMain;
 import com.yayawan.proxy.YYWAnimation;
 
-public class AnimationImpl implements YYWAnimation {
+public class AnimationImpl implements YYWAnimation  {
 
 	@Override
 	public void anim(final Activity paramActivity) {
@@ -49,8 +49,8 @@ public class AnimationImpl implements YYWAnimation {
 
 			@Override
 			public void run() {
-				new LogoWindow(paramActivity);
-//				YYWMain.mAnimCallBack.onAnimSuccess("success", "");
+//				new LogoWindow(paramActivity);
+				YYWMain.mAnimCallBack.onAnimSuccess("success", "");
 			}
 		});
 

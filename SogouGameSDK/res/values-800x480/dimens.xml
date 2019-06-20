@@ -1,0 +1,9 @@
+<resources>
+
+    <!-- Default screen margins, per the Android Design guidelines. -->
+    <dimen name="btnTextSize">12sp</dimen>
+    <dimen name="headGameDes">120dp</dimen>
+    <dimen name="sogou_agreement">10sp</dimen>
+    <dimen name="headGameTitle">120dp</dimen>
+    <dimen name="rechargeName">13sp</dimen>
+</resources>

@@ -1,0 +1,14 @@
+android {
+	 productFlavors {
+	 	 "portrait_SDK" {
+	 	 	 applicationId "com.game.sdk.youtai340"
+	 	 	 versionCode 1
+	 	 	 resValue( "string", "app_name", "游钛SDK竖屏版" )
+	 	 }
+	 	 "landscape_SDK" {
+	 	 	 applicationId "com.game.sdk.youtai340landscape"
+	 	 	 versionCode 1
+	 	 	 resValue( "string", "app_name", "游钛SDK横屏版" )
+	 	 }
+	 }
+}

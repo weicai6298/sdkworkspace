@@ -3,5 +3,4 @@
     android:id="@+id/frag_content"
     android:layout_width="@dimen/m4399_ope_page_width"
     android:layout_height="@dimen/m4399_ope_page_phone_height"
-    android:background="@android:color/transparent">
-</FrameLayout>
+    android:background="@android:color/transparent"></FrameLayout>

@@ -13,6 +13,7 @@ import org.apache.http.impl.client.DefaultHttpClient;
 import org.apache.http.message.BasicNameValuePair;
 import org.apache.http.protocol.HTTP;
 import org.apache.http.util.EntityUtils;
+import org.json.JSONException;
 import org.json.JSONObject;
 
 import android.app.Activity;
@@ -29,6 +30,12 @@ import com.kkgame.sdkmain.KgameSdk;
 import com.kkgame.utils.DeviceUtil;
 import com.kkgame.utils.Handle;
 import com.kkgame.utils.JSONUtil;
+import com.lidroid.jxutils.HttpUtils;
+import com.lidroid.jxutils.exception.HttpException;
+import com.lidroid.jxutils.http.RequestParams;
+import com.lidroid.jxutils.http.ResponseInfo;
+import com.lidroid.jxutils.http.callback.RequestCallBack;
+import com.lidroid.jxutils.http.client.HttpRequest.HttpMethod;
 import com.yayawan.callback.YYWExitCallback;
 import com.yayawan.callback.YYWUserCallBack;
 import com.yayawan.domain.YYWUser;
@@ -129,52 +136,46 @@ public class YaYawanconstants{
 		or.setSession(session); // 设置用户session
 		or.setUsercode(userId); // 设置用户ID
 		order = or.toJsonOrder(); // 生成Json字符串订单
-		new Thread(new Runnable() {
-			@Override
-			public void run() {
-				// TODO Auto-generated method stub
-		try{
-		HttpPost httpPost = new HttpPost("https://api.sdk.75757.com/data/get_uid/");
-		Log.i("tag","httpPost="+httpPost);
+//		HttpPost httpPost = new HttpPost("https://api.sdk.75757.com/data/get_uid/");
 		bufanuserId =YYWMain.mUser.yywuid;;
 		 bufantoken = YYWMain.mUser.yywtoken;
-		Log.i("tag","bufanuserId="+bufanuserId);
-		Log.i("tag","bufantoken="+bufantoken);
-		 List<NameValuePair> params = new ArrayList<NameValuePair>(); 
-	        params.add(new BasicNameValuePair("xstr", order)); 
-	        params.add(new BasicNameValuePair("app_id", DeviceUtil.getAppid(mActivity))); 
-	        params.add(new BasicNameValuePair("uid", bufanuserId)); 
-	        params.add(new BasicNameValuePair("token ", bufantoken)); 
-	        Log.i("tag","params="+params);
-	        try { 
-	            // 设置httpPost请求参数 
-	        	Log.i("tag","httpPost1");
-//	        	HttpClient hc = new DefaultHttpClient();
-	            httpPost.setEntity(new UrlEncodedFormEntity(params, HTTP.UTF_8)); 
-	            Log.i("tag","httpPost2");
-//	            HttpGet hg = new HttpGet("http://gameapi.weisuiyu.com/");
-	            HttpResponse httpResponse = new DefaultHttpClient().execute(httpPost); 
-	            Log.i("tag","httpPost3");
-	            Log.i("tag","httpResponse.getStatusLine().getStatusCode()="+httpResponse.getStatusLine().getStatusCode());
-	            if(httpResponse.getStatusLine().getStatusCode() == 200){
-	            	String re = EntityUtils.toString(httpResponse.getEntity());
-//	            	Log.i("tag","re="+re);
-	            	JSONObject js = new JSONObject(re);
-//	            	Log.i("tag","js="+js);
-	            	sign = js.getString("sign");
-//	            	Log.i("test", "order = " + order);
-//	            	Log.i("test", "sign = " + sign);
-	            	JoloSDK.startPay(mActivity, order, sign); // 启动支付
-	            }
-	        }catch(ClientProtocolException e){
-	        	e.printStackTrace();
-	        }
+//	        params.add(new BasicNameValuePair("xstr", order)); 
+//	        params.add(new BasicNameValuePair("app_id", DeviceUtil.getAppid(mActivity))); 
+//	        params.add(new BasicNameValuePair("uid", bufanuserId)); 
+//	        params.add(new BasicNameValuePair("token ", bufantoken)); 
+//	            	sign = js.getString("sign");
+//	            	JoloSDK.startPay(mActivity, order, sign); // 启动支付
+//	            }
+		
+		HttpUtils httpUtil = new HttpUtils();
+		String url = "https://api.sdk.75757.com/data/get_uid/";
+		RequestParams requestParams = new RequestParams();
+		requestParams.addBodyParameter("app_id",DeviceUtil.getAppid(mActivity));
+		requestParams.addBodyParameter("xstr", order);
+		requestParams.addBodyParameter("uid", bufanuserId);
+		requestParams.addBodyParameter("token", bufantoken);
+		httpUtil.send(HttpMethod.POST, url, requestParams,
+				new RequestCallBack<String>() {
 
-	}catch (Exception e) {
+					@Override
+					public void onFailure(HttpException arg0, String arg1) {
+						// TODO Auto-generated method stub
+						Yayalog.loger("请求失败"+arg1.toString());
+					}
 
-	}
-			}
-		}).start();
+					@Override
+					public void onSuccess(ResponseInfo<String> arg0) {
+						// TODO Auto-generated method stub
+						try {
+							Yayalog.loger("请求成功"+arg0.result);
+							JSONObject obj = new JSONObject(arg0.result);
+							sign = obj.getString("sign");
+							JoloSDK.startPay(mActivity, order, sign); // 启动支付
+						} catch (JSONException e) {
+							e.printStackTrace();
+						}
+					}
+				});
 		
 //		String privatekey = ""+DeviceUtil.getGameInfo(mactivity, "privatekey");
 //		sign = RsaSign.sign(order, privatekey); // 签名

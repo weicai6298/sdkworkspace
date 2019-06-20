@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/pay_color_ffffff">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="50dp">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:text="@string/ChooseCoupons"
+                android:textColor="@color/pay_color_333333"
+                android:textSize="17sp" />
+
+            <FrameLayout
+                android:id="@+id/payCouponBack"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_gravity="left">
+
+                <ImageView
+                    android:layout_width="11dp"
+                    android:layout_height="18dp"
+                    android:layout_gravity="center"
+                    android:background="@drawable/pay_return" />
+            </FrameLayout>
+
+            <Button
+                android:id="@+id/payCouponOK"
+                android:layout_width="@dimen/size_60dp"
+                android:layout_height="@dimen/size_30dp"
+                android:layout_gravity="center_vertical|right"
+                android:layout_marginRight="@dimen/size_17dp"
+                android:background="@drawable/pay_bg_3095fb_circle"
+                android:text="@string/notarize"
+                android:textColor="@color/pay_color_ffffff"
+                android:textSize="15sp" />
+        </FrameLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="2px"
+            android:background="@color/pay_color_bbbbbb" />
+
+        <ListView
+            android:id="@+id/payCouponRV"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/size_0dp"
+            android:divider="#ffffff"
+            android:listSelector="@android:color/transparent"
+            android:dividerHeight="0dp"
+            android:layout_weight="1"
+            android:background="@color/pay_color_f2f2f2" />
+
+    </LinearLayout>
+
+    <include
+        layout="@layout/progress"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_gravity="center" />
+</FrameLayout>

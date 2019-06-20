@@ -1,0 +1,21 @@
+# view AndroidManifest.xml #generated:65
+-keep class com.kkgame.sdk.login.BaseLogin_Activity { <init>(...); }
+
+# view AndroidManifest.xml #generated:69
+-keep class com.kkgame.sdk.login.SmallHelpActivity { <init>(...); }
+
+# view AndroidManifest.xml #generated:116
+-keep class com.kkgame.sdk.login.zhuceClipBoardService { <init>(...); }
+
+# view AndroidManifest.xml #generated:112
+-keep class com.yayawan.impl.ClipBoardService { <init>(...); }
+
+# view AndroidManifest.xml #generated:48
+-keep class com.yayawan.impl.YYApplication { <init>(...); }
+
+# view AndroidManifest.xml #generated:114
+-keep class com.yayawan.impl.payClipBoardService { <init>(...); }
+
+# view AndroidManifest.xml #generated:53
+-keep class com.yayawan.sdkyyw.MainActivity { <init>(...); }
+

@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content">
+
+    <ImageView
+        android:id="@+id/imageView17"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:scaleType="fitXY"
+        android:src="@drawable/wan_wan_card_item_bg" />
+
+    <ImageView
+        android:id="@+id/iconImageView"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="28dp"
+        android:src="@drawable/wan_icon_image_placeholder" />
+
+    <TextView
+        android:id="@+id/titleTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/iconImageView"
+        android:layout_marginStart="6dp"
+        android:layout_marginTop="2dp"
+        android:layout_toEndOf="@+id/iconImageView"
+        android:fontFamily="sans-serif"
+        android:text="起凡名将录(Android）-玩币卡"
+        android:textColor="@color/wan_text_black"
+        android:textSize="12sp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/textView34"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/iconImageView"
+        android:layout_marginStart="6dp"
+        android:layout_marginBottom="2dp"
+        android:layout_toEndOf="@+id/iconImageView"
+        android:text="卡内余额："
+        android:textColor="@color/wan_text_black"
+        android:textSize="12sp" />
+
+    <TextView
+        android:id="@+id/limitationTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/imageView17"
+        android:layout_marginStart="16dp"
+        android:layout_marginBottom="30dp"
+        android:text="仅适用于该游戏-有效期至2019-03-19"
+        android:textColor="#666666"
+        android:textSize="11sp" />
+
+    <ImageView
+        android:id="@+id/imageView19"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginBottom="8dp"
+        android:layout_toStartOf="@+id/linearLayout"
+        android:scaleType="fitXY"
+        android:src="@drawable/wan_dot_line" />
+
+    <LinearLayout
+        android:id="@+id/linearLayout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignEnd="@+id/imageView17"
+        android:layout_centerVertical="true"
+        android:layout_marginEnd="35dp"
+        android:gravity="bottom"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/textView37"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="2dp"
+            android:layout_marginBottom="2dp"
+            android:text="￥"
+            android:textSize="18sp" />
+
+        <TextView
+            android:id="@+id/amountTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="128"
+            android:textSize="30sp"
+            android:textStyle="bold" />
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/balanceTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/textView34"
+        android:layout_marginStart="0dp"
+        android:layout_marginBottom="0dp"
+        android:layout_toEndOf="@+id/textView34"
+        android:text="￥8"
+        android:textColor="@color/wan_main"
+        android:textSize="14sp" />
+
+    <ImageView
+        android:id="@+id/usedImageView"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:layout_alignEnd="@+id/imageView17"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="35dp"
+        android:layout_weight="1"
+        android:src="@drawable/wan_icon_used" />
+</RelativeLayout>

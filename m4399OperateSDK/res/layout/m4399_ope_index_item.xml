@@ -5,9 +5,8 @@
     android:layout_height="wrap_content"
     android:gravity="center_horizontal"
     android:orientation="vertical"
-    android:paddingTop="16dp"
     android:paddingBottom="16dp"
-    >
+    android:paddingTop="16dp">
 
     <LinearLayout
         android:id="@+id/index_coupon"

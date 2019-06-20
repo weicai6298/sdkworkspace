@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+             android:layout_width="match_parent"
+             android:layout_height="match_parent" >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginBottom="@dimen/samsung_notice_margin_25"
+        android:layout_marginLeft="@dimen/samsung_notice_margin_50"
+        android:layout_marginRight="@dimen/samsung_notice_margin_50"
+        android:layout_marginTop="@dimen/samsung_notice_margin_25"
+        android:orientation="vertical">
+
+        <!--titleBar-->
+        <include
+            android:id="@+id/sam_dialog_title_bar"
+            layout="@layout/samsung_notice_dialog_title_bar" />
+
+        <FrameLayout
+            android:id="@+id/dialog_body"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/samsung_notice_dialog_body_shape" />
+    </LinearLayout>
+
+</FrameLayout>

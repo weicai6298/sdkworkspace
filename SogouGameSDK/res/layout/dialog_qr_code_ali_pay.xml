@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_centerInParent="true"
+    >
+
+    <LinearLayout
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:background="@drawable/qr_code_pay_dialog"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true">
+
+        <RelativeLayout
+            android:id="@+id/qr_code_pay_title"
+            android:layout_width="match_parent"
+            android:layout_height="34dp"
+            android:paddingLeft="15dp"
+            android:paddingRight="10dp"
+            android:background="@drawable/qr_code_pay_title"
+            >
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:textSize="14sp"
+                android:textColor="@color/gamecat_color_333"
+                android:text="@string/qr_code_pay_center"
+                />
+            <ImageView
+                android:id="@+id/qr_code_pay_close"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:clickable="true"
+                android:onClick="onClick"
+                android:layout_centerVertical="true"
+                android:layout_alignParentRight="true"
+                android:src="@drawable/qr_code_pay_cancle"
+                />
+        </RelativeLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="7.5dp"
+            android:layout_marginLeft="30.5dp"
+            android:orientation="vertical"
+            >
+
+            <ImageView
+                android:id="@+id/qr_code_pay_icon"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/qr_code_ali_pay"
+                />
+
+            <TextView
+                android:id="@+id/qr_code_pay_account"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"
+                android:layout_marginTop="9.5dp"
+                android:textSize="12sp"
+                android:textColor="@color/gamecat_color_333"
+                android:text="@string/qr_code_pay_account"
+                />
+
+            <TextView
+                android:id="@+id/qr_code_pay_num"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"
+                android:textSize="12sp"
+                android:textColor="@color/gamecat_color_333"
+                android:text="@string/qr_code_pay_number"
+                />
+            <TextView
+                android:id="@+id/qr_code_pay_buy_num"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"
+                android:textSize="12sp"
+                android:textColor="@color/gamecat_color_333"
+                android:text="@string/qr_code_pay_buy_num"
+                />
+            <TextView
+                android:id="@+id/qr_code_pay_goods"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"
+                android:textSize="12sp"
+                android:textColor="@color/gamecat_color_333"
+                android:text="@string/qr_code_pay_buy_goods"
+                />
+            
+            <View
+                android:layout_width="250dp"
+                android:layout_height="0.5dp"
+                android:background="@color/sogou_game_sdk_color_e9e9e9"
+                />
+
+
+        </LinearLayout>
+        <LinearLayout
+            android:id="@+id/qr_code_view"
+            android:layout_width="match_parent"
+            android:layout_height="117dp">
+            <include layout="@layout/dialog_qr_pay_loading" />
+            <include layout="@layout/dialog_qr_pay_notify_timeout" />
+            <include layout="@layout/dialog_qr_pay_display_qr" />
+            <include layout="@layout/cancel_qr_code_pay"/>
+        </LinearLayout>
+        <TextView
+            android:layout_width="270dp"
+            android:layout_height="24dp"
+            android:layout_marginTop="15dp"
+            android:layout_marginBottom="15sp"
+            android:background="@color/sogou_game_sdk_color_f5f5f5"
+            android:layout_gravity="center_horizontal"
+            android:gravity="center"
+            android:textSize="10sp"
+            android:textColor="@color/sogou_game_sdk_color_999999"
+            android:text="@string/qr_code_pay_point"
+            />
+        </LinearLayout>
+</RelativeLayout>

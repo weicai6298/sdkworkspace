@@ -1,0 +1,288 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:paddingLeft="10dp"
+    android:paddingRight="10dp"
+    >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+
+        <LinearLayout
+            android:id="@+id/sy233ll_balance"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/ll_balance_money"
+                android:layout_width="wrap_content"
+                android:layout_height="35dp"
+                android:gravity="center"
+                android:text="余额"
+                android:textColor="@color/sy233blacktextcolor"
+                android:textSize="15sp"/>
+
+            <TextView
+                android:id="@+id/sy233ll_platform"
+                android:layout_width="wrap_content"
+                android:layout_height="35dp"
+                android:gravity="center"
+                android:text="平台币"
+                android:textColor="@color/sy233blacktextcolor"
+                android:textSize="15sp"/>
+
+            <TextView
+                android:visibility="gone"
+                android:id="@+id/sy233ll_private_money"
+                android:layout_width="wrap_content"
+                android:layout_height="35dp"
+                android:gravity="center"
+                android:text="代币"
+                android:textColor="@color/sy233blacktextcolor"
+                android:textSize="15sp"/>
+
+            <TextView
+                android:visibility="gone"
+                android:id="@+id/tv_coupon_layout"
+                android:layout_width="wrap_content"
+                android:layout_height="30dp"
+                android:gravity="center"
+                android:text="优惠券"
+                android:textColor="@color/sy233blacktextcolor"
+                android:textSize="15sp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="30dp"
+                android:gravity="center"
+                android:text="还需支付"
+                android:textColor="@color/sy233blacktextcolor"
+                android:textSize="15sp"/>
+
+            <TextView
+                android:visibility="gone"
+                android:id="@+id/sy233ll_thrid_pay"
+                android:layout_width="wrap_content"
+                android:layout_height="44dp"
+                android:gravity="center"
+                android:text="支付方式"
+                android:textColor="@color/sy233blacktextcolor"
+                android:textSize="15sp"/>
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/sy233ll_balance2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:orientation="vertical">
+
+
+            <RelativeLayout
+                android:id="@+id/ll_balance_money2"
+                android:layout_width="match_parent"
+                android:layout_height="35dp"
+                android:orientation="horizontal">
+
+                <CheckBox
+                    android:id="@+id/sy233cb_balance"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:button="@drawable/sy233switch_bg"/>
+
+                <TextView
+                    android:id="@+id/sy233tv_remain_balance"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="10dp"
+                    android:layout_toLeftOf="@+id/sy233cb_balance"
+                    android:paddingLeft="2dp"
+                    android:paddingRight="2dp"
+                    android:text=""
+                    android:textColor="@color/sy233graytextcolor"
+
+                    android:textSize="10sp"/>
+
+                <TextView
+                    android:id="@+id/sy233tv_balance"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:text="-0.00元"
+                    android:textColor="@color/sy233graytextcolor"
+                    android:textSize="15sp"/>
+            </RelativeLayout>
+
+
+            <RelativeLayout
+                android:id="@+id/sy233ll_platform2"
+                android:layout_width="match_parent"
+                android:layout_height="35dp"
+                android:orientation="horizontal">
+
+                <CheckBox
+                    android:id="@+id/sy233cb_platform"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:button="@drawable/sy233switch_bg"/>
+
+                <TextView
+                    android:id="@+id/sy233tv_remain_platform"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="10dp"
+                    android:layout_toLeftOf="@+id/sy233cb_platform"
+                    android:paddingLeft="2dp"
+                    android:paddingRight="2dp"
+                    android:text=""
+                    android:textColor="@color/sy233graytextcolor"
+                    android:textSize="11sp"/>
+
+                <TextView
+                    android:id="@+id/sy233tv_platform"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:text="-0.00元"
+                    android:textColor="@color/sy233graytextcolor"
+                    android:textSize="15sp"/>
+            </RelativeLayout>
+            <RelativeLayout
+                android:visibility="gone"
+                android:id="@+id/sy233ll_private_money2"
+                android:layout_width="match_parent"
+                android:layout_height="35dp"
+                android:orientation="horizontal">
+
+                <CheckBox
+                    android:id="@+id/sy233cb_private_money"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:button="@drawable/sy233switch_bg"/>
+
+                <TextView
+                    android:id="@+id/sy233tv_remain_private_money"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="10dp"
+                    android:layout_toLeftOf="@+id/sy233cb_private_money"
+                    android:paddingLeft="2dp"
+                    android:paddingRight="2dp"
+                    android:text=""
+                    android:textColor="@color/sy233graytextcolor"
+                    android:textSize="12sp"/>
+
+                <TextView
+                    android:id="@+id/sy233tv_private_money"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:text="-0.00元"
+                    android:textColor="@color/sy233graytextcolor"
+                    android:textSize="15sp"/>
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:visibility="gone"
+                android:id="@+id/tv_coupon_layout2"
+                android:layout_width="match_parent"
+                android:layout_height="30dp"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:id="@+id/temp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:src="@mipmap/sy233arrow"/>
+
+                <TextView
+                    android:id="@+id/sy233tv_select_coupon"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_toLeftOf="@+id/temp"
+                    android:background="@drawable/sy233tip_coupon_bg"
+                    android:paddingLeft="2dp"
+                    android:paddingRight="2dp"
+                    android:text="0张可用"
+                    android:textColor="@color/sy233white"
+                    android:textSize="11sp"/>
+
+                <TextView
+                    android:id="@+id/sy233tv_coupon_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_centerVertical="true"
+                    android:layout_toLeftOf="@id/sy233tv_select_coupon"
+                    android:ellipsize="end"
+                    android:paddingRight="2dp"
+                    android:singleLine="true"
+                    android:text="未使用"
+                    android:textColor="@color/sy233graytextcolor"
+                    android:textSize="15sp"/>
+            </RelativeLayout>
+
+            <TextView
+                android:id="@+id/sy233tv_need_price"
+                android:layout_width="wrap_content"
+                android:layout_height="30dp"
+                android:gravity="center"
+                android:text="0.00元"
+                android:textSize="15sp"
+                android:textColor="@color/sy233discount_color"/>
+
+            <LinearLayout
+                android:visibility="visible"
+                android:id="@+id/sy233ll_thrid_pay2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:id="@+id/sy233iv_wxpay"
+                    android:layout_width="44dp"
+                    android:layout_height="44dp"
+                    android:background="@drawable/sy233wxselect_bg"
+                    android:padding="5dp"
+                    android:src="@mipmap/sy233wx"/>
+
+                <ImageView
+                    android:id="@+id/sy233iv_alipay"
+                    android:layout_width="44dp"
+                    android:layout_height="44dp"
+                    android:layout_marginLeft="10dp"
+                    android:background="@drawable/sy233wxselect_bg"
+                    android:padding="5dp"
+                    android:src="@mipmap/sy233alipay"/>
+
+            </LinearLayout>
+        </LinearLayout>
+
+    </LinearLayout>
+
+
+</LinearLayout>
+

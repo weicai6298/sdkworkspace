@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <color name="yxf_sdk_white">#FFFFFF</color>
+    <color name="yxf_sdk_black">#000000</color>
+    <color name="yxf_sdk_gray">#9E9E9E</color>
+    <color name="yxf_sdk_gray_result">#8A8A8F</color>
+    <color name="yxf_sdk_gray_title">#35280B</color>
+    <color name="yxf_sdk_gray_float_order">#141C20</color>
+    <color name="yxf_sdk_blue">#10C5DA</color>
+    <color name="yxf_sdk_red">#E72224</color>
+    <color name="yxf_sdk_bg_tran">#c0000000</color>
+    <color name="yxf_sdk_bg_stroke">#49494C</color>
+    <color name="yxf_sdk_green">#45BC0E</color>
+    <color name="yxf_sdk_bt_yel">#FFC936</color>
+    <color name="yxf_sdk_green_result">#26CC14</color>
+    <color name="yxf_sdk_gray_edit">#E8E8E8</color>
+    <color name="yxf_sdk_orange">#FF7417</color>
+    <color name="yxf_sdk_gray_voice">#E0E0E0</color>
+	
+	<color name="yxf_sdk_black_gray">#282828</color>
+
+</resources>

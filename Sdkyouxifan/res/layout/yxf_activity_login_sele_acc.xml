@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:id="@+id/rl_login_register"
+        android:layout_width="306.67dp"
+        android:layout_height="wrap_content"
+        android:minHeight="306.67dp"
+        android:layout_centerInParent="true"
+        android:visibility="visible">
+
+<!--        <View
+            android:id="@+id/view_whi1"
+            android:layout_width="200dp"
+            android:layout_height="0.1dp"
+            android:layout_centerHorizontal="true"
+            android:background="@drawable/yxf_lin_shape_whi"></View>-->
+
+        <RelativeLayout
+            android:id="@+id/rl_login_register_in"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+
+            android:background="@drawable/yxf_bt_in_bg_whi">
+
+            <RelativeLayout
+                android:id="@+id/rl_in_title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp">
+
+                <ImageView
+                    android:id="@+id/iv_finish"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="14dp"
+                    android:padding="8dp"
+                    android:src="@drawable/yxf_left_black_back" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:text="选择登录账号"
+                    android:textColor="@color/yxf_sdk_gray_title"
+                    android:textSize="17.33sp" />
+
+            </RelativeLayout>
+
+  <!--          <com.game.sdk.ui.weight.PickerFiveView
+                android:id="@+id/picker"
+                android:layout_width="match_parent"
+                android:layout_height="176dp"
+                android:layout_marginLeft="50dp"
+                android:layout_marginRight="40dp"
+                android:layout_marginTop="10dp"
+                android:layout_below="@+id/rl_in_title"
+                />-->
+
+<!--          <com.game.sdk.ui.weight.MyNumberPicker
+              android:id="@+id/picker"
+              android:layout_width="match_parent"
+              android:layout_height="176dp"
+              android:layout_marginLeft="40dp"
+              android:layout_marginRight="40dp"
+              android:layout_marginTop="10dp"
+              android:layout_below="@+id/rl_in_title"
+              android:descendantFocusability="blocksDescendants"
+              />-->
+
+            <com.game.sdk.ui.weight.NumberPickerView
+                android:id="@+id/picker"
+                android:layout_width="match_parent"
+                android:layout_height="176dp"
+                android:layout_marginLeft="26.67dp"
+                android:layout_marginRight="26.67dp"
+                android:layout_marginTop="10dp"
+                android:layout_below="@+id/rl_in_title" />
+
+          <RelativeLayout
+              android:layout_width="253.33dp"
+              android:layout_height="30dp"
+              android:background="@drawable/yxf_tran_whi"
+              android:layout_below="@+id/rl_in_title"
+              android:layout_centerHorizontal="true"
+              android:layout_marginTop="83dp"
+              >
+
+              <ImageView
+                  android:layout_width="wrap_content"
+                  android:layout_height="wrap_content"
+                  android:src="@drawable/yxf_sele_acc"
+                  android:layout_centerVertical="true"
+                  android:layout_alignParentRight="true"
+                  android:layout_marginRight="12.67dp"
+                  />
+
+          </RelativeLayout>
+
+          <LinearLayout
+              android:id="@+id/ll_login_layout"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:layout_below="@+id/picker"
+              android:layout_centerHorizontal="true"
+              android:layout_gravity="center"
+              android:layout_marginLeft="26.67dp"
+              android:layout_marginRight="26.67dp"
+              android:layout_marginTop="10dp"
+              android:paddingBottom="24dp"
+              android:orientation="vertical">
+
+<!--                <View
+                  android:id="@+id/login_line1"
+                  android:layout_width="200dp"
+                  android:layout_height="0.1dp"
+                  android:layout_gravity="center_horizontal"
+                  android:background="@drawable/yxf_lin_shape_yel"
+                  android:visibility="visible"></View>-->
+
+                <Button
+                    android:id="@+id/btn_login"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:background="@drawable/yxf_lin_shape_red"
+                    android:text="进入游戏"
+                    android:textColor="@color/yxf_sdk_gray_title"
+                    android:textSize="14.67sp" />
+
+<!--                <View
+                    android:id="@+id/login_line2"
+                    android:layout_width="200dp"
+                    android:layout_height="0.1dp"
+                    android:layout_gravity="center_horizontal"
+                    android:background="@drawable/yxf_lin_shape_yel"
+                    android:visibility="visible"></View>-->
+
+            </LinearLayout>
+
+        </RelativeLayout>
+
+<!--        <View
+            android:layout_width="200dp"
+            android:layout_height="0.1dp"
+            android:layout_below="@+id/rl_login_register_in"
+            android:layout_centerHorizontal="true"
+            android:background="@drawable/yxf_lin_shape_whi"></View>-->
+
+    </RelativeLayout>
+
+</RelativeLayout>

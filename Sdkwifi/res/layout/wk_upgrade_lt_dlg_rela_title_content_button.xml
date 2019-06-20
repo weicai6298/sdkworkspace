@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/wk_upgrade_ic_dlg_border_bg"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:id="@+id/lt_dlg_rela_frame_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:gravity="left|center_vertical"
+        android:orientation="horizontal"
+        android:padding="12dip" >
+    </LinearLayout>
+
+    <View
+        android:id="@+id/lt_dlg_rela_frame_line0"
+        android:layout_width="match_parent"
+        android:layout_height="1dip"
+        android:visibility="gone"
+        android:layout_below="@+id/lt_dlg_rela_frame_title"
+        android:background="#8ac4f3" />
+
+    <LinearLayout
+        android:id="@+id/lt_dlg_rela_frame_message"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/lt_dlg_rela_frame_title"
+        android:gravity="left|center_vertical"
+        android:orientation="vertical"
+        android:padding="12dip" >
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dip"
+            android:layout_below="@+id/lt_dlg_rela_frame_title"
+            android:background="#8ac4f3" />
+    </LinearLayout>
+
+    <View
+        android:id="@+id/wk_upgrade_lt_dlg_rela_frame_line1"
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:layout_below="@+id/lt_dlg_rela_frame_message"
+        android:background="#666666" />
+
+    <LinearLayout
+        android:id="@+id/wk_upgrade_lt_dlg_rela_frame_buttons"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/wk_upgrade_lt_dlg_rela_frame_line1"
+        android:orientation="horizontal" >
+
+        <Button
+            style="@style/wk_upgrade_Lt_Dlg_Button"
+            android:background="@drawable/wk_upgrade_lt_bg_dlg_btn_left"
+            android:textColor="@color/wk_upgrade_lt_dlg_btn_cancel" />
+
+        <View
+            android:layout_width="1px"
+            android:layout_height="match_parent"
+            android:background="#666666" />
+
+        <Button
+            style="@style/wk_upgrade_Lt_Dlg_Button"
+            android:background="@drawable/wk_upgrade_lt_bg_dlg_btn_center"
+            android:textColor="@color/wk_upgrade_lt_dlg_btn_ok" />
+
+        <View
+            android:layout_width="1px"
+            android:layout_height="match_parent"
+            android:background="#666666" />
+
+        <Button
+            style="@style/wk_upgrade_Lt_Dlg_Button"
+            android:background="@drawable/wk_upgrade_lt_bg_dlg_btn_right"
+            android:textColor="@color/wk_upgrade_lt_dlg_btn_ok" />
+    </LinearLayout>
+
+</RelativeLayout>

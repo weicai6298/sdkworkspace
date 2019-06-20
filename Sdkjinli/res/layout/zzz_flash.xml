@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/zzz_flash_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/zzz_flash_background_color">
+
+    <View
+        android:layout_width="@dimen/zzz_flash_icon_width"
+        android:layout_height="@dimen/zzz_flash_icon_height"
+        android:layout_centerInParent="true"
+        android:background="@drawable/zzz_flash_icon" />
+
+    <TextView
+        android:id="@+id/zzz_flash_tips"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="@dimen/zzz_flash_tips_margin_bottom"
+        android:text="@string/zzz_waitting_for_game_upgrade"
+        android:textColor="@color/zzz_gifttext_black"
+        android:visibility="gone" />
+
+    <View
+        android:id="@+id/zzz_flash_cover"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/zzz_flash_cover_color"
+        android:visibility="gone"/>
+</RelativeLayout>

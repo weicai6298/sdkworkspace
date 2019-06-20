@@ -5,7 +5,7 @@
     android:layout_height="@dimen/m4399_rec_title_height"
     android:background="@color/m4399_rec_color_yellow"
     android:gravity="center_vertical"
-    android:orientation="horizontal" >
+    android:orientation="horizontal">
 
     <LinearLayout
         android:id="@+id/left_view"
@@ -27,13 +27,13 @@
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
             android:layout_centerInParent="true"
-            android:textColor="@android:color/white"
-            android:textSize="20sp"
-            tools:text="@string/hpay_recharge"
-            android:maxLines="1"
+            android:layout_marginLeft="10dp"
             android:ellipsize="end"
             android:gravity="center"
-            android:layout_marginLeft="10dp"/>
+            android:maxLines="1"
+            android:textColor="@android:color/white"
+            android:textSize="20sp"
+            tools:text="@string/hpay_recharge" />
     </LinearLayout>
 
 
@@ -41,33 +41,33 @@
         android:id="@+id/sdk_title_right"
         android:layout_width="wrap_content"
         android:layout_height="match_parent"
-        android:orientation="horizontal"
-        android:background="@drawable/m4399_rec_close_btn_bg"
         android:layout_alignParentRight="true"
+        android:background="@drawable/m4399_rec_close_btn_bg"
         android:clickable="true"
         android:focusable="true"
         android:gravity="center"
+        android:orientation="horizontal"
         android:paddingLeft="@dimen/m4399_rec_paddingLeft"
-        android:paddingRight="@dimen/m4399_rec_paddingRight" >
+        android:paddingRight="@dimen/m4399_rec_paddingRight">
 
         <ImageView
             android:id="@+id/sdk_help_img"
-            android:layout_marginRight="8dp"
-            android:layout_marginTop="8dp"
-            android:layout_marginBottom="8dp"
             android:layout_width="20dp"
             android:layout_height="20dp"
+            android:layout_marginBottom="8dp"
+            android:layout_marginRight="8dp"
+            android:layout_marginTop="8dp"
             android:clickable="false"
             android:focusable="false"
             android:src="@drawable/m4399_rec_help" />
+
         <TextView
             android:id="@+id/sdk_title_right_tv"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            tools:text="@string/m4399_rec_my_order"
             android:textColor="@android:color/white"
             android:textSize="18sp"
-            />
+            tools:text="@string/m4399_rec_my_order" />
 
     </LinearLayout>
 

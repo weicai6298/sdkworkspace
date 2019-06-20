@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/pay_color_ffffff">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="50dp">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:text="@string/paymentMethod"
+                android:textColor="@color/pay_color_333333"
+                android:textSize="17sp" />
+
+            <FrameLayout
+                android:id="@+id/payCardBack"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_gravity="left">
+
+                <ImageView
+                    android:layout_width="11dp"
+                    android:layout_height="18dp"
+                    android:layout_gravity="center"
+                    android:background="@drawable/pay_return" />
+            </FrameLayout>
+        </FrameLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="2px"
+            android:background="@color/pay_color_bbbbbb" />
+
+        <ListView
+            android:id="@+id/payCardRV"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/size_0dp"
+            android:listSelector="@android:color/transparent"
+            android:divider="@color/pay_color_e9e9e9"
+            android:dividerHeight="@dimen/size_1px"
+            android:layout_weight="1"/>
+
+    </LinearLayout>
+
+    <include
+        layout="@layout/progress"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_gravity="center" />
+</FrameLayout>

@@ -1,0 +1,259 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.yayawan.sdktemplate"
+    android:versionCode="1"
+    android:versionName="1.0" >
+
+    <uses-sdk
+        android:minSdkVersion="8"
+        android:targetSdkVersion="19" />
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW" />
+    <uses-permission android:name="android.permission.GET_TASKS" />
+    
+
+    <application
+        android:name="com.yayawan.impl.YYApplication"
+        android:allowBackup="true"
+        android:theme="@android:style/Theme.NoTitleBar.Fullscreen" >
+        <activity
+            android:name="com.yayawan.sdktemplate.MainActivity"
+            android:configChanges="keyboardHidden|navigation|orientation|screenSize"
+            android:label="app_name" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+      
+        
+      <!-- 手游互联配置 -->
+     	 <meta-data
+            android:name="app_id"
+            android:value="kk1323291216" />
+        <meta-data
+            android:name="isLandscape"
+            android:value="true" />
+        
+        
+          <!--                        渠道內容                            -->
+          <meta-data
+            android:name="reyunId"
+            android:value="f8aaeffaf02c7aab2dba491781d0e641" />
+
+        <meta-data
+            android:name="reyunChannel"
+            android:value="syh" />
+
+        <meta-data
+            android:name="toutiaoId"
+            android:value="153310" />
+
+        <meta-data
+            android:name="toutiaoName"
+            android:value="ahyz_android" />
+
+        <meta-data
+            android:name="toutiaoChannel"
+            android:value="syh" />
+          <!--                        需要修改的內容                            -->
+        <!--appid-->
+        <meta-data
+            android:name="ssapp_id"
+            android:value="ae14149db9d13d03" />
+
+        <!-- 是否为调试模式 -->
+        <meta-data
+            android:name="isdebug"
+            android:value="false" />
+        
+         <meta-data
+            android:name="callback"
+            android:value="https://api.sdk.75757.com/pay/notify/1323291216/" />
+
+        <!-- Daemon Service running in child process -->
+        <!--showJwSplash=true sdk将弹出内部默认闪屏-->
+        <meta-data
+            android:name="showJwSplash"
+            android:value="true"
+            />
+        
+        <service
+            android:name="com.game91.core.instant.virtualapk.delegate.RemoteService"
+            android:process=":sdkcore">
+            <intent-filter>
+                <action android:name="string_package.intent.ACTION_DAEMON_SERVICE" />
+            </intent-filter>
+        </service>
+
+        <provider
+            android:name="com.game91.core.instant.virtualapk.delegate.RemoteContentProvider"
+            android:authorities="string_package.GameSdk.Provider"
+            android:process=":sdkcore" />
+
+<activity 
+            android:name="com.game91.framework.act.DarkListActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:screenOrientation="behind"
+            android:launchMode="singleTop"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar.Fullscreen" />
+
+        <!--                        不需要修改的內容                            -->
+        <activity android:name="com.game91.framework.result.RxResultActivity"
+            android:screenOrientation="behind"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar.Fullscreen"/>
+
+        <!-- Stub Activities -->
+        <activity
+            android:name="com.game91.core.instant.virtualapk.activity.A$1"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:launchMode="standard"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar.Fullscreen" />
+        <activity
+            android:name="com.game91.core.instant.virtualapk.activity.A$2"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:launchMode="standard"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar.Fullscreen" />
+
+        <!-- Stub Activities -->
+        <activity
+            android:name="com.game91.core.instant.virtualapk.activity.B$1"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:launchMode="singleTop"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar.Fullscreen" />
+        <activity
+            android:name="com.game91.core.instant.virtualapk.activity.B$2"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:launchMode="singleTop"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar.Fullscreen" />
+        <activity
+            android:name="com.game91.core.instant.virtualapk.activity.B$3"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:launchMode="singleTop"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar.Fullscreen" />
+        <activity
+            android:name="com.game91.core.instant.virtualapk.activity.B$4"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:launchMode="singleTop"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar.Fullscreen" />
+        <activity
+            android:name="com.game91.core.instant.virtualapk.activity.B$5"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:launchMode="singleTop"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar.Fullscreen" />
+        <activity
+            android:name="com.game91.core.instant.virtualapk.activity.B$6"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:launchMode="singleTop"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar.Fullscreen" />
+        <activity
+            android:name="com.game91.core.instant.virtualapk.activity.B$7"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:launchMode="singleTop"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar.Fullscreen" />
+        <activity
+            android:name="com.game91.core.instant.virtualapk.activity.B$8"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:launchMode="singleTop"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar.Fullscreen" />
+
+        <!-- Stub Activities -->
+        <activity
+            android:name="com.game91.core.instant.virtualapk.activity.C$1"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:launchMode="singleTask"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar.Fullscreen" />
+        <activity
+            android:name="com.game91.core.instant.virtualapk.activity.C$2"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:launchMode="singleTask"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar.Fullscreen" />
+        <activity
+            android:name="com.game91.core.instant.virtualapk.activity.C$3"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:launchMode="singleTask"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar.Fullscreen" />
+        <activity
+            android:name="com.game91.core.instant.virtualapk.activity.C$4"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:launchMode="singleTask"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar.Fullscreen" />
+        <activity
+            android:name="com.game91.core.instant.virtualapk.activity.C$5"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:launchMode="singleTask"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar.Fullscreen" />
+        <activity
+            android:name="com.game91.core.instant.virtualapk.activity.C$6"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:launchMode="singleTask"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar.Fullscreen" />
+        <activity
+            android:name="com.game91.core.instant.virtualapk.activity.C$7"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:launchMode="singleTask"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar.Fullscreen" />
+        <activity
+            android:name="com.game91.core.instant.virtualapk.activity.C$8"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:launchMode="singleTask"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar.Fullscreen" />
+
+        <!-- Stub Activities -->
+        <activity
+            android:name="com.game91.core.instant.virtualapk.activity.D$1"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:launchMode="singleInstance"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar.Fullscreen" />
+        <activity
+            android:name="com.game91.core.instant.virtualapk.activity.D$2"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:launchMode="singleInstance"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar.Fullscreen" />
+        <activity
+            android:name="com.game91.core.instant.virtualapk.activity.D$3"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:launchMode="singleInstance"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar.Fullscreen" />
+        <activity
+            android:name="com.game91.core.instant.virtualapk.activity.D$4"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:launchMode="singleInstance"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar.Fullscreen" />
+        <activity
+            android:name="com.game91.core.instant.virtualapk.activity.D$5"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:launchMode="singleInstance"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar.Fullscreen" />
+        <activity
+            android:name="com.game91.core.instant.virtualapk.activity.D$6"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:launchMode="singleInstance"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar.Fullscreen" />
+        <activity
+            android:name="com.game91.core.instant.virtualapk.activity.D$7"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:launchMode="singleInstance"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar.Fullscreen" />
+        <activity
+            android:name="com.game91.core.instant.virtualapk.activity.D$8"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:launchMode="singleInstance"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar.Fullscreen" />
+
+        <!-- Local Service running in main process -->
+        <service android:name="com.game91.core.instant.virtualapk.delegate.LocalService" />
+    
+    </application>
+
+</manifest>
+

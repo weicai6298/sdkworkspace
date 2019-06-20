@@ -10,6 +10,7 @@ import android.app.Activity;
 import android.app.ProgressDialog;
 import android.os.Handler;
 import android.os.Looper;
+import android.util.Log;
 import android.widget.Toast;
 
 
@@ -53,6 +54,7 @@ public class ChargerImpl implements YYWCharger {
 	}
 
 	String orderId = null;
+	String sign = null;
 
 	public void createOrder(final Activity paramActivity) {
 		progress(paramActivity);
@@ -65,6 +67,10 @@ public class ChargerImpl implements YYWCharger {
 		requestParams.addBodyParameter("remark", YYWMain.mOrder.ext);
 		requestParams.addBodyParameter("transid", YYWMain.mOrder.orderId);
 		requestParams.addBodyParameter("username", YYWMain.mUser.userName);
+		
+		requestParams.addBodyParameter("yxf_uid", YaYawanconstants.yxf_uid);
+		requestParams.addBodyParameter("roleid", YaYawanconstants.role_Id);
+		requestParams.addBodyParameter("zoneid", YaYawanconstants.zone_Id);
 		Yayalog.loger("uid:"+ YYWMain.mUser.yywuid);
 		Yayalog.loger("username:"+YYWMain.mUser.userName);
 		Yayalog.loger("app_id:"+DeviceUtil.getAppid(paramActivity));
@@ -92,7 +98,11 @@ public class ChargerImpl implements YYWCharger {
 							int err_code = obj.optInt("err_code");
 							if (err_code == 0) {
 								JSONObject data = obj.getJSONObject("data");
+								Log.i("tag", "data = " +data);
 								orderId = data.optString("id");
+								JSONObject json_sign = data.getJSONObject("sign");
+								sign = json_sign.optString("sign");
+								Log.i("tag", "sign = " +sign);
 
 								new Handler(Looper.getMainLooper())
 										.post(new Runnable() {
@@ -114,7 +124,7 @@ public class ChargerImpl implements YYWCharger {
 
 	private void pay_run(final Activity paramActivity) {
 
-		YaYawanconstants.pay(paramActivity, orderId);
+		YaYawanconstants.pay(paramActivity, orderId, sign);
 
 	}
 

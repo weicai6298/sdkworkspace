@@ -1,6 +1,7 @@
 package com.yayawan.impl;
 
 import android.app.Activity;
+import android.content.Context;
 import android.content.Intent;
 
 import com.kkgame.utils.Handle;
@@ -53,7 +54,7 @@ public class ActivityStubImpl implements YYWActivityStub {
 	public void onActivityResult(Activity paramActivity, int paramInt1,
 			int paramInt2, Intent paramIntent) {
 		// TODO Auto-generated method stub
-		YaYawanconstants.onActivityResult(paramActivity);
+		YaYawanconstants.onActivityResult(paramActivity,paramInt1,paramInt2,paramIntent);
 	}
 
 	public void onNewIntent(Intent paramIntent) {
@@ -71,4 +72,37 @@ public class ActivityStubImpl implements YYWActivityStub {
 		YaYawanconstants.onStart(mActivity);
 	}
 
+	@Override
+	public void launchActivityOnCreate(Activity arg0) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void launchActivityonOnNewIntent(Intent arg0) {
+		// TODO Auto-generated method stub
+		
+	}
+	
+	@Override
+	public void onRequestPermissionsResult(int arg0, String[] arg1, int[] arg2) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void onBackPressed() {
+		YaYawanconstants.onBackPressed();
+		
+	}
+
+	@Override
+	public void onConfigurationChanged() {
+		YaYawanconstants.onConfigurationChanged();
+	}
+
+	@Override
+	public void attachBaseContext(Context newBase) {
+		YaYawanconstants.attachBaseContext(newBase);
+	}
 }

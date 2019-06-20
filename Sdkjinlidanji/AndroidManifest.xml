@@ -47,16 +47,10 @@
             android:name="isLandscape"
             android:value="true" />
 
-        <!-- 1有友盟  0没有 -->
-        <meta-data
-            android:name="isyoumeng"
-            android:value="string1" />
-        <meta-data
-            android:name="UMENG_APPKEY"
-            android:value="5a38c2d9a40fa30ba400021b" />
-        <meta-data
-            android:name="UMENG_CHANNEL"
-            android:value="金立" />
+      <meta-data
+            android:name="youxi"
+            android:value="2124476343-679973164kk3" />
+       
         <meta-data
             android:name="jinliapiKey"
             android:value="E5D6DB92B0D94408B685EB527EEED75E" />

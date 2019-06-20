@@ -1,6 +1,8 @@
 package com.yayawan.impl;
 
+import java.text.ParseException;
 import java.util.ArrayList;
+import java.util.Date;
 import java.util.List;
 import org.apache.http.HttpResponse;
 import org.apache.http.NameValuePair;
@@ -18,6 +20,8 @@ import android.app.Activity;
 import android.content.Context;
 import android.content.Intent;
 import android.os.Build;
+import android.text.format.DateFormat;
+import android.text.format.Time;
 import android.util.Log;
 import android.widget.Toast;
 
@@ -37,6 +41,7 @@ import com.yayawan.callback.YYWExitCallback;
 import com.yayawan.domain.YYWUser;
 import com.yayawan.main.YYWMain;
 
+@SuppressWarnings({ "deprecation", "unused" })
 public class YaYawanconstants {
 
 	//	private static HashMap<String, String> mGoodsid;
@@ -50,11 +55,11 @@ public class YaYawanconstants {
 	public static String uid;
 	public static String token;
 
-	//	private static  String zone_Id = "2";//玩家区服id 没有传字符串1
-	//	private static  String zone_Name = "测试区服";//玩家区服名称，没有传字符串001
-	//	private static  String role_Id = "222222";//玩家角色Id 没有传字符串1
-	//	private static String role_Name = "测试角色名";//玩家角色名称 没有传字符串001
-	//	private static String  role_CTime = "1480747870001l";//角色创建时间戳。获取不了创建的时间戳，就传DEMO中的这个值。
+	public static  String zone_Id = "2";//玩家区服id 没有传字符串1
+	public static  String zone_Name = "测试区服";//玩家区服名称，没有传字符串001
+	public static  String role_Id = "222222";//玩家角色Id 没有传字符串1
+	public static String role_Name = "测试角色名";//玩家角色名称 没有传字符串001
+		private static String  role_CTime = "";//角色创建时间戳。获取不了创建的时间戳，就传DEMO中的这个值。
 	//	private static  String role_Level = "22";
 	/**
 	 * 初始化sdk
@@ -154,38 +159,49 @@ public class YaYawanconstants {
 	public static void setData(Activity paramActivity, String roleId, String roleName,String roleLevel, String zoneId, String zoneName, String roleCTime,String ext){
 		Yayalog.loger("YaYawanconstants设置角色信息");
 		//角色创建时间
-		//		HttpPost(roleId,roleName,roleLevel,zoneId,zoneName,roleCTime);
 		//4.3.5新增，登录成功后，提交游戏数据（也可选择从服务器提交，具体参见服务器端接入文档）
 		//所有参数尽量不要填空值
 		//关于什么时候上报游戏数据：确保每次登录上传一次数据即可，不一定要在登录后马上上传！
-		//		        zone_Id = zoneId;//玩家区服id 没有传字符串1
-		//		        zone_Name = zoneName;//玩家区服名称，没有传字符串001
-		//		        role_Id = roleId;//玩家角色Id 没有传字符串1
-		//		        role_Name = roleName;//玩家角色名称 没有传字符串001
-		//		        role_CTime = roleCTime;//角色创建时间戳。获取不了创建的时间戳，就传DEMO中的这个值。
+				        zone_Id = zoneId;//玩家区服id 没有传字符串1
+				        zone_Name = zoneName;//玩家区服名称，没有传字符串001
+				        role_Id = roleId;//玩家角色Id 没有传字符串1
+				        role_Name = roleName;//玩家角色名称 没有传字符串001
+//				        role_CTime = roleCTime;//角色创建时间戳。获取不了创建的时间戳，就传DEMO中的这个值。
 		//		        long roleLevelMTime = 1480747870001l;//角色等级变化时间戳。获取不了等级变化时间，就跟角色创建时间传一样的值。
 		//		        role_Level = roleLevel;//角色等级，如果没有这个值，传字符串1
-//		if(zoneId.equals("")){
-//			zoneId = "1";
-//		}
-//		if(zoneName.equals("")){
-//			zoneName = "001";
-//		}
-//		if(roleId.equals("")){
-//			roleId = "1";
-//		}
-//		if(roleName.equals("")){
-//			roleName = "001";
-//		}
-//		if(roleLevel.equals("")){
-//			roleLevel = "001";
-//		}
-//		if(roleCTime.equals("")){
-//			roleCTime = "1480747870001l";
-//		}
-		long Time = Long.parseLong(1480747870001l+"");
+		//1为角色登陆成功  2为角色创建  3为角色升级。
+				        role_CTime = roleCTime+"000";
+				        if(roleCTime.equals("")){
+				        	role_CTime = "1480747870001";
+				        }
+				        Log.i("tag", "roleCTime = "+roleCTime);
+				        Log.i("tag", "role_CTime = "+role_CTime);
 		if (Integer.parseInt(ext) == 1){
-			downjoy.submitGameRoleData(zoneId, zoneName, roleId, roleName, Time, Time, roleLevel, new ResultListener() {
+			downjoy.submitGameRoleData(zoneId, zoneName, roleId, roleName, Long.parseLong(role_CTime), Long.parseLong(role_CTime), roleLevel,1, new ResultListener() {
+				@Override
+				public void onResult(Object result) {
+					//上传角色结果
+					String resultStr = (String) result;
+					if (resultStr.equals("true")){
+						//提交角色成功
+						Yayalog.loger("提交角色成功");
+					}
+				}
+			});
+		}else if (Integer.parseInt(ext) == 2){
+			downjoy.submitGameRoleData(zoneId, zoneName, roleId, roleName, Long.parseLong(role_CTime), Long.parseLong(role_CTime), roleLevel, 2, new ResultListener() {
+				@Override
+				public void onResult(Object result) {
+					//上传角色结果
+					String resultStr = (String) result;
+					if (resultStr.equals("true")){
+						//提交角色成功
+						Yayalog.loger("提交角色成功");
+					}
+				}
+			});
+		}else if(Integer.parseInt(ext) == 3){
+			downjoy.submitGameRoleData(zoneId, zoneName, roleId, roleName, Long.parseLong(role_CTime), Long.parseLong(role_CTime), roleLevel, 3, new ResultListener() {
 				@Override
 				public void onResult(Object result) {
 					//上传角色结果
@@ -220,27 +236,42 @@ public class YaYawanconstants {
 
 	public static void onActivityResult(Activity paramActivity, int paramInt1,
 			int paramInt2, Intent paramIntent) {
-
+		if (downjoy != null) {
+            downjoy.onActivityResult(paramActivity, paramInt1, paramInt2, paramIntent);
+        }
 	}
 
 	public static void onNewIntent(Intent paramIntent) {
-
+		 if (downjoy != null) {
+	            downjoy.onNewIntent(mActivity, paramIntent);
+	        }
 	}
 
 	public static void onStart(Activity paramActivity) {
-
+		if (downjoy != null) {
+            downjoy.onStart(paramActivity);
+        }
 	}
 
 	public static void onRestart(Activity paramActivity) {
-
+		if (downjoy != null) {
+            downjoy.onRestart(paramActivity);
+        }
 	}
 
 	public static void onCreate(Activity paramActivity) {
-
+		if (downjoy != null) {
+            downjoy.onCreate(paramActivity);
+        }
+		if (downjoy != null) {
+            downjoy.onStart(paramActivity);
+        }
 	}
 
 	public static void onStop(Activity paramActivity) {
-
+		if (downjoy != null) {
+            downjoy.onStop(paramActivity);
+        }
 	}
 
 	/**
@@ -336,60 +367,6 @@ public class YaYawanconstants {
 				Toast.makeText(mActivity, msg, Toast.LENGTH_SHORT).show();	
 			}
 		});
-	}
-	/**
-	 * 
-	 * 请求上报角色信息
-	 * 
-	 */
-	private static void HttpPost(final String roleId, final String roleName,final String roleLevel, final String zoneId, final String zoneName, final String roleCTime) {
-		new Thread(new Runnable() {
-
-			@Override
-			public void run() {
-				try {
-					HttpPost httpPost = new HttpPost("https://api.sdk.75757.com/user/roleinfo/");
-					List<NameValuePair> params = new ArrayList<NameValuePair>();
-					params.add(new BasicNameValuePair("roleId", roleId));
-					params.add(new BasicNameValuePair("roleName", roleName));
-					params.add(new BasicNameValuePair("roleLevel", roleLevel));
-					params.add(new BasicNameValuePair("zoneId", zoneId));
-					params.add(new BasicNameValuePair("zoneName", zoneName));
-					params.add(new BasicNameValuePair("roleCTime", roleCTime));
-
-					Log.i("tag", "params=" + params);
-					try {
-						// 设置httpPost请求参数
-						httpPost.setEntity(new UrlEncodedFormEntity(params,
-								HTTP.UTF_8));
-						HttpResponse httpResponse = new DefaultHttpClient()
-						.execute(httpPost);
-						Log.i("tag",
-								"httpResponse.getStatusLine().getStatusCode()="
-										+ httpResponse.getStatusLine()
-										.getStatusCode());
-						if (httpResponse.getStatusLine().getStatusCode() == 200) {
-							//							String re = EntityUtils.toString(httpResponse
-							//									.getEntity());
-							//							Log.i("tag", "re=" + re);
-							//							JSONObject js = new JSONObject(re);
-							//							Log.i("tag", "js=" + js);
-							//							uid = js.getString("uid");
-							//							Log.i("tag", "uid=" + uid);
-							//							Log.i("tag", "token=" + token);
-							//							loginSuce(mActivity, uid, uid, token);
-							Toast("角色上报成功");
-						}
-
-					} catch (ClientProtocolException e) {
-						e.printStackTrace();
-					}
-
-				} catch (Exception e) {
-					e.printStackTrace();
-				}
-			}
-		}).start();
 	}
 	/**
 	 * 初始化当乐代码

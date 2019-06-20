@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/size_50dp"
+    android:orientation="horizontal">
+
+    <TextView
+        android:layout_width="@dimen/size_0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:gravity="center_vertical"
+        android:paddingLeft="@dimen/size_17dp"
+        android:text="@string/newCardPay"
+        android:textColor="@color/pay_color_333333"
+        android:textSize="@dimen/size_15sp" />
+
+    <ImageView
+        android:layout_width="15dp"
+        android:layout_height="15dp"
+        android:layout_gravity="center_vertical"
+        android:layout_marginRight="17dp"
+        android:background="@mipmap/pay_right_arrow" />
+</LinearLayout>

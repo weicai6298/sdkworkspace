@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/size_0dp"
+            android:layout_marginLeft="@dimen/size_10dp"
+            android:layout_marginRight="@dimen/size_10dp"
+            android:layout_marginTop="@dimen/size_10dp"
+            android:layout_weight="1"
+            android:background="@color/pay_color_ffffff"
+            android:orientation="horizontal">
+
+            <ListView
+                android:id="@+id/leftListV"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:divider="@color/pay_color_e9e9e9"
+                android:dividerHeight="@dimen/size_1px"
+                android:listSelector="@android:color/transparent"
+                android:scrollbars="none" />
+
+            <FrameLayout
+                android:id="@+id/mainFrame"
+                android:layout_width="@dimen/size_0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="3" />
+        </LinearLayout>
+
+        <View
+            android:id="@+id/payMainClose"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/size_0dp"
+            android:layout_weight="1" />
+    </LinearLayout>
+
+</LinearLayout>

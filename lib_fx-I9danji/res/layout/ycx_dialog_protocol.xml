@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout
+   	xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:clickable="true"
+    android:orientation="vertical">
+	
+	    <LinearLayout
+	        android:layout_width="282dip"
+	        android:layout_height="272dip"
+	        android:layout_gravity="center"
+	        android:background="@drawable/ycx_img_login_et"
+	        android:orientation="vertical" >
+	        <FrameLayout
+			    android:layout_width="fill_parent"
+			    android:layout_height="40.0dip"
+			    android:clickable="true"
+			    android:layout_gravity="center_vertical"
+			    android:gravity="center_vertical"
+			    android:orientation="vertical">
+				<LinearLayout
+		            android:layout_width="fill_parent"
+		            android:layout_height="match_parent"
+		            android:layout_gravity="bottom"
+		            android:gravity="center"
+		            android:paddingLeft="10dip"
+		            android:paddingRight="10dip"
+		            android:orientation="horizontal" >
+		            <TextView
+		            style="@style/ycx_style_dialog_title"
+		            android:layout_gravity="left|center_vertical"
+		            android:text="@string/ycx_string_desc_protocol"/>
+		        </LinearLayout>
+		         <ImageView 
+						    android:layout_gravity="left|center_vertical"
+						    android:id="@+id/ycx_iv_back"
+						    android:src="@drawable/ycx_img_back"
+						    android:layout_width="25dip"
+						    android:layout_marginLeft="5dip"
+						    android:scaleType="fitEnd"
+						    android:layout_height="25dip"/>
+		   </FrameLayout>
+		   <View
+			            android:layout_width="match_parent"
+			            android:layout_height="1px"
+			            android:background="@color/ycx_color_item_divider" />
+	       <ScrollView 
+			    android:layout_width="fill_parent"
+			    android:fillViewport="true"
+			    android:overScrollMode="never"
+			    android:layout_height="fill_parent"> 
+	        
+		 	  	 <TextView 
+		 	  	     android:layout_width="match_parent"
+		 	  	     android:layout_height="match_parent"
+		 	  	     android:id="@+id/ycx_tv_protocol"
+		 	  	     android:background="@null"
+	                 android:textColor="@color/ycx_color_gray_darker"
+	                 android:textSize="@dimen/ycx_dimen_larger"/>
+		   </ScrollView>
+	    </LinearLayout>
+		
+</FrameLayout>

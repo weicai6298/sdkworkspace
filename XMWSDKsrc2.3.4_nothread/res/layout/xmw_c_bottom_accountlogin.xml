@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="5dp"
+    android:layout_marginLeft="10dp"
+    android:layout_marginRight="10dp"
+    android:layout_marginTop="5dp"
+    android:background="@color/xmw_exit_bg"
+    android:gravity="center_vertical"
+    android:orientation="horizontal" >
+
+    <RelativeLayout
+        android:layout_width="0dp"
+        android:layout_height="60dp"
+        android:layout_weight="1" >
+
+        <TextView
+            android:id="@+id/userlogin_bottom1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:drawablePadding="8dp"
+            android:drawableTop="@drawable/xmw_login_icon_phone"
+            android:gravity="center_horizontal"
+            android:text="手机号注册"
+            android:textColor="@color/xmw_c_textcolor_gray"
+            android:textSize="11dp" />
+    </RelativeLayout>
+
+    <View
+        android:layout_width="1dp"
+        android:layout_height="28dp"
+        android:background="@color/xmw_divider" />
+
+    <RelativeLayout
+        android:layout_width="0dp"
+        android:layout_height="60dp"
+        android:layout_weight="1" >
+
+        <TextView
+            android:id="@+id/userlogin_bottom2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:drawablePadding="10dp"
+            android:drawableTop="@drawable/xmw_login_icon_user"
+            android:gravity="center_horizontal"
+            android:text="用户名注册"
+            android:textColor="@color/xmw_c_textcolor_gray"
+            android:textSize="11dp" />
+    </RelativeLayout>
+
+    <View
+        android:layout_width="1dp"
+        android:layout_height="28dp"
+        android:background="@color/xmw_divider" />
+
+    <RelativeLayout
+        android:layout_width="0dp"
+        android:layout_height="60dp"
+        android:layout_weight="1" >
+
+        <TextView
+            android:id="@+id/userlogin_bottom3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:drawablePadding="8dp"
+            android:drawableTop="@drawable/xmw_ic_findpwd"
+            android:gravity="center_horizontal"
+            android:text="找回密码"
+            android:textColor="@color/xmw_c_textcolor_gray"
+            android:textSize="11dp" />
+    </RelativeLayout>
+
+</LinearLayout>

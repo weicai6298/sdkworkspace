@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content">
+
+    <RelativeLayout
+        android:id="@+id/rl_order_pop"
+        android:layout_width="100dp"
+        android:layout_height="44dp"
+        android:background="@drawable/yxf_bg_in_edt_whi_yel">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="点击查看福利"
+            android:textColor="@color/yxf_sdk_gray_float_order"
+            android:textSize="13.33sp" />
+
+    </RelativeLayout>
+
+</LinearLayout>

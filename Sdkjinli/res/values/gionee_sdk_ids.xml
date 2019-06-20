@@ -33,5 +33,6 @@
     <item type="id" name="zzz_lottery_img"/>
     <item type="id" name="zzz_lottery_text"/>
     <item type="id" name="zzz_lottery_click"/>
+    <item type="id" name="zzz_online_notification"/>
 </resources>
 

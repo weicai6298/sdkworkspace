@@ -36,9 +36,9 @@
                     android:id="@+id/vip_qq_name"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:textColor="@color/m4399_ope_bind_white"
                     android:ellipsize="end"
                     android:maxLines="1"
+                    android:textColor="@color/m4399_ope_bind_white"
                     android:textSize="17sp" />
 
                 <TextView
@@ -72,10 +72,10 @@
         android:id="@+id/vip_info_content"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginBottom="20dp"
         android:layout_marginLeft="10dp"
         android:layout_marginRight="10dp"
         android:layout_marginTop="20dp"
-        android:layout_marginBottom="20dp"
         android:textColor="@color/m4399_ope_perfect_center_text"
         android:textSize="16sp" />
 

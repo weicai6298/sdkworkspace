@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.yayawan.sdktemplate"
+    android:versionCode="1001"
+    android:versionName="1.0.0.1" >
+
+    <uses-sdk
+        android:minSdkVersion="8"
+        android:targetSdkVersion="19" />
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW" />
+    <uses-permission android:name="android.permission.GET_TASKS" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+
+    <application
+        android:name="com.yayawan.impl.YYApplication"
+        android:allowBackup="true"
+        android:theme="@android:style/Theme.NoTitleBar.Fullscreen" >
+        <activity
+            android:name="com.yayawan.sdktemplate.MainActivity"
+            android:configChanges="keyboardHidden|navigation|orientation|screenSize"
+            android:label="app_name" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+      
+        
+      <!-- 手游互联配置 -->
+     	 <meta-data
+            android:name="app_id"
+            android:value="kk2686099330" />
+        <meta-data
+            android:name="isLandscape"
+            android:value="true" />
+        
+         <!-- 渠道配置 -->
+     	 <meta-data
+            android:name="kf_appid"
+            android:value="ks692428446483949087" />
+     	 <meta-data
+            android:name="kf_appkey"
+            android:value="zbXZ740tTG6xyTcoljRKhg" />
+     	 <meta-data
+            android:name="gamename"
+            android:value="我的便利店" />
+     	 
+     	 
+     	  <activity
+            android:name="com.kwai.opensdk.HandlerRouteActivity"
+            android:configChanges="keyboardHidden|keyboard|orientation|screenSize"
+            android:exported="true"
+            android:screenOrientation="behind"
+            android:theme="@style/Kwai.Theme.CustomTranslucent" />
+
+        <activity-alias
+            android:name="string_package.kwai.KwaiHandlerActivity"
+            android:exported="true"
+            android:screenOrientation="behind"
+            android:targetActivity="com.kwai.opensdk.HandlerRouteActivity" />
+
+        <activity
+            android:name="com.kwai.opensdk.live.KwaiLiveActivity"
+            android:configChanges="keyboardHidden|keyboard|orientation|screenSize"
+            android:launchMode="singleTop"
+            android:screenOrientation="behind"
+            android:theme="@style/Kwai.Theme.CustomTranslucent" />
+        <activity
+            android:name="com.kwai.opensdk.common.KwaiWebViewActivity"
+            android:launchMode="singleTop"
+            android:screenOrientation="behind" />
+        <activity
+            android:name="com.kwai.opensdk.login.KwaiLoginActivity"
+            android:configChanges="keyboardHidden|keyboard|orientation|screenSize"
+            android:launchMode="singleTop"
+            android:screenOrientation="behind"
+            android:theme="@style/Kwai.Theme.CustomTranslucent" />
+        <activity
+            android:name="com.kwai.opensdk.login.kwailogin.h5login.KwaiH5LoginActivity"
+            android:launchMode="singleTop"
+            android:screenOrientation="behind"
+            android:theme="@style/Kwai.Theme.CustomTranslucent" />
+        <activity
+            android:name="com.kwai.opensdk.bind.KwaiBindActivity"
+            android:launchMode="singleTop"
+            android:screenOrientation="behind"
+            android:theme="@style/Kwai.Theme.CustomTranslucent" />
+        <activity
+            android:name="com.kwai.opensdk.pay.activity.GatewayH5PayActivity"
+            android:configChanges="keyboardHidden|keyboard|orientation|screenSize"
+            android:screenOrientation="behind"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+        <activity
+            android:name="com.kwai.opensdk.pay.activity.GatewayPayActivity"
+            android:configChanges="keyboardHidden|keyboard|orientation|screenSize"
+            android:exported="true"
+            android:screenOrientation="behind"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar" >
+        </activity>
+
+        <service
+            android:name="com.kwai.kanas.services.KanasService"
+            android:enabled="true"
+            android:exported="false" />
+    
+    </application>
+
+</manifest>
+

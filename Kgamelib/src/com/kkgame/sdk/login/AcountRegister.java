@@ -38,9 +38,7 @@ public class AcountRegister {
 		mActivity = activity;
 	}
 
-	private static final int REGISTER = 3;
 
-	private static final int FETCHSMS = 4;
 
 	protected static final int ERROR = 5;
 
@@ -69,7 +67,7 @@ public class AcountRegister {
 		rps.addBodyParameter("imei", DeviceUtil.getIMEI(mActivity));
 		rps.addBodyParameter("username", mName);
 		rps.addBodyParameter("password", mPassword);
-		Yayalog.loger("app_id:" + DeviceUtil.getAppid(mActivity)
+		Yayalog.loger("url:"+ViewConstants.acountregister+"app_id:" + DeviceUtil.getAppid(mActivity)
 				+ "imei" + DeviceUtil.getIMEI(mActivity)
 				+ "username" + mName + "password" + mPassword);
 
@@ -85,6 +83,7 @@ public class AcountRegister {
 						Utilsjf.stopDialog();
 						Toast.makeText(mActivity, "注册失败，请检查网络", 0)
 								.show();
+						Yayalog.loger(arg0.toString()+"错误信息"+arg1+"注册失败，请检查网络");
 					}
 
 					@Override

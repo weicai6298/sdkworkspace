@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <RelativeLayout
+        android:id="@+id/rl_voucher_anim"
+        android:layout_width="293.33dp"
+        android:layout_height="58dp"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="32.67dp"
+        android:background="@drawable/yxf_round_anim_whi_yel">
+
+        <com.game.sdk.ui.weight.CircleImageView
+            android:id="@+id/iv_img"
+            android:layout_width="44dp"
+            android:layout_height="44dp"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="17.33dp"
+            android:layout_marginRight="12.67dp" />
+
+        <TextView
+            android:id="@+id/tv_content"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_toLeftOf="@+id/iv_def"
+            android:layout_toRightOf="@+id/iv_img"
+            android:ellipsize="end"
+            android:singleLine="true"
+            android:text="新用户首充送代金券代金券"
+            android:textColor="@color/yxf_sdk_gray_float_order"
+            android:textSize="14sp" />
+
+        <ImageView
+            android:id="@+id/iv_def"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="13.33dp"
+            android:layout_marginRight="13.33dp"
+            android:src="@drawable/yxf_voucher_right" />
+
+    </RelativeLayout>
+
+</RelativeLayout>

@@ -15,7 +15,7 @@
         android:layout_below="@id/zzz_title"
         layout="@layout/zzz_load_helper_view"/>
 
-    <WebView
+    <com.gionee.webviewagent.core.GioneeWebView
         android:id="@+id/zzz_webview"
         android:layout_width="match_parent"
         android:layout_height="match_parent"

@@ -22,7 +22,7 @@
         <Button
             android:id="@+id/sogou_game_sdk_btn_one_click_login"
             android:layout_width="match_parent"
-            android:layout_height="40dp"
+            android:layout_height="60dp"
             android:layout_marginLeft="25dp"
             android:layout_marginRight="25dp"
             android:text="@string/sogou_game_sdk_one_click_login"
@@ -87,6 +87,21 @@
                 android:text="@string/sogou_game_sdk_reg_protocol"
                 android:textSize="12sp"
                 android:textColor="@color/sogou_game_sdk_color_999999"/>
+
+            <TextView
+                android:id="@+id/sogou_game_sdk_reg_privacy_agreement"
+                style="@style/sogou_game_sdk_main_font"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_toRightOf="@id/sogou_game_sdk_reg_mobile_protocol_text"
+                android:background="@color/sogou_game_sdk_transparent"
+                android:clickable="true"
+                android:gravity="center"
+                android:onClick="privacyAgree"
+                android:text="@string/sogo_game_sdk_reg_privacy_agree"
+                android:textSize="12sp"
+                android:textColor="@color/sogou_game_sdk_color_999999"/>
         </RelativeLayout>
 
         <TextView
@@ -138,7 +153,7 @@
             android:layout_marginBottom="30dp"
             android:layout_marginTop="10dp"
             android:singleLine="true"
-            android:text="账号 15210584318 正在登录..."
+            android:text="帐号 15210584318 正在登录..."
             android:textColor="@color/sogou_game_sdk_white"
             android:textSize="13sp" />
     </LinearLayout>

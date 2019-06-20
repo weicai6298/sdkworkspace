@@ -1,0 +1,423 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/wan_activity_wan_coin_top_up"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.yiqiwanba.wansdk.finance.WanCoinTopUpActivity">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:id="@+id/topRelativeLayout"
+        android:background="@android:color/black">
+
+        <ImageButton
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentLeft="true"
+            android:id="@+id/backButton"
+            android:background="@null"
+            android:src="@drawable/wan_btn_back_00" />
+
+        <TextView
+            android:text="玩币充值"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/textView9"
+            android:textSize="18sp"
+            android:layout_centerVertical="true"
+            android:layout_centerHorizontal="true"
+            android:textColor="@android:color/white" />
+    </RelativeLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/topRelativeLayout"
+        android:background="@color/wan_background">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="16dp">
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="50dp">
+
+                <RelativeLayout
+                    android:layout_width="200dp"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/wan_round_bg"
+                    android:gravity="center_vertical"
+                    android:paddingLeft="16dp">
+
+                    <LinearLayout
+                        android:orientation="horizontal"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content">
+
+                        <TextView
+                            android:text="余额："
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:id="@+id/textView17"
+                            android:textColor="@color/wan_steel"
+                            android:layout_weight="1" />
+
+                        <TextView
+                            android:text="8888"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:id="@+id/balanceTextView"
+                            android:textSize="18sp"
+                            android:textColor="@color/wan_crayon_orange"
+                            android:layout_weight="1" />
+
+                        <TextView
+                            android:text="玩币"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:id="@+id/textView21"
+                            android:textSize="10sp"
+                            android:layout_marginLeft="5dp"
+                            android:layout_weight="1" />
+                    </LinearLayout>
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/wan_round_bg"
+                    android:layout_marginLeft="16dp"
+                    android:paddingLeft="16dp">
+
+                    <TextView
+                        android:text="账号："
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/textView18"
+                        android:textColor="@color/wan_steel"
+                        android:layout_centerHorizontal="false"
+                        android:layout_centerVertical="true" />
+
+                    <TextView
+                        android:text="TextView"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/usernameTextView"
+                        android:layout_centerVertical="true"
+                        android:layout_toRightOf="@+id/textView18" />
+
+                    <View
+                        android:layout_width="0.5dp"
+                        android:layout_height="match_parent"
+                        android:layout_toLeftOf="@+id/linearLayout1"
+                        android:layout_marginRight="32dp"
+                        android:background="@color/wan_alto" />
+
+                    <LinearLayout
+                        android:id="@+id/linearLayout1"
+                        android:orientation="vertical"
+                        android:layout_width="100dp"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true">
+
+                        <LinearLayout
+                            android:orientation="horizontal"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content">
+
+                            <TextView
+                                android:text="客服"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:id="@+id/textView24"
+                                android:layout_weight="1"
+                                android:textSize="12sp"
+                                android:textColor="@color/wan_jumbo" />
+
+                            <ImageView
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent"
+                                android:src="@drawable/wan_icon_qq"
+                                android:id="@+id/imageView5"
+                                android:layout_weight="1"
+                                android:layout_marginLeft="2dp" />
+                        </LinearLayout>
+
+                        <TextView
+                            android:text="555555555"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:id="@+id/serviceQQTextView"
+                            android:textSize="12sp" />
+
+                    </LinearLayout>
+                </RelativeLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@drawable/wan_round_bg"
+                android:layout_marginTop="16dp">
+
+                <TextView
+                    android:text="选择充值金额（单位/元）"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/textView6"
+                    android:layout_marginTop="16dp"
+                    android:layout_marginLeft="16dp"
+                    android:layout_marginRight="16dp"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginEnd="16dp" />
+
+                <LinearLayout
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:paddingLeft="8dp"
+                    android:paddingRight="8dp"
+                    android:layout_weight="1">
+
+                    <Button
+                        android:text="10玩币"
+                        android:layout_width="wrap_content"
+                        android:layout_height="40dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/wan_button_selector_00"
+                        android:textColor="@drawable/wan_button_text_selector_00"
+                        android:layout_margin="8dp"
+                        android:id="@+id/coinsButton_10" />
+
+                    <Button
+                        android:text="20玩币"
+                        android:layout_width="wrap_content"
+                        android:layout_height="40dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/wan_button_selector_00"
+                        android:textColor="@drawable/wan_button_text_selector_00"
+                        android:layout_margin="8dp"
+                        android:id="@+id/coinsButton_20" />
+
+                    <Button
+                        android:text="50玩币"
+                        android:layout_width="wrap_content"
+                        android:layout_height="40dp"
+                        android:id="@+id/coinsButton_50"
+                        android:layout_weight="1"
+                        android:background="@drawable/wan_button_selector_00"
+                        android:textColor="@drawable/wan_button_text_selector_00"
+                        android:layout_margin="8dp" />
+
+                    <Button
+                        android:text="100玩币"
+                        android:layout_width="wrap_content"
+                        android:layout_height="40dp"
+                        android:id="@+id/coinsButton_100"
+                        android:layout_weight="1"
+                        android:background="@drawable/wan_button_selector_00"
+                        android:textColor="@drawable/wan_button_text_selector_00"
+                        android:layout_margin="8dp" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:paddingLeft="8dp"
+                    android:paddingRight="8dp"
+                    android:layout_marginBottom="8dp">
+
+                    <LinearLayout
+                        android:orientation="horizontal"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1">
+
+                        <Button
+                            android:text="200玩币"
+                            android:layout_width="wrap_content"
+                            android:layout_height="40dp"
+                            android:id="@+id/coinsButton_200"
+                            android:layout_weight="1"
+                            android:background="@drawable/wan_button_selector_00"
+                            android:textColor="@drawable/wan_button_text_selector_00"
+                            android:layout_margin="8dp" />
+
+                        <Button
+                            android:text="500玩币"
+                            android:layout_width="wrap_content"
+                            android:layout_height="40dp"
+                            android:id="@+id/coinsButton_500"
+                            android:layout_weight="1"
+                            android:background="@drawable/wan_button_selector_00"
+                            android:textColor="@drawable/wan_button_text_selector_00"
+                            android:layout_margin="8dp" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:orientation="horizontal"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1">
+
+                        <EditText
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:inputType="number"
+                            android:ems="10"
+                            android:id="@+id/otherCoinsEditText"
+                            android:layout_weight="1"
+                            android:background="@drawable/wan_edit_text_bg_selector"
+                            android:layout_marginRight="8dp"
+                            android:layout_marginTop="8dp"
+                            android:layout_marginLeft="8dp"
+                            android:hint="请输入其他金额"
+                            android:textSize="14sp"
+                            android:layout_marginBottom="8dp" />
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="0.5dp"
+                    android:background="@color/wan_alto"/>
+
+                <TextView
+                    android:text="选择支付方式"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/textView16"
+                    android:layout_margin="16dp" />
+
+                <RadioGroup
+                    android:id="@+id/payMethodRadioGroup"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:checkedButton="@+id/alipayRadioButton"
+                    android:orientation="horizontal">
+
+                    <RadioButton
+                        android:id="@+id/alipayRadioButton"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="16dp"
+                        android:layout_marginLeft="16dp"
+                        android:button="@drawable/wan_checkbox"
+                        android:drawablePadding="10dp"
+                        android:drawableRight="@drawable/wan_icon_alipay" />
+
+                    <RadioButton
+                        android:id="@+id/wechatRadioButton"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="16dp"
+                        android:layout_marginLeft="16dp"
+                        android:button="@drawable/wan_checkbox"
+                        android:drawablePadding="10dp"
+                        android:drawableRight="@drawable/wan_icon_wechat" />
+                </RadioGroup>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="0.5dp"
+                    android:background="@color/wan_alto"/>
+
+                <LinearLayout
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="right"
+                    android:padding="16dp">
+                    <TextView
+                        android:text="应付金额："
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/textView31" />
+
+                    <TextView
+                        android:text="10.00"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/paidTextView"
+                        android:textSize="18sp"
+                        android:textColor="@color/wan_crayon_orange"
+                        android:layout_marginRight="2dp" />
+
+                    <TextView
+                        android:text="元"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/textView28"
+                        android:textSize="12sp"
+                        android:textColor="@color/wan_jumbo" />
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="0.5dp"
+                    android:background="@color/wan_alto"/>
+
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:padding="24dp">
+
+                    <Button
+                        android:text="立即支付"
+                        android:layout_width="120dp"
+                        android:layout_height="40dp"
+                        android:id="@+id/payButton"
+                        android:background="@drawable/wan_button_bg_00"
+                        android:textColor="@android:color/white"
+                        android:layout_gravity="center_horizontal"/>
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_marginTop="8dp"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/textView12"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="虚拟货币名称：玩币"
+                            android:textColor="@color/wan_jumbo"
+                            android:textSize="12sp" />
+
+                        <TextView
+                            android:id="@+id/textView33"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="充值比例：1元=1玩币"
+                            android:textColor="@color/wan_jumbo"
+                            android:textSize="12sp" />
+
+                    </LinearLayout>
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </LinearLayout>
+    </ScrollView>
+
+</RelativeLayout>

@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical"
+        android:background="@drawable/pay_bg_e4012e_circle"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:layout_width="@dimen/size_40dp"
+                android:layout_height="@dimen/size_40dp"
+                android:layout_gravity="center_vertical"
+                android:layout_marginBottom="@dimen/size_10dp"
+                android:layout_marginLeft="@dimen/size_20dp"
+                android:layout_marginTop="@dimen/size_10dp"
+                android:background="@mipmap/pay_apple_pay_logo" />
+
+            <TextView
+                android:id="@+id/PayCFHPHint"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/size_20dp"
+                android:layout_marginLeft="@dimen/size_10dp"
+                android:layout_marginRight="@dimen/size_20dp"
+                android:layout_marginTop="@dimen/size_20dp"
+                android:gravity="center"
+                android:textColor="@color/pay_color_ffffff"
+                android:textSize="@dimen/size_15sp" />
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:layout_marginBottom="10dp"
+            android:layout_marginLeft="17dp"
+            android:layout_marginRight="17dp"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/PayBtnCFHPClose"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_marginRight="17dp"
+                android:layout_weight="1"
+                android:background="@drawable/pay_bg_bbbbbb_circle"
+                android:text="@string/cancel"
+                android:textColor="@color/pay_color_ffffff"
+                android:textSize="17sp" />
+
+            <Button
+                android:id="@+id/PayBtnCFHPOK"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@drawable/pay_bg_ffff00_circle"
+                android:text="@string/Pay_YesInstall"
+                android:textColor="@color/pay_color_333333"
+                android:textSize="17sp" />
+        </LinearLayout>
+    </LinearLayout>
+
+</FrameLayout>

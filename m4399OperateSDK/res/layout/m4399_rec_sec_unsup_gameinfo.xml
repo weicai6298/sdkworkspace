@@ -20,8 +20,8 @@
             android:layout_width="wrap_content"
             android:layout_height="40dp"
             android:gravity="bottom"
-            android:text="@string/m4399_rec_amount_payment"
             android:paddingBottom="2dp"
+            android:text="@string/m4399_rec_amount_payment"
             android:textColor="@color/m4399_rec_sdk_color_black"
             android:textSize="16sp" />
 
@@ -121,10 +121,10 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="10dp"
+            android:background="@android:color/transparent"
             android:clickable="true"
             android:focusable="true"
             android:gravity="center_vertical"
-            android:background="@android:color/transparent"
             android:orientation="horizontal">
 
             <TextView

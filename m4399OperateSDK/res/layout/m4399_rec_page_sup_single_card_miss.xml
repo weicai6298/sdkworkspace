@@ -8,9 +8,9 @@
         android:id="@+id/nav"
         android:layout_width="fill_parent"
         android:layout_height="@dimen/m4399_rec_title_height"
-        android:layout_alignParentTop="true"
         android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true" />
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true" />
 
     <ScrollView
         android:id="@+id/scrollView1"
@@ -36,9 +36,9 @@
 
 
             <LinearLayout
-                android:layout_marginTop="10dp"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
                 android:orientation="horizontal">
 
 
@@ -47,7 +47,7 @@
                     android:layout_height="wrap_content"
                     android:layout_marginRight="26dp"
                     android:gravity="top"
-                    android:text="充值卡面额"
+                    android:text="@string/m4399_rec_card_denomination"
                     android:textColor="#333333"
                     android:textSize="14sp"
 
@@ -75,9 +75,8 @@
                 layout="@layout/m4399_rec_sec_coupon"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="@dimen/m4399_rec_page_margint_top"
                 android:layout_marginBottom="@dimen/m4399_rec_page_margint_top"
-                />
+                android:layout_marginTop="@dimen/m4399_rec_page_margint_top" />
 
 
         </LinearLayout>

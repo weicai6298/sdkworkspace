@@ -3,6 +3,7 @@ package com.yayawan.impl;
 import android.app.Activity;
 import android.content.Context;
 import android.content.Intent;
+import android.content.pm.PackageManager;
 import android.os.Bundle;
 import android.util.Log;
 import android.widget.Toast;
@@ -58,11 +59,10 @@ public class YaYawanconstants {
 		Log.i("tag", "AppID="+AppID);
 		Log.i("tag", "AppKey="+AppKey);
 		MzGameCenterPlatform.init(mactivity,AppID,AppKey);
-        
 		isinit = true;
+		mzGameBarPlatform = new MzGameBarPlatform(mactivity, MzGameBarPlatform.GRAVITY_LEFT_TOP);
+		mzGameBarPlatform.onActivityCreate();
 		Log.i("tag","魅族初始化结束");
-		  mzGameBarPlatform = new MzGameBarPlatform(mactivity, MzGameBarPlatform.GRAVITY_LEFT_TOP);
-	      mzGameBarPlatform.onActivityCreate();
 	}
 
 	/**
@@ -151,7 +151,8 @@ public class YaYawanconstants {
 		String productId = "a2"; // product_id
 		String productSubject = YYWMain.mOrder.goods; // product_subject
 		String productBody = YYWMain.mOrder.goods; // product_body
-		String productUnit = YYWMain.mOrder.goods; // product_unit
+//		String productUnit = YYWMain.mOrder.goods; // product_unit
+		String productUnit = DeviceUtil.getGameInfo(mactivity, "goodsname"); // product_unit
 		String appid = AppID; // app_id (不能为空)
 		String Uid = uid; // uid (不能为空)flyme账号用户ID
 		String perPrice = YYWMain.mOrder.money/100+""; // product_per_price

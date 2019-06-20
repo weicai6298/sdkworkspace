@@ -1,125 +1,153 @@
 <?xml version="1.0" encoding="utf-8"?>
 
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-              android:layout_width="match_parent"
-              android:layout_height="match_parent"
-              android:gravity="center"
-        >
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center">
 
 
     <LinearLayout
-            android:orientation="vertical"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            >
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:orientation="vertical">
 
         <FrameLayout
-                android:orientation="horizontal"
-                android:layout_width="@dimen/dp933"
-                android:layout_height="@dimen/dp144"
-                android:background="@drawable/papasdk_title_back"
-                android:gravity="center_vertical"
-                >
+            android:layout_width="@dimen/dp933"
+            android:layout_height="@dimen/dp144"
+            android:background="@drawable/papasdk_title_back"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
 
-            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
-                      android:textColor="#3A85E2"
-                      android:textSize="@dimen/sp42"
-                      android:layout_gravity="center_vertical|left"
-                      android:layout_marginLeft="@dimen/dp60"
-                      android:text="返回"
-                      android:id="@+id/back"
-                    />
-
-
-            <ImageView android:layout_width="115dp" android:layout_height="25dp"
-                       android:layout_gravity="center"
-                       android:src="@drawable/papasdk_login_first_title"
-                       android:id="@+id/titleIcon"
-                       android:focusableInTouchMode="false"
-                    />
-        </FrameLayout>
-        <FrameLayout
-                android:layout_width="@dimen/dp933"
+            <TextView
+                android:id="@+id/back"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:background="@drawable/papasdk_main_back"
-                >
+                android:layout_gravity="center_vertical|left"
+                android:layout_marginLeft="@dimen/dp60"
+                android:text="返回"
+                android:textColor="#3A85E2"
+                android:textSize="@dimen/sp42" />
+
+
+            <ImageView
+                android:id="@+id/titleIcon"
+                android:layout_width="115dp"
+                android:layout_height="25dp"
+                android:layout_gravity="center"
+                android:focusableInTouchMode="false"
+                android:src="@drawable/papasdk_login_first_title" />
+        </FrameLayout>
+
+        <FrameLayout
+            android:layout_width="@dimen/dp933"
+            android:layout_height="wrap_content"
+            android:background="@drawable/papasdk_main_back">
 
             <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-                          android:orientation="vertical"
-                          android:layout_width="match_parent"
-                          android:layout_height="match_parent"
-                          android:paddingTop="@dimen/dp57"
-                          android:paddingBottom="@dimen/dp108"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:paddingTop="@dimen/dp57">
+
+
+                <FrameLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginTop="@dimen/dp79"
+
                     >
 
-                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
-                          android:textColor="@color/grey_3"
-                          android:textSize="@dimen/sp39"
-                          android:layout_gravity="center_horizontal"
-                          android:text="请选择登录方式"
-                        />
-
-                <FrameLayout android:layout_width="wrap_content" android:layout_height="wrap_content"
-                             android:layout_marginTop="@dimen/dp79"
-                             android:layout_gravity="center_horizontal"
-
-                        >
-
-                    <LinearLayout android:layout_width="wrap_content"
-                                  android:layout_height="wrap_content"
-                                  android:orientation="horizontal"
-                                  android:layout_gravity="center_horizontal"
-                            >
-                       <!-- <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
-                                  android:drawableTop="@drawable/login_first_icon_1"
-                                  android:text="快速游戏"
-                                  android:gravity="center"
-                                  android:textColor="@color/grey_4"
-                                  android:textSize="@dimen/sp36"
-                                  android:drawablePadding="@dimen/dp20"
-                                  android:id="@+id/txt_1"
-                                />-->
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal"
+                        android:orientation="horizontal">
+                        <!-- <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                                   android:drawableTop="@drawable/login_first_icon_1"
+                                   android:text="快速游戏"
+                                   android:gravity="center"
+                                   android:textColor="@color/grey_4"
+                                   android:textSize="@dimen/sp36"
+                                   android:drawablePadding="@dimen/dp20"
+                                   android:id="@+id/txt_1"
+                                 />-->
 
 
-                        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
-                                  android:drawableTop="@drawable/papasdk_login_first_icon_2"
-                                  android:text="手机登录"
-                                  android:gravity="center"
-                                  android:textColor="@color/grey_4"
-                                  android:textSize="@dimen/sp36"
-                                  android:drawablePadding="@dimen/dp20"
-
-                                  android:id="@+id/txt_2"
-                                />
+                        <ImageView
+                            android:id="@+id/txt_2"
+                            android:layout_width="@dimen/dp147"
+                            android:layout_height="@dimen/dp147"
+                            android:gravity="center"
+                            android:src="@drawable/papasdk_login_first_icon_2"
+                            android:textColor="@color/grey_4"
+                            android:textSize="@dimen/sp36" />
 
 
-                        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
-                                  android:drawableTop="@drawable/papasdk_login_first_icon_3"
-                                  android:text="账号"
-                                  android:gravity="center"
-                                  android:textColor="@color/grey_4"
-                                  android:textSize="@dimen/sp36"
-                                  android:drawablePadding="@dimen/dp20"
-                                  android:layout_marginLeft="@dimen/dp181"
-                                  android:id="@+id/txt_3"
-                                />
+                        <ImageView
+                            android:id="@+id/txt_3"
+                            android:layout_width="@dimen/dp147"
+                            android:layout_height="@dimen/dp147"
+                            android:layout_marginLeft="@dimen/dp150"
+                            android:src="@drawable/papasdk_login_first_icon_3"
+                            android:gravity="center"
+                            android:textColor="@color/grey_4"
+                            android:textSize="@dimen/sp36" />
 
+                        <ImageView
+                            android:id="@+id/txt_4"
+                            android:layout_width="@dimen/dp147"
+                            android:layout_height="@dimen/dp147"
+                            android:layout_marginLeft="@dimen/dp150"
+                            android:src="@drawable/papasdk_login_first_icon_4"
+                            android:gravity="center"
+                            android:textColor="@color/grey_4"
+                            android:textSize="@dimen/sp36"
+                            android:visibility="gone" />
 
 
                     </LinearLayout>
 
-                    <ImageView android:layout_width="wrap_content" android:layout_height="wrap_content"
-                               android:src="@drawable/papasdk_no_register_icon"
-                               android:layout_gravity="left|top"
-                               android:layout_marginLeft="20dip"
-                            />
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="12dp"
+                        android:layout_gravity="left|top"
+                        android:layout_marginLeft="20dip"
+                        android:src="@drawable/papasdk_no_register_icon" />
 
                 </FrameLayout>
 
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1px"
+                    android:layout_marginTop="@dimen/dp90"
+                    android:layout_marginLeft="@dimen/dp60"
+                    android:layout_marginRight="@dimen/dp60"
+                    android:background="@color/grey_1"></View>
 
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:orientation="horizontal">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/white"
+                        android:text="选择以上任意方式登陆即同意"
+                        android:textSize="12dp"/>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/agreement"
+                        android:paddingTop="13dp"
+                        android:paddingBottom="13dp"
+                        android:textColor="#00acfe"
+                        android:text="《悟饭用户协议》"
+                        android:textSize="12dp"/>
+                </LinearLayout>
             </LinearLayout>
-
 
 
         </FrameLayout>

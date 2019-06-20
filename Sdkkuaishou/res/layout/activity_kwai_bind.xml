@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:id="@+id/login_container"
+        android:layout_width="300dp"
+        android:layout_height="240dp"
+        android:layout_centerInParent="true"
+        android:background="@drawable/kwai_login_bg">
+
+        <ImageView
+            android:id="@+id/logo_iv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="14.5dp"
+            android:src="@drawable/kwai_logo" />
+
+        <TextView
+            android:id="@+id/login_way_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/logo_iv"
+            android:layout_centerInParent="true"
+            android:layout_marginTop="20dp"
+            android:text="选择绑定方式"
+            android:textColor="#6E7889"
+            android:textSize="14dp" />
+
+        <View
+            android:layout_width="77.5dp"
+            android:layout_height="1.5dp"
+            android:layout_below="@+id/logo_iv"
+            android:layout_marginRight="17.5dp"
+            android:layout_marginTop="30dp"
+            android:layout_toLeftOf="@+id/login_way_tv"
+            android:background="#5a6e7889" />
+
+        <View
+            android:layout_width="77.5dp"
+            android:layout_height="1.5dp"
+            android:layout_below="@+id/logo_iv"
+            android:layout_marginLeft="17.5dp"
+            android:layout_marginTop="30dp"
+            android:layout_toRightOf="@+id/login_way_tv"
+            android:background="#5a6E7889" />
+
+        <TextView
+            android:id="@+id/kwai_bind_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/login_way_tv"
+            android:layout_marginTop="10dp"
+            android:drawablePadding="10dp"
+            android:drawableTop="@drawable/kwai_third_kwai"
+            android:textSize="12dp"
+            android:gravity="center"
+            android:text="快手快捷登录" />
+
+        <TextView
+            android:id="@+id/phone_bind_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/login_way_tv"
+            android:layout_marginTop="10dp"
+            android:drawablePadding="10dp"
+            android:drawableTop="@drawable/kwai_third_phone"
+            android:textSize="12dp"
+            android:gravity="center"
+            android:text="注册账号" />
+
+        <View
+            android:id="@+id/center_point"
+            android:layout_width="0.33dp"
+            android:layout_height="0.33dp"
+            android:layout_centerInParent="true" />
+
+    </RelativeLayout>
+
+
+    <ImageView
+        android:id="@+id/close_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/login_container"
+        android:layout_marginLeft="-22dp"
+        android:layout_toRightOf="@+id/login_container"
+        android:src="@drawable/kwai_global_pop_close"
+        android:translationY="22dp" />
+
+</RelativeLayout>

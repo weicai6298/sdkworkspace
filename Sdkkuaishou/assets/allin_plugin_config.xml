@@ -1,0 +1,6 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<plugins>
+    <plugin name="com.kwai.sdk.KwaiSDK" type="0" />
+    <plugin name="com.kwai.sdk.KwaiUser" type="1" />
+    <plugin name="com.kwai.sdk.KwaiPay" type="2" />
+</plugins>

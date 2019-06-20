@@ -88,6 +88,9 @@ public class YaYawanconstants {
               //TODO 与uinity层进行通讯
              //  UnityPlayer.UnitySendMessage("NativeManager", "LoginSuc", jobj.toString());
 //                Toast.makeText(mActivity, "通知unity执行loginSuccess", 1).show();
+            Log.i("tag"," uid =" + user.getUID());
+            Log.i("tag"," username =" + user.getUserName());
+            Log.i("tag"," token =" + user.getToken());
             loginSuce(mActivity, user.getUID(), user.getUserName(), user.getToken());
 //            }
         }
@@ -98,6 +101,8 @@ public class YaYawanconstants {
            //UnityPlayer.UnitySendMessage("NativeManager", "LoginFailed", error + "|" + pt.toString());
 //            Toast.makeText(mActivity, "通知unity执行loginFail", 1).show();
         	loginFail();
+        	Log.i("tag","LoginFailed - error= "+ error);
+        	Log.i("tag","LoginFailed - Object= "+ pt.toString());
         	Toast("登录失败");
         }
 
@@ -412,60 +417,6 @@ public class YaYawanconstants {
 				Toast.makeText(mActivity, msg, Toast.LENGTH_SHORT).show();	
 			}
 		});
-	}
-	/**
-	 * 
-	 * 请求上报角色信息
-	 * 
-	 */
-	private static void HttpPost(final String roleId, final String roleName,final String roleLevel, final String zoneId, final String zoneName, final String roleCTime) {
-		new Thread(new Runnable() {
-
-			@Override
-			public void run() {
-				try {
-					HttpPost httpPost = new HttpPost("https://api.sdk.75757.com/user/roleinfo/");
-					List<NameValuePair> params = new ArrayList<NameValuePair>();
-					params.add(new BasicNameValuePair("roleId", roleId));
-					params.add(new BasicNameValuePair("roleName", roleName));
-					params.add(new BasicNameValuePair("roleLevel", roleLevel));
-					params.add(new BasicNameValuePair("zoneId", zoneId));
-					params.add(new BasicNameValuePair("zoneName", zoneName));
-					params.add(new BasicNameValuePair("roleCTime", roleCTime));
-
-					Log.i("tag", "params=" + params);
-					try {
-						// 设置httpPost请求参数
-						httpPost.setEntity(new UrlEncodedFormEntity(params,
-								HTTP.UTF_8));
-						HttpResponse httpResponse = new DefaultHttpClient()
-								.execute(httpPost);
-						Log.i("tag",
-								"httpResponse.getStatusLine().getStatusCode()="
-										+ httpResponse.getStatusLine()
-												.getStatusCode());
-						if (httpResponse.getStatusLine().getStatusCode() == 200) {
-//							String re = EntityUtils.toString(httpResponse
-//									.getEntity());
-//							Log.i("tag", "re=" + re);
-//							JSONObject js = new JSONObject(re);
-//							Log.i("tag", "js=" + js);
-//							uid = js.getString("uid");
-//							Log.i("tag", "uid=" + uid);
-//							Log.i("tag", "token=" + token);
-//							loginSuce(mActivity, uid, uid, token);
-							Toast("角色上报成功");
-						}
-
-					} catch (ClientProtocolException e) {
-						e.printStackTrace();
-					}
-
-				} catch (Exception e) {
-					e.printStackTrace();
-				}
-			}
-		}).start();
 	}
 
 }

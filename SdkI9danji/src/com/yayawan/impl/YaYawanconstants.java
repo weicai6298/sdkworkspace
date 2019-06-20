@@ -158,6 +158,8 @@ public class YaYawanconstants {
 		roleNamea=roleName;
 		levela=roleLevel;
 		roleCTimea=roleCTime;
+		
+		changetime = ""+System.currentTimeMillis()/1000;
 		if (Integer.parseInt(ext) == 1){
 			Manager.enterGame (paramActivity,zoneId,zoneName,roleId,roleName,roleLevel,"不存在","0","0",Manager.ENTERGAME,roleCTime,changetime);
 			
@@ -165,7 +167,6 @@ public class YaYawanconstants {
 			Manager.createRole(paramActivity,zoneId,zoneName,roleId,roleName,roleLevel,"不存在","0","0",Manager.CREATEROLE,roleCTime,changetime);
 			
 		}else if (Integer.parseInt(ext) == 3){
-			changetime=""+System.currentTimeMillis();
 			Manager.levelChange (paramActivity,zoneId,zoneName,roleId,roleName,roleLevel,"不存在","0","0",Manager.LEVELCHANGE,roleCTime,changetime);
 			
 		}

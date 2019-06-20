@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/ug_view_dialog_area"
+    android:layout_width="200dp"
+    android:layout_height="160dp"
+    android:layout_centerInParent="true"
+    android:background="@drawable/ug_dialog_white_bg"
+    android:orientation="vertical"
+    android:visibility="visible">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:paddingTop="10dp"
+        android:text="温馨提示"
+        android:textColor="@color/text_lv1"
+        android:textSize="@dimen/text_big" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:gravity="center"
+        android:lineSpacingExtra="4dp"
+        android:padding="20dp"
+        android:text="翻转手机 或 重新登陆游戏 可以重新显示浮球"
+        android:textColor="@color/text_lv2"
+        android:textSize="@dimen/text_normal" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:background="@color/common_line" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_alignParentBottom="true"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/ug_tv_cancel_dismiss"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="?android:selectableItemBackground"
+            android:gravity="center"
+            android:text="取消隐藏"
+            android:textColor="@color/text_lv2"
+            android:textSize="@dimen/text_big" />
+
+        <View
+            android:layout_width="1px"
+            android:layout_height="match_parent"
+            android:background="@color/common_line" />
+
+        <TextView
+            android:id="@+id/ug_tv_confirm_dismiss"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="?android:selectableItemBackground"
+            android:gravity="center"
+            android:text="本次隐藏"
+            android:textColor="@color/blue"
+            android:textSize="@dimen/text_big" />
+    </LinearLayout>
+</LinearLayout>
+

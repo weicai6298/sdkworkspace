@@ -15,17 +15,18 @@ import android.view.Window;
 import android.view.WindowManager;
 import android.widget.Button;
 import android.widget.LinearLayout;
+import android.widget.RelativeLayout;
 import android.widget.TextView;
 
 import com.kkgame.sdk.bean.User;
 import com.kkgame.sdk.utils.Basedialogview;
-import com.kkgame.sdk.xml.GetAssetsutils;
-import com.kkgame.sdk.xml.MachineFactory;
 import com.kkgame.sdkmain.AgentApp;
 import com.kkgame.sdkmain.KgameSdk;
 import com.kkgame.utils.DeviceUtil;
 import com.kkgame.utils.Sputils;
 import com.kkgame.utils.Yayalog;
+import com.kkgame.sdk.xml.GetAssetsutils;
+import com.kkgame.sdk.xml.MachineFactory;
 
 
 
@@ -74,6 +75,7 @@ public class Login_success_dialog extends Basedialogview {
 
 	};
 	private TextView tv_message1;
+	private TextView tv_message2;
 	private TextView tv_userid;
 	private Button bt_change;
 	public Login_success_dialog(Activity activity) {
@@ -120,14 +122,19 @@ public class Login_success_dialog extends Basedialogview {
 		;
 	}
 
+	@SuppressWarnings("deprecation")
 	@Override
 	public void createDialog(Activity mActivity) {
 		dialog = new Dialog(mContext);
 
-		int ho_height = 100;
-		int ho_with = 1000;
-		int po_height = 100;
-		int po_with = 600;
+//		int ho_height = 100;
+//		int ho_with = 1000;
+//		int po_height = 100;
+//		int po_with = 600;
+		int ho_height = 220;
+		int ho_with = 500;
+		int po_height = 220;
+		int po_with = 500;
 
 		int height = 0;
 		int with = 0;
@@ -143,17 +150,18 @@ public class Login_success_dialog extends Basedialogview {
 
 			height = ho_height;
 			with = ho_with;
-			bt_with = 240;
-			bt_textsize = 32;
-			tv_textsize = 36;
-			maginbut = 500;
+			bt_with = 150;
+			bt_textsize = 20;
+			tv_textsize = 25;
+//			maginbut = 500;
+			maginbut = 400;
 		} else if ("portrait".equals(orientation)) {
 
 			height = po_height;
 			with = po_with;
-			bt_with = 180;
-			bt_textsize = 28;
-			tv_textsize = 32;
+			bt_with = 150;
+			bt_textsize = 20;
+			tv_textsize = 25;
 			maginbut = 900;
 		}
 
@@ -163,6 +171,7 @@ public class Login_success_dialog extends Basedialogview {
 		MachineFactory machineFactory = new MachineFactory(mActivity);
 		machineFactory.MachineView(baselin, with, height, "LinearLayout");
 		baselin.setBackgroundColor(Color.TRANSPARENT);
+		baselin.setGravity(Gravity.CENTER_VERTICAL);
 
 		// 中间内容
 		LinearLayout ll_content = new LinearLayout(mContext);
@@ -171,36 +180,58 @@ public class Login_success_dialog extends Basedialogview {
 		// ll_content.setBackgroundColor(Color.WHITE);
 		ll_content.setBackgroundDrawable(GetAssetsutils
 				.get9DrawableFromAssetsFile("yaya_loginbut.9.png", mActivity));
-		ll_content.setGravity(Gravity.CENTER_VERTICAL);
+//		ll_content.setGravity(Gravity.CENTER_VERTICAL);
+		ll_content.setGravity(Gravity_CENTER);
+		ll_content.setOrientation(LinearLayout.VERTICAL);
 
 		LinearLayout ll_textline = new LinearLayout(mActivity);
-		machineFactory.MachineView(ll_textline, 0, MATCH_PARENT, 1,
+		machineFactory.MachineView(ll_textline, WRAP_CONTENT, WRAP_CONTENT, 0,
 				mLinearLayout);
-		ll_textline.setGravity(Gravity.CENTER_VERTICAL);
-
-		tv_message1 = new TextView(mActivity);
-		machineFactory.MachineTextView(tv_message1, WRAP_CONTENT, WRAP_CONTENT,
-				0, "  欢迎回来,", tv_textsize, mLinearLayout, 10, 0, 0, 0);
-		tv_message1.setTextColor(Color.parseColor("#666666"));
-
+		ll_textline.setGravity(Gravity.CENTER);
+		ll_content.setOrientation(LinearLayout.VERTICAL);
+		
+		tv_message2 = new TextView(mActivity);
+		machineFactory.MachineTextView(tv_message2, WRAP_CONTENT, WRAP_CONTENT,
+				0, "不凡游戏账号  ", tv_textsize, mLinearLayout, 0, 10, 0, 0);
+		tv_message2.setTextColor(Color.BLACK);
+		
 		tv_userid = new TextView(mActivity);
+//		machineFactory.MachineTextView(tv_userid, WRAP_CONTENT, WRAP_CONTENT,
+//				0, "", tv_textsize, mLinearLayout, 0, 0, 0, 0);
+//		machineFactory.MachineTextView(tv_userid, WRAP_CONTENT, 50,
+//				0, "", tv_textsize, mLinearLayout, 0, 0, 0, 0);
 		machineFactory.MachineTextView(tv_userid, WRAP_CONTENT, WRAP_CONTENT,
-				0, "", tv_textsize, mLinearLayout, 0, 0, 0, 0);
+				0, "", tv_textsize, mLinearLayout, 0, 10, 0, 0);
 		tv_userid.setTextColor(Color.parseColor("#ec7600"));
 
+		tv_message1 = new TextView(mActivity);
+//		machineFactory.MachineTextView(tv_message1, WRAP_CONTENT, WRAP_CONTENT,
+//				0, "  欢迎回来,", tv_textsize, mLinearLayout, 10, 0, 0, 0);
+//		machineFactory.MachineTextView(tv_message1, 150, 50,
+//				0, "正在登陆...", tv_textsize, mLinearLayout, 0, 0, 0, 0);
+		machineFactory.MachineTextView(tv_message1, WRAP_CONTENT, WRAP_CONTENT,
+				0, "正在登陆,请稍后...", tv_textsize, mLinearLayout, 0, 10, 0, 0);
+		tv_message1.setTextColor(Color.parseColor("#666666"));
+
+
 		// TODO
-		ll_textline.addView(tv_message1);
+		ll_textline.addView(tv_message2);
 		ll_textline.addView(tv_userid);
 
 		bt_change = new Button(mActivity);
-		machineFactory.MachineButton(bt_change, bt_with, 80, 0, "切换账号",
-				bt_textsize, mLinearLayout, 0, 0, 10, 0);
+//		machineFactory.MachineButton(bt_change, bt_with, 50, 0, "切换账号",
+//				bt_textsize, mLinearLayout, 0, 0, 0, 0);
+		machineFactory.MachineButton(bt_change, 155, 65, 0, "切换账号",
+				bt_textsize, mLinearLayout, 0, 10, 0, 0);
 		bt_change.setBackgroundDrawable(GetAssetsutils
-				.get9DrawableFromAssetsFile("yaya_greenbut.9.png", mContext));
+				.get9DrawableFromAssetsFile("yaya1_registerbutton.9.png", mContext));
 		bt_change.setTextColor(Color.WHITE);
 
 		// TODO
 		ll_content.addView(ll_textline);
+//		ll_content.addView(ll_zhanwei);
+//		ll_content.addView(tv_userid);
+		ll_content.addView(tv_message1);
 		if (ViewConstants.nochangeacount) {
 			Yayalog.loger("在切换账号这里:"+ViewConstants.nochangeacount);
 		}else {
@@ -240,7 +271,7 @@ public class Login_success_dialog extends Basedialogview {
 
 		mUser = AgentApp.mUser;
 		if (mUser != null) {
-			tv_userid.setText(" " + mUser.userName);
+			tv_userid.setText(mUser.userName);
 		}
 		bt_change.setOnClickListener(new OnClickListener() {
 

@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:background="@drawable/ycx_img_float_left"
+    android:orientation="horizontal" >
+    
+    <LinearLayout 
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+         android:layout_marginLeft="@dimen/ycx_dimen_float_spac_width"
+        android:id="@+id/ycx_ll_boutique"
+        android:orientation="vertical">
+        <ImageView 
+            android:src="@drawable/ycx_selector_jp"
+            android:layout_width="25dip"
+            android:layout_height="25dip"
+            android:scaleType="fitXY"/>
+        <TextView style="@style/ycx_style_float_label"
+            android:text="@string/ycx_string_boutique"/>
+    </LinearLayout>
+    
+    <LinearLayout 
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+         android:layout_marginLeft="@dimen/ycx_dimen_float_spac_width"
+        android:id="@+id/ycx_ll_gift"
+        android:orientation="vertical">
+        <ImageView 
+            android:src="@drawable/ycx_selector_gift"
+            android:layout_width="25dip"
+            android:layout_height="25dip"
+            android:scaleType="fitXY"/>
+        <TextView style="@style/ycx_style_float_label"
+            android:text="@string/ycx_string_gift"/>
+    </LinearLayout>
+    
+    <LinearLayout 
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        android:id="@+id/ycx_ll_account"
+        android:layout_marginLeft="@dimen/ycx_dimen_float_spac_width"
+        android:layout_marginRight="@dimen/ycx_dimen_float_spac_width"
+        android:orientation="vertical">
+        <ImageView 
+            android:src="@drawable/ycx_selector_account"
+            android:layout_width="25dip"
+            android:layout_height="25dip"
+            android:scaleType="fitXY"/>
+        <TextView style="@style/ycx_style_float_label"
+            android:text="@string/ycx_string_account"/>
+    </LinearLayout>
+    
+    <LinearLayout 
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="@dimen/ycx_dimen_float_spac_width"
+        android:id="@+id/ycx_ll_notice"
+        android:gravity="center_horizontal"
+        android:orientation="vertical">
+        <ImageView 
+            android:src="@drawable/ycx_selector_notice"
+            android:layout_width="25dip"
+            android:layout_height="25dip"
+            android:scaleType="fitXY"/>
+        <TextView style="@style/ycx_style_float_label"
+            android:text="@string/ycx_string_notice"/>
+    </LinearLayout>
+     <LinearLayout 
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/ycx_ll_logout"
+         android:layout_marginRight="@dimen/ycx_dimen_float_spac_width"
+        android:gravity="center_horizontal"
+        android:orientation="vertical">
+        <ImageView 
+            android:src="@drawable/ycx_selector_logout"
+            android:layout_width="25dip"
+            android:layout_height="25dip"
+            android:scaleType="fitXY"/>
+        <TextView style="@style/ycx_style_float_label"
+            android:text="@string/ycx_string_logout"/>
+     </LinearLayout>
+     <LinearLayout 
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/ycx_ll_hide"
+         android:layout_marginRight="@dimen/ycx_dimen_float_spac_width"
+        android:gravity="center_horizontal"
+        android:orientation="vertical">
+        <ImageView 
+            android:src="@drawable/ycx_selector_hide"
+            android:layout_width="25dip"
+            android:layout_height="25dip"
+            android:scaleType="fitXY"/>
+        <TextView style="@style/ycx_style_float_label"
+            android:text="@string/ycx_string_hide"/>
+     </LinearLayout>
+</LinearLayout>

@@ -30,7 +30,7 @@
 
         <TextView
             android:id="@+id/sogou_game_sdk_main_dialog_lv_item_game_des_tv"
-            android:layout_width="150dp"
+            android:layout_width="@dimen/headGameDes"
             android:layout_height="wrap_content"
             android:layout_below="@id/sogou_game_sdk_main_dialog_lv_item_game_name_tv"
             android:layout_gravity="center_horizontal"

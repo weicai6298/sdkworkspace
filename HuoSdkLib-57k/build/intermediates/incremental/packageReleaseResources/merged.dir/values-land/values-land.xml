@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="huo_sdk_activity_horizontal_margin">100dp</dimen>
+</resources>

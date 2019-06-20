@@ -18,6 +18,12 @@
     <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW" />
     <uses-permission android:name="android.permission.GET_TASKS" />
     
+    <supports-screens
+android:anyDensity="true"
+android:largeScreens="true"
+android:normalScreens="true"
+android:resizeable="true"
+android:smallScreens="true" />
 
     <application
         android:name="com.yayawan.impl.YYApplication"
@@ -34,17 +40,7 @@
         </activity>
         
         
-        <activity
-            android:name="com.sogou.gamecenter.sdk.demo.StartGameActivity"
-            android:configChanges="mcc|mnc|locale|touchscreen|keyboard|keyboardHidden|navigation|screenLayout|fontScale|orientation|screenSize"
-            android:screenOrientation="behind"
-            android:theme="@android:style/Theme.NoTitleBar.Fullscreen" />
-        <activity
-            android:name="com.sogou.gamecenter.sdk.demo.HomeActivity"
-            android:configChanges="mcc|mnc|locale|touchscreen|keyboard|keyboardHidden|navigation|screenLayout|fontScale|orientation|screenSize"
-            android:screenOrientation="behind"
-            android:theme="@android:style/Theme.NoTitleBar.Fullscreen" />
-        <!-- END:Sample必要配置 -->
+        
 
 
         <!-- START:搜狗游戏SDK必要配置 -->
@@ -348,6 +344,16 @@
             android:theme="@android:style/Theme.Translucent" >
         </activity>
         
+        <!-- 威富通微信支付 -->
+        <activity
+            android:name="com.swiftfintech.pay.activity.UnifiedPay"
+            android:configChanges="orientation|keyboardHidden|keyboard|smallestScreenSize|locale|screenLayout|screenSize"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar">
+        </activity>
+
+        <uses-library android:name="android.test.runner" />
+        
          <meta-data
             android:name="isdebug"
             android:value="false" />
@@ -378,4 +384,8 @@
         
     </application>
     
+    <instrumentation
+        android:name="android.test.InstrumentationTestRunner"
+        android:targetPackage="com.sogou.gamecenter.sdk.demo" >
+    </instrumentation>
     </manifest>

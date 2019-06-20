@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="horizontal">
+
+    <ScrollView
+        android:id="@+id/dialog_scroll_view"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:background="@drawable/samsung_notice_dialog_list_shape"
+        android:paddingBottom="@dimen/samsung_notice_margin_5"
+        android:scrollbars="none">
+
+        <LinearLayout
+            android:id="@+id/dialog_notice_list"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:orientation="vertical"/>
+    </ScrollView>
+
+    <LinearLayout
+        android:layout_height="match_parent"
+        android:layout_width="0dp"
+        android:layout_weight="1"
+        android:paddingBottom="@dimen/samsung_notice_margin_3"
+        android:orientation="vertical">
+
+        <ProgressBar
+            android:id="@+id/webview_progress"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/samsung_notice_margin_2"
+            android:max="100"
+            style="?android:attr/progressBarStyleHorizontal"
+            android:progressDrawable="@drawable/samsung_notice_progress_bg"
+            android:visibility="gone"/>
+
+        <WebView
+            android:id="@+id/dialog_webview"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:paddingRight="@dimen/samsung_notice_margin_4"
+            android:scrollbarThumbVertical="@drawable/samsung_notice_scrollbar"/>
+    </LinearLayout>
+
+</LinearLayout>

@@ -1,0 +1,163 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#ACACAC" >
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:focusable="true"
+            android:focusableInTouchMode = "true"
+            tools:context=".MainActivity" >
+
+            <Button
+                android:id="@+id/game_init"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10.0dp"
+                android:text="SDK 初始化"
+                android:visibility="gone" />
+
+            <Button
+                android:id="@+id/game_login"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10.0dp"
+                android:text="登录" />
+
+            <Button
+                android:id="@+id/game_init_wechat_login"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10.0dp"
+                android:text="初始化微信登录" />
+
+            <Button
+                android:id="@+id/game_init_qqlogin"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10.0dp"
+                android:text="初始化QQ登录" />
+
+            <EditText
+                android:id="@+id/game_money"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10.0dp"
+                android:layout_marginRight="10.0dp"
+                android:layout_marginTop="10.0dp"
+                android:gravity="center"
+                android:hint="请输入支付金额"
+                android:imeOptions="actionDone|flagNoExtractUi"
+                android:inputType="phone|number"
+                android:digits="1234567890"
+                android:maxLength="6" />
+
+            <Button
+                android:id="@+id/game_payment"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10.0dp"
+                android:layout_marginRight="10.0dp"
+                android:layout_marginBottom="10.0dp"
+                android:text="充值" />
+
+            <Button
+                android:id="@+id/game_payment_money"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10.0dp"
+                android:text="固定金额充值" />
+
+            <Button
+                android:id="@+id/game_changeaccount"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10.0dp"
+                android:text="切换账号" />
+
+            <Button
+                android:id="@+id/game_user_center"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10.0dp"
+                android:text="用户中心"
+                android:visibility="gone" />
+
+            <Button
+                android:id="@+id/game_game_exit"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10.0dp"
+                android:text="游戏退出" />
+
+            <Button
+                android:id="@+id/game_create_role"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10.0dp"
+                android:text="创建角色"/>
+
+            <Button
+                android:id="@+id/game_enter_game"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10.0dp"
+                android:text="进入游戏"/>
+
+            <Button
+                android:id="@+id/game_buy_vip"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="10.0dp"
+                android:text="购买游戏会员"/>
+
+            <Button
+                android:id="@+id/game_get_vip_info"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10.0dp"
+                android:text="获取游戏会员信息"/>
+
+            <Button
+                android:id="@+id/game_get_user_info_real_time"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10.0dp"
+                android:text="实时获取用户相关信息"/>
+
+            <Button
+                android:id="@+id/game_open_custom_service"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10.0dp"
+                android:text="打开客服页面"/>
+
+            <Button
+                android:id="@+id/game_launch_phone_bind"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10.0dp"
+                android:text="手机号绑定界面"/>
+
+            <Button
+                android:id="@+id/game_crash"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10.0dp"
+                android:text="触发崩溃"/>
+        </LinearLayout>
+    </ScrollView>
+
+    <ImageView
+        android:id="@+id/app_icon"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/welcome" />
+</RelativeLayout>

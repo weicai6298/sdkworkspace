@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="PopupAnimation" parent="android:Animation" mce_bogus="1">
+        <item name="android:windowEnterAnimation">@anim/iapppay_demo_pop_enter</item>
+        <item name="android:windowExitAnimation">@anim/iapppay_demo_pop_exit</item>
+    </style>
+</resources>

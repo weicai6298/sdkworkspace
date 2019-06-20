@@ -1,7 +1,7 @@
 /*
  * Copyright (C) 2010 The MobileSecurePay Project
  * All right reserved.
- * author: shiqun.shi@alipay.com
+ * author: shiqun.shi@bluepay.com
  */
 
 package com.kkgame.sdk.utils;
@@ -26,7 +26,7 @@ public class Rsa {
 	 * @param ins
 	 * @return
 	 * @throws NoSuchAlgorithmException
-	 * @throws AlipayException
+	 * @throws BluepException
 	 */
 	private static PublicKey getPublicKeyFromX509(String algorithm,
 			String bysKey) throws NoSuchAlgorithmException, Exception {

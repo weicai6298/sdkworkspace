@@ -1,0 +1,215 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:focusable="true"
+    android:focusableInTouchMode="true">
+
+    <RelativeLayout
+        android:id="@+id/rl_login_register"
+        android:layout_width="306.67dp"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:minHeight="306.67dp"
+        android:visibility="visible">
+
+        <RelativeLayout
+            android:id="@+id/rl_login_register_in"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/yxf_bt_in_bg_whi">
+
+            <RelativeLayout
+                android:id="@+id/rl_in_title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="17dp">
+
+                <ImageView
+                    android:id="@+id/iv_finish"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="14dp"
+                    android:padding="8dp"
+                    android:src="@drawable/yxf_left_black_back" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:text="快速注册"
+                    android:textColor="@color/yxf_sdk_gray_title"
+                    android:textSize="17.33sp" />
+
+            </RelativeLayout>
+
+            <LinearLayout
+                android:id="@+id/ll_title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/rl_in_title"
+                android:layout_marginLeft="26.67dp"
+                android:layout_marginRight="26.67dp"
+                android:layout_marginTop="37.2dp"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="left"
+                    android:text="以下账号密码由系统随机生成，您可自行修改"
+                    android:textColor="@color/yxf_sdk_gray_result"
+                    android:textSize="12sp" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/ll_login_frame"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/ll_title"
+                android:layout_marginLeft="26.67dp"
+                android:layout_marginRight="26.67dp"
+                android:layout_marginTop="13.33dp"
+                android:orientation="vertical">
+
+                <RelativeLayout
+                    android:id="@+id/rl_username"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="40dp"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_vertical"
+                            android:layout_marginRight="2dp"
+                            android:text="账号："
+                            android:textColor="@color/yxf_sdk_gray_title"
+                            android:textSize="12sp" />
+
+                        <EditText
+                            android:id="@+id/et_account"
+                            android:layout_width="match_parent"
+                            android:layout_height="40dp"
+                            android:background="@drawable/yxf_bt_in_edt_whi"
+                            android:maxLength="16"
+                            android:paddingLeft="10.67dp"
+                            android:paddingRight="10.67dp"
+                            android:singleLine="true"
+                            android:textColor="@color/yxf_sdk_black"
+                            android:textColorHint="@color/yxf_sdk_gray"
+                            android:textSize="12sp" />
+
+                    </LinearLayout>
+
+                    <ImageView
+                        android:id="@+id/iv_del"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:padding="10.67dp"
+                        android:src="@drawable/yxf_icon_del"
+                        android:visibility="gone" />
+
+                </RelativeLayout>
+
+                <LinearLayout
+                    android:id="@+id/rl_pwd"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:gravity="center"
+                    android:orientation="horizontal">
+
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginRight="2dp"
+                        android:text="密码："
+                        android:textColor="@color/yxf_sdk_gray_title"
+                        android:textSize="12sp" />
+
+                    <EditText
+                        android:id="@+id/et_pwd"
+                        android:layout_width="match_parent"
+                        android:layout_height="40dp"
+                        android:background="@drawable/yxf_bt_in_edt_whi"
+                        android:maxLength="16"
+                        android:paddingLeft="10.67dp"
+                        android:paddingRight="10.67dp"
+                        android:singleLine="true"
+                        android:textColor="@color/yxf_sdk_black"
+                        android:textColorHint="@color/yxf_sdk_gray"
+                        android:textSize="12sp" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/ll_login_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/ll_login_frame"
+                android:layout_centerHorizontal="true"
+                android:layout_gravity="center"
+                android:layout_marginLeft="26.67dp"
+                android:layout_marginRight="26.67dp"
+                android:layout_marginTop="13.33dp"
+                android:orientation="vertical">
+
+                <Button
+                    android:id="@+id/btn_login"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:background="@drawable/yxf_lin_shape_red"
+                    android:text="立即注册"
+                    android:textColor="@color/yxf_sdk_gray_title"
+                    android:textSize="14.67sp" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/ll_protocol"
+                android:layout_width="wrap_content"
+                android:layout_height="48dp"
+                android:layout_below="@+id/ll_login_layout"
+                android:layout_centerHorizontal="true"
+                android:layout_marginLeft="26.67dp"
+                android:layout_marginRight="26.67dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginRight="3.33dp"
+                    android:text="注册即同意"
+                    android:textColor="@color/yxf_sdk_gray_result"
+                    android:textSize="10sp" />
+
+                <TextView
+                    android:id="@+id/tv_protocol"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:text="游戏fan平台用户服务协议"
+                    android:textColor="@color/yxf_sdk_blue"
+                    android:textSize="10sp" />
+
+            </LinearLayout>
+
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+</RelativeLayout>

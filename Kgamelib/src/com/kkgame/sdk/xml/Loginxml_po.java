@@ -81,7 +81,7 @@ public class Loginxml_po extends Basexml implements Layoutxml {
 				MATCH_PARENT, 100, 0, "LinearLayout", 0, 20, 0, 0, 100);
 
 		ll_mUser.setBackgroundDrawable(GetAssetsutils
-				.get9DrawableFromAssetsFile("yaya_biankuang2.9.png", mContext));
+				.get9DrawableFromAssetsFile("yaya1_biankuan.9.png", mContext));
 
 		ll_mUser.setGravity(Gravity.CENTER);
 
@@ -90,7 +90,7 @@ public class Loginxml_po extends Basexml implements Layoutxml {
 		iv_mUn_icon = (ImageView) machineFactory.MachineView(iv_mUn_icon, 40,
 				40, 0, mLinearLayout, 20, 0, 0, 0, 100);
 		iv_mUn_icon.setImageBitmap(GetAssetsutils.getImageFromAssetsFile(
-				"yaya_username.png", mActivity));
+				"yaya1_username.png", mActivity));
 
 		// username的edtext
 		et_mUn = new EditText(mContext);
@@ -125,7 +125,7 @@ public class Loginxml_po extends Basexml implements Layoutxml {
 				MATCH_PARENT, 100, 0, "LinearLayout", 0, 20, 0, 0, 100);
 
 		ll_mPassword.setBackgroundDrawable(GetAssetsutils
-				.get9DrawableFromAssetsFile("yaya_biankuang2.9.png", mContext));
+				.get9DrawableFromAssetsFile("yaya1_biankuan.9.png", mContext));
 		// Drawable drawable =new
 		// BitmapDrawable(Biankuang.createBiankuang(machSize(700),
 		// machSize(100)));
@@ -138,7 +138,7 @@ public class Loginxml_po extends Basexml implements Layoutxml {
 		iv_mPs_icon = (ImageView) machineFactory.MachineView(iv_mPs_icon, 40,
 				40, 0, mLinearLayout, 20, 0, 0, 0, 100);
 		iv_mPs_icon.setImageBitmap(GetAssetsutils.getImageFromAssetsFile(
-				"yaya_password.png", mActivity));
+				"yaya1_password.png", mActivity));
 
 		// password的edtext
 		et_mPs = new EditText(mContext);

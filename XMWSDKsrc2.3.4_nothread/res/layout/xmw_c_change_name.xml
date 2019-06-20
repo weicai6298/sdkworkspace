@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/xmw_phonefindview"
+    android:layout_width="300dp"
+    android:layout_height="wrap_content"
+    android:layout_gravity="center"
+    android:background="@drawable/xmw_corner_login_bg"
+    android:gravity="center"
+    android:orientation="vertical"
+    android:visibility="gone" >
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@drawable/xmw_corner_title" >
+
+        <TextView
+            android:id="@+id/find_back1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="12dp"
+            android:background="@drawable/xmw_ic_back" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignTop="@+id/textView1"
+            android:layout_centerInParent="true"
+            android:text="找回密码"
+            android:textColor="@color/appBlack"
+            android:textSize="20sp" />
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:paddingLeft="18dp"
+        android:paddingRight="18dp" >
+
+        <com.xmwsdk.view.XmwEditText
+            android:id="@+id/xmw_phone"
+            android:layout_width="match_parent"
+            android:layout_height="38dp"
+            android:layout_marginTop="18dp"
+            android:background="@drawable/xmw_corner_white_gray"
+            android:hint="@string/xmw_phonenumber"
+            android:inputType="number"
+            android:maxLength="11"
+            android:paddingLeft="3dp"
+            android:textColor="@color/appWhite"
+            android:textColorHint="@color/con_black"
+            android:textSize="16sp"
+            android:visibility="visible" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:orientation="horizontal" >
+
+            <com.xmwsdk.view.XmwEditText
+                android:id="@+id/get_code"
+                android:layout_width="0dp"
+                android:layout_height="38dp"
+                android:layout_marginRight="9dp"
+                android:layout_weight="1"
+                android:background="@drawable/xmw_corner_white_gray"
+                android:hint="@string/xmw_phonecode"
+                android:inputType="number"
+                android:maxLength="11"
+                android:paddingLeft="3dp"
+                android:textColor="@color/appWhite"
+                android:textColorHint="@color/con_black"
+                android:textSize="16sp" />
+
+            <Button
+                android:id="@+id/cre_getcode"
+                android:layout_width="91dp"
+                android:layout_height="42dp"
+                android:background="@drawable/xmw_corner_blue"
+                android:gravity="center"
+                android:text="获取验证码"
+                android:textColor="@color/appWhite"
+                android:textSize="15sp" />
+        </LinearLayout>
+
+        <com.xmwsdk.view.XmwEditText
+            android:id="@+id/find_pwd"
+            android:layout_width="match_parent"
+            android:layout_height="38dp"
+            android:layout_marginTop="12dp"
+            android:background="@drawable/xmw_corner_white_gray"
+            android:hint="@string/xmw_newpasswith"
+            android:inputType="number"
+            android:maxLength="11"
+            android:paddingLeft="3dp"
+            android:textColor="@color/appWhite"
+            android:textColorHint="@color/con_black"
+            android:textSize="16sp" />
+    </LinearLayout>
+
+    <RelativeLayout
+        android:id="@+id/find_pwd_btn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="15dp"
+        android:layout_marginLeft="18dp"
+        android:layout_marginRight="18dp"
+        android:layout_marginTop="15dp"
+        android:background="@drawable/xmw_light_button" >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:gravity="center"
+            android:padding="10dp"
+            android:text="重置密码"
+            android:textColor="@color/appBlack"
+            android:textSize="15sp" />
+    </RelativeLayout>
+
+</LinearLayout>

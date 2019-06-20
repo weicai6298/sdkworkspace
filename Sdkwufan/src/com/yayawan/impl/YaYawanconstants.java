@@ -79,6 +79,7 @@ public class YaYawanconstants {
 //	                        String username = result.get
 	                        uid = openUid+"";
 	                        loginSuce(mActivity, uid, uid, token);
+	                        PPayCenter.loginFinish(mactivity);
 	                        Toast("登录成功");
 	                        break;
 	                    case LoginResult.LOGIN_CODE_FAILED://登录失败
@@ -129,83 +130,84 @@ public class YaYawanconstants {
                 String mmm = "";
                 switch (status) {
                     case PayArgsCheckResult.CHECK_RESULT_PAY_CALLBACK_NULL:
-//                        mmm = "参数错误:回调函数未配置";
+                        mmm = "参数错误:回调函数未配置";
 //                        Log.i("tag","支付结果"+mmm);
                     	payFail();
                     	Toast("支付失败");
                         break;
                     case PayArgsCheckResult.CHECK_RESULT_PAY_INVALID_AMOUNT:
-//                        mmm = "参数错误:金额无效";
+                        mmm = "参数错误:金额无效";
                     	payFail();
                     	Toast("支付失败");
                         break;
                     case PayArgsCheckResult.CHECK_RESULT_PAY_INVALID_APP_NAME:
-//                        mmm = "参数错误:游戏名称无效";
+                        mmm = "参数错误:游戏名称无效";
                     	payFail();
                     	Toast("支付失败");
                         break;
                     case PayArgsCheckResult.CHECK_RESULT_PAY_INVALID_ORDER_ID:
-//                        mmm = "参数错误:APP_APP_ORDER_ID无效";
+                        mmm = "参数错误:APP_APP_ORDER_ID无效";
                     	payFail();
                     	Toast("支付失败");
                         break;
                     case PayArgsCheckResult.CHECK_RESULT_PAY_INVALID_APP_USER_ID:
-//                        mmm = "参数错误:APP_USER_ID无效";
+                        mmm = "参数错误:APP_USER_ID无效";
                     	payFail();
                     	Toast("支付失败");
                         break;
                     case PayArgsCheckResult.CHECK_RESULT_PAY_INVALID_APP_USER_NAME:
-//                        mmm = "参数错误:APP_USER_NAME无效";
+                        mmm = "参数错误:APP_USER_NAME无效";
                     	payFail();
                     	Toast("支付失败");
                         break;
                     case PayArgsCheckResult.CHECK_RESULT_PAY_INVALID_NOTIFY_URI:
-//                        mmm = "参数错误:NOTIFY_URI无效";
+                        mmm = "参数错误:NOTIFY_URI无效";
                     	payFail();
                     	Toast("支付失败");
                         break;
                     case PayArgsCheckResult.CHECK_RESULT_PAY_INVALID_OPEN_UID:
-//                        mmm = "参数错误:OPEN_UID无效";
+                        mmm = "参数错误:OPEN_UID无效";
                     	payFail();
                     	Toast("支付失败");
                         break;
                     case PayArgsCheckResult.CHECK_RESULT_PAY_INVALID_PRODUCT_ID:
-//                        mmm = "参数错误:PRODUCT_ID无效";
+                        mmm = "参数错误:PRODUCT_ID无效";
                     	payFail();
                     	Toast("支付失败");
                         break;
                     case PayArgsCheckResult.CHECK_RESULT_PAY_INVALID_PRODUCT_NAME:
-//                        mmm = "参数错误:PRODUCT_NAME无效";
+                        mmm = "参数错误:PRODUCT_NAME无效";
                     	payFail();
                     	Toast("支付失败");
                         break;
                     case PayArgsCheckResult.CHECK_RESULT_PAY_INVALID_APP_KEY:
-//                        mmm = "参数错误:APP_KEY无效";
+                        mmm = "参数错误:APP_KEY无效";
                     	payFail();
                     	Toast("支付失败");
                         break;
                     case PaayActivity.PAPAPay_RESULT_CODE_SUCCESS:
-//                        mmm = "支付成功";
+                        mmm = "支付成功";
                     	paySuce();
                     	Toast("支付成功");
                         break;
                     case PaayActivity.PAPAPay_RESULT_CODE_FAILURE:
-//                        mmm = "支付失败";
+                        mmm = "支付失败";
                     	payFail();
                     	Toast("支付失败");
                         break;
                     case PaayActivity.PAPAPay_RESULT_CODE_CANCEL:
-//                        mmm = "支付取消";
+                        mmm = "支付取消";
                     	payFail();
                     	Toast("支付取消");
                         break;
                     case PaayActivity.PAPAPay_RESULT_CODE_WAIT:
-//                        mmm = "支付等待";
+                        mmm = "支付等待";
                     	payFail();
                     	Toast("支付等待中");
                         break;
                 }
 //                msg.setText(mmm + "");
+                Log.i("tag","支付结果："+mmm);
             }
         });
 	}
@@ -261,7 +263,7 @@ public class YaYawanconstants {
 		//1为角色登陆成功  2为角色创建  3为角色升级
 		if (Integer.parseInt(ext) == 1){
 //		3.5  进入游戏接口【客户端调用】( 必接)
-			PPayCenter. enterGame(roleName,0,Integer.parseInt(zoneId));
+			PPayCenter.enterGame(roleName,0,Integer.parseInt(zoneId),roleId,"0");
 		}else if (Integer.parseInt(ext) == 2){
 			//  创建角色接口【客户端调用】
 			PPayCenter. createRole(roleName,0,Integer.parseInt(zoneId));
@@ -393,60 +395,6 @@ public class YaYawanconstants {
 				Toast.makeText(mActivity, msg, Toast.LENGTH_SHORT).show();	
 			}
 		});
-	}
-	/**
-	 * 
-	 * 请求上报角色信息
-	 * 
-	 */
-	private static void HttpPost(final String roleId, final String roleName,final String roleLevel, final String zoneId, final String zoneName, final String roleCTime) {
-		new Thread(new Runnable() {
-
-			@Override
-			public void run() {
-				try {
-					HttpPost httpPost = new HttpPost("https://api.sdk.75757.com/user/roleinfo/");
-					List<NameValuePair> params = new ArrayList<NameValuePair>();
-					params.add(new BasicNameValuePair("roleId", roleId));
-					params.add(new BasicNameValuePair("roleName", roleName));
-					params.add(new BasicNameValuePair("roleLevel", roleLevel));
-					params.add(new BasicNameValuePair("zoneId", zoneId));
-					params.add(new BasicNameValuePair("zoneName", zoneName));
-					params.add(new BasicNameValuePair("roleCTime", roleCTime));
-
-					Log.i("tag", "params=" + params);
-					try {
-						// 设置httpPost请求参数
-						httpPost.setEntity(new UrlEncodedFormEntity(params,
-								HTTP.UTF_8));
-						HttpResponse httpResponse = new DefaultHttpClient()
-								.execute(httpPost);
-						Log.i("tag",
-								"httpResponse.getStatusLine().getStatusCode()="
-										+ httpResponse.getStatusLine()
-												.getStatusCode());
-						if (httpResponse.getStatusLine().getStatusCode() == 200) {
-//							String re = EntityUtils.toString(httpResponse
-//									.getEntity());
-//							Log.i("tag", "re=" + re);
-//							JSONObject js = new JSONObject(re);
-//							Log.i("tag", "js=" + js);
-//							uid = js.getString("uid");
-//							Log.i("tag", "uid=" + uid);
-//							Log.i("tag", "token=" + token);
-//							loginSuce(mActivity, uid, uid, token);
-							Toast("角色上报成功");
-						}
-
-					} catch (ClientProtocolException e) {
-						e.printStackTrace();
-					}
-
-				} catch (Exception e) {
-					e.printStackTrace();
-				}
-			}
-		}).start();
 	}
 
 }

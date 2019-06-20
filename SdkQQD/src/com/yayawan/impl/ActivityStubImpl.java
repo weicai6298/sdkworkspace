@@ -2,6 +2,7 @@ package com.yayawan.impl;
 
 import android.app.Activity;
 import android.app.ProgressDialog;
+import android.content.Context;
 import android.content.Intent;
 
 import com.kkgame.utils.DeviceUtil;
@@ -34,6 +35,7 @@ public class ActivityStubImpl implements YYWActivityStub {
 		mActivity = paramActivity;
 		QqYsdkHelp.onCreate(paramActivity);
 		QqYsdkHelp.inintsdk(paramActivity);
+		YSDKApi.onCreate(paramActivity);
 		YSDKApi.handleIntent(paramActivity.getIntent());
 		
 		String youmeng = DeviceUtil.getGameInfo(paramActivity, "isyoumeng");
@@ -99,6 +101,42 @@ public class ActivityStubImpl implements YYWActivityStub {
 	}
 
 	public void onStart(Activity arg0) {
+		
+	}
+
+	@Override
+	public void attachBaseContext(Context arg0) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void launchActivityOnCreate(Activity arg0) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void launchActivityonOnNewIntent(Intent arg0) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void onBackPressed() {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void onConfigurationChanged() {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void onRequestPermissionsResult(int arg0, String[] arg1, int[] arg2) {
+		// TODO Auto-generated method stub
 		
 	}
 

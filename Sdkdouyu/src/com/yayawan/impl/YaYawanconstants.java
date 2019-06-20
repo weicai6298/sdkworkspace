@@ -24,6 +24,12 @@ import com.douyu.gamesdk.DouyuSdkParams;
 import com.kkgame.utils.DeviceUtil;
 import com.kkgame.utils.Handle;
 import com.kkgame.utils.JSONUtil;
+import com.lidroid.jxutils.HttpUtils;
+import com.lidroid.jxutils.exception.HttpException;
+import com.lidroid.jxutils.http.RequestParams;
+import com.lidroid.jxutils.http.ResponseInfo;
+import com.lidroid.jxutils.http.callback.RequestCallBack;
+import com.lidroid.jxutils.http.client.HttpRequest.HttpMethod;
 import com.yayawan.callback.YYWExitCallback;
 import com.yayawan.domain.YYWUser;
 import com.yayawan.main.YYWMain;
@@ -37,7 +43,6 @@ public class YaYawanconstants {
 
 	private static boolean isinit = false;
 	
-	private static String uid;
 	private static String token;
 	
 	public static String role_Id = "1";
@@ -143,13 +148,6 @@ public class YaYawanconstants {
 		//回调信息，必传
 		payParams2.put(DouyuSdkParams.CALLBACK, json.get("title")+"");
 		
-		Log.i("tag", "THIRD_ORDER_ID ="+json.get("order_id")+"");
-		Log.i("tag", "AREA_ID ="+json.get("area_id")+"");
-		Log.i("tag", "ROLE_NAME ="+json.get("role_name")+"");
-		Log.i("tag", "TITLE ="+json.get("title")+"");
-		Log.i("tag", "AMOUNT ="+json.get("amount")+"");
-		Log.i("tag", "SIGN ="+json.get("sign")+"");
-		Log.i("tag", "CALLBACK ="+json.get("title")+"");
 		
 		DouyuGameSdk.getInstance().pay(payParams2, new DouyuCallback() {
 			
@@ -342,63 +340,6 @@ public class YaYawanconstants {
 	}
 	/**
 	 * 
-	 * 请求上报角色信息
-	 * 
-	 */
-	@SuppressWarnings("unused")
-	private static void HttpPost(final String roleId, final String roleName,final String roleLevel, final String zoneId, final String zoneName, final String roleCTime) {
-		new Thread(new Runnable() {
-
-			@SuppressWarnings("deprecation")
-			@Override
-			public void run() {
-				try {
-					HttpPost httpPost = new HttpPost("https://api.sdk.75757.com/user/roleinfo/");
-					List<NameValuePair> params = new ArrayList<NameValuePair>();
-					params.add(new BasicNameValuePair("roleId", roleId));
-					params.add(new BasicNameValuePair("roleName", roleName));
-					params.add(new BasicNameValuePair("roleLevel", roleLevel));
-					params.add(new BasicNameValuePair("zoneId", zoneId));
-					params.add(new BasicNameValuePair("zoneName", zoneName));
-					params.add(new BasicNameValuePair("roleCTime", roleCTime));
-
-					Log.i("tag", "params=" + params);
-					try {
-						// 设置httpPost请求参数
-						httpPost.setEntity(new UrlEncodedFormEntity(params,
-								HTTP.UTF_8));
-						HttpResponse httpResponse = new DefaultHttpClient()
-						.execute(httpPost);
-						Log.i("tag",
-								"httpResponse.getStatusLine().getStatusCode()="
-										+ httpResponse.getStatusLine()
-										.getStatusCode());
-						if (httpResponse.getStatusLine().getStatusCode() == 200) {
-							//							String re = EntityUtils.toString(httpResponse
-							//									.getEntity());
-							//							Log.i("tag", "re=" + re);
-							//							JSONObject js = new JSONObject(re);
-							//							Log.i("tag", "js=" + js);
-							//							uid = js.getString("uid");
-							//							Log.i("tag", "uid=" + uid);
-							//							Log.i("tag", "token=" + token);
-							//							loginSuce(mActivity, uid, uid, token);
-							Toast("角色上报成功");
-						}
-
-					} catch (ClientProtocolException e) {
-						e.printStackTrace();
-					}
-
-				} catch (Exception e) {
-					e.printStackTrace();
-				}
-			}
-		}).start();
-	}
-	
-	/**
-	 * 
 	 * 请求获取用户uid
 	 * 
 	 * @param sid
@@ -406,53 +347,36 @@ public class YaYawanconstants {
 	 */
 	private static void HttpPost(final String sid) {
 		token = sid;
-		new Thread(new Runnable() {
+		HttpUtils httpUtil = new HttpUtils();
+		String url = "https://api.sdk.75757.com/data/get_uid/";
+		RequestParams requestParams = new RequestParams();
+		requestParams.addBodyParameter("app_id",DeviceUtil.getAppid(mActivity));
+		requestParams.addBodyParameter("sid", sid);
+		requestParams.addBodyParameter("sdk_version", DouyuGameSdk.getSDKVersion());
+		httpUtil.send(HttpMethod.POST, url, requestParams,
+				new RequestCallBack<String>() {
 
-			@SuppressWarnings("deprecation")
-			@Override
-			public void run() {
-				try {
-					HttpPost httpPost = new HttpPost(
-							"https://api.sdk.75757.com/data/get_uid/");
-					List<NameValuePair> params = new ArrayList<NameValuePair>();
-					params.add(new BasicNameValuePair("app_id", DeviceUtil
-							.getAppid(mActivity)));
-					params.add(new BasicNameValuePair("sid", sid));
-					params.add(new BasicNameValuePair("sdk_version", DouyuGameSdk.getSDKVersion()));
-
-					Log.i("tag", "params=" + params);
-					try {
-						// 设置httpPost请求参数
-						httpPost.setEntity(new UrlEncodedFormEntity(params,
-								HTTP.UTF_8));
-						HttpResponse httpResponse = new DefaultHttpClient()
-								.execute(httpPost);
-						Log.i("tag",
-								"httpResponse.getStatusLine().getStatusCode()="
-										+ httpResponse.getStatusLine()
-												.getStatusCode());
-						if (httpResponse.getStatusLine().getStatusCode() == 200) {
-							String re = EntityUtils.toString(httpResponse
-									.getEntity());
-							Log.i("tag", "re=" + re);
-							JSONObject js = new JSONObject(re);
-							Log.i("tag", "js=" + js);
-							uid = js.getString("uid");
-							Log.i("tag", "uid=" + uid);
-							Log.i("tag", "token=" + token);
-							loginSuce(mActivity, uid, uid, token);
-							Toast("登录成功");
-						}
-
-					} catch (ClientProtocolException e) {
-						e.printStackTrace();
+					@Override
+					public void onFailure(HttpException arg0, String arg1) {
+						// TODO Auto-generated method stub
+						Yayalog.loger("请求失败"+arg1.toString());
 					}
 
-				} catch (Exception e) {
-					e.printStackTrace();
-				}
-			}
-		}).start();
+					@Override
+					public void onSuccess(ResponseInfo<String> arg0) {
+						// TODO Auto-generated method stub
+						try {
+							Yayalog.loger("请求成功"+arg0.result);
+							JSONObject obj = new JSONObject(arg0.result);
+							String uid = obj.getString("uid");
+							Yayalog.loger("uid ="+uid);
+							loginSuce(mActivity, uid, uid, token);
+							Toast("登录成功");
+						} catch (JSONException e) {
+							e.printStackTrace();
+						}
+					}
+				});
 	}
 
 }

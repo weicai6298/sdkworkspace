@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayoutt xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:custom="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/bsgamesdk_id_passwordLayout"
+    android:layout_width="240dp"
+    android:layout_height="36dp"
+    android:layout_marginBottom="10dp">
+
+    <EditText
+        android:id="@+id/bsgamesdk_edit_password_login"
+        style="?attr/bsgamesdk_basic_editText_style"
+        android:hint="@string/bsgamesdk_password_login_hit"
+        android:imeOptions="actionDone"
+        android:inputType="textPassword"
+        android:maxLength="32"/>
+
+    <ImageButton
+        android:id="@+id/bsgamesdk_login_pwdDel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_marginRight="8dp"
+        android:layout_marginTop="16dp"
+        android:layout_alignParentRight="true"
+        android:background="@null"
+        android:contentDescription="@string/bsgamesdk_delbtn"
+        android:src="@drawable/bsgamesdk_pic_del"
+        android:visibility="gone" />
+</RelativeLayoutt>

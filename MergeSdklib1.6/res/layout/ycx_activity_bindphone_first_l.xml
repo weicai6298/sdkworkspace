@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/ycx_color_background" >
+
+    <include layout="@layout/ycx_view_title"/>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/ycx_bind_title"
+        android:padding="20dp" >
+
+        <LinearLayout
+            android:id="@+id/ycx_layout_phoneno"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/ycx_tv_phoneno_title"
+            android:layout_marginTop="30dp"
+            android:gravity="center_horizontal"
+            android:orientation="horizontal" >
+
+            <Button
+                android:id="@+id/ycx_btn_binding_cancel"
+                android:layout_width="110dp"
+                android:layout_height="@dimen/ycx_dimen_btn_height"
+                android:background="@drawable/ycx_selector_btn_white_bg"
+                android:text="@string/ycx_string_nobind"
+                android:textColor="@color/ycx_color_gray_light"
+                android:textSize="@dimen/ycx_dimen_larger" />
+
+            <Button
+                android:id="@+id/ycx_btn_binding_confirm"
+                android:layout_width="110dp"
+                android:layout_height="@dimen/ycx_dimen_btn_height"
+                android:layout_marginLeft="15dp"
+                android:background="@drawable/ycx_btn_bule_selector"
+                android:text="@string/ycx_string_bind"
+                android:textColor="@color/ycx_color_white"
+                android:textSize="@dimen/ycx_dimen_larger" />
+        </LinearLayout>
+
+        <include
+            android:id="@+id/ycx_layout_contact"
+            android:layout_width="250dp"
+            android:layout_height="@dimen/ycx_dimen_editext_height"
+            android:layout_below="@id/ycx_layout_phoneno"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="20dp"
+            layout="@layout/ycx_view_bottom_contact"
+            android:background="@drawable/ycx_img_service_bg"
+            android:gravity="center_vertical"
+            android:paddingLeft="20dp" />
+
+        <TextView
+            android:id="@+id/ycx_tv_phoneno_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/ycx_tv_tips_first"
+            android:layout_centerHorizontal="true"
+            android:gravity="left"
+            android:paddingTop="5dp"
+            android:text="@string/ycx_string_bind_phone_tips"
+            android:textColor="@color/ycx_color_gray_light"
+            android:textSize="@dimen/ycx_dimen_large" />
+
+        <TextView
+            android:id="@+id/ycx_tv_tips_first"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="50dp"
+            android:gravity="left"
+            android:paddingTop="10dp"
+            android:text="@string/ycx_string_bindphone_tips_first"
+            android:textColor="@color/ycx_color_gray_darker"
+            android:textSize="@dimen/ycx_dimen_larger" />
+
+        <ImageView
+            android:id="@+id/ycx_iv_bindphone"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_alignTop="@+id/ycx_tv_tips_first"
+            android:layout_toLeftOf="@+id/ycx_tv_tips_first"
+            android:src="@drawable/ycx_img_bindphone_icon" />
+    </RelativeLayout>
+
+</RelativeLayout>

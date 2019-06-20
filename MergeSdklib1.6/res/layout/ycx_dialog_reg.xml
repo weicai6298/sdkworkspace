@@ -1,0 +1,168 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView 
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:fillViewport="true"
+    android:layout_height="fill_parent">
+	<FrameLayout
+		    android:layout_width="fill_parent"
+		    android:layout_height="match_parent"
+		    android:clickable="true"
+		    android:orientation="vertical"
+		     >
+	    <LinearLayout
+	        android:layout_width="282dip"
+	        android:layout_height="272dip"
+	        android:layout_gravity="center"
+	        android:background="@drawable/ycx_img_login_et"
+	        android:orientation="vertical" >
+			<FrameLayout
+			    android:layout_width="fill_parent"
+			    android:layout_height="40.0dip"
+			    android:clickable="true"
+			    android:orientation="vertical">
+		        <LinearLayout
+		            android:layout_width="fill_parent"
+		            android:layout_height="40.0dip"
+		            android:layout_gravity="bottom"
+		            android:gravity="center"
+		            android:paddingLeft="10dip"
+		            android:paddingRight="10dip"
+		            android:orientation="horizontal" >
+		            <TextView
+			            style="@style/ycx_style_dialog_title"
+			            android:text="账号注册"/>
+		        </LinearLayout>
+		        
+		        <ImageView 
+					    android:layout_gravity="left|center_vertical"
+					    android:id="@+id/ycx_iv_back"
+					    android:src="@drawable/ycx_img_back"
+					    android:layout_width="25dip"
+					    android:layout_marginLeft="5dip"
+					    android:scaleType="fitEnd"
+					    android:layout_height="25dip"/>
+	        </FrameLayout>
+			<LinearLayout
+	            android:id="@+id/ycx_content"
+	            android:layout_width="fill_parent"
+	            android:layout_height="wrap_content"
+	            android:orientation="vertical"
+	            android:layout_marginLeft="20dip"
+	            android:layout_marginRight="20dip"
+	            android:gravity="center" >
+	
+	            
+	            <FrameLayout 
+			        android:layout_width="match_parent"
+			        android:layout_height="wrap_content" 
+			        android:gravity="center_vertical">
+				       	<EditText 
+			                android:id="@+id/ycx_et_account" 
+			                android:inputType="textEmailAddress"
+			                style="@style/ycx_style_et"
+			                android:layout_height="45dip"
+			                android:digits="@string/ycx_regex_code"
+			                android:layout_width="match_parent"
+			                android:maxLength="16"
+			               	android:background="@drawable/ycx_img_login_et"
+			                android:hint="@string/ycx_string_account_hint"/>
+				       	
+		    	</FrameLayout>
+	            
+	             <FrameLayout 
+			        android:layout_width="match_parent"
+			        android:layout_height="wrap_content" 
+			        android:layout_marginTop="@dimen/ycx_dimen_login_line_space"
+			        android:gravity="center_vertical">
+				       	<EditText 
+			                android:id="@+id/ycx_et_pwd" 
+			                android:inputType="textPassword"
+			                style="@style/ycx_style_et"
+			                android:digits="@string/ycx_regex_code"
+			                android:layout_height="40dip"
+			                android:maxLength="16"
+			                android:layout_width="match_parent"
+			                android:background="@drawable/ycx_img_login_et"
+			                android:hint="@string/ycx_string_pwd_hint"/>
+		    	</FrameLayout>
+	        </LinearLayout>
+	        <LinearLayout
+	          android:layout_width="fill_parent"
+	          android:layout_height="50dip"
+	          android:gravity="center_vertical"
+	          android:layout_marginLeft="20dip"
+              android:layout_marginRight="20dip"
+	          android:orientation="horizontal" >
+	              <CheckBox 
+	                 android:id="@+id/ycx_checkbox_select"    
+				        android:layout_width="25dp"
+				        android:layout_height="25dp"
+				        android:minHeight="20dip"
+				        android:checked="true"
+				        android:layout_marginLeft="5dp"
+				        style="@style/ycx_style_checkBox"  
+				        />
+	             <TextView 
+	                 android:id="@+id/ycx_tv_protocol"
+	                 android:textSize="16dip"
+	                 android:layout_width="wrap_content"
+	                 android:layout_height="wrap_content"
+	                 android:textColor="@color/ycx_color_gray_light"
+	                 android:text="《同意账号用户协议》"/>
+	       </LinearLayout>
+	
+		   <LinearLayout
+	          android:layout_width="fill_parent"
+	          android:layout_height="wrap_content"
+	          android:gravity="center"
+	          android:layout_marginLeft="20dip"
+              android:layout_marginRight="20dip"
+	          android:orientation="horizontal" >
+	             <Button 
+		            android:id="@+id/ycx_btn_onekey_reg"
+		            android:layout_width="0dip"
+		            android:layout_height="38.0dip"
+		            android:textColor="@color/ycx_color_white"
+		            android:text="一键注册"
+		            android:textSize="14dip"
+		            android:layout_marginRight="8dip"
+		            android:layout_weight="1"
+		            android:background="@drawable/ycx_selector_btn_left"/>
+		        <Button 
+		            android:id="@+id/ycx_btn_reg"
+		            android:layout_width="0dip"
+		            android:layout_weight="1"
+		            android:layout_height="38.0dip"
+		            android:textColor="@color/ycx_color_white"
+		            android:text="账号注册"
+		            android:textSize="14dip"
+		            android:layout_marginLeft="8dip"
+		            android:background="@drawable/ycx_selector_btn_right"/>
+<!-- 		        <Button  -->
+<!-- 		            android:id="@+id/btn_reg" -->
+<!-- 		            android:layout_width="0dip" -->
+<!-- 		            android:layout_height="38.0dip" -->
+<!-- 		            android:textColor="@color/title_bg" -->
+<!-- 		            android:text="完成注册" -->
+<!-- 		            android:textSize="14dip" -->
+<!-- 		            android:layout_weight="1" -->
+<!-- 		            android:background="@drawable/tz_selector_btn_blue_line"/> -->
+		   </LinearLayout>
+		   <LinearLayout
+	          android:layout_width="fill_parent"
+	          android:layout_height="match_parent"
+	          android:gravity="right|center_vertical"
+	          android:layout_marginLeft="20dip"
+              android:layout_marginRight="20dip"
+          	  android:orientation="horizontal" >
+		        <TextView 
+		            android:layout_width="wrap_content"
+		            android:layout_height="wrap_content"
+		            android:textColor="#3ec9ff"
+		            android:id="@+id/ycx_tv_back"
+		            android:text="立即登录"/>
+	      </LinearLayout>
+	    </LinearLayout>
+	</FrameLayout>
+</ScrollView>

@@ -196,7 +196,7 @@
     <string name="com_lenovo_lsf_string_setting_new_password_is">设置新密码:</string>
     <string name="com_lenovo_lsf_string_password_hint_text">新密码(4-20个字符)</string>
     <string name="com_lenovo_lsf_string_please_input_lost_password_account">输入您要找回的帐号</string>
-    <string name="com_lenovo_lsf_string_account_hint">手机号或邮箱</string>
+    <string name="com_lenovo_lsf_string_account_hint">手机号</string>
     <string name="com_lenovo_lsf_string_msg_of_captcha_send_to_your_phone">验证码短信已经发送至您的手机:</string>
     <string name="com_lenovo_lsf_string_captcha_tips">验证码:</string>
     <string name="com_lenovo_lsf_string_send_again">重新发送</string>

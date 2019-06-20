@@ -2,6 +2,7 @@ package com.yayawan.impl;
 
 
 import android.app.Application;
+import android.content.Context;
 
 public class YYApplication extends Application {
 
@@ -13,4 +14,5 @@ public class YYApplication extends Application {
 		
 		YaYawanconstants.applicationInit(getApplicationContext());
 	}
+	
 }

@@ -30,6 +30,7 @@ public class SmallHelp_xml extends Basexml implements Layoutxml {
 	private RelativeLayout rl_mLoading;
 	private ProgressBar pb_mLoading;
 	private Button bt_mReload;
+	private LinearLayout baselin;
 
 	public SmallHelp_xml(Activity activity) {
 		super(activity);
@@ -46,20 +47,29 @@ public class SmallHelp_xml extends Basexml implements Layoutxml {
 		baseLinearLayout.setBackgroundColor(Color.TRANSPARENT);
 		baseLinearLayout.setLayoutParams(layoutParams);
 		baseLinearLayout.setOrientation(LinearLayout.VERTICAL);
-		//baseLinearLayout.setGravity(Gravity.CENTER_HORIZONTAL);
+		baseLinearLayout.setGravity(Gravity.CENTER);
 
 		
-
+		int height = 560;
+		int with = 630;
 		
+		baselin = new LinearLayout(mActivity);
+		baselin.setOrientation(LinearLayout.VERTICAL);
+		MachineFactory machineFactory = new MachineFactory(mActivity);
+		machineFactory.MachineView(baselin, with, height,
+				mLinearLayout);
+		baselin.setBackgroundDrawable(GetAssetsutils
+				.get9DrawableFromAssetsFile("yaya1_sdkbackground.9.png",mActivity));
+		baselin.setGravity(Gravity.CENTER);
 		wv_mWeiboview = new WebView(mContext);
-		if (DeviceUtil.isLandscape(mContext)) {
-			machineFactory.MachineView(wv_mWeiboview, (ViewConstants.getHoldActivityWith(mActivity)/2)+100, MATCH_PARENT,
+//		if (DeviceUtil.isLandscape(mContext)) {
+			machineFactory.MachineView(wv_mWeiboview, with, height,
 					mLinearLayout);
-		}else {
-			baseLinearLayout.setGravity(Gravity.CENTER);
-			machineFactory.MachineView(wv_mWeiboview, ViewConstants.getHoldActivityWith(mActivity), (ViewConstants.getHoldActivityHeight(mActivity)/4)*3+50,
-					mLinearLayout);
-		}
+//		}else {
+//			baseLinearLayout.setGravity(Gravity.CENTER);
+//			machineFactory.MachineView(wv_mWeiboview, ViewConstants.getHoldActivityWith(mActivity), (ViewConstants.getHoldActivityHeight(mActivity)/4)*3+50,
+//					mLinearLayout);
+//		}
 		//链接状态布局
 				rl_mLoading = new RelativeLayout(mContext);
 				rl_mLoading.setBackgroundColor(Color.WHITE);
@@ -82,10 +92,12 @@ public class SmallHelp_xml extends Basexml implements Layoutxml {
 				rl_mLoading.addView(pb_mLoading);
 				rl_mLoading.addView(bt_mReload);
 
-		
-		baseLinearLayout.addView(rl_mLoading);
-		baseLinearLayout.addView(wv_mWeiboview);
-		
+				
+		/*baseLinearLayout.addView(rl_mLoading);
+		baseLinearLayout.addView(wv_mWeiboview);*/
+		baselin.addView(rl_mLoading);
+		baselin.addView(wv_mWeiboview);
+		baseLinearLayout.addView(baselin);
 		return baseLinearLayout;
 	}
 

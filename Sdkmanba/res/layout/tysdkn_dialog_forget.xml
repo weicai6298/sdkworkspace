@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/tysdkn_dialog_forget_root"
+    android:layout_width="350dp"
+    android:layout_height="wrap_content"
+    android:layout_gravity="center"
+    android:background="@drawable/tysdkn_edit_two_bg"
+    android:orientation="vertical"
+>
+
+    <RelativeLayout
+        android:paddingRight="18dp"
+        android:paddingLeft="18sp"
+        android:layout_width="350dp"
+        android:layout_height="50dp">
+
+        <ImageView
+            android:id="@+id/tysdkn_dialog_forget_back"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_centerVertical="true"
+            android:gravity="center_vertical"
+            android:paddingRight="20dp"
+            android:src="@drawable/tysdkn_back"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="忘记密码"
+            android:textColor="#111111"
+            android:textSize="19sp"/>
+    </RelativeLayout>
+
+    <LinearLayout
+        android:paddingRight="18dp"
+        android:paddingLeft="18sp"
+        android:layout_width="350dp"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+        <EditText
+            android:id="@+id/tysdkn_dialog_forget_input1"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:background="@drawable/tysdkn_typay_bg_pg"
+            android:hint="手机号码"
+            android:inputType="number"
+            android:paddingLeft="10dp"
+            android:textSize="14sp"/>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/tysdkn_typay_bg_pg"
+            android:orientation="horizontal">
+
+            <EditText
+                android:id="@+id/tysdkn_dialog_forget_input4"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@null"
+                android:hint="输入验证码"
+                android:paddingLeft="10dp"
+                android:textColor="#2a2a2a"
+                android:textSize="14sp"/>
+
+            <Button
+                android:id="@+id/tysdkn_dialog_forget_b1"
+
+                android:layout_width="90dp"
+                android:layout_height="match_parent"
+                android:background="@drawable/tysdkn_btn_stroke"
+                android:gravity="center"
+                android:text="获取验证码"
+                android:textColor="#ffffff"
+                android:textSize="14sp"/>
+        </LinearLayout>
+        <EditText
+            android:id="@+id/tysdkn_dialog_forget_input2"
+
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/tysdkn_typay_bg_pg"
+            android:hint="新密码"
+            android:paddingLeft="10dp"
+            android:textSize="14sp"/>
+
+        <EditText
+            android:id="@+id/tysdkn_dialog_forget_input3"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/tysdkn_typay_bg_pg"
+            android:hint="确认密码"
+            android:paddingLeft="10dp"
+            android:textSize="14sp"/>
+
+
+
+    </LinearLayout>
+
+    <TextView
+        android:layout_marginLeft="18dp"
+        android:layout_marginRight="18dp"
+        android:id="@+id/tysdkn_dialog_forget_b2"
+        android:layout_width="314dp"
+        android:layout_height="40dp"
+        android:layout_marginBottom="15dp"
+        android:layout_marginTop="12dp"
+        android:clickable="true"
+        android:background="@drawable/tysdkn_login_in"
+        android:gravity="center"
+        android:text="提交"
+        android:textColor="#ffffff"
+        android:textSize="18sp"/>
+
+</LinearLayout>

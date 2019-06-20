@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+             android:layout_width="313.34dp"
+             android:layout_height="334.6dp"
+             android:paddingLeft="6.67dp"
+             android:paddingRight="6.67dp"
+
+             android:background="?attr/bsgamesdk_main_background">
+
+    <include
+        layout="@layout/bsgamesdk_layout_captch_webview_loading"/>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <WebView
+            android:layout_centerInParent="true"
+            android:id="@+id/bsgamesdk_web_webview_captch"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scrollbars="none"
+            android:visibility="gone"/>
+    </RelativeLayout>
+
+    <include
+        layout="@layout/bsgamesdk_layout_captch_webview_load_error"/>
+
+</FrameLayout>

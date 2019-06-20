@@ -1,6 +1,7 @@
 package com.yayawan.impl;
 
 import android.app.Activity;
+import android.content.Context;
 import android.content.Intent;
 
 import com.kkgame.utils.Handle;
@@ -81,6 +82,42 @@ public class ActivityStubImpl implements YYWActivityStub {
 	public void onStart(Activity mActivity) {
 		// TODO Auto-generated method stub
 		YaYawanconstants.onStart(mActivity);
+	}
+
+	@Override
+	public void attachBaseContext(Context arg0) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void launchActivityOnCreate(Activity arg0) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void launchActivityonOnNewIntent(Intent arg0) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void onBackPressed() {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void onConfigurationChanged() {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void onRequestPermissionsResult(int arg0, String[] arg1, int[] arg2) {
+		// TODO Auto-generated method stub
+		
 	}
 
 }

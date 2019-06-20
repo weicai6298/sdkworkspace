@@ -2,7 +2,6 @@ package com.yayawan.impl;
 
 import java.io.UnsupportedEncodingException;
 import java.net.URLEncoder;
-import java.util.HashMap;
 
 import org.json.JSONException;
 import org.json.JSONObject;
@@ -10,8 +9,8 @@ import org.json.JSONObject;
 import android.app.Activity;
 import android.content.Context;
 import android.content.Intent;
+import android.os.Handler;
 import android.util.Log;
-import android.widget.Toast;
 
 import com.kkgame.utils.DeviceUtil;
 import com.kkgame.utils.Handle;
@@ -19,24 +18,19 @@ import com.kkgame.utils.JSONUtil;
 import com.nearme.game.sdk.GameCenterSDK;
 import com.nearme.game.sdk.callback.ApiCallback;
 import com.nearme.game.sdk.callback.GameExitCallback;
-import com.nearme.game.sdk.common.model.ApiResult;
 import com.nearme.game.sdk.common.model.biz.PayInfo;
 import com.nearme.game.sdk.common.model.biz.ReportUserGameInfoParam;
-import com.umeng.analytics.MobclickAgent;
-import com.umeng.analytics.game.UMGameAgent;
+import com.nearme.game.sdk.common.model.biz.ReqUserInfoParam;
 import com.yayawan.callback.YYWExitCallback;
 import com.yayawan.domain.YYWUser;
 import com.yayawan.main.YYWMain;
 
 public class YaYawanconstants {
 
-	private static HashMap<String, String> mGoodsid;
 
 	private static Activity mActivity;
 
 	private static boolean isinit = false;
-
-	private static int isyoumeng;
 
 	private static String uid;
 
@@ -46,26 +40,17 @@ public class YaYawanconstants {
 	public static void inintsdk(Activity mactivity) {
 		mActivity = mactivity;
 		Yayalog.loger("YaYawanconstants初始化sdk");
-		String youmeng = DeviceUtil.getGameInfo(mActivity, "isyoumeng");
-		isyoumeng = Integer.parseInt(youmeng);
-		if(isyoumeng == 1){
-			UMGameAgent.setDebugMode(true);
-			UMGameAgent.init(mActivity);
-		}
+		String appSecret = ""+ DeviceUtil.getGameInfo(mactivity, "appSecret");
+		GameCenterSDK.init(appSecret, mactivity);
+		isinit = true;
+		Log.i("tag", "oppo初始化结束");
 	}
 
 	/**
 	 * application初始化
 	 */
 	public static void applicationInit(Context applicationContext) {
-		// TODO Auto-generated method stub
 		Log.i("tag", "application初始化");
-		String appSecret = ""
-				+ DeviceUtil.getGameInfo(applicationContext, "appSecret");
-		Log.i("tag", "appSecret=" + appSecret);
-		GameCenterSDK.init(appSecret, applicationContext);
-		isinit = true;
-		Log.i("tag", "oppo初始化结束");
 	}
 
 	/**
@@ -73,28 +58,54 @@ public class YaYawanconstants {
 	 */
 	public static void login(final Activity mactivity) {
 		Yayalog.loger("YaYawanconstantssdk登录");
-		if (isinit) {
-			Log.i("tag", "登录-start");
-			GameCenterSDK.getInstance().doLogin(mactivity, new ApiCallback() {
+		Log.i("tag", "isinit = " +isinit);
+//		if (isinit) {
+//			GameCenterSDK.getInstance().doLogin(mactivity, new ApiCallback() {
+//
+//				@Override
+//				public void onSuccess(String resultMsg) {
+//					// 登录成功
+//					Log.i("tag","isinit ===" +isinit);
+//					doGetTokenAndSsoid();
+//				}
+//
+//				@Override
+//				public void onFailure(String resultMsg, int resultCode) {
+//					// 登录失败
+//					Log.i("tag", "登录失败");
+//					loginFail();
+//				}
+//			});
+//		} else {
+//			Log.i("tag", "初始化失败");
+//			loginFail();
+//		}
+		
+		//h5
+		new Handler().postDelayed(new Runnable() {
+			
+			@Override
+			public void run() {
+				GameCenterSDK.getInstance().doLogin(mactivity, new ApiCallback() {
 
-				@Override
-				public void onSuccess(String resultMsg) {
-					// 登录成功
-					doGetTokenAndSsoid();
-				}
+					@Override
+					public void onSuccess(String resultMsg) {
+						// 登录成功
+						Log.i("tag","isinit ===" +isinit);
+						doGetTokenAndSsoid();
+					}
 
-				@Override
-				public void onFailure(String resultMsg, int resultCode) {
-					// 登录失败
-					Log.i("tag", "登录失败");
-					loginFail();
-					Log.i("tag", "登录失败1");
-				}
-			});
-		} else {
-			inintsdk(mactivity);
-		}
+					@Override
+					public void onFailure(String resultMsg, int resultCode) {
+						// 登录失败
+						Log.i("tag", "登录失败");
+						loginFail();
+					}
+				});
+			}
+		}, 4000);
 	}
+	private static String stoken;
 
 	// 获取Token和SsoId
 	public static void doGetTokenAndSsoid() {
@@ -107,21 +118,13 @@ public class YaYawanconstants {
 					String token = json.getString("token");
 					String ssoid = json.getString("ssoid");
 					uid = ssoid;
-					String stoken = null;
 					try {
 						stoken = URLEncoder.encode(token, "UTF-8");
 					} catch (UnsupportedEncodingException e) {
-						// TODO Auto-generated catch block
 						e.printStackTrace();
 					}
-					Log.i("tag", "token=" + token);
-					Log.i("tag", "stoken=" + stoken);
-					Log.i("tag", "ssoid=" + ssoid);
-					Log.i("tag", "登录成功");
-					loginSuce(mActivity, ssoid, ssoid, stoken);
-//					getVerifiedInfo();
-					Log.i("tag", "登录成功1");
-					// doGetUserInfoByCpClient(token, ssoid);
+					//					getVerifiedInfo();
+					doGetUserInfoByCpClient(token, uid);
 				} catch (JSONException e) {
 					e.printStackTrace();
 				}
@@ -133,35 +136,60 @@ public class YaYawanconstants {
 			}
 		});
 	}
+	private static void doGetUserInfoByCpClient(String token, String ssoid) {
+		GameCenterSDK.getInstance().doGetUserInfo(
+				new ReqUserInfoParam(token, ssoid), new ApiCallback() {
 
-//	protected static void getVerifiedInfo() {
-//		GameCenterSDK.getInstance().doGetVerifiedInfo(new ApiCallback() {
-//			@Override
-//			public void onSuccess(String resultMsg) {
-//				try {
-//					//解析年龄（age）
-//					int age = Integer.parseInt(resultMsg);
-//					if (age < 18) {
-//						//已实名但未成年，CP开始处理防沉迷
-//					} else {
-//						//已实名且已成年，尽情玩游戏吧
-//					}
-//				} catch (Exception e) {
-//					e.printStackTrace();
-//				}
-//			}
-//			@Override
-//			public void onFailure(String resultMsg, int resultCode) {
-//				if(resultCode == ApiResult.RESULT_CODE_VERIFIED_FAILED_AND_RESUME_GAME){
-//					//实名认证失败，但还可以继续玩游戏
-//				}else if(resultCode ==
-//						ApiResult.RESULT_CODE_VERIFIED_FAILED_AND_STOP_GAME){
-//					//实名认证失败，不允许继续游戏，CP需自己处理退出游戏
-//				}
-//			}
-//		});
-//
-//	}
+					@Override
+					public void onSuccess(String resultMsg) {
+						//						获取用户信息成功 = {"userName":"U197689309","adId":"0","channel":0,"email":"","mobile":"137******98","ssoid":"300789837"}
+						try {
+							JSONObject json = new JSONObject(resultMsg);
+							int adId = Integer.parseInt(json.getString("adId"));
+							String channel = json.getString("channel");
+							Log.i("tag","adId = " +adId);
+							Log.i("tag","channel = " +channel);
+							Log.i("tag", "登录成功");
+							loginSuce(mActivity, uid, uid, stoken);
+						} catch (JSONException e) {
+							e.printStackTrace();
+						}
+					}
+
+					@Override
+					public void onFailure(String resultMsg, int resultCode) {
+						Log.i("tag","获取用户信息失败  resultMsg = " +resultMsg + "resultCode" +resultCode);
+					}
+				});
+	}
+	//	protected static void getVerifiedInfo() {
+	//		GameCenterSDK.getInstance().doGetVerifiedInfo(new ApiCallback() {
+	//			@Override
+	//			public void onSuccess(String resultMsg) {
+	//				try {
+	//					//解析年龄（age）
+	//					int age = Integer.parseInt(resultMsg);
+	//					if (age < 18) {
+	//						//已实名但未成年，CP开始处理防沉迷
+	//					} else {
+	//						//已实名且已成年，尽情玩游戏吧
+	//					}
+	//				} catch (Exception e) {
+	//					e.printStackTrace();
+	//				}
+	//			}
+	//			@Override
+	//			public void onFailure(String resultMsg, int resultCode) {
+	//				if(resultCode == ApiResult.RESULT_CODE_VERIFIED_FAILED_AND_RESUME_GAME){
+	//					//实名认证失败，但还可以继续玩游戏
+	//				}else if(resultCode ==
+	//						ApiResult.RESULT_CODE_VERIFIED_FAILED_AND_STOP_GAME){
+	//					//实名认证失败，不允许继续游戏，CP需自己处理退出游戏
+	//				}
+	//			}
+	//		});
+	//
+	//	}
 
 	/**
 	 * 支付
@@ -173,26 +201,23 @@ public class YaYawanconstants {
 		Yayalog.loger("YaYawanconstantssdk支付");
 		int amount = Integer.parseInt(YYWMain.mOrder.money + ""); // 支付金额，单位分
 		PayInfo payInfo = new PayInfo(morderid, "", amount);
-		// payInfo.setProductDesc("商品描述");
 		payInfo.setProductName(YYWMain.mOrder.goods);
 		payInfo.setCallbackUrl(DeviceUtil.getGameInfo(mActivity, "callback"));
+		Log.i("tag","payinfo = " + payInfo);
 		GameCenterSDK.getInstance().doPay(mactivity, payInfo,
 				new ApiCallback() {
 
 			@Override
-			public void onSuccess(String arg0) {
-				// TODO Auto-generated method stub
-				Log.i("tag", "支付成功");
+			public void onSuccess(String resultMsg) {
 				paySuce();
-				Log.i("tag", "支付成功1");
+				Log.i("tag","支付成功 = " +resultMsg);
 			}
 
 			@Override
-			public void onFailure(String arg0, int arg1) {
-				// TODO Auto-generated method stub
-				Log.i("tag", "支付失败");
+			public void onFailure(String resultMsg, int resultCode) {
 				payFail();
-				Log.i("tag", "支付失败1");
+				Log.i("tag", "支付失败resultMsg = "+resultMsg);
+				Log.i("tag", "支付失败resultCode = "+resultCode);
 			}
 		});
 	}
@@ -211,18 +236,10 @@ public class YaYawanconstants {
 
 			@Override
 			public void exitGame() {
-				// TODO Auto-generated method stub
 				mActivity.runOnUiThread(new Runnable() {
 
 					@Override
 					public void run() {
-						// TODO Auto-generated method stub
-						if(isyoumeng == 1){
-							Log.i("tag", "友盟退出");
-							MobclickAgent.onProfileSignOff();
-							MobclickAgent.onKillProcess(mActivity);
-						}
-						//								callback.onExit();
 						mActivity.finish();
 						System.exit(0);
 					}
@@ -242,25 +259,22 @@ public class YaYawanconstants {
 	public static void setData(Activity paramActivity, String roleId,
 			String roleName, String roleLevel, String zoneId, String zoneName,
 			String roleCTime, String ext) {
-		// TODO Auto-generated method stub
 		Yayalog.loger("YaYawanconstants设置角色信息");
 		if (Integer.parseInt(ext) == 1) {
-			if(isyoumeng ==1){
-				Log.i("tag", "友盟进入游戏");
-				MobclickAgent.onProfileSignIn(uid);
-			}
 
 			GameCenterSDK.getInstance().doReportUserGameInfoData(
-					new ReportUserGameInfoParam("3574641", zoneId, roleName,
-							roleLevel), new ApiCallback() {
+					new ReportUserGameInfoParam(roleId, roleName,Integer.parseInt(roleLevel), zoneId, zoneName, "chapter", null), 
+					new ApiCallback() {
+
 						@Override
 						public void onSuccess(String resultMsg) {
-							// success
+							Log.i("tag","上报数据成功resultMsg = " +resultMsg);
 						}
 
 						@Override
 						public void onFailure(String resultMsg, int resultCode) {
-							// failure
+							Log.i("tag","上报数据失败resultMsg = " +resultMsg);
+							Log.i("tag","上报数据失败resultCode = " +resultCode);
 						}
 					});
 		}
@@ -268,53 +282,37 @@ public class YaYawanconstants {
 	}
 
 	public static void onResume(Activity paramActivity) {
-		// TODO Auto-generated method stub
-		GameCenterSDK.getInstance().onResume(paramActivity);
-		if(isyoumeng == 1){
-			MobclickAgent.onResume(paramActivity);
-		}
+		//		GameCenterSDK.getInstance().onResume(paramActivity);
 	}
 
 	public static void onPause(Activity paramActivity) {
-		// TODO Auto-generated method stub
-		GameCenterSDK.getInstance().onPause();
-		if(isyoumeng == 1){
-			MobclickAgent.onPause(paramActivity);
-		}
+		//		GameCenterSDK.getInstance().onPause();
 	}
 
 	public static void onDestroy(Activity paramActivity) {
-		// TODO Auto-generated method stub
-
 	}
 
 	public static void onActivityResult(Activity paramActivity) {
-		// TODO Auto-generated method stub
 
 	}
 
 	public static void onNewIntent(Intent paramIntent) {
-		// TODO Auto-generated method stub
 
 	}
 
 	public static void onStart(Activity mActivity2) {
-		// TODO Auto-generated method stub
 
 	}
 
 	public static void onRestart(Activity paramActivity) {
-		// TODO Auto-generated method stub
 
 	}
 
 	public static void onCreate(Activity paramActivity) {
-		// TODO Auto-generated method stub
 
 	}
 
 	public static void onStop(Activity paramActivity) {
-		// TODO Auto-generated method stub
 
 	}
 
@@ -392,5 +390,7 @@ public class YaYawanconstants {
 			YYWMain.mPayCallBack.onPayFailed(null, null);
 		}
 	}
+
+
 
 }

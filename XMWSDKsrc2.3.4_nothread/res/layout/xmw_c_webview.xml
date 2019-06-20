@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/pay_view"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:gravity="center" >
+    
+     <include layout="@layout/informationnew_account"/>
+     
+     <include layout="@layout/xmw_c_bindphone"/>
+     
+     <include layout="@layout/xmw_c_change_mobile"/>
+     
+     <include layout="@layout/xmw_c_change_name"/>
+     
+    
+</RelativeLayout>

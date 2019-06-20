@@ -41,6 +41,15 @@
                 android:textColor="@color/zzz_mine_user_info_text_color"
                 android:textSize="@dimen/zzz_mine_user_info_text_size"/>
 
+            <ImageView
+                android:id="@+id/zzz_modify_cellphone"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignTop="@+id/zzz_user_name"
+                android:layout_marginLeft="@dimen/zzz_modify_cellphone_padding"
+                android:layout_toRightOf="@+id/zzz_user_name"
+                android:src="@drawable/zzz_modify_cellphone"/>
+
             <TextView
                 android:id="@+id/zzz_user_vip_level"
                 android:layout_width="wrap_content"

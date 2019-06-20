@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bsgamesdk_corners_shape_activity"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:id="@+id/bsgamesdk_webpage_content_titler_root"
+        android:layout_width="fill_parent"
+        android:layout_height="54dp"
+        android:background="@drawable/bsgamesdk_agreement_topbar" >
+
+        <ImageButton
+            android:id="@+id/bsgamesdk_id_buttonBack"
+            android:layout_width="wrap_content"
+            android:layout_height="fill_parent"
+            android:layout_alignParentLeft="true"
+            android:background="@null"
+            android:scaleType="center"
+            android:src="@drawable/bsgamesdk_back_topbar_btn" />
+
+        <TextView
+            android:id="@+id/bsgamesdk_agreement_titler_title"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_toRightOf="@+id/bsgamesdk_id_buttonBack"
+            android:gravity="left|center"
+            android:paddingLeft="20dp"
+            android:textColor="#ff555555"
+            android:textSize="19sp" />
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/bsgamesdk_linearLayoutLoad"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:background="#ffffffff"
+        android:contentDescription="@string/app_name"
+        android:gravity="center"
+        android:orientation="vertical" >
+
+        <ProgressBar
+            android:id="@+id/bsgamesdk_ProgressBar02"
+            style="@style/bsgamesdk_loading"
+            android:layout_width="71dp"
+            android:layout_height="71dp" />
+
+        <TextView
+            android:id="@+id/bsgamesdk_tvloading"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/bsgamesdk_loadingTips"
+            android:color="@color/bsgamesdk_gray" />
+    </LinearLayout>
+
+    <WebView
+        android:id="@+id/bsgamesdk_agreement_webView"
+        style="@style/Bili.no_ovelay"
+        android:layout_width="fill_parent"
+        android:layout_height="0dip"
+        android:layout_weight="1"
+        android:background="@color/bsgamesdk_screen_bg_color" />
+
+</LinearLayout>

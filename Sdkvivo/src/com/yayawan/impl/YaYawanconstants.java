@@ -9,17 +9,9 @@ import java.util.UUID;
 import org.json.JSONException;
 import org.json.JSONObject;
 
-import com.android.volley.AuthFailureError;
-import com.android.volley.Request.Method;
-import com.android.volley.Response;
-import com.android.volley.VolleyError;
-import com.android.volley.toolbox.StringRequest;
-import com.android.volley.toolbox.Volley;
 import com.kkgame.utils.DeviceUtil;
 import com.kkgame.utils.Handle;
 import com.kkgame.utils.JSONUtil;
-import com.umeng.analytics.MobclickAgent;
-import com.umeng.analytics.game.UMGameAgent;
 import com.vivo.unionsdk.open.VivoAccountCallback;
 import com.vivo.unionsdk.open.VivoExitCallback;
 import com.vivo.unionsdk.open.VivoPayCallback;
@@ -35,10 +27,13 @@ import android.content.Context;
 import android.content.Intent;
 import android.net.http.RequestQueue;
 import android.util.Log;
+import android.view.View;
+import android.view.ViewGroup;
 import android.widget.Toast;
 
 
 
+@SuppressWarnings("unused")
 public class YaYawanconstants {
 
 	private static HashMap<String, String> mGoodsid;
@@ -49,26 +44,25 @@ public class YaYawanconstants {
 
 	private static String APPID;
 
-	private static String APPKEY;
+	//	private static String APPKEY;
 
 	private static String uid;
-	
-	private static int isyoumeng;
-	
+
+
 	private static String openId;
-    private static VivoPayInfo mVivoPayInfo;
+	private static VivoPayInfo mVivoPayInfo;
+
 	/**
 	 * 初始化sdk
 	 */
 	public static void inintsdk(Activity mactivity) {
 		mActivity = mactivity;
 		Yayalog.loger("YaYawanconstants初始化sdk");
-		String youmeng = DeviceUtil.getGameInfo(mActivity, "isyoumeng");
-		isyoumeng = Integer.parseInt(youmeng);
-		if(isyoumeng == 1){
-			UMGameAgent.setDebugMode(true);
-			UMGameAgent.init(mActivity);
-		}
+		APPID = ""+DeviceUtil.getGameInfo(mactivity, "APPID");
+		//		APPKEY = ""+DeviceUtil.getGameInfo(mactivity, "APPKEY");
+		Log.i("tag", "APPID="+APPID);
+		VivoUnionSDK.initSdk(mactivity, APPID, false);
+		isinit = true;
 		VivoUnionSDK.registerAccountCallback(mactivity, registeraccountcallback);
 	}
 
@@ -77,11 +71,12 @@ public class YaYawanconstants {
 	 */
 	public static void applicationInit(Context applicationContext) {
 		//SDK初始化, 请传入自己游戏的appid替换demo中的appid。
-		APPID = ""+DeviceUtil.getGameInfo(applicationContext, "APPID");
-		APPKEY = ""+DeviceUtil.getGameInfo(applicationContext, "APPKEY");
-		Log.i("tag", "APPID="+APPID);
-		VivoUnionSDK.initSdk(applicationContext, APPID, false);
-		isinit = true;
+		//		APPID = ""+DeviceUtil.getGameInfo(applicationContext, "APPID");
+		//		APPKEY = ""+DeviceUtil.getGameInfo(applicationContext, "APPKEY");
+		//		Log.i("tag", "APPID="+APPID);
+		//		VivoUnionSDK.initSdk(applicationContext, APPID, false);
+		//		isinit = true;
+		//广告SDK
 		Log.i("tag", "初始化结束");
 	}
 
@@ -89,7 +84,14 @@ public class YaYawanconstants {
 
 		@Override
 		public void onVivoAccountLogout(int arg0) {
+			mActivity.runOnUiThread(new Runnable() {
 
+				@Override
+				public void run() {
+					loginOut();
+					Log.i("tag", "登出成功");
+				}
+			});
 		}
 
 		@Override
@@ -134,57 +136,53 @@ public class YaYawanconstants {
 		Yayalog.loger("YaYawanconstantssdk支付");
 		Log.i("tag","morderid="+morderid);
 		VivoPayInfo payinfo = new VivoPayInfo(YYWMain.mOrder.goods,YYWMain.mOrder.goods, YYWMain.mOrder.money+"", assessKey, APPID, order_id, uid);
-	VivoUnionSDK.pay(mactivity, payinfo, mVivoPayCallback);
+		VivoUnionSDK.pay(mactivity, payinfo, mVivoPayCallback);
 	}
 
-	 private static VivoPayCallback mVivoPayCallback = new VivoPayCallback() {
-	        //客户端返回的支付结果不可靠，请以服务器端最终的支付结果为准；
-	        public void onVivoPayResult(String transNo, boolean isSucc, String errorCode) {
-	        	Log.i("tag","transNo="+transNo);
-	        	Log.i("tag","isSucc="+isSucc);
-	        	Log.i("tag","errorCode="+errorCode);
-	            if (isSucc) {
-	            	Log.i("tag", "支付成功");
-					paySuce();
-					Log.i("tag", "支付成功1");
-//	                Toast.makeText(MainActivity.this, "支付成功", Toast.LENGTH_SHORT).show();
-	            } else {
-	            	Log.i("tag", "支付失败1");
-					payFail();
-					Log.i("tag", "支付失败1");
-//	                Toast.makeText(MainActivity.this, "支付失败", Toast.LENGTH_SHORT).show();
-	            }
-	        };
-	    };
+	private static VivoPayCallback mVivoPayCallback = new VivoPayCallback() {
+		//客户端返回的支付结果不可靠，请以服务器端最终的支付结果为准；
+		public void onVivoPayResult(String transNo, boolean isSucc, String errorCode) {
+			Log.i("tag","transNo="+transNo);
+			Log.i("tag","isSucc="+isSucc);
+			Log.i("tag","errorCode="+errorCode);
+			if (isSucc) {
+				Log.i("tag", "支付成功");
+				paySuce();
+				Log.i("tag", "支付成功1");
+				//	                Toast.makeText(MainActivity.this, "支付成功", Toast.LENGTH_SHORT).show();
+			} else {
+				Log.i("tag", "支付失败1");
+				payFail();
+				Log.i("tag", "支付失败1");
+				//	                Toast.makeText(MainActivity.this, "支付失败", Toast.LENGTH_SHORT).show();
+			}
+		};
+	};
 	/**
 	 * 退出
 	 * 
 	 * @param paramActivity
 	 * @param callback
 	 */
-	public static void exit(Activity paramActivity,
+	public static void exit(final Activity paramActivity,
 			final YYWExitCallback callback) {
 		Yayalog.loger("YaYawanconstantssdk退出");
+		paramActivity.runOnUiThread(new Runnable() {
+			public void run() {
+				VivoUnionSDK.exit(paramActivity, new VivoExitCallback() {
 
-		VivoUnionSDK.exit(paramActivity, new VivoExitCallback() {
+					@Override
+					public void onExitConfirm() {
+						callback.onExit();
+					}
 
-			@Override
-			public void onExitConfirm() {
-				if(isyoumeng == 1){
-					Log.i("tag", "友盟退出");
-					MobclickAgent.onProfileSignOff();
-					MobclickAgent.onKillProcess(mActivity);
-				}
-				callback.onExit();
-			}
- 
-			@Override
-			public void onExitCancel() {
+					@Override
+					public void onExitCancel() {
 
+					}
+				});
 			}
 		});
-		//
-
 	}
 
 	/**
@@ -195,25 +193,15 @@ public class YaYawanconstants {
 	public static void setData(Activity paramActivity, String roleId, String roleName,String roleLevel, String zoneId, String zoneName, String roleCTime,String ext){
 		Yayalog.loger("YaYawanconstants设置角色信息");
 		if (Integer.parseInt(ext) == 1){
-			if(isyoumeng ==1){
-				Log.i("tag", "友盟进入游戏");
-				MobclickAgent.onProfileSignIn(uid);
-			}
 			//登录成功后上报角色信息
 			//VivoUnionSDK.reportRoleInfo(new VivoRoleInfo("角色ID", "角色等级", "角色名称", "区服ID", "区服名称"));
 			VivoUnionSDK.reportRoleInfo(new VivoRoleInfo(roleId, roleLevel, roleName, zoneId, zoneName));
 		}
 	}
 	public static void onResume(Activity paramActivity) {
-		if(isyoumeng == 1){
-			MobclickAgent.onResume(paramActivity);
-		}
 	}
 
 	public static void onPause(Activity paramActivity) {
-		if(isyoumeng == 1){
-			MobclickAgent.onPause(paramActivity);
-		}
 	}
 
 	public static void onDestroy(Activity paramActivity) {
@@ -319,4 +307,5 @@ public class YaYawanconstants {
 			YYWMain.mPayCallBack.onPayFailed(null, null);
 		}
 	}
+
 }

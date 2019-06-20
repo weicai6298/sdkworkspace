@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:paddingTop="15dp"
+                android:paddingRight="10dp"
+                android:paddingLeft="10dp"
+                android:paddingBottom="15dp"
+                android:background="@drawable/sy233default_select_bg"
+    >
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/sy233tv_title"
+            android:maxWidth="220dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="礼包标题"
+            android:singleLine="true"
+            android:ellipsize="end"
+            android:textColor="@color/sy233blacktextcolor"
+            android:textSize="15sp"/>
+
+        <TextView
+            android:id="@+id/sy233tv_count"
+            android:layout_marginTop="4dp"
+            android:maxWidth="220dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text=""
+            android:singleLine="true"
+            android:ellipsize="end"
+            android:textColor="@color/sy233purple"
+            android:textSize="13sp"/>
+
+
+        <TextView
+            android:id="@+id/sy233tv_gift_summary"
+            android:layout_marginTop="4dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:visibility="gone"
+            android:text=""
+            android:singleLine="true"
+            android:ellipsize="end"
+            android:textColor="@color/sy233purple"
+            android:textSize="13sp"/>
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/sy233bt_receive"
+        android:layout_width="60dp"
+        android:layout_height="30dp"
+        android:layout_alignParentRight="true"
+        android:background="@drawable/sy233bt_gift_bg"
+        android:gravity="center"
+        android:text="使用"
+        android:textColor="@android:color/white"
+        android:textSize="15sp"
+        />
+</RelativeLayout>

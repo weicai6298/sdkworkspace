@@ -29,6 +29,12 @@ import com.kkgame.sdkmain.KgameSdk;
 import com.kkgame.utils.DeviceUtil;
 import com.kkgame.utils.Handle;
 import com.kkgame.utils.JSONUtil;
+import com.lidroid.jxutils.HttpUtils;
+import com.lidroid.jxutils.exception.HttpException;
+import com.lidroid.jxutils.http.RequestParams;
+import com.lidroid.jxutils.http.ResponseInfo;
+import com.lidroid.jxutils.http.callback.RequestCallBack;
+import com.lidroid.jxutils.http.client.HttpRequest.HttpMethod;
 import com.smwl.smsdk.abstrat.SMInitListener;
 import com.smwl.smsdk.abstrat.SMLoginListener;
 import com.smwl.smsdk.abstrat.SMPayListener;
@@ -375,64 +381,6 @@ paramActivity.runOnUiThread(new Runnable() {
 	}
 	/**
 	 * 
-	 * 请求上报角色信息
-	 * 
-	 */
-	@SuppressWarnings("unused")
-	private static void HttpPost(final String roleId, final String roleName,final String roleLevel, final String zoneId, final String zoneName, final String roleCTime) {
-		new Thread(new Runnable() {
-
-			@SuppressWarnings("deprecation")
-			@Override
-			public void run() {
-				try {
-					HttpPost httpPost = new HttpPost("https://api.sdk.75757.com/user/roleinfo/");
-					List<NameValuePair> params = new ArrayList<NameValuePair>();
-					params.add(new BasicNameValuePair("roleId", roleId));
-					params.add(new BasicNameValuePair("roleName", roleName));
-					params.add(new BasicNameValuePair("roleLevel", roleLevel));
-					params.add(new BasicNameValuePair("zoneId", zoneId));
-					params.add(new BasicNameValuePair("zoneName", zoneName));
-					params.add(new BasicNameValuePair("roleCTime", roleCTime));
-
-					Log.i("tag", "params=" + params);
-					try {
-						// 设置httpPost请求参数
-						httpPost.setEntity(new UrlEncodedFormEntity(params,
-								HTTP.UTF_8));
-						HttpResponse httpResponse = new DefaultHttpClient()
-								.execute(httpPost);
-						Log.i("tag",
-								"httpResponse.getStatusLine().getStatusCode()="
-										+ httpResponse.getStatusLine()
-												.getStatusCode());
-						if (httpResponse.getStatusLine().getStatusCode() == 200) {
-//							String re = EntityUtils.toString(httpResponse
-//									.getEntity());
-//							Log.i("tag", "re=" + re);
-//							JSONObject js = new JSONObject(re);
-//							Log.i("tag", "js=" + js);
-//							uid = js.getString("uid");
-//							Log.i("tag", "uid=" + uid);
-//							Log.i("tag", "token=" + token);
-//							loginSuce(mActivity, uid, uid, token);
-							Toast("角色上报成功");
-						}
-
-					} catch (ClientProtocolException e) {
-						e.printStackTrace();
-					}
-
-				} catch (Exception e) {
-					e.printStackTrace();
-				}
-			}
-		}).start();
-	}
-
-	
-	/**
-	 * 
 	 * 请求获取用户uid
 	 * 
 	 * @param sid
@@ -440,52 +388,33 @@ paramActivity.runOnUiThread(new Runnable() {
 	 */
 	private static void HttpPost(final String sid) {
 		token = sid;
-		new Thread(new Runnable() {
+		HttpUtils httpUtil = new HttpUtils();
+		String url = "https://api.sdk.75757.com/data/get_uid/";
+		RequestParams requestParams = new RequestParams();
+		requestParams.addBodyParameter("app_id",DeviceUtil.getAppid(mActivity));
+		requestParams.addBodyParameter("code", sid);
+		httpUtil.send(HttpMethod.POST, url, requestParams,
+				new RequestCallBack<String>() {
 
-			@SuppressWarnings("deprecation")
-			@Override
-			public void run() {
-				try {
-					HttpPost httpPost = new HttpPost(
-							"https://api.sdk.75757.com/data/get_uid/");
-					List<NameValuePair> params = new ArrayList<NameValuePair>();
-					params.add(new BasicNameValuePair("app_id", DeviceUtil
-							.getAppid(mActivity)));
-					params.add(new BasicNameValuePair("code", sid));
+					@Override
+					public void onFailure(HttpException arg0, String arg1) {
+						Yayalog.loger("请求失败"+arg1.toString());
+					}
 
-					Log.i("tag", "params=" + params);
-					try {
-						// 设置httpPost请求参数
-						httpPost.setEntity(new UrlEncodedFormEntity(params,
-								HTTP.UTF_8));
-						HttpResponse httpResponse = new DefaultHttpClient()
-								.execute(httpPost);
-						Log.i("tag",
-								"httpResponse.getStatusLine().getStatusCode()="
-										+ httpResponse.getStatusLine()
-												.getStatusCode());
-						if (httpResponse.getStatusLine().getStatusCode() == 200) {
-							String re = EntityUtils.toString(httpResponse
-									.getEntity());
-							Log.i("tag", "re=" + re);
-							JSONObject js = new JSONObject(re);
-							Log.i("tag", "js=" + js);
-							uid = js.getString("uid");
-							Log.i("tag", "uid=" + uid);
-							Log.i("tag", "token=" + token);
+					@Override
+					public void onSuccess(ResponseInfo<String> arg0) {
+						try {
+							Yayalog.loger("请求成功"+arg0.result);
+							JSONObject obj = new JSONObject(arg0.result);
+							uid = obj.getString("uid");
+							Yayalog.loger("uid ="+uid);
 							loginSuce(mActivity, uid, uid, token);
 							islogin = true;
 							Toast("登录成功");
+						} catch (JSONException e) {
+							e.printStackTrace();
 						}
-
-					} catch (ClientProtocolException e) {
-						e.printStackTrace();
 					}
-
-				} catch (Exception e) {
-					e.printStackTrace();
-				}
-			}
-		}).start();
+				});
 	}
 }

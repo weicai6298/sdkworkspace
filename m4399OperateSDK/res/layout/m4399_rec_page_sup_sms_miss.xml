@@ -32,33 +32,33 @@
                 android:layout_height="wrap_content" />
 
 
+            <include layout="@layout/m4399_rec_account_info" />
+
             <include
                 style="@style/m4399RecGridviewContainerStyle"
-                layout="@layout/m4399_rec_sec_rmd_gridview"/>
+                layout="@layout/m4399_rec_sec_rmd_gridview" />
+
             <include
                 layout="@layout/m4399_rec_sec_coupon"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="@dimen/m4399_rec_page_margint_top"/>
-
+                android:layout_marginTop="@dimen/m4399_rec_page_margint_top" />
 
 
         </LinearLayout>
 
 
-
     </ScrollView>
 
     <include
-        android:layout_alignParentBottom="true"
         android:id="@+id/go_pay_view"
         layout="@layout/m4399_rec_sec_single_btn_area"
         android:layout_width="match_parent"
         android:layout_height="@dimen/m4399_rec_sum_btns_eara_height"
-        android:layout_marginLeft="@dimen/m4399_rec_page_margin"
-        android:layout_marginRight="@dimen/m4399_rec_page_margin"
+        android:layout_alignParentBottom="true"
         android:layout_marginBottom="5dp"
-        />
+        android:layout_marginLeft="@dimen/m4399_rec_page_margin"
+        android:layout_marginRight="@dimen/m4399_rec_page_margin" />
 
 
 </RelativeLayout>

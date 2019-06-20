@@ -25,26 +25,21 @@ import com.yayawan.main.YYWMain;
 
 public class YaYawanconstants {
 
-//	private static HashMap<String, String> mGoodsid;
 
 	private static Activity mActivity;
 
 	private static boolean isinit=false;
 	
-//	private static BannerAd mBannerAd;
-	
-//	private static InterstitialAd mInterstitialAd;
-	
-//	private static String banner_id;
-	
-	private static String interstitial_id;
 	/**
 	 * 初始化sdk
 	 */
 	public static void inintsdk(Activity mactivity) {
 		mActivity = mactivity;
 		Yayalog.loger("YaYawanconstants初始化sdk");
-//        initInterstitialAd();
+		String appSecret = ""+DeviceUtil.getGameInfo(mactivity, "appSecret");
+		GameCenterSDK.init(appSecret, mactivity);
+		isinit = true ;
+		Log.i("tag","oppo初始化结束");
        
 	}
 
@@ -53,17 +48,6 @@ public class YaYawanconstants {
 	 */
 	public static void applicationInit(Context applicationContext) {
 		Log.i("tag","application初始化");
-		String appSecret = ""+DeviceUtil.getGameInfo(applicationContext, "appSecret");
-		String appid = ""+DeviceUtil.getGameInfo(applicationContext, "appid");
-//		banner_id = ""+DeviceUtil.getGameInfo(applicationContext, "banner_id");
-//		interstitial_id = ""+DeviceUtil.getGameInfo(applicationContext, "interstitial_id");
-		Log.i("tag","appSecret="+appSecret);
-		Log.i("tag","广告appid="+appid);
-//		Log.i("tag","interstitial_id="+interstitial_id);
-		GameCenterSDK.init(appSecret, applicationContext);
-		isinit = true ;
-//		MobAdManager.getInstance().init(applicationContext, appid);
-		Log.i("tag","oppo初始化结束");
 	}
 
 	/**
@@ -164,11 +148,11 @@ public class YaYawanconstants {
 	}
 	
 	public static void onResume(Activity paramActivity) {
-		GameCenterSDK.getInstance().onResume(paramActivity);
+//		GameCenterSDK.getInstance().onResume(paramActivity);
 	}
 
 	public static void onPause(Activity paramActivity) {
-		GameCenterSDK.getInstance().onPause();
+//		GameCenterSDK.getInstance().onPause();
 	}
 
 	public static void onDestroy(Activity paramActivity) {

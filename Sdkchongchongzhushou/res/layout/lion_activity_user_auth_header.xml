@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<com.lion.ccpay.widget.TitleLayout xmlns:android="http://schemas.android.com/apk/res/android"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:orientation="vertical">
@@ -7,4 +7,15 @@
     <TextView
         style="@style/lion_style_dlg_title"
         android:text="@string/lion_text_anti_addict_system_real_name"/>
-</RelativeLayout>
+
+    <ImageView
+        android:id="@+id/lion_activity_user_auth_close"
+        android:layout_width="50.0dip"
+        android:layout_height="50.0dip"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:layout_marginRight="15dip"
+        android:background="@drawable/lion_activity_single_order_close_selector"
+        android:scaleType="center"
+        android:src="@drawable/lion_icon_off"/>
+</com.lion.ccpay.widget.TitleLayout>

@@ -23,12 +23,13 @@
         android:orientation="horizontal">
 
         <ImageView
-            android:visibility="gone"
             android:id="@+id/navigation_back"
             android:layout_width="20dp"
             android:layout_height="20dp"
             android:layout_gravity="center_vertical"
-            android:src="@drawable/m4399_ope_nav_back" />
+            android:src="@drawable/m4399_ope_nav_back"
+            android:visibility="gone" />
+
         <TextView
             android:id="@+id/navigation_title"
             android:layout_width="0dp"

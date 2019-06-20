@@ -62,7 +62,7 @@
                     android:layout_below="@+id/sogou_game_sdk_float_account_name_tv"
                     android:layout_marginLeft="13dp"
                     android:layout_toRightOf="@+id/sogou_game_sdk_float_account_sodou"
-                    android:text="为保障您的账号资金安全,请设置您的账号信息。"
+                    android:text="为保障您的帐号资金安全,请设置您的帐号信息。"
                     android:textColor="@color/sogou_game_sdk_input_font_color"
                     android:textSize="11sp" />
 

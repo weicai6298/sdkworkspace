@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+	<string name="push_dlg_title_download">Download</string>
+	<string name="push_dlg_conent_download">Will be download %1$s for you, are you sure continue?</string>
+</resources>

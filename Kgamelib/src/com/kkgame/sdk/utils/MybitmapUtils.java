@@ -8,6 +8,7 @@ import java.io.IOException;
 
 import android.app.Activity;
 import android.content.Context;
+import android.content.Intent;
 import android.graphics.Bitmap;
 import android.graphics.Canvas;
 import android.graphics.Color;
@@ -18,7 +19,10 @@ import android.graphics.RectF;
 import android.graphics.Bitmap.Config;
 import android.graphics.Paint.Align;
 import android.graphics.PorterDuff.Mode;
+import android.media.MediaScannerConnection;
+import android.net.Uri;
 import android.os.Environment;
+import android.provider.MediaStore;
 import android.view.View;
 import android.view.animation.AlphaAnimation;
 import android.view.animation.Animation;
@@ -132,23 +136,23 @@ public class MybitmapUtils {
 		Bitmap copy = Bitmap.createBitmap(500, 500, Bitmap.Config.ARGB_8888);
 		Canvas canvas = new Canvas(copy);
 
-		String testString = password;
+		String temppassword = password;
 		Paint mPaint = new Paint();
 		mPaint.setStrokeWidth(3);
 		mPaint.setTextSize(40);
 		mPaint.setColor(Color.RED);
 		canvas.drawColor(Color.YELLOW);
-
-		mPaint.setTextAlign(Align.LEFT);
-		Rect bounds = new Rect();
-		mPaint.getTextBounds(testString, 0, testString.length(), bounds);
-		canvas.drawText(testString, 500 / 2 - bounds.width() / 2,
-				500 / 2 + bounds.height() / 2, mPaint);
-
 		
+		mPaint.setTextAlign(Align.LEFT);
+		
+		canvas.drawText(username, 5,
+				60, mPaint);
+		canvas.drawText(temppassword, 5,
+				120, mPaint);
+		File myCaptureFile = null;
 		try {
-			File myCaptureFile = new File(Environment.getExternalStorageDirectory()
-					+ "/不凡游戏密码"+username + ".jpg");
+			myCaptureFile = new File(Environment.getExternalStorageDirectory()
+					+ "/游戏密码"+username + ".jpg");
 			BufferedOutputStream bos = new BufferedOutputStream(
 					new FileOutputStream(myCaptureFile));
 			copy.compress(Bitmap.CompressFormat.JPEG, 80, bos);
@@ -162,7 +166,20 @@ public class MybitmapUtils {
 			e.printStackTrace();
 		}
 
-		ToastUtil.showSuccess(mcontext, "密码保存在sd卡中");
+//		ToastUtil.showSuccess(mcontext, "密码保存在sd卡中");
+		
+		
+		  // 其次把文件插入到系统图库
+	    try {
+	        MediaStore.Images.Media.insertImage(mcontext.getContentResolver(),
+	        		myCaptureFile.getAbsolutePath(), "/游戏密码"+username + ".jpg", null);
+	    } catch (FileNotFoundException e) {
+	        e.printStackTrace();
+	    }
+	    // 最后通知图库更新
+	    String path = Environment.getExternalStorageDirectory().getPath();
+	    mcontext.sendBroadcast(new Intent(Intent.ACTION_MEDIA_SCANNER_SCAN_FILE, Uri.parse("file://" + path)));
+	    ToastUtil.showSuccess(mcontext, "密码保存在sd卡中,请在相册中查看！");
 
 		return copy;
 	}

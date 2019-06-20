@@ -2,6 +2,7 @@ package com.yayawan.impl;
 
 import android.app.Activity;
 import android.content.Intent;
+import android.util.Log;
 
 import com.kkgame.utils.Handle;
 import com.yayawan.proxy.YYWActivityStub;
@@ -81,6 +82,7 @@ public class ActivityStubImpl implements YYWActivityStub {
 	@Override
 	public void onStart(Activity mActivity) {
 		// TODO Auto-generated method stub
+		Log.i("tag","onStart1");
 		YaYawanconstants.onStart(mActivity);
 	}
 

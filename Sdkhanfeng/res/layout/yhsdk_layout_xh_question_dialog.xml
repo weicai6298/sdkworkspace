@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:orientation="vertical"
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:layout_gravity="center"
+              android:background="@drawable/yhsdk_dialog_bg">
+
+    <TextView
+            android:id="@+id/tv_dialog_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/about_xh"
+            android:gravity="center"
+            android:layout_gravity="center_horizontal"
+            android:textSize="15sp"
+            android:layout_marginTop="15dp"
+            android:textColor="#0099ff"
+            />
+
+    <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="37dp"
+            android:layout_marginLeft="37dp"
+            android:layout_marginTop="17dp"
+            android:layout_marginBottom="37dp"
+            android:text="@string/xh_question_desc"
+            android:textSize="13sp"
+            android:textColor="#676767"
+            android:gravity="left"/>
+
+</LinearLayout>

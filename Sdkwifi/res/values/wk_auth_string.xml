@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="auth_download_url">http://static.51y5.net/apk/wifikey-official-release.apk</string>
+    <string name="auth_download_running">start  downloading</string>
+    <string name="auth_download_network">You are now in a data network, whether to download?</string>
+    <string name="auth_alert_title">Tips：</string>
+    <string name="auth_alert_uninstalled">Use authorization login need to install the new WiFi master key</string>
+    <string name="auth_alert_msgs">your version does not support unauthorized access , please update to the latest version </string>
+    <string name="auth_pay_uninstalled">your version does not support pay , please update to the latest version </string>
+    <string name="auth_pay_installed">Use payment functions need to install a new version of iFi master key</string>
+    <string name="auth_alert_posbtn">&#160;Free updates to the latest version&#160;</string>
+    <string name="auth_pay_posbtn">&#160;Free updates to the latest version&#160;</string>
+    <string name="auth_file_notexist">file  not exist</string>
+    <string name="auth_file_downloading">start  downloading</string>
+    <string name="auth_failed_network">Login failed,network error</string>
+    <string name="auth_ssl_title">Safety warning</string>
+    <string name="auth_ssl_msg">The site is security certificate is in question, continue to visit?</string>
+    <string name="auth_ssl_continue">Yes</string>
+    <string name="auth_ssl_cancel">No</string>
+    <string name="auth_download_fail">Download failed</string>
+    <string name="auth_install_fail">Install failed</string>
+    <string name="auth_browser_load_error_notice">sorry, invalid network.</string>
+    <string name="auth_browser_load_error_refresh">Refresh</string>
+</resources>

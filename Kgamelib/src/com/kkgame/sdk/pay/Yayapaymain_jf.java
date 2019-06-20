@@ -2,7 +2,9 @@ package com.kkgame.sdk.pay;
 
 import java.math.BigDecimal;
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
 import org.json.JSONException;
 import org.json.JSONObject;
@@ -23,6 +25,7 @@ import android.widget.RelativeLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.kkgame.common.CommonData;
 import com.kkgame.sdk.bean.Order;
 import com.kkgame.sdk.bean.PayMethod;
 import com.kkgame.sdk.bean.PayResult;
@@ -30,9 +33,9 @@ import com.kkgame.sdk.bean.User;
 import com.kkgame.sdk.callback.KgameSdkPaymentCallback;
 import com.kkgame.sdk.login.BaseView;
 import com.kkgame.sdk.login.ViewConstants;
+import com.kkgame.sdk.utils.ToastUtil;
 import com.kkgame.sdk.utils.Utilsjf;
 import com.kkgame.sdk.utils.Utilsjf.PayQuesionCallBack;
-import com.kkgame.sdk.xml.Yayapay_mainxml_po;
 import com.kkgame.sdkmain.AgentApp;
 import com.kkgame.sdkmain.KgameSdk;
 import com.kkgame.utils.DeviceUtil;
@@ -47,7 +50,7 @@ import com.lidroid.jxutils.http.client.HttpRequest.HttpMethod;
 public class Yayapaymain_jf extends BaseView {
 
 	private Yayapay_mainxml_po mThisview;
-	private RelativeLayout rl_mAlipay;
+	private RelativeLayout rl_mBluep;
 
 	private KgameSdkPaymentCallback mPaymentCallback;
 
@@ -56,12 +59,21 @@ public class Yayapaymain_jf extends BaseView {
 	private TextView tv_mYuanbao;
 	private TextView tv_mHelp;
 	private LinearLayout ll_mPre;
-	private RelativeLayout rl_mWxpluin;
+	private RelativeLayout rl_mlDaijinjuan;
+	
 
-	private static int ALIPAY = 5;
-	private static int WEIXINPAY = 2;
+	//private static int BLUEP = 5;
+	
+	//private static int WEIXINH5PAY = 4;
+	
+	private static int BLUEP = CommonData.BLUEP;
+	
+ private static   int GREENH5 = CommonData.GREENP;
+	public static final int DAIJINJUANPAY = 40;
+	private static int GREENP = 2;
 	private static int YINLIANPAY = 3;
-	private static int WEIXINH5PAY = 4;
+	private static int YAYABIPAY = 38;
+	
 
 	public Yayapaymain_jf(Activity mContext) {
 		super(mContext);
@@ -80,7 +92,7 @@ public class Yayapaymain_jf extends BaseView {
 	public void initView() {
 
 		// 获取页面的所有视图实例对象
-		rl_mAlipay = mThisview.getRl_mAlipay();
+		rl_mBluep = mThisview.getRl_mBluep();
 		rl_mYinlianpay = mThisview.getRl_mYinlianpay();
 
 		ll_mPre = mThisview.getLl_mPre();
@@ -111,8 +123,34 @@ public class Yayapaymain_jf extends BaseView {
 
 		// 微信支付
 		rl_mWxpay = mThisview.getRl_mWxpay();
+		
+		//Y币支付
+		rl_mlYaya = mThisview.getRl_mYaya();
+		
+		//代金券支付
+		rl_mlDaijinjuan = mThisview.getRl_mDaijinjuan();
+		
+		
+		
+		if (ViewConstants.ISKGAME) {
+			rl_mlYaya.setVisibility(View.VISIBLE);
+		}else{
+			rl_mlYaya.setVisibility(View.GONE);
+		}
+		
+		
+		//如果是 千果sdk  隐藏 代金券和Y币支付
+		
+				if (CommonData.sdkid.contains("qianqi")) {
+					
+				}else {
+					rl_mlYaya.setVisibility(View.GONE);
+					rl_mlDaijinjuan.setVisibility(View.GONE);
+				}
+				
+		
 		// 微信插件支付
-		rl_mWxpluin = mThisview.getRl_mWxpluin();
+	//	rl_mWxpluin = mThisview.getRl_mWxpluin();
 		// 先把视图隐藏，后面逻辑部分会进行有选择显示
 		tv_mHelp = mThisview.getTv_mHelp();
 		tv_mHelp.setOnClickListener(new OnClickListener() {
@@ -133,7 +171,7 @@ public class Yayapaymain_jf extends BaseView {
 		mPaymentCallback = KgameSdk.mPaymentCallback;
 
 		// TODO 支付宝支付
-		rl_mAlipay.setOnClickListener(new OnClickListener() {
+		rl_mBluep.setOnClickListener(new OnClickListener() {
 
 			@Override
 			public void onClick(View v) {
@@ -145,7 +183,7 @@ public class Yayapaymain_jf extends BaseView {
 				Utilsjf.safePaydialog(mActivity, "初始化安全支付...");
 
 				//创建订单
-				makeOrder(ALIPAY);
+				makeOrder(BLUEP);
 			}
 
 		});
@@ -163,11 +201,47 @@ public class Yayapaymain_jf extends BaseView {
 				Yayalog.loger("微信支付开始");
 				Utilsjf.safePaydialog(mActivity, "初始化安全支付...");
 				//创建订单
-				makeOrder(WEIXINH5PAY);
+				makeOrder(GREENH5);
 
 			}
 		});
 
+		//Y币支付
+		rl_mlYaya.setOnClickListener(new OnClickListener() {
+
+			@Override
+			public void onClick(View v) {
+				if (payclickcontrol) {
+					return;
+				}
+				payclickcontrol = true;
+
+				Utilsjf.safePaydialog(mActivity, "初始化安全支付...");
+
+				//创建订单
+				makeOrder(YAYABIPAY);
+			}
+
+		});
+		
+		//代金券支付
+		rl_mlDaijinjuan.setOnClickListener(new OnClickListener() {
+
+					@Override
+					public void onClick(View v) {
+						if (payclickcontrol) {
+							return;
+						}
+						payclickcontrol = true;
+
+						Utilsjf.safePaydialog(mActivity, "初始化安全支付...");
+
+						//创建订单
+						makeOrder(DAIJINJUANPAY);
+					}
+
+				});
+		
 		
 		//隐藏银联支付
 		rl_mYinlianpay.setVisibility(View.GONE);
@@ -187,21 +261,10 @@ public class Yayapaymain_jf extends BaseView {
 			}
 
 		});
+		
+		
 
-		rl_mWxpluin.setOnClickListener(new OnClickListener() {
-
-			@Override
-			public void onClick(View arg0) {
-				// TODO Auto-generated method stub
-				ViewConstants.mPayActivity = mActivity;
-				if (payclickcontrol) {
-					return;
-				}
-				payclickcontrol = true;
-
-				weiXinPay2();
-			}
-		});
+		
 	}
 
 	public void onSuccess(User paramUser, Order paramOrder, int paramInt) {
@@ -241,8 +304,10 @@ public class Yayapaymain_jf extends BaseView {
 		rps.addBodyParameter("token", AgentApp.mUser.token);
 		rps.addBodyParameter("amount", KgameSdk.mPayOrder.money + "");
 		rps.addBodyParameter("pay_type", paytype + "");
+		rps.addBodyParameter("goods", AgentApp.mPayOrder.goods + "");
 		rps.addBodyParameter("ext", AgentApp.mPayOrder.ext);
 		rps.addBodyParameter("orderid", AgentApp.mPayOrder.orderId);
+		rps.addBodyParameter("appversion", 101+"");
 		
 		Yayalog.loger("app_id", DeviceUtil.getAppid(mActivity));
 		Yayalog.loger("uid", AgentApp.mUser.uid + "");
@@ -262,11 +327,12 @@ public class Yayapaymain_jf extends BaseView {
 						payclickcontrol=false;
 						Utilsjf.stopDialog();
 
-						Toast.makeText(mActivity, "注册失败，请检查网络是否畅通", 0).show();
+						Toast.makeText(mActivity, "下单失败，请检查网络是否畅通", 0).show();
 					}
 
 					@Override
 					public void onSuccess(ResponseInfo<String> result) {
+						Yayalog.loger("下单结果" + result.result);
 						// TODO Auto-generated method stub
 						Utilsjf.stopDialog();
 						payclickcontrol=false;
@@ -274,26 +340,42 @@ public class Yayapaymain_jf extends BaseView {
 						switch (paytype) {
 						case 1:
 							//解析支付宝下单结果
-							Yayalog.loger("支付宝下单结果" + result.result);
-							alipayResult(result.result);
+							Yayalog.loger("下单结果" + result.result);
+							bluepayResult(result.result);
 							break;
 						case 2:
-							Yayalog.loger("微信下单结果" + result.result);	
-							alipayResult(result.result);
+							Yayalog.loger("下单结果" + result.result);	
+							bluepayResult(result.result);
 							break;
 						case 3:
 
 							break;
 						case 4:
-							Yayalog.loger("微信下单结果" + result.result);
-							alipayResult(result.result);
+							Yayalog.loger("下单结果" + result.result);
+							bluepayResult(result.result);
 							break;
 						case 5:
 							//解析支付宝下单结果
-							alipayResult(result.result);
-							//alipayResult(result.result);
+							bluepayResult(result.result);
+							//bluepayResult(result.result);
 							break;
-
+//						case CommonData.GREENP:
+//							Yayalog.loger("下单结果" + result.result);
+//							bluepayResult(result.result);
+//							break;
+//						case CommonData.BLUEP:
+//							Yayalog.loger("下单结果" + result.result);
+//							bluepayResult(result.result);
+//							break;
+//						case DAIJINJUANPAY:
+//							Yayalog.loger("代金券下单结果" + result.result);
+//							//bluepayResult(result.result);
+//							daijinjuanpayResult(result.result);
+//							break;
+//						case 38:
+//							Yayalog.loger("丫丫玩支付结果" + result.result);
+//							yayapayResult(result.result);
+//							break;
 						default:
 							break;
 						}
@@ -302,9 +384,65 @@ public class Yayapaymain_jf extends BaseView {
 				});
 
 	}
-
+	//Y币支付返回结果
+	private void yayapayResult(String result){
+		if (result.contains("success")) {
+			onSuccess(AgentApp.mUser, AgentApp.mPayOrder, 1);
+mActivity.runOnUiThread(new Runnable() {
+				
+				@Override
+				public void run() {
+					// TODO Auto-generated method stub
+					Toast.makeText(mActivity, "Y币支付成功", 0).show();
+				}
+			});
+		}else {
+			mActivity.runOnUiThread(new Runnable() {
+				
+				@Override
+				public void run() {
+					// TODO Auto-generated method stub
+					Toast.makeText(mActivity, "Y币余额不足", 0).show();
+				}
+			});
+			onCancel();
+		}
+	}
+	//Y币支付返回结果
+	private void daijinjuanpayResult(final String result){
+		if (result.contains("success")) {
+			onSuccess(AgentApp.mUser, AgentApp.mPayOrder, 1);
+mActivity.runOnUiThread(new Runnable() {
+				
+				@Override
+				public void run() {
+					// TODO Auto-generated method stub
+					Toast.makeText(mActivity, "代金券支付成功", 0).show();
+				}
+			});
+		}else {
+			mActivity.runOnUiThread(new Runnable() {
+				
+				@Override
+				public void run() {
+					try {
+						JSONObject jsonObject = new JSONObject(result);
+						String errmsg=jsonObject.optString("err_msg");
+						Toast.makeText(mActivity, errmsg, 0).show();
+					} catch (JSONException e) {
+						// TODO Auto-generated catch block
+						e.printStackTrace();
+					}
+					// TODO Auto-generated method stub
+					
+				}
+			});
+			onCancel();
+		}
+	}
+	
 	// 支付宝支付结果
-	private void alipayResult(String result) {
+	private void bluepayResult(String result) {
 		// TODO Auto-generated method stub
 		System.out.println(result);
 		JSONObject jsonstr = null;
@@ -320,26 +458,40 @@ public class Yayapaymain_jf extends BaseView {
 			try {
 				System.out.println(pay_str);
 				
-				Weixinpay_dialog weixinpay_dialog = new Weixinpay_dialog(
+				GreenP_dialog greenp_dialog = new GreenP_dialog(
 						mActivity);
-				weixinpay_dialog.dialogShow();
-				WebView webView = weixinpay_dialog.getWebview();
+				greenp_dialog.dialogShow();
+				WebView webView = greenp_dialog.getWebview();
+				greenp_dialog.getLl_mPre().setOnClickListener(new OnClickListener() {
+					
+					@Override
+					public void onClick(View v) {
+						// TODO Auto-generated method stub
+						onCancel();
+					}
+				});
+
+
 				webView.loadUrl(pay_str);
 				webView.setWebViewClient(new WebViewClient(){
 					
 					@Override
 					public boolean shouldOverrideUrlLoading(WebView view, String url) {
 						Yayalog.loger("重复的url:"+url);
-						
+					
 						if (url.startsWith("weixin://wap/pay?")) {
 		                    try {
 								Intent intent = new Intent();
 								intent.setAction(Intent.ACTION_VIEW);
 								intent.setData(Uri.parse(url));
 								mActivity.startActivity(intent);
+							
 							} catch (Exception e) {
 								// TODO Auto-generated catch block
-								Yayalog.loger("未安装微信");
+								onCancel();
+								Yayalog.loger("未安装");
+								Toast.makeText(mActivity.getApplicationContext(),
+										"未安装", Toast.LENGTH_LONG).show();
 								e.printStackTrace();
 							}
 
@@ -361,8 +513,11 @@ public class Yayapaymain_jf extends BaseView {
 		                    }
 		                }else if (url.contains("paysuccess")) {
 		                	onSuccess(AgentApp.mUser, AgentApp.mPayOrder, 1);
+		                }else if (url.contains("payfaile")) {
+		                	//onSuccess(AgentApp.mUser, AgentApp.mPayOrder, 1);
+		                	onCancel();
 		                }else {
-		                	view.loadUrl(url);
+		                	
 						}
 					    return super.shouldOverrideUrlLoading(view, url);
 					    }
@@ -387,6 +542,7 @@ public class Yayapaymain_jf extends BaseView {
 					@Override
 					public void run() {
 						// TODO Auto-generated method stub
+						onCancel();
 						Toast.makeText(mActivity.getApplicationContext(),
 								"网络出错，请重新支付", Toast.LENGTH_LONG).show();
 					}
@@ -400,6 +556,7 @@ public class Yayapaymain_jf extends BaseView {
 	private String mhtml;
 	private RelativeLayout rl_mYinlianpay;
 	private RelativeLayout rl_mWxpay;
+	private RelativeLayout rl_mlYaya;
 
 	public void CeshiYinlian() {
 
@@ -409,7 +566,7 @@ public class Yayapaymain_jf extends BaseView {
 	}
 
 	// 丫丫玩的微信支付id 10 不是多宝通的 丫丫玩插件支付
-	private void weiXinPay2() {
+	private void GREENP2() {
 		// TODO Auto-generated method stub
 		// 查看是否安装插件，插件是否为最新版本
 		Boolean checkIsPluin = checkIsPluin();
@@ -432,7 +589,7 @@ public class Yayapaymain_jf extends BaseView {
 	private Boolean checkIsPluin() {
 		// TODO Auto-generated method stub
 		// AppInfo appInfo = AppUtils.getAppInfo(mActivity,
-		// "com.yyw.weixinpay");
+		// "com.yyw.greenp");
 
 		return true;
 	}
@@ -442,21 +599,11 @@ public class Yayapaymain_jf extends BaseView {
 	// 丫丫玩
 
 	
-	private void AlipaypayNow() {
-		// 进入支付流程
-		/*
-		 * new Thread() {
-		 * 
-		 * @Override public void run() { try { mFirstResult =
-		 * com.KgameSdk.sdk.payment.engine.ObtainData .payment(mContext,
-		 * AgentApp.mPayOrder, AgentApp.mUser, AgentApp.mPayOrder.paytype);
-		 * 
-		 * mHandler.sendEmptyMessage(FIRSTRESULT); } catch (Exception e) {
-		 * mHandler.sendEmptyMessage(NETERROR); } } }.start();
-		 */
+	private void BlueppayNow() {
+		
 	}
 
-	private void startAlipay() {
+	private void startBluep() {
 		Utilsjf.safePaydialog(mActivity, "初始化安全支付...");
 
 	}
@@ -524,7 +671,7 @@ public class Yayapaymain_jf extends BaseView {
 
 	private void PullWX(String pay_str) {
 		Yayalog.loger(pay_str);
-		if (isWeixinAvilible()) {
+		if (isGreenAvilible()) {
 			try {
 				System.out.println(pay_str);
 				Uri uri = Uri.parse(pay_str);
@@ -558,7 +705,7 @@ public class Yayapaymain_jf extends BaseView {
 	}
 
 	// 是否安装微信
-	public boolean isWeixinAvilible() {
+	public boolean isGreenAvilible() {
 		final PackageManager packageManager = mActivity.getPackageManager();// 获取packagemanager
 		List<PackageInfo> pinfo = packageManager.getInstalledPackages(0);// 获取所有已安装程序的包信息
 		if (pinfo != null) {

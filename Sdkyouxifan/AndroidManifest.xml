@@ -4,16 +4,16 @@
     package="com.yayawan.sdktemplate"
     android:versionCode="1"
     android:versionName="1.0" >
-  <uses-sdk
+
+    <uses-sdk
         android:minSdkVersion="19"
         android:targetSdkVersion="23" />
 
-   <uses-permission android:name="android.permission.VIBRATE" />
+    <uses-permission android:name="android.permission.VIBRATE" />
     <uses-permission android:name="android.webkit.permission.PLUGIN" />
     <uses-permission android:name="android.permission.CHANGE_NETWORK_STATE" />
     <uses-permission android:name="android.permission.SEND_SMS" />
     <uses-permission android:name="android.permission.WRITE_SETTINGS" />
-
     <uses-permission android:name="android.permission.WAKE_LOCK" />
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
     <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW" />
@@ -24,7 +24,6 @@
 
     <uses-permission android:name="android.permission.CAMERA" />
     <uses-permission android:name="android.hardware.camera.autofocus" />
-
     <uses-permission android:name="android.permission.RECORD_AUDIO" />
 
     <!-- 读取短信验证码	可选 -->
@@ -34,28 +33,42 @@
     <!-- 录像需要的权限 -->
     <uses-permission android:name="android.permission.RECORD_VIDEO" />
 
-    <!--添加可以向外拨打电话的权限  -->
+    <!-- 添加可以向外拨打电话的权限 -->
     <uses-permission android:name="android.permission.CALL_PHONE" />
 
-    <!-- 这个权限用于进行网络定位-->
-    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION"></uses-permission>
-    <!-- 这个权限用于访问GPS定位-->
-    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION"></uses-permission>
-    <!-- 用于访问wifi网络信息，wifi信息会用于进行网络定位-->
-    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE"></uses-permission>
-    <!-- 获取运营商信息，用于支持提供运营商信息相关的接口-->
-    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"></uses-permission>
-    <!-- 这个权限用于获取wifi的获取权限，wifi信息会用来进行网络定位-->
-    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE"></uses-permission>
-    <!-- 用于读取手机当前的状态-->
-    <uses-permission android:name="android.permission.READ_PHONE_STATE"></uses-permission>
-    <!-- 写入扩展存储，向扩展卡写入数据，用于写入离线定位数据-->
-    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"></uses-permission>
-    <!-- 访问网络，网络定位需要上网-->
+    <!-- 这个权限用于进行网络定位 -->
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" >
+    </uses-permission>
+    <!-- 这个权限用于访问GPS定位 -->
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" >
+    </uses-permission>
+    <!-- 用于访问wifi网络信息，wifi信息会用于进行网络定位 -->
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" >
+    </uses-permission>
+    <!-- 获取运营商信息，用于支持提供运营商信息相关的接口 -->
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" >
+    </uses-permission>
+    <!-- 这个权限用于获取wifi的获取权限，wifi信息会用来进行网络定位 -->
+    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE" >
+    </uses-permission>
+    <!-- 用于读取手机当前的状态 -->
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" >
+    </uses-permission>
+    <!-- 写入扩展存储，向扩展卡写入数据，用于写入离线定位数据 -->
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" >
+    </uses-permission>
+    <!-- 访问网络，网络定位需要上网 -->
     <uses-permission android:name="android.permission.INTERNET" />
-    <!-- SD卡读取权限，用户写入离线定位数据-->
-    <uses-permission android:name="android.permission.MOUNT_UNMOUNT_FILESYSTEMS"></uses-permission>
-
+    <!-- SD卡读取权限，用户写入离线定位数据 -->
+    <uses-permission android:name="android.permission.MOUNT_UNMOUNT_FILESYSTEMS" >
+    </uses-permission>
+    <uses-permission android:name="android.permission.BLUETOOTH" />
+    <uses-permission android:name="android.permission.BLUETOOTH_ADMIN" />
+    <!-- 11月15号新增 -->
+    <uses-permission android:name="android.permission.REQUEST_INSTALL_PACKAGES" />
+    <!-- 11-28新增加的2个权限 -->
+    <uses-permission android:name="android.permission.DOWNLOAD_WITHOUT_NOTIFICATION" />
+    <uses-permission android:name="android.permission.ACCESS_DOWNLOAD_MANAGER" />
 
     <application
         android:name="com.yayawan.impl.YYApplication"
@@ -71,286 +84,150 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-      
-            <activity
+        
+        
+        <activity
+            android:name="com.game.sdk.ui.mainUI.LoginPhoneActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:launchMode="singleTask"
+            android:theme="@style/Theme.SDKTransparent"
+            android:windowSoftInputMode="adjustPan" />
+        <activity
+            android:name="com.game.sdk.ui.mainUI.LoginPwdActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:launchMode="singleTask"
+            android:theme="@style/Theme.SDKTransparent"
+            android:windowSoftInputMode="adjustPan" />
+        <activity
+            android:name="com.game.sdk.ui.mainUI.LoginQuickActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:launchMode="singleTask"
+            android:theme="@style/Theme.SDKTransparent"
+            android:windowSoftInputMode="adjustPan" />
+        <activity
+            android:name="com.game.sdk.ui.mainUI.LoginQuickResultActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:launchMode="singleTask"
+            android:theme="@style/Theme.SDKTransparent"
+            android:windowSoftInputMode="adjustPan" />
+        <activity
+            android:name="com.game.sdk.ui.mainUI.ForgetChoseActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:launchMode="singleTask"
+            android:theme="@style/Theme.SDKTransparent"
+            android:windowSoftInputMode="adjustPan" />
+        <activity
+            android:name="com.game.sdk.ui.mainUI.ForgetPwdActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:launchMode="singleTask"
+            android:theme="@style/Theme.SDKTransparent"
+            android:windowSoftInputMode="adjustPan" />
+        <activity
+            android:name="com.game.sdk.ui.mainUI.ForgetPwdChooseActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:launchMode="singleTask"
+            android:theme="@style/Theme.SDKTransparent"
+            android:windowSoftInputMode="adjustPan" />
+        <activity
+            android:name="com.game.sdk.ui.mainUI.ForgetPwdPhoneActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:launchMode="singleTask"
+            android:theme="@style/Theme.SDKTransparent"
+            android:windowSoftInputMode="adjustPan" />
+        <activity
+            android:name="com.game.sdk.ui.mainUI.ForgetPwdEmailActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:launchMode="singleTask"
+            android:theme="@style/Theme.SDKTransparent"
+            android:windowSoftInputMode="adjustPan" />
+        <activity
+            android:name="com.game.sdk.ui.mainUI.LoginYxfSeleAccActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:launchMode="singleTask"
+            android:theme="@style/Theme.SDKTransparent"
+            android:windowSoftInputMode="adjustPan" />
+        <activity
+            android:name="com.game.sdk.ui.mainUI.LoginGameSeleAccActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:launchMode="singleTask"
+            android:theme="@style/Theme.SDKTransparent"
+            android:windowSoftInputMode="adjustPan" />
+
+        <!-- 权限管理 -->
+        <activity
+            android:name="com.game.sdk.ui.mainUI.PermissonActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:launchMode="singleTask"
+            android:theme="@style/Theme.SDKTransparent"
+            android:windowSoftInputMode="adjustPan" />
+        <activity
+            android:name="com.game.sdk.ui.mainUI.FloatWebActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:theme="@style/Theme.SDKTransparent"
+            android:windowSoftInputMode="adjustPan" />
+        <activity
             android:name="com.game.sdk.ui.mainUI.GetInfoActivity"
             android:configChanges="orientation|keyboardHidden|screenSize"
             android:launchMode="singleTask"
             android:theme="@android:style/Theme.Light.NoTitleBar.Fullscreen"
             android:windowSoftInputMode="adjustPan" />
 
-        <activity
-            android:name="com.game.sdk.ui.mainUI.PtbActivity"
-            android:configChanges="orientation|keyboardHidden|screenSize"
-            android:launchMode="singleTask"
-            android:theme="@style/Theme.YXFTransparent"
-            android:windowSoftInputMode="adjustPan" />
-
-        <activity
-            android:name="com.game.sdk.ui.mainUI.GameCurrencyActivity"
-            android:configChanges="orientation|keyboardHidden|screenSize"
-            android:launchMode="singleTask"
-            android:theme="@style/Theme.YXFTransparent"
-            android:windowSoftInputMode="adjustPan" />
-
-        <activity
-            android:name="com.game.sdk.ui.mainUI.ChargeActivity"
-            android:configChanges="orientation|keyboardHidden|screenSize"
-            android:launchMode="singleTask"
-            android:theme="@style/Theme.YXFTransparent"
-            android:windowSoftInputMode="adjustPan" />
-
-
-        <activity
-            android:name="com.game.sdk.ui.mainUI.LoginActivity"
-            android:configChanges="orientation|keyboardHidden|screenSize"
-            android:launchMode="singleTask"
-            android:theme="@style/Theme.YXFTransparent"
-            android:windowSoftInputMode="adjustPan" />
-
-        <activity
-            android:name="com.game.sdk.ui.mainUI.TelLoginActivity"
-            android:configChanges="orientation|keyboardHidden|screenSize"
-            android:launchMode="singleTask"
-            android:theme="@style/Theme.YXFTransparent"
-            android:windowSoftInputMode="adjustPan" />
-        <activity
-            android:name="com.game.sdk.ui.mainUI.ChooseUserActivity"
-            android:configChanges="orientation|keyboardHidden|screenSize"
-            android:launchMode="singleTask"
-            android:theme="@style/Theme.YXFTransparent"
-            android:windowSoftInputMode="adjustPan" />
-        <activity
-            android:name="com.game.sdk.ui.mainUI.RegisterActivity"
-            android:configChanges="orientation|keyboardHidden|screenSize"
-            android:launchMode="singleTask"
-            android:theme="@style/Theme.YXFTransparent"
-            android:windowSoftInputMode="adjustPan" />
-
-        <!-- 浮点 -->
-        <activity
-            android:name="com.game.sdk.ui.floatwindowUI.FloatActivity"
-            android:configChanges="orientation|keyboardHidden|screenSize"
-            android:theme="@style/Theme.YXFTransparent"
-            android:windowSoftInputMode="adjustPan" />
-
-        <activity
-            android:name="com.game.sdk.ui.floatwindowUI.ForumActivity"
-            android:configChanges="orientation|keyboardHidden|screenSize"
-            android:theme="@style/Theme.YXFTransparent"
-            android:windowSoftInputMode="adjustPan" />
-
-        <activity
-            android:name="com.game.sdk.ui.floatwindowUI.ChargeWebActivity"
-            android:configChanges="orientation|keyboardHidden|screenSize"
-            android:theme="@style/Theme.YXFTransparent"
-            android:windowSoftInputMode="adjustPan" />
-
-        <activity
-            android:name="com.game.sdk.ui.floatwindowUI.CustomerServiceActivity"
-            android:configChanges="orientation|keyboardHidden|screenSize"
-            android:theme="@style/Theme.YXFTransparent"
-            android:windowSoftInputMode="adjustPan" />
-
-        <activity
-            android:name="com.game.sdk.ui.floatwindowUI.NoticeActivity"
-            android:configChanges="orientation|keyboardHidden|screenSize"
-            android:theme="@style/Theme.YXFTransparent"
-            android:windowSoftInputMode="adjustPan" />
-
-        <activity
-            android:name="com.game.sdk.ui.floatwindowUI.GiftActivity"
-            android:configChanges="orientation|keyboardHidden|screenSize"
-            android:theme="@style/Theme.YXFTransparent"
-            android:windowSoftInputMode="adjustPan" />
-
-        <activity
-            android:name="com.game.sdk.ui.mainUI.ForgetPasActivity"
-            android:configChanges="orientation|keyboardHidden|screenSize"
-            android:theme="@style/Theme.YXFTransparent"
-            android:windowSoftInputMode="adjustPan" />
-
-        <activity
-            android:name="com.game.sdk.ui.mainUI.ForgetPasChooseActivity"
-            android:configChanges="orientation|keyboardHidden|screenSize"
-            android:theme="@style/Theme.YXFTransparent"
-            android:windowSoftInputMode="adjustPan" />
-
-        <activity
-            android:name="com.game.sdk.ui.mainUI.FPPhoneActivity"
-            android:configChanges="orientation|keyboardHidden|screenSize"
-            android:theme="@style/Theme.YXFTransparent"
-            android:windowSoftInputMode="adjustPan" />
-
-        <activity
-            android:name="com.game.sdk.ui.mainUI.FPResultActivity"
-            android:configChanges="orientation|keyboardHidden|screenSize"
-            android:theme="@style/Theme.YXFTransparent"
-            android:windowSoftInputMode="adjustPan" />
-
-        <activity
-            android:name="com.game.sdk.ui.mainUI.FPEmailActivity"
-            android:configChanges="orientation|keyboardHidden|screenSize"
-            android:theme="@style/Theme.YXFTransparent"
-            android:windowSoftInputMode="adjustPan" />
-
-
-        <activity
-            android:name="com.game.sdk.ui.floatwindowUI.GiftItemActivity"
-            android:configChanges="orientation|keyboardHidden|screenSize"
-            android:theme="@style/Theme.YXFTransparent"
-            android:windowSoftInputMode="adjustPan" />
-
-        <activity
-            android:name="com.game.sdk.ui.floatwindowUI.NoticeItemActivity"
-            android:configChanges="orientation|keyboardHidden|screenSize"
-            android:theme="@style/Theme.YXFTransparent"
-            android:windowSoftInputMode="adjustPan" />
-
-        <activity
-            android:name="com.game.sdk.ui.floatwindowUI.UserCenterActivity"
-            android:configChanges="orientation|keyboardHidden|screenSize"
-            android:theme="@style/Theme.YXFTransparent"
-            android:windowSoftInputMode="adjustPan" />
-
-        <activity
-            android:name="com.game.sdk.ui.floatwindowUI.PhoneUnbundActivity"
-            android:configChanges="orientation|keyboardHidden|screenSize"
-            android:theme="@style/Theme.YXFTransparent"
-            android:windowSoftInputMode="adjustPan" />
-
-        <activity
-            android:name="com.game.sdk.ui.floatwindowUI.PhoneBoundActivity"
-            android:configChanges="orientation|keyboardHidden|screenSize"
-            android:theme="@style/Theme.YXFTransparent"
-            android:windowSoftInputMode="adjustPan" />
-
-        <activity
-            android:name="com.game.sdk.ui.floatwindowUI.EmailUnbundActivity"
-            android:configChanges="orientation|keyboardHidden|screenSize"
-            android:theme="@style/Theme.YXFTransparent"
-            android:windowSoftInputMode="adjustPan" />
-
-        <activity
-            android:name="com.game.sdk.ui.floatwindowUI.EmailBoundActivity"
-            android:configChanges="orientation|keyboardHidden|screenSize"
-            android:theme="@style/Theme.YXFTransparent"
-            android:windowSoftInputMode="adjustPan" />
-
-        <activity
-            android:name="com.game.sdk.ui.floatwindowUI.ShareActivity"
-            android:configChanges="orientation|keyboardHidden|screenSize"
-            android:theme="@style/Theme.YXFTransparent"
-            android:windowSoftInputMode="adjustPan" />
-        <activity
-            android:name="com.game.sdk.ui.floatwindowUI.ChooseChargeActivity"
-            android:configChanges="orientation|keyboardHidden|screenSize"
-            android:theme="@style/Theme.YXFTransparent"
-            android:windowSoftInputMode="adjustPan" />
-
-        <!--alipy-->
-        <activity
-            android:name="com.game.sdk.ui.mainUI.AlipayActivity"
-            android:configChanges="keyboardHidden|orientation|screenSize"
-            android:launchMode="singleTask"
-            android:screenOrientation="portrait"
-            android:theme="@style/Theme.YXFTransparent" />
-
-        <activity
-            android:name="com.alipay.sdk.app.H5PayActivity"
-            android:configChanges="orientation|keyboardHidden|navigation|screenSize"
-            android:exported="false"
-            android:screenOrientation="behind"></activity>
-
-        <activity
-            android:name="com.alipay.sdk.auth.AuthActivity"
-            android:configChanges="orientation|keyboardHidden|navigation|screenSize"
-            android:exported="false"
-            android:screenOrientation="behind"></activity>
-
-        <!-- 微信支付 -->
-        <activity
-            android:name="com.game.sdk.ui.mainUI.NowPayActivity"
-            android:configChanges="orientation|screenSize"
-            android:screenOrientation="behind"
-            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
-
-        <activity android:name="com.game.sdk.ui.mainUI.WebFullActivity"
-            android:configChanges="orientation|screenSize"
-            android:screenOrientation="portrait"
-            android:theme="@android:style/Theme.Translucent"/>
-
-        <!--MobAPI-->
-        <activity
-            android:name="com.mob.tools.MobUIShell"
-            android:configChanges="keyboardHidden|orientation|screenSize"
-            android:screenOrientation="portrait"
-            android:theme="@android:style/Theme.Translucent.NoTitleBar"
-            android:windowSoftInputMode="adjustPan">
-            <!-- QQ和QQ空间分享 QQ登录的回调必须要配置的 -->
-            <intent-filter>
-                <data android:scheme="tencent1105791864" />
-                <action android:name="android.intent.action.VIEW" />
-
-                <category android:name="android.intent.category.BROWSABLE" />
-                <category android:name="android.intent.category.DEFAULT" />
-            </intent-filter>
-
-            <!-- 调用新浪原生SDK，需要注册的回调activity -->
-            <intent-filter>
-                <action android:name="com.sina.weibo.sdk.action.ACTION_SDK_REQ_ACTIVITY" />
-                <category android:name="android.intent.category.DEFAULT" />
-            </intent-filter>
-        </activity>
-        <!--微信分享回调 -->
-        <activity
-            android:name="com.game.sdk.wxapi.WXEntryActivity"
-            android:configChanges="keyboardHidden|orientation|screenSize"
-            android:exported="true"
-            android:screenOrientation="portrait"
-            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
-
-
-        <service android:name="com.game.sdk.YXFAppService">
-            <intent-filter android:priority="1000">
-                <action android:name="YXFService" />
+        <service android:name="com.game.sdk.SDKAppService" >
+            <intent-filter android:priority="1000" >
+                <action android:name="SDKService" />
             </intent-filter>
         </service>
 
-        <!--百度定位-->
-        <service
-            android:name="com.baidu.location.f"
-            android:enabled="true"
-            android:process=":remote"></service>
+        <!-- 0为横屏，1为竖屏 -->
         <meta-data
-            android:name="com.baidu.lbsapi.API_KEY"
-            android:value="T9qZTNuCXccVuV76gEfXUxt55jXPlqD9" />
+            android:name="screenOrientation"
+            android:value="screenOrientation:0" />
+        <meta-data
+            android:name="YG_APPID"
+            android:value="YG_APPID:190311320181" />
+        <meta-data
+            android:name="YG_SPLASH"
+            android:value="YG_SPLASH:0" />
+        <!-- provider authorities的值com.demo.sdkinsapk里面的com.demo换成你们自己的包名 -->
+        <provider
+            android:name="android.support.v4.content.FileProvider"
+            android:authorities="string_package.sdkinsapk"
+            android:exported="false"
+            android:grantUriPermissions="true" >
 
-        
+            <!-- 元数据 -->
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/yxf_file_paths" />
+        </provider>
+        <!-- 11月15号新增 -->
+        <activity android:name="com.anjiu.buff.mvp.ui.activity.GameInfoActivity" >
+        </activity>
 
         <!-- meta-data需要写在application中 -->
+       
+        <!-- 手游互联配置 -->
         <meta-data
-            android:name="YXF_APPID"
-            android:value="2237" />
-        <meta-data
-            android:name="YXF_GAMEID"
-            android:value="2990" />
-        <meta-data
-            android:name="YXF_AGENT"
-            android:value="default" />
-        
-         <meta-data
-            android:name="goodsname"
-            android:value="钻石" />
-        
-      <!-- 手游互联配置 -->
-     	 <meta-data
             android:name="app_id"
-            android:value="kk1417087778" />
+            android:value="kk3982105996" />
         <meta-data
             android:name="isLandscape"
             android:value="false" />
-    
+        <meta-data
+            android:name="callback"
+            android:value="https://api.sdk.75757.com/pay/notify/3982105996/" />
+        
+        
+         <meta-data
+            android:name="SDK_APPID"
+            android:value="7129" />
+        <!-- SDK_GAMEID的值android:value="5"在4.0有意义，运营会在qq群分配参数给你们去替换 -->
+        <meta-data
+            android:name="SDK_GAMEID"
+            android:value="7848" />
+        <meta-data
+            android:name="SDK_AGENT"
+            android:value="default" />
     </application>
 
 </manifest>

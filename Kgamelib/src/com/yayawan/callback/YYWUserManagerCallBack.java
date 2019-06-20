@@ -2,6 +2,8 @@ package com.yayawan.callback;
 
 import com.yayawan.domain.YYWUser;
 
+
+
 public interface YYWUserManagerCallBack {
 
     public abstract void onLoginSuccess(YYWUser paramUser, Object paramObject);

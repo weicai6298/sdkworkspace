@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:id="@+id/rl_login_register"
+        android:layout_width="306.67dp"
+        android:layout_height="wrap_content"
+        android:minHeight="306.67dp"
+        android:layout_centerInParent="true"
+        android:visibility="visible">
+
+<!--        <View
+            android:id="@+id/view_whi1"
+            android:layout_width="200dp"
+            android:layout_height="0.1dp"
+            android:layout_centerHorizontal="true"
+            android:background="@drawable/yxf_lin_shape_whi"></View>-->
+
+        <RelativeLayout
+            android:id="@+id/rl_login_register_in"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+
+            android:background="@drawable/yxf_bt_in_bg_whi">
+
+
+            <RelativeLayout
+                android:id="@+id/rl_in_title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="17dp">
+
+                <ImageView
+                    android:id="@+id/iv_finish"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="14dp"
+                    android:padding="8dp"
+                    android:src="@drawable/yxf_left_black_back" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:text="找回密码"
+                    android:textColor="@color/yxf_sdk_gray_title"
+                    android:textSize="17.33sp" />
+
+            </RelativeLayout>
+
+            <LinearLayout
+                android:id="@+id/ll_title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/rl_in_title"
+                android:layout_marginLeft="26.67dp"
+                android:layout_marginRight="26.67dp"
+                android:layout_marginTop="60dp"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="left"
+                    android:text="请输入想要找回密码的账号"
+                    android:textColor="@color/yxf_sdk_gray_result"
+                    android:textSize="12sp" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/ll_login_frame"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/ll_title"
+                android:layout_marginLeft="26.67dp"
+                android:layout_marginRight="26.67dp"
+                android:layout_marginTop="14dp"
+                android:orientation="vertical">
+
+                <RelativeLayout
+                    android:id="@+id/rl_username"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/yxf_bt_in_edt_whi">
+
+                    <EditText
+                        android:id="@+id/username"
+                        android:layout_width="fill_parent"
+                        android:layout_height="40dp"
+                        android:background="@null"
+                        android:hint="请输入账号"
+                        android:paddingLeft="10.67dp"
+                        android:paddingRight="10.67dp"
+                        android:singleLine="true"
+                        android:selectAllOnFocus="true"
+                        android:textColor="@color/yxf_sdk_black"
+                        android:textColorHint="@color/yxf_sdk_gray"
+                        android:textSize="12sp" />
+
+                </RelativeLayout>
+
+            </LinearLayout>
+
+    <!--        <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/ll_login_frame">-->
+
+                <LinearLayout
+                    android:id="@+id/ll_login_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="26.67dp"
+                    android:layout_marginRight="26.67dp"
+                    android:layout_marginTop="43.67dp"
+                    android:paddingBottom="44dp"
+                    android:layout_below="@+id/ll_login_frame"
+                    android:orientation="vertical">
+
+ <!--                   <View
+                        android:id="@+id/login_line1"
+                        android:layout_width="200dp"
+                        android:layout_height="0.1dp"
+                        android:layout_gravity="center_horizontal"
+                        android:background="@drawable/yxf_lin_shape_yel"
+                        android:visibility="invisible"></View>-->
+
+                    <Button
+                        android:id="@+id/submit"
+                        android:layout_width="match_parent"
+                        android:layout_height="40dp"
+                        android:layout_centerInParent="true"
+                        android:background="@drawable/yxf_bt_in_gray"
+                        android:text="下一步"
+                        android:textColor="@color/yxf_sdk_white"
+                        android:textSize="14.67sp" />
+
+<!--                    <View
+                        android:id="@+id/login_line2"
+                        android:layout_width="200dp"
+                        android:layout_height="0.1dp"
+                        android:layout_gravity="center_horizontal"
+                        android:background="@drawable/yxf_lin_shape_yel"
+                        android:visibility="invisible"></View>-->
+
+                </LinearLayout>
+        <!--    </RelativeLayout>-->
+
+        </RelativeLayout>
+
+<!--        <View
+            android:layout_width="200dp"
+            android:layout_height="0.33dp"
+            android:layout_below="@+id/rl_login_register_in"
+            android:layout_centerHorizontal="true"
+            android:background="@drawable/yxf_lin_shape_whi"></View>-->
+
+    </RelativeLayout>
+
+</RelativeLayout>

@@ -1,9 +1,10 @@
 package com.yayawan.impl;
 
 
-import android.app.Application;
+import com.downjoy.DownjoyApplication;
 
-public class YYApplication extends Application {
+
+public class YYApplication extends DownjoyApplication {
 
 	
 

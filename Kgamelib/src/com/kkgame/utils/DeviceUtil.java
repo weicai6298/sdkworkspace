@@ -2,6 +2,8 @@ package com.kkgame.utils;
 
 import java.util.ArrayList;
 
+import android.Manifest;
+import android.app.Activity;
 import android.content.Context;
 import android.content.pm.ApplicationInfo;
 import android.content.pm.PackageInfo;
@@ -13,11 +15,12 @@ import android.os.Build;
 import android.os.Bundle;
 import android.telephony.TelephonyManager;
 
+import com.kkgame.common.CommonData;
 import com.kkgame.sdk.bean.PayMethod;
 
 public class DeviceUtil {
 
-	private static final String APP_ID = "app_id";
+	private static final String APP_ID = CommonData.sdkid;
 
 	private static final String GAME_ID = "yayawan_game_id";
 
@@ -39,7 +42,7 @@ public class DeviceUtil {
 	public static String gameid;
 	public static String appid;
 
-	public static final int ALIPAYMSPCODE = 31;
+	public static final int BLUEPMSPCODE = 31;
 
 	public static final int YAYABICODE = 4;
 
@@ -58,6 +61,7 @@ public class DeviceUtil {
 	public static final int QQCODE = 20;
 
 	public static final int WXPAYCODE = 32;
+	public static final int DAIJINJUANPAY = 39;
 	public static final int YINLIAN = 21;
 	public static final int YAYAWANWEIXINPLUIN = 10;
 
@@ -68,12 +72,14 @@ public class DeviceUtil {
 	 * @return
 	 */
 	public static String getOrientation(Context paramContext) {
-		Bundle dataInfo;
-		if (((dataInfo = getMetaDataInfo(paramContext)) == null)
-				|| (dataInfo.get(YAYAWAN_ORIENTATION) == null)) {
-			return "";
+		
+		
+		if (DeviceUtil.isLandscape(paramContext)) {
+			return "landscape";
+		}else {
+			return "portrait";
 		}
-		return dataInfo.getString(YAYAWAN_ORIENTATION);
+		//return dataInfo.getString(YAYAWAN_ORIENTATION);
 	}
 
 	/**
@@ -98,12 +104,12 @@ public class DeviceUtil {
 	public static ArrayList<PayMethod> initPayMethod(Context context) {
 		ArrayList<PayMethod> paymethods = new ArrayList<PayMethod>();
 		// if (Utils.isExistMsp(context)) {
-		paymethods.add(new PayMethod("yaya_alipay", ALIPAYMSPCODE));
+		paymethods.add(new PayMethod("yaya_bluepay", BLUEPMSPCODE));
 		// } else {
-		// paymethods.add(new PayMethod("yaya_alipay", ALIPAYCODE));
+		// paymethods.add(new PayMethod("yaya_bluepay", BLUEPCODE));
 		// }
-		// paymethods.add(new PayMethod("yaya_alipay", ResourceUtil
-		// .getDrawableId(context, "alipay_icon"), ALIPAYCODE));
+		// paymethods.add(new PayMethod("yaya_bluepay", ResourceUtil
+		// .getDrawableId(context, "bluepay_icon"), BLUEPCODE));
 		paymethods.add(new PayMethod("yaya_visa", YIBAOCODE));
 		paymethods.add(new PayMethod("yaya_yayabi", YAYABICODE));
 		paymethods.add(new PayMethod("yaya_cash", YIBAOCODE));
@@ -146,12 +152,24 @@ public class DeviceUtil {
 	 * @return
 	 */
 	public static String getGameInfo(Context paramContext, String name) {
-		Bundle dataInfo = getMetaDataInfo(paramContext);
-		if (((dataInfo = getMetaDataInfo(paramContext)) == null)
-				|| (dataInfo.get(name) == null)) {
-			throw new IllegalArgumentException("must set the "+name);
+		
+		
+		if(name.equals("yayawan_orientation")){
+			if (DeviceUtil.isLandscape(paramContext)) {
+				return "landscape";
+			}else {
+				return "portrait";
+			}
+		}else {
+			Bundle dataInfo = getMetaDataInfo(paramContext);
+			if (((dataInfo = getMetaDataInfo(paramContext)) == null)
+					|| (dataInfo.get(name) == null)) {
+				throw new IllegalArgumentException("must set the "+name);
+			}
+			return dataInfo.getString(name).replace("string", "");
 		}
-		return dataInfo.getString(name).replace("string", "");
+		
+		
 	}
 
 	/**
@@ -202,7 +220,7 @@ public class DeviceUtil {
 				|| (dataInfo.get(UNION_ID) == null)) {
 			return null;
 		}
-		return dataInfo.get(UNION_ID).toString().replace("kk", "");
+		return dataInfo.get(UNION_ID).toString().replace("yaya", "");
 	}
 
 	/**
@@ -243,16 +261,46 @@ public class DeviceUtil {
 	 */
 	public static String getIMEI(Context paramContext) {
 		// 获取设备的imei号
-		String deviceId = ((TelephonyManager) paramContext
-				.getSystemService(Context.TELEPHONY_SERVICE)).getDeviceId();
-		// 如果imei为空,获取mac地址
-		if (deviceId == null || "0".equals(deviceId)) {
-			WifiManager wifi = (WifiManager) paramContext
-					.getSystemService(Context.WIFI_SERVICE);
-			WifiInfo info = wifi.getConnectionInfo();
-			deviceId = getDEC(info.getMacAddress());
+		
+		int isfirstin=Sputils.getSPint("isfirstin", 1, paramContext);
+		if (isfirstin==1) {
+			if (!PermissionUtils.checkPermission(paramContext, Manifest.permission.READ_PHONE_STATE)) {
+				Yayalog.loger("无READ_PHONE_STATE授权");
+				
+				return "";
+			}else {
+				// 获取设备的imei号
+				String deviceId = ((TelephonyManager) paramContext
+						.getSystemService(Context.TELEPHONY_SERVICE)).getDeviceId();
+				// 如果imei为空,获取mac地址
+				if (deviceId == null || "0".equals(deviceId)) {
+					WifiManager wifi = (WifiManager) paramContext
+							.getSystemService(Context.WIFI_SERVICE);
+					WifiInfo info = wifi.getConnectionInfo();
+					deviceId = getDEC(info.getMacAddress());
+				}
+				return deviceId;
+			}
+			
+		}else {
+			if (!PermissionUtils.checkAndRequestPermission(paramContext, Manifest.permission.READ_PHONE_STATE,PermissionUtils.READ_PHONE_STATE)) {
+				Yayalog.loger("无READ_PHONE_STATE授权");
+				return "";
+			}else {
+				// 获取设备的imei号
+				String deviceId = ((TelephonyManager) paramContext
+						.getSystemService(Context.TELEPHONY_SERVICE)).getDeviceId();
+				// 如果imei为空,获取mac地址
+				if (deviceId == null || "0".equals(deviceId)) {
+					WifiManager wifi = (WifiManager) paramContext
+							.getSystemService(Context.WIFI_SERVICE);
+					WifiInfo info = wifi.getConnectionInfo();
+					deviceId = getDEC(info.getMacAddress());
+				}
+				return deviceId;
+			}
+			
 		}
-		return deviceId;
 	}
 
 	/**
@@ -427,6 +475,16 @@ public class DeviceUtil {
 			buffer.append(ii);
 		}
 		return buffer.toString();
+	}
+
+	public static boolean isXiaomi(Activity paramActivity) {
+		// TODO Auto-generated method stub
+		Bundle dataInfo;
+        if (((dataInfo = getMetaDataInfo(paramActivity)) == null)
+                || (!dataInfo.getBoolean("isxiaomi"))) {
+            return false;
+        }
+        return dataInfo.getBoolean("isxiaomi");
 	}
 
 }

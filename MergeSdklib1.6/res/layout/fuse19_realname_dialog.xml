@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/fuse19_realname_linerlayout"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:layout_gravity="center"
+    android:background="@drawable/fuse19_img_login_et"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:paddingLeft="10dip"
+        android:paddingRight="10dip" >
+
+        <TextView
+            android:id="@+id/fuse19_realname_title"
+            android:layout_width="wrap_content"
+            android:layout_height="40.0dip"
+            android:gravity="center"
+            android:text="实名验证"
+            android:textColor="@color/fuse19_color_black"
+            android:textSize="18.0dip" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dip"
+        android:layout_marginRight="20dip"
+        android:gravity="center_vertical"
+        android:orientation="horizontal" >
+
+        <TextView
+            android:id="@+id/fuse19_realname_msg"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:text="根据法律要求，为了防止未成年人沉迷网络游戏，须进行身份信息实名认证。我们承诺严格保护您的信息安全，绝不泄露。"
+            android:textColor="@color/fuse19_color_gray_light"
+            android:textSize="18dip" />
+    </LinearLayout>
+
+    <EditText
+        android:id="@+id/fuse19_realname_name"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dip"
+        android:layout_marginRight="30dip"
+        android:hint="姓名"
+        android:textColor="@color/fuse19_color_gray_light"
+        android:textSize="18dip" />
+
+    <EditText
+        android:id="@+id/fuse19_realname_nameid"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dip"
+        android:layout_marginRight="30dip"
+        android:inputType="text"
+        android:hint="身份证号码"
+        android:textColor="@color/fuse19_color_gray_light"
+        android:textSize="18dip" />
+
+    <LinearLayout
+        android:id="@+id/fuse19_double_btn"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:padding="10dip"
+        android:layout_marginLeft="20dip"
+        android:layout_marginRight="20dip"
+        android:orientation="horizontal" >
+
+        <Button
+            android:id="@+id/fuse19_realname_btn_cancel"
+            android:layout_width="0dip"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="18dip"
+            android:layout_weight="1"
+            android:background="@drawable/fuse19_selector_btn_left"
+            android:text="跳过"
+            android:textColor="@color/fuse19_color_white"
+            android:textSize="22dip" />
+
+        <Button
+            android:id="@+id/fuse19_realname_btn_ok"
+            android:layout_width="0dip"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="18dip"
+            android:layout_weight="1"
+            android:background="@drawable/fuse19_selector_btn_right"
+            android:text="提交"
+            android:textColor="@color/fuse19_color_white"
+            android:textSize="22dip" />
+    </LinearLayout>
+
+</LinearLayout>

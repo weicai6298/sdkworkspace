@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <!-- for gionee_dialog_resource -->
+    <color name="zzz_float_quit_dialog_title_view_bg_color">#FFFFFFFF</color>
+
     <color name="zzz_float_transparent">#00FFFFFF</color>
     <color name="zzz_dialog_title_color">#FF80BC38</color>
     <color name="zzz_dialog_divider_color">#FF80BC38</color>
@@ -23,4 +24,13 @@
     <color name="zzz_permission_text_color">#FF424242</color>
     <color name="zzz_permission_button_text_green">#FF22C685</color>
     <color name="zzz_permission_button_text_grey">#FFCDCDCD</color>
+    <color name="zzz_float_upgrade_dialog_checkbox_text_color">#66000000</color>
+    <color name="zzz_float_upgrade_dialog_title_text_color">#FF404040</color>
+    <color name="zzz_float_dialog_content_text_color">#FF222222</color>
+    <color name="zzz_float_dialog_layout_bg">#FFFFFFFF</color>
+    <color name="zzz_float_dialog_button_text_default_color">#FF525252</color>
+    <color name="zzz_float_main_color_green">#FF22C485</color>
+    <color name="zzz_float_quit_dialog_content_text_color">#FF565656</color>
+    <color name="zzz_float_main_color_red">#FFFF6243</color>
+
 </resources>

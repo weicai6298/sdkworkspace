@@ -1,13 +1,18 @@
 package com.kkgame.sdk.login;
 
+import org.json.JSONException;
+import org.json.JSONObject;
+
 import android.annotation.SuppressLint;
 import android.app.Activity;
 import android.app.AlertDialog;
 import android.app.Dialog;
 import android.content.DialogInterface;
+import android.content.Intent;
 import android.content.IntentFilter;
 import android.graphics.Color;
 import android.graphics.drawable.BitmapDrawable;
+import android.net.Uri;
 import android.os.Handler;
 import android.os.Message;
 import android.view.Gravity;
@@ -18,23 +23,26 @@ import android.view.WindowManager;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageButton;
+import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.kkgame.common.CommonData;
 import com.kkgame.sdk.bean.User;
 import com.kkgame.sdk.db.UserDao;
 import com.kkgame.sdk.utils.AuthNumReceiver;
-import com.kkgame.sdk.utils.AuthNumReceiver.MessageListener;
 import com.kkgame.sdk.utils.Basedialogview;
 import com.kkgame.sdk.utils.CodeCountDown;
 import com.kkgame.sdk.utils.CounterDown;
 import com.kkgame.sdk.utils.Utilsjf;
+import com.kkgame.sdk.utils.AuthNumReceiver.MessageListener;
 import com.kkgame.sdk.xml.GetAssetsutils;
 import com.kkgame.sdk.xml.MachineFactory;
 import com.kkgame.sdkmain.AgentApp;
 import com.kkgame.utils.DeviceUtil;
+import com.kkgame.utils.Sputils;
 import com.kkgame.utils.Yayalog;
 import com.lidroid.jxutils.HttpUtils;
 import com.lidroid.jxutils.exception.HttpException;
@@ -166,6 +174,11 @@ public class ResetPassword_ho_dialog extends Basedialogview {
 	private AuthNumReceiver mAuthNumReceiver;
 	private CounterDown mCounterdown;
 	private CounterDown mCountDown;
+	private ImageView iv_mPassword_icon;
+	private ImageView iv_mSecurity_icon;
+	private ImageView iv_mUn_icon;
+	private TextView tv_tip;
+	private TextView tv_tip1;
 
 	public ResetPassword_ho_dialog(Activity activity) {
 		super(activity);
@@ -174,64 +187,51 @@ public class ResetPassword_ho_dialog extends Basedialogview {
 	@Override
 	public void createDialog(Activity mActivity) {
 
-		onStart();
+		//onStart();
 
 		dialog = new Dialog(mActivity);
 
 		dialog.requestWindowFeature(Window.FEATURE_NO_TITLE);
 
-		int ho_height = 650;
-		int ho_with = 750;
-		int po_height = 650;
-		int po_with = 700;
-
-		int height = 0;
-		int with = 0;
-		// 设置横竖屏
-		String orientation = DeviceUtil.getOrientation(mContext);
-		if (orientation == "") {
-
-		} else if ("landscape".equals(orientation)) {
-			height = ho_height;
-			with = ho_with;
-		} else if ("portrait".equals(orientation)) {
-			height = po_height;
-			with = po_with;
-		}
+		
+		int height = 560;
+		int with = 630;
 
 		baselin = new LinearLayout(mActivity);
 		baselin.setOrientation(LinearLayout.VERTICAL);
 		MachineFactory machineFactory = new MachineFactory(mActivity);
-		machineFactory.MachineView(baselin, with, height, "LinearLayout");
-		baselin.setBackgroundColor(Color.TRANSPARENT);
+		
+		//machineFactory.MachineView(baselin, with, height, "LinearLayout");
+		//baselin.setBackgroundColor(Color.TRANSPARENT);
 		baselin.setGravity(Gravity.CENTER_VERTICAL);
-
+		baselin.setBackgroundDrawable(GetAssetsutils
+				.get9DrawableFromAssetsFile("yaya1_sdkbackground.9.png",mActivity));
 		// 过度中间层
 		LinearLayout ll_content = new LinearLayout(mActivity);
-		machineFactory.MachineView(ll_content, with, height, "LinearLayout", 2,
-				25);
-		ll_content.setBackgroundColor(Color.WHITE);
+		machineFactory.MachineView(ll_content, with, height, "LinearLayout");
+		
 		ll_content.setGravity(Gravity.CENTER_HORIZONTAL);
 		ll_content.setOrientation(LinearLayout.VERTICAL);
 
 		// 标题栏
 		RelativeLayout rl_title = new RelativeLayout(mActivity);
-		machineFactory.MachineView(rl_title, MATCH_PARENT, 96, mLinearLayout);
-		rl_title.setBackgroundColor(Color.parseColor("#999999"));
+		machineFactory.MachineView(rl_title,
+				MATCH_PARENT, 78, 0, mLinearLayout, 35, 28, 35, 0, 100);
+		rl_title.setBackgroundColor(Color.parseColor("#ffffff"));
 
 		ll_mPre = new LinearLayout(mActivity);
-		machineFactory.MachineView(ll_mPre, 96, MATCH_PARENT, 0,
+		machineFactory.MachineView(ll_mPre, 46, MATCH_PARENT, 0,
 				mRelativeLayout, 0, 0, 0, 0, RelativeLayout.CENTER_VERTICAL);
 		ll_mPre.setGravity(Gravity_CENTER);
 		ll_mPre.setClickable(true);
 		// 返回上一层的图片
 		iv_mPre = new ImageButton(mActivity);
-		machineFactory.MachineView(iv_mPre, 40, 40, 0, mLinearLayout, 0, 0, 0,
+		machineFactory.MachineView(iv_mPre, 46, 46, 0, mLinearLayout, 0, 0, 0,
 				0, RelativeLayout.CENTER_VERTICAL);
 		iv_mPre.setClickable(false);
 
 		iv_mPre.setBackgroundDrawable(GetAssetsutils.getDrawableFromAssetsFile(
-				"yaya_pre.png", mActivity));
+				"yaya1_pre.png", mActivity));
 		ll_mPre.addView(iv_mPre);
 		// 设置点击事件.点击窗口消失
 		ll_mPre.setOnClickListener(new OnClickListener() {
@@ -241,12 +241,14 @@ public class ResetPassword_ho_dialog extends Basedialogview {
 				dialog.dismiss();
 			}
 		});
+		
 
 		// 注册textview
 		TextView tv_zhuce = new TextView(mActivity);
 		machineFactory.MachineTextView(tv_zhuce, MATCH_PARENT, MATCH_PARENT, 0,
-				"密码重设", 38, mLinearLayout, 0, 0, 0, 0);
-		tv_zhuce.setTextColor(Color.WHITE);
+				"找回密码", 44, mLinearLayout, 0, 0, 0, 0);
+//		tv_zhuce.setTextColor(Color.parseColor("#c05011"));
+		tv_zhuce.setTextColor(Color.BLACK);
 		tv_zhuce.setGravity(Gravity_CENTER);
 
 		// TODO
@@ -254,74 +256,166 @@ public class ResetPassword_ho_dialog extends Basedialogview {
 		rl_title.addView(tv_zhuce);
 
 		// 中间内容层
-		LinearLayout ll_content1 = new LinearLayout(mActivity);
-		ll_content1 = (LinearLayout) machineFactory.MachineView(ll_content1,
-				660, MATCH_PARENT, 0, mLinearLayout, 0, 70, 0, 0,
-				LinearLayout.VERTICAL);
-		ll_content1.setOrientation(LinearLayout.VERTICAL);
-
-		// 手机号码输入行
+				LinearLayout ll_content1 = new LinearLayout(mActivity);
+				ll_content1 = (LinearLayout) machineFactory.MachineView(ll_content1,
+						height, MATCH_PARENT, 0, mLinearLayout, 35, 0, 35, 0,
+						LinearLayout.VERTICAL);
+				ll_content1.setOrientation(LinearLayout.VERTICAL);
+		
+		// 手机号码输入列
 		LinearLayout ll_phone = new LinearLayout(mActivity);
 		ll_phone = (LinearLayout) machineFactory.MachineView(ll_phone,
-				MATCH_PARENT, 96, mLinearLayout);
+				MATCH_PARENT, 65, 0, "LinearLayout", 0, 30, 0, 0, 100);
 
-		// 手机号码输入框
-		et_mPhone = new EditText(mActivity);
-		machineFactory.MachineEditText(et_mPhone, 400, MATCH_PARENT, 0,
-				"请输入用户名或者手机号", 32, mLinearLayout, 0, 0, 0, 0);
-		et_mPhone
-				.setBackgroundDrawable(GetAssetsutils
-						.get9DrawableFromAssetsFile("yaya_biankuang2.9.png",
+		ll_phone.setBackgroundDrawable(GetAssetsutils
+						.get9DrawableFromAssetsFile("yaya1_biankuan.9.png", mActivity));
+
+		ll_phone.setGravity(Gravity.CENTER);
+
+				// username 的icon
+				iv_mUn_icon = new ImageView(mActivity);
+				iv_mUn_icon = (ImageView) machineFactory.MachineView(iv_mUn_icon, 30,
+						30, 0, mLinearLayout, 20, 0, 0, 0, 100);
+				iv_mUn_icon.setImageBitmap(GetAssetsutils.getImageFromAssetsFile(
+						"yaya1_phoneicon.png", mActivity));
+
+				// username的edtext
+				et_mPhone = new EditText(mActivity);
+				et_mPhone = machineFactory.MachineEditText(et_mPhone, 0, MATCH_PARENT, 1,
+						"请输入手机号", 22, mLinearLayout, 0, 4, 0, 0);
+				et_mPhone.setTextColor(Color.BLACK);
+				et_mPhone.setHintTextColor(Color.parseColor("#b4b4b4"));
+				et_mPhone.setBackgroundColor(Color.TRANSPARENT);
+
+			
+
+				// TODO
+				ll_phone.addView(iv_mUn_icon);
+				ll_phone.addView(et_mPhone);
+		
+		
+				//验证码输入列	
+				LinearLayout ll_mSecurityandbutton = new LinearLayout(mActivity);
+				ll_mSecurityandbutton = (LinearLayout) machineFactory.MachineView(ll_mSecurityandbutton,
+						MATCH_PARENT, 65, 0, "LinearLayout", 0, 30, 0, 0, 100);
+
+				// 设置验证码输入框和获取验证码button
+				LinearLayout ll_mSecurity = new LinearLayout(mActivity);
+				ll_mSecurity = (LinearLayout) machineFactory.MachineView(ll_mSecurity,
+						270, 65, 0, "LinearLayout", 0, 0, 0, 0, 100);
+				ll_mSecurity.setOrientation(LinearLayout.HORIZONTAL);
+				
+				ll_mSecurity.setBackgroundDrawable(GetAssetsutils
+								.get9DrawableFromAssetsFile("yaya1_biankuan.9.png", mActivity));
+
+				ll_mSecurity.setGravity(Gravity.CENTER);
+
+						// username 的icon
+				iv_mSecurity_icon = new ImageView(mActivity);
+				iv_mSecurity_icon = (ImageView) machineFactory.MachineView(iv_mSecurity_icon, 30,
+								30, 0, mLinearLayout, 20, 0, 0, 0, 100);
+				iv_mSecurity_icon.setImageBitmap(GetAssetsutils.getImageFromAssetsFile(
+								"yaya1_codeicon.png", mActivity));
+
+						// username的edtext
+						et_mSecurity = new EditText(mActivity);
+						et_mSecurity = machineFactory.MachineEditText(et_mSecurity, 0, MATCH_PARENT, 1,
+								"请输入验证码", 22, mLinearLayout, 0, 4, 0, 0);
+						et_mSecurity.setTextColor(Color.BLACK);
+						et_mSecurity.setHintTextColor(Color.parseColor("#b4b4b4"));
+						et_mSecurity.setBackgroundColor(Color.TRANSPARENT);
+
+						// TODO
+						ll_mSecurity.addView(iv_mSecurity_icon);
+						ll_mSecurity.addView(et_mSecurity);
+						
+						// 获取验证码按钮
+						bt_mGetsecurity = new Button(mActivity);
+//						bt_mGetsecurity = machineFactory.MachineButton(bt_mGetsecurity, 270,
+//								MATCH_PARENT, 0, "获取验证码", 22, mLinearLayout, 20, 0, 0, 0);
+//						bt_mGetsecurity.setTextColor(Color.WHITE);
+						bt_mGetsecurity = machineFactory.MachineButton(bt_mGetsecurity, 200,
+								MATCH_PARENT, 0, "获取验证码", 22, mLinearLayout, 20, 0, 0, 0);
+						bt_mGetsecurity.setTextColor(Color.WHITE);
+						bt_mGetsecurity.setBackgroundDrawable(GetAssetsutils.crSelectordraw(
+								"yaya1_registerbutton.9.png", "yaya1_registerbutton.9.png",
 								mActivity));
-		et_mPhone.setPadding(machSize(20), 0, 0, 0);
+						
+						
+						bt_mGetsecurity.setGravity(Gravity.CENTER);
+						
+				
+						ll_mSecurityandbutton.addView(ll_mSecurity);
+						ll_mSecurityandbutton.addView(bt_mGetsecurity);
+			
 
-		// 获取验证码按钮
-		bt_mGetsecurity = new Button(mActivity);
-		bt_mGetsecurity = machineFactory.MachineButton(bt_mGetsecurity, 240,
-				MATCH_PARENT, 0, "获取验证码", 32, mLinearLayout, 30, 0, 0, 0);
-		bt_mGetsecurity.setTextColor(Color.WHITE);
-		bt_mGetsecurity.setBackgroundDrawable(GetAssetsutils.crSelectordraw(
-				"yaya_bulebutton.9.png", "yaya_bulebutton1.9.png", mActivity));
+						// 密码输入列
+						LinearLayout ll_mPassword = new LinearLayout(mActivity);
+						ll_mPassword = (LinearLayout) machineFactory.MachineView(ll_mPassword,
+								MATCH_PARENT, 65, 0, "LinearLayout", 0, 30, 0, 0, 100);
 
-		// TODO
-		ll_phone.addView(et_mPhone);
-		ll_phone.addView(bt_mGetsecurity);
+						ll_mPassword.setBackgroundDrawable(GetAssetsutils
+										.get9DrawableFromAssetsFile("yaya1_biankuan.9.png", mActivity));
 
-		// 验证码输入框
-		et_mSecurity = new EditText(mActivity);
-		machineFactory.MachineEditText(et_mSecurity, MATCH_PARENT, 96, 0,
-				"请输入验证码(未绑定手机用户,请登录游戏在个人中心绑定)", 32, mLinearLayout, 0, 20, 0, 0);
-		et_mSecurity
-				.setBackgroundDrawable(GetAssetsutils
-						.get9DrawableFromAssetsFile("yaya_biankuang2.9.png",
-								mActivity));
-		et_mSecurity.setPadding(machSize(20), 0, 0, 0);
+						ll_mPassword.setGravity(Gravity.CENTER);
 
-		// 验证码输入框
-		et_mNewpassword = new EditText(mActivity);
-		machineFactory.MachineEditText(et_mNewpassword, MATCH_PARENT, 96, 0,
-				"请输入密码", 32, mLinearLayout, 0, 20, 0, 0);
-		et_mNewpassword
-				.setBackgroundDrawable(GetAssetsutils
-						.get9DrawableFromAssetsFile("yaya_biankuang2.9.png",
-								mActivity));
-		et_mNewpassword.setPadding(machSize(20), 0, 0, 0);
+								// username 的icon
+						iv_mPassword_icon = new ImageView(mActivity);
+						iv_mPassword_icon = (ImageView) machineFactory.MachineView(iv_mPassword_icon, 30,
+										30, 0, mLinearLayout, 20, 0, 0, 0, 100);
+						iv_mPassword_icon.setImageBitmap(GetAssetsutils.getImageFromAssetsFile(
+										"yaya1_password.png", mActivity));
 
+								// username的edtext
+						et_mNewpassword = new EditText(mActivity);
+						et_mNewpassword = machineFactory.MachineEditText(et_mNewpassword, 0, MATCH_PARENT, 1,
+										"请设置新密码（6-20位字母或者数字）", 22, mLinearLayout, 0, 4, 0, 0);
+						et_mNewpassword.setTextColor(Color.BLACK);
+						et_mNewpassword.setHintTextColor(Color.parseColor("#b4b4b4"));
+						et_mNewpassword.setBackgroundColor(Color.TRANSPARENT);
+
+							
+
+								// TODO
+								ll_mPassword.addView(iv_mPassword_icon);
+								ll_mPassword.addView(et_mNewpassword);
+						
+
+	
+		
+		tv_tip1 = new TextView(mActivity);
+		machineFactory.MachineTextView(tv_tip1, MATCH_PARENT,
+				WRAP_CONTENT, 0, "自动注册的密码以图片形式保存在储存卡", 18, mLinearLayout, 0, 10, 35, 0,
+				100);
+//		tv_tip1.setTextColor(Color.parseColor("#ffa429"));
+		tv_tip1.setTextColor(Color.BLACK);
+		
+		tv_tip = new TextView(mActivity);
+		machineFactory.MachineTextView(tv_tip, MATCH_PARENT,
+				WRAP_CONTENT, 0, "无绑定手机，请联系客服QQ："+CommonData.kefuqq, 18, mLinearLayout, 0, 10, 35, 0,
+				100);
+//		tv_tip.setTextColor(Color.parseColor("#ffa429"));
+		tv_tip.setTextColor(Color.BLACK);
+		
+		
 		// 确定按钮
 		bt_mOk = new Button(mActivity);
-		machineFactory.MachineButton(bt_mOk, MATCH_PARENT, 96, 0, "确认", 36,
-				mLinearLayout, 0, 30, 0, 0);
+		machineFactory.MachineButton(bt_mOk, MATCH_PARENT, 78, 0, "确定", 36,
+				mLinearLayout, 0, 15, 0, 0);
 		bt_mOk.setTextColor(Color.WHITE);
 		bt_mOk.setBackgroundDrawable(GetAssetsutils.crSelectordraw(
-				"yaya_yellowbutton.9.png", "yaya_yellowbutton1.9.png",
+				"yaya1_registerbutton.9.png", "yaya1_registerbutton.9.png",
 				mActivity));
 		bt_mOk.setGravity(Gravity_CENTER);
 
 		// TODO
 		ll_content1.addView(ll_phone);
-		ll_content1.addView(et_mSecurity);
-		ll_content1.addView(et_mNewpassword);
-
+		ll_content1.addView(ll_mSecurityandbutton);
+		ll_content1.addView(ll_mPassword);
+		
+//		ll_content1.addView(tv_tip1);
+		ll_content1.addView(tv_tip);
+		
 		ll_content1.addView(bt_mOk);
 
 		ll_content.addView(rl_title);
@@ -336,7 +430,7 @@ public class ResetPassword_ho_dialog extends Basedialogview {
 		WindowManager.LayoutParams lp = dialogWindow.getAttributes();
 		dialogWindow.setGravity(Gravity.CENTER);
 
-		lp.alpha = 0.9f; // 透明度
+		lp.alpha = 1f; // 透明度
 
 		lp.dimAmount = 0.5f; // 设置背景色对比度
 		dialogWindow.setAttributes(lp);
@@ -353,10 +447,38 @@ public class ResetPassword_ho_dialog extends Basedialogview {
 	}
 
 	private void initlogic() {
-		// mCounterdown = CounterDown.getInstance();
-		// mCounterdown.setView(bt_mGetsecurity);
-		mCountDown = CounterDown.getInstance();
+		
+		tv_tip.setOnClickListener(new OnClickListener() {
+			
+			@Override
+			public void onClick(View v) {
+				// TODO Auto-generated method stub
+				String qqhao = Sputils.getSPstring("service_qq", "暂无", mActivity);
+				//qqhao="3003569760";
+				if (qqhao.equals("4000042115")) {
+					qqhao="938189213";
+				}
+				if (qqhao.equals("暂无")) {
+					
+				}else {
+					 String url="mqqwpa://im/chat?chat_type=crm&uin="+qqhao+"&version=1&src_type=web&web_src=http:://wpa.b.qq.com";
+
+					//String url="mqqwpa://im/chat?chat_type=wpa&uin="+qqhao;
+					mActivity.startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse(url)));
+				}
+			}
+		});
+		
+		String qqhao = Sputils.getSPstring("service_qq", "暂无", mActivity);
+		if (qqhao.equals("暂无")) {
+			
+		}else {
+			tv_tip.setText("无绑定手机，请联系QQ公众号："+qqhao);
+			
+		}
+		mCountDown = CounterDown.getInstance(mActivity);
 		mCountDown.setView(bt_mGetsecurity);
+		
 		bt_mGetsecurity.setOnClickListener(new OnClickListener() {
 
 			@Override
@@ -391,9 +513,21 @@ public class ResetPassword_ho_dialog extends Basedialogview {
 									// TODO Auto-generated method stub
 									Utilsjf.stopDialog();
 									Yayalog.loger(result.result);
-									Toast.makeText(mActivity, "验证码已经发送", 0)
+									try {
+										JSONObject jsonObject = new JSONObject(result.result);
+										String errmsg = jsonObject.getString("err_msg");
+										if (errmsg.equals("success")) {
+											mCountDown.startCounter();
+											Toast.makeText(mActivity, "验证码已经发送", 0)
 											.show();
-
+										}else{
+											Toast.makeText(mActivity, errmsg, 0)
+											.show();
+										}
+									} catch (JSONException e) {
+										// TODO Auto-generated catch block
+										e.printStackTrace();
+									}
 								}
 							});
 				}
@@ -426,7 +560,7 @@ public class ResetPassword_ho_dialog extends Basedialogview {
 					rps.addBodyParameter("mobile", mUserName);
 					rps.addBodyParameter("password", mNewPassword);
 					rps.addBodyParameter("code", mCode);
-
+					Yayalog.loger("url:"+ViewConstants.resetpassword+"mobile:"+mUserName+"password:"+mNewPassword+"code:"+mCode);
 					HttpUtils httpUtils = new HttpUtils();
 					httpUtils.send(HttpMethod.POST,
 							ViewConstants.resetpassword, rps,
@@ -446,9 +580,24 @@ public class ResetPassword_ho_dialog extends Basedialogview {
 								public void onSuccess(
 										ResponseInfo<String> result) {
 									// TODO Auto-generated method stub
+							 //找回密码：{"err_code":0,"err_msg":"success"}
+
 									Utilsjf.stopDialog();
-									Yayalog.loger("找回密码：" + result.result);
-									Toast.makeText(mActivity, "修改成功", 0).show();
+									try {
+										JSONObject json=new JSONObject(result.result);
+										Yayalog.loger("找回密码：" + result.result);
+										String errmsg=json.getString("err_msg");
+										if (errmsg.equals("success")) {
+											Toast.makeText(mActivity, "修改成功", 0).show();
+										}else {
+											Toast.makeText(mActivity, errmsg, 0).show();
+										}
+										
+									} catch (JSONException e) {
+										// TODO Auto-generated catch block
+										e.printStackTrace();
+									}
+									
 
 								}
 

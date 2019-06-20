@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:orientation="vertical"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/size_20dp"
+        android:layout_marginLeft="@dimen/size_20dp"
+        android:layout_marginRight="@dimen/size_20dp"
+        android:background="@drawable/pay_bg_white_circle"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:layout_width="65dp"
+            android:layout_height="@dimen/size_40dp"
+            android:layout_marginBottom="@dimen/size_10dp"
+            android:layout_marginLeft="@dimen/size_10dp"
+            android:layout_marginTop="@dimen/size_10dp"
+            android:background="@mipmap/pay_logo_yinlian" />
+
+        <TextView
+            android:id="@+id/payLHName"
+            android:layout_width="@dimen/size_0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="@dimen/size_10dp"
+            android:layout_marginRight="@dimen/size_10dp"
+            android:layout_weight="1"
+            android:ellipsize="end"
+            android:gravity="center"
+            android:maxLines="1"
+            android:textColor="@color/pay_color_333333"
+            android:textSize="@dimen/size_15sp" />
+
+        <TextView
+            android:id="@+id/payLHSAccount"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="right|center_vertical"
+            android:layout_marginRight="@dimen/size_10dp"
+            android:background="@drawable/pay_bg_3095fb_circle"
+            android:gravity="center"
+            android:paddingBottom="@dimen/size_5dp"
+            android:paddingLeft="@dimen/dp_10"
+            android:paddingRight="@dimen/size_10dp"
+            android:paddingTop="@dimen/size_5dp"
+            android:text="@string/SwitchAccount"
+            android:textColor="@color/pay_color_ffffff"
+            android:textSize="15sp" />
+    </LinearLayout>
+</LinearLayout>

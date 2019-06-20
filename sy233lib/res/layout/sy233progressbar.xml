@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ProgressBar
+    android:id="@+id/pb_progress"
+    android:layout_width="match_parent"
+    android:layout_height="3dp"
+    android:background="@drawable/sy233progressstyle"
+    android:indeterminateOnly="false"
+    android:max="100"
+    android:progress="50"
+    android:progressDrawable="@drawable/sy233progressstyle"
+    xmlns:android="http://schemas.android.com/apk/res/android"/>

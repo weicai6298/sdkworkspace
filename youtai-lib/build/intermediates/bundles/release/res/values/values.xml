@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="huo_sdk_black2a">#2A2A2A</color>
+    <color name="huo_sdk_blues">#4c6791</color>
+    <color name="huo_sdk_gray7f">#7F7C7C</color>
+    <color name="huo_sdk_gray_d8">#d8d8d8</color>
+    <color name="huo_sdk_grayc3">#C3C3C3</color>
+    <color name="huo_sdk_graycc">#cccccc</color>
+    <color name="huo_sdk_login_bg_translucence_black">#b0000000</color>
+    <color name="huo_sdk_orange">#FF8400</color>
+    <color name="huo_sdk_text_blacks">#767575</color>
+    <color name="huo_sdk_white">#ffffff</color>
+    <color name="huosdk_float_bg">#99000000</color>
+    <dimen name="huo_sdk_activity_horizontal_margin">20dp</dimen>
+    <dimen name="huo_sdk_float_btn_height">32dp</dimen>
+    <dimen name="huo_sdk_float_btn_up_padding">8dp</dimen>
+    <dimen name="huo_sdk_float_list_line_height">48dp</dimen>
+    <dimen name="huo_sdk_float_marin_padding">14dp</dimen>
+    <dimen name="huo_sdk_float_max_font">16sp</dimen>
+    <dimen name="huo_sdk_float_min_font">9sp</dimen>
+    <dimen name="huo_sdk_float_normal_font">12sp</dimen>
+    <dimen name="huo_sdk_float_normal_two_font">14sp</dimen>
+    <dimen name="huo_sdk_float_version_padding_top_bottom">6dp</dimen>
+    <dimen name="huo_sdk_float_view_height">60dp</dimen>
+    <dimen name="huo_sdk_text_list_control_font">18dp</dimen>
+    <dimen name="huo_sdk_text_list_font">14sp</dimen>
+    <string name="huo_sdk_btn_bbs">论坛</string>
+    <string name="huo_sdk_btn_gift">礼包</string>
+    <string name="huo_sdk_btn_identify">实名认证</string>
+    <string name="huo_sdk_btn_server">客服</string>
+    <string name="huo_sdk_btn_user">用户</string>
+    <style name="AppBaseTheme" parent="android:Theme.NoTitleBar">
+        <!--
+            Theme customizations available in newer API levels can go in
+            res/values-vXX/styles.xml, while customizations related to
+            backward-compatibility can go here.
+
+        -->
+    </style>
+    <style name="huo_sdk_AppTheme" parent="AppBaseTheme">
+        <!-- All customizations that are NOT specific to a particular API-level can go here. -->
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:colorBackgroundCacheHint">@null</item>
+    </style>
+    <style name="huo_sdk_FullscreenTheme" parent="@android:style/Theme.NoTitleBar.Fullscreen">
+        <!-- Customize your theme here. -->
+    </style>
+    <style name="huo_sdk_customDialog" parent="@android:style/Theme.Dialog">
+        <item name="android:windowFrame">@null</item>
+        <item name="android:windowIsFloating">true</item>
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:windowAnimationStyle">@android:style/Animation.Dialog</item>
+    </style>
+    <style name="huo_sdk_dialog_bg_style" parent="android:style/Theme.Dialog">
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:windowFrame">@null</item>
+        <item name="android:windowIsFloating">true</item>
+        <item name="android:windowIsTranslucent">true</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:backgroundDimEnabled">true</item>
+        <item name="android:background">@android:color/transparent</item>
+    </style>
+</resources>

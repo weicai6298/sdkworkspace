@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/login_view_guest"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/transparent"
+    android:orientation="horizontal" >
+
+    <LinearLayout
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:background="@drawable/xmw_corner_login_bg"
+        android:gravity="center_horizontal"
+        android:orientation="vertical" >
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:gravity="center_vertical"
+            android:orientation="horizontal" >
+
+            <ImageView
+                android:id="@+id/xmw_ss_iv_icon"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:paddingTop="8dp" >
+
+                <TextView
+                    android:id="@+id/tv_sdk_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="熊猫玩通行证"
+                    android:textColor="@color/appBlack"
+                    android:textSize="@dimen/xmw_c_title" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginBottom="10dp"
+            android:layout_marginLeft="24dp"
+            android:layout_marginRight="26dp"
+            android:layout_marginTop="10dp"
+            android:orientation="horizontal" >
+
+            <TextView
+                android:layout_width="50dp"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="10dp"
+                android:gravity="right"
+                android:text="用户名"
+                android:textColor="@color/xmw_TextColorBlack"
+                android:textSize="15sp" />
+
+            <TextView
+                android:id="@+id/xmw_ss_user"
+                android:layout_width="match_parent"
+                android:layout_height="36dp"
+                android:background="@drawable/xmw_corner_white_gray"
+                android:gravity="center_vertical"
+                android:paddingLeft="20dp"
+                android:textColor="@color/xmw_TextColorGray"
+                android:textSize="14sp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginLeft="24dp"
+            android:layout_marginRight="26dp"
+            android:orientation="horizontal" >
+
+            <TextView
+                android:layout_width="50dp"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="10dp"
+                android:gravity="right"
+                android:text="密码"
+                android:textColor="@color/xmw_TextColorBlack"
+                android:textSize="15sp" />
+
+            <TextView
+                android:id="@+id/xmw_ss_pwd"
+                android:layout_width="match_parent"
+                android:layout_height="36dp"
+                android:background="@drawable/xmw_corner_white_gray"
+                android:gravity="center_vertical"
+                android:paddingLeft="20dp"
+                android:textColor="@color/xmw_TextColorGray"
+                android:textSize="14sp" />
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginTop="30dp"
+            android:background="@drawable/xmw_common_divider" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="15dp"
+            android:layout_marginTop="15dp"
+            android:text="熊猫玩家下载地址：  http://j.xmwan.com/"
+            android:textColor="@color/xmw_c_textcolor_gray"
+            android:textSize="13sp" />
+    </LinearLayout>
+
+</RelativeLayout>

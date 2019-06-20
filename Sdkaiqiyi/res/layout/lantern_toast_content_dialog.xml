@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="282dp"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/lantern_news_title"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginTop="15dp"
+        android:gravity="center"
+        android:maxLines="2"
+        android:paddingLeft="20dp"
+        android:paddingRight="20dp"
+        android:includeFontPadding="false"
+        android:text=""
+        android:ellipsize="end"
+        android:textColor="#333333"
+        android:textSize="20sp"/>
+
+    <TextView
+        android:id="@+id/lantern_news_content"
+        android:layout_width="match_parent"
+        android:layout_height="140dp"
+        android:layout_below="@id/lantern_news_title"
+        android:layout_centerInParent="true"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="15dp"
+        android:includeFontPadding="false"
+        android:maxLines="7"
+        android:paddingLeft="15dp"
+        android:paddingRight="10dp"
+        android:scrollbars="none"
+        android:text=""
+        android:textColor="#333333"
+        android:textSize="16sp"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:padding="15dp"
+        android:layout_alignParentBottom="true"
+        android:gravity="center_horizontal"
+        android:orientation="horizontal"
+        android:weightSum="2">
+
+        <Button
+            android:id="@+id/lantern_news_content_confirm_btn"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@drawable/lantern_toast_content_btn_selector"
+            android:text="知道了"
+            android:textColor="#FFFFFF"
+            android:textSize="18sp"/>
+    </LinearLayout>
+
+
+
+</LinearLayout>

@@ -3,10 +3,13 @@ package com.kkgame.sdk.login;
 import java.math.BigInteger;
 
 import android.R;
+import android.annotation.SuppressLint;
 import android.app.Activity;
 import android.content.Intent;
 import android.content.res.Resources.Theme;
 import android.graphics.Bitmap;
+import android.net.Uri;
+import android.os.Build;
 import android.os.Bundle;
 import android.os.Handler;
 import android.os.Message;
@@ -27,6 +30,8 @@ import android.widget.ProgressBar;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
 import android.widget.Toast;
+
+
 
 import com.kkgame.sdk.bean.User;
 import com.kkgame.sdk.callback.KgameSdkUserCallback;
@@ -100,7 +105,7 @@ public class Weibologin_jf extends BaseView implements KgameSdkUserCallback {
 		return mThisview.initViewxml();
 	}
 
-	@Override
+	@SuppressLint("NewApi") @Override
 	public void initView() {
 		// DialogUtil.showProgressDlg("正在加载...", mContext);
 
@@ -117,22 +122,46 @@ public class Weibologin_jf extends BaseView implements KgameSdkUserCallback {
 
 		wv_mWeiboview = mThisview.getWv_mWeiboview();
 		WebSettings settings = wv_mWeiboview.getSettings();
+		settings.setAllowFileAccess(true);
 		settings.setSupportZoom(true); // 支持缩放
 		settings.setBuiltInZoomControls(true); // 启用内置缩放装置
 		settings.setJavaScriptEnabled(true); // 启用JS脚本
-		settings.setCacheMode(WebSettings.LOAD_NO_CACHE);// 关闭webview中缓存
+	
 		wv_mWeiboview.addJavascriptInterface(new Handle(), "handler");
-
+		
+		settings.setSupportZoom(true);
+		settings.setBuiltInZoomControls(true);
+		settings.setUseWideViewPort(true);
+		settings.setSupportMultipleWindows(true);
+	
+		settings.setJavaScriptEnabled(true);
+		settings.setJavaScriptCanOpenWindowsAutomatically(true);
+		settings.setAllowFileAccess(true);
+	
+		settings.setSupportZoom(true);
+		settings.setBuiltInZoomControls(false);
+		settings.setUseWideViewPort(true);
+		settings.setSupportMultipleWindows(false);
+	
+		settings.setAppCacheEnabled(true);
+	
+		settings.setDomStorageEnabled(true);
+		settings.setGeolocationEnabled(true);
+		settings.setMixedContentMode(WebSettings.MIXED_CONTENT_ALWAYS_ALLOW);
+		settings.setJavaScriptCanOpenWindowsAutomatically(true);
+		wv_mWeiboview.setVisibility(View.VISIBLE);
+		rl_mLoading.setVisibility(View.GONE);
+		pb_mLoading.setVisibility(View.GONE);
+		bt_mReload.setVisibility(View.GONE);
 		wv_mWeiboview.setWebViewClient(new WebViewClient() {
 
+			
+			
+			
 			@Override
 			public void onPageStarted(WebView view, String url, Bitmap favicon) {
-				
-				mTempcode = 0;
-				wv_mWeiboview.setVisibility(View.GONE);
-				rl_mLoading.setVisibility(View.VISIBLE);
-				pb_mLoading.setVisibility(View.VISIBLE);
-				bt_mReload.setVisibility(View.GONE);
+				Log.e("xinkai:", url);
+			
 				super.onPageStarted(view, url, favicon);
 			}
 
@@ -140,27 +169,8 @@ public class Weibologin_jf extends BaseView implements KgameSdkUserCallback {
 			public void onPageFinished(WebView view, String url) {
 				// System.out.println(3 + "这是错误代码++++++++++++++++");
 
-				// Toast.makeText(, “网页加载完成”, 0).show();
-
-				if (mTempcode == -2) {
-
-				} else if (mTempcode == -10) {
-
-				} else {
-
-					wv_mWeiboview.setVisibility(View.VISIBLE);
-					rl_mLoading.setVisibility(View.GONE);
-					pb_mLoading.setVisibility(View.VISIBLE);
-					bt_mReload.setVisibility(View.GONE);
-				}
-
-				if (View.GONE == bt_mReload.getVisibility()) {
-					wv_mWeiboview
-							.loadUrl("javascript:window.handler.show(document.body.innerHTML);");
-
-				}
-
-				// super.onPageFinished(view, url);
+				
+						 super.onPageFinished(view, url);
 
 			}
 
@@ -181,9 +191,9 @@ public class Weibologin_jf extends BaseView implements KgameSdkUserCallback {
 			public boolean shouldOverrideUrlLoading(WebView view, String url) {
 				// TODO Auto-generated method stub
 				Log.e("现在的host:", url);
-				// KgameSdk://success?uid=8964218049340922879&username=aa86528798&token=2dddbdf4ed081efc73828efb566b1482&money=0
+				// yayawan://success?uid=8964218049340922879&username=aa86528798&token=2dddbdf4ed081efc73828efb566b1482&money=0
 
-				if (url.startsWith("KgameSdk://success")) {
+				if (url.startsWith("yayawan://success")) {
 					int indexOf3 = url.indexOf("uid=");
 					int indexOf4 = url.indexOf("&username=");
 					// &money=
@@ -203,7 +213,7 @@ public class Weibologin_jf extends BaseView implements KgameSdkUserCallback {
 					AgentApp.mUser = mUser;
 
 					// 开启悬浮窗服务
-					//KgameSdk.init(mActivity);
+					//YayaWan.init(mActivity);
 
 					
 					//onSuccess(mUser, 1);
@@ -214,12 +224,12 @@ public class Weibologin_jf extends BaseView implements KgameSdkUserCallback {
 					mActivity.finish();
 				}
 
-				if (url.startsWith("KgameSdk://cancel")) {
+				if (url.startsWith("yayawan://cancel")) {
 
 					Intent intent = new Intent(mContext,
 							BaseLogin_Activity.class);
 					// intent.putExtra("url",
-					// "https://passport.KgameSdk.com/oauthclient?type=1&display=mobile");
+					// "https://passport.yayawan.com/oauthclient?type=1&display=mobile");
 					intent.putExtra("isfirstlogin", ViewConstants.NOFIRSTLOGIN);
 					intent.putExtra("type", ViewConstants.LOGIN_VIEW);
 					mActivity.startActivity(intent);
@@ -228,10 +238,33 @@ public class Weibologin_jf extends BaseView implements KgameSdkUserCallback {
 					mActivity.finish();
 
 					// return true;
+				}else if (url.startsWith("yayawan://cancel")) {
+
+					Intent intent = new Intent(mContext,
+							BaseLogin_Activity.class);
+					// intent.putExtra("url",
+					// "https://passport.yayawan.com/oauthclient?type=1&display=mobile");
+					intent.putExtra("isfirstlogin", ViewConstants.NOFIRSTLOGIN);
+					intent.putExtra("type", ViewConstants.LOGIN_VIEW);
+					mActivity.startActivity(intent);
+					Toast.makeText(mContext, "授权失败...", Toast.LENGTH_SHORT)
+							.show();
+					mActivity.finish();
+
+					// return true;
+				}else if(url.startsWith("wtloginmqq")){
+					mActivity.startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse(url)));
+				}else {
+					
 				}
+			
 
 				return super.shouldOverrideUrlLoading(view, url);
 			}
+			
+			          
+
+			
 
 		});
 
@@ -260,7 +293,7 @@ public class Weibologin_jf extends BaseView implements KgameSdkUserCallback {
 		url = intent.getStringExtra("url");
 		sreentype = intent.getIntExtra("screen", 0);
 
-		if (url.equals("https://passport.KgameSdk.com/oauthclient?type=2&display=mobile")) {
+		if (url.equals(ViewConstants.WEIBOLOGINURL)) {
 			tv_titil.setText("微博登录");
 		} else {
 			tv_titil.setText("QQ登录");

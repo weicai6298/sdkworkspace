@@ -69,7 +69,6 @@ public class LoginImpl implements YYWLoginer {
 				QqYsdkHelp.Login(paramActivity, new QqYsdkUserCallback() {
 					
 					public void onSuccess(QQUser paramUser, int paramInt) {
-						// TODO Auto-generated method stub
 						//YSDKCallback.loginSuce(paramActivity, Myconstants.openId, Myconstants.nickname, Myconstants.accessToken);
 						uid  = paramUser.getOpenid();
 						if (DeviceUtil.getGameInfo(paramActivity, "NO_USERNAME").equals("yes")) {

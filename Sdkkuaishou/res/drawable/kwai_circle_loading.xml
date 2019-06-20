@@ -1,0 +1,42 @@
+<animation-list
+  xmlns:android="http://schemas.android.com/apk/res/android"
+  android:oneshot="false"
+  android:variablePadding="true">
+
+  <item
+    android:drawable="@drawable/kwai_loading01"
+    android:duration="60"/>
+  <item
+    android:drawable="@drawable/kwai_loading02"
+    android:duration="60"/>
+  <item
+    android:drawable="@drawable/kwai_loading03"
+    android:duration="60"/>
+  <item
+    android:drawable="@drawable/kwai_loading04"
+    android:duration="60"/>
+  <item
+    android:drawable="@drawable/kwai_loading05"
+    android:duration="60"/>
+  <item
+    android:drawable="@drawable/kwai_loading06"
+    android:duration="60"/>
+  <item
+    android:drawable="@drawable/kwai_loading07"
+    android:duration="60"/>
+  <item
+    android:drawable="@drawable/kwai_loading08"
+    android:duration="60"/>
+  <item
+    android:drawable="@drawable/kwai_loading09"
+    android:duration="60"/>
+  <item
+    android:drawable="@drawable/kwai_loading10"
+    android:duration="60"/>
+  <item
+    android:drawable="@drawable/kwai_loading11"
+    android:duration="60"/>
+  <item
+    android:drawable="@drawable/kwai_loading12"
+    android:duration="60"/>
+</animation-list>

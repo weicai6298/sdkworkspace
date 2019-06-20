@@ -12,6 +12,6 @@
     <dimen name="gn_account_button_image_length">36dp</dimen>
     <dimen name="gn_account_edittext_width">80dp</dimen>
     <!-- Gionee < changwy > <2013-08-12> modify for  CR00852615 end -->
-    <dimen name="gn_account_login_activity_margin_left_right">8dp</dimen>
+    <dimen name="gn_account_login_activity_margin_left_right">16dp</dimen>
 
 </resources>

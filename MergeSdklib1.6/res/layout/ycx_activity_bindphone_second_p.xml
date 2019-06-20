@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/ycx_color_background"
+    android:gravity="center_horizontal"
+    android:orientation="vertical" >
+
+  <include layout="@layout/ycx_view_title"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:paddingLeft="15dp"
+        android:paddingRight="15dp"
+        android:paddingTop="30dp" >
+
+        <EditText
+            android:id="@+id/ycx_ev_phoneno"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/ycx_dimen_editext_height"
+            android:background="@drawable/ycx_selector_edittext_bg"
+            android:hint="@string/ycx_string_phone_hint"
+            android:inputType="phone"
+            android:maxLength="11"
+            android:paddingLeft="10dp"
+            android:textColor="@color/ycx_color_gray_darker"
+            android:textColorHint="@color/ycx_color_hint_color"
+            android:textSize="@dimen/ycx_dimen_large" >
+        </EditText>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:gravity="center_vertical"
+            android:orientation="horizontal" >
+
+            <EditText
+                android:id="@+id/ycx_ev_validate"
+                android:layout_width="0dp"
+                android:layout_height="@dimen/ycx_dimen_editext_height"
+                android:layout_weight="1"
+                android:background="@drawable/ycx_selector_edittext_bg"
+                android:hint="@string/ycx_string_bindphone_code_hint"
+                android:inputType="number"
+                android:paddingLeft="10dp"
+                android:singleLine="true"
+                android:textColor="@color/ycx_color_gray_darker"
+                android:textColorHint="@color/ycx_color_hint_color"
+                android:textSize="@dimen/ycx_dimen_large" >
+            </EditText>
+
+            <Button
+                android:id="@+id/ycx_btn_getcode"
+                android:layout_width="100dp"
+                android:layout_height="@dimen/ycx_dimen_editext_height"
+                android:layout_marginLeft="10dp"
+                android:background="@drawable/ycx_btn_bule_selector"
+                android:text="@string/ycx_string_bindphone_getcode"
+                android:textColor="@color/ycx_color_white" />
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/ycx_btn_confirm"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/ycx_dimen_btn_height"
+            android:layout_marginTop="80dp"
+            android:background="@drawable/ycx_img_gray_btn_bg"
+            android:clickable="false"
+            android:text="@string/ycx_string_confirm"
+            android:textColor="@color/ycx_color_white"
+            android:textSize="@dimen/ycx_dimen_large" />
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1" />
+
+    <include
+        android:id="@+id/ycx_layout_contact"
+        android:layout_width="250dp"
+        android:layout_height="@dimen/ycx_dimen_editext_height"
+        android:layout_marginBottom="30dp"
+        layout="@layout/ycx_view_bottom_contact"
+        android:background="@drawable/ycx_img_service_bg"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:paddingLeft="20dp" />
+
+    <TextView
+        android:id="@+id/ycx_tv_bottom"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="10dp"
+        android:text="@string/ycx_string_page_edge_text"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:textColor="@color/ycx_color_gray_lighter"
+        android:textSize="@dimen/ycx_dimen_medium" />
+
+</LinearLayout>

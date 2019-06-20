@@ -1,0 +1,190 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/ycx_color_background" >
+
+    <include layout="@layout/ycx_view_title"
+        android:id="@+id/ycx_ic_title"/>
+
+    <LinearLayout
+        android:id="@+id/ycx_layout_switchaccount"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/ycx_ic_title"
+        android:layout_marginBottom="20dp"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/ycx_img_no_leftrightframe_bg"
+        android:orientation="vertical" >
+
+         <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/ycx_dimen_pay_title_height"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:paddingLeft="20dp" >
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="@string/ycx_string_user_hint"
+                android:textColor="@color/ycx_color_gray_light"
+                android:textSize="@dimen/ycx_dimen_large" />
+
+            <TextView
+                android:id="@+id/ycx_tv_account"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@null"
+                android:paddingRight="15dp"
+                android:textColor="@color/ycx_color_gray_darker"
+                android:textSize="@dimen/ycx_dimen_larger" />
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1px"
+            android:layout_marginLeft="15dp"
+            android:background="@color/ycx_color_item_divider" />
+        
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/ycx_dimen_pay_title_height"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:paddingLeft="20dp" >
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="@string/ycx_string_gamename"
+                android:textColor="@color/ycx_color_gray_light"
+                android:textSize="@dimen/ycx_dimen_large" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@null"
+                android:paddingRight="15dp"
+                android:text="@string/app_name"
+                android:textColor="@color/ycx_color_gray_darker"
+                android:textSize="@dimen/ycx_dimen_larger" />
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1px"
+            android:layout_marginLeft="15dp"
+            android:background="@color/ycx_color_item_divider" />
+
+         <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/ycx_dimen_pay_title_height"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:paddingLeft="20dp" >
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="@string/ycx_string_product_name"
+                android:textColor="@color/ycx_color_gray_light"
+                android:textSize="@dimen/ycx_dimen_large" />
+
+            <TextView
+                android:id="@+id/ycx_tv_gamemoney"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@null"
+                android:paddingRight="15dp"
+                android:textColor="@color/ycx_color_gray_darker"
+                android:textSize="@dimen/ycx_dimen_larger" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:id="@+id/ll_listview"
+        android:layout_below="@+id/ycx_layout_switchaccount"
+        android:background="@drawable/ycx_img_no_leftrightframe_bg"
+        android:orientation="vertical" >
+
+		<ScrollView 
+			    android:layout_width="fill_parent"
+			    android:fillViewport="true"
+			    android:layout_height="wrap_content"> 
+	        
+		 	  	 <LinearLayout
+			          android:layout_width="fill_parent"
+			          android:layout_height="wrap_content"
+			          android:gravity="center_vertical"
+			          android:orientation="vertical" >
+		            <include
+		                android:id="@+id/ycx_lay_loading"
+		                android:layout_width="fill_parent"
+		                android:layout_height="fill_parent"
+		                android:visibility="gone"
+		                layout="@layout/ycx_view_loading" />
+	             	<View
+			            android:layout_width="match_parent"
+			            android:layout_height="1px"
+			            android:background="@color/ycx_color_item_divider" />
+		            <ListView
+		                android:id="@+id/ycx_listView"
+		                android:layout_width="fill_parent"
+		                android:layout_height="fill_parent"
+		                android:cacheColorHint="#00000000"
+		                android:divider="@drawable/ycx_img_divider_01"
+		                android:fadingEdge="none"
+	                    android:scrollingCache="false"/>
+		       </LinearLayout>
+		   </ScrollView>	
+			
+        	
+        
+    </LinearLayout>   
+    
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/ycx_dimen_title_height"
+        android:layout_alignParentBottom="true"
+        android:orientation="horizontal" >
+
+        <TextView
+            android:id="@+id/ycx_tv_pay_text"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@drawable/ycx_img_only_topframe_bg"
+            android:gravity="center_vertical"
+            android:paddingLeft="15dp"
+            android:textColor="@color/ycx_color_gray_light"
+            android:textSize="@dimen/ycx_dimen_large" />
+
+        <TextView
+            android:id="@+id/ycx_tv_confirm"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:background="@drawable/ycx_selector_btn_confirm"
+            android:gravity="center"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            android:text="@string/ycx_string_confirm_pay"
+            android:textColor="@color/ycx_color_white"
+            android:textSize="@dimen/ycx_dimen_larger" />
+    </LinearLayout>
+
+    <include
+        android:id="@+id/ycx_layout_pay_success"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/ycx_ic_title"
+        layout="@layout/ycx_view_pay_success_l"
+        android:visibility="gone" />
+
+</RelativeLayout>

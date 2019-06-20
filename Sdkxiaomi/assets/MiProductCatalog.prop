@@ -1,0 +1,5 @@
+Product ID	Operation	Published State	Type	Wholesale Price Tier	Price	Effective Date	End Date	Locale	 Title	 Description
+unity.demo_1	append	draft	Consumable	1	600	2001-07-04T12:08:56.235-0700	2001-07-04T12:08:56.235-0700	en_US	60 GOLD	ProductID2-Description
+unity.demo_2	append	published	Consumable	2	1200			en_US	120 GOLD	ProductID3-Description
+unity.demo.un_1	append	published	Non-Consumable	1	600	2001-07-04T12:08:56.235-0700	2001-07-04T12:08:56.235-0700	en_US	Open all levels	ProductID4-Description
+unity.demo.un_2	append	published	Non-Consumable	2	1200	2001-07-04T12:08:56.235-0700	2001-07-04T12:08:56.235-0700	en_US	Equipment	ProductID5-Description

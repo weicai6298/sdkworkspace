@@ -3,7 +3,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#EEEEEE"
-    android:orientation="vertical" >
+    android:orientation="vertical">
 
 
     <cn.m4399.operate.ui.widget.CommonNavView
@@ -16,64 +16,63 @@
         android:layout_height="match_parent">
 
 
-    <LinearLayout
-        android:orientation="vertical"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content">
-
-
-
-    <cn.m4399.operate.ui.widget.UserCenterItemView
-        android:visibility="gone"
-        android:id="@+id/personal_info"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="10dp"
-        />
-
-
-    <cn.m4399.operate.ui.widget.UserCenterItemView
-        android:id="@+id/personal_bind_phone"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        />
-    <cn.m4399.operate.ui.widget.UserCenterItemView
-        android:id="@+id/personal_bind_id"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        />
-    <cn.m4399.operate.ui.widget.UserCenterItemView
-        android:id="@+id/personal_pwd"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="10dp"
-        />
-    <cn.m4399.operate.ui.widget.UserCenterItemView
-        android:id="@+id/personal_logout"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        />
-
-    <RadioGroup
-        android:visibility="gone"
-        android:id="@+id/environ_switch"
-        android:layout_width="fill_parent"
-        android:layout_height="wrap_content">
-        <RadioButton
-            android:checked="true"
-            android:id="@+id/product_radio"
-            android:layout_width="wrap_content"
+        <LinearLayout
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:textColor="@color/m4399_ope_activation_title_black"
-            android:text="正式环境"/>
-        <RadioButton
-            android:id="@+id/test_radio"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:textColor="@color/m4399_ope_activation_title_black"
-            android:text="测试环境"/>
-    </RadioGroup>
+            android:orientation="vertical">
 
-    </LinearLayout>
+
+            <cn.m4399.operate.ui.widget.UserCenterItemView
+                android:id="@+id/personal_info"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"
+                android:visibility="gone" />
+
+
+            <cn.m4399.operate.ui.widget.UserCenterItemView
+                android:id="@+id/personal_bind_phone"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <cn.m4399.operate.ui.widget.UserCenterItemView
+                android:id="@+id/personal_bind_id"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <cn.m4399.operate.ui.widget.UserCenterItemView
+                android:id="@+id/personal_pwd"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp" />
+
+            <cn.m4399.operate.ui.widget.UserCenterItemView
+                android:id="@+id/personal_logout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <RadioGroup
+                android:id="@+id/environ_switch"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:visibility="gone">
+
+                <RadioButton
+                    android:id="@+id/product_radio"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:checked="true"
+                    android:text="正式环境"
+                    android:textColor="@color/m4399_ope_activation_title_black" />
+
+                <RadioButton
+                    android:id="@+id/test_radio"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="测试环境"
+                    android:textColor="@color/m4399_ope_activation_title_black" />
+            </RadioGroup>
+
+        </LinearLayout>
     </android.support.v4.widget.NestedScrollView>
 </LinearLayout>

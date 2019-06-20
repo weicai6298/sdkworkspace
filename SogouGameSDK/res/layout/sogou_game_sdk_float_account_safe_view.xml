@@ -29,7 +29,7 @@
                 android:id="@+id/sogou_game_sdk_float_account_sefe_tv1"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="请填写以下信息，方便我们在您的账户出现异常时，能够及时联系到您。"
+                android:text="请填写以下信息，方便我们在您的帐户出现异常时，能够及时联系到您。"
                 android:textColor="@color/sogou_game_sdk_color_3d3d3d"
                 android:textSize="13sp"/>
 

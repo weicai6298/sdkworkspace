@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="activity_background">@android:color/white</color>
+    <color name="edit_text_color_hint">#adadad</color>
+    <color name="edit_text_color">#0099ff</color>
+</resources>

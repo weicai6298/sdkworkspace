@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<resources xmlns:android="http://schemas.android.com/apk/res/android">
+<resources>
 
     <dimen name="m4399_rec_page_height">275dp</dimen>
     <dimen name="m4399_rec_page_width">420dp</dimen>
@@ -51,8 +51,10 @@
     <dimen name="m4399_rec_page_margint_top">6dp</dimen>
     <dimen name="m4399_rec_page_margint_btm">8dp</dimen>
     <dimen name="m4399_rec_label_margin">40dp</dimen>
+    <dimen name="m4399_rec_chanel_select_width">385dp</dimen>
+    <dimen name="m4399_rec_chanel_select_height">330dp</dimen>
     <dimen name="m4399_rec_coupon_select_width">385dp</dimen>
-    <dimen name="m4399_rec_coupon_select_height">310dp</dimen>
+    <dimen name="m4399_rec_coupon_select_height">346dp</dimen>
     <dimen name="m4399_rec_input_tv_size">14sp</dimen>
     <dimen name="m4399_rec_worn_dialog_width">377dp</dimen>
     <dimen name="m4399_rec_card_width">96dp</dimen>

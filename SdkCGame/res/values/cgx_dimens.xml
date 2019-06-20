@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!-- 通用字体大小 -->
+    <!-- 稍大字号，一般用于用户输入 -->
+    <dimen name="cgx_common_larger">18sp</dimen>
+    <!-- 大字号，一般用于一级标题 -->
+    <dimen name="cgx_common_large">16sp</dimen>
+    <!-- 中字号，一般用于二级标题 -->
+    <dimen name="cgx_common_medium">14sp</dimen>
+    <!-- 小字号，一般用于三级标题，介绍性文字 -->
+    <dimen name="cgx_common_small">12sp</dimen>
+    <!-- 超小字号 -->
+    <dimen name="cgx_common_little">10sp</dimen>
+    <!-- 列表项高度 -->
+    <dimen name="cgx_common_item_height">70dip</dimen>
+
+</resources>

@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">sdk</string>
+    <string name="action_settings">Settings</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="bsgamesdk_determine">确 定</string>
+    <string name="bsgamesdk_closetitle">关闭</string>
+    <string name="bsgamesdk_login">login</string>
+    <string name="bsgamesdk_logo">logo</string>
+    <string name="bsgamesdk_submit">提交</string>
+    <string name="bsgamesdk_reg_login">注 册</string>
+    <string name="bsgamesdk_accept_coupon">领取</string>
+    <string name="bsgamesdk_username">用户名</string>
+    <string name="bsgamesdk_tel_number">手机号</string>
+    <string name="bsgamesdk_activation">激活码</string>
+    <string name="bsgamesdk_email">Email</string>
+    <string name="bsgamesdk_user_register">新用户注册</string>
+    <string name="bsgamesdk_username_hit">账号(不可使用手机号和邮箱)</string>
+    <string name="bsgamesdk_email_hit">有效邮箱地址</string>
+    <string name="bsgamesdk_password_hit">密码(6&#8211;31位字符)</string>
+    <string name="bsgamesdk_password_hit_16">密码(6&#8211;16位字符)</string>
+    <string name="bsgamesdk_new_password_hit">请输入新密码</string>
+    <string name="bsgamesdk_rememberpwd">记住登录密码</string>
+    <string name="bsgamesdk_forgetpwd">忘记密码？</string>
+    <string name="bsgamesdk_register_title">注 册</string>
+    <string name="bsgamesdk_login_title">登 录</string>
+    <string name="bsgamesdk_login_oneClick">一键授权登录</string>
+    <string name="bsgamesdk_login_oneClickInfo">检测到bilibili账号</string>
+    <string name="bsgamesdk_login_switchUser">切换账号</string>
+    <string name="bsgamesdk_login_touristLogin">游客登录</string>
+    <string name="bsgamesdk_login_forgetPwd">找回密码</string>
+    <string name="bsgamesdk_reg_and_login">立即注册</string>
+    <string name="bsgamesdk_quickReg">快速注册</string>
+    <string name="bsgamesdk_tourist_before">游客:</string>
+	<string name="bsgamesdk_tourist_up">马上升级</string>
+	<string name="bsgamesdk_tourist_switch">切换</string>
+	<string name="bsgamesdk_tourist_enter">进入</string>
+	<string name="bsgamesdk_welcome_change">切换账号</string>
+	<string name="bsgamesdk_welcome_wel">欢迎回来, </string>
+    <string name="bsgamesdk_welcome_default_name">↖(^ω^)↗!</string>
+	<string name="bsgamesdk_obtain">获取</string>
+	<string name="bsgamesdk_other_reg">其他注册方式</string>
+    <string name="bsgamesdk_exit_btn_comfirm">确定</string>
+    <string name="bsgamesdk_exit_btn_cancel">取消</string>
+    <string name="bsgamesdk_exit_tv_content">确定退出游戏吗？</string>
+    <string name="bsgamesdk_next">下一步</string>
+    <string name="bsgamesdk_get_captcha">获取验证码</string>
+    <string name="bsgamesdk_nickname">昵称</string>
+    <string name="bsgamesdk_text_tip_paid">您未购买该游戏，请在bilibili游戏中心内确认后再进行登录</string>
+    <string name="bsgamesdk_text_common_comfirm">我知道了</string>
+
+    <string name="bsgamesdk_username_login_hit">账号/手机号/邮箱</string>
+    <string name="bsgamesdk_password_login_hit">密码</string>
+    <string name="bsgamesdk_captcha_hit">验证码</string>
+    <string name="bsgamesdk_username_activate_hit">激活码</string>
+    <string name="bsgamesdk_fast_reg">免注册玩游戏</string>
+    <string name="bsgamesdk_loadingTips">努力加载中，请稍候</string>
+    <string name="bsgamesdk_app_name">sdk</string>
+    <string name="bsgamesdk_pay_title">充值</string>
+    <string name="bsgamesdk_reg_title">注 册</string>
+    <string name="bsgamesdk_delbtn">del</string>
+    <string name="bsgamesdk_warnpic">warnpic</string>
+    <string name="bsgamesdk_agreement">服务条款</string>
+    <string name="bsgamesdk_service">《会员注册协议》</string>
+    <string name="bsgamesdk_agree">已阅读并同意</string>
+    <string name="bsgamesdk_cancel">取消</string>
+    <string name="bsgamesdk_sure">确认</string>
+    <string name="bsgamesdk_retry">重试</string>
+    <string name="bsgamesdk_user_change_password">修改密码</string>
+    <string name="bsgamesdk_user_modify_account">修改默认账号</string>
+    <string name="bsgamesdk_user_modify_account_hit">请输入账号(A&#8211;Za&#8211;z0&#8211;9_组成，4&#8211;32个字符)</string>
+    <string name="bsgamesdk_network_error">网络不可用，请联网后重试</string>
+    <string name="alipay_confirm_title">提示</string>
+    <string name="alipay_ensure">确定</string>
+    <string name="alipay_cancel">取消</string>
+    <string name="alipay_content_description_icon">icon</string>
+    <string name="alipay_refresh">刷新</string>
+    <string name="alipay_processing">加载中</string>
+    <string name="alipay_download">下载</string>
+    <string name="alipay_download_fail">下载安装包失败</string>
+    <string name="alipay_cancel_install_msp">你已取消安装移动快捷支付服务</string>
+    <string name="alipay_cancel_install_alipay">你已取消安装支付宝钱包</string>
+    <string name="alipay_redo">重试</string>
+    <string name="alipay_install_msp">你尚未安装支付宝移动快捷支付服务，请立即安装</string>
+    <string name="alipay_install_alipay">你尚未安装支付宝钱包，请立即安装</string>
+    <string name="bsgamesdk_PermissionDesCription">service for bilibili application</string>
+    <string name="bsgamesdk_coupon_title">新年礼券</string>
+    <string name="bsgamesdk_coupon_title2">恭喜您获得了哔哩哔哩客服娘赠送的礼券：</string>
+    <string name="bsgamesdk_coupon_time">2015.10.26 3：00~2015.11.26 3:00</string>
+    <string name="bsgamesdk_coupon_itemname">5B币</string>
+
+    <string name="bsgamesdk_captcha_title">验证码已发送至手机号</string>
+    
+    <string name="bsgamesdk_authentication_tip">文化部《网络游戏管理暂行办法》要求，网络游戏用户需进行实名认证，请先进行实名认证再进入游戏。实名认证信息仅用于哔哩哔哩游戏实名认证，我们不会泄露或用于其他用途。游戏实名认证仅对防沉迷系统有效，不用于账号找回。</string>
+    <string name="bsgamesdk_auth_title">游戏实名认证</string>
+    <string name="bsgamesdk_hint_authentication_name">真实姓名</string>
+    <string name="bsgamesdk_hint_authentication_ID_number">身份证号码</string>
+    <string name="bsgamesdk_example_authentication_name">例如：张三</string>
+    <string name="bsgamesdk_example_authentication_ID_number">例如：440106198202020555</string>
+    <string name="bsgamesdk_text_authentication_submit">提交认证</string>
+
+    <string name="bsgamesdk_user_license">用户条款确认</string>
+    <string name="bsgamesdk_user_license_agree">同意</string>
+    <string name="bsgamesdk_user_license_disagree">不同意</string>
+
+    <string name="bsgamesdk_text_tip_permittedMinor">您的账号达到未成年人支付额度限制条件，将对您的支付进行限制。</string>
+    <string name="bsgamesdk_text_tip_unpermittedMinor">您的账号达到未成年人支付额度限制，暂无法为您提供支付服务。</string>
+    <string name="bsgamesdk_text_permittedMinor_comfirm">我知道了，继续支付</string>
+
+    <string name="bsgamesdk_text_refresh_captch">网络异常，点击画面刷新</string>
+    <string name="bsgamesdk_text_back_captch">返回</string>
+    <string name="bsgamesdk_loadingTipst">努力加载中，请稍后</string>
+
+    <string name="bsgamesdk_binding_mail">绑定安全邮箱</string>
+    <string name="bsgamesdk_binding_phone">绑定安全手机</string>
+    <string name="bsgamesdk_text_tip_secure_binding_top">为了您的账号安全，请绑定您的安全邮箱或安全手机号</string>
+    <string name="bsgamesdk_text_tip_secure_binding_bottom">绑定成功后，将可以通过安全邮箱或安全手机找回密码</string>
+    <string name="bsgamesdk_text_forget_pwd">找回密码</string>
+    <string name="bsgamesdk_text_refresh">刷新页面</string>
+    <string name="bsgamesdk_text_error_web">网络异常，请重试</string>
+
+    <string name="bsgamesdk_anti_bottom">我知道了</string>
+    <string name="bsgamesdk_anti_center">请合理安排游戏时间，享受健康生活。具体规则详见官网公告</string>
+
+    
+    <string name="bsgamesdk_dc_anti_bottom">我知道了</string>
+    <string name="bsgamesdk_dc_anti_title">提示</string>
+    
+    <string name="bsgamesdk_tourist_content">请尽快升级为B站账号\n避免游戏数据信息丢失</string>
+    <string name="bsgamesdk_tourist_content_pay">游客身份需升级为正式账\n号后才可充值!</string>
+    <string name="bsgamesdk_coupon_title3">注：\n1、该礼券只可在本游戏使用。\n2、礼券使用时间：</string>
+    <string name="bsgamesdk_coupon_title4">过期后自动消失\n3、本活动最终解释权归哔哩哔哩游戏中心所有。</string>
+    <string name="bsgamesdk_point_content">恭喜您，注册成功！\n请登入bilibili官网www.bilibili.com，绑\n定手机和邮箱，以便找回密码</string>
+    <string name="bsgamesdk_authentication_success">提交认证成功！\n\n快快进入游戏，享受游戏的乐趣吧</string>
+    <string name="bsgamesdk_anti_top">【健康系统】您今日的累计游戏时间即将达到2小时，根据健康系统规则，<font color="#ff23aee5">5分钟后您今日将无法继续游戏</font></string>
+
+</resources>

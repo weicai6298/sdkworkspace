@@ -5,14 +5,14 @@
     android:orientation="vertical">
 
     <ImageView
-        android:id="@+id/index_vedio_pic"
+        android:id="@+id/index_video_pic"
         android:layout_width="match_parent"
         android:layout_height="84dp"
         android:scaleType="fitXY"
-        android:src="@drawable/m4399_ope_default_img_vedio" />
+        android:src="@drawable/m4399_ope_default_img_video" />
 
     <TextView
-        android:id="@+id/index_vedio_name"
+        android:id="@+id/index_video_name"
         android:layout_width="match_parent"
         android:layout_height="21dp"
         android:layout_alignParentBottom="true"

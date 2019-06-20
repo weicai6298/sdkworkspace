@@ -46,10 +46,10 @@
     <color name="dk_vpi__bright_foreground_disabled_holo_dark">#ff4c4c4c</color>
     <color name="dk_vpi__bright_foreground_disabled_holo_light">#ffb2b2b2</color>
    <!-- dk vpi colors end -->
+   
    <color name="dk_color_ff999999">#ff999999</color>
    <color name="dk_color_ffe40096">#ffE40096</color>
    <color name="dk_color_ffcccccc">#ffCCCCCC</color>
     <color name="dk_username_text_ff4a90e2">#ff4a90e2</color>
     <color name="dk_username_text_ff235cb2">#FF235CB2</color>
-
 </resources>

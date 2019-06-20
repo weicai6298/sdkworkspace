@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/cancel_qr_pay_container"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/sogou_game_sdk_color_ffffff"
+    android:visibility="gone"
+    >
+
+    <TextView
+        android:id="@+id/qr_code_cancel_point_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="33dp"
+        android:textSize="12sp"
+        android:textColor="@color/sogou_game_sdk_color_ff6a00"
+        android:text="@string/qr_code_pay_cancel_point"
+        />
+
+    <TextView
+        android:id="@+id/sure_cancel_qr_code_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/qr_code_cancel_point_tv"
+        android:layout_marginTop="30dp"
+        android:layout_marginLeft="57dp"
+        android:layout_marginBottom="15dp"
+        android:textColor="@color/sogou_game_sdk_color_ffffff"
+        android:textSize="12sp"
+        android:gravity="center"
+        android:clickable="true"
+        android:text="@string/cancel_qr_code_pay"
+        android:background="@drawable/qr_code_reload"
+        />
+    <TextView
+        android:id="@+id/continue_qr_code_pay"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/qr_code_cancel_point_tv"
+        android:layout_marginTop="30dp"
+        android:layout_marginRight="57dp"
+        android:layout_marginBottom="15dp"
+        android:layout_alignParentRight="true"
+        android:textSize="12sp"
+        android:textColor="@color/sogou_game_sdk_color_ffffff"
+        android:text="@string/continue_qr_code_pay"
+        android:gravity="center"
+        android:clickable="true"
+        android:background="@drawable/qr_code_reload"
+        />
+</RelativeLayout>

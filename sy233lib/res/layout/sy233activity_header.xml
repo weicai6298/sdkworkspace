@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="40dp"
+    android:background="@drawable/sy233popup_top_bg"
+    >
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="40dp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:background="@drawable/sy233popup_top_bg"
+            >
+
+            <TextView
+                android:layout_marginLeft="10dp"
+                android:layout_centerVertical="true"
+                android:id="@+id/back"
+                android:layout_width="21dp"
+                android:layout_height="30dp"
+
+                android:background="@mipmap/sy233back"/>
+
+            <TextView
+                android:id="@+id/title"
+                android:layout_width="wrap_content"
+                android:layout_height="40dp"
+                android:layout_centerInParent="true"
+                android:gravity="center"
+                android:text=""
+                android:textColor="@color/sy233black"
+                android:textSize="18dp"
+                />
+
+            <ImageView
+                android:id="@+id/sy233logo"
+                android:layout_width="125dp"
+                android:layout_height="31dp"
+                android:layout_centerInParent="true"
+                android:src="@mipmap/sy233loginlogo"
+                android:visibility="gone"/>
+
+            <TextView
+                android:id="@+id/close"
+                android:layout_width="23dp"
+                android:layout_height="23dp"
+                android:layout_centerVertical="true"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="10dp"
+                android:background="@mipmap/sy233close"/>
+        </RelativeLayout>
+
+        <View
+            android:id="@+id/sy233line"
+            android:layout_gravity="bottom"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/sy233line"/>
+    </FrameLayout>
+</RelativeLayout>

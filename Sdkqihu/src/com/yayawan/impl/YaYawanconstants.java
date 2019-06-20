@@ -1,5 +1,6 @@
 package com.yayawan.impl;
 
+import java.security.PublicKey;
 import java.util.HashMap;
 
 import org.apache.http.HttpResponse;
@@ -29,8 +30,7 @@ import com.qihoo.gamecenter.sdk.matrix.Matrix;
 import com.qihoo.gamecenter.sdk.protocols.CPCallBackMgr.MatrixCallBack;
 import com.qihoo.gamecenter.sdk.protocols.ProtocolConfigs;
 import com.qihoo.gamecenter.sdk.protocols.ProtocolKeys;
-import com.umeng.analytics.MobclickAgent;
-import com.umeng.analytics.game.UMGameAgent;
+import com.szyp.goldfish6s.byfb.qihoo.R;
 import com.yayawan.callback.YYWExitCallback;
 import com.yayawan.domain.YYWUser;
 import com.yayawan.main.YYWMain;
@@ -50,7 +50,6 @@ public class YaYawanconstants {
 
 	public static String orderId;
 	
-	private static int isyoumeng;
 	
 	private static String dengluuid;
 	
@@ -68,12 +67,6 @@ public class YaYawanconstants {
 		Yayalog.loger("YaYawanconstants初始化sdk");
 		Boolean isLandscape = DeviceUtil.isLandscape(mActivity)?true:false;
 		Matrix.setActivity(mactivity, mSDKCallback, false);
-		String youmeng = DeviceUtil.getGameInfo(mActivity, "isyoumeng");
-		isyoumeng = Integer.parseInt(youmeng);
-		if(isyoumeng == 1){
-			UMGameAgent.setDebugMode(true);
-			UMGameAgent.init(mActivity);
-		}
 
 	}
 	protected static boolean getLandscape(Context context) {
@@ -87,16 +80,17 @@ public class YaYawanconstants {
 		@Override
 		public void execute(Context context, int functionCode, String functionParams) {
 			if (functionCode == ProtocolConfigs.FUNC_CODE_SWITCH_ACCOUNT) {
-				//						doSdkSwitchAccount(getLandscape(context));
+										doSdkSwitchAccount(getLandscape(context));
+//				doSdkSwitchAccount(false);
 			}else if (functionCode == ProtocolConfigs.FUNC_CODE_INITSUCCESS) {
 				//这里返回成功之后才能调用SDK 其它接口
 				// ...
 			}
-			/* else if (functionCode == IntegrationConfigs.FUNC_CODE_LOGOUTSUCCESS) {
-						// 融合需要，和360sdk本身业务无关
-						// 注销成功,调用登录接口
-						doSdkLogin(getLandscape(context));
-					}*/
+//			else if (functionCode == IntegrationConfigs.FUNC_CODE_LOGOUTSUCCESS) {
+//						// 融合需要，和360sdk本身业务无关
+//						// 注销成功,调用登录接口
+//						doSdkLogin(getLandscape(context));
+//					}
 		}
 
 	};
@@ -226,11 +220,6 @@ public class YaYawanconstants {
 						@Override
 						public void run() {
 							// TODO Auto-generated method stub
-							if(isyoumeng == 1){
-								Log.i("tag", "友盟退出");
-								MobclickAgent.onProfileSignOff();
-								MobclickAgent.onKillProcess(mActivity);
-							}
 							doSdkGetUserInfoByCP("exitServer");
 							callback.onExit();
 						}
@@ -259,10 +248,6 @@ public class YaYawanconstants {
 		zone_Name = zoneName;
 		 //1为角色登陆成功  2为角色创建  3为角色升级。
 		if (Integer.parseInt(ext) == 1){
-			if(isyoumeng ==1){
-				Log.i("tag", "友盟进入游戏");
-				MobclickAgent.onProfileSignIn(dengluuid);
-			}
 			doSdkGetUserInfoByCP("enterServer");
 		}else if (Integer.parseInt(ext) == 2){
 			doSdkGetUserInfoByCP("createRole");
@@ -273,16 +258,10 @@ public class YaYawanconstants {
 	}
 	public static void onResume(Activity paramActivity) {
 		// TODO Auto-generated method stub
-		if(isyoumeng == 1){
-			MobclickAgent.onResume(paramActivity);
-		}
 	}
 
 	public static void onPause(Activity paramActivity) {
 		// TODO Auto-generated method stub
-		if(isyoumeng == 1){
-			MobclickAgent.onPause(paramActivity);
-		}
 	}
 
 	public static void onDestroy(Activity paramActivity) {
@@ -519,19 +498,55 @@ public class YaYawanconstants {
 	}
 
 	/**
-	 * 使用360SDK的切换账号接口
-	 *
-	 * @param isLandScape 是否横屏显示登录界面
-	 */
-	//    protected void doSdkSwitchAccount(boolean isLandScape) {
-	//        Intent intent = getSwitchAccountIntent(isLandScape);
-	//        IDispatcherCallback callback = mAccountSwitchCallback;
-	////        if (getCheckBoxBoolean(R.id.isSupportOffline)) {
-	//            callback = mAccountSwitchSupportOfflineCB;
-	////        }
-	//        Matrix.invokeActivity(this, intent, callback);
-	//    }
+     * 使用360SDK的切换账号接口
+     *
+     * @param isLandScape 是否横屏显示登录界面
+     */
+    protected static void doSdkSwitchAccount(boolean isLandScape) {
+        Intent intent = getSwitchAccountIntent(isLandScape);
+        IDispatcherCallback callback = mAccountSwitchCallback;
+        Matrix.invokeActivity(mActivity, intent, callback);
+    }
 
+	private static Intent getSwitchAccountIntent(boolean isLandScape) {
+		 Intent intent = new Intent(mActivity, ContainerActivity.class);
+	        
+	        // 必须参数，360SDK界面是否以横屏显示。
+	        intent.putExtra(ProtocolKeys.IS_SCREEN_ORIENTATION_LANDSCAPE, isLandScape);
+
+	        // 必需参数，使用360SDK的切换账号模块。
+	        intent.putExtra(ProtocolKeys.FUNCTION_CODE, ProtocolConfigs.FUNC_CODE_SWITCH_ACCOUNT);
+
+	        return intent;
+	}
+	
+	 // 切换账号的回调
+    private static IDispatcherCallback mAccountSwitchCallback = new IDispatcherCallback() {
+
+        @Override
+        public void onFinished(String data) {
+            // press back
+            if (isCancelLogin(data)) {
+                return;
+            }
+            if(data!=null){
+            	 // 显示一下登录结果
+//                Toast.makeText(SdkUserBaseActivity.this, data, Toast.LENGTH_LONG).show();
+            	Log.i("tag","登录结果="+data);
+            }
+        	// 显示一下登录结果
+			// 解析access_token
+			mAccessToken = parseAccessTokenFromLoginResult(data);
+
+			if (!TextUtils.isEmpty(mAccessToken)) {
+				getuserinfo(mActivity, mAccessToken);
+			} else {
+				YYWMain.mUserCallBack.onLoginFailed(null,
+						null);
+			}
+        }
+    };
+	
 	// 支付的回调
 	protected static IDispatcherCallback mPayCallback = new IDispatcherCallback() {
 
@@ -724,6 +739,8 @@ public class YaYawanconstants {
      * 角色信息采集接口
      */
     public static void doSdkGetUserInfoByCP(String type) {
+
+    	
     	
     	//----------------------------模拟数据------------------------------
     	//帐号余额

@@ -1,6 +1,7 @@
 package com.yayawan.impl;
 
 import android.app.Activity;
+import android.util.Log;
 
 import com.kkgame.sdk.bean.User;
 import com.kkgame.sdk.callback.KgameSdkCallback;
@@ -30,7 +31,7 @@ public class UserManagerImpl implements YYWUserManager {
 	public void logout(Activity paramActivity, String paramString,
 			Object paramObject) {
 		//KgameSdk.stop(paramActivity);
-
+		KgameSdk.logout(paramActivity);
 	}
 
 	@Override
@@ -96,6 +97,14 @@ public class UserManagerImpl implements YYWUserManager {
 			String ext) {
 		
 		Yayalog.loger("调用了impl中的usermanagerimpl中的setdata方法");
+		
+		Log.i("tag","ext = " + ext);
+		Log.i("tag","roleId = " +roleId);
+        Log.i("tag","roleName = " +roleName);
+        Log.i("tag","roleLevel = " +roleLevel);
+        Log.i("tag","zoneId = " +zoneId);
+        Log.i("tag","zoneName = " +zoneName);
+        Log.i("tag","roleCTime = " +roleCTime);
 		
 		if (Integer.parseInt(ext)==1) {
 			KgameSdk.setRoleData(paramActivity, YYWMain.mRole.getRoleId(),

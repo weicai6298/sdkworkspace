@@ -51,6 +51,22 @@
                     android:text="TextView"
                     android:textColor="@color/ipay_color_value_6"
                     android:textSize="@dimen/ipay_text_size_15" />
+                
+                <ImageView
+                    android:id="@+id/iv_pay_union_small_icon"
+                    android:layout_width="@dimen/ipay_height_24"
+                    android:layout_height="@dimen/ipay_height_15"
+                    android:src="@drawable/ipay_icon_union_small"
+                    android:layout_marginLeft="@dimen/ipay_margin_22"
+                    android:visibility="gone"/>
+
+                <ImageView
+                    android:id="@+id/iv_pay_samsung_quick_icon"
+                    android:layout_width="@dimen/ipay_height_24"
+                    android:layout_height="@dimen/ipay_height_15"
+                    android:src="@drawable/ipay_icon_samsung_quick"
+                    android:visibility="gone"/>
+
                 <TextView
                     android:id="@+id/btn_charge"
                     android:layout_width="wrap_content"
@@ -93,8 +109,35 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="3dp"
                 android:singleLine="true"
+                android:visibility="visible"
                 android:textColor="@color/ipay_color_value_4"
                 android:textSize="@dimen/ipay_text_size_10" />
+
+            <LinearLayout
+                android:id="@+id/ll_pay_activity_des"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/ipay_margin_5"
+                android:gravity="center_vertical"
+                android:visibility="gone">
+
+                <TextView
+                    android:id="@+id/tv_pay_activity_des"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/ipay_pay_activity_des_bg"
+                    android:padding="@dimen/ipay_height_2"
+                    android:text="满10元赠券"
+                    android:textColor="@color/ipay_color_value_ff_48_48"
+                    android:textSize="@dimen/ipay_text_size_12"/>
+
+                <ImageView
+                    android:id="@+id/img_pay_activity_toggle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/ipay_margin_3"
+                    android:src="@drawable/ipay_pay_activity_tip"/>
+            </LinearLayout>
 
         </LinearLayout>
 

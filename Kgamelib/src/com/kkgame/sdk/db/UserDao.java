@@ -3,6 +3,7 @@ package com.kkgame.sdk.db;
 import java.util.ArrayList;
 import java.util.Date;
 
+import android.Manifest;
 import android.content.Context;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
@@ -11,6 +12,10 @@ import android.util.Log;
 
 import com.kkgame.sdk.bean.User;
 import com.kkgame.sdk.utils.CryptoUtil;
+import com.kkgame.utils.PermissionUtils;
+import com.kkgame.utils.Sputils;
+import com.kkgame.utils.Yayalog;
+
 
 /**
  * 用户历史数据读写
@@ -30,6 +35,12 @@ public class UserDao {
 	}
 
 	public static UserDao getInstance(Context context) {
+		
+		
+		
+		
+		
+		
 		if (mUDao == null) {
 			mUDao = new UserDao(context);
 		}
@@ -38,6 +49,35 @@ public class UserDao {
 
 	private Context mContext;
 
+	
+	//把本地sp存到数据库中
+	public void synSpuser(){
+		
+		
+		if ((PermissionUtils.checkPermission(mContext,
+				Manifest.permission.READ_EXTERNAL_STORAGE) && PermissionUtils
+				.checkPermission(mContext,
+						Manifest.permission.WRITE_EXTERNAL_STORAGE))){
+			
+			String username = Sputils.getSPstring("username", "k", mContext);
+			String password = Sputils.getSPstring("password", "k", mContext);
+			if (!username.equals("k")) {
+				if (!getUserStatus(username)) {
+					Yayalog.loger("账号密码写入数据库"+username+password);
+					writeUser(username, password, "",1);
+					Yayalog.loger("清空sp临时账号");
+					Sputils.putSPstring("username", "k", mContext);
+				}
+				
+			}
+			
+			
+		}
+		
+		
+	}
+	
+	
 	/**
 	 * 获取sqlite数据库实例
 	 * 
@@ -61,69 +101,162 @@ public class UserDao {
 	 */
 	public synchronized void writeUser(String name, String password,
 			String secret) {
-		if (TextUtils.isEmpty(name)) {
-			return;
-		}
-		SQLiteDatabase database = getConnection();
-		String sql = null;
-		try {
+		synSpuser();
+		// 检查有没有sd卡读写权限
+		if (!(PermissionUtils.checkPermission(mContext,
+				Manifest.permission.READ_EXTERNAL_STORAGE) && PermissionUtils
+				.checkPermission(mContext,
+						Manifest.permission.WRITE_EXTERNAL_STORAGE))) {
+			Yayalog.loger("sd卡没有权限，将账号密码存sp中");
+			Sputils.putSPstring("username", name, mContext);
+			Sputils.putSPstring("password", password, mContext);
 
-			if (getUserStatus(name)) {
+		} else {
 
-				if (TextUtils.isEmpty(secret)) {
-					secret = getSecret(name);
-				}
-				if (TextUtils.isEmpty(password)) {
-					password = getPassword(password);
-				}
+			
+			
+			
+			if (TextUtils.isEmpty(name)) {
+				return;
+			}
+			SQLiteDatabase database = getConnection();
+			String sql = null;
+			try {
 
-				removeUser(name);
-				writeUser(name, password, secret);
+				if (getUserStatus(name)) {
 
-			} else {
+					if (TextUtils.isEmpty(secret)) {
+						secret = getSecret(name);
+					}
+					if (TextUtils.isEmpty(password)) {
+						password = getPassword(password);
+					}
 
-				if (TextUtils.isEmpty(secret)) {
-
-					sql = new StringBuffer("insert into ")
-							.append(AccountDbHelper.TABLE_NAME).append("(")
-							.append(AccountDbHelper.NAME).append(", ")
-							.append(AccountDbHelper.PWD).append(", ")
-
-							.append(AccountDbHelper.TIME)
-							.append(") values (?,?,?)").toString();
-
-					Object[] bindArgs = { CryptoUtil.encryptBASE64(name),
-							CryptoUtil.encryptBASE64(password), new Date() };
-					System.out.println(sql + bindArgs[2]);
-					database.execSQL(sql, bindArgs);
+					removeUser(name);
+					writeUser(name, password, secret);
 
 				} else {
-					sql = new StringBuffer("insert into ")
-							.append(AccountDbHelper.TABLE_NAME).append("(")
-							.append(AccountDbHelper.NAME).append(", ")
-							.append(AccountDbHelper.PWD).append(", ")
-							.append(AccountDbHelper.SECRET).append(", ")
-							.append(AccountDbHelper.TIME)
-							.append(") values (?,?,?,?)").toString();
 
-					Object[] bindArgs = { CryptoUtil.encryptBASE64(name),
-							CryptoUtil.encryptBASE64(password),
-							CryptoUtil.encryptBASE64(secret), new Date() };
-					// System.out.println(sql+bindArgs[2]);
-					database.execSQL(sql, bindArgs);
+					if (TextUtils.isEmpty(secret)) {
+
+						sql = new StringBuffer("insert into ")
+								.append(AccountDbHelper.TABLE_NAME).append("(")
+								.append(AccountDbHelper.NAME).append(", ")
+								.append(AccountDbHelper.PWD).append(", ")
+
+								.append(AccountDbHelper.TIME)
+								.append(") values (?,?,?)").toString();
+
+						Object[] bindArgs = { CryptoUtil.encryptBASE64(name),
+								CryptoUtil.encryptBASE64(password), new Date() };
+						System.out.println(sql + bindArgs[2]);
+						database.execSQL(sql, bindArgs);
+
+					} else {
+						sql = new StringBuffer("insert into ")
+								.append(AccountDbHelper.TABLE_NAME).append("(")
+								.append(AccountDbHelper.NAME).append(", ")
+								.append(AccountDbHelper.PWD).append(", ")
+								.append(AccountDbHelper.SECRET).append(", ")
+								.append(AccountDbHelper.TIME)
+								.append(") values (?,?,?,?)").toString();
+
+						Object[] bindArgs = { CryptoUtil.encryptBASE64(name),
+								CryptoUtil.encryptBASE64(password),
+								CryptoUtil.encryptBASE64(secret), new Date() };
+						// System.out.println(sql+bindArgs[2]);
+						database.execSQL(sql, bindArgs);
+					}
+					// System.out.println("");
+
 				}
-				// System.out.println("");
-
-			}
-		} catch (Exception e) {
-			e.printStackTrace();
-		} finally {
-			if (null != database) {
-				database.close();
+			} catch (Exception e) {
+				e.printStackTrace();
+			} finally {
+				if (null != database) {
+					database.close();
+				}
 			}
 		}
 	}
 
+	/**
+	 * 将当前用户信息保存到数据库 如果数据库中有该用户信息,更新用户密码和登录时间
+	 * 
+	 * @param user
+	 */
+	public synchronized void writeUser(String name, String password,
+			String secret,int type) {
+		
+		// 检查有没有sd卡读写权限
+	
+			
+			
+		Yayalog.loger("数据库存账号密码"+name+password);
+			if (TextUtils.isEmpty(name)) {
+				return;
+			}
+			SQLiteDatabase database = getConnection();
+			String sql = null;
+			try {
+
+				if (getUserStatus(name)) {
+
+					if (TextUtils.isEmpty(secret)) {
+						secret = getSecret(name);
+					}
+					if (TextUtils.isEmpty(password)) {
+						password = getPassword(password);
+					}
+
+					removeUser(name);
+					writeUser(name, password, secret);
+
+				} else {
+
+					if (TextUtils.isEmpty(secret)) {
+
+						sql = new StringBuffer("insert into ")
+								.append(AccountDbHelper.TABLE_NAME).append("(")
+								.append(AccountDbHelper.NAME).append(", ")
+								.append(AccountDbHelper.PWD).append(", ")
+
+								.append(AccountDbHelper.TIME)
+								.append(") values (?,?,?)").toString();
+
+						Object[] bindArgs = { CryptoUtil.encryptBASE64(name),
+								CryptoUtil.encryptBASE64(password), new Date() };
+						System.out.println(sql + bindArgs[2]);
+						database.execSQL(sql, bindArgs);
+
+					} else {
+						sql = new StringBuffer("insert into ")
+								.append(AccountDbHelper.TABLE_NAME).append("(")
+								.append(AccountDbHelper.NAME).append(", ")
+								.append(AccountDbHelper.PWD).append(", ")
+								.append(AccountDbHelper.SECRET).append(", ")
+								.append(AccountDbHelper.TIME)
+								.append(") values (?,?,?,?)").toString();
+
+						Object[] bindArgs = { CryptoUtil.encryptBASE64(name),
+								CryptoUtil.encryptBASE64(password),
+								CryptoUtil.encryptBASE64(secret), new Date() };
+						// System.out.println(sql+bindArgs[2]);
+						database.execSQL(sql, bindArgs);
+					}
+					// System.out.println("");
+
+				}
+			} catch (Exception e) {
+				e.printStackTrace();
+			} finally {
+				if (null != database) {
+					database.close();
+				}
+			}
+		
+	}
+	
 	/**
 	 * 将当前用户信息保存到数据库 如果数据库中有该用户信息,更新用户密码和登录时间
 	 * 
@@ -175,34 +308,52 @@ public class UserDao {
 	 * @return
 	 */
 	public synchronized ArrayList<String> getUsers() {
-		SQLiteDatabase database = getConnection();
-		Cursor cursor = null;
+		
+		synSpuser();
+		
 		ArrayList<String> names = new ArrayList<String>();
-		try {
-			String sql = new StringBuffer("select ")
-					.append(AccountDbHelper.NAME).append(" from ")
-					.append(AccountDbHelper.TABLE_NAME).append(" order by ")
-					.append(AccountDbHelper.ID).append(" desc ").toString();
-
-			cursor = database.rawQuery(sql, new String[] {});
-
-			while (cursor.moveToNext()) {
-				String decryptBASE64 = CryptoUtil.decryptBASE64(cursor
-						.getString(0));
-				if (TextUtils.isEmpty(decryptBASE64)) {
-
-				} else {
-					names.add(decryptBASE64);
-				}
-
+		if (!(PermissionUtils.checkPermission(mContext,
+				Manifest.permission.READ_EXTERNAL_STORAGE) && PermissionUtils
+				.checkPermission(mContext,
+						Manifest.permission.WRITE_EXTERNAL_STORAGE))) {
+			Yayalog.loger("sd卡没有权限，将返回sp中的账号");
+			String username = Sputils.getSPstring("username", "k", mContext);
+			if (!username.equals("k")) {
+				names.add(username);
 			}
-		} catch (Exception e) {
-			e.printStackTrace();
-		} finally {
-			if (null != database) {
-				database.close();
+
+		} else {
+			SQLiteDatabase database = getConnection();
+			Cursor cursor = null;
+
+			try {
+				String sql = new StringBuffer("select ")
+						.append(AccountDbHelper.NAME).append(" from ")
+						.append(AccountDbHelper.TABLE_NAME)
+						.append(" order by ").append(AccountDbHelper.ID)
+						.append(" desc ").toString();
+
+				cursor = database.rawQuery(sql, new String[] {});
+
+				while (cursor.moveToNext()) {
+					String decryptBASE64 = CryptoUtil.decryptBASE64(cursor
+							.getString(0));
+					if (TextUtils.isEmpty(decryptBASE64)) {
+
+					} else {
+						names.add(decryptBASE64);
+					}
+
+				}
+			} catch (Exception e) {
+				e.printStackTrace();
+			} finally {
+				if (null != database) {
+					database.close();
+				}
 			}
 		}
+
 		return names;
 	}
 
@@ -214,28 +365,41 @@ public class UserDao {
 	 * @return
 	 */
 	public synchronized String getPassword(String name) {
-		SQLiteDatabase database = getConnection();
-		Cursor cursor = null;
-		String pwd = null;
-		try {
-			String sql = new StringBuffer("select * from ")
-					.append(AccountDbHelper.TABLE_NAME).append(" where ")
-					.append(AccountDbHelper.NAME).append(" = ? ").toString();
 
-			cursor = database.rawQuery(sql,
-					new String[] { CryptoUtil.encryptBASE64(name) });
-			if (cursor.moveToFirst()) {
-				pwd = CryptoUtil.decryptBASE64(cursor.getString(cursor
-						.getColumnIndex(AccountDbHelper.PWD)));
+		if (!(PermissionUtils.checkPermission(mContext,
+				Manifest.permission.READ_EXTERNAL_STORAGE) && PermissionUtils
+				.checkPermission(mContext,
+						Manifest.permission.WRITE_EXTERNAL_STORAGE))) {
+			Yayalog.loger("sd卡没有权限，将返回sp中的密码");
+			String password = Sputils.getSPstring("password", "k", mContext);
+			return password;
+
+		} else {
+		
+			SQLiteDatabase database = getConnection();
+			Cursor cursor = null;
+			String pwd = null;
+			try {
+				String sql = new StringBuffer("select * from ")
+						.append(AccountDbHelper.TABLE_NAME).append(" where ")
+						.append(AccountDbHelper.NAME).append(" = ? ")
+						.toString();
+
+				cursor = database.rawQuery(sql,
+						new String[] { CryptoUtil.encryptBASE64(name) });
+				if (cursor.moveToFirst()) {
+					pwd = CryptoUtil.decryptBASE64(cursor.getString(cursor
+							.getColumnIndex(AccountDbHelper.PWD)));
+				}
+			} catch (Exception e) {
+				e.printStackTrace();
+			} finally {
+				if (null != database) {
+					database.close();
+				}
 			}
-		} catch (Exception e) {
-			e.printStackTrace();
-		} finally {
-			if (null != database) {
-				database.close();
-			}
+			return pwd;
 		}
-		return pwd;
 	}
 
 	/**
@@ -261,7 +425,7 @@ public class UserDao {
 						.getColumnIndex(AccountDbHelper.SECRET)));
 			}
 		} catch (Exception e) {
-			
+
 		} finally {
 			if (null != database) {
 				database.close();
@@ -337,6 +501,10 @@ public class UserDao {
 	 * @return
 	 */
 	public synchronized void upDateclume() {
+		
+		
+		
+		
 		SQLiteDatabase database = getConnection();
 		String sql;
 		try {
@@ -362,6 +530,11 @@ public class UserDao {
 				database.close();
 			}
 		}
+		
+		
+		
+
+		
 	}
 
 	/**
@@ -394,17 +567,5 @@ public class UserDao {
 
 		return result;
 	}
-
-	/*
-	 * try{ //查询一行 cursor = db.rawQuery( "SELECT * FROM " + tableName +
-	 * " LIMIT 0" , null ); result = cursor != null &&
-	 * cursor.getColumnIndex(columnName) != -1 ; if (result) {
-	 * 
-	 * } }catch (Exception e){ Log.e("nihao","checkColumnExists1..." +
-	 * e.getMessage()) ; }finally{ if(null != cursor && !cursor.isClosed()){
-	 * cursor.close() ; } }
-	 * 
-	 * return result ;
-	 */
 
 }

@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/ll_root1"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" 
+    android:background="@android:color/transparent"
+    android:gravity="center">
+    <LinearLayout 
+        android:id="@+id/ll_root"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/xmw_corner_login_bg"
+        android:orientation="vertical">
+	    <RelativeLayout
+	        android:id="@+id/rl_find_psw_title"
+	        android:layout_width="match_parent"
+	        android:layout_height="50dp"
+	        android:background="@drawable/xmw_corner_title" >
+	        <TextView
+	            android:id="@+id/tv_back"
+	            android:layout_width="wrap_content"
+	            android:layout_height="wrap_content"
+	            android:layout_centerVertical="true"
+	            android:layout_marginLeft="12dp"
+	            android:background="@drawable/xmw_ic_back" />
+	
+	        <TextView
+	            android:id="@+id/tv_title"
+	            android:layout_width="wrap_content"
+	            android:layout_height="wrap_content"
+	            android:layout_centerInParent="true"
+	            android:text="详情"
+	            android:textColor="@color/appBlack"
+	            android:textSize="@dimen/xmw_c_title" />
+	        <TextView
+	            android:id="@+id/tv_close"
+	            android:layout_width="wrap_content"
+	            android:layout_height="wrap_content"
+	            android:layout_centerInParent="true"
+	            android:layout_alignParentRight="true"
+	            android:layout_marginRight="10dp"
+	            android:background="@drawable/xmw_ic_close"/>
+	    </RelativeLayout>
+    
+	    <LinearLayout
+	        android:id="@+id/ll_content"
+	        android:layout_width="match_parent"
+	        android:layout_height="match_parent"
+	        android:orientation="vertical"
+	        android:background="@drawable/xmw_corner_gray"
+	        android:gravity="center">
+		    <WebView
+				android:id="@+id/wb_content"
+				android:layout_width="match_parent"
+				android:layout_height="match_parent"
+				android:layout_margin="5dp"
+				android:visibility="gone"/>
+		    
+		    <include layout="@layout/gift_code"/>
+	    </LinearLayout>
+    </LinearLayout>
+</LinearLayout>

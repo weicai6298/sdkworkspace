@@ -1,9 +1,10 @@
 package com.yayawan.impl;
 
 
-import android.app.Application;
+import com.muzhiwan.sdk.app.MzwApplication;
 
-public class YYApplication extends Application {
+
+public class YYApplication extends MzwApplication {
 
 	
 

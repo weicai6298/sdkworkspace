@@ -84,9 +84,11 @@
           <string name="com_lenovo_pay_regist_realauth_title_id">输入身份证信息：</string>
      
      <string name="com_lenovo_pay_modify_realauth_title_id">修改身份证信息：</string>
-     <string name="com_lenovo_pay_modify_realauth_title_name">姓名</string>
-     <string name="com_lenovo_pay_modify_realauth_title_idno">身份证号</string>
-     
+     <string name="com_lenovo_pay_modify_realauth_title_name">真实姓名：</string>
+     <string name="com_lenovo_pay_modify_realauth_title_idno">身份证号：</string>
+     <string name="com_lenovo_pay_modify_realauth_hint_name">请填写您的真实姓名</string>
+     <string name="com_lenovo_pay_modify_realauth_hint_idno">请填写您的身份证号</string>
+     <string name="com_lenovo_pay_modify_realauth_title">实名制信息登记</string>
           
      
      

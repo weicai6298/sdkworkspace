@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@android:color/white">
+
+    <include layout="@layout/yhsdk_layout_title"/>
+
+    <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:overScrollMode="never"
+            android:layout_below="@+id/rl_title"
+            android:layout_above="@+id/account_logout"
+            android:scrollbars="none">
+
+        <LinearLayout
+                android:layout_width="@dimen/win_width"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:orientation="vertical">
+
+            <TextView
+                    android:id="@+id/tv_account_username"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="55dp"
+                    android:textColor="#0099ff"
+                    android:textSize="15sp"/>
+
+            <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginTop="37dp">
+
+                <TextView
+                        android:id="@+id/tv_xh_desc"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_centerVertical="true"
+                        android:gravity="center"
+                        android:textSize="15sp"
+                        android:textColor="#383838"
+                        android:text="@string/select_account_enter_game"
+                        />
+
+                <ImageView
+                        android:id="@+id/img_xh_question"
+                        android:layout_width="20dp"
+                        android:layout_height="match_parent"
+                        android:layout_centerVertical="true"
+                        android:layout_toRightOf="@+id/tv_xh_desc"
+                        android:layout_marginLeft="6dp"
+                        android:scaleType="fitStart"
+                        android:src="@drawable/yhsdk_account_question_mark"/>
+
+                <ImageView
+                        android:id="@+id/img_add_account"
+                        android:layout_width="50dp"
+                        android:layout_height="match_parent"
+                        android:src="@drawable/yhsdk_add_account"
+                        android:scaleType="fitEnd"
+                        android:layout_centerVertical="true"
+                        android:layout_alignParentRight="true"
+                        />
+            </RelativeLayout>
+
+            <TextView
+                    android:id="@+id/tv_xiao_hao_size"
+                    android:layout_width="@dimen/win_width"
+                    android:layout_height="wrap_content"
+                    android:textSize="12sp"
+                    android:textColor="#adadad"
+                    android:layout_marginTop="6dp"
+                    android:layout_gravity="center_horizontal"
+                    android:text="@string/add_account_desc"/>
+
+            <ListView
+                    android:id="@+id/lv_account"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:dividerHeight="18dp"
+                    android:layout_marginTop="18dp"
+                    android:divider="@android:color/transparent"
+                    android:overScrollMode="never"
+                    android:layout_marginBottom="10dp"
+                    android:scrollbars="none">
+            </ListView>
+        </LinearLayout>
+
+    </ScrollView>
+
+    <TextView
+            android:id="@+id/account_logout"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:textColor="@android:color/white"
+            android:layout_alignParentBottom="true"
+            android:background="#0099ff"
+            android:text="@string/logout"
+            android:gravity="center"
+            android:textSize="15sp"/>
+
+</RelativeLayout>

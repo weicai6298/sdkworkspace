@@ -1,16 +1,255 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:paddingBottom="@dimen/activity_vertical_margin"
-    android:paddingLeft="@dimen/activity_horizontal_margin"
-    android:paddingRight="@dimen/activity_horizontal_margin"
-    android:paddingTop="@dimen/activity_vertical_margin"
-    tools:context=".MainActivity" >
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="#FFFFFFFF" >
+
+    <RelativeLayout
+        android:id="@+id/botlayout"
+        android:layout_width="match_parent"
+        android:layout_height="55dp"
+        android:layout_alignParentBottom="true" >
+
+        <TextView
+            android:id="@+id/text_screen"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="20dp"
+            android:textColor="#FF000000"
+            android:textSize="18sp" />
+
+        <Button
+            android:id="@+id/btn_change_screen"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="20dp"
+            android:gravity="center"
+            android:text="@string/change_screen" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/debugmodelayout"
+        android:layout_width="match_parent"
+        android:layout_height="55dp"
+        android:layout_above="@id/botlayout"
+        android:visibility="gone" >
+
+        <TextView
+            android:id="@+id/text_debugmode"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="20dp"
+            android:textColor="#FF000000"
+            android:textSize="18sp" />
+
+        <Button
+            android:id="@+id/btn_change_debugmode"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="20dp"
+            android:gravity="center"
+            android:text="@string/change_debug_mode" />
+    </RelativeLayout>
+
+    <View
+        android:id="@+id/lineview"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_above="@id/debugmodelayout"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:background="#FF000000" />
 
     <TextView
+        android:id="@+id/text_setting"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="" />
+        android:layout_above="@id/lineview"
+        android:layout_alignParentLeft="true"
+        android:layout_marginLeft="20dp"
+        android:text="settings"
+        android:textColor="#FF000000"
+        android:textSize="16sp" />
+
+    <LinearLayout
+        android:id="@+id/toplayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:background="#FFFFFFFF"
+        android:orientation="vertical" >
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            android:paddingBottom="10dp"
+            android:paddingTop="10dp"
+            android:text="@string/demo_title"
+            android:textColor="#FF000000"
+            android:textSize="20sp" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:background="#FF000000" />
+    </LinearLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@id/text_setting"
+        android:layout_below="@id/toplayout" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" >
+
+            <Button
+                android:id="@+id/btn_login"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginTop="5dp"
+                android:gravity="center"
+                android:textSize="12sp"
+                android:text="@string/login_mi" />
+
+            <Button
+                android:id="@+id/btn_repeatpay"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:gravity="center"
+                android:textSize="12sp"
+                android:text="@string/billing_code_con" />
+
+            <Button
+                android:id="@+id/btn_unrepeatpay"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:gravity="center"
+                android:textSize="12sp"
+                android:text="@string/billing_code_non" />
+
+            <Button
+                android:id="@+id/btn_moneypayment"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:gravity="center"
+                android:textSize="12sp"
+                android:text="@string/pay_by_amount" />
+            
+            <Button
+                android:id="@+id/btn_change"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginTop="10dp"
+                android:gravity="center"
+                android:visibility="gone"
+                android:textSize="12sp"
+                android:text="@string/change_account" />
+
+            <Button
+                android:id="@+id/btn_gam"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:gravity="center"
+                android:visibility="gone"
+                android:textSize="12sp"
+                android:text="@string/social_relevance" />
+            
+             <Button
+                android:id="@+id/btn_loginstaus"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:gravity="center"
+                android:textSize="12sp"
+                android:visibility="gone"
+                android:text="@string/check_sys_account" />
+
+            <Button
+                android:id="@+id/btn_exit"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:gravity="center"
+                android:textSize="12sp"
+                android:visibility="gone"
+                android:text="@string/exit" />
+
+            <EditText
+                android:id="@+id/et_set_role_name"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:gravity="center_horizontal"
+                android:hint="角色名"
+                android:visibility="gone"
+                android:maxLines="1"
+                android:singleLine="true"
+                android:textColor="#FF000000"
+                android:textSize="12sp" />
+
+            <Button
+                android:id="@+id/btn_set_role"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:gravity="center"
+                android:visibility="gone"
+                android:textSize="12sp"
+                android:text="设置角色名(测试用)" />
+
+            <Button
+                android:id="@+id/btn_get_role"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:gravity="center"
+                android:textSize="12sp"
+                android:visibility="gone"
+                android:text="查询角色(测试用)" />
+
+
+
+            <TextView
+                android:id="@+id/tv_role_info"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_horizontal"
+                android:text="返回信息"
+                android:visibility="gone"
+                android:textColor="#FF000000"
+                android:textSize="12sp" />
+             
+        </LinearLayout>
+    </ScrollView>
 
 </RelativeLayout>

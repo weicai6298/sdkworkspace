@@ -1,0 +1,644 @@
+[
+    {
+        "outputFile": "C:\\AndroidStudioProjects\\zhiai2018\\HuoSdkLib\\build\\intermediates\\incremental\\mergeDebugAndroidTestResources\\merged.dir\\values\\values.xml",
+        "map": [
+            {
+                "to": {
+                    "startLine": 2,
+                    "startColumn": 4,
+                    "startOffset": 55,
+                    "endColumn": 49,
+                    "endOffset": 100
+                },
+                "from": {
+                    "file": "C:\\AndroidStudioProjects\\zhiai2018\\HuoSdkLib\\build\\intermediates\\bundles\\debug\\res\\values\\values.xml",
+                    "position": {
+                        "startLine": 2,
+                        "startColumn": 4,
+                        "startOffset": 55,
+                        "endColumn": 49,
+                        "endOffset": 100
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 3,
+                    "startColumn": 4,
+                    "startOffset": 105,
+                    "endColumn": 47,
+                    "endOffset": 148
+                },
+                "from": {
+                    "file": "C:\\AndroidStudioProjects\\zhiai2018\\HuoSdkLib\\build\\intermediates\\bundles\\debug\\res\\values\\values.xml",
+                    "position": {
+                        "startLine": 3,
+                        "startColumn": 4,
+                        "startOffset": 105,
+                        "endColumn": 47,
+                        "endOffset": 148
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 4,
+                    "startColumn": 4,
+                    "startOffset": 153,
+                    "endColumn": 48,
+                    "endOffset": 197
+                },
+                "from": {
+                    "file": "C:\\AndroidStudioProjects\\zhiai2018\\HuoSdkLib\\build\\intermediates\\bundles\\debug\\res\\values\\values.xml",
+                    "position": {
+                        "startLine": 4,
+                        "startColumn": 4,
+                        "startOffset": 153,
+                        "endColumn": 48,
+                        "endOffset": 197
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 5,
+                    "startColumn": 4,
+                    "startOffset": 202,
+                    "endColumn": 49,
+                    "endOffset": 247
+                },
+                "from": {
+                    "file": "C:\\AndroidStudioProjects\\zhiai2018\\HuoSdkLib\\build\\intermediates\\bundles\\debug\\res\\values\\values.xml",
+                    "position": {
+                        "startLine": 5,
+                        "startColumn": 4,
+                        "startOffset": 202,
+                        "endColumn": 49,
+                        "endOffset": 247
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 6,
+                    "startColumn": 4,
+                    "startOffset": 252,
+                    "endColumn": 48,
+                    "endOffset": 296
+                },
+                "from": {
+                    "file": "C:\\AndroidStudioProjects\\zhiai2018\\HuoSdkLib\\build\\intermediates\\bundles\\debug\\res\\values\\values.xml",
+                    "position": {
+                        "startLine": 6,
+                        "startColumn": 4,
+                        "startOffset": 252,
+                        "endColumn": 48,
+                        "endOffset": 296
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 7,
+                    "startColumn": 4,
+                    "startOffset": 301,
+                    "endColumn": 71,
+                    "endOffset": 368
+                },
+                "from": {
+                    "file": "C:\\AndroidStudioProjects\\zhiai2018\\HuoSdkLib\\build\\intermediates\\bundles\\debug\\res\\values\\values.xml",
+                    "position": {
+                        "startLine": 7,
+                        "startColumn": 4,
+                        "startOffset": 301,
+                        "endColumn": 71,
+                        "endOffset": 368
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 8,
+                    "startColumn": 4,
+                    "startOffset": 373,
+                    "endColumn": 48,
+                    "endOffset": 417
+                },
+                "from": {
+                    "file": "C:\\AndroidStudioProjects\\zhiai2018\\HuoSdkLib\\build\\intermediates\\bundles\\debug\\res\\values\\values.xml",
+                    "position": {
+                        "startLine": 8,
+                        "startColumn": 4,
+                        "startOffset": 373,
+                        "endColumn": 48,
+                        "endOffset": 417
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 9,
+                    "startColumn": 4,
+                    "startOffset": 422,
+                    "endColumn": 53,
+                    "endOffset": 471
+                },
+                "from": {
+                    "file": "C:\\AndroidStudioProjects\\zhiai2018\\HuoSdkLib\\build\\intermediates\\bundles\\debug\\res\\values\\values.xml",
+                    "position": {
+                        "startLine": 9,
+                        "startColumn": 4,
+                        "startOffset": 422,
+                        "endColumn": 53,
+                        "endOffset": 471
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 10,
+                    "startColumn": 4,
+                    "startOffset": 476,
+                    "endColumn": 47,
+                    "endOffset": 519
+                },
+                "from": {
+                    "file": "C:\\AndroidStudioProjects\\zhiai2018\\HuoSdkLib\\build\\intermediates\\bundles\\debug\\res\\values\\values.xml",
+                    "position": {
+                        "startLine": 10,
+                        "startColumn": 4,
+                        "startOffset": 476,
+                        "endColumn": 47,
+                        "endOffset": 519
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 11,
+                    "startColumn": 4,
+                    "startOffset": 524,
+                    "endColumn": 51,
+                    "endOffset": 571
+                },
+                "from": {
+                    "file": "C:\\AndroidStudioProjects\\zhiai2018\\HuoSdkLib\\build\\intermediates\\bundles\\debug\\res\\values\\values.xml",
+                    "position": {
+                        "startLine": 11,
+                        "startColumn": 4,
+                        "startOffset": 524,
+                        "endColumn": 51,
+                        "endOffset": 571
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 12,
+                    "startColumn": 4,
+                    "startOffset": 576,
+                    "endColumn": 65,
+                    "endOffset": 637
+                },
+                "from": {
+                    "file": "C:\\AndroidStudioProjects\\zhiai2018\\HuoSdkLib\\build\\intermediates\\bundles\\debug\\res\\values\\values.xml",
+                    "position": {
+                        "startLine": 12,
+                        "startColumn": 4,
+                        "startOffset": 576,
+                        "endColumn": 65,
+                        "endOffset": 637
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 13,
+                    "startColumn": 4,
+                    "startOffset": 642,
+                    "endColumn": 55,
+                    "endOffset": 693
+                },
+                "from": {
+                    "file": "C:\\AndroidStudioProjects\\zhiai2018\\HuoSdkLib\\build\\intermediates\\bundles\\debug\\res\\values\\values.xml",
+                    "position": {
+                        "startLine": 13,
+                        "startColumn": 4,
+                        "startOffset": 642,
+                        "endColumn": 55,
+                        "endOffset": 693
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 14,
+                    "startColumn": 4,
+                    "startOffset": 698,
+                    "endColumn": 58,
+                    "endOffset": 752
+                },
+                "from": {
+                    "file": "C:\\AndroidStudioProjects\\zhiai2018\\HuoSdkLib\\build\\intermediates\\bundles\\debug\\res\\values\\values.xml",
+                    "position": {
+                        "startLine": 14,
+                        "startColumn": 4,
+                        "startOffset": 698,
+                        "endColumn": 58,
+                        "endOffset": 752
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 15,
+                    "startColumn": 4,
+                    "startOffset": 757,
+                    "endColumn": 61,
+                    "endOffset": 814
+                },
+                "from": {
+                    "file": "C:\\AndroidStudioProjects\\zhiai2018\\HuoSdkLib\\build\\intermediates\\bundles\\debug\\res\\values\\values.xml",
+                    "position": {
+                        "startLine": 15,
+                        "startColumn": 4,
+                        "startOffset": 757,
+                        "endColumn": 61,
+                        "endOffset": 814
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 16,
+                    "startColumn": 4,
+                    "startOffset": 819,
+                    "endColumn": 58,
+                    "endOffset": 873
+                },
+                "from": {
+                    "file": "C:\\AndroidStudioProjects\\zhiai2018\\HuoSdkLib\\build\\intermediates\\bundles\\debug\\res\\values\\values.xml",
+                    "position": {
+                        "startLine": 16,
+                        "startColumn": 4,
+                        "startOffset": 819,
+                        "endColumn": 58,
+                        "endOffset": 873
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 17,
+                    "startColumn": 4,
+                    "startOffset": 878,
+                    "endColumn": 53,
+                    "endOffset": 927
+                },
+                "from": {
+                    "file": "C:\\AndroidStudioProjects\\zhiai2018\\HuoSdkLib\\build\\intermediates\\bundles\\debug\\res\\values\\values.xml",
+                    "position": {
+                        "startLine": 17,
+                        "startColumn": 4,
+                        "startOffset": 878,
+                        "endColumn": 53,
+                        "endOffset": 927
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 18,
+                    "startColumn": 4,
+                    "startOffset": 932,
+                    "endColumn": 52,
+                    "endOffset": 980
+                },
+                "from": {
+                    "file": "C:\\AndroidStudioProjects\\zhiai2018\\HuoSdkLib\\build\\intermediates\\bundles\\debug\\res\\values\\values.xml",
+                    "position": {
+                        "startLine": 18,
+                        "startColumn": 4,
+                        "startOffset": 932,
+                        "endColumn": 52,
+                        "endOffset": 980
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 19,
+                    "startColumn": 4,
+                    "startOffset": 985,
+                    "endColumn": 56,
+                    "endOffset": 1037
+                },
+                "from": {
+                    "file": "C:\\AndroidStudioProjects\\zhiai2018\\HuoSdkLib\\build\\intermediates\\bundles\\debug\\res\\values\\values.xml",
+                    "position": {
+                        "startLine": 19,
+                        "startColumn": 4,
+                        "startOffset": 985,
+                        "endColumn": 56,
+                        "endOffset": 1037
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 20,
+                    "startColumn": 4,
+                    "startOffset": 1042,
+                    "endColumn": 60,
+                    "endOffset": 1098
+                },
+                "from": {
+                    "file": "C:\\AndroidStudioProjects\\zhiai2018\\HuoSdkLib\\build\\intermediates\\bundles\\debug\\res\\values\\values.xml",
+                    "position": {
+                        "startLine": 20,
+                        "startColumn": 4,
+                        "startOffset": 1042,
+                        "endColumn": 60,
+                        "endOffset": 1098
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 21,
+                    "startColumn": 4,
+                    "startOffset": 1103,
+                    "endColumn": 70,
+                    "endOffset": 1169
+                },
+                "from": {
+                    "file": "C:\\AndroidStudioProjects\\zhiai2018\\HuoSdkLib\\build\\intermediates\\bundles\\debug\\res\\values\\values.xml",
+                    "position": {
+                        "startLine": 21,
+                        "startColumn": 4,
+                        "startOffset": 1103,
+                        "endColumn": 70,
+                        "endOffset": 1169
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 22,
+                    "startColumn": 4,
+                    "startOffset": 1174,
+                    "endColumn": 56,
+                    "endOffset": 1226
+                },
+                "from": {
+                    "file": "C:\\AndroidStudioProjects\\zhiai2018\\HuoSdkLib\\build\\intermediates\\bundles\\debug\\res\\values\\values.xml",
+                    "position": {
+                        "startLine": 22,
+                        "startColumn": 4,
+                        "startOffset": 1174,
+                        "endColumn": 56,
+                        "endOffset": 1226
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 23,
+                    "startColumn": 4,
+                    "startOffset": 1231,
+                    "endColumn": 61,
+                    "endOffset": 1288
+                },
+                "from": {
+                    "file": "C:\\AndroidStudioProjects\\zhiai2018\\HuoSdkLib\\build\\intermediates\\bundles\\debug\\res\\values\\values.xml",
+                    "position": {
+                        "startLine": 23,
+                        "startColumn": 4,
+                        "startOffset": 1231,
+                        "endColumn": 61,
+                        "endOffset": 1288
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 24,
+                    "startColumn": 4,
+                    "startOffset": 1293,
+                    "endColumn": 53,
+                    "endOffset": 1342
+                },
+                "from": {
+                    "file": "C:\\AndroidStudioProjects\\zhiai2018\\HuoSdkLib\\build\\intermediates\\bundles\\debug\\res\\values\\values.xml",
+                    "position": {
+                        "startLine": 24,
+                        "startColumn": 4,
+                        "startOffset": 1293,
+                        "endColumn": 53,
+                        "endOffset": 1342
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 25,
+                    "startColumn": 4,
+                    "startOffset": 1347,
+                    "endColumn": 46,
+                    "endOffset": 1389
+                },
+                "from": {
+                    "file": "C:\\AndroidStudioProjects\\zhiai2018\\HuoSdkLib\\build\\intermediates\\bundles\\debug\\res\\values\\values.xml",
+                    "position": {
+                        "startLine": 25,
+                        "startColumn": 4,
+                        "startOffset": 1347,
+                        "endColumn": 46,
+                        "endOffset": 1389
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 26,
+                    "startColumn": 4,
+                    "startOffset": 1394,
+                    "endColumn": 47,
+                    "endOffset": 1437
+                },
+                "from": {
+                    "file": "C:\\AndroidStudioProjects\\zhiai2018\\HuoSdkLib\\build\\intermediates\\bundles\\debug\\res\\values\\values.xml",
+                    "position": {
+                        "startLine": 26,
+                        "startColumn": 4,
+                        "startOffset": 1394,
+                        "endColumn": 47,
+                        "endOffset": 1437
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 27,
+                    "startColumn": 4,
+                    "startOffset": 1442,
+                    "endColumn": 53,
+                    "endOffset": 1491
+                },
+                "from": {
+                    "file": "C:\\AndroidStudioProjects\\zhiai2018\\HuoSdkLib\\build\\intermediates\\bundles\\debug\\res\\values\\values.xml",
+                    "position": {
+                        "startLine": 27,
+                        "startColumn": 4,
+                        "startOffset": 1442,
+                        "endColumn": 53,
+                        "endOffset": 1491
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 28,
+                    "startColumn": 4,
+                    "startOffset": 1496,
+                    "endColumn": 49,
+                    "endOffset": 1541
+                },
+                "from": {
+                    "file": "C:\\AndroidStudioProjects\\zhiai2018\\HuoSdkLib\\build\\intermediates\\bundles\\debug\\res\\values\\values.xml",
+                    "position": {
+                        "startLine": 28,
+                        "startColumn": 4,
+                        "startOffset": 1496,
+                        "endColumn": 49,
+                        "endOffset": 1541
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 29,
+                    "startColumn": 4,
+                    "startOffset": 1546,
+                    "endColumn": 47,
+                    "endOffset": 1589
+                },
+                "from": {
+                    "file": "C:\\AndroidStudioProjects\\zhiai2018\\HuoSdkLib\\build\\intermediates\\bundles\\debug\\res\\values\\values.xml",
+                    "position": {
+                        "startLine": 29,
+                        "startColumn": 4,
+                        "startOffset": 1546,
+                        "endColumn": 47,
+                        "endOffset": 1589
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 30,
+                    "startColumn": 4,
+                    "startOffset": 1594,
+                    "endLine": 37,
+                    "endColumn": 12,
+                    "endOffset": 1886
+                },
+                "from": {
+                    "file": "C:\\AndroidStudioProjects\\zhiai2018\\HuoSdkLib\\build\\intermediates\\bundles\\debug\\res\\values\\values.xml",
+                    "position": {
+                        "startLine": 30,
+                        "startColumn": 4,
+                        "startOffset": 1594,
+                        "endLine": 37,
+                        "endColumn": 12,
+                        "endOffset": 1886
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 38,
+                    "startColumn": 4,
+                    "startOffset": 1891,
+                    "endLine": 42,
+                    "endColumn": 12,
+                    "endOffset": 2176
+                },
+                "from": {
+                    "file": "C:\\AndroidStudioProjects\\zhiai2018\\HuoSdkLib\\build\\intermediates\\bundles\\debug\\res\\values\\values.xml",
+                    "position": {
+                        "startLine": 38,
+                        "startColumn": 4,
+                        "startOffset": 1891,
+                        "endLine": 42,
+                        "endColumn": 12,
+                        "endOffset": 2176
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 43,
+                    "startColumn": 4,
+                    "startOffset": 2181,
+                    "endLine": 45,
+                    "endColumn": 12,
+                    "endOffset": 2328
+                },
+                "from": {
+                    "file": "C:\\AndroidStudioProjects\\zhiai2018\\HuoSdkLib\\build\\intermediates\\bundles\\debug\\res\\values\\values.xml",
+                    "position": {
+                        "startLine": 43,
+                        "startColumn": 4,
+                        "startOffset": 2181,
+                        "endLine": 45,
+                        "endColumn": 12,
+                        "endOffset": 2328
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 46,
+                    "startColumn": 4,
+                    "startOffset": 2333,
+                    "endLine": 51,
+                    "endColumn": 12,
+                    "endOffset": 2699
+                },
+                "from": {
+                    "file": "C:\\AndroidStudioProjects\\zhiai2018\\HuoSdkLib\\build\\intermediates\\bundles\\debug\\res\\values\\values.xml",
+                    "position": {
+                        "startLine": 46,
+                        "startColumn": 4,
+                        "startOffset": 2333,
+                        "endLine": 51,
+                        "endColumn": 12,
+                        "endOffset": 2699
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 52,
+                    "startColumn": 4,
+                    "startOffset": 2704,
+                    "endLine": 60,
+                    "endColumn": 12,
+                    "endOffset": 3235
+                },
+                "from": {
+                    "file": "C:\\AndroidStudioProjects\\zhiai2018\\HuoSdkLib\\build\\intermediates\\bundles\\debug\\res\\values\\values.xml",
+                    "position": {
+                        "startLine": 52,
+                        "startColumn": 4,
+                        "startOffset": 2704,
+                        "endLine": 60,
+                        "endColumn": 12,
+                        "endOffset": 3235
+                    }
+                }
+            }
+        ]
+    }
+]

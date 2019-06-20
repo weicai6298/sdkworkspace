@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    package="com.syhl.mdwsw.lenovo"
+    package="com.yayawan.sdktemplate"
     android:versionCode="1"
     android:versionName="1.0" >
 
@@ -54,6 +54,7 @@
         android:theme="@android:style/Theme.NoTitleBar.Fullscreen" >
         <activity
             android:name="com.yayawan.sdktemplate.MainActivity"
+             android:screenOrientation="landscape"
             android:label="app_name" >
             <intent-filter>
                 <action android:name="lenovoid.MAIN" />
@@ -61,11 +62,10 @@
                 <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
         </activity>
-
         <activity
             android:name="com.lenovo.lsf.gamesdk.ui.WelcomeActivity"
             android:configChanges="orientation|keyboardHidden"
-            android:screenOrientation="behind"
+            android:screenOrientation="landscape"
             android:theme="@android:style/Theme.NoTitleBar.Fullscreen"
             android:windowSoftInputMode="stateHidden" >
             <intent-filter>
@@ -85,14 +85,11 @@
         <meta-data
             android:name="appid"
             android:value="1804020841903.app.ln" />
-        <meta-data
-            android:name="appkey"
-            android:value="MIICdgIBADANBgkqhkiG9w0BAQEFAASCAmAwggJcAgEAAoGBAJw14gQhoIhldPtyEaF0odbwH5fY0HYsmLT8VFS44i/d6u0jIkm/VcCGHcavZ3NuSNEqXtKPAzqcfJ/dSkHjd6Cd1dIq2Q3w2JkKuHFdOx1XrAW4zJ5OwP+YuDV0MVej8eDHmdKaIdFvnUW48t4FKY63JMF5iob0nOMAY1dhdkotAgMBAAECgYBS+dxAzYv0Z9An8IOk+8sr3QkrI6Q34aCMIqy5BCxBuOOda1g/TD9EsPkIHQwaqK5NTPBpcEYK0Czyzh0vuqBD/AdYmvMN4io1tHsWwthkgc5mnq8QAVYEgTeSbHEGhJJMprWJlrCMppZZ4DPylhM72QjB9wiYVVrgFVaq0FuEkQJBAPYg/5mko23xviO6BRLGfpe/SYZ1PGXGDk67nxMn+pdjqpsArN7NEaL3wG50Ue45W7FV6IkQYFyq9uA1bE8hVHMCQQCiebGEYds4oLr3lAEtE3d23ZVNRfLsfsSGWJI7Pf6sa7pjS1eWuQ9JFHifqsvn1My3ABiBzG34QYngpt9Iht7fAkEAuYOTxEXA3Ryp2RnbuxQb1NrcW1lAJeHLZPKr6u9mRPddXyl6IxDkazZcN6S7IFjhUN/UvoK2bwJ5w/LgaSBRGwJAIhIg3qDiprJV4rr/sCMn5x46Q9UKRvuiXIXQTGoIsMF6eX4AJRQzl2CalujrD3d5Ylq7yOREn02nCxwTMJNPwwJAcD0Vrn5tdnWSi8DSBrj/EtHLVT6X7/GWPvia5quEwVB5Wq60H1cieC9DiI1ImESlenCmFpesVtOS8ouRX4dVvw==" />
 
         <!--
               <meta-data
             android:name="callback"
-            android:value="https://api.sdk.75757.com/pay/notify/2462235735/" />
+            android:value="https://api.sdk.75757.com/pay/notify/2462235735/" />
         -->
 
 
@@ -114,7 +111,7 @@
             android:configChanges="keyboardHidden|orientation|screenSize|navigation|locale|layoutDirection"
             android:launchMode="singleTop"
             android:screenOrientation="behind"
-            android:theme="@style/lsf_pay_ui.no_title" >
+            android:theme="@style/com_lenovo_lsf_theme_dialog" >
             <intent-filter>
                 <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
@@ -143,7 +140,7 @@
 
         <meta-data
             android:name="lenovo.gamesdk.new"
-            android:value="2.6.1" />
+            android:value="2.6.7" />
 
         <!-- 游戏接入时请直接复制此项内容；其他应用此处填写分配给应用的token -->
         <meta-data
@@ -572,13 +569,13 @@
         <!--
              <meta-data
             android:name="lenovo.open.appid"
-            android:value="1604060160327.app.ln" />
+            android:value="1604060160327.app.ln" />
         -->
         <!-- 应用此处填写分配给应用的token,如不接入avatar,请直接复制此行 -->
         <!--
              <meta-data
             android:name="lenovo:applicationToken"
-            android:value="BGWJ03ZCYLCQ" />
+            android:value="BGWJ03ZCYLCQ" />
         -->
         <!-- 应用此处填写分配给应用的标示，zuk请填写“zuk”,用户中心不需要填写 -->
         <!-- <meta-data android:name="lenovo.paysdk.from" android:value="zuk"/> -->
@@ -594,7 +591,7 @@
             <intent-filter>
                 <action android:name="com.tencent.mm.plugin.openapi.Intent.ACTION_REFRESH_WXAPP" />
             </intent-filter>
-        </receiver>
+        </receiver>
         -->
 
 
@@ -603,11 +600,11 @@
             android:name="com.lenovo.lsf.wxapi.WXPayEntryActivity"
             android:exported="true"
             android:theme="@style/lsf_pay_ui.translate"
-            android:launchMode="singleTop" />
+            android:launchMode="singleTop" />
         -->
         <!--
         此处fileprovider 的authorities 必须是包名+“.fileprovider” 
-        举例：如果demo包名是com.pay.sample.lenovo，那么此处authorities的值应为com.pay.sample.lenovo.fileprovider
+        举例：如果demo包名是com.pay.sample.lenovo，那么此处authorities的值应为com.pay.sample.lenovo.fileprovider
         -->
 
     </application>

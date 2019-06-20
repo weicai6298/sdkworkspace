@@ -7,6 +7,7 @@ import org.json.JSONObject;
 
 import android.content.Context;
 
+import com.yayawan.callback.YYWLoginHandleCallback;
 import com.kkgame.sdk.login.ViewConstants;
 import com.kkgame.sdk.utils.CryptoUtil;
 import com.kkgame.sdk.utils.RSACoder;
@@ -16,7 +17,6 @@ import com.lidroid.jxutils.http.RequestParams;
 import com.lidroid.jxutils.http.ResponseInfo;
 import com.lidroid.jxutils.http.callback.RequestCallBack;
 import com.lidroid.jxutils.http.client.HttpRequest.HttpMethod;
-import com.yayawan.callback.YYWLoginHandleCallback;
 
 public class Handle {
 
@@ -131,8 +131,11 @@ public class Handle {
 								// String login_pay_level =
 								// object.optString("login_pay_level", "");
 								int level = data.optInt("toggle_level",0);
+								String service_qq = data.optString("service_qq","暂无");
 								Sputils.putSPint("login_type", webpay, context);//
 								Sputils.putSPint("login_pay_level", level,
+										context);
+								Sputils.putSPstring("service_qq", service_qq,
 										context);
 							}
 						} catch (JSONException e) {

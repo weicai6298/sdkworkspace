@@ -89,7 +89,7 @@ public class Acountregisterxml_po extends Basexml implements Layoutxml {
 		machineFactory.MachineEditText(et_mUser, MATCH_PARENT, 96, 0, "请输入账号",
 				30, mLinearLayout, 0, 20, 0, 0);
 		et_mUser.setBackgroundDrawable(GetAssetsutils
-				.get9DrawableFromAssetsFile("yaya_biankuang2.9.png", mContext));
+				.get9DrawableFromAssetsFile("yaya1_biankuan.9.png", mContext));
 		et_mUser.setPadding(machSize(20), 0, 0, 0);
 		// et_mUser.setText("你懂得");
 
@@ -98,7 +98,7 @@ public class Acountregisterxml_po extends Basexml implements Layoutxml {
 		machineFactory.MachineEditText(et_mPassword, MATCH_PARENT, 96, 0,
 				"请输入您的密码(4-14位,建议数字,字母组合)", 30, mLinearLayout, 0, 20, 0, 0);
 		et_mPassword.setBackgroundDrawable(GetAssetsutils
-				.get9DrawableFromAssetsFile("yaya_biankuang2.9.png", mContext));
+				.get9DrawableFromAssetsFile("yaya1_biankuan.9.png", mContext));
 		et_mPassword.setPadding(machSize(20), 0, 0, 0);
 
 		// 条款

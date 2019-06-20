@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+             android:layout_width="match_parent"
+             android:layout_height="wrap_content"
+
+             android:orientation="vertical"
+             android:paddingBottom="10dp"
+             android:paddingLeft="20dp"
+             android:paddingRight="20dp"
+             android:paddingTop="10dp"
+
+    >
+
+    <LinearLayout
+        android:id="@+id/popu_contentview"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:background="@drawable/sy233popup_bg"
+        android:fitsSystemWindows="true"
+        android:gravity="center_horizontal"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            xmlns:android="http://schemas.android.com/apk/res/android"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:background="@drawable/sy233popup_top_bg"
+            >
+
+            <TextView
+                android:layout_marginLeft="15dp"
+                android:layout_centerVertical="true"
+                android:id="@+id/back"
+                android:layout_width="21dp"
+                android:layout_height="30dp"
+
+                android:background="@mipmap/sy233back"/>
+
+            <TextView
+                android:id="@+id/title"
+                android:layout_width="wrap_content"
+                android:layout_height="40dp"
+                android:layout_centerInParent="true"
+                android:gravity="center"
+                android:text=""
+                android:textColor="@color/sy233black"
+                android:textSize="18dp"
+                />
+
+
+            <TextView
+                android:id="@+id/about"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_centerVertical="true"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="15dp"
+                android:background="@mipmap/sy233about"/>
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <GridView
+                android:gravity="center"
+                android:clipToPadding="false"
+                android:padding="20dp"
+                android:scrollbars="none"
+                android:id="@+id/gv_sub_account"
+                android:layout_width="match_parent"
+                android:layout_height="270dp"
+                android:verticalSpacing="15dp"
+                android:horizontalSpacing="15dp"
+                android:numColumns="2"
+                >
+            </GridView>
+        </RelativeLayout>
+    </LinearLayout>
+</FrameLayout>
+

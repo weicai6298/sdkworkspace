@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.yayawan.sdktemplate"
+    android:versionCode="1"
+    android:versionName="1.0" >
+
+    <uses-sdk
+        android:minSdkVersion="8"
+        android:targetSdkVersion="19" />
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW" />
+    <uses-permission android:name="android.permission.GET_TASKS" />
+    
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <application
+        android:name="com.yayawan.impl.YYApplication"
+        android:allowBackup="true"
+        android:theme="@android:style/Theme.NoTitleBar.Fullscreen" >
+        <activity
+            android:name="com.yayawan.sdktemplate.MainActivity"
+            android:configChanges="keyboardHidden|navigation|orientation|screenSize"
+            android:label="app_name" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+                
+            </intent-filter>
+            
+            <intent-filter>
+        <action android:name="android.intent.action.VIEW" />
+        <category android:name="android.intent.category.DEFAULT" />
+        <category android:name="android.intent.category.BROWSABLE" />
+        <data android:scheme="cqll"
+            android:host="cqll.com"
+            android:pathPrefix="/playgame"/>
+    </intent-filter>
+        </activity>
+        
+        <activity
+            android:name="com.yayawan.impl.callbackactivity"
+            android:screenOrientation="behind"
+            >
+            <intent-filter>
+                <action android:name="wifi.intent.action.SDK_RESULT" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+      
+      <!-- 手游互联配置 -->
+     	 <meta-data
+            android:name="app_id"
+            android:value="kk69848152" />
+        <meta-data
+            android:name="isLandscape"
+            android:value="true" />
+        
+        <meta-data
+            android:name="gamename"
+            android:value="传奇来了" />
+        
+        <meta-data
+            android:name="wifi_appid"
+            android:value="TD0454" />
+        <meta-data
+            android:name="wifi_merchantNo"
+            android:value="string11878862" />
+        
+        <meta-data
+            android:name="wifi_md5key"
+            android:value="Ln98q6mUjnwyU4KJe4p3XuFbtXbhRDpX" />
+        
+        <meta-data
+            android:name="wifi_aeskey"
+            android:value="hEBGcrGK7gjrnKaw" />
+        
+        <meta-data
+            android:name="wifi_aesiv"
+            android:value="fwyXFflzS9CQTSPC" />
+        
+        <meta-data
+            android:name="callback"
+            android:value="https://api.sdk.75757.com/pay/notify/69848152/" />
+        
+        <!-- wkdata 多进程接入；这个Service必须放在主进程中，如果加到非主进程将不能正常工作。 -->
+        <service android:name="com.wifi.data.open.WKDataMultiprocessService" />
+    
+        <!-- wklogin -->
+        <activity
+            android:name="com.lantern.auth.app.H5AuthActivity"
+            android:screenOrientation="behind"
+            android:theme="@android:style/Theme.Black.NoTitleBar" >
+        </activity>
+    </application>
+
+</manifest>
+

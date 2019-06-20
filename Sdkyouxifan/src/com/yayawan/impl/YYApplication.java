@@ -1,9 +1,9 @@
 package com.yayawan.impl;
 
 
-import android.app.Application;
+import com.yaoyue.release.YYSDKApplication;
 
-public class YYApplication extends Application {
+public class YYApplication extends YYSDKApplication {
 
 	
 

@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/ll_change_phone"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/xmw_corner_gray"
+    android:orientation="vertical"
+    android:visibility="gone" >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:paddingLeft="18dp"
+        android:paddingRight="18dp" >
+
+        <TextView
+            android:id="@+id/xmw_old_phone"
+            android:layout_width="match_parent"
+            android:layout_height="38dp"
+            android:layout_marginTop="18dp"
+            android:paddingLeft="3dp"
+            android:textColor="@color/appBlack"
+            android:textColorHint="@color/con_black"
+            android:textSize="16sp"
+            android:visibility="gone" />
+
+        <com.xmwsdk.view.XmwEditText
+            android:id="@+id/xmw_phone"
+            android:layout_width="match_parent"
+            android:layout_height="38dp"
+            android:layout_marginTop="18dp"
+            android:background="@drawable/xmw_corner_white_gray"
+            android:hint="请输入原手机号码"
+            android:inputType="number"
+            android:maxLength="11"
+            android:paddingLeft="3dp"
+            android:textColor="@color/appBlack"
+            android:textColorHint="@color/con_black"
+            android:textSize="16sp"
+            android:visibility="visible" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:orientation="horizontal" >
+
+            <com.xmwsdk.view.XmwEditText
+                android:id="@+id/get_code"
+                android:layout_width="0dp"
+                android:layout_height="38dp"
+                android:layout_weight="1"
+                android:background="@drawable/xmw_corner_white_gray"
+                android:hint="请输入验证码"
+                android:inputType="number"
+                android:maxLength="11"
+                android:paddingLeft="3dp"
+                android:textColor="@color/appBlack"
+                android:textColorHint="@color/con_black"
+                android:textSize="16sp" />
+
+            <Button
+                android:id="@+id/cre_getcode"
+                android:layout_width="91dp"
+                android:layout_height="42dp"
+                android:layout_marginLeft="9dp"
+                android:background="@drawable/xmw_corner_blue"
+                android:gravity="center"
+                android:text="获取验证码"
+                android:textColor="@color/appWhite"
+                android:textSize="15sp" />
+        </LinearLayout>
+
+        <com.xmwsdk.view.XmwEditText
+            android:id="@+id/find_pwd"
+            android:layout_width="match_parent"
+            android:layout_height="38dp"
+            android:layout_marginTop="12dp"
+            android:background="@drawable/xmw_corner_white_gray"
+            android:hint="请输入原账号密码"
+            android:inputType="number"
+            android:maxLength="11"
+            android:paddingLeft="3dp"
+            android:textColor="@color/appBlack"
+            android:textColorHint="@color/con_black"
+            android:textSize="16sp" />
+    </LinearLayout>
+
+    <RelativeLayout
+        android:id="@+id/change_phone_btn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="15dp"
+        android:layout_marginLeft="18dp"
+        android:layout_marginRight="18dp"
+        android:layout_marginTop="15dp"
+        android:background="@drawable/xmw_light_button2" >
+
+        <TextView
+            android:id="@+id/tv_change_phone"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:gravity="center"
+            android:padding="10dp"
+            android:text="下一步"
+            android:textColor="@color/appBlack"
+            android:textSize="15sp" />
+    </RelativeLayout>
+
+</LinearLayout>

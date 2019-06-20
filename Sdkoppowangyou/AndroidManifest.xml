@@ -45,16 +45,13 @@
         <meta-data
             android:name="app_id"
             android:value="kk357498976" />
+        
+        
         <meta-data
             android:name="isLandscape"
             android:value="true" />
         <!-- 1有友盟  0没有 -->
-        <meta-data
-            android:name="isyoumeng"
-            android:value="string1" />
-        <meta-data
-            android:name="appid"
-            android:value="5a1d1bb6b27b0a37d200010c" />
+ 
         <!-- nearme game sdk config goes here -->
         <meta-data
             android:name="debug_mode"
@@ -73,13 +70,15 @@
         <meta-data
             android:name="callback"
             android:value="https://api.sdk.75757.com/pay/notify/357498976/" />
+        
 
-        <activity
-            android:name="com.nearme.game.sdk.component.proxy.ProxyActivity"
-            android:configChanges="keyboardHidden|orientation|screenSize"
-            android:process=":gcsdk"
-            android:theme="@style/Theme_Dialog_Custom" >
-        </activity>
+        
+     <activity
+			android:name="com.nearme.game.sdk.component.proxy.ProxyActivity"
+			android:configChanges="keyboardHidden|orientation|screenSize"
+			android:theme="@style/Theme_Dialog_Custom"
+			android:process=":gcsdk">
+		</activity>
 
         <service
             android:name="com.nearme.game.sdk.component.proxy.ProxyApiService"
@@ -98,12 +97,6 @@
             </intent-filter>
         </receiver>
         <!-- nearme game sdk config end -->
-        <meta-data
-            android:name="UMENG_APPKEY"
-            android:value="string_appid" />
-        <meta-data
-            android:name="UMENG_CHANNEL"
-            android:value="OPPO" />
     </application>
 
 </manifest>

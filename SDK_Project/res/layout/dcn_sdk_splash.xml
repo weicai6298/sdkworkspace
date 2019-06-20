@@ -3,15 +3,17 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/dcn_white">
+    android:background="#ffffff">
 
     <ImageView
         android:id="@+id/dcn_init_img"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_centerInParent="true"
-        android:src="@drawable/dcn_sdk_splash" />
-
+        android:layout_height="match_parent"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_above="@+id/dcn_splash_linear"
+        android:src="@drawable/dcn_sdk_splash"
+        android:scaleType="centerInside"/>
 
     <LinearLayout
         android:id="@+id/dcn_splash_linear"
@@ -31,6 +33,7 @@
             android:src="@drawable/dcn_sdk_loading01" />
 
         <TextView
+            android:id="@+id/dcn_init_msg"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center_horizontal"
@@ -45,19 +48,9 @@
             android:layout_height="wrap_content"
             android:layout_gravity="center_horizontal"
             android:layout_marginBottom="25dp"
-            android:text=""
+            android:text="@string/dcn_version_name"
             android:textColor="#ccc"
             android:textSize="10sp" />
     </LinearLayout>
-
-    <include
-        android:id="@+id/dcn_sdk_splash_fail"
-        layout="@layout/dcn_sdk_splash_fail"
-        android:visibility="gone" />
-
-    <include
-        android:id="@+id/dcn_sdk_splash_reserve_fail"
-        layout="@layout/dcn_sdk_splash_reserve_fail"
-        android:visibility="gone" />
 
 </RelativeLayout>

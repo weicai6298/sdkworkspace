@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.yayawan.sdktemplate"
+    android:versionCode="1"
+    android:versionName="1.0" >
+
+    <uses-sdk
+        android:minSdkVersion="8"
+        android:targetSdkVersion="19" />
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <!-- xmwsdkv2.3.4统计必备 -->
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW" />
+    <uses-permission android:name="android.permission.GET_TASKS" />
+    <uses-permission android:name="android.permission.NFC" />
+    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE" />
+    <uses-permission android:name="android.permission.CHANGE_NETWORK_STATE" />
+
+    <application
+        android:name="com.yayawan.impl.YYApplication"
+        android:allowBackup="true"
+        android:theme="@android:style/Theme.NoTitleBar.Fullscreen" >
+        <activity
+            android:name="com.yayawan.sdktemplate.MainActivity"
+            android:configChanges="keyboardHidden|navigation|orientation|screenSize"
+            android:label="app_name" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <!-- 手游互联配置 -->
+        <meta-data
+            android:name="app_id"
+            android:value="kk176072894" />
+        <meta-data
+            android:name="isLandscape"
+            android:value="true" />
+
+        <!-- 渠道配置 -->
+        <!-- 熊猫玩必须 -->
+        <activity
+            android:name="com.xmwsdk.xmwsdk.XmwLoginActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar.Fullscreen"
+            android:windowSoftInputMode="adjustPan" />
+        <activity
+            android:name="com.xmwsdk.xmwsdk.InfomationActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar.Fullscreen" >
+        </activity>
+        <activity
+            android:name="com.xmwsdk.xmwsdk.PayActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar.Fullscreen"
+            android:windowSoftInputMode="adjustPan" />
+        <activity
+            android:name="com.xmwsdk.xmwsdk.InfomationNewActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar.Fullscreen" />
+
+        <service android:name="com.xmwsdk.xmwsdk.FloatingWindowService" />
+
+        <!-- webView 用户 -->
+        <activity
+            android:name="com.xmwsdk.webview.AccountActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar.Fullscreen"
+            android:windowSoftInputMode="stateHidden|adjustResize" >
+        </activity>
+        <!-- webView 用户 -->
+        <!-- webView 用户实名认证 -->
+        <activity
+            android:name="com.xmwsdk.webview.RealNameAuthActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar.Fullscreen"
+            android:windowSoftInputMode="stateHidden|adjustResize" >
+        </activity>
+        <!-- webView 用户实名认证 -->
+        <!-- webView 热点消息 -->
+        <activity
+            android:name="com.xmwsdk.webview.HotNewsActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar.Fullscreen" >
+        </activity>
+        <!-- 熊猫玩用户中心 -->
+
+        <activity
+            android:name="com.xmwsdk.xmwsdk.XmwUserCenterActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar.Fullscreen"
+            android:windowSoftInputMode="stateHidden|adjustResize" />
+        <!-- 熊猫玩修改头像剪裁头像 -->
+        <activity
+            android:name="com.xmwsdk.xmwsdk.XmwCutPictureActivity"
+            android:configChanges="orientation|screenSize"
+            android:screenOrientation="portrait" />
+        <!-- 熊猫玩用户通用页 -->
+        <activity
+            android:name="com.xmwsdk.xmwsdk.CommentActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar.Fullscreen"
+            android:windowSoftInputMode="adjustPan" />
+        <!-- 熊猫玩web -->
+        <activity
+            android:name="com.xmwsdk.xmwsdk.XmwWebActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar.Fullscreen"
+            android:windowSoftInputMode="adjustPan" />
+        <!-- 熊猫玩用户升级 -->
+        <activity
+            android:name="com.xmwsdk.xmwsdk.UpdataUserActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar.Fullscreen"
+            android:windowSoftInputMode="adjustPan" />
+        <!-- 熊猫玩礼包详情 -->
+        <activity
+            android:name="com.xmwsdk.xmwsdk.GiftDetailActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar.Fullscreen"
+            android:windowSoftInputMode="adjustPan" />
+        <!-- 熊猫玩必须结束 -->
+
+
+        <!-- 版本信息， 渠道升级判断  替换为分配的clientid -->
+        <meta-data
+            android:name="XMWAPPID"
+            android:value="e338d28ea655b53735b7848367672ac7" />
+        <meta-data
+            android:name="XMWVERSION"
+            android:value="v303" />
+        <!-- xmwsdkv2.3.4 必填,用于统计 未分配不用修改 -->
+        <meta-data
+            android:name="XMWAPPKEY"
+            android:value="5a73276810fbd71ec322ca14d38f8485" />
+        <!-- adt 必填，用于统计 未分配不用修改 -->
+        <meta-data
+            android:name="ADTAPPID"
+            android:value="CEF558197BD5DC43325E009FE3F80CC25" />
+        <!-- C3C660189103104938E9F3D3DC7A95056 -->
+
+    </application>
+
+</manifest>

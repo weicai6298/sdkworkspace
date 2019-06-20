@@ -28,8 +28,8 @@
             style="@style/m4399BindPhoneEditStyle"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:inputType="number"
-            android:hint="@string/m4399_ope_bind_phone_number_hint" />
+            android:hint="@string/m4399_ope_bind_phone_number_hint"
+            android:inputType="number" />
 
     </LinearLayout>
 
@@ -54,7 +54,7 @@
             android:layout_width="@dimen/m4399_ope_bind_img_width"
             android:layout_height="@dimen/m4399_ope_bind_input_button_height"
             android:layout_marginLeft="@dimen/m4399_ope_bind_input_margin_left"
-            android:gravity="center"/>
+            android:gravity="center" />
 
     </LinearLayout>
 
@@ -105,7 +105,7 @@
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_marginLeft="@dimen/m4399_ope_bind_input_margin_left"
-            android:layout_weight="1"/>
+            android:layout_weight="1" />
 
 
     </LinearLayout>

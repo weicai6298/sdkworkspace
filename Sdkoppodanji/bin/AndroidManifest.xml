@@ -60,14 +60,6 @@
             android:value="true" />
         <!-- true:单机游戏 false:网游 -->
         <meta-data
-            android:name="interstitial_id"
-            android:value="string329" />
-
-        <!-- appid是广告id -->
-        <meta-data
-            android:name="appid"
-            android:value="string3598132" />
-        <meta-data
             android:name="app_key"
             android:value="65tlS0f60C4c8480cc8gCOs4c" />
         <meta-data
@@ -94,11 +86,6 @@
             <!-- nearme game sdk config end -->
 
 
-            <!-- oppo广告 -->
-            <!--
-<activity android:name="com.oppo.mobad.activity.AdActivity"/>
-<service android:name="com.oppo.mobad.service.AdService" />
-            -->
 
     </application>
 

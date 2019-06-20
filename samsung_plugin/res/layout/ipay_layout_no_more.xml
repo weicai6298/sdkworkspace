@@ -27,6 +27,7 @@
             android:id="@+id/tv_nomore_empty"
             android:layout_marginLeft="@dimen/ipay_margin_10"
             android:layout_width="wrap_content"
+            android:textSize="@dimen/ipay_text_size_12"
             android:layout_height="wrap_content"
             android:textColor="@color/ipay_color_value_4"
             />
@@ -35,6 +36,7 @@
             android:layout_marginRight="@dimen/ipay_margin_10"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:textSize="@dimen/ipay_text_size_12"
             android:textColor="@color/ipay_color_value_7_1"
             />
         <!--画右边的那条线-->

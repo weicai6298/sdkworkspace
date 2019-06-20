@@ -102,16 +102,34 @@
             android:textSize="17dp" />
 
         <!--温馨提示-->
-        <TextView
-            android:id="@+id/account_sms_verify_tips_tv"
+        <LinearLayout
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@string/account_sms_verify_tips"
-            android:textColor="@color/account_color_bbbbbb"
-            android:textSize="13dp"
             android:layout_gravity="center"
-            android:gravity="center_horizontal"
-            android:layout_marginTop="11dp"/>
+            android:layout_marginTop="11dp">
+
+
+            <CheckBox
+                android:id="@+id/account_sms_verify_confirm"
+                android:layout_width="wrap_content"
+                android:layout_height="15dp"
+                android:button="@null"
+                android:drawableLeft="@drawable/openaccountsdk_login_confirm_sel"
+                android:paddingLeft="10dp"
+                android:layout_marginTop="5dp"
+                android:paddingRight="4dp"/>
+
+
+            <TextView
+                android:id="@+id/account_sms_verify_tips_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/account_sms_verify_tips"
+                android:textColor="@color/account_color_bbbbbb"
+                android:textSize="13dp" />
+
+        </LinearLayout>
+
     </LinearLayout>
 
     <!--登录说明-->

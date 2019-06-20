@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="?attr/bsgamesdk_main_background"
+    android:gravity="center"
+    android:orientation="vertical" >
+    
+    
+    <include layout="@layout/bsgamesdk_title" />
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:layout_marginTop="12dp"
+        android:layout_marginBottom="10dp"
+        android:orientation="vertical" >
+
+        <TextView
+            style="?attr/bsgamesdk_info_text_style"
+            android:layout_marginLeft="8dp"
+            android:layout_gravity="center_vertical"
+            android:text="@string/bsgamesdk_point_content"
+             />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:background="@color/bsgamesdk_transparent"
+        android:gravity="center"
+        android:orientation="vertical" >
+
+        <Button
+            android:id="@+id/bsgamesdk_id_point_determine"
+            style="?attr/bsgamesdk_confirm_button_style"
+            android:layout_width="240dp"
+            android:layout_height="36dp"
+            android:layout_marginBottom="10dp"
+            android:layout_gravity="center"
+            android:text="@string/bsgamesdk_determine" >
+        </Button>
+    </LinearLayout>
+</LinearLayout>

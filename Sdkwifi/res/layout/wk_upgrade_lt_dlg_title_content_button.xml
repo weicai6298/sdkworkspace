@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/wk_upgrade_popup_bg"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="left|center_vertical"
+        android:padding="12dip" >
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dip"
+        android:background="#8ac4f3" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="left|center_vertical"
+        android:orientation="vertical"
+        android:padding="12dip" >
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:background="#666666" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal" >
+
+        <Button
+            style="@style/wk_upgrade_Lt_Dlg_Button"
+            android:background="@drawable/wk_upgrade_lt_bg_dlg_btn_left"
+            android:textColor="@color/wk_upgrade_lt_dlg_btn_cancel" />
+
+        <View
+            android:layout_width="1px"
+            android:layout_height="match_parent"
+            android:background="#666666" />
+
+        <Button
+            style="@style/wk_upgrade_Lt_Dlg_Button"
+            android:background="@drawable/wk_upgrade_lt_bg_dlg_btn_center"
+            android:textColor="@color/wk_upgrade_lt_dlg_btn_ok" />
+
+        <View
+            android:layout_width="1px"
+            android:layout_height="match_parent"
+            android:background="#666666" />
+
+        <Button
+            style="@style/wk_upgrade_Lt_Dlg_Button"
+            android:background="@drawable/wk_upgrade_lt_bg_dlg_btn_right"
+            android:textColor="@color/wk_upgrade_lt_dlg_btn_ok" />
+    </LinearLayout>
+
+</LinearLayout>

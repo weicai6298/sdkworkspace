@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:custom="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/bsgamesdk_id_noticeLayout"
+    android:layout_width="wrap_content"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="?attr/bsgamesdk_main_background"
+    android:gravity="center"
+    >
+    
+    <LinearLayout 
+       	android:layout_width="match_parent"
+    	android:layout_height="match_parent"
+      	android:orientation="vertical"  
+      	android:layout_marginBottom="10dp"
+        >
+        <include layout="@layout/bsgamesdk_title"
+         />
+    </LinearLayout>
+    
+    
+    <LinearLayout 
+       	android:layout_width="match_parent"
+    	android:layout_height="match_parent"
+      	android:orientation="vertical"  
+      	android:layout_marginBottom="10dp"
+        >
+        
+        <TextView 
+            android:id="@+id/bsgamesdk_id_notice_content"
+            android:layout_width="wrap_content"
+    		android:layout_height="wrap_content"
+           	style="?attr/bsgamesdk_info_text_style"
+           	android:background="@drawable/bsgamesdk_bg_input"
+    		android:visibility="gone"
+            />
+        
+        <com.bsgamesdk.android.widget.RoundImageViewByXfermode 
+            android:id="@+id/bsgamesdk_id_notice_img"
+            android:layout_width="290dp"
+    		android:layout_height="100dp"
+    		custom:bsgamesdk_roundImageView_borderRadius="2dp"
+            custom:bsgamesdk_roundImageView_type="round"
+            android:scaleType="centerCrop"
+    		android:visibility="gone"
+    		android:background="@drawable/bsgamesdk_bg_input"
+    		android:layout_gravity="center"
+            />
+    </LinearLayout>
+	
+          <Button
+            android:id="@+id/bsgamesdk_id_notice_btn"
+            style="?attr/bsgamesdk_confirm_button_style"
+            android:layout_width="300dp"
+            android:layout_height="36dp"
+            android:layout_marginBottom="10dp"
+            android:text="@string/bsgamesdk_determine" />
+    
+</LinearLayout>

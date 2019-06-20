@@ -48,7 +48,7 @@ public class BrowserTempActivity extends Activity {
 	
 //	private static final String mHomeUrl = "http://h5cqllyx.jiulingwan.com/webserver/07073/android/index.html"; //测试
 //	private static final String mHomeUrl = "http://123.207.36.17/game_android/"; //测试服
-	private static final String mHomeUrl = "http://jlsjfu.07073.com/jlsjandroid/"; //专服
+	private static final String mHomeUrl = "https://jlsjfu.07073.com/jlsjandroid/"; //专服
 	
 	//支付回调地址：https://s2bxxy.szhlsg.com:24003/pay/bfan.html
 	private static final String TAG = "SdkDemo";

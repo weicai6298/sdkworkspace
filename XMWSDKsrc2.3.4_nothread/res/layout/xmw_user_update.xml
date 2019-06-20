@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/ll_root1"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/transparent"
+    android:gravity="center"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:id="@+id/ll_root"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/xmw_corner_login_bg"
+        android:orientation="vertical" >
+
+        <RelativeLayout
+            android:id="@+id/rl_find_psw_title"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:background="@drawable/xmw_corner_title" >
+
+            <ImageView
+                android:id="@+id/tv_back"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="12dp"
+                android:padding="10dp"
+                android:src="@drawable/xmw_ic_back" />
+
+            <TextView
+                android:id="@+id/tv_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:text="升级正式账号"
+                android:textColor="@color/appBlack"
+                android:textSize="@dimen/xmw_c_title" />
+
+            <ImageView
+                android:id="@+id/tv_close"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerInParent="true"
+                android:layout_marginRight="10dp"
+                android:padding="10dp"
+                android:src="@drawable/xmw_ic_close" />
+        </RelativeLayout>
+
+        <LinearLayout
+            android:id="@+id/ll_content"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/xmw_corner_gray"
+            android:orientation="vertical" >
+
+            <LinearLayout
+                android:id="@+id/ll_update_user"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:paddingLeft="18dp"
+                android:paddingRight="18dp" >
+
+                <com.xmwsdk.view.XmwEditText
+                    android:id="@+id/xmw_new_user"
+                    android:layout_width="match_parent"
+                    android:layout_height="38dp"
+                    android:layout_marginTop="18dp"
+                    android:background="@drawable/xmw_corner_white_gray"
+                    android:hint="请输入新账号"
+                    android:inputType="text"
+                    android:maxLength="18"
+                    android:paddingLeft="3dp"
+                    android:textColor="@color/appBlack"
+                    android:textColorHint="@color/con_black"
+                    android:textSize="16sp"
+                    android:visibility="visible" />
+
+                <com.xmwsdk.view.XmwEditText
+                    android:id="@+id/xmw_new_psw"
+                    android:layout_width="match_parent"
+                    android:layout_height="38dp"
+                    android:layout_marginTop="12dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/xmw_corner_white_gray"
+                    android:hint="请输入新密码"
+                    android:paddingLeft="3dp"
+                    android:password="true"
+                    android:textColor="@color/appBlack"
+                    android:textColorHint="@color/con_black"
+                    android:textSize="16sp" />
+
+                <com.xmwsdk.view.XmwEditText
+                    android:id="@+id/xmw_new_psw_again"
+                    android:layout_width="match_parent"
+                    android:layout_height="38dp"
+                    android:layout_marginTop="12dp"
+                    android:background="@drawable/xmw_corner_white_gray"
+                    android:hint="请再次输入新密码"
+                    android:paddingLeft="3dp"
+                    android:password="true"
+                    android:textColor="@color/appBlack"
+                    android:textColorHint="@color/con_black"
+                    android:textSize="16sp" />
+            </LinearLayout>
+
+            <RelativeLayout
+                android:id="@+id/update_user_btn"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="15dp"
+                android:layout_marginLeft="18dp"
+                android:layout_marginRight="18dp"
+                android:layout_marginTop="15dp"
+                android:background="@drawable/xmw_light_button2" >
+
+                <TextView
+                    android:id="@+id/tv_sure"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:gravity="center"
+                    android:padding="10dp"
+                    android:text="确定"
+                    android:textColor="@color/appBlack"
+                    android:textSize="15sp" />
+            </RelativeLayout>
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>

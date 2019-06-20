@@ -1,0 +1,380 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:paddingBottom="10dp"
+    android:paddingLeft="20dp"
+    android:paddingRight="20dp"
+    android:paddingTop="10dp"
+
+    >
+
+    <LinearLayout
+        android:id="@+id/popu_contentview"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:background="@drawable/sy233popup_bg"
+        android:fitsSystemWindows="true"
+        android:gravity="center_horizontal"
+        android:orientation="vertical">
+
+        <include layout="@layout/sy233activity_header"/>
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:scrollbars="none">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/sy233popup_bottom_bg"
+                android:orientation="vertical"
+                android:paddingBottom="5dp"
+                android:paddingTop="5dp"
+
+                >
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginRight="15dp"
+                    android:orientation="vertical"
+                    >
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:orientation="horizontal"
+                        android:paddingBottom="10dp"
+                        android:paddingTop="10dp"
+                        >
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="22dp"
+                            android:drawableLeft="@mipmap/sy233left_account"
+                            android:text="  用户名"
+                            android:textColor="@color/sy233blacktextcolor"
+                            android:textSize="15sp"/>
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+
+                            android:layout_height="wrap_content">
+
+                            <TextView
+                                android:id="@+id/sy233bt_bind_username"
+                                android:layout_width="55dp"
+                                android:layout_height="26dp"
+                                android:layout_alignParentRight="true"
+                                android:background="@drawable/sy233bt_register_bg"
+                                android:gravity="center"
+                                android:text="绑定"
+                                android:textColor="@color/sy233colorPrimary"
+                                android:textSize="15sp"
+                                />
+
+                            <TextView
+                                android:id="@+id/sy233tv_username"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_centerVertical="true"
+                                android:layout_toLeftOf="@+id/sy233bt_bind_username"
+                                android:gravity="left"
+                                android:paddingLeft="10dp"
+                                android:paddingRight="10dp"
+                                android:text="(未绑定)"
+                                android:textColor="@color/sy233graytextcolor"
+                                android:textSize="13sp"/>
+
+                        </RelativeLayout>
+
+                    </LinearLayout>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1px"
+                        android:background="#a0a0a0"/>
+
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:orientation="horizontal"
+                        android:paddingBottom="10dp"
+                        android:paddingTop="10dp"
+                        >
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="22dp"
+                            android:drawableLeft="@mipmap/sy233phone"
+                            android:text="  手机号"
+                            android:textColor="@color/sy233blacktextcolor"
+                            android:textSize="15sp"/>
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+
+                            android:layout_height="wrap_content">
+
+                            <TextView
+                                android:id="@+id/sy233bt_bind_phone"
+                                android:layout_width="55dp"
+                                android:layout_height="26dp"
+                                android:layout_alignParentRight="true"
+                                android:background="@drawable/sy233bt_register_bg"
+                                android:gravity="center"
+                                android:text="绑定"
+                                android:textColor="@color/sy233colorPrimary"
+                                android:textSize="15sp"
+                                />
+
+                            <TextView
+                                android:id="@+id/sy233tv_phone"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_centerVertical="true"
+                                android:layout_toLeftOf="@+id/sy233bt_bind_phone"
+                                android:gravity="left"
+                                android:paddingLeft="10dp"
+                                android:paddingRight="10dp"
+                                android:text="(未绑定)"
+                                android:textColor="@color/sy233graytextcolor"
+                                android:textSize="13sp"/>
+
+                        </RelativeLayout>
+
+                    </LinearLayout>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1px"
+                        android:background="#a0a0a0"/>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:orientation="horizontal"
+                        android:paddingBottom="10dp"
+                        android:paddingTop="10dp"
+                        >
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="22dp"
+                            android:drawableLeft="@mipmap/sy233left_bindqq"
+                            android:text="  绑定QQ"
+                            android:textColor="@color/sy233blacktextcolor"
+                            android:textSize="15sp"/>
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+
+                            android:layout_height="wrap_content">
+
+                            <TextView
+                                android:id="@+id/sy233bt_bindqq"
+                                android:layout_width="55dp"
+                                android:layout_height="26dp"
+                                android:layout_alignParentRight="true"
+                                android:background="@drawable/sy233bt_register_bg"
+                                android:gravity="center"
+                                android:text="绑定"
+                                android:textColor="@color/sy233colorPrimary"
+                                android:textSize="15sp"
+                                />
+
+                            <TextView
+                                android:id="@+id/sy233tv_qq"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_centerVertical="true"
+                                android:layout_toLeftOf="@+id/sy233bt_bindqq"
+                                android:gravity="left"
+                                android:paddingLeft="5dp"
+                                android:paddingRight="10dp"
+                                android:text="(未绑定)"
+                                android:textColor="@color/sy233graytextcolor"
+                                android:textSize="13sp"/>
+
+                        </RelativeLayout>
+
+                    </LinearLayout>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1px"
+                        android:background="#a0a0a0"/>
+
+                    <LinearLayout
+                        android:id="@+id/sy233ll_login_pwd"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:orientation="horizontal"
+                        android:paddingBottom="10dp"
+                        android:paddingTop="10dp"
+                        >
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="22dp"
+                            android:drawableLeft="@mipmap/sy233left_pwd"
+                            android:text="  登录密码"
+                            android:textColor="@color/sy233blacktextcolor"
+                            android:textSize="15sp"/>
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+
+                            android:layout_height="wrap_content">
+
+                            <TextView
+
+                                android:layout_width="50dp"
+                                android:layout_height="26dp"
+                                android:layout_alignParentRight="true"
+                                android:drawableRight="@mipmap/sy233arrow"
+                                android:gravity="center"
+                                android:text=""
+                                android:textColor="@color/sy233blacktextcolor"
+                                android:textSize="12sp"
+                                />
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_centerVertical="true"
+                                android:gravity="left"
+                                android:paddingLeft="5dp"
+                                android:paddingRight="5dp"
+                                android:text=""
+                                android:textColor="@color/sy233graytextcolor"
+                                android:textSize="13sp"/>
+
+                        </RelativeLayout>
+
+                    </LinearLayout>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1px"
+                        android:background="#a0a0a0"/>
+
+                    <LinearLayout
+                        android:id="@+id/sy233ll_pay_pwd"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:orientation="horizontal"
+                        android:paddingBottom="10dp"
+                        android:paddingTop="10dp"
+                        >
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="22dp"
+                            android:drawableLeft="@mipmap/sy233left_pay_pwd"
+                            android:text="  支付密码"
+                            android:textColor="@color/sy233blacktextcolor"
+                            android:textSize="15sp"/>
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+
+                            android:layout_height="wrap_content">
+
+                            <TextView
+                                android:layout_width="50dp"
+                                android:layout_height="26dp"
+                                android:layout_alignParentRight="true"
+                                android:drawableRight="@mipmap/sy233arrow"
+                                android:gravity="center"
+                                android:text=""
+                                android:textColor="@color/sy233blacktextcolor"
+                                android:textSize="12sp"
+                                />
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_centerVertical="true"
+                                android:gravity="left"
+                                android:paddingLeft="5dp"
+                                android:paddingRight="5dp"
+                                android:text=""
+                                android:textColor="@color/sy233graytextcolor"
+                                android:textSize="13sp"/>
+
+                        </RelativeLayout>
+
+                    </LinearLayout>
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1px"
+                        android:background="#a0a0a0"/>
+
+                    <LinearLayout
+                        android:id="@+id/sy233ll_c_server"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:orientation="horizontal"
+                        android:paddingBottom="10dp"
+                        android:paddingTop="10dp"
+                        >
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="22dp"
+                            android:drawableLeft="@mipmap/sy233c_server"
+                            android:text="  联系客服"
+                            android:textColor="@color/sy233blacktextcolor"
+                            android:textSize="15sp"/>
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+
+                            android:layout_height="wrap_content">
+
+                            <TextView
+                                android:layout_width="50dp"
+                                android:layout_height="26dp"
+                                android:layout_alignParentRight="true"
+                                android:drawableRight="@mipmap/sy233arrow"
+                                android:gravity="center"
+                                android:text=""
+                                android:textColor="@color/sy233blacktextcolor"
+                                android:textSize="12sp"
+                                />
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_centerVertical="true"
+                                android:gravity="left"
+                                android:paddingLeft="5dp"
+                                android:paddingRight="5dp"
+                                android:text=""
+                                android:textColor="@color/sy233graytextcolor"
+                                android:textSize="13sp"/>
+
+                        </RelativeLayout>
+
+                    </LinearLayout>
+                </LinearLayout>
+            </LinearLayout>
+        </ScrollView>
+    </LinearLayout>
+</FrameLayout>
+

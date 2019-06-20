@@ -1,0 +1,286 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="0dp"
+    android:layout_height="match_parent"
+    android:layout_marginLeft="16dp"
+    android:layout_marginRight="16dp"
+    android:layout_weight="1"
+    android:gravity="center"
+    android:orientation="vertical"
+    tools:background="#ffffff"
+    tools:layout_width="match_parent"
+    >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="10dp"
+        android:orientation="horizontal">
+
+        <RelativeLayout
+            android:id="@+id/tysdkn_pay_tyb_item_1"
+            android:layout_width="100dp"
+            android:layout_height="60dp"
+            android:layout_weight="1">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginRight="10dp"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/tysdkn_pay_item_s"
+                android:gravity="center"
+                android:orientation="vertical"
+                >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="50"
+                    android:textColor="#FF009CEE"
+                    android:textSize="16sp"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="2dp"
+                    android:text="宇币"
+                    android:textColor="#FF009CEE"
+                    android:textSize="16sp"/>
+            </LinearLayout>
+
+            <ImageView
+                android:id="@+id/tysdkn_pay_tyb_item_1_s"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentTop="true"
+                android:src="@drawable/tysdkn_selete"
+                android:visibility="invisible"
+                tools:visibility="visible"/>
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/tysdkn_pay_tyb_item_2"
+            android:layout_width="100dp"
+            android:layout_height="60dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_weight="1">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginRight="10dp"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/tysdkn_pay_item_s"
+                android:gravity="center"
+                android:orientation="vertical"
+                >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="100"
+                    android:textColor="#FF009CEE"
+                    android:textSize="16sp"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="2dp"
+                    android:text="宇币"
+                    android:textColor="#FF009CEE"
+                    android:textSize="16sp"/>
+            </LinearLayout>
+
+            <ImageView
+                android:id="@+id/tysdkn_pay_tyb_item_2_s"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentTop="true"
+                android:src="@drawable/tysdkn_selete"
+                android:visibility="invisible"
+                tools:visibility="visible"/>
+        </RelativeLayout>
+
+        <RelativeLayout
+
+            android:id="@+id/tysdkn_pay_tyb_item_3"
+
+            android:layout_width="100dp"
+            android:layout_height="60dp"
+            android:layout_weight="1">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginRight="10dp"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/tysdkn_pay_item_s"
+                android:gravity="center"
+                android:orientation="vertical"
+                >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="200"
+                    android:textColor="#FF009CEE"
+                    android:textSize="16sp"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="2dp"
+                    android:text="宇币"
+                    android:textColor="#FF009CEE"
+                    android:textSize="16sp"/>
+            </LinearLayout>
+
+            <ImageView
+                android:id="@+id/tysdkn_pay_tyb_item_3_s"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentTop="true"
+                android:src="@drawable/tysdkn_selete"
+                android:visibility="invisible"
+                tools:visibility="visible"/>
+        </RelativeLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <RelativeLayout
+
+            android:id="@+id/tysdkn_pay_tyb_item_4"
+
+            android:layout_width="100dp"
+            android:layout_height="60dp"
+            android:layout_weight="1">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginRight="10dp"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/tysdkn_pay_item_s"
+                android:gravity="center"
+                android:orientation="vertical"
+                >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="300"
+                    android:textColor="#FF009CEE"
+                    android:textSize="16sp"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="2dp"
+                    android:text="宇币"
+                    android:textColor="#FF009CEE"
+                    android:textSize="16sp"/>
+            </LinearLayout>
+
+            <ImageView
+                android:id="@+id/tysdkn_pay_tyb_item_4_s"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+
+                android:layout_alignParentRight="true"
+                android:layout_alignParentTop="true"
+                android:src="@drawable/tysdkn_selete"
+                android:visibility="invisible"
+                tools:visibility="visible"/>
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/tysdkn_pay_tyb_item_5"
+            android:layout_width="100dp"
+            android:layout_height="60dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_weight="1">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginRight="10dp"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/tysdkn_pay_item_s"
+                android:gravity="center"
+                android:orientation="vertical"
+                >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="500"
+                    android:textColor="#FF009CEE"
+                    android:textSize="16sp"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="2dp"
+                    android:text="宇币"
+                    android:textColor="#FF009CEE"
+                    android:textSize="16sp"/>
+            </LinearLayout>
+
+            <ImageView
+                android:id="@+id/tysdkn_pay_tyb_item_5_s"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:src="@drawable/tysdkn_selete"
+                android:visibility="invisible"
+                tools:visibility="visible"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentEnd="true"/>
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="100dp"
+            android:layout_height="60dp"
+            android:layout_weight="1">
+
+            <LinearLayout
+                android:id="@+id/tysdkn_pay_tyb_item_6"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginRight="10dp"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/tysdkn_pay_item"
+                android:gravity="center"
+                android:orientation="vertical"
+                >
+
+                <EditText
+                    android:id="@+id/tysdkn_pay_tyb_item_6_et"
+                    android:textColorHint="#dcdcdc"
+                    android:gravity="center"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@null"
+                    android:hint="其他"
+                    android:inputType="number"
+                    android:textColor="#FF009CEE"
+                    android:textSize="16sp"/>
+            </LinearLayout>
+
+
+        </RelativeLayout>
+    </LinearLayout>
+</LinearLayout>

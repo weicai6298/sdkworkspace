@@ -18,3 +18,35 @@
 #-keepclassmembers class fqcn.of.javascript.interface.for.webview {
 #   public *;
 #}
+
+-dontwarn com.xiaomi.**
+-keep class com.xiaomi.** {*;}
+-dontwarn org.xiaomi.**
+-keep class org.xiaomi.** {*;}
+-dontwarn com.wali.**
+-keep class com.wali.** {*;}
+-dontwarn com.mi.milink.**
+-keep class com.mi.milink.** {*;}
+-dontwarn cn.com.wali.**
+-keep class cn.com.wali.** {*;}
+-keep class com.example.milinksdkcore.** {*;}
+
+-dontwarn  org.apache.**
+-keep class org.apache.** {*;}
+
+-dontwarn android.net.**
+-keep class android.net.** {*;}
+-keep class android.** {*;}
+-keep class com.android.** {*;}
+-keep class com.google.** {*;}
+
+
+-keep class com.alipay.** {*;}
+-keep class com.ut.device.** {*;}
+-keep class com.ta.utdid2.** {*;}
+
+-keep class org.greenrobot.** {*;}
+
+-keep class com.bumptech.** {*;}
+
+-keep class com.payeco.** {*;}

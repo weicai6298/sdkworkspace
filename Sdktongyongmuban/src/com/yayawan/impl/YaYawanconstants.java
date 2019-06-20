@@ -10,14 +10,9 @@ import org.apache.http.client.methods.HttpPost;
 import org.apache.http.impl.client.DefaultHttpClient;
 import org.apache.http.message.BasicNameValuePair;
 import org.apache.http.protocol.HTTP;
-
-import android.annotation.SuppressLint;
-import android.annotation.TargetApi;
-import android.app.ActionBar;
 import android.app.Activity;
 import android.content.Context;
 import android.content.Intent;
-import android.os.Build;
 import android.util.Log;
 import android.widget.Toast;
 import com.kkgame.sdk.bean.User;
@@ -30,14 +25,13 @@ import com.yayawan.callback.YYWExitCallback;
 import com.yayawan.domain.YYWUser;
 import com.yayawan.main.YYWMain;
 
+@SuppressWarnings("deprecation")
 public class YaYawanconstants {
-
-	//	private static HashMap<String, String> mGoodsid;
 
 	private static Activity mActivity;
 
 	private static boolean isinit = false;
-	
+
 
 	/**
 	 * 初始化sdk
@@ -52,8 +46,7 @@ public class YaYawanconstants {
 	 * application初始化
 	 */
 	public static void applicationInit(Context applicationContext) {
-
-
+		
 	}
 
 	/**
@@ -62,7 +55,7 @@ public class YaYawanconstants {
 	public static void login(final Activity mactivity) {
 		Yayalog.loger("YaYawanconstantssdk登录");
 		if(isinit){
-			
+
 		}else{
 			inintsdk(mactivity);
 		}
@@ -74,17 +67,15 @@ public class YaYawanconstants {
 	 */
 	public static void pay(Activity mactivity, String morderid) {
 		Yayalog.loger("YaYawanconstantssdk支付");
-		
+
 	}
 
 	/**
 	 * 退出
-	 * 
 	 * @param paramActivity
 	 * @param callback
 	 */
-	public static void exit(Activity paramActivity,
-			final YYWExitCallback callback) {
+	public static void exit(Activity paramActivity,final YYWExitCallback callback) {
 		Yayalog.loger("YaYawanconstantssdk退出");
 
 		KgameSdk.Exitgame(paramActivity, new KgameSdkCallback() {
@@ -96,29 +87,34 @@ public class YaYawanconstants {
 
 			@Override
 			public void onLogout() {
-
 			}
 
 			@Override
 			public void onError(int arg0) {
-
 			}
 
 			@Override
 			public void onCancel() {
-
 			}
 		});
 	}
 
-	/**
+	/** 
 	 * 设置角色信息
-	 * 
 	 */
 	public static void setData(Activity paramActivity, String roleId, String roleName,String roleLevel, String zoneId, String zoneName, String roleCTime,String ext){
 		Yayalog.loger("YaYawanconstants设置角色信息");
 		//角色创建时间
-//		HttpPost(roleId,roleName,roleLevel,zoneId,zoneName,roleCTime);
+		//		HttpPost(roleId,roleName,roleLevel,zoneId,zoneName,roleCTime);
+
+		//1为角色登陆成功  2为角色创建  3为角色升级
+		if(Integer.parseInt(ext) == 1){
+			
+		}else if(Integer.parseInt(ext) == 2){
+			
+		}else if(Integer.parseInt(ext) == 3){
+			
+		}
 	}
 
 	public static void onResume(Activity paramActivity) {
@@ -133,8 +129,7 @@ public class YaYawanconstants {
 
 	}
 
-	public static void onActivityResult(Activity paramActivity, int paramInt1,
-			int paramInt2, Intent paramIntent) {
+	public static void onActivityResult(Activity paramActivity, int paramInt1,int paramInt2, Intent paramIntent) {
 
 	}
 
@@ -169,8 +164,7 @@ public class YaYawanconstants {
 	 * @param session
 	 *            token验证码
 	 */
-	public static void loginSuce(Activity mactivity, String uid,
-			String username, String session) {
+	public static void loginSuce(Activity mactivity, String uid,String username, String session) {
 
 		YYWMain.mUser = new YYWUser();
 
@@ -183,7 +177,7 @@ public class YaYawanconstants {
 					+ uid + "";
 		}
 
-		// YYWMain.mUser.nick = data.getNickName();
+//		 YYWMain.mUser.nick = data.getNickName();
 		YYWMain.mUser.token = JSONUtil.formatToken(mactivity, session,
 				YYWMain.mUser.userName);
 
@@ -201,7 +195,6 @@ public class YaYawanconstants {
 	public static void loginOut() {
 		if (YYWMain.mUserCallBack != null) {
 			YYWMain.mUserCallBack.onLogout(null);
-
 		}
 	}
 	/**
@@ -251,6 +244,7 @@ public class YaYawanconstants {
 	 * 请求上报角色信息
 	 * 
 	 */
+	@SuppressWarnings("unused")
 	private static void HttpPost(final String roleId, final String roleName,final String roleLevel, final String zoneId, final String zoneName, final String roleCTime) {
 		new Thread(new Runnable() {
 
@@ -272,21 +266,12 @@ public class YaYawanconstants {
 						httpPost.setEntity(new UrlEncodedFormEntity(params,
 								HTTP.UTF_8));
 						HttpResponse httpResponse = new DefaultHttpClient()
-								.execute(httpPost);
+						.execute(httpPost);
 						Log.i("tag",
 								"httpResponse.getStatusLine().getStatusCode()="
 										+ httpResponse.getStatusLine()
-												.getStatusCode());
+										.getStatusCode());
 						if (httpResponse.getStatusLine().getStatusCode() == 200) {
-//							String re = EntityUtils.toString(httpResponse
-//									.getEntity());
-//							Log.i("tag", "re=" + re);
-//							JSONObject js = new JSONObject(re);
-//							Log.i("tag", "js=" + js);
-//							uid = js.getString("uid");
-//							Log.i("tag", "uid=" + uid);
-//							Log.i("tag", "token=" + token);
-//							loginSuce(mActivity, uid, uid, token);
 							Toast("角色上报成功");
 						}
 

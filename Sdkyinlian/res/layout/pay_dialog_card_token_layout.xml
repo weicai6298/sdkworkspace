@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/pay_color_ffffff"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="50dp">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:text="@string/bindBankCard"
+                android:textColor="@color/pay_color_333333"
+                android:textSize="17sp" />
+
+            <FrameLayout
+                android:id="@+id/payDCTokenBack"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_gravity="left">
+
+                <ImageView
+                    android:layout_width="11dp"
+                    android:layout_height="18dp"
+                    android:layout_gravity="center"
+                    android:background="@drawable/pay_return" />
+            </FrameLayout>
+
+            <Button
+                android:id="@+id/payDCTokenNextStep"
+                android:layout_width="@dimen/size_60dp"
+                android:layout_height="@dimen/size_30dp"
+                android:layout_gravity="center_vertical|right"
+                android:layout_marginRight="@dimen/size_17dp"
+                android:background="@drawable/pay_bg_3095fb_circle"
+                android:text="@string/nextStep"
+                android:textColor="@color/pay_color_ffffff"
+                android:textSize="13sp" />
+        </FrameLayout>
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="2px"
+        android:background="@color/pay_color_bbbbbb" />
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:id="@+id/payDCTokenInputLayout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:layout_marginLeft="17dp"
+                android:layout_marginRight="17dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="10dp"
+                    android:gravity="center_vertical"
+                    android:text="@string/CardNum"
+                    android:textColor="@color/pay_color_333333"
+                    android:textSize="15sp" />
+
+                <EditText
+                    android:id="@+id/payDCTokenInputET"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@null"
+                    android:hint="@string/PleaseInputCardNum"
+                    android:inputType="number"
+                    android:lines="1"
+                    android:maxLength="23"
+                    android:paddingLeft="50dp"
+                    android:textColor="@color/pay_color_333333"
+                    android:textColorHint="@color/pay_color_bbbbbb"
+                    android:textSize="15sp" />
+
+                <ImageView
+                    android:id="@+id/payDCTokenClose"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical|right"
+                    android:padding="@dimen/size_10dp"
+                    android:src="@mipmap/pay_add_close"
+                    android:visibility="gone" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_gravity="bottom"
+                    android:background="@color/pay_color_bbbbbb" />
+            </FrameLayout>
+        </LinearLayout>
+
+        <WebView
+            android:id="@+id/payDCTokenWebLayout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:visibility="gone"></WebView>
+
+        <include
+            layout="@layout/progress"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_gravity="center" />
+    </FrameLayout>
+</LinearLayout>

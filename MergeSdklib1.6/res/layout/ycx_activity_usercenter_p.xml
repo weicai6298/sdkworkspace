@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="fill_parent"
+    android:background="@color/ycx_color_background"
+    android:orientation="vertical" >
+	<include layout="@layout/ycx_view_title"/>
+	<ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" >
+		<LinearLayout 
+		    android:layout_width="fill_parent"
+		    android:layout_height="fill_parent"
+		    android:layout_marginTop="100dip"
+		    android:orientation="vertical" >
+		    <RelativeLayout 
+		        android:layout_height="wrap_content"
+		        android:background="@color/ycx_color_white"
+		        android:layout_width="match_parent">
+		        <TextView 
+				  	android:id="@+id/ycx_tv_name"
+			        style="@style/ycx_style_tv"
+			        android:layout_marginTop="20dip"
+			        android:layout_centerVertical="true"
+			        android:text="登录账号   :"/>
+		        <TextView 
+			        android:layout_centerVertical="true"
+				  	android:layout_width="wrap_content"
+				  	android:layout_height="wrap_content"
+				  	android:layout_toRightOf="@id/ycx_tv_name"
+				  	android:textColor="@color/ycx_color_black"
+				  	android:id="@+id/ycx_tv_loginname"/>
+		        <Button 
+				    android:id="@+id/ycx_btn_changepwd"
+				    android:layout_centerVertical="true"
+				    android:layout_toRightOf="@id/ycx_tv_loginname"
+				    android:layout_width="90dip"
+				    android:layout_height="30dip"
+				    android:layout_marginLeft="20dip"
+				    android:paddingRight="10dip"
+				    android:paddingLeft="10dip"
+				    android:text="修改密码"
+				    android:layout_marginTop="20dip"
+				    android:layout_marginBottom="20dip"
+				    android:textColor="@color/ycx_color_white"
+				    android:background="@drawable/ycx_btn_bule_selector"/>  
+		    </RelativeLayout>
+		    
+		   
+		    
+		    <RelativeLayout 
+		        android:layout_height="wrap_content"
+		        android:background="@color/ycx_color_white"
+		        android:layout_width="match_parent">
+		        <TextView 
+				  	android:id="@+id/ycx_tv_title"
+			        style="@style/ycx_style_tv"
+			        android:layout_marginTop="20dip"
+			        android:layout_centerVertical="true"
+			        android:text="绑定手机   :"/>
+		        <TextView 
+			        android:layout_centerVertical="true"
+				  	android:layout_width="wrap_content"
+				  	android:layout_height="wrap_content"
+				  	android:layout_toRightOf="@id/ycx_tv_title"
+				  	android:textColor="@color/ycx_color_black"
+			       	android:id="@+id/ycx_tv_phone"
+			       	android:text="还没有绑定手机号"
+			        />  
+		         <Button 
+				    android:id="@+id/ycx_btn_bind"
+				    android:layout_centerVertical="true"
+				    android:layout_toRightOf="@id/ycx_tv_phone"
+				    android:layout_width="70dip"
+				    android:layout_height="30dip"
+				    android:layout_marginLeft="20dip"
+				    android:paddingRight="10dip"
+				    android:paddingLeft="10dip"
+				    android:text="绑定"
+				    android:layout_marginTop="20dip"
+				    android:layout_marginBottom="20dip"
+				    android:textColor="@color/ycx_color_white"
+				    android:background="@drawable/ycx_btn_bule_selector"/>
+		         <Button 
+				    android:id="@+id/ycx_btn_unbind"
+				    android:layout_centerVertical="true"
+				    android:layout_toRightOf="@id/ycx_btn_bind"
+				    android:layout_width="70dip"
+				    android:layout_height="30dip"
+				    android:layout_marginLeft="20dip"
+				    android:paddingRight="10dip"
+				    android:paddingLeft="10dip"
+				    android:text="解绑"
+				    android:visibility="gone"
+				    android:layout_marginTop="20dip"
+				    android:layout_marginBottom="20dip"
+				    android:textColor="@color/ycx_color_white"
+				    android:background="@drawable/ycx_btn_bule_selector"/>
+		    </RelativeLayout>
+		    
+			<RelativeLayout 
+		        android:layout_height="wrap_content"
+		        android:background="@color/ycx_color_white"
+		        android:id="@+id/ycx_rl_pt"
+		        android:visibility="gone"
+		        android:layout_width="match_parent">
+		        <TextView 
+				  	android:id="@+id/ycx_tv_pt"
+			        style="@style/ycx_style_tv"
+			        android:layout_marginTop="20dip"
+			        android:layout_centerVertical="true"
+			        android:text="平台币   :"/>
+		        <TextView 
+		            android:id="@+id/ycx_platcoin"
+			        android:layout_centerVertical="true"
+				  	android:layout_width="wrap_content"
+				  	android:textColor="#ff862e2c"
+				  	android:layout_height="wrap_content"
+				  	android:layout_toRightOf="@id/ycx_tv_pt"
+				  	android:text="0"
+			        />  
+			        
+		        <Button 
+				    android:id="@+id/ycx_btn_recharge"
+				    android:layout_centerVertical="true"
+				    android:layout_toRightOf="@id/ycx_platcoin"
+				    android:layout_width="70dip"
+				    android:layout_height="30dip"
+				    android:layout_marginLeft="20dip"
+				    android:paddingRight="10dip"
+				    android:paddingLeft="10dip"
+				    android:text="充值"
+				    android:layout_marginTop="20dip"
+				    android:layout_marginBottom="20dip"
+				    android:textColor="@color/ycx_color_white"
+				    android:background="@drawable/ycx_btn_bule_selector"/>
+		    </RelativeLayout>
+		    <RelativeLayout 
+		        android:layout_height="wrap_content"
+		        android:background="@color/ycx_color_white"
+		        android:id="@+id/ycx_rl_by"
+		        android:visibility="gone"
+		        android:layout_width="match_parent">
+		        <TextView 
+				  	android:id="@+id/ycx_tv_ye"
+			        style="@style/ycx_style_tv"
+			        android:layout_marginTop="20dip"
+			        android:layout_centerVertical="true"
+			        android:text="绑银余额  :"/>
+		        <TextView 
+			        android:layout_centerVertical="true"
+				  	android:layout_width="wrap_content"
+				  	android:layout_height="wrap_content"
+				  	android:layout_toRightOf="@id/ycx_tv_ye"
+				  	android:textColor="#ff862e2c"
+			        android:text="0"
+			        android:id="@+id/ycx_bindcoin"
+			        />  
+		    </RelativeLayout>
+			
+			
+		</LinearLayout>
+	</ScrollView>
+</LinearLayout>

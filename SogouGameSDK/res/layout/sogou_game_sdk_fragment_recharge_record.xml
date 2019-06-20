@@ -25,9 +25,10 @@
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="15dp"
                 android:layout_marginTop="15dp"
+                android:singleLine="true"
                 android:text=""
                 android:textColor="@color/sogou_game_sdk_color_111111"
-                android:textSize="15sp" />
+                android:textSize="@dimen/rechargeName" />
 
             <TextView
                 android:id="@+id/sogou_game_sdk_recharge_record_sdou_tv"

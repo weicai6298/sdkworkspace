@@ -13,7 +13,6 @@
         android:layout_height="wrap_content"
         android:orientation="vertical"
         android:background="@drawable/ipay_cash_coupon_bg"
-        android:layout_alignParentBottom="true"
         android:layout_marginLeft="215dp"
         android:layout_marginRight="@dimen/ipay_margin_10"
         >
@@ -96,19 +95,20 @@
                 android:layout_width="match_parent"
                 android:layout_height="@dimen/ipay_height_45"
                 android:layout_margin="@dimen/ipay_margin_10"
-                android:background="@color/ipay_color_value_1"
-                android:gravity="center_vertical">
+                android:background="@color/ipay_color_value_1">
                 <TextView
                     android:id="@+id/tv_cash"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:textColor="@color/ipay_color_value_7"
                     android:textSize="@dimen/ipay_text_size_12"
+                    android:layout_centerVertical="true"
                     android:layout_marginLeft="@dimen/ipay_margin_10"/>
                 <CheckBox
                     android:id="@+id/ipay_check"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
                     android:layout_alignParentRight="true"
                     android:clickable="false"
                     android:layout_marginRight="@dimen/ipay_margin_15"

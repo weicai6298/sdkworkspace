@@ -1,18 +1,19 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:id="@+id/com_tencent_ysdk_icon_h5_layout"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@android:color/transparent"
     android:focusable="true"
     android:focusableInTouchMode="true"
-    android:gravity="center_horizontal">
+    android:gravity="center">
 
     <RelativeLayout
         android:id="@+id/com_tencent_ysdk_icon_h5_container"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:background="@android:color/transparent">
+        android:background="@android:color/transparent"
+        android:gravity="center">
 
         <com.tencent.smtt.sdk.WebView
             android:id="@+id/com_tencent_ysdk_icon_webView"
@@ -36,4 +37,4 @@
             android:background="@drawable/com_tencent_ysdk_icon_h5_xx" />
 
     </RelativeLayout>
-</LinearLayout><!-- From: file:/data/rdm/projects/18500/ysdk/src/main/res/layout/com_tencent_ysdk_icon_sample.xml -->
+</RelativeLayout><!-- From: file:/data/rdm/projects/18500/ysdk/src/main/res/layout/com_tencent_ysdk_icon_sample.xml -->

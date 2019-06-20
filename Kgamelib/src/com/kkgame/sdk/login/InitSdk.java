@@ -11,8 +11,7 @@ import android.content.SharedPreferences;
 import android.os.Environment;
 import android.util.Log;
 
-import com.kkgame.sdk.db.DataTransfermationDao;
-import com.kkgame.sdk.db.OldSDBHelper;
+
 import com.kkgame.sdk.db.UserDao;
 import com.kkgame.utils.DeviceUtil;
 import com.kkgame.utils.Yayalog;
@@ -79,24 +78,7 @@ public class InitSdk {
 		}.start();*/
 	}
 	
-	/**
-	 * 迁移老版本sdk用户数据
-	 */
-	private static void initData(Context mcoContext) {
-		if (Environment.MEDIA_MOUNTED.equals(Environment
-				.getExternalStorageState())) {
-			File dbFolder = new File(OldSDBHelper.DB_DIR);
-			if (dbFolder.exists()) {
-				// 将原数据库中的数据写入新数据库
-				UserDao.getInstance(mcoContext)
-						.writeUsers(
-								DataTransfermationDao.getInstance(mcoContext)
-										.getUsers());
-
-			}
-		}
-
-	}
+	
 
 	public static void getAnnouncement(final Activity mActivity) {
 		// TODO Auto-generated method stub

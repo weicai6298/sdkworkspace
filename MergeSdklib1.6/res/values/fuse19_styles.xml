@@ -1,0 +1,18 @@
+<resources xmlns:android="http://schemas.android.com/apk/res/android">
+
+	<!--   自定义dialog样式 -->
+  <style name="fuse19_style_Dialog" parent="android:style/Theme.Dialog">
+	  <item name="android:background">#00000000</item> 
+	  <item name="android:windowBackground">@android:color/transparent</item> 
+	  <item name="android:windowNoTitle">true</item> 
+	  <item name="android:windowFullscreen">true</item> 
+	  <item name="android:windowIsFloating">true</item> 
+  </style>
+   <style name="fuse19_style_dialog_title">
+	  <item name="android:textSize">18.0dip</item> 
+	  <item name="android:textColor">@color/fuse19_color_black</item> 
+	  <item name="android:gravity">center</item> 
+	  <item name="android:layout_width">wrap_content</item> 
+	  <item name="android:layout_height">40.0dip</item> 
+  </style>
+</resources>

@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/bsgamesdk_activity_registerLayout"
+    android:layout_width="wrap_content"
+    android:layout_height="match_parent"
+    android:background="?attr/bsgamesdk_main_background"
+    android:gravity="center"
+    android:orientation="vertical"
+    tools:context=".activity.RegisterActivity" >
+
+    <include
+        android:id="@+id/bsgamesdk_titleLayout"
+        layout="@layout/bsgamesdk_title" />
+
+    <include
+        android:id="@+id/bsgamesdk_areaLayout"
+        layout="@layout/bsgamesdk_area"
+        android:visibility="gone" />
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:background="@color/bsgamesdk_transparent"
+        android:gravity="center"
+        android:orientation="vertical" >
+
+        <include
+            android:id="@+id/bsgamesdk_captchaLayout"
+            layout="@layout/bsgamesdk_captcha"
+            android:visibility="gone" />
+
+        <include
+            android:id="@+id/bsgamesdk_registerLayout"
+            layout="@layout/bsgamesdk_register"
+            android:visibility="gone" />
+
+    </LinearLayout>
+
+</LinearLayout>

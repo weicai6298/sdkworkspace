@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+             android:layout_width="match_parent"
+             android:layout_height="wrap_content"
+             android:orientation="vertical"
+             android:paddingBottom="10dp"
+             android:paddingLeft="20dp"
+             android:paddingRight="20dp"
+             android:paddingTop="10dp"
+
+    >
+
+    <LinearLayout
+        android:id="@+id/popu_contentview"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:background="@drawable/sy233popup_bg"
+        android:fitsSystemWindows="true"
+        android:gravity="center_horizontal"
+        android:orientation="vertical">
+
+        <include layout="@layout/sy233activity_header"/>
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:scrollbars="none">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingLeft="15dp"
+                android:paddingRight="15dp"
+                android:background="@drawable/sy233popup_bottom_bg"
+                android:orientation="vertical"
+                android:paddingBottom="15dp"
+                >
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="36dp"
+                    android:layout_marginTop="10dp"
+                    android:background="@drawable/sy233charge_info_bg"
+                    android:gravity="center_vertical"
+                    android:padding="5dp">
+
+
+                    <ImageButton
+                        android:visibility="visible"
+                        android:id="@+id/ib_clean_username"
+                        android:layout_width="28dp"
+                        android:layout_height="28dp"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:background="@mipmap/sy233clean"/>
+
+                    <ImageView
+                        android:id="@+id/temp"
+                        android:layout_width="22dp"
+                        android:layout_height="22dp"
+                        android:layout_centerVertical="true"
+                        android:src="@mipmap/sy233left_account"/>
+
+                    <EditText
+                        android:textSize="15sp"
+                        android:id="@+id/ed_username"
+                        style="@style/sy233register_edit"
+                        android:layout_alignParentTop="true"
+                        android:layout_centerHorizontal="true"
+                        android:layout_toLeftOf="@id/ib_clean_username"
+                        android:layout_toRightOf="@+id/temp"
+                        android:hint="@string/sy233bind_phone"
+                        android:inputType="text"
+                        android:maxLength="16"/>
+
+                </RelativeLayout>
+
+
+                <RelativeLayout
+                    android:id="@+id/sy233ll_pwd_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="36dp"
+                    android:layout_marginTop="10dp"
+                    android:background="@drawable/sy233charge_info_bg"
+                    android:gravity="center_vertical"
+                    android:padding="5dp">
+                    <CheckBox
+                        android:padding="10dp"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:id="@+id/ib_pwd_show"
+                        android:layout_width="30dp"
+                        android:layout_height="22dp"
+                        android:button="@null"
+                        android:checked="false"
+                        android:background="@drawable/sy233pwd_hide_bg"/>
+
+                    <ImageView
+                        android:id="@+id/temp3"
+                        android:layout_width="22dp"
+                        android:layout_height="22dp"
+                        android:layout_centerVertical="true"
+                        android:src="@mipmap/sy233left_pwd"/>
+
+                    <EditText
+                        android:textSize="15sp"
+                        android:id="@+id/ed_pwd"
+                        style="@style/sy233register_edit"
+                        android:layout_alignParentTop="true"
+                        android:layout_centerHorizontal="true"
+                        android:layout_toLeftOf="@id/ib_pwd_show"
+                        android:layout_toRightOf="@+id/temp3"
+                        android:hint="请输入6-16位登录密码"
+                        android:inputType="textVisiblePassword"
+                        android:maxLength="16"/>
+
+                </RelativeLayout>
+
+
+                <Button
+                    android:id="@+id/bt_commit"
+                    android:layout_width="match_parent"
+                    android:layout_height="35dp"
+                    android:layout_marginTop="15dp"
+                    android:background="@drawable/sy233bt_detail_down_bg"
+                    android:text="绑定"
+                    android:textColor="@android:color/white"
+                    android:textSize="18dp"/>
+
+                <LinearLayout
+                    android:visibility="gone"
+                    android:id="@+id/sy233ll_clause"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:gravity="center_vertical|right"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:textColor="@color/sy233graytextcolor"
+                        android:textSize="12dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/sy233register_alert"/>
+
+                    <TextView
+                        android:textSize="12dp"
+                        android:id="@+id/tv_agreement"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/sy233customer_prot"
+                        android:textColor="@color/sy233colorPrimary"/>
+                </LinearLayout>
+            </LinearLayout>
+        </ScrollView>
+    </LinearLayout>
+</FrameLayout>
+

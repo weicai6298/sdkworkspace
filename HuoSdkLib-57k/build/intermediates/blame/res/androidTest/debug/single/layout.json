@@ -1,0 +1,82 @@
+[
+    {
+        "merged": "C:\\AndroidStudioProjects\\zhiai2018\\HuoSdkLib\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\huo_sdk_pop_record_account.xml",
+        "source": "C:\\AndroidStudioProjects\\zhiai2018\\HuoSdkLib\\build\\intermediates\\bundles\\debug\\res\\layout\\huo_sdk_pop_record_account.xml"
+    },
+    {
+        "merged": "C:\\AndroidStudioProjects\\zhiai2018\\HuoSdkLib\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\huo_sdk_inlude_mobile_register.xml",
+        "source": "C:\\AndroidStudioProjects\\zhiai2018\\HuoSdkLib\\build\\intermediates\\bundles\\debug\\res\\layout\\huo_sdk_inlude_mobile_register.xml"
+    },
+    {
+        "merged": "C:\\AndroidStudioProjects\\zhiai2018\\HuoSdkLib\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\huo_sdk_include_fast_login.xml",
+        "source": "C:\\AndroidStudioProjects\\zhiai2018\\HuoSdkLib\\build\\intermediates\\bundles\\debug\\res\\layout\\huo_sdk_include_fast_login.xml"
+    },
+    {
+        "merged": "C:\\AndroidStudioProjects\\zhiai2018\\HuoSdkLib\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\huo_sdk_float_layout.xml",
+        "source": "C:\\AndroidStudioProjects\\zhiai2018\\HuoSdkLib\\build\\intermediates\\bundles\\debug\\res\\layout\\huo_sdk_float_layout.xml"
+    },
+    {
+        "merged": "C:\\AndroidStudioProjects\\zhiai2018\\HuoSdkLib\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\huo_sdk_activity_float_web.xml",
+        "source": "C:\\AndroidStudioProjects\\zhiai2018\\HuoSdkLib\\build\\intermediates\\bundles\\debug\\res\\layout\\huo_sdk_activity_float_web.xml"
+    },
+    {
+        "merged": "C:\\AndroidStudioProjects\\zhiai2018\\HuoSdkLib\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\huo_sdk_activity_huo_login.xml",
+        "source": "C:\\AndroidStudioProjects\\zhiai2018\\HuoSdkLib\\build\\intermediates\\bundles\\debug\\res\\layout\\huo_sdk_activity_huo_login.xml"
+    },
+    {
+        "merged": "C:\\AndroidStudioProjects\\zhiai2018\\HuoSdkLib\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\huo_sdk_dialog_notice.xml",
+        "source": "C:\\AndroidStudioProjects\\zhiai2018\\HuoSdkLib\\build\\intermediates\\bundles\\debug\\res\\layout\\huo_sdk_dialog_notice.xml"
+    },
+    {
+        "merged": "C:\\AndroidStudioProjects\\zhiai2018\\HuoSdkLib\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\huo_sdk_include_user_register.xml",
+        "source": "C:\\AndroidStudioProjects\\zhiai2018\\HuoSdkLib\\build\\intermediates\\bundles\\debug\\res\\layout\\huo_sdk_include_user_register.xml"
+    },
+    {
+        "merged": "C:\\AndroidStudioProjects\\zhiai2018\\HuoSdkLib\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\huo_sdk_include_login.xml",
+        "source": "C:\\AndroidStudioProjects\\zhiai2018\\HuoSdkLib\\build\\intermediates\\bundles\\debug\\res\\layout\\huo_sdk_include_login.xml"
+    },
+    {
+        "merged": "C:\\AndroidStudioProjects\\zhiai2018\\HuoSdkLib\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\huo_sdk_view_select_account.xml",
+        "source": "C:\\AndroidStudioProjects\\zhiai2018\\HuoSdkLib\\build\\intermediates\\bundles\\debug\\res\\layout\\huo_sdk_view_select_account.xml"
+    },
+    {
+        "merged": "C:\\AndroidStudioProjects\\zhiai2018\\HuoSdkLib\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\huo_sdk_float_bottom.xml",
+        "source": "C:\\AndroidStudioProjects\\zhiai2018\\HuoSdkLib\\build\\intermediates\\bundles\\debug\\res\\layout\\huo_sdk_float_bottom.xml"
+    },
+    {
+        "merged": "C:\\AndroidStudioProjects\\zhiai2018\\HuoSdkLib\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\huo_sdk_activity_web_notice.xml",
+        "source": "C:\\AndroidStudioProjects\\zhiai2018\\HuoSdkLib\\build\\intermediates\\bundles\\debug\\res\\layout\\huo_sdk_activity_web_notice.xml"
+    },
+    {
+        "merged": "C:\\AndroidStudioProjects\\zhiai2018\\HuoSdkLib\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\huo_sdk_float_hide_dialog.xml",
+        "source": "C:\\AndroidStudioProjects\\zhiai2018\\HuoSdkLib\\build\\intermediates\\bundles\\debug\\res\\layout\\huo_sdk_float_hide_dialog.xml"
+    },
+    {
+        "merged": "C:\\AndroidStudioProjects\\zhiai2018\\HuoSdkLib\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\huo_sdk_pop_record_account_list_item.xml",
+        "source": "C:\\AndroidStudioProjects\\zhiai2018\\HuoSdkLib\\build\\intermediates\\bundles\\debug\\res\\layout\\huo_sdk_pop_record_account_list_item.xml"
+    },
+    {
+        "merged": "C:\\AndroidStudioProjects\\zhiai2018\\HuoSdkLib\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\huo_sdk_dialog_open_float.xml",
+        "source": "C:\\AndroidStudioProjects\\zhiai2018\\HuoSdkLib\\build\\intermediates\\bundles\\debug\\res\\layout\\huo_sdk_dialog_open_float.xml"
+    },
+    {
+        "merged": "C:\\AndroidStudioProjects\\zhiai2018\\HuoSdkLib\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\huo_sdk_activity_web_pay.xml",
+        "source": "C:\\AndroidStudioProjects\\zhiai2018\\HuoSdkLib\\build\\intermediates\\bundles\\debug\\res\\layout\\huo_sdk_activity_web_pay.xml"
+    },
+    {
+        "merged": "C:\\AndroidStudioProjects\\zhiai2018\\HuoSdkLib\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\huosdk_item_select_account.xml",
+        "source": "C:\\AndroidStudioProjects\\zhiai2018\\HuoSdkLib\\build\\intermediates\\bundles\\debug\\res\\layout\\huosdk_item_select_account.xml"
+    },
+    {
+        "merged": "C:\\AndroidStudioProjects\\zhiai2018\\HuoSdkLib\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\huo_sdk_hint_install_wxpay.xml",
+        "source": "C:\\AndroidStudioProjects\\zhiai2018\\HuoSdkLib\\build\\intermediates\\bundles\\debug\\res\\layout\\huo_sdk_hint_install_wxpay.xml"
+    },
+    {
+        "merged": "C:\\AndroidStudioProjects\\zhiai2018\\HuoSdkLib\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\huo_sdk_dialog_loading.xml",
+        "source": "C:\\AndroidStudioProjects\\zhiai2018\\HuoSdkLib\\build\\intermediates\\bundles\\debug\\res\\layout\\huo_sdk_dialog_loading.xml"
+    },
+    {
+        "merged": "C:\\AndroidStudioProjects\\zhiai2018\\HuoSdkLib\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\huo_sdk_include_mobile_login.xml",
+        "source": "C:\\AndroidStudioProjects\\zhiai2018\\HuoSdkLib\\build\\intermediates\\bundles\\debug\\res\\layout\\huo_sdk_include_mobile_login.xml"
+    }
+]

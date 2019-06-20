@@ -17,7 +17,18 @@
     <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
     <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW" />
     <uses-permission android:name="android.permission.GET_TASKS" />
+    <uses-permission android:name="vivo.game.permission.OPEN_JUMP_INTENTS" />
+    <uses-permission android:name="android.permission.CHANGE_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.GET_ACCOUNTS" />
+    <uses-permission android:name="android.permission.RECEIVE_SMS" />
+    <uses-permission android:name="android.permission.SEND_SMS" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="com.bbk.account.permission.READ_ACCOUNTINFO" />
 
+     <!-- 新增权限 -->
+    <uses-permission android:name="android.permission.REQUEST_INSTALL_PACKAGES"/>
+    
     <application
         android:name="com.yayawan.impl.YYApplication"
         android:allowBackup="true"
@@ -36,20 +47,36 @@
         <!-- 手游互联配置 -->
         <meta-data
             android:name="app_id"
-            android:value="kk4098818794" />
+            android:value="kk2823317280" />
         <meta-data
             android:name="isLandscape"
             android:value="true" />
+        
+        
+          <meta-data
+            android:name="vivo_appid"
+            android:value="7a2fc3007c6fa8515109e3c0b8bc4233" />
+        
+<meta-data
+		android:name="vivo_union_sdk"
+		android:value="4.2.4.0" />
 
-        <activity
-            android:name="com.unionpay.UPPayWapActivity"
-            android:configChanges="orientation|keyboardHidden"
-            android:screenOrientation="portrait"
-            android:windowSoftInputMode="adjustResize" />
-
-        <uses-library
-            android:name="org.simalliance.openmobileapi"
-            android:required="false" />
+	<!-- vivo sdk componets start -->
+	<!--vivo sdk的Activity-->
+	<activity android:name="com.vivo.unionsdk.ui.UnionActivity"
+			  android:configChanges="orientation|keyboardHidden|navigation|screenSize"
+			  android:theme="@android:style/Theme.Dialog">
+		<intent-filter>
+			<action android:name="android.intent.action.VIEW"/>
+			<category android:name="android.intent.category.DEFAULT"/>
+			<category android:name="android.intent.category.BROWSABLE"/>
+			<data
+				android:scheme="vivounion"
+				android:host="union.vivo.com"
+				android:path="/openjump"/>
+		</intent-filter>
+	</activity>
+	<!-- vivo sdk componets end -->
     </application>
 
 </manifest>

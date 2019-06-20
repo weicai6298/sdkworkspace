@@ -8,10 +8,10 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="vertical"
-        android:layout_alignParentTop="true"
         android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true">
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:orientation="vertical">
 
 
         <TextView
@@ -24,10 +24,10 @@
 
         <LinearLayout
             android:id="@+id/activation_go_code_wap"
-            android:gravity="center_vertical"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="@dimen/m4399_ope_activation_top_margin"
+            android:gravity="center_vertical"
             android:orientation="horizontal">
 
             <TextView
@@ -36,10 +36,11 @@
                 android:text="@string/m4399_ope_activation_get"
                 android:textColor="@color/m4399_ope_activation_get_blue"
                 android:textSize="@dimen/m4399_ope_activation_font_size" />
+
             <ImageButton
-                android:layout_marginLeft="@dimen/m4399_ope_activation_get_padding"
                 android:layout_width="@dimen/m4399_ope_activation_icon_with"
                 android:layout_height="@dimen/m4399_ope_activation_icon_with"
+                android:layout_marginLeft="@dimen/m4399_ope_activation_get_padding"
                 android:background="@drawable/m4399_ope_activation_go" />
 
 

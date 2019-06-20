@@ -45,6 +45,8 @@ public class ChargerImpl implements YYWCharger {
 	}
 
 	String orderId = null;
+	String assessKey = null;
+	String order_id = null;
 
 	public void createOrder(final Activity paramActivity) {
 		progress(paramActivity);
@@ -69,14 +71,12 @@ public class ChargerImpl implements YYWCharger {
 
 					@Override
 					public void onFailure(HttpException arg0, String arg1) {
-						// TODO Auto-generated method stub
 						Yayalog.loger("下单失败"+arg1.toString());
 						disprogress();
 					}
 
 					@Override
 					public void onSuccess(ResponseInfo<String> arg0) {
-						// TODO Auto-generated method stub
 						disprogress();
 						try {
 							Yayalog.loger("下单成功"+arg0.result);
@@ -85,6 +85,8 @@ public class ChargerImpl implements YYWCharger {
 							if (err_code == 0) {
 								JSONObject data = obj.getJSONObject("data");
 								orderId = data.optString("id");
+								assessKey = data.optString("accessKey");
+								order_id = data.optString("order_id");
 
 								new Handler(Looper.getMainLooper())
 										.post(new Runnable() {
@@ -97,7 +99,6 @@ public class ChargerImpl implements YYWCharger {
 										});
 							}
 						} catch (JSONException e) {
-							// TODO Auto-generated catch block
 							e.printStackTrace();
 						}
 					}
@@ -107,9 +108,11 @@ public class ChargerImpl implements YYWCharger {
 
 	private void pay_run(final Activity paramActivity) {
 
-		YaYawanconstants.pay(paramActivity, orderId);
+		YaYawanconstants.pay(paramActivity, orderId,assessKey,order_id);
 
 	}
+	
+	
 
 	ProgressDialog progressDialog = null;
 
@@ -128,7 +131,7 @@ public class ChargerImpl implements YYWCharger {
 		// 设置ProgressDialog 是否可以按退回按键取消
 		progressDialog.setCancelable(false);
 		// 设置ProgressDialog 的一个Button
-		// progressDialog.setButton("确定", new SureButtonListener());
+//		 progressDialog.setButton("确定", new SureButtonListener());
 		// 让ProgressDialog显示
 		try {
 			progressDialog.show();

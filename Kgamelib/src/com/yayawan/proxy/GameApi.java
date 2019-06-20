@@ -1,6 +1,5 @@
 package com.yayawan.proxy;
 
-import java.util.UUID;
 
 import org.json.JSONException;
 import org.json.JSONObject;

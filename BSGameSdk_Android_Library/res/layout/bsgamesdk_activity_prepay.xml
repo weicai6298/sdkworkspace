@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/bsgamesdk_id_prePayLayout"
+    android:layout_width="300dp"
+    android:layout_height="match_parent"
+    android:background="?attr/bsgamesdk_main_background"
+    android:gravity="center"
+    android:orientation="vertical">
+
+    <include
+        android:id="@+id/bsgamesdk_titleLayout"
+        layout="@layout/bsgamesdk_title"
+        />
+
+    <include
+        android:id="@+id/bsgamesdk_permittedMinorLayout"
+        layout="@layout/bsgamesdk_tips_permitted_minor"
+        />
+
+    <include
+        android:id="@+id/bsgamesdk_unpermittedMinorLayout"
+        layout="@layout/bsgamesdk_tips_unpermitted_minor"
+        />
+</LinearLayout>

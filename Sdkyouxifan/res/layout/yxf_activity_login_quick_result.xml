@@ -1,0 +1,185 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:id="@+id/rl_login_register"
+        android:layout_width="306.67dp"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:minHeight="306.67dp"
+        android:visibility="visible">
+
+ <!--       <View
+            android:id="@+id/view_whi1"
+            android:layout_width="200dp"
+            android:layout_height="0.1dp"
+            android:layout_centerHorizontal="true"
+            android:background="@drawable/yxf_lin_shape_whi"></View>-->
+
+        <RelativeLayout
+            android:id="@+id/rl_login_register_in"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+
+            android:background="@drawable/yxf_bt_in_bg_whi">
+
+            <RelativeLayout
+                android:id="@+id/rl_in_title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="23.33dp"
+                android:layout_marginRight="23.33dp"
+                android:layout_marginTop="30.33dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:layout_gravity="left"
+                    android:text="注册成功！"
+                    android:textColor="@color/yxf_sdk_gray_title"
+                    android:textSize="17.33sp" />
+
+            </RelativeLayout>
+
+            <LinearLayout
+                android:id="@+id/ll_in1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/rl_in_title"
+                android:layout_marginLeft="22dp"
+                android:layout_marginRight="26.67dp"
+                android:layout_marginTop="36dp"
+                android:orientation="horizontal">
+
+
+                <TextView
+                    android:id="@+id/tv_pwd_email_name"
+                    android:layout_width="50dp"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/rl_in_title"
+                    android:gravity="right"
+                    android:text="账号： "
+                    android:textColor="@color/yxf_sdk_green_result"
+                    android:textSize="14.67sp" />
+
+                <TextView
+                    android:id="@+id/tv_pwd_email_name_value"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/rl_in_title"
+                    android:layout_gravity="left"
+                    android:text="lvjs45562114"
+                    android:textColor="@color/yxf_sdk_green_result"
+                    android:textSize="14.67sp" />
+
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:id="@+id/ll_in2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/ll_in1"
+                android:layout_marginLeft="22dp"
+                android:layout_marginRight="26.67dp"
+                android:layout_marginTop="13.33dp"
+                android:orientation="horizontal">
+
+
+                <TextView
+                    android:id="@+id/tv_pwd_email_add"
+                    android:layout_width="50dp"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/rl_in_title"
+                    android:gravity="right"
+                    android:text="密码： "
+                    android:textColor="@color/yxf_sdk_green_result"
+                    android:textSize="14.67sp" />
+
+                <TextView
+                    android:id="@+id/tv_pwd_email_add_value"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/rl_in_title"
+                    android:layout_gravity="left"
+                    android:text="6456562114"
+                    android:textColor="@color/yxf_sdk_green_result"
+                    android:textSize="14.67sp" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/ll_title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/ll_in2"
+                android:layout_marginLeft="26.67dp"
+                android:layout_marginRight="26.67dp"
+                android:layout_marginTop="20dp"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="left"
+                    android:text="您的账号密码已经成功截图保存到您的手机相册，为了您的账户安全，请尽快修改密码"
+                    android:textColor="@color/yxf_sdk_gray_result"
+                    android:textSize="12sp" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/ll_login_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/ll_title"
+                android:layout_centerHorizontal="true"
+                android:layout_gravity="center"
+                android:paddingBottom="39.67dp"
+                android:layout_marginLeft="26.67dp"
+                android:layout_marginRight="26.67dp"
+                android:layout_marginTop="30.67dp"
+                android:orientation="vertical">
+
+<!--                <View
+                    android:id="@+id/login_line1"
+                    android:layout_width="200dp"
+                    android:layout_height="0.1dp"
+                    android:layout_gravity="center_horizontal"
+                    android:background="@drawable/yxf_lin_shape_yel"
+                    android:visibility="visible"></View>-->
+
+                <Button
+                    android:id="@+id/btn_login"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:background="@drawable/yxf_lin_shape_red"
+                    android:text="我知道了"
+                    android:textColor="@color/yxf_sdk_gray_title"
+                    android:textSize="14.67sp" />
+
+<!--                <View
+                    android:id="@+id/login_line2"
+                    android:layout_width="200dp"
+                    android:layout_height="0.1dp"
+                    android:layout_gravity="center_horizontal"
+                    android:background="@drawable/yxf_lin_shape_yel"
+                    android:visibility="visible"></View>-->
+
+            </LinearLayout>
+
+        </RelativeLayout>
+
+<!--        <View
+            android:layout_width="200dp"
+            android:layout_height="0.1dp"
+            android:layout_below="@+id/rl_login_register_in"
+            android:layout_centerHorizontal="true"
+            android:background="@drawable/yxf_lin_shape_whi"></View>-->
+
+    </RelativeLayout>
+
+</RelativeLayout>

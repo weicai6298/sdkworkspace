@@ -53,8 +53,8 @@
             android:orientation="horizontal">
 
             <EditText
-                style="@style/m4399RecInputAreaStyle"
                 android:id="@+id/edt_tel"
+                style="@style/m4399RecInputAreaStyle"
                 android:layout_width="0px"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
@@ -64,11 +64,11 @@
 
             <Button
                 android:id="@+id/btn_get_captcha"
-                android:enabled="false"
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
                 android:layout_marginLeft="-2dp"
                 android:background="@drawable/m4399_rec_right_btn_bg"
+                android:enabled="false"
                 android:gravity="center"
                 android:paddingLeft="@dimen/m4399_rec_liantong_cfm_captcha_padding"
                 android:paddingRight="@dimen/m4399_rec_liantong_cfm_captcha_padding"
@@ -79,12 +79,12 @@
 
 
         <EditText
-            android:layout_marginTop="10dp"
-            style="@style/m4399RecInputAreaStyle"
             android:id="@+id/edt_captcha"
+            style="@style/m4399RecInputAreaStyle"
+            android:layout_height="40dp"
+            android:layout_marginTop="10dp"
             android:hint="@string/m4399_rec_sms_input_captha_tip"
-            android:imeOptions="actionDone"
-            android:layout_height="40dp"/>
+            android:imeOptions="actionDone" />
 
         <TextView
             android:id="@+id/editText"
@@ -93,8 +93,8 @@
             android:layout_gravity="left|center_vertical"
             android:layout_marginTop="10dp"
             android:text="@string/m4399_rec_sms_get_captha_constraint"
-            android:textSize="13sp"
-            android:textColor="#bbbbbb" />
+            android:textColor="#bbbbbb"
+            android:textSize="13sp" />
 
     </LinearLayout>
 

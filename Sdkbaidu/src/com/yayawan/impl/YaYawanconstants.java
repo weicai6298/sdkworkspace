@@ -13,6 +13,8 @@ import org.apache.http.protocol.HTTP;
 import android.app.Activity;
 import android.content.Context;
 import android.content.Intent;
+import android.os.Handler;
+import android.os.Looper;
 import android.util.Log;
 import android.widget.Toast;
 import com.baidu.gamesdk.BDGameSDK;
@@ -38,11 +40,11 @@ public class YaYawanconstants {
 	private static Activity mActivity;
 
 	private static boolean isinit = false;
-//	private static boolean islogin = false;
+
+	private static int islogin = 0;
 
 	public static String uid;
 	public static String token;
-
 
 	/**
 	 * 初始化sdk
@@ -58,7 +60,7 @@ public class YaYawanconstants {
 		mBDGameSDKSetting.setAppKey(BD_appkey); // APPKEY设置
 		mBDGameSDKSetting.setDomain(Domain.RELEASE); // 设置为正式模式
 		mBDGameSDKSetting.setOrientation(DeviceUtil.isLandscape(mActivity)?Orientation.LANDSCAPE:Orientation.PORTRAIT);
-
+        
 		BDGameSDK.init(mactivity, mBDGameSDKSetting, new IResponse<Void>() {
 
 			@Override
@@ -69,26 +71,27 @@ public class YaYawanconstants {
 					// 初始化成功
 					isinit = true;
 					Log.i("tag","初始化成功");
-//					Toast("启动成功");
+					BDGameSDK.getAnnouncementInfo(mactivity);
+					if(islogin == 0){ //0 未登录
+								login(mactivity);
+					}
 					break;
 
 				case ResultCode.INIT_FAIL:
 				default:
 					Log.i("tag","初始化失败");
-//					Toast("启动失败");
 					mActivity.finish();
 					// 初始化失败
 				}
 
 			}
 		});
-			setSuspendWindowChangeAccountListener(); // 设置切换账号事件监听（个人中心界面切换账号）
-//			
-			setSessionInvalidListener(); // 设置会话失效监听
-			
-			BDGameSDK.closeFloatView(mactivity); // 关闭悬浮窗
-			
-//		islogin = false;
+		BDGameSDK.closeFloatView(mactivity); // 关闭悬浮窗
+
+		setSuspendWindowChangeAccountListener(); // 设置切换账号事件监听（个人中心界面切换账号）
+		//		
+		setSessionInvalidListener(); // 设置会话失效监听
+
 	}
 
 	/**
@@ -101,12 +104,13 @@ public class YaYawanconstants {
 	/**
 	 * 登录
 	 */
-	public static void login(final Activity mactivity) {
+	public static void login(Activity mactivity) {
 		Yayalog.loger("YaYawanconstantssdk登录");
-//		if((isinit) && (!BDGameSDK.isLogined())){
-			if(isinit){
-				Log.i("tag","开始登录");
-			BDGameSDK.login(mactivity, new IResponse<Void>() {
+		//		if((isinit) && (!BDGameSDK.isLogined())){
+		//		Log.i("tag","islogin == " +islogin);
+		if(isinit && islogin==0 && YYWMain.mUserCallBack != null){
+			Log.i("tag","YYWMain.mUserCallBack = "+YYWMain.mUserCallBack);
+			BDGameSDK.login(mActivity, new IResponse<Void>() {
 				@Override
 				public void onResponse(int resultCode, String resultDesc,
 						Void extraData) {
@@ -115,10 +119,9 @@ public class YaYawanconstants {
 					case ResultCode.LOGIN_SUCCESS:
 						uid = BDGameSDK.getLoginUid();
 						token = BDGameSDK.getLoginAccessToken();
-						Log.i("tag","登录成功uid="+uid);
-						loginSuce(mactivity, uid, uid, token);
+						loginSuce(mActivity, uid, uid, token);
 						Toast("登录成功");
-//						islogin = true;
+						islogin = 1;
 						BDGameSDK.showFloatView(mActivity); // 显示悬浮窗
 						break;
 					case ResultCode.LOGIN_CANCEL:
@@ -134,9 +137,10 @@ public class YaYawanconstants {
 					}
 				}
 			});
-		}else{
-			inintsdk(mactivity);
 		}
+//		else{
+//			inintsdk(mactivity);
+//		}
 	}
 
 	/**
@@ -199,7 +203,9 @@ public class YaYawanconstants {
 			@Override
 			public void onGameExit() {
 				BDGameSDK.closeFloatView(paramActivity); // 关闭悬浮窗
+				islogin = 0;
 				callback.onExit();
+				System.exit(0);
 			}
 		});
 	}
@@ -267,6 +273,7 @@ public class YaYawanconstants {
 		YYWMain.mUser = new YYWUser();
 
 		YYWMain.mUser.uid = DeviceUtil.getGameId(mactivity) + "-" + uid + "";
+
 		if (username != null) {
 			YYWMain.mUser.userName = DeviceUtil.getGameId(mactivity) + "-"
 					+ username + "";
@@ -280,6 +287,7 @@ public class YaYawanconstants {
 				YYWMain.mUser.userName);
 
 		if (YYWMain.mUserCallBack != null) {
+
 			YYWMain.mUserCallBack.onLoginSuccess(YYWMain.mUser, "success");
 			Handle.login_handler(mactivity, YYWMain.mUser.uid,
 					YYWMain.mUser.userName);
@@ -338,88 +346,41 @@ public class YaYawanconstants {
 			}
 		});
 	}
-	/**
-	 * 
-	 * 请求上报角色信息
-	 * 
-	 */
-	private static void HttpPost(final String roleId, final String roleName,final String roleLevel, final String zoneId, final String zoneName, final String roleCTime) {
-		new Thread(new Runnable() {
-
-			@Override
-			public void run() {
-				try {
-					HttpPost httpPost = new HttpPost("https://api.sdk.75757.com/user/roleinfo/");
-					List<NameValuePair> params = new ArrayList<NameValuePair>();
-					params.add(new BasicNameValuePair("roleId", roleId));
-					params.add(new BasicNameValuePair("roleName", roleName));
-					params.add(new BasicNameValuePair("roleLevel", roleLevel));
-					params.add(new BasicNameValuePair("zoneId", zoneId));
-					params.add(new BasicNameValuePair("zoneName", zoneName));
-					params.add(new BasicNameValuePair("roleCTime", roleCTime));
-
-					Log.i("tag", "params=" + params);
-					try {
-						// 设置httpPost请求参数
-						httpPost.setEntity(new UrlEncodedFormEntity(params,
-								HTTP.UTF_8));
-						HttpResponse httpResponse = new DefaultHttpClient()
-						.execute(httpPost);
-						Log.i("tag",
-								"httpResponse.getStatusLine().getStatusCode()="
-										+ httpResponse.getStatusLine()
-										.getStatusCode());
-						if (httpResponse.getStatusLine().getStatusCode() == 200) {
-							//							String re = EntityUtils.toString(httpResponse
-							//									.getEntity());
-							//							Log.i("tag", "re=" + re);
-							//							JSONObject js = new JSONObject(re);
-							//							Log.i("tag", "js=" + js);
-							//							uid = js.getString("uid");
-							//							Log.i("tag", "uid=" + uid);
-							//							Log.i("tag", "token=" + token);
-							//							loginSuce(mActivity, uid, uid, token);
-							Toast("角色上报成功");
-						}
-
-					} catch (ClientProtocolException e) {
-						e.printStackTrace();
-					}
-
-				} catch (Exception e) {
-					e.printStackTrace();
-				}
-			}
-		}).start();
-	}
-
-
 	private static void setSuspendWindowChangeAccountListener() {
 		BDGameSDK.setSuspendWindowChangeAccountListener(mActivity, new IResponse<Void>() {
 
 			@Override
 			public void onResponse(int resultCode, String resultDesc, Void extraData) {
 				switch ( resultCode){ 
-				case ResultCode. LOGIN_SUCCESS :
+				case ResultCode.LOGIN_SUCCESS :
 					//  登录成功，不管之前是什么登录状态，游戏内部都要切换成新的用户
-					uid = BDGameSDK.getLoginUid();
-					token = BDGameSDK.getLoginAccessToken();
-					loginSuce(mActivity, uid, uid, token);
-					Toast("切换用户成功");
-//					islogin = true;
-					BDGameSDK.showFloatView(mActivity); // 显示悬浮窗
+					//					uid = BDGameSDK.getLoginUid();
+					//					token = BDGameSDK.getLoginAccessToken();
+					//					loginSuce(mActivity, uid, uid, token);
+					//					Toast("切换用户成功");
+					//					islogin = true;
+					mActivity.runOnUiThread(new Runnable() {
+
+						@Override
+						public void run() {
+							// TODO Auto-generated method stub
+							loginOut();
+							islogin = 0;
+						}
+					});
+					//					BDGameSDK.showFloatView(mActivity); // 显示悬浮窗
 					Log.i("tag","切换用户成功");
 					break ; 
 				case ResultCode. LOGIN_FAIL :
 					//  登录失败，游戏内部之前如果是已经登录的，要清楚自己记录的登录状 
 					loginFail();
-					Toast("切换用户失败");
+					//					Toast("切换用户失败");
 					Log.i("tag","切换用户失败");
 					break ; 
 				case ResultCode. LOGIN_CANCEL :
 					//  操作前后的登录状态没变化
 					loginFail();
-					Toast("切换用户取消");
+					//					Toast("切换用户取消");
 					Log.i("tag","切换用户取消");
 					break ;
 				}
@@ -441,6 +402,7 @@ public class YaYawanconstants {
 				if (resultCode == ResultCode.SESSION_INVALID) {
 					// 会话失效，开发者需要重新登录或者重启游戏
 					loginOut();
+					islogin = 0;
 				}
 
 			}

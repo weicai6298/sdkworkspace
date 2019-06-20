@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="@dimen/zzz_grab_game_ticket_header_item_width"
+    android:layout_height="@dimen/zzz_grab_game_ticket_header_item_height">
+
+    <TextView
+        android:id="@+id/zzz_grab_game_ticket_header_item_day"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:gravity="center_horizontal"
+        android:text="@string/zzz_which_day"
+        android:textColor="@color/zzz_grab_game_ticket_header_item_day_text_color"
+        android:textSize="@dimen/zzz_grab_game_ticket_header_item_day_text_size" />
+
+    <RelativeLayout
+        android:id="@+id/zzz_game_ticket_header"
+        android:layout_width="@dimen/zzz_grab_game_ticket_header_item_width"
+        android:layout_height="@dimen/zzz_grab_game_ticket_header_item_height"
+        android:layout_below="@+id/zzz_grab_game_ticket_header_item_day"
+        android:layout_marginTop="@dimen/zzz_game_ticket_item_content_margin_top"
+        android:background="@drawable/zzz_game_ticket_valid">
+
+        <RelativeLayout
+            android:id="@+id/zzz_ticket_value"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="@dimen/zzz_grab_game_ticket_value_margin_top">
+
+            <TextView
+                android:id="@+id/zzz_game_ticket_value"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:includeFontPadding="false"
+                android:singleLine="true"
+                android:textColor="@android:color/white"
+                android:textSize="@dimen/zzz_grab_game_ticket_header_item_value_text_size"
+                android:textStyle="bold" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBaseline="@+id/zzz_game_ticket_value"
+                android:layout_alignBottom="@+id/zzz_game_ticket_value"
+                android:layout_toRightOf="@+id/zzz_game_ticket_value"
+                android:text="@string/zzz_yuan"
+                android:textColor="@color/zzz_white"
+                android:textSize="@dimen/zzz_grab_game_ticket_header_item_yuan_text_size"
+                android:textStyle="bold" />
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/zzz_game_ticket_rule"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/zzz_ticket_value"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="@dimen/zzz_game_ticket_rule_margin_bottom"
+            android:includeFontPadding="false"
+            android:singleLine="true"
+            android:textColor="@color/zzz_game_ticket_rule_text_color"
+            android:textSize="@dimen/zzz_grab_game_ticket_header_item_rule_text_size" />
+
+    </RelativeLayout>
+
+    <include
+        android:id="@+id/zzz_grab_gift_btn"
+        layout="@layout/zzz_grab_gift_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/zzz_game_ticket_header"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="@dimen/zzz_grab_gift_btn_margin_top" />
+
+</RelativeLayout>

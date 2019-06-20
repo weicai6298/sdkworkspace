@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/ll_pw"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:gravity="center_vertical"
+    android:orientation="vertical">
+
+    <com.game.sdk.ui.weight.MyMaxHeightListView
+        android:id="@+id/lv_pw"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:divider="#00000000"
+        android:background="@drawable/yxf_spin_in_whi"
+        android:focusable="true"></com.game.sdk.ui.weight.MyMaxHeightListView>
+
+</LinearLayout>

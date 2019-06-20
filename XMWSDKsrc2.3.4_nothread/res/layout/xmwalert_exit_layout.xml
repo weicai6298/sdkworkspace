@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout 
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#00000000">
+	<LinearLayout
+	    android:layout_centerInParent="true"
+	    android:layout_width="300dp"
+	    android:layout_height="wrap_content"
+	    android:background="@drawable/xmw_corner_exit_bg"
+	    android:orientation="vertical" >
+	
+	    <!-- 顶部椭园边缘 -->
+	
+	    <RelativeLayout
+	        android:layout_width="match_parent"
+	        android:layout_height="50dp" >
+			<LinearLayout 
+			    android:id="@+id/alert_close"
+			    android:layout_alignParentRight="true"
+			    android:layout_width="wrap_content"
+			    android:layout_height="match_parent"
+			    android:paddingRight="15dp"
+			    android:orientation="horizontal"
+			    android:gravity="center_vertical">
+		        <ImageView
+		            android:layout_width="wrap_content"
+		            android:layout_height="wrap_content"
+		            android:background="@drawable/xmw_ic_close" />
+			</LinearLayout>
+	        <TextView
+	            android:layout_width="wrap_content"
+	            android:layout_height="wrap_content"
+	            android:layout_alignTop="@+id/textView1"
+	            android:layout_centerInParent="true"
+	            android:text="退出登录"
+	            android:textColor="@color/appBlack"
+	            android:textSize="20sp" />
+	    </RelativeLayout>
+	
+		<LinearLayout  
+		        android:layout_width="fill_parent"
+		        android:layout_height="wrap_content"
+		        android:orientation="horizontal"
+		        android:gravity="center"
+		        android:layout_marginLeft="8dp"
+		        android:layout_marginTop="8dp"
+		        android:layout_marginRight="8dp"
+		        android:layout_marginBottom="2dp"
+		        >
+		    <ImageView 
+		        android:id="@+id/xmw_exit_image"
+		        android:layout_width="fill_parent"
+		        android:layout_height="120dp"
+		        android:scaleType="centerInside"/>
+		
+		</LinearLayout>
+	
+	    <LinearLayout
+	        android:layout_width="fill_parent"
+	        android:layout_height="50dp"
+	        android:layout_gravity="center"
+	        android:gravity="center"
+	        android:layout_margin="2dp"
+	        android:orientation="horizontal" >
+	        
+	        <Button
+	            android:id="@+id/xmwqiehuan"
+	            android:layout_width="0dp"
+	            android:layout_weight="1"
+	            android:layout_height="35dp"
+	            android:layout_marginTop="1dp"
+	            android:layout_marginBottom="1dp"
+	            android:layout_marginLeft="6dp"
+	            android:background="@drawable/xmw_c_corner_yellow"
+	            android:text="@string/xmw_change_now"
+	            android:textColor="@color/appBlack"
+	            android:textSize="14sp"
+	            android:textStyle="bold"
+	            android:visibility="visible"
+	            android:gravity="center"/>
+	
+	        <Button
+	            android:id="@+id/xmwtuichu"
+	            android:layout_width="0dp"
+	            android:layout_weight="1"
+	            android:layout_height="35dp"
+	            android:layout_marginBottom="1dp"
+	            android:layout_marginTop="1dp"
+	            android:textStyle="bold"
+	            android:layout_marginLeft="20dp"
+	            android:layout_marginRight="6dp"
+	            android:background="@drawable/xmw_c_corner_gray"
+	            android:text="@string/xmw_updatast"
+	            android:textColor="@color/appBlack"
+	            android:textSize="14sp"
+	            android:visibility="visible"
+	            android:gravity="center"
+	             />
+	
+	    </LinearLayout>
+	</LinearLayout>
+</RelativeLayout>

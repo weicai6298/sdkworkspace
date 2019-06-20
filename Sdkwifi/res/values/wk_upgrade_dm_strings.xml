@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="wk_dm_download_pause_file">Paused</string>
+    <string name="wk_dm_download_continu_file">Resume</string>
+    <string name="wk_dm_download_apk_file_notfound">File Not Found</string>
+    <string name="wk_dm_download_apk_file_select_all">Future Generations</string>
+    <string name="wk_dm_download_delete_file">Delete download?</string>
+    <string name="wk_dm_download_wk_upgrade_dialog_warm_prompt">Kindly Note</string>
+    <string name="wk_dm_download_cancel_list">Cancel</string>
+    <string name="wk_dm_download_edit_list">Edit</string>
+    <string name="wk_dm_download_complete_notification">Completed</string>
+    <string name="wk_dm_download_running_file">Downloading</string>
+    <string name="wk_dm_download_file_manager">Download Manager</string>
+    <string name="wk_dm_download_file_delete">Delete</string>
+    <string name="wk_dm_download_file_again">Retry</string>
+    <string name="wk_dm_download_waiting_file">Wait</string>
+    <string name="wk_dm_download_paused_file">Paused</string>
+    <string name="wk_dm_download_waited_file">Wait</string>
+    <string name="wk_dm_download_alert_network">You are now in a data network, whether to download?</string>
+    <string name="wk_dm_download_newwork_failed">The network abnormal!</string>
+    <string name="wk_dm_download_operation_frequent">Operation too frequent</string>
+    <string name="wk_dm_download_resume_download">The current switch has wifi network, resume %1$s downloads</string>
+    <string name="wk_dm_download_filesize_unknown">The file size is unknown</string>
+    <string name="wk_dm_download_failed">Installation failed. Please try again. </string>
+    <string name="wk_dm_download_failed_network">Network error. Please check network and try again. </string>
+    <string name="wk_dm_download_failed_storage">Installation failed. Insufficient memory/ SD card error. </string>
+    <string name="wk_dm_downloading">Downloading%1$sApplication</string>
+    <string name="wk_dm_download_waiting">Waiting</string>
+
+</resources>

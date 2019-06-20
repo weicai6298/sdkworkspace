@@ -12,25 +12,31 @@ import org.apache.http.impl.client.DefaultHttpClient;
 import org.apache.http.message.BasicNameValuePair;
 import org.apache.http.protocol.HTTP;
 import org.apache.http.util.EntityUtils;
+import org.json.JSONException;
 import org.json.JSONObject;
 
 import android.app.Activity;
 import android.content.Context;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Handler;
 import android.util.Log;
 import android.widget.Toast;
 
 import com.huawei.android.hms.agent.HMSAgent;
+import com.huawei.android.hms.agent.common.handler.CheckUpdateHandler;
 import com.huawei.android.hms.agent.common.handler.ConnectHandler;
 import com.huawei.android.hms.agent.game.handler.LoginHandler;
 import com.huawei.android.hms.agent.game.handler.SaveInfoHandler;
 import com.huawei.android.hms.agent.pay.PaySignUtil;
+import com.huawei.android.hms.agent.pay.handler.GetOrderHandler;
 import com.huawei.android.hms.agent.pay.handler.PayHandler;
 import com.huawei.hms.support.api.entity.game.GamePlayerInfo;
 import com.huawei.hms.support.api.entity.game.GameUserData;
+import com.huawei.hms.support.api.entity.pay.OrderRequest;
 import com.huawei.hms.support.api.entity.pay.PayReq;
 import com.huawei.hms.support.api.entity.pay.PayStatusCodes;
+import com.huawei.hms.support.api.pay.OrderResult;
 import com.huawei.hms.support.api.pay.PayResultInfo;
 import com.huawei.updatesdk.sdk.service.download.h;
 import com.kkgame.sdk.bean.User;
@@ -39,6 +45,13 @@ import com.kkgame.sdkmain.KgameSdk;
 import com.kkgame.utils.DeviceUtil;
 import com.kkgame.utils.Handle;
 import com.kkgame.utils.JSONUtil;
+import com.kkgame.utils.Sputils;
+import com.lidroid.jxutils.HttpUtils;
+import com.lidroid.jxutils.exception.HttpException;
+import com.lidroid.jxutils.http.RequestParams;
+import com.lidroid.jxutils.http.ResponseInfo;
+import com.lidroid.jxutils.http.callback.RequestCallBack;
+import com.lidroid.jxutils.http.client.HttpRequest.HttpMethod;
 import com.yayawan.callback.YYWExitCallback;
 import com.yayawan.domain.YYWUser;
 import com.yayawan.main.YYWMain;
@@ -68,8 +81,8 @@ public class YaYawanconstants {
 		mActivity = mactivity;
 		HMSAgent.init(mactivity);
 		Yayalog.loger("YaYawanconstants初始化sdk");
-		//				 HMSAgent.init(mactivity);
 		// 首个界面需要调用connect进行连接
+		//		Connect(mactivity);
 		Log.i("tag","YaYawanconstants初始化sdk结束");
 	}
 
@@ -83,8 +96,14 @@ public class YaYawanconstants {
 				if(rst == 13){
 					Connect(mactivity);
 				}else {
-//					isinit = true ;
-					HMSAgent.checkUpdate(mActivity);
+					//					isinit = true ;
+					//					HMSAgent.checkUpdate(mActivity);
+					HMSAgent.checkUpdate(mActivity, new CheckUpdateHandler() {
+						@Override
+						public void onResult(int rst) {
+							Log.i("tag","checkUpdate-onResult = " +rst);
+						}
+					});
 					HMSAgent.Game.showFloatWindow(mActivity);
 					loginstart();
 				}
@@ -106,15 +125,15 @@ public class YaYawanconstants {
 		Yayalog.loger("YaYawanconstantssdk登录");
 		Connect(mactivity);
 		Log.i("tag","isinit = " +isinit);
-//		if(isinit){
-			APP_ID = "" + DeviceUtil.getGameInfo(mActivity, "appid");
-			CP_APP_ID = "" + DeviceUtil.getGameInfo(mActivity, "cpid");
-//			Log.i("tag","APP_ID = " +APP_ID);
-//			Log.i("tag","CP_APP_ID = " +CP_APP_ID);
-//			loginstart();
-//		}else{
-//			inintsdk(mactivity);
-//		}
+		//		if(isinit){
+		APP_ID = "" + DeviceUtil.getGameInfo(mActivity, "appid");
+		CP_APP_ID = "" + DeviceUtil.getGameInfo(mActivity, "cpid");
+		Log.i("tag","APP_ID = " +APP_ID);
+		Log.i("tag","CP_APP_ID = " +CP_APP_ID);
+		//			loginstart();
+		//		}else{
+		//			inintsdk(mactivity);
+		//		}
 	}
 
 	private static void loginstart() {
@@ -131,7 +150,14 @@ public class YaYawanconstants {
 					if (userData.getIsAuth() == 1) {
 						token = userData.getTs()+"##"+userData.getPlayerLevel()+"##"+userData.getGameAuthSign();
 						uid = userData.getPlayerId();
+						Log.i("tag", "uid =" + uid);
+						Log.i("tag", "token =" + token);
+
+						Log.i("tag", "userData.getTs() =" + userData.getTs());
+						Log.i("tag", "userData.getPlayerLevel() =" + userData.getPlayerLevel());
+						Log.i("tag", "userData.getGameAuthSign() =" + userData.getGameAuthSign());
 						loginSuce(mActivity, userData.getPlayerId(), userData.getPlayerId(), token);
+						//						loginSuce(mActivity, userData.getPlayerId(), userData.getPlayerId(), "");//捕鱼风暴华为
 						//	                    	HMSAgent.Game.showFloatWindow(mActivity);
 						Toast("登录成功");
 					}
@@ -139,7 +165,7 @@ public class YaYawanconstants {
 					Log.i("tag", "game login: onResult: retCode=" + retCode);
 					loginFail();
 					Toast("登录失败");
-					loginstart();
+					//					loginstart();
 				}
 			}
 
@@ -159,6 +185,7 @@ public class YaYawanconstants {
 	 * 
 	 * @param mactivity
 	 */
+	//	public static void pay(Activity mactivity, final String morderid,String privatekey,String publickey) {
 	public static void pay(Activity mactivity, final String morderid,String privatekey) {
 		Yayalog.loger("YaYawanconstantssdk支付");
 		Yayalog.loger("YaYawanconstantssdk支付morderid"+morderid);
@@ -166,6 +193,9 @@ public class YaYawanconstants {
 		PayReq payReq = createPayReq(YYWMain.mOrder.money/100+"", morderid,privatekey);
 		//		final String pay_pub_key = "" + DeviceUtil.getGameInfo(mActivity, "paypubkey");
 		Log.i("tag", "pay-payReq = "+payReq);
+		//		Sputils.putSPstring("orderid", morderid, mactivity);
+		//		Sputils.putSPstring("privatekey", privatekey, mactivity);
+		//		Sputils.putSPstring("publickey", publickey, mactivity);
 		HMSAgent.Pay.pay(payReq, new PayHandler() {
 			@Override
 			public void onResult(int retCode, PayResultInfo payInfo) {
@@ -251,6 +281,7 @@ public class YaYawanconstants {
 	public static void exit(final Activity paramActivity,
 			final YYWExitCallback callback) {
 		Yayalog.loger("YaYawanconstantssdk退出");
+		//		chaxun();
 		paramActivity.runOnUiThread(new Runnable() {
 
 			@Override
@@ -259,9 +290,9 @@ public class YaYawanconstants {
 
 					@Override
 					public void onSuccess(User arg0, int arg1) {
-								callback.onExit();
-//						mActivity.finish();
-//						System.exit(0);
+						callback.onExit();
+						//						mActivity.finish();
+						//						System.exit(0);
 					}
 
 					@Override
@@ -309,16 +340,15 @@ public class YaYawanconstants {
 	}
 
 	public static void onResume(Activity paramActivity) {
-			HMSAgent.Game.showFloatWindow(paramActivity);
+		HMSAgent.Game.showFloatWindow(paramActivity);
 	}
 
 	public static void onPause(Activity paramActivity) {
-
+		HMSAgent.Game.hideFloatWindow(paramActivity);
 	}
 
 	public static void onDestroy(Activity paramActivity) {
-			HMSAgent.destroy();
-			HMSAgent.Game.hideFloatWindow(paramActivity);
+		HMSAgent.destroy();
 	}
 
 	public static void onActivityResult(Activity paramActivity, int paramInt1,
@@ -331,7 +361,7 @@ public class YaYawanconstants {
 	}
 
 	public static void onStart(Activity paramActivity) {
-			HMSAgent.Game.showFloatWindow(paramActivity);
+
 	}
 
 	public static void onRestart(Activity paramActivity) {
@@ -407,7 +437,7 @@ public class YaYawanconstants {
 	 */
 	public static void paySuce() {
 		mActivity.runOnUiThread(new Runnable() {
-			
+
 			@Override
 			public void run() {
 				if (YYWMain.mPayCallBack != null) {
@@ -424,7 +454,7 @@ public class YaYawanconstants {
 	 */
 	public static void payFail() {
 		mActivity.runOnUiThread(new Runnable() {
-			
+
 			@Override
 			public void run() {
 				if (YYWMain.mPayCallBack != null) {
@@ -459,60 +489,126 @@ public class YaYawanconstants {
 	 */
 	public static void HttpPost(final String uid, final String token,
 			final String orderid) {
-		new Thread(new Runnable() {
-			@SuppressWarnings("deprecation")
+		//					bufanuid = YYWMain.mUser.yywuid;
+		//					bufantoken = YYWMain.mUser.yywtoken;
+		//					params.add(new BasicNameValuePair("app_id", DeviceUtil
+		//							.getAppid(mActivity)));
+		//					params.add(new BasicNameValuePair("uid", bufanuid));
+		//					params.add(new BasicNameValuePair("token", bufantoken));
+		//					params.add(new BasicNameValuePair("billid", orderid));
+		//
+		//							if ((paystatus.equals("2")) || (paystatus.equals("3"))) {
+		//								paySuce();
+		//								Log.i("tag", "支付成功");
+		//								Toast("支付成功");
+		//							} else {
+		//								payFail();
+		//								Toast("支付失败");
+		//								Log.i("tag", "支付失败");
+		//							}
+		bufanuid = YYWMain.mUser.yywuid;
+		bufantoken = YYWMain.mUser.yywtoken;
+		HttpUtils httpUtil = new HttpUtils();
+		String url = "https://api.sdk.75757.com/pay/order_status/";
+		RequestParams requestParams = new RequestParams();
+		requestParams.addBodyParameter("app_id",DeviceUtil.getAppid(mActivity));
+		requestParams.addBodyParameter("uid", bufanuid);
+		requestParams.addBodyParameter("token", bufantoken);
+		requestParams.addBodyParameter("billid", orderid);
+		httpUtil.send(HttpMethod.POST, url,requestParams,
+				new RequestCallBack<String>() {
+
 			@Override
-			public void run() {
+			public void onFailure(HttpException arg0, String arg1) {
+				// TODO Auto-generated method stub
+				Yayalog.loger("请求失败"+arg1.toString());
+			}
+
+			@Override
+			public void onSuccess(ResponseInfo<String> arg0) {
+				// TODO Auto-generated method stub
 				try {
-					bufanuid = YYWMain.mUser.yywuid;
-					bufantoken = YYWMain.mUser.yywtoken;
-					HttpPost httpPost = new HttpPost(
-							"https://api.sdk.75757.com/pay/order_status/");
-					List<NameValuePair> params = new ArrayList<NameValuePair>();
-					params.add(new BasicNameValuePair("app_id", DeviceUtil
-							.getAppid(mActivity)));
-					params.add(new BasicNameValuePair("uid", bufanuid));
-					params.add(new BasicNameValuePair("token", bufantoken));
-					params.add(new BasicNameValuePair("billid", orderid));
-
-					Log.i("tag", "params=" + params);
-					try {
-						// 设置httpPost请求参数
-						httpPost.setEntity(new UrlEncodedFormEntity(params,
-								HTTP.UTF_8));
-						HttpResponse httpResponse = new DefaultHttpClient()
-						.execute(httpPost);
-						Log.i("tag",
-								"httpResponse.getStatusLine().getStatusCode()="
-										+ httpResponse.getStatusLine()
-										.getStatusCode());
-						if (httpResponse.getStatusLine().getStatusCode() == 200) {
-							String re = EntityUtils.toString(httpResponse
-									.getEntity());
-							Log.i("tag", "re=" + re);
-							JSONObject js = new JSONObject(re);
-							Log.i("tag", "js=" + js);
-							paystatus = js.getString("status");
-							//							int paystatus = js.getInt("status");
-							Log.i("tag", "paystatus支付=" + paystatus);
-							if ((paystatus.equals("2")) || (paystatus.equals("3"))) {
-								paySuce();
-								Log.i("tag", "支付成功");
-								Toast("支付成功");
-							} else {
-								payFail();
-								Toast("支付失败");
-								Log.i("tag", "支付失败");
-							}
-
-						}
-					} catch (ClientProtocolException e) {
-						e.printStackTrace();
+					Yayalog.loger("请求成功"+arg0.result);
+					JSONObject obj = new JSONObject(arg0.result);
+					paystatus = obj.getString("status");
+					Yayalog.loger("status ="+paystatus);
+					if ((paystatus.equals("2")) || (paystatus.equals("3"))) {
+						paySuce();
+						Log.i("tag", "支付成功");
+						Toast("支付成功");
+					} else {
+						payFail();
+						Toast("支付失败");
+						Log.i("tag", "支付失败");
 					}
-				} catch (Exception e) {
+				} catch (JSONException e) {
 					e.printStackTrace();
 				}
 			}
-		}).start();
+		});
 	}
+
+	//	public static void chaxun(){
+	//		final String reqId = Sputils.getSPstring("orderid", "orderid", mActivity);
+	//		String pay_priv_key = Sputils.getSPstring("privatekey", "privatekey", mActivity);
+	//		final String pay_pub_key = Sputils.getSPstring("publickey", "publickey", mActivity);
+	//		OrderRequest or = new OrderRequest();
+	//
+	//Log.i("tag", "reqid = " + reqId);
+	//Log.i("tag", "pay_priv_key = " + pay_priv_key);
+	//Log.i("tag", "pay_pub_key = " + pay_pub_key);
+	//		or.setMerchantId(CP_APP_ID);
+	//		or.setRequestId(reqId);
+	//		or.setTime(String.valueOf(System.currentTimeMillis()));
+	//		or.setKeyType("1");
+	//		//对查询订单请求信息进行签名,建议CP在服务器端储存签名私钥，并在服务器端进行签名操作。| To sign the query order request information, it is recommended that CP store the signature private key on the server side and sign the operation on the server side.
+	//		//在服务端进行签名的cp可以将getStringForSign返回的待签名字符串传给服务端进行签名 | The CP, signed on the server side, can pass the pending signature string returned by Getstringforsign to the service side for signature
+	//		or.sign = PaySignUtil.rsaSign(PaySignUtil.getStringForSign(or), pay_priv_key);
+	//		HMSAgent.Pay.getOrderDetail(or, new GetOrderHandler() {
+	//	        @Override
+	//	        public void onResult(int retCode, OrderResult checkPayResult) {
+	//	            showLog("game checkPay: requId="+reqId+"  retCode=" + retCode);
+	//	            if (checkPayResult != null && checkPayResult.getReturnCode() == retCode) {
+	//	                // 处理支付业务返回码
+	//	                if (retCode == 0) {
+	//	                    boolean checkRst = PaySignUtil.checkSign(checkPayResult, pay_pub_key);
+	//	                    if (checkRst) {
+	//	                        // 支付成功，发放对应商品
+	//	                        showLog("支付成功，发放商品");
+	//	                    } else {
+	//	                        // 验签失败，当支付失败处理
+	//	                        showLog("验证签名失败，支付失败");
+	//	                    }
+	//
+	//	                    // 不需要再查询
+	//	                    removeCacheRequestId(checkPayResult.getRequestId());
+	//	                    
+	//	                } else if (retCode == PayStatusCodes.ORDER_STATUS_HANDLING
+	//	                        || retCode == PayStatusCodes.ORDER_STATUS_UNTREATED
+	//	                        || retCode == PayStatusCodes.PAY_STATE_TIME_OUT) {
+	//	                    // 未处理完，需要重新查询。如30分钟后再次查询。超过24小时当支付失败处理
+	//	                	chaxun();
+	//	                } else if (retCode == PayStatusCodes.PAY_STATE_NET_ERROR) {
+	//	                    // 网络失败，需要重新查询
+	////	                	chaxun();
+	//	                } else {
+	//	                    // 支付失败，不需要再查询
+	//	                	payFail();
+	//	                    removeCacheRequestId(reqId);
+	//	                }
+	//	            } else {
+	//	                // 没有结果回来，需要重新查询。如30分钟后再次查询。超过24小时当支付失败处理
+	//	            }
+	//	        }
+	//
+	//	    });
+	//	}
+	//	private void addRequestIdToCache(String requestId) {
+	//        SharedPreferences sp = mActivity.getSharedPreferences("pay_request_ids", 0);
+	//        sp.edit().putBoolean(requestId, false).commit();
+	//    }
+	//	  private static void removeCacheRequestId(String reqId) {
+	//	        SharedPreferences sp = mActivity.getSharedPreferences("pay_request_ids", 0);
+	//	        sp.edit().remove(reqId).commit();
+	//	    }
 }

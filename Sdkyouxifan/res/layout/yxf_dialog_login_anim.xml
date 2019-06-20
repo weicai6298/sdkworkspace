@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <RelativeLayout
+        android:id="@+id/ll_login_anim1"
+        android:layout_width="wrap_content"
+        android:layout_height="66.67dp"
+        android:layout_marginTop="38.67dp"
+        android:layout_centerHorizontal="true"
+        android:layout_alignParentTop="true"
+        android:background="@drawable/yxf_round_anim_whi_yel"
+        android:visibility="visible">
+
+        <com.game.sdk.ui.weight.CircleImageView
+            android:id="@+id/iv_img"
+            android:layout_width="47dp"
+            android:layout_height="47dp"
+            android:layout_centerVertical="true"
+            android:layout_margin="8.67dp"
+            />
+
+        <LinearLayout
+            android:id="@+id/ll_content"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+
+            android:layout_toRightOf="@+id/iv_img"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/tv_name1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="玩家小明..."
+                android:textStyle="bold"
+                android:ellipsize="end"
+                android:singleLine="true"
+                android:textColor="@color/yxf_sdk_black"
+                android:textSize="13.2sp" />
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="6.67dp">
+
+                <ImageView
+                    android:id="@+id/iv_circle"
+                    android:layout_width="13dp"
+                    android:layout_height="13dp"
+                    android:layout_centerVertical="true"
+                    android:background="@drawable/yxf_loading"
+                    android:layout_marginRight="4dp"
+                    android:scaleType="centerInside" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_toRightOf="@+id/iv_circle"
+                    android:ellipsize="end"
+                    android:singleLine="true"
+                    android:text="登录中"
+                    android:textColor="@color/yxf_sdk_gray"
+                    android:textSize="13.2sp" />
+            </RelativeLayout>
+
+        </LinearLayout>
+
+        <ImageView
+            android:id="@+id/iv_def"
+            android:layout_width="47dp"
+            android:layout_height="47dp"
+            android:layout_toRightOf="@+id/ll_content"
+            android:layout_centerVertical="true"
+            android:layout_margin="8.67dp"
+            android:src="@drawable/yxf_login_change" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/ll_login_anim2"
+        android:layout_width="160dp"
+        android:layout_height="66.67dp"
+        android:layout_marginTop="38.67dp"
+        android:layout_centerHorizontal="true"
+        android:background="@drawable/yxf_round_anim_whi_yel"
+        android:visibility="invisible">
+
+        <ImageView
+            android:id="@+id/iv_img_suc"
+            android:layout_width="47dp"
+            android:layout_height="47dp"
+            android:layout_centerVertical="true"
+            android:layout_margin="8.67dp"
+            android:src="@drawable/yxf_login_succ" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="10.67dp"
+            android:layout_toRightOf="@+id/iv_img_suc"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/tv_name2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="玩游戏小明..."
+                android:textColor="@color/yxf_sdk_black"
+                android:textStyle="bold"
+                android:ellipsize="end"
+                android:singleLine="true"
+                android:textSize="13.2sp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginTop="6.67dp"
+                android:ellipsize="end"
+                android:singleLine="true"
+                android:text="登录成功！"
+                android:textColor="#26CC14"
+                android:textSize="13.2sp" />
+
+        </LinearLayout>
+
+    </RelativeLayout>
+
+
+</RelativeLayout>

@@ -6,10 +6,10 @@
     android:descendantFocusability="blocksDescendants">
 
     <RelativeLayout
-        android:layout_width="67dp"
+        android:layout_width="80dp"
         android:layout_height="wrap_content"
-        android:layout_marginLeft="15dp"
-        android:layout_marginRight="15dp"
+        android:paddingRight="8dp"
+        android:paddingLeft="8dp"
         android:layout_marginTop="25dp" >
 
         <com.sogou.wan.common.NetworkImageView
@@ -28,6 +28,7 @@
             android:layout_centerHorizontal="true"
             android:layout_marginTop="10dp"
             android:lines="2"
+            android:ellipsize="end"
             android:textColor="@color/sogou_game_sdk_color_111111"
             android:textSize="13sp" />
 
@@ -39,6 +40,7 @@
             android:layout_centerHorizontal="true"
             android:layout_gravity="center_horizontal"
             android:layout_marginTop="5dp"
+            android:singleLine="true"
             android:textColor="@color/sogou_game_sdk_color_888888"
             android:textSize="10sp" />
 

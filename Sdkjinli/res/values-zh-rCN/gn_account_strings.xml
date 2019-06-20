@@ -78,7 +78,7 @@
     <string name="gn_account_register_no_simcard_1">未检测到SIM卡，请安装SIM卡后重新注册</string>
     <string name="gn_account_Amigo_hui_yuan_zhu_ce">amigo会员注册</string>
     <string name="gn_account_is_registering_wait">正在注册中，请稍候</string>
-    <string name="gn_account_one_key_register_send_sms">一键注册 \n将发送一条验证短信</string>
+    <string name="gn_account_one_key_register_send_sms">一键注册\n将发送一条验证短信</string>
     <string name="gn_account_login_amigo_account">登录amigo帐号</string>
     <string name="gn_account_more">其它登录</string>
     <string name="gn_account_change_account">切换帐号</string>

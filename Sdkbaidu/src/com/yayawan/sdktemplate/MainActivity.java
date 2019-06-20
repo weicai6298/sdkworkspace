@@ -31,10 +31,9 @@ public class MainActivity extends Activity {
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
-		Log.i("tag","MainActivity-onCreate");
 		paramActivity=this;
 		GameProxy.getInstent().onCreate(this);
-		Log.i("tag","MainActivity-onCreate1");
+		
 		//setContentView(R.layout.sdk_activity_main);
 
 		final LinearLayout mLinearLayout = new LinearLayout(this);
@@ -44,6 +43,7 @@ public class MainActivity extends Activity {
 		mLinearLayout.setOrientation(LinearLayout.VERTICAL);
 		mLinearLayout.setPadding(10, 10, 10, 10);
 
+		login(mLinearLayout);
 		Button animButton = new Button(this);
 		animButton.setText("anim");
 		animButton.setOnClickListener(new OnClickListener() {

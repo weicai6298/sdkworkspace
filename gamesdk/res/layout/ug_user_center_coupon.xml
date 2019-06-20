@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="130dp">
+
+<RelativeLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:id="@+id/layout_title"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:background="@drawable/ug_shape_center_coupon_white_half">
+
+
+        <LinearLayout
+            android:id="@+id/ug_coupon_ticket_title_money_2"
+            android:layout_width="100dp"
+            android:gravity="center"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center_horizontal"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="¥"
+                    android:textColor="@color/orange_2"
+                    android:textSize="@dimen/text_bigger" />
+
+                <TextView
+                    android:id="@+id/ug_tv_coupon_price"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="0"
+                    android:maxLines="1"
+                    android:ellipsize="end"
+                    android:textColor="@color/orange_2"
+                    android:textSize="@dimen/text_biggermore_25" />
+
+            </LinearLayout>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="优惠券"
+                android:textColor="@color/orange_2"
+                android:textSize="@dimen/text_bigger" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_toRightOf="@+id/ug_coupon_ticket_title_money_2"
+            android:layout_height="match_parent"
+            android:gravity="center_vertical"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/ug_coupon_ticket_title"
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:layout_marginLeft="20dp"
+                android:gravity="bottom"
+                android:paddingBottom="3dp"
+                android:text=""
+                android:textColor="@color/text_lv1"
+                android:textSize="@dimen/text_bigger" />
+
+            <TextView
+                android:id="@+id/ug_coupon_ticket_description"
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:layout_below="@+id/ug_coupon_ticket_title"
+                android:layout_marginLeft="20dp"
+                android:paddingTop="7dp"
+                android:ellipsize="end"
+                android:maxLines="1"
+                android:text=""
+                android:textColor="@color/text_lv2"
+                android:textSize="@dimen/text_big" />
+
+        </LinearLayout>
+
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:layout_below="@+id/layout_title"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:background="@drawable/ug_shape_center_coupon">
+
+        <TextView
+            android:id="@+id/ug_coupon_ticket_time"
+            android:layout_width="0dp"
+            android:layout_weight="10"
+            android:layout_height="match_parent"
+            android:ellipsize="end"
+            android:maxLines="1"
+            android:layout_marginLeft="15dp"
+            android:gravity="center_vertical"
+            android:text="有效期至：2017-04-03"
+            android:textColor="@color/text_lv2"
+            android:textSize="@dimen/text_normal" />
+
+        <TextView
+            android:id="@+id/ug_coupon_ticket_use"
+            android:layout_width="0dp"
+            android:layout_weight="2"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:visibility="gone"
+            android:text="请返回游戏中使用"
+            android:textColor="@color/pink"
+            android:textSize="@dimen/text_normal" />
+    </LinearLayout>
+
+</RelativeLayout>
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_marginLeft="100dp"
+        android:scaleType="centerCrop"
+        android:src="@drawable/ug_coupon_ticket_divider" />
+
+</FrameLayout>

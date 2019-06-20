@@ -1,5 +1,7 @@
 package com.kkgame.sdk.login;
 
+import com.kkgame.sdk.utils.AndroidDelegate;
+import com.kkgame.sdk.utils.LogoWindow;
 import com.kkgame.sdk.xml.SmallHelp_xml;
 import com.kkgame.sdkmain.AgentApp;
 import com.kkgame.sdkmain.KgameSdk;
@@ -11,7 +13,9 @@ import com.kkgame.utils.Yayalog;
 import android.app.Activity;
 import android.content.Intent;
 import android.graphics.Color;
+import android.net.Uri;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.view.Window;
@@ -25,7 +29,9 @@ public class SmallHelpActivity extends Activity{
 
 	
 	private RelativeLayout rl_mLoading;
+	public static int isclose;
 
+	public Activity mActivity;
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		// TODO Auto-generated method stub
@@ -37,13 +43,13 @@ public class SmallHelpActivity extends Activity{
 		this.getWindow().getDecorView().setBackgroundColor(Color.TRANSPARENT);  
 		
 		final WebView wv_mWeiboview = smallHelp_xml.getWv_mWeiboview();
-		
+		mActivity=this;
 		rl_mLoading = smallHelp_xml.getRl_mLoading();
 		String uid=AgentApp.mUser.uid+"";
 		String token=AgentApp.mUser.token;
 		String appid=DeviceUtil.getAppid(this);
 		
-		String url="https://api.sdk.75757.com/web/profile/?uid="+uid+"&token="+token+"&appid="+appid;
+		String url=ViewConstants.smallhelp+"?uid="+uid+"&token="+token+"&appid="+appid;
 		WebSettings webSetting = wv_mWeiboview.getSettings();
 		webSetting.setAllowFileAccess(true);
 		webSetting.setLayoutAlgorithm(LayoutAlgorithm.NARROW_COLUMNS);
@@ -65,7 +71,8 @@ public class SmallHelpActivity extends Activity{
 		// webSetting.setPageCacheCapacity(IX5WebSettings.DEFAULT_CACHE_CAPACITY);
 		webSetting.setPluginState(WebSettings.PluginState.ON_DEMAND);
 		webSetting.setCacheMode(WebSettings.LOAD_NO_CACHE);
-		
+		 AndroidDelegate mandroiddelegate =new AndroidDelegate(this);
+		 wv_mWeiboview.addJavascriptInterface(mandroiddelegate, "androidDelegate");
 		
 		wv_mWeiboview.setWebViewClient(new WebViewClient() {
 
@@ -73,6 +80,16 @@ public class SmallHelpActivity extends Activity{
 			public boolean shouldOverrideUrlLoading(WebView view, String url) {
 				System.out.println(url);
                 
+				
+				if (url.contains(".apk")) {
+					Intent intent = new Intent();
+					intent.setAction("android.intent.action.VIEW");
+					Uri content_url = Uri.parse(url);   
+					intent.setData(content_url);  
+					intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+					intent.setClassName("com.android.browser","com.android.browser.BrowserActivity");
+					mActivity.startActivity(intent);
+				}
 				
 				if (url.contains("changeuser")) {
 					//切换账号
@@ -83,6 +100,8 @@ public class SmallHelpActivity extends Activity{
 					if (KgameSdk.mUserCallback!=null) {
 						KgameSdk.mUserCallback.onLogout();
 					}
+					isclose = 1;
+					LogoWindow.mhandler.sendEmptyMessage(2);
 					finish();
 				}else {
 					wv_mWeiboview.loadUrl(url);
@@ -91,7 +110,7 @@ public class SmallHelpActivity extends Activity{
 				
 				
 				
-				return false;
+				 return super.shouldOverrideUrlLoading(view, url);
 
 			}
 
@@ -104,6 +123,22 @@ public class SmallHelpActivity extends Activity{
 
 
 		});
+		 url=ViewConstants.smallhelp+"?uid="+uid+"&token="+token+"&appid="+appid;
+		switch (KgameSdk.managertype) {
+		case 1:
+			 url=ViewConstants.smallhelp+"?uid="+uid+"&token="+token+"&appid="+appid;
+			break;
+			
+case 2:
+	 url=ViewConstants.smallhelpgift+"?uid="+uid+"&token="+token+"&appid="+appid;	
+			break;
+case 3:
+	 url=ViewConstants.smallhelpcustomer_service+"?uid="+uid+"&token="+token+"&appid="+appid;
+	break;
+
+		default:
+			break;
+		}
 		wv_mWeiboview.loadUrl(url);
 		//rl_mLoading.setVisibility(View.GONE);
 		Yayalog.loger(url);
@@ -116,10 +151,11 @@ public class SmallHelpActivity extends Activity{
 				// TODO Auto-generated method stub
 				Intent intent = new Intent();
 				setResult(020202, intent); //intent为A传来的带有Bundle的intent，当然也可以自己定义新的Bundle
-				
+				isclose = 0;
+				LogoWindow.mhandler.sendEmptyMessage(2);
 				finish();
 			}
 		});
-		//wv_mWeiboview.loadUrl(url)
+		
 	}
 }

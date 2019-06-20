@@ -6,17 +6,16 @@
     android:paddingRight="20dp">
 
 
-
     <LinearLayout
         android:id="@+id/navigation_left"
         android:layout_width="wrap_content"
         android:layout_height="match_parent"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
         android:orientation="horizontal"
         android:paddingLeft="20dp"
-        android:paddingRight="20dp"
-        android:layout_alignParentTop="true"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true">
+        android:paddingRight="20dp">
 
         <ImageView
             android:id="@+id/navigation_back"
@@ -32,9 +31,9 @@
             android:layout_gravity="center_vertical"
             android:layout_weight="1"
             android:paddingLeft="5dp"
-            android:textColor="@color/m4399_ope_usercenter_white"
             android:text="@string/m4399_ope_perfect_info_title"
-            android:textSize="20sp" />
+            android:textColor="@color/m4399_ope_usercenter_white"
+            android:textSize="18sp" />
     </LinearLayout>
 
 
@@ -49,21 +48,21 @@
         android:orientation="horizontal">
 
         <ProgressBar
-            android:visibility="gone"
             android:id="@+id/navigation_submit_loading"
             android:layout_width="18dp"
             android:layout_height="18dp"
             android:layout_marginRight="4dp"
             android:indeterminateDrawable="@drawable/m4399_progress_submit_drawable"
-            android:max="10000"/>
+            android:max="10000"
+            android:visibility="gone" />
 
         <TextView
             android:id="@+id/back_to_game"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:text="@string/m4399_ope_perfect_info_submit"
             android:textColor="#FF8F5005"
-            android:textSize="16sp"
-            android:text="@string/m4399_ope_perfect_info_submit"/>
+            android:textSize="16sp" />
 
     </LinearLayout>
 

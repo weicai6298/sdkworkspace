@@ -1,0 +1,198 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:background="@drawable/com_lenovo_lsf_pay_dialog_corner" >
+
+    <LinearLayout
+        android:layout_width="300dp"
+        android:layout_height="match_parent"
+        android:orientation="vertical" >
+
+        <LinearLayout
+            android:id="@+id/ll_logo_version"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:gravity="center_horizontal"
+            android:orientation="vertical" >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="12dp"
+                android:contentDescription="@null"
+                android:text="@string/com_lenovo_pay_modify_realauth_title"
+                android:textColor="#000000"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/overlimit_tip"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/com_lenovo_pay_goods_marginLeft"
+                android:layout_marginRight="@dimen/com_lenovo_pay_goods_marginLeft"
+                android:layout_marginTop="10dp"
+                android:textColor="#000000"
+                android:textSize="16sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/guiding"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"
+                android:layout_marginLeft="@dimen/com_lenovo_pay_goods_marginLeft"
+                android:layout_marginRight="@dimen/com_lenovo_pay_goods_marginLeft"
+                android:layout_marginTop="10dp"
+                android:textSize="12sp" />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/modify_title"
+            android:layout_width="match_parent"
+            android:layout_height="24dp"
+            android:layout_marginLeft="@dimen/com_lenovo_pay_goods_marginLeft"
+            android:layout_marginRight="@dimen/com_lenovo_pay_goods_marginLeft"
+            android:gravity="center_vertical"
+            android:textColor="#333333"
+            android:textSize="12sp" />
+
+        <LinearLayout
+            android:id="@+id/real_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginTop="9dp"
+            android:background="@drawable/com_lenovo_lsf_pay_realeinfo_corner"
+            android:focusable="true"
+            android:focusableInTouchMode="true"
+            android:orientation="vertical"
+            android:padding="1dp" >
+
+            <LinearLayout
+                android:id="@+id/name_layout"
+                android:layout_width="fill_parent"
+                android:layout_height="42dp"
+                android:background="@drawable/com_lenovo_lsf_list_item_selector"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:paddingLeft="@dimen/com_lenovo_pay_goods_marginLeft"
+                android:paddingRight="12dp" >
+
+                <TextView
+                    android:id="@+id/name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/com_lenovo_pay_modify_realauth_title_name"
+                    android:textColor="#666666"
+                    android:textSize="12sp" />
+
+                <EditText
+                    android:id="@+id/name_value"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="@null"
+                    android:singleLine="true"
+                    android:hint="@string/com_lenovo_pay_modify_realauth_hint_name"
+                    android:textColor="#333333"
+                    android:textSize="12sp" />
+
+                <ImageView
+                    android:id="@+id/iv_name_delete"
+                    android:layout_width="16dp"
+                    android:layout_height="16dp"
+                    android:src="@drawable/com_lenovo_pay_delete" />
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="#ececec" />
+
+            <LinearLayout
+                android:id="@+id/id_layout"
+                android:layout_width="fill_parent"
+                android:layout_height="42dp"
+                android:background="@drawable/com_lenovo_lsf_list_item_selector"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:paddingLeft="@dimen/com_lenovo_pay_goods_marginLeft"
+                android:paddingRight="12dp" >
+
+                <TextView
+                    android:id="@+id/id"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/com_lenovo_pay_modify_realauth_title_idno"
+                    android:textColor="#666666"
+                    android:textSize="12sp" />
+
+                <EditText
+                    android:id="@+id/id_value"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="@null"
+                    android:singleLine="true"
+                    android:hint="@string/com_lenovo_pay_modify_realauth_hint_idno"
+                    android:textColor="#333333"
+                    android:textSize="12sp" />
+
+                <ImageView
+                    android:id="@+id/iv_id_delete"
+                    android:layout_width="16dp"
+                    android:layout_height="16dp"
+                    android:src="@drawable/com_lenovo_pay_delete" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/ll_realname_error"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="16dp"
+            android:layout_marginTop="10dp"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:visibility="gone" >
+
+            <ImageView
+                android:layout_width="12dp"
+                android:layout_height="12dp"
+                android:src="@drawable/com_lenovo_pay_realname_error" />
+
+            <TextView
+                android:id="@+id/tv_realname_error"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="6dp"
+                android:textColor="#f1ab26"
+                android:textSize="12sp" />
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/btn_realinfo_send"
+            android:layout_width="match_parent"
+            android:layout_height="42dp"
+            android:layout_margin="10dp"
+            android:background="@drawable/com_lenovo_lsf_pay_button_corner"
+            android:text="@string/com_lenovo_pay_dlg_ok_text"
+            android:textColor="#ffffff"
+            android:textSize="15sp" />
+    </LinearLayout>
+
+    <ImageView
+        android:id="@+id/iv_dialog_close"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="top|right"
+        android:layout_margin="16dp"
+        android:src="@drawable/com_lenovo_pay_realname_cancle" />
+
+</FrameLayout>

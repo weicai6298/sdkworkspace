@@ -9,7 +9,6 @@
         android:minSdkVersion="8"
         android:targetSdkVersion="19" />
 
-    
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
     <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
@@ -32,7 +31,6 @@
     <uses-permission android:name="android.permission.NFC" />
     <uses-permission android:name="android.permission.VIBRATE" />
     <uses-permission android:name="android.webkit.permission.PLUGIN" />
-
     <uses-permission android:name="cn.swiftpass.wxpay.permission.MMOAUTH_CALLBACK" />
     <uses-permission android:name="cn.swiftpass.wxpay.permission.MM_MESSAGE" />
     <uses-permission android:name="android.permission.CAMERA" />
@@ -43,7 +41,6 @@
 
     <uses-permission android:name="xvtian.gai.receiver" />
     <uses-permission android:name="android.permission.SYSTEM_OVERLAY_WINDOW" />
-    
 
     <application
         android:name="com.yayawan.impl.YYApplication"
@@ -51,104 +48,155 @@
         android:theme="@android:style/Theme.NoTitleBar.Fullscreen" >
         <activity
             android:name="com.yayawan.sdktemplate.MainActivity"
-            android:screenOrientation="portrait"
-            android:label="app_name" >
-           
+            android:label="app_name"
+            android:screenOrientation="portrait" >
         </activity>
-      
-        
-      <!-- 手游互联配置 -->
-     	 <meta-data
+
+        <!-- 手游互联配置 -->
+        <meta-data
             android:name="app_id"
-            android:value="kk506140367" />
+            android:value="kk272166642" />
         <meta-data
             android:name="isLandscape"
             android:value="true" />
+        <meta-data
+            android:name="appid"
+            android:value="9203" />
+
+        <uses-library android:name="org.apache.http.legacy" android:required="false"/>
+        <meta-data
+            android:name="android.max_aspect"
+            android:value="2.1" />
         
-         <!-- 当乐SDK初始化界面 ，此界面的横竖屏与CP游戏的横竖屏保持一致，请根据游戏横竖屏设置screenOrientation参数 -->
+        <!-- 当乐SDK初始化界面 ，此界面的横竖屏与CP游戏的横竖屏保持一致，请根据游戏横竖屏设置screenOrientation参数 -->
         <activity
             android:name="com.downjoy.activity.SdkLoadActivity"
             android:configChanges="orientation|keyboardHidden|screenSize"
             android:screenOrientation="landscape"
             android:theme="@style/dcn_full_screen_activity"
-            android:windowSoftInputMode="stateHidden|adjustResize">
+            android:windowSoftInputMode="stateHidden|adjustResize" >
 
-            <!--此处配置的Activity为初始化界面后跳转的界面,CP在此处填写游戏的Activity-->
+            <!-- 此处配置的Activity为初始化界面后跳转的界面,CP在此处填写游戏的Activity -->
             <meta-data
                 android:name="CP_ACTIVITY"
                 android:value="com.yayawan.sdktemplate.MainActivity" />
-            <!--当乐分配的MERCHANT_ID-->
+            <!-- 当乐分配的MERCHANT_ID -->
             <meta-data
                 android:name="MERCHANT_ID"
                 android:value="21999" />
-            <!--当乐分配的APP_ID-->
+            <!-- 当乐分配的APP_ID -->
             <meta-data
                 android:name="APP_ID"
-                android:value="8647" />
-            <!--当乐分配的当乐分配的 APP_KEY-->
+                android:value="9203" />
+            <!-- 当乐分配的当乐分配的 APP_KEY -->
+
             <meta-data
                 android:name="APP_KEY"
-                android:value="IFrMibuC" />
-            <!--此参数自定义，需登录CP后台配置支付通知回调，其中的服务器序号就是SERVER_SEQ_NUM-->
+                android:value="2crqsSV8" />
+            <!-- 此参数自定义，需登录CP后台配置支付通知回调，其中的服务器序号就是SERVER_SEQ_NUM -->
             <meta-data
                 android:name="SERVER_SEQ_NUM"
                 android:value="1" />
-            <!--记得删除自己游戏的下面几行代码，此代码标志Activity是否为启动Activity，一个应用有多个这样的代码的时候，会出现多个图标，多余的请删除-->
+            <!-- 记得删除自己游戏的下面几行代码，此代码标志Activity是否为启动Activity，一个应用有多个这样的代码的时候，会出现多个图标，多余的请删除 -->
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
+
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <!--当乐SDK界面-->
+        <!-- 当乐SDK界面 -->
         <activity
             android:name="com.downjoy.activity.SdkActivity"
             android:configChanges="orientation|keyboardHidden|screenSize"
             android:screenOrientation="behind"
             android:theme="@style/dcn_dialog_activity"
-            android:windowSoftInputMode="stateHidden|adjustResize">
-            <!--V4.2.2 添加-->
+            android:windowSoftInputMode="stateHidden|adjustResize" >
+
+            <!-- V4.2.2 添加 -->
             <intent-filter>
                 <action android:name="android.intent.action.VIEW" />
+
                 <category android:name="android.intent.category.DEFAULT" />
                 <category android:name="android.intent.category.BROWSABLE" />
-                <!--需要替换成自己的appid,195是demo的appid-->
-                <!--如你的appid为195，则下面填写dcnngsdk195-->
-                <data android:scheme="dcnngsdkstring_APP_ID"></data>
+                <!-- 需要替换成自己的appid,195是demo的appid -->
+                <!-- 如你的appid为195，则下面填写dcnngsdk195 -->
+                <data android:scheme="dcnngsdkstring_appid" />
             </intent-filter>
         </activity>
 
-        <!-- UPPay sdk begin -->
+        <!-- 插件占位 start -->
         <activity
-            android:name="com.unionpay.uppay.PayActivity"
-            android:configChanges="orientation|keyboardHidden|screenSize"
-            android:excludeFromRecents="true"
-            android:label="@string/app_name"
+            android:name="com.downjoy.host.loader.a.ActivityN1NRTS0"
+            android:configChanges="keyboard|keyboardHidden|orientation|screenSize"
+            android:exported="false"
             android:screenOrientation="behind"
-            android:windowSoftInputMode="adjustResize" />
-        <!-- UPPay sdk end -->
+            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+        <activity
+            android:name="com.downjoy.host.loader.a.ActivityN1NRTS1"
+            android:configChanges="keyboard|keyboardHidden|orientation|screenSize"
+            android:exported="false"
+            android:screenOrientation="behind"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+        <activity
+            android:name="com.downjoy.host.loader.a.ActivityN1STPTS0"
+            android:configChanges="keyboard|keyboardHidden|orientation|screenSize"
+            android:exported="false"
+            android:launchMode="singleTop"
+            android:screenOrientation="behind"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+        <activity
+            android:name="com.downjoy.host.loader.a.ActivityN1STTS0"
+            android:configChanges="keyboard|keyboardHidden|orientation|screenSize"
+            android:exported="false"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+        <activity
+            android:name="com.downjoy.host.loader.a.ActivityN1SITS0"
+            android:configChanges="keyboard|keyboardHidden|orientation|screenSize"
+            android:exported="false"
+            android:launchMode="singleInstance"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+        <activity
+            android:name="com.downjoy.host.loader.a.ActivityN1NRNTS0"
+            android:configChanges="keyboard|keyboardHidden|orientation|screenSize"
+            android:exported="false"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.NoTitleBar" />
+        <activity
+            android:name="com.downjoy.host.loader.a.ActivityN1STPNTS0"
+            android:configChanges="keyboard|keyboardHidden|orientation|screenSize"
+            android:exported="false"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.NoTitleBar" />
+        <activity
+            android:name="com.downjoy.host.loader.a.ActivityN1STNTS0"
+            android:configChanges="keyboard|keyboardHidden|orientation|screenSize"
+            android:exported="false"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.NoTitleBar" />
+        <activity
+            android:name="com.downjoy.host.loader.a.ActivityN1SINTS0"
+            android:configChanges="keyboard|keyboardHidden|orientation|screenSize"
+            android:exported="false"
+            android:launchMode="singleInstance"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.NoTitleBar" />
+        <!-- 插件占位 end -->
 
-        <!-- alipay sdk begin -->
-        <activity
-            android:name="com.alipay.sdk.app.H5PayActivity"
-            android:configChanges="orientation|keyboardHidden|navigation|screenSize"
-            android:exported="false"
-            android:screenOrientation="behind"
-            android:windowSoftInputMode="adjustResize|stateHidden"></activity>
-        <activity
-            android:name="com.alipay.sdk.auth.AuthActivity"
-            android:configChanges="orientation|keyboardHidden|navigation"
-            android:exported="false"
-            android:screenOrientation="behind"></activity>
-        <!-- alipay sdk end -->
-        <!-- QQ sdk end -->
+
+        <!-- QQ sdk -->
         <activity
             android:name="com.tencent.connect.common.AssistActivity"
-            android:screenOrientation="behind"
+            android:screenOrientation="portrait"
             android:theme="@android:style/Theme.Translucent.NoTitleBar" />
         <activity
             android:name="com.tencent.tauth.AuthActivity"
             android:launchMode="singleTask"
-            android:noHistory="true">
+            android:noHistory="true" >
             <intent-filter>
                 <action android:name="android.intent.action.VIEW" />
 
@@ -158,33 +206,32 @@
                 <data android:scheme="tencent100772260" />
             </intent-filter>
         </activity>
-        <!-- nfc -->
-        <activity
-            android:name="com.wepayplugin.nfc.ui.PayStartActivity"
-            android:configChanges="keyboardHidden|orientation|screenSize"
-            android:screenOrientation="behind"></activity>
-        <activity
-            android:name="com.wepayplugin.nfc.ui.SwiperCardActivity"
-            android:configChanges="keyboardHidden|orientation|screenSize"
-            android:screenOrientation="behind"></activity>
-        <activity
-            android:name="com.wepayplugin.nfc.ui.PayResultActivity"
-            android:configChanges="keyboardHidden|orientation|screenSize"
-            android:screenOrientation="behind"></activity>
-        <!--wechat-->
-        <activity
-            android:name="com.ipaynow.wechatpay.plugin.inner_plugin.wechat_plugin.activity.WeChatNotifyActivity"
-            android:configChanges="orientation|screenSize"
-            android:screenOrientation="behind"
-            android:theme="@android:style/Theme.Dialog"></activity>
-        <!-- Polling Service -->
-        <service android:name="com.downjoy.service.PollingService">
-            <intent-filter>
-                <action android:name="action.downjoy.polling.service" />
-            </intent-filter>
-        </service>
-    
+
+        <!-- 把${applicationId}替换成游戏包名，作为module导入时，android studio会自动替换 -->
+        <provider
+            android:name="android.support.v4.content.FileProvider"
+            android:authorities="string_package.android7.fileprovider"
+            android:exported="false"
+            android:grantUriPermissions="true" >
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/dcn_fileprovider_paths" />
+        </provider>
+        <provider
+            android:name="com.qihoo360.replugin.component.process.ProcessPitProviderPersist"
+            android:authorities="string_package.loader.p.main"
+            android:exported="false" />
+        <provider
+            android:name="com.qihoo360.replugin.component.provider.PluginPitProviderPersist"
+            android:authorities="string_package.Plugin.NP.PSP"
+            android:exported="false" />
+        <provider
+            android:name="com.qihoo360.mobilesafe.svcmanager.ServiceProvider"
+            android:authorities="string_package.svcmanager"
+            android:exported="false"
+            android:multiprocess="false" />
+
+        <service android:name="com.qihoo360.replugin.component.service.server.PluginPitServiceGuard" />
     </application>
 
 </manifest>
-

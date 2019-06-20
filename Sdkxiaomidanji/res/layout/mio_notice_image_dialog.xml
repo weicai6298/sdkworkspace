@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:orientation="vertical"
+        android:background="@color/translucent_background"
+        android:gravity="center">
+
+        <RelativeLayout
+            android:id="@+id/mio_notice_img_parent"
+            android:layout_width="@dimen/view_dimen_801"
+            android:layout_height="@dimen/view_dimen_1080"
+            android:background="@color/translucent_background">
+
+            <ImageView
+                android:id="@+id/mio_notice_image"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_alignParentLeft="true"
+                android:scaleType="fitXY"
+                android:layout_centerVertical="true" />
+
+            <TextView
+                android:id="@+id/mio_notice_close"
+                android:layout_width="@dimen/view_dimen_90"
+                android:layout_height="@dimen/view_dimen_90"
+                android:background="@drawable/mio_notice_text_dialog_close"
+                android:layout_alignParentRight="true" />
+        </RelativeLayout>
+
+        <LinearLayout
+            android:id="@+id/mio_notice_checkbox_parent"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:layout_marginTop="@dimen/view_dimen_46">
+
+            <CheckBox
+                android:id="@+id/mio_notice_checkbox"
+                android:layout_width="@dimen/view_dimen_36"
+                android:layout_height="@dimen/view_dimen_36"
+                style="@style/MioNoticeChcekBox" />
+
+            <TextView
+                android:id="@+id/mio_notice_checkbox_tip"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/text_font_size_36"
+                android:textColor="@color/text_color_white_60"
+                android:text="本期不再提醒"
+                android:maxLines="1"
+                android:layout_marginLeft="@dimen/view_dimen_20" />
+
+        </LinearLayout>
+    </LinearLayout>
+</merge>

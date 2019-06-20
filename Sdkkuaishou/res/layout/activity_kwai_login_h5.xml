@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/root_view"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ProgressBar
+        android:id="@+id/progressBar"
+        style="?android:attr/progressBarStyleHorizontal"
+        android:layout_width="310dp"
+        android:layout_height="3dp"
+        android:layout_above="@+id/webview_area"
+        android:layout_centerHorizontal="true"
+        android:progress="0"
+        android:progressDrawable="@drawable/kwai_webview_loading_line" />
+
+
+    <RelativeLayout
+        android:id="@+id/webview_area"
+        android:layout_width="320dp"
+        android:layout_height="260dp"
+        android:layout_centerInParent="true"
+        android:background="@drawable/kwai_login_bg"
+        android:padding="3dp">
+
+        <WebView
+            android:id="@+id/webview"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
+    </RelativeLayout>
+
+
+    <ImageView
+        android:id="@+id/close_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/webview_area"
+        android:layout_alignEnd="@+id/webview_area"
+        android:layout_alignRight="@+id/webview_area"
+        android:src="@drawable/kwai_global_pop_close"
+        android:translationX="20dp"
+        android:translationY="-20dp"/>
+
+</RelativeLayout>

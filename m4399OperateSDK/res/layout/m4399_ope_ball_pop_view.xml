@@ -12,7 +12,6 @@
         android:paddingLeft="16dp">
 
 
-
         <LinearLayout
             android:id="@+id/pop_la"
             android:layout_width="wrap_content"
@@ -22,33 +21,31 @@
             android:orientation="vertical">
 
             <TextView
-                android:visibility="gone"
                 android:id="@+id/pop_title"
-                android:layout_marginBottom="6dp"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_marginBottom="6dp"
                 android:textColor="#ff9515"
-                android:textSize="14sp" />
+                android:textSize="14sp"
+                android:visibility="gone" />
 
             <TextView
                 android:id="@+id/pop_content"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:maxLines="2"
                 android:layout_marginBottom="4dp"
+                android:maxLines="2"
                 android:textColor="#89000000"
                 android:textSize="12sp" />
-
-
 
 
         </LinearLayout>
 
         <RelativeLayout
-            android:layout_alignParentRight="true"
             android:id="@+id/pop_del"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
             android:padding="8dp">
 
             <ImageView
@@ -59,15 +56,15 @@
 
 
         <TextView
-            android:layout_below="@id/pop_la"
-            android:layout_alignParentRight="true"
-            android:paddingRight="22dp"
             android:id="@+id/pop_next"
-            android:visibility="gone"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_below="@id/pop_la"
+            android:paddingRight="22dp"
             android:textColor="#42000000"
-            android:textSize="12sp" />
+            android:textSize="12sp"
+            android:visibility="gone" />
 
     </RelativeLayout>
 

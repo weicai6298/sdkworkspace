@@ -31,7 +31,7 @@
     <string name="m4399_ope_usercenter_information_center">消息中心</string>
     <string name="m4399_ope_usercenter_coupon_center">优惠券</string>
     <string name="m4399_ope_usercenter_complains_center">投诉&amp;问题咨询</string>
-    <string name="m4399_ope_usercenter_download_tips">游戏已经开始下载啦，请到通知栏里查看进度</string>
+    <string name="m4399_ope_usercenter_download_tips">下载已开始，可在通知栏查看进度</string>
     <string name="m4399_ope_usercenter_download_error_no_storage">Sd卡暂时不可用，无法下载</string>
     <string name="m4399_ope_usercenter_download_dest_tip">下载完成后请到Sd卡的Download目录下查找文件</string>
 
@@ -97,7 +97,7 @@
     <string name="m4399_ope_update_quit_game">退出游戏</string>
     <string name="m4399_ope_update_retry_check">重新检查</string>
     <string name="m4399_ope_update_quit_game_title">你要退出游戏吗？</string>
-    <string name="m4399_ope_stay_at_game">留在游戏</string>
+    <string name="m4399_ope_stay_at_game">继续游戏</string>
     <string name="m4399_ope_stay_msg">享受更多精彩游戏内容</string>
     <string name="m4399_ope_network_error_when_downloading">网络不太对劲，换个试试吧或等下再更新</string>
     <string name="m4399_ope_install_abnormal_apk">糟糕，检查到安装包有错，请您重新尝试</string>
@@ -185,7 +185,6 @@
     <string name="m4399_ope_bind_phone_number_no_null">手机号不能为空~</string>
 
 
-
     <string name="m4399_ope_bind_phone_request_state">正在请求中，请稍等</string>
     <string name="m4399_ope_bind_phone_sms_code_no_null">短信验证码不能为空~</string>
 
@@ -240,6 +239,7 @@
     <string name="m4399_ope_vip_qq">QQ %1$s</string>
     <string name="m4399_ope_vip_qq_name">专属客服 %1$s</string>
     <string name="m4399_ope_vip_qq_client">专属客服</string>
+    <string name="m4399_ope_common_qq_client">联系客服</string>
     <string name="m4399_ope_vip_next_time">下次再说</string>
     <string name="m4399_ope_vip_contact_qq">联系专属客服</string>
     <string name="m4399_ope_vip_nolonger_show">不再显示</string>
@@ -283,7 +283,7 @@
     <string name="m4399_ope_pop_close_area_content">拖入该区域，关闭悬浮球</string>
     <string name="m4399_ope_pop_close_area_content_in">松开手，立刻关闭浮球</string>
     <string name="m4399_ope_pop_clock_prompt">打扰游戏？长按锁定吧</string>
-    <string name="m4399_ope_pop_clock_prompt_content">锁定后，悬浮球不会响应任何操作。锁定后长按可解锁</string>
+    <string name="m4399_ope_pop_clock_prompt_content">锁定后不影响操作，再次长按可解锁</string>
     <string name="m4399_ope_pop_msg_prompt">您有新消息，请注意查收哦！</string>
     <string name="m4399_ope_pop_delay_prompt">您有一张优惠券，%s分钟后可领取</string>
     <string name="m4399_ope_pop_delay_prompt_righnow">您有一张优惠券，请前往领取</string>
@@ -301,15 +301,15 @@
     <string name="m4399_ope_index_gift">礼包</string>
     <string name="m4399_ope_index_website">官网</string>
     <string name="m4399_ope_index_game_circle">游戏圈</string>
-    <string name="m4399_ope_index_strategy">游戏圈</string>
-    <string name="m4399_ope_index_more_vedios">更多视频</string>
+    <string name="m4399_ope_index_strategy">攻略</string>
+    <string name="m4399_ope_index_more_videos">更多视频</string>
     <string name="m4399_ope_index_more_games">更多游戏</string>
     <string name="m4399_ope_network_timeout">连接超时</string>
     <string name="m4399_ope_message">消息</string>
     <string name="m4399_ope_strategy">攻略</string>
-    <string name="m4399_ope_common_problems">常见问题</string>
+    <string name="m4399_ope_common_problems"><u>常见问题</u></string>
     <string name="m4399_ope_feedback">我要反馈</string>
-    <string name="m4399_ope_game_vedios">游戏视频</string>
+    <string name="m4399_ope_game_videos">游戏视频</string>
     <string name="m4399_ope_guess_ulike">猜你喜欢</string>
     <string name="m4399_ope_perfect_qq_wrong">QQ号码格式不正确</string>
     <string name="m4399_ope_process_killed">SDK进程被杀</string>
@@ -334,16 +334,30 @@
     <string name="m4399_ope_share_channel_label">官方</string>
     <string name="m4399_ope_screenshot_ing">正在处理...</string>
     <string name="m4399_ope_ssl_error">SSL证书错误</string>
-    <string name="m4399_ope_ssl_error_code">SSL错误码: </string>
+    <string name="m4399_ope_ssl_error_code">当前网页SSL证书异常，是否继续打开？</string>
     <string name="m4399_ope_continue">继续</string>
     <string name="m4399_ope_close_count">关闭(%s)</string>
     <string name="m4399_ope_get_condition">获得条件：%1$s分%2$s秒后可领取</string>
     <string name="m4399_ope_draw_coupon_success">领取成功！可在充值中使用</string>
-    <string name="m4399_ope_draw_coupon_has_empty">很抱歉，优惠劵被抢光了</string  >
+    <string name="m4399_ope_draw_coupon_has_empty">很抱歉，优惠劵被抢光了</string>
     <string name="m4399_ope_has_already_screenshot">已截图，分享给好友吧！</string>
     <string name="m4399_ope_screenshot_click_share">点击分享</string>
     <string name="m4399_ope_screenshot_login">登录后可截屏分享~</string>
     <string name="m4399_ope_coupon_go_get">前往领取</string>
     <string name="m4399_ope_coupon_to_get">您有一张优惠券待领取,</string>
+    <string name="m4399_ope_no_warn_anymore">不再提示</string>
+    <string name="m4399_ope_install_gamebox_worn">请安装游戏盒</string>
+    <string name="m4399_ope_null_url">链接无效</string>
+    <string name="m4399_ope_quit_circle_description">找一起玩游戏的好朋友</string>
+    <string name="m4399_ope_quit_strategy_description">游戏攻略、闯关秘籍尽在这里</string>
+    <string name="m4399_ope_quit_gift_description">游戏礼包免费领，福利满天飞</string>
+    <string name="m4399_ope_game_client_qq">800803006</string>
+    <string name="m4399_ope_warn_install_qq">请先安装QQ</string>
+    <string name="m4399_ope_game_contact_phone">客服电话：%%s转%s</string>
+    <string name="m4399_ope_contact_qq">%1$s客服QQ：%2$s</string>
+    <string name="m4399_ope_please_choose_contact_way">请选择联系方式</string>
+    <string name="m4399_ope_service_duration">(服务时间：9:00~21:00)</string>
+    <string name="m4399_ope_dialing_immediately">立即拨打</string>
+    <string name="m4399_ope_chat_immediately">立即联系</string>
 
 </resources>

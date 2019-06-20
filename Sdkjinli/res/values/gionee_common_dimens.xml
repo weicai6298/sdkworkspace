@@ -1,7 +1,22 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-
+    <dimen name="zzz_title_close_height">30dip</dimen>
+    <dimen name="zzz_zero">0dip</dimen>
+    <dimen name="zzz_float_quit_dialog_content_text_margin_top">20dip</dimen>
     <dimen name="zzz_float_quit_dialog_general_margin_right">14dip</dimen>
+
+    <dimen name="zzz_float_quit_dialog_width">286dip</dimen>
+    <dimen name="zzz_float_quit_dialog_image_view_height">87dip</dimen>
+    <dimen name="zzz_float_quit_dialog_title_view_height">33dip</dimen>
+    <dimen name="zzz_float_quit_dialog_content_margin_left">18dip</dimen>
+    <dimen name="zzz_float_quit_dialog_content_image_margin_horizon">14dip</dimen>
+    <dimen name="zzz_float_quit_dialog_content_image_margin_top">20dip</dimen>
+    <dimen name="zzz_float_quit_dialog_content_margin_top">10dip</dimen>
+    <dimen name="zzz_float_quit_dialog_content_margin_right">18dip</dimen>
+    <dimen name="zzz_float_quit_dialog_button_bar_height">79dip</dimen>
+    <dimen name="zzz_float_quit_dialog_button_general_padding">7dip</dimen>
+    <dimen name="zzz_float_quit_dialog_content_text_size">15px</dimen>
+    <dimen name="zzz_float_quit_dialog_title_close_icon_size">33dip</dimen>
 
     <dimen name="zzz_common_float_quit_dialog_width">286dip</dimen>
     <dimen name="zzz_common_float_upgrade_bg_height">118dip</dimen>
@@ -31,14 +46,61 @@
     <dimen name="zzz_dialog_button_layout_padding_vertical">6.5dip</dimen>
     <dimen name="zzz_permission_dialog_width">286.3dip</dimen>
     <dimen name="zzz_permission_dialog_height">162dip</dimen>
-    <dimen name="zzz_permission_dialog_padding_vertical">17dip</dimen>
+    <dimen name="zzz_permission_dialog_padding_vertical">12dip</dimen>
     <dimen name="zzz_permission_dialog_padding_horizon">14dip</dimen>
     <dimen name="zzz_permission_text_size_14">14dip</dimen>
     <dimen name="zzz_permission_text_size_13">13dip</dimen>
     <dimen name="zzz_permission_content_margin_top">12dip</dimen>
-    <dimen name="zzz_permission_button_margin_top">12dip</dimen>
+    <dimen name="zzz_permission_button_margin_top">20dip</dimen>
     <dimen name="zzz_permission_button_width">123dip</dimen>
     <dimen name="zzz_permission_button_height">37dip</dimen>
     <dimen name="zzz_permission_button_corner">2dip</dimen>
     <dimen name="zzz_permission_button_radius">9dip</dimen>
+    <dimen name="zzz_float_silent_install_dialog_padding_horizon">18dip</dimen>
+    <dimen name="zzz_float_silent_install_dialog_padding_vertical">18dip</dimen>
+    <dimen name="zzz_float_upgrade_dialog_checkbox_margin_left">15dip</dimen>
+    <dimen name="zzz_float_upgrade_dialog_checkbox_margin_right">12dip</dimen>
+    <dimen name="zzz_float_upgrade_dialog_checkbox_margin_top">8dip</dimen>
+    <dimen name="zzz_float_upgrade_dialog_checkbox_margin_bottom">8dip</dimen>
+    <dimen name="zzz_float_dialog_content_padding_left">18dip</dimen>
+    <dimen name="zzz_float_dialog_content_padding_right">18dip</dimen>
+    <dimen name="zzz_float_upgrade_dialog_checkbox_width">32dip</dimen>
+    <dimen name="zzz_float_upgrade_dialog_checkbox_hint_text_size">12dip</dimen>
+    <dimen name="zzz_float_download_bg_title_margin_top">30dip</dimen>
+    <dimen name="zzz_float_dialog_title_text_view_size">18dip</dimen>
+    <dimen name="zzz_float_dialog_title_view_height">48dip</dimen>
+    <dimen name="zzz_float_dialog_title_text_margin_left">14dip</dimen>
+    <dimen name="zzz_float_dialog_title_cross_icon_size">22dip</dimen>
+    <dimen name="zzz_float_dialog_title_cross_icon_margin_right">10dip</dimen>
+    <dimen name="zzz_float_dialog_content_padding_top">18dip</dimen>
+    <dimen name="zzz_float_dialog_content_padding_bottom">18dip</dimen>
+    <dimen name="zzz_float_dialog_message_size">18dip</dimen>
+    <dimen name="zzz_float_dialog_message_max_height">300dip</dimen>
+    <dimen name="zzz_float_dialog_button_bar_height">53dip</dimen>
+    <dimen name="zzz_float_dialog_button_size">16dip</dimen>
+    <dimen name="zzz_float_upgrade_dialog_content_margin_left">20dip</dimen>
+    <dimen name="zzz_float_upgrade_dialog_content_margin_right">20dip</dimen>
+    <dimen name="zzz_float_download_bg_content_margin_top">4dip</dimen>
+    <dimen name="zzz_float_download_dialog_title_margin_bottom">16dip</dimen>
+    <dimen name="zzz_float_dialog_content_text_view_size">12dip</dimen>
+    <dimen name="zzz_float_download_dialog_progress_bar_width">240dip</dimen>
+    <dimen name="zzz_float_download_dialog_progress_bar_height">42dip</dimen>
+    <dimen name="zzz_float_upgrade_bg_title_margin_top">4dip</dimen>
+    <dimen name="zzz_float_upgrade_bg_title_margin_bottom">8dip</dimen>
+    <dimen name="zzz_float_quit_dialog_button_height">37dip</dimen>
+    <dimen name="zzz_float_upgrade_dialog_button_text_size">14dip</dimen>
+    <dimen name="zzz_float_upgrade_bg_height">118dip</dimen>
+    <dimen name="zzz_float_upgrade_bg_padding_top">20dip</dimen>
+    <dimen name="zzz_float_upgrade_bg_corner_radius">4dip</dimen>
+    <dimen name="zzz_float_upgrade_bg_close_button_margin_right">4dip</dimen>
+    <dimen name="zzz_float_upgrade_bg_close_button_margin_top">26dip</dimen>
+    <dimen name="zzz_float_upgrade_bg_checkbox_margin_top">5dip</dimen>
+    <dimen name="zzz_float_download_dialog_progress_bar_margin_bottom">12dip</dimen>
+    <dimen name="zzz_float_upgrade_dialog_content_text_size">14dip</dimen>
+    <dimen name="zzz_float_upgrade_dialog_checkbox_padding">7dip</dimen>
+    <dimen name="zzz_float_upgrade_dialog_bottom_border_margin_top">4dip</dimen>
+    <dimen name="zzz_float_upgrade_dialog_close_icon_size">33dip</dimen>
+    <dimen name="zzz_float_upgrade_dialog_bottom_border_height">14dip</dimen>
+    <dimen name="zzz_float_quit_dialog_positive_button_margin_left">12dip</dimen>
+    <dimen name="zzz_modify_cellphone_padding">6dip</dimen>
 </resources>

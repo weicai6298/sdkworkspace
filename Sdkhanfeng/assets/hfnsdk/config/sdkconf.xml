@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<configer>
+	<landscape value="true" />
+	<channelid value="1" />
+	<subchannelid value="0" />
+	<debug value="false" />
+	<sdkversion value="2.0.3" />
+	<logmodel value="1" />
+
+	<component type="sdk" value="com.yinhan.nsdk.hanfeng.v2_0_0.HanfengNSdk" />
+	<component type="activity" value="com.yinhan.nsdk.hanfeng.v2_0_0.HanfengNSdk" />
+</configer>

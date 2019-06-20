@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/ipay_bg">
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:src="@drawable/ipay_pay_activity_bg"/>
+
+    <ImageView
+        android:id="@+id/img_dialog_close"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="@dimen/ipay_margin_15"
+        android:layout_marginTop="@dimen/ipay_margin_20"
+        android:src="@drawable/ipay_dialog_close"/>
+
+    <TextView
+        android:id="@+id/tv_dialog_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="@dimen/ipay_margin_20"
+        android:text="@string/iapy_activity_detail"
+        android:textColor="@color/ipay_color_value_11_11_11"
+        android:textSize="@dimen/ipay_text_size_14"/>
+
+    <TextView
+        android:id="@+id/tv_dialog_activity_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tv_dialog_title"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="@dimen/ipay_margin_15"
+        android:background="@drawable/ipay_pay_activity_coupon"
+        android:gravity="center"
+        android:text="满100元赠券"
+        android:textColor="@color/ipay_color_value_ff_48_48"
+        android:textSize="@dimen/ipay_text_size_14"/>
+
+
+    <TextView
+        android:id="@+id/tv_dialog_html_desc"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tv_dialog_activity_title"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="@dimen/ipay_margin_15"
+        android:gravity="center_horizontal"
+        android:text="html渲染"
+        android:textSize="@dimen/ipay_text_size_12"
+        android:visibility="invisible"/>
+
+    <TextView
+        android:id="@+id/tv_dialog_activity_date"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tv_dialog_activity_title"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="@dimen/ipay_margin_15"
+        android:text="@string/iapy_activity_date"
+        android:textColor="@color/ipay_color_value_5_2"
+        android:textSize="@dimen/ipay_text_size_12"/>
+
+    <TextView
+        android:id="@+id/tv_dialog_activity_date_scope"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tv_dialog_activity_date"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="@dimen/ipay_margin_2"
+        android:text="2018-06-01至2018-07-01"
+        android:textColor="@color/ipay_color_value_66_66_66"
+        android:textSize="@dimen/ipay_text_size_12"/>
+
+    <TextView
+        android:id="@+id/tv_dialog_coupon_validity"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tv_dialog_activity_date_scope"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="@dimen/ipay_margin_12"
+        android:text="@string/iapy_coupon_validity"
+        android:textColor="@color/ipay_color_value_5_2"
+        android:textSize="@dimen/ipay_text_size_12"/>
+
+    <TextView
+        android:id="@+id/tv_dialog_coupon_validity_scope"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tv_dialog_coupon_validity"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="@dimen/ipay_margin_2"
+        android:text="2018-06-01至2018-12-01"
+        android:textColor="@color/ipay_color_value_66_66_66"
+        android:textSize="@dimen/ipay_text_size_12"/>
+
+    <TextView
+        android:id="@+id/tv_dialog_coupon_rule"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tv_dialog_coupon_validity_scope"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="@dimen/ipay_margin_12"
+        android:text="@string/iapy_coupon_rule"
+        android:textColor="@color/ipay_color_value_5_2"
+        android:textSize="@dimen/ipay_text_size_12"/>
+
+    <TextView
+        android:id="@+id/tv_dialog_coupon_rule_scope"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tv_dialog_coupon_rule"
+        android:layout_centerHorizontal="true"
+        android:layout_marginLeft="@dimen/ipay_margin_15"
+        android:layout_marginRight="@dimen/ipay_margin_15"
+        android:layout_marginTop="@dimen/ipay_margin_2"
+        android:text="限[保卫萝卜],[测试],[测试2],[测试3],[测试4]应用使用."
+        android:textColor="@color/ipay_color_value_66_66_66"
+        android:textSize="@dimen/ipay_text_size_12"/>
+
+    <View
+        android:id="@+id/v_splite_line"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/ipay_height_1"
+        android:layout_below="@id/tv_dialog_coupon_rule_scope"
+        android:layout_marginTop="@dimen/ipay_margin_27"
+        android:background="@color/ipay_color_value_3_1"/>
+
+    <TextView
+        android:id="@+id/tv_dialog_confirm"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/ipay_height_43"
+        android:layout_below="@id/v_splite_line"
+        android:gravity="center"
+        android:text="@string/ipay_dialog_confirm"
+        android:textColor="@color/ipay_color_value_17_97_ff"
+        android:textSize="@dimen/ipay_text_size_14"/>
+</RelativeLayout>

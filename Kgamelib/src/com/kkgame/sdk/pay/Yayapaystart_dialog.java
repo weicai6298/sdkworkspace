@@ -23,7 +23,7 @@ import android.widget.LinearLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import com.kkgame.sdk.bean.AlipayResult;
+
 import com.kkgame.sdk.bean.BillResult;
 import com.kkgame.sdk.bean.ConfirmPay;
 import com.kkgame.sdk.bean.Order;
@@ -61,7 +61,7 @@ public class Yayapaystart_dialog extends Basedialogview {
 	private static final int RQF_LOGIN = 5;
 	private static final int BILLRESULT = 6;
 	private static final int FIRSTRESULTKUAI = 7;
-	private static final int ALIPAYERROR = 19;
+	private static final int BLUEPERROR = 19;
 	private static final int NETERROR = 18;
 	private static final int DATAERROR = 17;
 	private static final int FIRSTRESULT = 3;
@@ -105,7 +105,7 @@ public class Yayapaystart_dialog extends Basedialogview {
 					if (AgentApp.mPayOrder.money % 100 == 0) {
 
 						mYayaDialog.getTv_mYue().setText(
-								Long.valueOf(AgentApp.mUser.money)/100 + "丫丫币");
+								Long.valueOf(AgentApp.mUser.money)/100 + "Y币");
 					} else {
 						// 除数
 						BigDecimal bd = new BigDecimal(AgentApp.mUser.money);
@@ -115,14 +115,14 @@ public class Yayapaystart_dialog extends Basedialogview {
 						BigDecimal result = bd.divide(bd2, 2,
 								BigDecimal.ROUND_HALF_UP);
 						mYayaDialog.getTv_mYue().setText(
-								result.toString() + "丫丫币 ");
+								result.toString() + "Y币 ");
 					}
 					
 
 					if (AgentApp.mPayOrder.money % 100 == 0) {
 
 						mYayaDialog.getTv_mZhifu().setText(
-								+(AgentApp.mPayOrder.money)/100 + "丫丫币 ");
+								+(AgentApp.mPayOrder.money)/100 + "Y币 ");
 					} else {
 						// 除数
 						BigDecimal bd = new BigDecimal(AgentApp.mPayOrder.money);
@@ -132,7 +132,7 @@ public class Yayapaystart_dialog extends Basedialogview {
 						BigDecimal result = bd.divide(bd2, 2,
 								BigDecimal.ROUND_HALF_UP);
 						mYayaDialog.getTv_mZhifu().setText(
-								result.toString() + "丫丫币 ");
+								result.toString() + "Y币 ");
 					}
 					// mYayaDialog.setBtnText("立即付款");
 					mYayaDialog.getBt_mOk().setOnClickListener(
@@ -193,45 +193,7 @@ public class Yayapaystart_dialog extends Basedialogview {
 				break;
 
 			
-			case RQF_LOGIN:
-				AlipayResult result = new AlipayResult((String) msg.obj);
-				if ("9000".equals(result.getResultStatus())) {
-					AgentApp.mPayOrder.id = result.getOutTradeNo();
-					DialogUtil.showDialog(mContext, "支付结果确认中...");
-					// 查询订单状态
-					/*new Thread() {
-
-						
-
-						@Override
-						public void run() {
-							try {
-								Thread.sleep(6 * 1000);
-								mBillResult = com.KgameSdk.sdk.payment.engine.ObtainData
-										.getBillResult(mContext,
-												AgentApp.mUser,
-												AgentApp.mPayOrder);
-								if (mBillResult.error_code == 701) {
-
-									Thread.sleep(5 * 1000);
-									mBillResult = com.KgameSdk.sdk.payment.engine.ObtainData
-											.getBillResult(mContext,
-													AgentApp.mUser,
-													AgentApp.mPayOrder);
-
-								}
-								mHandler.sendEmptyMessage(BILLRESULT);
-							} catch (Exception e) {
-								mHandler.sendEmptyMessage(DATAERROR);
-							}
-						}
-
-					}.start();*/
-				} else {
-					onError(0);
-					ToastUtil.showError(mContext, result.getResult());
-				}
-				break;
+			
 			case BILLRESULT:
 				if (mBillResult != null) {
 					if (mBillResult.success == 1) {
@@ -248,7 +210,7 @@ public class Yayapaystart_dialog extends Basedialogview {
 
 				break;
 
-			case ALIPAYERROR:
+			case BLUEPERROR:
 				Toast.makeText(mContext, "支付宝快捷支付出现异常,请删除后重试",
 						Toast.LENGTH_LONG).show();
 				break;

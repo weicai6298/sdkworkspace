@@ -10,13 +10,13 @@
     <TextView
         android:id="@+id/coupon_number_tv"
         android:layout_width="0dp"
-        android:layout_weight="1"
         android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:paddingBottom="14dp"
+        android:paddingLeft="18dp"
+        android:paddingTop="14dp"
         android:text="@string/m4399_rec_coupon_number"
         android:textColor="#666666"
-        android:textSize="13sp"
-        android:paddingBottom="14dp"
-        android:paddingTop="14dp"
-        android:paddingLeft="18dp"/>
+        android:textSize="13sp" />
 
 </LinearLayout>

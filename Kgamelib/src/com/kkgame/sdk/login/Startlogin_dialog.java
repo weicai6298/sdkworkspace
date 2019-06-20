@@ -66,23 +66,6 @@ public class Startlogin_dialog extends Basedialogview {
 
 	}
 
-	/**
-	 * 打开登录对话框
-	 */
-	private void startlogin() {
-
-		dialogDismiss();
-		Login_ho_dialog login_ho_dialog = new Login_ho_dialog(mActivity);
-		login_ho_dialog.dialogShow();
-
-	}
-
-	@Override
-	public void dialogShow() {
-		// TODO Auto-generated method stub
-		super.dialogShow();
-		initlog();
-	}
 
 	@Override
 	public void createDialog(final Activity mActivity) {
@@ -172,10 +155,15 @@ public class Startlogin_dialog extends Basedialogview {
 
 		dialog.getWindow().setBackgroundDrawable(new BitmapDrawable());
 
-		// dialog.setCanceledOnTouchOutside(true);
+	
 
-		// initlog();
-
+	}
+	
+	@Override
+	public void dialogShow() {
+		// TODO Auto-generated method stub
+//		super.dialogShow();
+		initlog();
 	}
 
 	private void initlog() {
@@ -205,7 +193,7 @@ public class Startlogin_dialog extends Basedialogview {
 
 		// 如果数据库里没有任何账号注册过.则进行快速注册
 		if (mNames.size() == 0) {
-			//startlogin();
+			ViewConstants.logintype=2;
 			 startFirstregister();
 			 tv_message.setText("尝试自动登录中...");
 			return;
@@ -221,9 +209,6 @@ public class Startlogin_dialog extends Basedialogview {
 			mSelectUser = mNames.get(0);
 			mPassword = UserDao.getInstance(mActivity).getPassword(mSelectUser);
 
-			// secretkey =
-			// UserDao.getInstance(mActivity).getSecret(mSelectUser);
-
 			if (!TextUtils.isEmpty(mPassword)
 					&& !mPassword.equals("yayawan-zhang")) {
 				Yayalog.loger("正在登陆。。。。");
@@ -234,13 +219,25 @@ public class Startlogin_dialog extends Basedialogview {
 
 				tv_message.setText("快速登录中...");
 			}else {
-				//Yayalog.loger("快速注册。。。。");
-				//startFirstregister();
+				Yayalog.loger("快速注册。。。。");
+				
 				startlogin();
 			}
 			Yayalog.loger("密码为空。。。。");
 
 		}
+
+	}
+	
+
+	/**
+	 * 打开登录对话框
+	 */
+	private void startlogin() {
+
+		dialogDismiss();
+		Login_ho_dialog login_ho_dialog = new Login_ho_dialog(mActivity);
+		login_ho_dialog.dialogShow();
 
 	}
 
@@ -249,7 +246,7 @@ public class Startlogin_dialog extends Basedialogview {
 
 		dialogDismiss();
 	
-			new AcountRegister(mActivity).acountRregister();
+		new AcountRegister(mActivity).acountRregister();
 
 		
 

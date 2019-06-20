@@ -73,7 +73,7 @@
                     android:background="@color/zzz_transparent_half"
                     android:padding="@dimen/zzz_billboard_desc_padding">
 
-                    <WebView
+                    <com.gionee.webviewagent.core.GioneeWebView
                         android:id="@+id/zzz_billboard_desc_content"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"/>

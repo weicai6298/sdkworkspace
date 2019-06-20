@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-              android:layout_width="match_parent"
-              android:layout_height="match_parent"
-              android:fillViewport="true"
-              android:orientation="vertical">
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true"
+    android:orientation="vertical">
 
     <cn.m4399.operate.ui.widget.NavigationBarView
         android:id="@+id/usercenter_navigation_bar"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"/>
+        android:layout_height="wrap_content" />
 
     <ScrollView
         android:layout_width="match_parent"
@@ -31,13 +31,13 @@
                 <TextView
                     android:layout_width="24dp"
                     android:layout_height="wrap_content"
-                    android:text="@string/m4399_com_auth_index_a"/>
+                    android:text="@string/m4399_com_auth_index_a" />
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:textSize="16sp"
-                    android:text="@string/m4399_com_auth_instruction_a"/>
+                    android:text="@string/m4399_com_auth_instruction_a"
+                    android:textSize="16sp" />
             </LinearLayout>
 
             <ImageView
@@ -45,7 +45,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="24dp"
                 android:layout_marginTop="4dp"
-                android:src="@drawable/m4399_com_auth_img_a"/>
+                android:src="@drawable/m4399_com_auth_img_a" />
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -56,13 +56,13 @@
                 <TextView
                     android:layout_width="24dp"
                     android:layout_height="wrap_content"
-                    android:text="@string/m4399_com_auth_index_b"/>
+                    android:text="@string/m4399_com_auth_index_b" />
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:textSize="16sp"
-                    android:text="@string/m4399_com_auth_instruction_b"/>
+                    android:text="@string/m4399_com_auth_instruction_b"
+                    android:textSize="16sp" />
             </LinearLayout>
 
             <LinearLayout
@@ -73,21 +73,21 @@
                 <LinearLayout
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
-                    android:layout_weight="1.0"
                     android:layout_marginLeft="24dp"
                     android:layout_marginTop="4dp"
+                    android:layout_weight="1.0"
                     android:orientation="vertical">
 
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="@string/m4399_com_auth_instruction_b_a"/>
+                        android:text="@string/m4399_com_auth_instruction_b_a" />
 
                     <ImageView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginTop="4dp"
-                        android:src="@drawable/m4399_com_auth_img_b_a"/>
+                        android:src="@drawable/m4399_com_auth_img_b_a" />
                 </LinearLayout>
 
                 <LinearLayout
@@ -100,13 +100,13 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginTop="4dp"
-                        android:text="@string/m4399_com_auth_instruction_b_b"/>
+                        android:text="@string/m4399_com_auth_instruction_b_b" />
 
                     <ImageView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginTop="4dp"
-                        android:src="@drawable/m4399_com_auth_img_b_b"/>
+                        android:src="@drawable/m4399_com_auth_img_b_b" />
                 </LinearLayout>
 
                 <LinearLayout
@@ -119,13 +119,13 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginTop="4dp"
-                        android:text="@string/m4399_com_auth_instruction_b_c"/>
+                        android:text="@string/m4399_com_auth_instruction_b_c" />
 
                     <ImageView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginTop="4dp"
-                        android:src="@drawable/m4399_com_auth_img_b_c"/>
+                        android:src="@drawable/m4399_com_auth_img_b_c" />
                 </LinearLayout>
 
             </LinearLayout>
@@ -150,13 +150,13 @@
                         <TextView
                             android:layout_width="24dp"
                             android:layout_height="wrap_content"
-                            android:text="@string/m4399_com_auth_index_c"/>
+                            android:text="@string/m4399_com_auth_index_c" />
 
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:textSize="16sp"
-                            android:text="@string/m4399_com_auth_instruction_c"/>
+                            android:text="@string/m4399_com_auth_instruction_c"
+                            android:textSize="16sp" />
                     </LinearLayout>
 
                     <ImageView
@@ -164,14 +164,14 @@
                         android:layout_height="match_parent"
                         android:layout_marginLeft="24dp"
                         android:layout_marginTop="4dp"
-                        android:src="@drawable/m4399_com_auth_img_c"/>
+                        android:src="@drawable/m4399_com_auth_img_c" />
                 </LinearLayout>
 
                 <LinearLayout
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
-                    android:layout_weight="1.0"
                     android:layout_marginLeft="16dp"
+                    android:layout_weight="1.0"
                     android:orientation="vertical">
 
                     <LinearLayout
@@ -182,13 +182,13 @@
                         <TextView
                             android:layout_width="24dp"
                             android:layout_height="wrap_content"
-                            android:text="@string/m4399_com_auth_index_d"/>
+                            android:text="@string/m4399_com_auth_index_d" />
 
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:textSize="16sp"
-                            android:text="@string/m4399_com_auth_instruction_d"/>
+                            android:text="@string/m4399_com_auth_instruction_d"
+                            android:textSize="16sp" />
                     </LinearLayout>
 
                     <ImageView
@@ -196,7 +196,7 @@
                         android:layout_height="wrap_content"
                         android:layout_marginLeft="30dp"
                         android:layout_marginTop="4dp"
-                        android:src="@drawable/m4399_com_auth_img_d"/>
+                        android:src="@drawable/m4399_com_auth_img_d" />
                 </LinearLayout>
 
             </LinearLayout>

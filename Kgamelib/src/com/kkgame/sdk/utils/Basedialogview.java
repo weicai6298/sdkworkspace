@@ -8,7 +8,6 @@ import android.content.Context;
 import android.content.SharedPreferences;
 import android.widget.LinearLayout;
 
-import com.kkgame.sdk.bean.Discuss;
 import com.kkgame.sdk.bean.User;
 import com.kkgame.sdk.callback.KgameSdkUserCallback;
 import com.kkgame.sdk.login.ViewConstants;
@@ -20,7 +19,7 @@ public abstract class Basedialogview extends Basexml {
 	public KgameSdkUserCallback mUserCallback;
 	protected SharedPreferences mSp;
 
-	protected Discuss discuss;
+	
 	protected boolean dialogisshow=false;
 
 	public Basedialogview(Activity activity) {
@@ -34,16 +33,7 @@ public abstract class Basedialogview extends Basexml {
 		ViewConstants.mDialogs.add(dialog);
 	}
 
-	public Basedialogview(Activity activity, Discuss discuss) {
-		super(activity);
-		this.discuss = discuss;
-		mUserCallback = KgameSdk.mUserCallback;
-		mSp = mActivity.getSharedPreferences("config", Context.MODE_PRIVATE);
-		createDialog(mActivity);
-		ViewConstants.mDialogs.add(dialog);
-
-	}
-
+	
 	public  Dialog dialog;
 	protected LinearLayout baselin;
 	protected LinearLayout ll_mDele;

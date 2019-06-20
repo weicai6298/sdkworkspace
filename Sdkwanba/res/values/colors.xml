@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <color name="wan_main">#FFB347</color>
+    <color name="wan_text_black">#333333</color>
+    <color name="wan_background">#F8F8F8</color>
+    <color name="wan_alto">#d9d9d9</color>
+    <color name="wan_white">#FFFFFF</color>
+    <color name="wan_jumbo">#888888</color>
+    <color name="wan_steel">#666666</color>
+    <color name="wan_dodger_blue">#359cfc</color>
+    <color name="wan_crayon_orange">#FF4B00</color>
+    <color name="wan_sunshade">#fd9840</color>
+
+</resources>

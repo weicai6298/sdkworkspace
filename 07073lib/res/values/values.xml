@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorAccent">#D81B60</color>
+    <color name="colorPrimary">#008577</color>
+    <color name="colorPrimaryDark">#00574B</color>
+    <color name="white">#ffffff</color>
+    <string name="app_name">SDKLib</string>
+    <string name="floatball_url">https://sdk.07073.com/sy/ball</string>
+    <string name="instance_url">https://sdk.07073.com/sy/api/init</string>
+    <string name="login_url">https://sdk.07073.com/sy/login/index</string>
+    <string name="pay_url">https://sdk.07073.com/sy/pay</string>
+    <string name="quit_url">https://sdk.07073.com/sy/login/logout</string>
+</resources>

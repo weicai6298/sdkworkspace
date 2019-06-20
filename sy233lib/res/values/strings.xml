@@ -1,0 +1,60 @@
+<resources>
+
+    <!--注册登录-->
+    <string name="sy233input_phone_or_user">手机号或用户名</string>
+    <string name="sy233input_phone">输入手机号</string>
+    <string name="sy233input_pwd">输入登录密码</string>
+    <string name="sy233input_sure_pwd">确认登录密码</string>
+    <string name="sy233input_sure_msgcode">请输入验证码</string>
+    <string name="sy233input_get_msgcode">获取短信验证码</string>
+    <string name="sy233msgcode_alert">提示：请注意接收短信，我们将发送短信验证码到您的手机上。</string>
+    <string name="sy233register_alert">注册即同意</string>
+    <string name="sy233customer_prot">《服务条款》</string>
+    <string name="sy233register">注册</string>
+    <string name="sy233login">登录</string>
+    <string name="sy233registing">正在注册</string>
+    <string name="sy233alert_phone">请输入正确手机号</string>
+    <string name="sy233alert_pwd">请输入密码</string>
+    <string name="sy233alert_input_verify_code">请输入短信验证码</string>
+    <string name="sy233alert_two_pwd">两密码不一致</string>
+    <string name="sy233logining">正在登录</string>
+    <string name="sy233imnet_ad_jump">跳过</string>
+    <string name="sy233check_network">请检查网络</string>
+    <string name="sy233success_verify_code">发送验证码成功</string>
+    <string name="sy233error_verify_code">发送验证码失败</string>
+    <string name="sy233waite_date">(%1$s)重新获取</string>
+    <string name="sy233first_game">  快速游戏</string>
+    <string name="sy233phone_register">手机注册</string>
+    <string name="sy233qq_login">QQ登录</string>
+    <string name="sy233bind_alert">为了您的账号安全，请尽快绑定账号</string>
+    <string name="sy233tourists_login">游客登录中</string>
+    <string name="sy233bind_phone">绑定账号</string>
+    <string name="sy233switch_login">更换登录方式</string>
+    <string name="sy233switch_account">切换账号</string>
+    <string name="sy233set_login_pwd">6-16位登录密码</string>
+    <string name="sy233input_login_pwd">6-16位登录密码</string>
+    <string name="sy233input_username">6-16位字母开头用户名</string>
+
+    <!--小号管理-->
+    <string name="sy233name_hnit">请输入小号名称，1-6个字符</string>
+    <string name="sy233create_account">创建小号</string>
+    <string name="sy233create">创建</string>
+    <string name="sy233binding">正在绑定</string>
+    <!--修改密码-->
+    <string name="sy233title_setpwd">设置支付密码</string>
+    <string name="sy233title_updatepwd">修改登录密码</string>
+    <string name="sy233title_forgetpwd">忘记登录密码</string>
+    <string name="sy233title_update_paypwd">修改支付密码</string>
+    <string name="sy233title_forget_paypwd">忘记支付密码</string>
+    <string name="sy233input_oldpwd">输入旧密码</string>
+    <string name="sy233input_paypwd">输入支付密码</string>
+    <string name="sy233input_newpwd">输入新密码</string>
+    <string name="sy233updatepwd">修改密码</string>
+    <string name="sy233updating">修改中...</string>
+
+
+    <string name="sy233net_error">网络未连接</string>
+    <string name="sy233error">您的设备网络不稳定\n请检查后点击图标重试</string>
+    <string name="sy233empty">暂无数据</string>
+    <string name="sy233loading">加载中...</string>
+</resources>

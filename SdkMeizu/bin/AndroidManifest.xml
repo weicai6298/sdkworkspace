@@ -49,6 +49,10 @@
           <meta-data
             android:name="AppKey"
             android:value="6354279d521b4b00912c0e137a99c789" />
+          
+           <meta-data
+            android:name="goodsname"
+            android:value="元宝" />
     
     </application>
 

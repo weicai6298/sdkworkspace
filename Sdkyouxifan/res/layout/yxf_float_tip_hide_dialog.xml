@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/transparent"
+    android:gravity="center">
+
+        <RelativeLayout
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:background="@drawable/yxf_bg_in_edt_whi_yel"
+            android:paddingBottom="11.67dp"
+            android:orientation="vertical">
+
+ <!--           <View
+                android:id="@+id/view_whi1"
+                android:layout_width="200dp"
+                android:layout_centerHorizontal="true"
+                android:background="@drawable/yxf_lin_shape_whi"
+                android:layout_height="0.33dp"></View>-->
+
+            <TextView
+                android:id="@+id/tv_tip_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+
+                android:layout_marginTop="20dp"
+                android:text="温馨提示"
+                android:textColor="@color/yxf_sdk_gray_title"
+                android:textSize="16sp" />
+
+            <TextView
+                android:id="@+id/tv_tip_content"
+                android:layout_below="@+id/tv_tip_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="20dp"
+                android:text="摇一摇手机，浮标就会重新出现哦！"
+                android:textColor="@color/yxf_sdk_gray_result"
+                android:textSize="16sp" />
+
+            <LinearLayout
+                android:id="@+id/ll_cancel"
+                android:layout_width="120dp"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/tv_tip_content"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="24dp"
+                android:orientation="vertical"
+                >
+
+<!--                <View
+                    android:layout_width="110dp"
+                    android:background="@drawable/yxf_lin_shape_yel"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_height="0.1dp"></View>-->
+                <Button
+                    android:id="@+id/btn_cancel"
+                    android:text="我知道了"
+                    android:textColor="@color/yxf_sdk_gray_title"
+                    android:textSize="16sp"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:background="@drawable/yxf_lin_shape_red"
+                    />
+<!--                <View
+                    android:layout_width="110dp"
+                    android:background="@drawable/yxf_lin_shape_yel"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_height="0.1dp"></View>-->
+
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/tv_tip_none"
+                android:layout_below="@+id/ll_cancel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="11.67dp"
+                android:padding="5dp"
+                android:text="不再提示"
+                android:textColor="@color/yxf_sdk_blue"
+                android:textSize="14sp" />
+
+<!--            <View
+                android:layout_below="@+id/tv_tip_none"
+                android:layout_width="200dp"
+                android:background="@drawable/yxf_lin_shape_whi"
+                android:layout_centerHorizontal="true"
+                android:layout_height="0.33dp"></View>-->
+
+    </RelativeLayout>
+</LinearLayout>

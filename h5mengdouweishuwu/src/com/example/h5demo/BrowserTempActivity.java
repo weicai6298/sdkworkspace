@@ -29,7 +29,7 @@ import android.widget.RelativeLayout;
 
 import com.example.h5demo.ScreenListener.ScreenStateListener;
 import com.kkgame.utils.Handle;
-import com.syhl.mdwsw.R;
+import com.nzhy.mdwsw.vivo.R;
 import com.yayawan.callback.YYWAnimCallBack;
 import com.yayawan.callback.YYWExitCallback;
 import com.yayawan.main.Kgame;

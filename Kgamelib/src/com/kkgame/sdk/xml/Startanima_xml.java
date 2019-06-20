@@ -61,7 +61,7 @@ public class Startanima_xml extends Basexml implements Layoutxml {
 		int height = wm.getDefaultDisplay().getHeight();
 
 		iv_loading = new ImageView(mContext);
-		machineFactory.MachineView(iv_loading, 350, 350, 0, mLinearLayout, 0,
+		machineFactory.MachineView(iv_loading, 500, 500, 0, mLinearLayout, 0,
 				oneheight, 0, 0, 100);
 
 		// System.out.println(DisplayUtils.getHeightPx(mActivity)+"+++++++++++++");

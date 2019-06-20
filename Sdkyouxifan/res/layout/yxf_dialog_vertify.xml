@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/yxf_sdk_bg_tran">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:id="@+id/rl_login_register"
+            android:layout_width="246.67dp"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:background="@drawable/yxf_bt_in_bg_whi"
+            android:orientation="vertical"
+            android:paddingBottom="26.67dp"
+            android:paddingLeft="26.67dp">
+
+            <ImageView
+                android:id="@+id/iv_cancel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/yxf_black_cha"
+                android:layout_gravity="right"
+                android:padding="10dp"
+                />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="12sp"
+                android:text="若一直收不到验证短信，可尝试使用语音验证码"
+                android:lineSpacingExtra="3dp"
+                android:textColor="@color/yxf_sdk_gray_result"
+                android:layout_marginRight="26.67dp"
+                android:layout_marginTop="13.33dp"
+                />
+
+            <Button
+                android:id="@+id/btn_voice"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:background="@drawable/yxf_bt_in_orange"
+                android:text="接听语音验证码"
+                android:textColor="@color/yxf_sdk_white"
+                android:layout_marginRight="26.67dp"
+                android:layout_marginTop="13.33dp"
+                android:textSize="12sp" />
+
+            <Button
+                android:id="@+id/btn_sms"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:background="@drawable/yxf_bt_in_green"
+                android:text="重新获取短信验证码"
+                android:textColor="@color/yxf_sdk_white"
+                android:layout_marginTop="10dp"
+                android:layout_marginRight="26.67dp"
+                android:textSize="12sp" />
+
+  <!--          <Button
+                android:id="@+id/btn_cancel"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/yxf_bt_in_gray_shallow"
+                android:text="取消"
+                android:textColor="@color/yxf_sdk_gray_title"
+                android:textSize="12sp" />-->
+
+        </LinearLayout>
+        
+    </RelativeLayout>
+
+</LinearLayout>

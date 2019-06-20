@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><!-- 个人中心 操作列表项 by.linlijun  for test 这些固定的文字、图片要删掉~-->
+<?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"

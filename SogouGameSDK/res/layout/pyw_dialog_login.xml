@@ -45,7 +45,7 @@
             android:layout_height="@dimen/pyw_common_btn_height"
             android:layout_marginLeft="20dp"
             android:background="@drawable/pyw_selector_btn_white_bg"
-            android:text="切换账号"
+            android:text="切换帐号"
             android:textColor="@color/pyw_common_gray_light"
             android:textSize="@dimen/pyw_common_large" />
     </LinearLayout>

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="huo_sdk_xlistview_header_hint_normal">下拉刷新</string>
+    <string name="huo_sdk_xlistview_header_hint_ready">松开刷新数据</string>
+    <string name="huo_sdk_xlistview_header_hint_loading">正在加载...</string>
+    <string name="huo_sdk_xlistview_header_last_time"></string>
+    <string name="huo_sdk_xlistview_footer_hint_normal"></string>
+    <string name="huo_sdk_xlistview_footer_hint_ready">松开载入更多</string>
+</resources>

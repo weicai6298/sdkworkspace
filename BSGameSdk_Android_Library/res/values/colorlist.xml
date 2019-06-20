@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+<color name="alipay_TextColorBlack">#FF000000</color>
+    <color name="alipay_TextColorWhite">#FFFFFFFF</color>
+    <color name="alipay_TextColorGray">#FF505050</color>
+    <color name="alipay_ToastBgColor">#FF424242</color>
+    <color name="alipay_btnColor">#FFFFFF</color>
+    <color name="alipay_textColorforItemTitle">#FF666666</color>
+    <color name="alipay_secondbtntextColor">#FF496ea3</color>
+    <color name="alipay_textColorforCheckBox">#FF333333</color>
+    <color name="alipay_bgColor">#FFF2F2F2</color>
+    <color name="alipay_downLoadTextNomal">#FF3366CC</color>
+    <color name="alipay_downLoadTextPressed">#FFFFFFFF</color>
+    <color name="alipay_downLoadBackNomal">#FFFFFFFF</color>
+    <color name="alipay_downLoadBackFocus">#FF6698E7</color>
+    <color name="alipay_downLoadBackPressed">#FF3366CC</color>
+    <color name="alipay_dialog_tiltle_blue">#2277BB</color>
+    
+    <color name="bsgamesdk_TextColorBlack">#FF000000</color>
+    <color name="bsgamesdk_TextColorWhite">#FFFFFFFF</color>
+    <color name="bsgamesdk_TextColorGray">#FF505050</color>
+    <color name="ToastBgColor">#FF424242</color>
+    <color name="bsgamesdk_BgColor">#ffd1dce9</color>
+    <color name="bsgamesdk_dcn_transparent">#ffd1dce9</color>
+
+</resources>

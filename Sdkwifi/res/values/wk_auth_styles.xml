@@ -1,0 +1,11 @@
+<resources>
+
+    <style name="WkAuthProgressBarHorizontal" parent="@android:style/Widget.ProgressBar.Horizontal">
+        <item name="android:indeterminateOnly">false</item>
+        <item name="android:progressDrawable">@drawable/wk_auth_progressbar_horizontal</item>
+        <item name="android:indeterminateDrawable">@drawable/wk_auth_progressbar_horizontal</item>
+        <item name="android:minHeight">4dp</item>
+        <item name="android:maxHeight">4dp</item>
+    </style>
+
+</resources>

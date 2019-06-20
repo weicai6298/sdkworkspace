@@ -26,7 +26,7 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="您的账号是:"
+                android:text="您的帐号是:"
                 android:textColor="#555555"
                 android:textSize="13sp" />
 
@@ -45,7 +45,7 @@
             android:layout_height="wrap_content"
             android:drawableLeft="@drawable/sogou_game_sdk_icon_wraning"
             android:drawablePadding="5dp"
-            android:text="建议绑定手机，防止忘记密码或账号被盗时找回"
+            android:text="建议绑定手机，防止忘记密码或帐号被盗时找回"
             android:textColor="#ee4242"
             android:textSize="12sp"
             android:layout_marginTop="15dp" />

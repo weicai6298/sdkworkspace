@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="288dp"
+                android:layout_height="164dp"
+                android:gravity="center_vertical"
+                android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/game_hide_float_warning_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16.32dp"
+        android:gravity="center"
+        android:includeFontPadding="false"
+        android:text="要隐藏侧边栏？"
+        android:textColor="#333333"
+        android:textSize="19sp"/>
+
+    <TextView
+        android:layout_width="230dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/game_hide_float_warning_title"
+        android:layout_centerInParent="true"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="15dp"
+        android:gravity="center"
+        android:includeFontPadding="false"
+        android:maxLines="2"
+        android:text="点击确认隐藏侧边栏，我将在下次游戏时回归"
+        android:textColor="#333333"
+        android:textSize="16sp"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:layout_alignParentBottom="true"
+        android:orientation="horizontal"
+        android:weightSum="2">
+
+        <Button
+            android:id="@+id/game_hide_float_warning_positive_btn"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="#FFFFFF"
+            android:text="确认"
+            android:textColor="#333333"
+            android:textSize="18sp"/>
+
+        <Button
+            android:id="@+id/game_hide_float_warning_negative_btn"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="#FFB718"
+            android:text="取消"
+            android:textColor="#FFFFFF"
+            android:textSize="18sp"/>
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="45dp"
+        android:background="#DDDDDD"/>
+
+</RelativeLayout>

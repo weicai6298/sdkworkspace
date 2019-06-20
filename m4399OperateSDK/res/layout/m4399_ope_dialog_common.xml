@@ -6,7 +6,7 @@
     android:minHeight="180dp"
     android:minWidth="256dp"
     android:orientation="vertical"
-    android:padding="0dp" >
+    android:padding="0dp">
 
     <RelativeLayout
         android:id="@+id/dialog_title_container"
@@ -16,7 +16,7 @@
         android:layout_marginRight="16dp"
         android:gravity="center_vertical"
         android:paddingBottom="10dp"
-        android:paddingTop="10dp" >
+        android:paddingTop="10dp">
 
         <ImageView
             android:id="@+id/iv_dialog_title_logo"
@@ -54,18 +54,18 @@
         android:paddingBottom="6dp"
         android:paddingLeft="16dp"
         android:paddingRight="16dp"
-        android:paddingTop="6dp" >
+        android:paddingTop="6dp">
 
         <TextView
             android:id="@+id/tv_dialog_msg"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:maxHeight="120dp"
-            android:layout_marginTop="6dp"
             android:layout_marginBottom="6dp"
+            android:layout_marginTop="6dp"
             android:adjustViewBounds="true"
             android:fadeScrollbars="false"
             android:lineSpacingExtra="2dp"
+            android:maxHeight="120dp"
             android:maxWidth="300dp"
             android:scrollbarStyle="outsideInset"
             android:scrollbars="vertical"
@@ -85,7 +85,7 @@
         android:layout_marginTop="8dp"
         android:orientation="horizontal"
         android:paddingLeft="8dp"
-        android:paddingRight="8dp" >
+        android:paddingRight="8dp">
 
         <Button
             android:id="@+id/btn_dialog_left"

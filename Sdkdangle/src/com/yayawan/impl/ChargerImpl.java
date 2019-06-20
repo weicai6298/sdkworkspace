@@ -61,6 +61,11 @@ public class ChargerImpl implements YYWCharger {
 		requestParams.addBodyParameter("goods", YYWMain.mOrder.goods);
 		requestParams.addBodyParameter("dl_uid", YaYawanconstants.uid);
 		requestParams.addBodyParameter("dl_token", YaYawanconstants.token);
+		
+		requestParams.addBodyParameter("zoneid", YaYawanconstants.zone_Id);
+		requestParams.addBodyParameter("zonename", YaYawanconstants.zone_Name);
+		requestParams.addBodyParameter("roleid", YaYawanconstants.role_Id);
+		requestParams.addBodyParameter("rolename", YaYawanconstants.role_Name);
 		Yayalog.loger("uid:"+ YYWMain.mUser.yywuid);
 		Yayalog.loger("username:"+YYWMain.mUser.userName);
 		Yayalog.loger("app_id:"+DeviceUtil.getAppid(paramActivity));
@@ -68,6 +73,10 @@ public class ChargerImpl implements YYWCharger {
 		Yayalog.loger("remark:"+YYWMain.mOrder.ext);
 		Yayalog.loger("transid:"+YYWMain.mOrder.orderId);
 		Yayalog.loger("url:"+ ViewConstants.unionmakeorder);
+		Yayalog.loger("zoneid:"+ YaYawanconstants.zone_Id);
+		Yayalog.loger("zonename:"+ YaYawanconstants.zone_Name);
+		Yayalog.loger("roleid:"+ YaYawanconstants.role_Id);
+		Yayalog.loger("rolename:"+ YaYawanconstants.role_Name);
 		httpUtil.send(HttpMethod.POST, ViewConstants.unionmakeorder,requestParams,
 				new RequestCallBack<String>() {
 

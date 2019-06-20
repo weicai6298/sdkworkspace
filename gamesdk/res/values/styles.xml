@@ -1,0 +1,32 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="UG_AppTheme" parent="android:Theme.NoTitleBar">
+    </style>
+
+    <!-- 自定义Loading Dialog -->
+    <style name="UG_AppTheme.Transparent">
+        <!-- 去标题栏 -->
+        <!-- 全屏 -->
+        <item name="android:windowFullscreen">true</item>
+        <!-- 透明 -->
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:colorBackgroundCacheHint">@null</item>
+        <item name="android:windowIsTranslucent">true</item>
+        <item name="android:windowAnimationStyle">@android:style/Animation</item>
+    </style>
+
+    <style name="anim_popup_window">
+        <item name="android:windowEnterAnimation">@anim/ug_pop_show</item>
+        <item name="android:windowExitAnimation">@anim/ug_pop_hide</item>
+    </style>
+
+    <style name="Dialog" parent="android:style/Theme.Dialog">
+        <item name="android:background">#00000000</item>
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowIsFloating">true</item>
+    </style>
+
+
+</resources>

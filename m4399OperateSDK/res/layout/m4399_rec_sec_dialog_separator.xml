@@ -3,7 +3,7 @@
     android:layout_width="fill_parent"
     android:layout_height="@dimen/m4399_rec_separator_height"
     android:background="@color/m4399_rec_dialog_separator_bg"
-    android:orientation="vertical" >
+    android:orientation="vertical">
 
     <ImageView
         android:id="@+id/dialog_separator"

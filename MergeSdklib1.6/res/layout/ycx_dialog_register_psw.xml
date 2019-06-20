@@ -1,0 +1,86 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/ycx_login_dialog_content"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/ycx_color_background"
+    android:paddingBottom="20dp" >
+
+    		<FrameLayout
+			    android:layout_width="fill_parent"
+			    android:layout_height="40.0dip"
+			    android:clickable="true"
+			    android:id="@+id/ycx_fl_title"
+			    android:orientation="vertical">
+		        <LinearLayout
+		            android:layout_width="fill_parent"
+		            android:layout_height="40.0dip"
+		            android:layout_gravity="bottom"
+		            android:gravity="center"
+		            android:paddingLeft="10dip"
+		            android:paddingRight="10dip"
+		            android:orientation="horizontal" >
+		            <TextView
+			            style="@style/ycx_style_dialog_title"
+			            android:text="一键注册"/>
+		        </LinearLayout>
+		        
+		        <ImageView 
+					    android:layout_gravity="left|center_vertical"
+					    android:id="@+id/ycx_iv_back"
+					    android:src="@drawable/ycx_img_back"
+					    android:layout_width="25dip"
+					    android:layout_marginLeft="5dip"
+					    android:scaleType="fitEnd"
+					    android:layout_height="25dip"/>
+	        </FrameLayout>
+
+    <LinearLayout
+        android:id="@+id/ycx_layout_login_psw"
+        android:layout_width="280dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/ycx_fl_title"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/ycx_selector_edittext_bg"
+        android:paddingLeft="15dp"
+        android:paddingRight="15dp" >
+
+        <EditText
+            android:id="@+id/ycx_et_login_psw"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/ycx_dimen_editext_height"
+            android:layout_weight="1"
+            android:background="@null"
+            android:digits="@string/ycx_regex_code"
+            android:hint="@string/ycx_string_pwd_hint"
+            android:inputType="textPassword"
+            android:maxLength="16"
+            android:paddingRight="10dp"
+            android:singleLine="true"
+            android:textColor="@color/ycx_color_gray_darker"
+            android:textColorHint="@color/ycx_color_hint_color"
+            android:textSize="@dimen/ycx_dimen_large" >
+        </EditText>
+
+        <ImageView
+            android:id="@+id/ycx_iv_login_password_icon"
+            android:layout_width="20dp"
+            android:layout_height="wrap_content"
+            android:scaleType="centerInside"
+            android:src="@drawable/ycx_img_psw_visible" />
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/ycx_btn_login"
+        android:layout_width="280dp"
+        android:layout_height="@dimen/ycx_dimen_btn_height"
+        android:layout_below="@id/ycx_layout_login_psw"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/ycx_selector_btn_right"
+        android:text="完成注册"
+        android:textColor="@color/ycx_color_white"
+        android:textSize="@dimen/ycx_dimen_larger" />
+
+</RelativeLayout>
