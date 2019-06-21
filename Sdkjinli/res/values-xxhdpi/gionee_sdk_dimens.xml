@@ -1,6 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<resources>
-    <dimen name="zzz_activity_width">324dip</dimen>
-    <dimen name="zzz_activity_height">300dip</dimen>
-    <dimen name="zzz_daily_sign_gift_icon_size">58dip</dimen>
-</resources>
