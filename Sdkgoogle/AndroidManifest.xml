@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.bfgamegg.mjzd"
+    android:versionCode="2"
+    android:versionName="1.0" 
+     >
+<uses-sdk
+        android:minSdkVersion="11"
+        android:targetSdkVersion="21" />
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.MOUNT_UNMOUNT_FILESYSTEMS" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.RECEIVE_SMS" />
+    <uses-permission android:name="android.permission.SEND_SMS" />
+    <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW" />
+    <uses-permission android:name="android.permission.DISABLE_KEYGUARD" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.DOWNLOAD_WITHOUT_NOTIFICATION" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <uses-permission android:name="android.permission.VIBRATE" />
+    <uses-permission android:name="android.webkit.permission.PLUGIN" />
+    <uses-permission android:name="android.permission.CHANGE_NETWORK_STATE" />
+    <uses-permission android:name="cn.swiftpass.wxpay.permission.MMOAUTH_CALLBACK" />
+    <uses-permission android:name="cn.swiftpass.wxpay.permission.MM_MESSAGE" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.FLASHLIGHT" />
+
+    <uses-feature android:name="android.hardware.camera" />
+    <uses-feature android:name="android.hardware.camera.autofocus" />
+
+    <uses-permission android:name="xvtian.gai.receiver" />
+    <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW" />
+    <uses-permission android:name="android.permission.SYSTEM_OVERLAY_WINDOW" />
+    <uses-permission android:name="android.permission.RESTART_PACKAGES" />
+    <uses-permission android:name="com.android.vending.BILLING" />
+
+    <application
+        android:allowBackup="true">
+        <activity
+            android:name="com.example.kkgamedemo.MainActivity"
+            android:configChanges="keyboardHidden|navigation|orientation|screenSize"
+            android:screenOrientation="landscape" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <meta-data
+            android:name="com.facebook.sdk.ApplicationId"
+            android:value="@string/facebook_app_id" />
+
+        <activity
+            android:name="com.facebook.FacebookActivity"
+            android:configChanges="keyboard|keyboardHidden|orientation|screenLayout|screenSize"
+            android:label="@string/app_name"
+            />
+        <activity
+            android:name="com.facebook.CustomTabActivity"
+            android:exported="true" >
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+
+                <data android:scheme="@string/fb_login_protocol_scheme" />
+            </intent-filter>
+        </activity>
+
+        <meta-data
+            android:name="app_id"
+            android:value="kk2336424291" />
+
+        <activity
+            android:name="com.kkgame.sdk.login.BaseLogin_Activity"
+            android:configChanges="keyboardHidden|navigation|orientation|screenSize"
+            android:theme="@android:style/Theme.Dialog" />
+        <activity
+            android:name="com.kkgame.sdk.login.SmallHelpActivity"
+            android:configChanges="keyboardHidden|navigation|orientation|screenSize"
+            android:theme="@android:style/Theme.Translucent" />
+
+        <meta-data
+            android:name="android.max_aspect"
+            android:value="2.1" />
+        <meta-data
+            android:name="yayawan_nochangecount"
+            android:value="false" />
+        <meta-data
+            android:name="isdebug"
+            android:value="false" />
+        <meta-data
+            android:name="sdktype"
+            android:value="string3" />
+        <meta-data
+            android:name="kefuqq"
+            android:value="string123456" />
+        <meta-data
+            android:name="isLandscape"
+            android:value="true" />
+        <meta-data
+            android:name="guangdiantong"
+            android:value="yes" />
+
+        <activity android:name="com.facebook.CustomTabMainActivity" />
+        <activity
+            android:name="com.google.android.gms.auth.api.signin.internal.SignInHubActivity"
+            android:excludeFromRecents="true"
+            android:exported="false"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+
+        <service
+            android:name="com.google.android.gms.auth.api.signin.RevocationBoundService"
+            android:exported="true"
+            android:permission="com.google.android.gms.auth.api.signin.permission.REVOCATION_NOTIFICATION" />
+
+        <activity
+            android:name="com.google.android.gms.common.api.GoogleApiActivity"
+            android:exported="false"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+
+        <meta-data
+            android:name="com.google.android.gms.version"
+            android:value="@integer/google_play_services_version" />
+
+        <provider
+            android:name="com.facebook.internal.FacebookInitProvider"
+            android:authorities="com.bfgamegp.mjzd.FacebookInitProvider"
+            android:exported="false" />
+
+        <receiver
+            android:name="com.facebook.CurrentAccessTokenExpirationBroadcastReceiver"
+            android:exported="false" >
+            <intent-filter>
+                <action android:name="com.facebook.sdk.ACTION_CURRENT_ACCESS_TOKEN_CHANGED" />
+            </intent-filter>
+        </receiver>
+    </application>
+
+</manifest>
