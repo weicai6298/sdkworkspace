@@ -3,7 +3,8 @@
     <string name="title_activity_main">MainActivity</string>
     <string name="action_settings">Settings</string>
     <string name="hello_world">Hello world!</string>
-<string name="app_name">夢境之都</string>
-   <string name="facebook_app_id">1533781210090055</string>
+
+     <string name="app_name">夢境之都</string>
+    <string name="facebook_app_id">1533781210090055</string>
     <string name="fb_login_protocol_scheme">fb1533781210090055</string>
 </resources>
