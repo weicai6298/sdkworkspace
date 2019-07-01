@@ -6,8 +6,8 @@
 
     <uses-sdk
         android:minSdkVersion="8"
-        android:targetSdkVersion="18" />
-    <!-- 丫丫玩sdk 必须权限 -->
+        android:targetSdkVersion="26" />
+
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.READ_PHONE_STATE" />
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
@@ -37,7 +37,8 @@
     <uses-permission android:name="xvtian.gai.receiver" />
     <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW" />
     <uses-permission android:name="android.permission.SYSTEM_OVERLAY_WINDOW" />
-
+    <uses-permission android:name="android.permission.RESTART_PACKAGES" />
+    
     <supports-screens
         android:anyDensity="true"
         android:largeScreens="true"
@@ -53,7 +54,7 @@
         <activity
             android:name="com.yayawan.sdkyyw.MainActivity"
             android:configChanges="keyboardHidden|navigation|orientation|screenSize"
-            android:screenOrientation="portrait" >
+            android:screenOrientation="landscape" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -76,36 +77,36 @@
         <meta-data
             android:name="yayawan_nochangecount"
             android:value="false" />
-        <meta-data
-            android:name="app_id"
-            android:value="kk1965363965" />
 
         <!-- 是否为调试模式 -->
         <meta-data
             android:name="isdebug"
             android:value="false" />
         <!-- 横屏设置 -->
-
+        <meta-data
+            android:name="app_id"
+            android:value="kk2832964261" />
+        <!-- 竖屏设置 -->
+        <meta-data
+            android:name="sdktype"
+            android:value="string2" />
 
         <!--
              <meta-data
             android:name="yayawan_orientation"
-            android:value="landscape" />
+            android:value="landscape" />
         -->
         <!-- 竖屏设置 -->
 
         <meta-data
-            android:name="yayawan_orientation"
-            android:value="portrait" />
-        <meta-data
             android:name="isLandscape"
-            android:value="false" />
-
+            android:value="true" />
         <!-- 腾讯广点通上报方案 -->
 
         <meta-data
             android:name="guangdiantong"
             android:value="yes" />
+        
     </application>
 
 </manifest>

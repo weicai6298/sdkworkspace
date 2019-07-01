@@ -52,7 +52,6 @@ public class ChargerImpl implements YYWCharger {
 				            public void onSuccess(User user, Order order, int arg2) {
 				                if (YYWMain.mPayCallBack != null) {
 				                	
-				                	GuangdiantongUtils.guangDiantongGiveMoney(paramActivity, order.money+"");
 				                    YYWUser yywUser = new YYWUser();
 
 				                    yywUser.uid = user.uid + "";

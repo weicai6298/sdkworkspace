@@ -115,9 +115,9 @@ class LogoWindow {
 		InputStream istr = null;
 		try {
 			if(DeviceUtil.isLandscape(con)){
-				istr = assetManager.open("shanping_heng.png");
+				istr = assetManager.open("yayaassets/shanping_heng.png");
 			}else{
-				istr = assetManager.open("shanpin_shu.png");
+				istr = assetManager.open("yayaassets/shanpin_shu.png");
 			}
 		} catch (IOException e) {
 			// TODO Auto-generated catch block
