@@ -19,7 +19,7 @@
     <color name="bdp_lighter_gray">#ffe9e9e9</color>
 
     <!-- paycenter -->
-    <color name="bdp_bg">#f5f5f5</color>
+    <color name="bdp_bg">#ffffff</color>
     <color name="bdp_color_333333">#333333</color>
     <color name="bdp_color_ff3300">#ff3300</color>
     <color name="bdp_color_999999">#999999</color>
@@ -34,6 +34,9 @@
     <color name="bdp_paycenter_color_61B11F">#61B11F</color>
     <color name="bdp_color_f08f1e">#f08f1e</color>
     <color name="bdp_color_text_hint">#ffcccccc</color>
+    <color name="bdp_color_009cff">#009cff</color>
+    <color name="bdp_color_ffffff">#ffffff</color>
+    <color name="bdp_color_fe4871">#FE4871</color>
     <!-- paycenter -->
 
     <color name="bdp_color_pink">#ffea0063</color>
@@ -57,5 +60,10 @@
     <color name="bdp_color_color_ff666666">#FF666666</color>
     <color name="bdp_color_cccccc">#dddddd</color>
     <color name="bdp_color_color_c6c6c6">#C6C6C6</color>
-
+    <color name="bdp_color_bbbbbb">#bbbbbb</color>
+    <color name="bdp_color_fe4972">#FE4972</color>
+    <color name="bdp_color_306cff">#306CFF</color>
+    <color name="bdp_color_fa395f">#FA395F</color>
+    <color name="bdp_color_dddddd">#DDDDDD</color>
+    <color name="bdp_color_f8f9fd">#F8F9FD</color>
 </resources>

@@ -34,13 +34,16 @@
     <string name="bdp_account_login_title_baidu">百度登录</string>
     <string name="bdp_account_login_title_91">91账号登录</string>
     <string name="bdp_account_login_title_dk">多酷账号登录</string>
+    <string name="bdp_account_login_baidu">百度账号</string>
+    <string name="bdp_account_login_dk">账号登录</string>
     <string name="bdp_account_title_back">&lt;返回</string>
     <string name="bdp_account_login_hint_account_baidu">手机号/邮箱/用户名</string>
     <string name="bdp_account_login_hint_account_91">手机号/邮箱/通行证</string>
-    <string name="bdp_account_login_hint_account_dk">手机号/用户名</string>
+    <string name="bdp_account_login_hint_account_dk">请输入账号</string>
     <string name="bdp_account_login_hint_pass">请输入密码</string>
     <string name="bdp_account_login_hint_verifycode">请输入验证码</string>
     <string name="bdp_account_login_forgot_pass">忘记密码？</string>
+    <string name="bdp_account_login_forgot_pass_new">忘记密码？</string>
     <string name="bdp_account_login_find_pass">找回密码</string>
     <string name="bdp_account_change_verifycode">换一换</string>
     <string name="bdp_account_login">登录</string>
@@ -55,12 +58,13 @@
     <string name="bdp_account_username_register">账号注册</string>
     <string name="bdp_account_other_login">其他登录方式</string>
     <string name="bdp_account_other_login_91">91账号\u3000</string>
+    <string name="bdp_account_login_91">91账号</string>
     <string name="bdp_account_other_login_dk">多酷账号</string>
     <string name="bdp_account_customer_service">客服:</string>
     <string name="bdp_account_customer_service_phone">400&#8211;826&#8211;898</string>
     <string name="bdp_account_register_title_baidu">百度账号注册</string>
-    <string name="bdp_account_register_hint_account_baidu">请输入用户名</string>
-    <string name="bdp_account_register_hint_pass_baidu">密码：6&#8211;14个字母、数字、符号</string>
+    <string name="bdp_account_register_hint_account_baidu">请填写用户名</string>
+    <string name="bdp_account_register_hint_pass_baidu">6&#8211;14个字母、数字、符号</string>
     <string name="bdp_account_register_hint_verifycode">请输入验证码</string>
     <string name="bdp_account_register_show_pass">显示密码</string>
     <string name="bdp_account_register_accept">我已阅读并同意</string>
@@ -97,31 +101,31 @@
     <string name="bdp_account_bind_phone_check_mail_login">登录邮箱</string>
     <string name="bdp_account_bind_phone_check_mail_verifycode_get">获取邮箱验证码</string>
     <string name="bdp_account_bind_phone_check_mail_verifycode_getting">发送中…</string>
-    <string name="bdp_account_bind_phone_check_mail_verifycode_reget">%1$d秒后可重新获取</string>
+    <string name="bdp_account_bind_phone_check_mail_verifycode_reget">重新发送%1$ds</string>
     <string name="bdp_account_bind_phone_check_mail_sent_tip">邮箱验证码已发送！</string>
     <string name="bdp_account_bind_phone_check_mail_hint">请输入收到的邮箱验证码</string>
-    <string name="bdp_account_bind_phone_title">绑定手机</string>
+    <string name="bdp_account_bind_phone_title">安全绑定</string>
     <string name="bdp_account_bind_phone_new_title">绑定新手机</string>
-    <string name="bdp_account_bind_phone_tip">您当前的账号安全等级较低，请尽快绑定手机，绑定的手机可用于登录、找回密码。</string>
-    <string name="bdp_account_bind_phone_new_tip">绑定新手机成功后，您可以使用新手机登录。\n之前绑定的手机将无法再登录。</string>
+    <string name="bdp_account_bind_phone_tip">您当前的账号安全等级较低，请尽快绑定手机号，该手机号可用于手机登录、找回密码等。</string>
+    <string name="bdp_account_bind_phone_new_tip">绑定新手机成功后，您可以使用新手机登录。之前绑定的手机将无法再登录。</string>
     <string name="bdp_account_bind_phone_success_tip">恭喜您绑定手机成功！</string>
-    <string name="bdp_account_bind_phone_success_remark">您可以使用手机登录、找回密码。</string>
-    <string name="bdp_account_bind_phone_hint_phone_no">请输入要绑定的手机号</string>
-    <string name="bdp_account_bind_phone_hint_verifycode">请输入收到的短信验证码</string>
-    <string name="bdp_account_bind_phone_verifycode_get">获取短信验证码</string>
+    <string name="bdp_account_bind_phone_success_remark">您可以使用该手机号直接登录及找回密码。</string>
+    <string name="bdp_account_bind_phone_hint_phone_no">请输入手机号</string>
+    <string name="bdp_account_bind_phone_hint_verifycode">请输入验证码</string>
+    <string name="bdp_account_bind_phone_verifycode_get">获取验证码</string>
     <string name="bdp_account_bind_phone_verifycode_getting">发送中…</string>
-    <string name="bdp_account_bind_phone_verifycode_reget">%1$d秒后可重新获取</string>
+    <string name="bdp_account_bind_phone_verifycode_reget">重新发送%1$ds</string>
     <string name="bdp_account_bind_phone_sent_tip">短信验证码已发送！</string>
-    <string name="bdp_account_bind_phone_submit">提交绑定</string>
+    <string name="bdp_account_bind_phone_submit">提交</string>
     <string name="bdp_account_bind_phone_check_phone_title">验证绑定手机</string>
     <string name="bdp_account_bind_phone_check_phone_tip">为了您的账号安全，需先验证已绑定手机</string>
-    <string name="bdp_account_bind_phone_check_phone_des">点击“获取短信验证码”获取验证短信</string>
+    <string name="bdp_account_bind_phone_check_phone_des">点击“获取验证码”获取验证短信</string>
     <string name="bdp_account_bind_phone_check_phone_binded">已绑定手机：</string>
-    <string name="bdp_account_bind_phone_check_phone_verifycode_get">获取短信验证码</string>
+    <string name="bdp_account_bind_phone_check_phone_verifycode_get">获取验证码</string>
     <string name="bdp_account_bind_phone_check_phone_verifycode_getting">发送中…</string>
-    <string name="bdp_account_bind_phone_check_phone_verifycode_reget">%1$d秒后可重新获取</string>
+    <string name="bdp_account_bind_phone_check_phone_verifycode_reget">重新获取%1$d</string>
     <string name="bdp_account_bind_phone_check_phone_sent_tip">短信验证码已发送！</string>
-    <string name="bdp_account_bind_phone_check_phone_hint_verifycode">请输入收到的短信验证码</string>
+    <string name="bdp_account_bind_phone_check_phone_hint_verifycode">请输入验证码</string>
     <string name="bdp_account_bind_phone_check_phone_success_tip">恭喜您绑定新手机成功！</string>
     <string name="bdp_account_bind_phone_check_phone_success_remark">以后请使用新手机登录、找回密码。</string>
     <string name="bdp_account_visitor_bind_title">设置账号信息</string>
@@ -137,7 +141,7 @@
     <string name="bdp_account_visitor_bind_wrong_account">请输入正确的手机/邮箱</string>
     <string name="bdp_account_visitor_bind_verifycode_get">获取验证码</string>
     <string name="bdp_account_visitor_bind_verifycode_getting">发送中…</string>
-    <string name="bdp_account_visitor_bind_verifycode_reget">%1$d秒后可重新获取</string>
+    <string name="bdp_account_visitor_bind_verifycode_reget">重新发送%1$ds</string>
     <string name="bdp_account_visitor_bind_sent_tip_sms">短信验证码已发送！</string>
     <string name="bdp_account_visitor_bind_sent_tip_mail">邮箱验证码已发送！</string>
     <string name="bdp_account_visitor_bind_login_mail">登录邮箱</string>
@@ -146,10 +150,13 @@
     <string name="bdp_account_visitor_bind_success_remark_mail">您可以使用邮箱登录、找回密码。</string>
     <string name="bdp_account_phonereg_title">手机账号注册</string>
     <string name="bdp_account_phonereg_hint_phone">请输入手机号</string>
-    <string name="bdp_account_phonereg_hint_sms_verifycode">短信验证码</string>
+    <string name="bdp_account_phonereg_hint_sms_verifycode">请输入验证码</string>
     <string name="bdp_account_phonereg_hint_captcha">图片验证码</string>
     <string name="bdp_account_phonereg_btn_reg">注册</string>
     <string name="bdp_account_phonereg_valid_title">验证手机号</string>
+    <string name="bdp_account_select_dk_login">切换账号登录</string>
+    <string name="bdp_account_select_phone_login">切换手机登录</string>
+    <string name="bdp_account_select_other_login">其他登录方式>></string>
     <string name="bdp_account_phonereg_valid_empty_captcha">请先输入图片验证码</string>
     <string name="bdp_account_phonereg_btn_submit">提交</string>
     <string name="bdp_account_phonereg_set_pass_title">设置密码</string>
@@ -159,8 +166,8 @@
     <string name="bdp_account_phonereg_sent_verifycode">验证码已发送至您的手机，请在30分钟内完成输入</string>
     <string name="bdp_account_phonereg_phone_exist_toast">该手机已注册，验证手机号立即登录</string>
     <string name="bdp_account_phonereg_verifycode_get">获取验证码</string>
-    <string name="bdp_account_phonereg_verifycode_getting">%1$d秒后可重新获取</string>
-    <string name="bdp_account_phonereg_verifycode_reget">重新获取验证码</string>
+    <string name="bdp_account_phonereg_verifycode_getting">重新发送%1$ds</string>
+    <string name="bdp_account_phonereg_verifycode_reget">获取验证码</string>
     <string name="bdp_account_authenticate_title">安全实名认证</string>
     <string name="bdp_account_authenticate_name">真实姓名</string>
     <string name="bdp_account_authenticate_id_card">身份证号</string>
@@ -192,6 +199,7 @@
     <string name="bdp_sdk_pay_error_4">无效的支付价格与兑换比率</string>
     <string name="bdp_sdk_pay_error_5">无效的支付订单编号</string>
     <string name="bdp_sdk_pay_error_6">订单异常，请重新支付</string>
+    <string name="bdp_sdk_pay_error_7">请输入订单金额</string>
     <string name="bdp_passport_login">进入游戏</string>
     <string name="bdp_passport_logut">登出</string>
     <string name="bdp_passport_register">注册成功</string>
@@ -245,6 +253,8 @@
     <string name="bdp_sso_login_title">账号授权登录</string>
     <string name="bdp_sso_login_loading">正在授权中…</string>
     <string name="bdp_sso_login_fail">授权失败</string>
+
+    <string name="bdp_get_userinfo_fail">获取授权信息失败</string>
 
     <!-- paycenter -->
 
@@ -337,8 +347,9 @@
     <string name="bdp_paycenter_exchange_ratio_unit">(1个%1$s=%2$s%3$s)</string>
     <string name="bdp_paycenter_baidubean_exchange_ratio_unit">(1百度币=%1$s%2$s)</string>
     <string name="bdp_paycenter_pay_mode_select">选择支付方式</string>
+    <string name="bdp_paycenter_pay_voucher_select">选择优惠券</string>
     <string name="bdp_paycenter_recommend_pay_mode_select">推荐支付方式</string>
-    <string name="bdp_paycenter_recommend_pay_other_mode_select">其他支付方式</string>
+    <string name="bdp_paycenter_recommend_pay_other_mode_select">其他支付</string>
     <string name="bdp_paycenter_btn_string_pay">支付</string>
     <string name="bdp_paycenter_tip_card_info_title">温馨提示：</string>
     <string name="bdp_paycenter_tip_card_info_content">请选择与卡面金额相符的金额充值！仅支持通用的%s</string>
@@ -428,8 +439,8 @@
     <string name="bdp_paycenter_yibao_cash_card_notnull_phoneno_error">手机号不能为空</string>
     <string name="bdp_paycenter_yibao_cash_card_notnull_id_error">身份证号不能为空</string>
     <string name="bdp_paycenter_yibao_cash_card_notnull_real_name_error">真实姓名不能为空</string>
-    <string name="bdp_paycenter_weixin_app_not_installed">您尚未安装“微信支付安全插件（百度）”，请安装后再支付或使用其他方式支付。</string>
-    <string name="bdp_paycenter_weixin_app_need_update">您的“微信支付安全插件（百度）”版本过低，请升级后再支付或使用其他方式支付。</string>
+    <string name="bdp_paycenter_weixin_app_not_installed">您尚未安装“多酷游戏助手”，请安装后再支付或使用其他方式支付。</string>
+    <string name="bdp_paycenter_weixin_app_need_update">您的“多酷游戏助手”版本过低，请升级后再支付或使用其他方式支付。</string>
     <string name="bdp_paycenter_weixin_pay_by_others">使用其他方式支付</string>
     <string name="bdp_paycenter_weixin_app_install">安装</string>
     <string name="bdp_paycenter_weixin_app_update">升级</string>
@@ -482,14 +493,14 @@
     <string name="bdp_inner_error">内部异常</string>
     <string name="bdp_null_orderinfo">订单为空</string>
     <string name="bdp_free_baidubean">免费赚币</string>
-    <string name="bdp_paycenter_add_amount_pay">还需支付：%1$s元</string>
+    <string name="bdp_paycenter_add_amount_pay">支付：%1$s元</string>
     <string name="bdp_paycenter_pay">立即支付</string>
     <string name="bdp_paycenter_more_payment">更多支付方式</string>
     <string name="bdp_paycenter_use_balance_voucher">使用余额%1$s元代金券</string>
     <string name="bdp_paycenter_use_balance_kudian">使用余额%1$s元酷点</string>
     <string name="bdp_paycenter_use_voucher">使用%1$s元代金券</string>
     <string name="bdp_paycenter_use_kudian">使用%1$s元酷点</string>
-    <string name="bdp_paycenter_voucher_expire">(%1$s到期)</string>
+    <string name="bdp_paycenter_voucher_expire">%1$s\u0020\u0020到期</string>
     <string name="bdp_paycenter_use_baidu_bean">使用百度币</string>
     <string name="bdp_paycenter_pay_amount">支付：%1$s元</string>
     <string name="bdp_paycenter_kudian_pay_tips">确认使用%1$s酷点支付？</string>
@@ -512,7 +523,7 @@
     <string name="bdp_paycenter_coin_unit">个</string>
     <string name="bdp_paycenter_pay_need_pay">需支付：</string>
     <string name="bdp_paycenter_pay_mode">支付方式</string>
-
+    <string name="bdp_phone_fast_login"><u>手机号快捷登录</u></string>
     <!-- modify -->
     <string name="bdp_hint_modify_pass">请到百度首页登录并修改密码</string>
     <string name="bdp_hint_bind_mobile">请到百度首页登录并绑定手机</string>
@@ -520,9 +531,11 @@
 
     <!-- 4.1 account_modify -->
     <string name="bdp_account_user_login">账号登录</string>
-    <string name="bdp_account_guest_login">游客登录</string>
+    <string name="bdp_account_guest_login">游客试玩</string>
     <string name="bdp_account_login_by_phone_baidu">手机号登录</string>
     <string name="bdp_account_login_by_phone_dk">手机号登录</string>
+    <string name="bdp_account_login_by_phone">手机号登录</string>
+    <string name="bdp_account_login_phone_dk">手机登录</string>
     <string name="bdp_account_reg_by_phone_baidu">百度账号注册</string>
     <string name="bdp_account_reg_by_phone_dk">手机号注册</string>
     <string name="bdp_account_reg_by_username_dk">多酷账号注册</string>
@@ -548,7 +561,47 @@
     <string name="bdp_account_bind_success">您的账号已升级完毕</string>
     <string name="bdp_account_auto_logining">自动登录中&#8230;</string>
     <string name="bdp_account_enter_pay">进入支付页面&#8230;</string>
-    <string name="bdp_account_pass_login">授权登录</string>
+    <string name="bdp_account_pass_login">使用百度账号登录</string>
+    <string name="bdp_account_wanke_login">使用玩刻账号登录</string>
+    <string name="bdp_account_wanke_login_download">玩刻登录</string>
+    <string name="bdp_account_login_wanke">玩刻</string>
+    <string name="bdp_account_login_weixin">微信</string>
+    <string name="bdp_account_login_qq">QQ</string>
     <string name="bdp_account_go_and_register">前往注册</string>
+    <string name="bdp_account_login_hint">快捷登录</string>
+    <string name="bdp_account_download_succeed">下载完成</string>
+    <!-- 4.2 pay_modify -->
+    <string name="bdp_paycenter_pay_voucher">优惠券</string>
+    <string name="bdp_paycenter_pay_voucher_reduce">%s元</string>
+    <string name="bdp_paycenter_string_use">使用</string>
+    <string name="bdp_paycenter_string_use_voucher">使用优惠券</string>
+    <string name="bdp_paycenter_soon_expire">即将到期</string>
+    <string name="bdp_paycente_voucher_no_use">未选择</string>
+    <string name="bdp_paycenter_yuan">元</string>
+    <string name="bdp_paycenter_baidu_balance_card">百度余额卡</string>
+    <string name="bdp_paycenter_diffconditionmoney">差%s元可用</string>
+    <string name="bdp_paycenter_str_kudian">酷点\u0020</string>
+    <string name="bdp_paycenter_str_voucher">代金券\u0020</string>
+    <string name="bdp_paycenter_package_nothing_img">(°—° \")</string>
+    <string name="bdp_paycenter_package_nothing">包包里空空的</string>
+    <string name="bdp_login_wanke_download">点击加载</string>
+    <string name="bdp_login_wanke_downloading">加载中</string>
+    <string name="bdp_login_wanke_install">点击安装</string>
+    <string name="bdp_login_wanke_load_success">加载完成</string>
+    <!-- 4.2 gameupdate -->
+    <string name="bdp_game_update_nomal_speed">普通更新</string>
+    <string name="bdp_game_update_high_speed">高速更新</string>
+    <string name="bdp_game_need_open_bdhelp">需打开百度手助客户端</string>
+    <string name="bdp_login_wk_download_hint">检测到您还未加载玩刻相关插件</string>
+
+    <!-- 4.3 请求&微信登录提示 -->
+    <string name="bdp_game_need_install_wx">您需要先安装微信后再使用快捷登录。</string>
+    <string name="bdp_game_need_install_qq">您需要先安装QQ后再使用快捷登录。</string>
+    <string name="bdp_game_need_install_bdhelp">您尚未安装“多酷游戏助手”，请安装后再进行登录。</string>
+    <string name="bdp_game_need_update_bdhelp">您的“多酷游戏助手”版本过低，请升级后再进行登录。</string>
+    <string name="bdp_91_login_bdphelp">由于91服务关闭，91账号将不可继续用于登录服务，为了不影响您的正常游戏，我们将为您绑定手机账号用于后续游戏登录，请联系客服电话：10101866进行绑定操作，感谢您的理解与支持。</string>
+
+    <string name="bdp_error_getlogininfo_fail">获取登录信息失败，请重试</string>
+    <string name="bdp_paycenter_cloud_game_pay_fail">订单数据发送失败,请重新支付。</string>
 
 </resources>

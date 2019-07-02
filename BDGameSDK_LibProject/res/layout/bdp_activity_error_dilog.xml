@@ -55,7 +55,6 @@
                 android:layout_height="56dp"
                 android:layout_weight="1"
                 android:background="@drawable/bdp_color_white__without_corners_selector"
-                android:onClick="click"
                 android:textColor="#cfcfcf"
                 android:textSize="16sp"
                 android:visibility="visible" />
@@ -77,7 +76,6 @@
                 android:layout_marginLeft="12dip"
                 android:layout_weight="1"
                 android:background="@drawable/bdp_color_white__without_corners_selector"
-                android:onClick="clickTwo"
                 android:textColor="#e5006a"
                 android:textSize="16sp"
                 android:visibility="visible" />

@@ -1,15 +1,231 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.baidu.gamesdk.lib.dk"
-    android:versionCode="1"
-    android:versionName="1.0" >
+          package="com.baidu.gamesdk.lib"
+          android:versionCode="1"
+          android:versionName="1.0">
 
-    <uses-sdk
-        android:minSdkVersion="8"
-        android:targetSdkVersion="18" />
 
     <supports-screens
         android:anyDensity="true"
         android:largeScreens="true"
         android:normalScreens="true"
-        android:smallScreens="true" />
-</manifest>
+        android:smallScreens="true"/>
+
+    <!--安装应用权限-->
+    <uses-permission android:name="android.permission.REQUEST_INSTALL_PACKAGES"/>
+    <!-- ↓↓↓ SDK ↓↓↓ -->
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE"/>
+    <uses-permission android:name="android.permission.READ_PHONE_STATE"/>
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.GET_TASKS"/>
+    <uses-permission android:name="android.permission.READ_CONTACTS"/>
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.CHANGE_NETWORK_STATE"/>
+    <!--百度pass定位-->
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION"/>
+    <!-- 百度PUSH 适配Android N系统必需的ContentProvider写权限声明，写权限包含应用包名 -->
+    <uses-permission android:name="baidu.push.permission.WRITE_PUSHINFOPROVIDER.com.baidu.bdgamesdk.demo"/>
+    <!-- 百度PUSH 适配Android N系统必需的ContentProvider写权限声明，写权限包含应用包名 -->
+    <permission
+        android:name="baidu.push.permission.WRITE_PUSHINFOPROVIDER.com.baidu.bdgamesdk.demo"
+        android:protectionLevel="normal"></permission>
+    <uses-permission android:name="android.permission.WAKE_LOCK"/>
+    <uses-permission android:name="android.permission.MOUNT_UNMOUNT_FILESYSTEMS"/>
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED"/>
+    <uses-permission android:name="android.permission.VIBRATE"/>
+    <uses-permission android:name="android.permission.ACCESS_DOWNLOAD_MANAGER"/>
+    <uses-permission android:name="android.permission.DOWNLOAD_WITHOUT_NOTIFICATION"/>
+    <uses-permission android:name="android.permission.DISABLE_KEYGUARD"/>
+    <uses-permission android:name="android.permission.BROADCAST_STICKY"/>
+    <!-- ↑↑↑ SDK ↑↑↑ -->
+
+    <!--&lt;!&ndash; ↑↑↑ DK SDK ↑↑↑ &ndash;&gt;-->
+    <!--<application-->
+    <!--android:icon="@drawable/bdp_account_icon_sina"-->
+    <!--android:label="openGameSdk" >-->
+
+    <!--&lt;!&ndash; ↓↓↓ SDK ↓↓↓ &ndash;&gt;-->
+
+
+    <!--&lt;!&ndash; 0-百度 1-多酷 2-91 &ndash;&gt;-->
+
+    <!--<meta-data-->
+    <!--android:name="BDPlatformType"-->
+    <!--android:value="0" />-->
+    <!--<meta-data-->
+    <!--android:name="BDGameVersion"-->
+    <!--android:value="4.2.2" />-->
+
+    <!--<activity-->
+    <!--android:name="com.baidu.platformsdk.LoginActivity"-->
+    <!--android:configChanges="orientation|navigation|screenSize|keyboard|keyboardHidden"-->
+    <!--android:excludeFromRecents="true"-->
+    <!--android:exported="false"-->
+    <!--android:theme="@style/bdp_dialog_style_fullscreen" />-->
+    <!--<activity-->
+    <!--android:name="com.baidu.platformsdk.AssistActivity"-->
+    <!--android:configChanges="orientation|navigation|screenSize|keyboard|keyboardHidden"-->
+    <!--android:excludeFromRecents="true"-->
+    <!--android:exported="false"-->
+    <!--android:theme="@style/bdp_dialog_style_fullscreen" />-->
+    <!--<activity-->
+    <!--android:name="com.baidu.platformsdk.ConcertActivity"-->
+    <!--android:configChanges="orientation|navigation|screenSize|keyboard|keyboardHidden"-->
+    <!--android:excludeFromRecents="true"-->
+    <!--android:exported="false"-->
+    <!--android:theme="@style/bdp_style_transparent" />-->
+    <!--<activity-->
+    <!--android:name="com.baidu.platformsdk.BindPhoneActivity"-->
+    <!--android:configChanges="orientation|navigation|screenSize|keyboard|keyboardHidden"-->
+    <!--android:excludeFromRecents="true"-->
+    <!--android:exported="false"-->
+    <!--android:theme="@style/bdp_dialog_style_fullscreen" />-->
+    <!--<activity-->
+    <!--android:name="com.baidu.platformsdk.CashierDeskActivity"-->
+    <!--android:configChanges="orientation|navigation|screenSize|keyboard|keyboardHidden"-->
+    <!--android:exported="false"-->
+    <!--android:theme="@style/bdp_dialog_style_fullscreen"-->
+    <!--android:windowSoftInputMode="adjustPan" />-->
+    <!--<activity-->
+    <!--android:name="com.baidu.platformsdk.WebActivity"-->
+    <!--android:configChanges="orientation|navigation|screenSize|keyboard|keyboardHidden"-->
+    <!--android:exported="false"-->
+    <!--android:theme="@style/bdp_dialog_style_fullscreen"-->
+    <!--android:windowSoftInputMode="adjustPan" />-->
+    <!--<activity-->
+    <!--android:name="com.baidu.platformsdk.ModifyPasswordActivity"-->
+    <!--android:configChanges="orientation|navigation|screenSize|keyboard|keyboardHidden"-->
+    <!--android:excludeFromRecents="true"-->
+    <!--android:exported="true"-->
+    <!--android:theme="@style/bdp_dialog_style_fullscreen" />-->
+    <!--<activity-->
+    <!--android:name="com.baidu.platformsdk.ThirdPartyLoginActivity"-->
+    <!--android:configChanges="orientation|navigation|screenSize|keyboard|keyboardHidden"-->
+    <!--android:excludeFromRecents="true"-->
+    <!--android:exported="false"-->
+    <!--android:theme="@style/bdp_dialog_style_fullscreen" />-->
+    <!--<activity-->
+    <!--android:name="com.baidu.platformsdk.VisitorBindActivity"-->
+    <!--android:configChanges="orientation|navigation|screenSize|keyboard|keyboardHidden"-->
+    <!--android:excludeFromRecents="true"-->
+    <!--android:exported="false"-->
+    <!--android:theme="@style/bdp_dialog_style_fullscreen" />-->
+    <!--<activity-->
+    <!--android:name="com.baidu.platformsdk.BaiduBeanDetailActivity"-->
+    <!--android:configChanges="orientation|navigation|screenSize|keyboard|keyboardHidden"-->
+    <!--android:exported="false"-->
+    <!--android:theme="@style/bdp_dialog_style_fullscreen"-->
+    <!--android:windowSoftInputMode="adjustPan" />-->
+    <!--<activity-->
+    <!--android:name="com.baidu.platformsdk.OrderDetailActivity"-->
+    <!--android:configChanges="orientation|navigation|screenSize|keyboard|keyboardHidden"-->
+    <!--android:exported="false"-->
+    <!--android:theme="@style/bdp_dialog_style_fullscreen"-->
+    <!--android:windowSoftInputMode="adjustPan" />-->
+    <!--<activity-->
+    <!--android:name="com.baidu.platformsdk.SapiWebActivity"-->
+    <!--android:configChanges="orientation|navigation|screenSize|keyboard|keyboardHidden"-->
+    <!--android:exported="true"-->
+    <!--android:theme="@style/bdp_dialog_style_fullscreen"-->
+    <!--android:windowSoftInputMode="adjustPan" />-->
+    <!--<activity-->
+    <!--android:name="com.baidu.platformsdk.SapiLoginProxyActivity"-->
+    <!--android:configChanges="orientation|navigation|screenSize|keyboard|keyboardHidden"-->
+    <!--android:exported="true"-->
+    <!--android:theme="@style/bdp_dialog_style_fullscreen"-->
+    <!--android:windowSoftInputMode="adjustPan" />-->
+    <!--<activity-->
+    <!--android:name="com.baidu.platformsdk.wxpay.PayActivity"-->
+    <!--android:configChanges="orientation|navigation|screenSize|keyboard|keyboardHidden"-->
+    <!--android:exported="false"-->
+    <!--android:theme="@style/bdp_style_transparent"-->
+    <!--android:windowSoftInputMode="adjustPan" />-->
+    <!--<activity-->
+    <!--android:name="com.baidu.platformsdk.AuthenticateActivity"-->
+    <!--android:configChanges="orientation|navigation|screenSize|keyboard|keyboardHidden"-->
+    <!--android:exported="false"-->
+    <!--android:theme="@style/bdp_dialog_style_fullscreen"-->
+    <!--android:windowSoftInputMode="adjustPan" />-->
+    <!--<activity-->
+    <!--android:name="com.baidu.platformsdk.ErrorDialogActivity"-->
+    <!--android:configChanges="orientation|navigation|screenSize|keyboard|keyboardHidden"-->
+    <!--android:exported="false"-->
+    <!--android:theme="@style/bdp_dialog_style_fullscreen"-->
+    <!--android:windowSoftInputMode="stateHidden|adjustResize" />-->
+
+    <!--<service-->
+    <!--android:name="com.baidu.platformsdk.BDPlatformService"-->
+    <!--android:exported="false" />-->
+
+    <!--&lt;!&ndash; ↑↑↑ SDK ↑↑↑ &ndash;&gt;-->
+
+
+    <!--&lt;!&ndash; ↓↓↓ passport ↓↓↓ &ndash;&gt;-->
+    <!--<activity-->
+    <!--android:name="com.baidu.sapi2.utils.LoginProtectAcitivity"-->
+    <!--android:screenOrientation="portrait"-->
+    <!--android:theme="@style/bdp_SapiTheme"-->
+    <!--android:windowSoftInputMode="adjustPan" />-->
+    <!--&lt;!&ndash; ↑↑↑ passport ↑↑↑ &ndash;&gt;-->
+
+
+    <!--&lt;!&ndash; ↓↓↓ 支付宝插件 ↓↓↓ &ndash;&gt;-->
+    <!--<activity-->
+    <!--android:name="com.alipay.sdk.app.H5PayActivity"-->
+    <!--android:configChanges="orientation|keyboardHidden|navigation"-->
+    <!--android:exported="false"-->
+    <!--android:screenOrientation="behind" />-->
+    <!--<activity-->
+    <!--android:name="com.alipay.sdk.auth.AuthActivity"-->
+    <!--android:configChanges="orientation|keyboardHidden|navigation"-->
+    <!--android:exported="false"-->
+    <!--android:screenOrientation="behind" />-->
+    <!--&lt;!&ndash; 需修改<data android:scheme="bdpsdk+packagename" /> &ndash;&gt;-->
+    <!--<activity-->
+    <!--android:name="com.baidu.platformsdk.pay.channel.ali.AliPayActivity"-->
+    <!--android:configChanges="orientation|navigation|screenSize|keyboard|keyboardHidden"-->
+    <!--android:exported="true"-->
+    <!--android:launchMode="singleTop"-->
+    <!--android:screenOrientation="behind" >-->
+    <!--<intent-filter>-->
+    <!--<action android:name="android.intent.action.VIEW" />-->
+
+    <!--<category android:name="android.intent.category.DEFAULT" />-->
+    <!--<category android:name="android.intent.category.BROWSABLE" />-->
+
+    <!--<data-->
+    <!--android:host="alipay.app"-->
+    <!--android:pathPrefix="/result"-->
+    <!--android:scheme="bdpsdk+packagename" />-->
+    <!--</intent-filter>-->
+    <!--</activity>-->
+    <!--&lt;!&ndash; ↑↑↑ 支付宝插件 ↑↑↑ &ndash;&gt;-->
+
+
+    <!--&lt;!&ndash;-->
+    <!--↓↓↓ QQ插件 需修改<data android:scheme="qwallet"+packagename />-->
+    <!--替换packagename为应用包名, 如：<data android:scheme="qwalletcom.baidu.test"-->
+    <!--否则将无法收到支付结果通知！！ />↓↓↓-->
+
+
+    <!--&ndash;&gt;-->
+    <!--<activity-->
+    <!--android:name="com.baidu.platformsdk.pay.channel.qqwallet.QQPayActivity"-->
+    <!--android:configChanges="orientation|navigation|screenSize|keyboard|keyboardHidden"-->
+    <!--android:exported="true"-->
+    <!--android:launchMode="singleTop"-->
+    <!--android:theme="@android:style/Theme.Translucent.NoTitleBar" >-->
+    <!--<intent-filter>-->
+    <!--<action android:name="android.intent.action.VIEW" />-->
+
+    <!--<category android:name="android.intent.category.BROWSABLE" />-->
+    <!--<category android:name="android.intent.category.DEFAULT" />-->
+
+    <!--<data android:scheme="qwallet+packagename" />-->
+    <!--</intent-filter>-->
+    <!--</activity>-->
+    <!--&lt;!&ndash; ↑↑↑ QQ插件 ↑↑↑ &ndash;&gt;-->
+    <!--</application>-->
+
+</manifest>

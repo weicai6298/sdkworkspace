@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="match_parent"
-    android:layout_height="wrap_content"
-    android:background="@drawable/bdp_bg_white_round"
-    android:orientation="vertical"
-    android:padding="@dimen/bdp_dialog_login_padding" >
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:background="@drawable/bdp_bg_white_round"
+              android:orientation="vertical"
+              android:padding="@dimen/bdp_dialog_login_padding">
 
     <!-- 标题 -->
 
@@ -12,7 +12,7 @@
         android:layout_width="match_parent"
         android:layout_height="54dp"
         android:gravity="center_vertical"
-        android:visibility="gone" >
+        android:visibility="gone">
 
         <TextView
             android:id="@+id/txtBack"
@@ -22,12 +22,12 @@
             android:text="@string/bdp_account_title_back"
             android:textColor="@color/bdp_blue"
             android:textSize="13sp"
-            android:visibility="invisible" />
+            android:visibility="invisible"/>
 
         <View
             android:layout_width="0dip"
             android:layout_height="1dip"
-            android:layout_weight="1" />
+            android:layout_weight="1"/>
         <!-- 百度注册 -->
 
         <TextView
@@ -36,12 +36,12 @@
             android:layout_margin="10dip"
             android:text="@string/bdp_account_bind_dk_phone"
             android:textColor="#FF333333"
-            android:textSize="18sp" />
+            android:textSize="18sp"/>
 
         <View
             android:layout_width="0dip"
             android:layout_height="1dip"
-            android:layout_weight="1" />
+            android:layout_weight="1"/>
         <!-- 关闭按钮 -->
 
         <ImageView
@@ -50,14 +50,14 @@
             android:layout_height="45dip"
             android:contentDescription="@string/bdp_image"
             android:scaleType="centerInside"
-            android:src="@drawable/bdp_icon_close_selector" />
+            android:src="@drawable/bdp_icon_close_selector"/>
     </LinearLayout>
 
     <View
         android:layout_width="match_parent"
         android:layout_height="0.5dp"
         android:background="#FFD8D8D8"
-        android:visibility="gone" />
+        android:visibility="gone"/>
 
     <!-- 子视图 -->
 
@@ -66,12 +66,12 @@
         android:layout_height="@dimen/bdp_dialog_login_height"
         android:layout_marginLeft="@dimen/bdp_dialog_login_margin"
         android:layout_marginRight="@dimen/bdp_dialog_login_margin"
-        android:orientation="vertical" >
+        android:orientation="vertical">
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="vertical" >
+            android:orientation="vertical">
 
             <!-- 手机号 -->
 
@@ -79,7 +79,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="43dip"
                 android:gravity="center_vertical"
-                android:orientation="horizontal" >
+                android:orientation="horizontal">
 
                 <EditText
                     android:id="@+id/edtPhone"
@@ -96,7 +96,7 @@
                     android:textColorHint="@color/bdp_color_text_hint"
                     android:textCursorDrawable="@null"
                     android:textSize="16sp"
-                    android:typeface="sans" />
+                    android:typeface="sans"/>
 
                 <ImageView
                     android:id="@+id/imgPhoneDel"
@@ -105,14 +105,14 @@
                     android:layout_marginRight="5dip"
                     android:contentDescription="@string/bdp_image"
                     android:src="@drawable/bdp_icon_text_clear_selector"
-                    android:visibility="invisible" />
+                    android:visibility="invisible"/>
             </LinearLayout>
 
             <View
                 android:id="@+id/line_phone"
                 android:layout_width="match_parent"
                 android:layout_height="0.5dp"
-                android:background="@color/bdp_color_cccccc" />
+                android:background="@color/bdp_color_cccccc"/>
 
             <!-- 短信验证码 -->
 
@@ -120,14 +120,14 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:gravity="center_vertical"
-                android:orientation="horizontal" >
+                android:orientation="horizontal">
 
                 <LinearLayout
                     android:layout_width="0dip"
                     android:layout_height="43dip"
                     android:layout_weight="1"
                     android:gravity="center_vertical"
-                    android:orientation="horizontal" >
+                    android:orientation="horizontal">
 
                     <EditText
                         android:id="@+id/edtVerifycode"
@@ -141,7 +141,7 @@
                         android:textColorHint="@color/bdp_color_text_hint"
                         android:textCursorDrawable="@null"
                         android:textSize="16sp"
-                        android:typeface="sans" />
+                        android:typeface="sans"/>
 
                     <ImageView
                         android:id="@+id/imgVerifycodeDel"
@@ -150,30 +150,31 @@
                         android:layout_marginRight="5dip"
                         android:contentDescription="@string/bdp_image"
                         android:src="@drawable/bdp_icon_text_clear_selector"
-                        android:visibility="invisible" />
+                        android:visibility="invisible"/>
+                    <!-- 获取短信验证码 -->
+
+                    <Button
+                        android:id="@+id/btnGetVerifycode"
+                        android:layout_width="wrap_content"
+                        android:layout_height="32dp"
+                        android:layout_marginLeft="5dip"
+                        android:background="@drawable/bdp_btn_phone_selector"
+                        android:paddingLeft="5dip"
+                        android:paddingRight="5dip"
+                        android:singleLine="true"
+                        android:text="@string/bdp_account_phonereg_verifycode_get"
+                        android:textColor="@color/bdp_color_306cff"
+                        android:textSize="12sp"/>
                 </LinearLayout>
 
-                <!-- 获取短信验证码 -->
 
-                <Button
-                    android:id="@+id/btnGetVerifycode"
-                    android:layout_width="wrap_content"
-                    android:layout_height="32dp"
-                    android:layout_marginLeft="5dip"
-                    android:background="@drawable/bdp_btn_blue_selector"
-                    android:paddingLeft="5dip"
-                    android:paddingRight="5dip"
-                    android:singleLine="true"
-                    android:text="@string/bdp_account_phonereg_verifycode_get"
-                    android:textColor="@color/bdp_white"
-                    android:textSize="12sp" />
             </LinearLayout>
 
             <View
                 android:id="@+id/line_vercode"
                 android:layout_width="match_parent"
                 android:layout_height="0.5dp"
-                android:background="@color/bdp_color_cccccc" />
+                android:background="@color/bdp_color_cccccc"/>
         </LinearLayout>
         <!-- 图片验证码 -->
 
@@ -183,13 +184,13 @@
             android:layout_height="40dip"
             android:layout_marginTop="10dp"
             android:orientation="vertical"
-            android:visibility="gone" >
+            android:visibility="gone">
 
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="40dip"
                 android:gravity="center_vertical"
-                android:orientation="horizontal" >
+                android:orientation="horizontal">
 
                 <EditText
                     android:id="@+id/edtCaptcha"
@@ -203,7 +204,7 @@
                     android:textColor="@color/bdp_black"
                     android:textColorHint="@color/bdp_color_text_hint"
                     android:textCursorDrawable="@null"
-                    android:textSize="15sp" />
+                    android:textSize="15sp"/>
 
                 <ImageView
                     android:id="@+id/imgCaptchaDel"
@@ -212,12 +213,12 @@
                     android:layout_marginRight="5dip"
                     android:contentDescription="@string/bdp_image"
                     android:src="@drawable/bdp_icon_text_clear_selector"
-                    android:visibility="invisible" />
+                    android:visibility="invisible"/>
 
                 <FrameLayout
                     android:layout_width="wrap_content"
                     android:layout_height="40dip"
-                    android:layout_marginRight="4dp" >
+                    android:layout_marginRight="4dp">
 
                     <ImageView
                         android:id="@+id/imgCaptcha"
@@ -225,11 +226,11 @@
                         android:layout_height="fill_parent"
                         android:contentDescription="@string/bdp_image"
                         android:padding="2dip"
-                        android:visibility="invisible" />
+                        android:visibility="invisible"/>
 
                     <RelativeLayout
                         android:layout_width="fill_parent"
-                        android:layout_height="fill_parent" >
+                        android:layout_height="fill_parent">
 
                         <ImageView
                             android:id="@+id/imgCaptchaLoading"
@@ -238,7 +239,7 @@
                             android:layout_centerInParent="true"
                             android:layout_centerVertical="true"
                             android:background="@drawable/bdp_anim_loading_small_blue"
-                            android:contentDescription="@string/bdp_image" />
+                            android:contentDescription="@string/bdp_image"/>
                     </RelativeLayout>
                 </FrameLayout>
 
@@ -248,7 +249,7 @@
                     android:layout_height="wrap_content"
                     android:contentDescription="@string/bdp_image"
                     android:scaleType="centerInside"
-                    android:src="@drawable/bdp_account_icon_verifycode_refresh_selector" />
+                    android:src="@drawable/bdp_account_icon_verifycode_refresh_selector"/>
             </LinearLayout>
         </LinearLayout>
         <!-- 注册 -->
@@ -262,7 +263,7 @@
             android:background="@drawable/bdp_btn_pink_selector"
             android:text="@string/bdp_account_reg_and_bind"
             android:textColor="@color/bdp_white"
-            android:textSize="17sp" />
+            android:textSize="17sp"/>
     </LinearLayout>
 
 </LinearLayout>

@@ -22,22 +22,21 @@
         <TextView
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:layout_alignTop="@id/progress_message_body"
             android:layout_centerInParent="true"
             android:layout_marginTop="16dp"
             android:gravity="center"
-            android:visibility="gone"
             android:text="@string/dk_download_hint_nowifi"
             android:textColor="@color/bdp_color_color_ffcccccc"
-            android:textSize="14sp" />
+            android:textSize="14sp"
+            android:visibility="gone" />
     </RelativeLayout>
-    
-     <View
+
+    <View
         android:layout_width="match_parent"
         android:layout_height="0.5dp"
         android:background="@color/bdp_color_cccccc" />
 
-      <LinearLayout
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="40dp"
         android:orientation="horizontal" >

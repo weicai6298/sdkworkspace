@@ -3,23 +3,21 @@
     android:id="@+id/bdp_paycenter_layout_main_frame"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#00000000" >
+    android:background="@drawable/bdp_bg_round_fcfcfc"
+    android:paddingBottom="10dp" >
 
     <FrameLayout
         android:id="@+id/bdp_paycenter_title_frame"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="#fffcfcfc"
         android:layout_alignParentTop="true" >
-
     </FrameLayout>
 
     <FrameLayout
         android:id="@+id/bdp_paycenter_content_frame"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_below="@+id/bdp_paycenter_title_frame"
-        android:background="#ffffff" >
+        android:layout_below="@+id/bdp_paycenter_title_frame" >
 
         <LinearLayout
             android:id="@+id/bdp_paycenter_layout_content"

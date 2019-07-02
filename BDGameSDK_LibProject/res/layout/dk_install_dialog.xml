@@ -16,7 +16,7 @@
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="14dp"
-        android:text="请先安装（百度游戏助手）体验更好的游戏服务" />
+        android:text="请先安装（多酷游戏助手）体验更好的游戏服务" />
 
     <LinearLayout
         android:layout_width="fill_parent"

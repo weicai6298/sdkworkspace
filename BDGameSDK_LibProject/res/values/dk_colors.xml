@@ -31,12 +31,16 @@
     <color name="dk_download_cancel_btn">#fde7ea</color>
     <color name="dk_download_canceled_btn">#ffdadf</color>
     <color name="dk_listview_header_background">#D2D2D2</color>
+    <color name="dk_color_009cff">#ff009cff</color>
+
     <drawable name="dk_transparent_drawable">#00000000</drawable>
+
     <color name="dk_title_color_red">#FF5555</color>
     <color name="dk_background_tab_pressed">#6633B5E5</color>
     <color name="dk_title_text">#fff</color>
     <color name="dk_tab_hall_pressed">#448bdc</color>
     <!-- download manager end -->
+
 
     <!-- dk vpi colors start -->
     <color name="dk_vpi__background_holo_dark">#ff000000</color>
@@ -45,11 +49,12 @@
     <color name="dk_vpi__bright_foreground_holo_light">@color/dk_vpi__background_holo_dark</color>
     <color name="dk_vpi__bright_foreground_disabled_holo_dark">#ff4c4c4c</color>
     <color name="dk_vpi__bright_foreground_disabled_holo_light">#ffb2b2b2</color>
-   <!-- dk vpi colors end -->
-   
-   <color name="dk_color_ff999999">#ff999999</color>
-   <color name="dk_color_ffe40096">#ffE40096</color>
-   <color name="dk_color_ffcccccc">#ffCCCCCC</color>
+    <!-- dk vpi colors end -->
+
+    <color name="dk_color_ff999999">#ff999999</color>
+    <color name="dk_color_ffe40096">#ffE40096</color>
+    <color name="dk_color_ffcccccc">#ffCCCCCC</color>
     <color name="dk_username_text_ff4a90e2">#ff4a90e2</color>
     <color name="dk_username_text_ff235cb2">#FF235CB2</color>
+
 </resources>

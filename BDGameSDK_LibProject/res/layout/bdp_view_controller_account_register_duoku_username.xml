@@ -107,7 +107,7 @@
                         android:textColor="@color/bdp_black"
                         android:textColorHint="@color/bdp_color_text_hint"
                         android:textCursorDrawable="@null"
-                        android:textSize="16sp"
+                        android:textSize="15sp"
                         android:typeface="sans" />
 
                     <ImageView
@@ -155,7 +155,7 @@
                         android:textColor="@color/bdp_black"
                         android:textColorHint="@color/bdp_color_text_hint"
                         android:textCursorDrawable="@null"
-                        android:textSize="16sp"
+                        android:textSize="15sp"
                         android:typeface="sans" />
 
                     <ImageView

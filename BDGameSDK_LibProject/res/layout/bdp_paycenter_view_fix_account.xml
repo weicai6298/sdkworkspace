@@ -137,8 +137,8 @@
 
             <ImageView
                 android:id="@+id/bdp_kudian_drop"
-                android:layout_width="15dp"
-                android:layout_height="8dp"
+                android:layout_width="8dp"
+                android:layout_height="15dp"
                 android:layout_alignParentRight="true"
                 android:layout_centerVertical="true"
                 android:layout_marginRight="15dp"
@@ -235,8 +235,8 @@
 
             <ImageView
                 android:id="@+id/bdp_voucher_drop"
-                android:layout_width="15dp"
-                android:layout_height="8dp"
+                android:layout_width="8dp"
+                android:layout_height="15dp"
                 android:layout_alignParentRight="true"
                 android:layout_centerVertical="true"
                 android:layout_marginRight="15dp"

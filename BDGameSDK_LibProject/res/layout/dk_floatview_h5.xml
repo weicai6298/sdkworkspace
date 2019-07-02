@@ -17,7 +17,6 @@
         <FrameLayout
             android:layout_width="fill_parent"
             android:layout_height="fill_parent"
-            android:layout_above="@+id/dk_layout_tab"
             android:layout_marginBottom="15dp"
             android:background="@drawable/dk_bottom_dialog_new" >
 
